@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     const [activeClass, setActiveClass] = useState(false);
@@ -43,8 +43,16 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about-us">About Us</Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item dropDown">
                                 <Link className="nav-link" to="/services">Services</Link>
+                                <FontAwesomeIcon icon={faAngleDown} />
+                                <ul>
+                                    <li><Link className="nav-link" to="/services">Services 1</Link></li>
+                                    <li><Link className="nav-link" to="/services">Services 2</Link></li>
+                                    <li><Link className="nav-link" to="/services">Services 3</Link></li>
+                                    <li><Link className="nav-link" to="/services">Services 4</Link></li>
+                                    <li><Link className="nav-link" to="/services">Services 5</Link></li>
+                                </ul>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/services">Blog</Link>
