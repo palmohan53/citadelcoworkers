@@ -4,9 +4,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import servicesContent from '../Content/services.json';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faQuoteLeft, faStar, faPhone, faEnvelope, faTrophy, faCode, faCircleCheck } from '@fortawesome/free-solid-svg-icons'
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faQuoteLeft, faStar, faPhone, faEnvelope, faTrophy, faCode, faCircleCheck, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.compat.css"
 
 
 const Home = () => {
@@ -124,25 +126,28 @@ const Home = () => {
                         <div className="col-md-12 col-12">
                             <div className="sectionHeading text-center">
                                 <h2>Leverage World-Class Talent</h2>
-                                <p>We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives.</p>
+                                <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
                             </div>
                         </div>
                     </div>
                     <div className="row mt-5 borderBox">
+                        
                         {
                             servicesContent.services.map((data, index)=>{
                                 return(
                                     <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
-                                        <div className="colorBx">
-                                            <React.Fragment>
-                                                <img src={data.imageUrl} alt="" />
-                                                <h3>{data.title}</h3>
-                                                <p>{data.body}</p>
-                                                <div className="text-start">
-                                                    <Link to="/services" className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
-                                                </div>
-                                            </React.Fragment>
-                                        </div>
+                                        <ScrollAnimation animateIn="fadeIn" delay={index * 100}>
+                                            <div className="colorBx">
+                                                <React.Fragment>
+                                                    <img src={data.imageUrl} alt="" />
+                                                    <h3>{data.title}</h3>
+                                                    <p>{data.body}</p>
+                                                    <div className="text-start">
+                                                        <Link to="/services" className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                                                    </div>
+                                                </React.Fragment>
+                                            </div>
+                                        </ScrollAnimation>
                                     </div>
                                 )
                             })
@@ -156,88 +161,115 @@ const Home = () => {
                         <div className="col-md-12 col-12">
                             <div className="sectionHeading text-center">
                                 <h2>Meet Talent in Our Network</h2>
-                                <p>We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives.</p>
+                                <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
                             </div>
                         </div>
                     </div>
                     <div className="row mt-5">
                         <div className="col-12">
                             <Slider {...settings}>
-                                <div className="bannerProfile">
-                                    <img src="images/pro.png" alt="" />
-                                    <div className="bannerProfileDetails">
-                                        <h3>Jhon Doe</h3>
-                                        <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                        <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p>Expertise</p>
-                                        <ul className="listInline tags">
-                                            <li>DevOps</li>
-                                            <li>Git</li>
-                                            <li>Node.js</li>
-                                            <li>Java</li>
-                                        </ul>
+                                <ScrollAnimation animateIn="fadeIn">
+                                    <div className="bannerProfile">
+                                        <img src="images/pro.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                            <p>Expertise</p>
+                                            <ul className="listInline tags">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="bannerProfile">
-                                    <img src="images/pro.png" alt="" />
-                                    <div className="bannerProfileDetails">
-                                        <h3>Jhon Doe</h3>
-                                        <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                        <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p>Expertise</p>
-                                        <ul className="listInline tags">
-                                            <li>DevOps</li>
-                                            <li>Git</li>
-                                            <li>Node.js</li>
-                                            <li>Java</li>
-                                        </ul>
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeIn">
+                                    <div className="bannerProfile">
+                                        <img src="images/pro.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                            <p>Expertise</p>
+                                            <ul className="listInline tags">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="bannerProfile">
-                                    <img src="images/pro.png" alt="" />
-                                    <div className="bannerProfileDetails">
-                                        <h3>Jhon Doe</h3>
-                                        <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                        <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p>Expertise</p>
-                                        <ul className="listInline tags">
-                                            <li>DevOps</li>
-                                            <li>Git</li>
-                                            <li>Node.js</li>
-                                            <li>Java</li>
-                                        </ul>
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeIn">
+                                    <div className="bannerProfile">
+                                        <img src="images/pro.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                            <p>Expertise</p>
+                                            <ul className="listInline tags">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="bannerProfile">
-                                    <img src="images/pro.png" alt="" />
-                                    <div className="bannerProfileDetails">
-                                        <h3>Jhon Doe</h3>
-                                        <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                        <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p>Expertise</p>
-                                        <ul className="listInline tags">
-                                            <li>DevOps</li>
-                                            <li>Git</li>
-                                            <li>Node.js</li>
-                                            <li>Java</li>
-                                        </ul>
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeIn">
+                                    <div className="bannerProfile">
+                                        <img src="images/pro.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                            <p>Expertise</p>
+                                            <ul className="listInline tags">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="bannerProfile">
-                                    <img src="images/pro.png" alt="" />
-                                    <div className="bannerProfileDetails">
-                                        <h3>Jhon Doe</h3>
-                                        <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                        <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p>Expertise</p>
-                                        <ul className="listInline tags">
-                                            <li>DevOps</li>
-                                            <li>Git</li>
-                                            <li>Node.js</li>
-                                            <li>Java</li>
-                                        </ul>
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeIn">
+                                    <div className="bannerProfile">
+                                        <img src="images/pro.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                            <p>Expertise</p>
+                                            <ul className="listInline tags">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
+                                </ScrollAnimation>
+                                <ScrollAnimation animateIn="fadeIn">
+                                    <div className="bannerProfile">
+                                        <img src="images/pro.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                            <p>Expertise</p>
+                                            <ul className="listInline tags">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ScrollAnimation>
                             </Slider>
                         </div>
                     </div>
@@ -255,46 +287,58 @@ const Home = () => {
                     </div>
                     <div className="row mt-5">
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <img src='images/aggregate-color.png' alt="" />
-                                <h3>Hire Quickly</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <img src='images/aggregate-color.png' alt="" />
+                                    <h3>Hire Quickly</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <img src='images/aggregate-color.png' alt="" />
-                                <h3>Hire Quickly</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <img src='images/aggregate-color.png' alt="" />
+                                    <h3>Hire Quickly</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <img src='images/aggregate-color.png' alt="" />
-                                <h3>Hire Quickly</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <img src='images/aggregate-color.png' alt="" />
+                                    <h3>Hire Quickly</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <img src='images/aggregate-color.png' alt="" />
-                                <h3>Hire Quickly</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <img src='images/aggregate-color.png' alt="" />
+                                    <h3>Hire Quickly</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <img src='images/aggregate-color.png' alt="" />
-                                <h3>Hire Quickly</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <img src='images/aggregate-color.png' alt="" />
+                                    <h3>Hire Quickly</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <img src='images/aggregate-color.png' alt="" />
-                                <h3>Hire Quickly</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <img src='images/aggregate-color.png' alt="" />
+                                    <h3>Hire Quickly</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                     </div>
                 </div>
@@ -305,38 +349,96 @@ const Home = () => {
                         <div className="col-md-12 col-12">
                             <div className="sectionHeading text-center">
                                 <h2>Hiring Made Easy</h2>
-                                <p>We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives.</p>
+                                <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
                             </div>
                         </div>
                     </div>
                     <div className="row mt-5">
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <div className="numWrp">
-                                    <div className="hiringNum">1</div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <div className="numWrp">
+                                        <div className="hiringNum">1</div>
+                                    </div>
+                                    <h3>Talk to One of Our Industry Experts</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
                                 </div>
-                                <h3>Talk to One of Our Industry Experts</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            </ScrollAnimation>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <div className="numWrp">
-                                    <div className="hiringNum">2</div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx">
+                                    <div className="numWrp">
+                                        <div className="hiringNum">2</div>
+                                    </div>
+                                    <h3>Talk to One of Our Industry Experts</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
                                 </div>
-                                <h3>Talk to One of Our Industry Experts</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                            </div>
+                            </ScrollAnimation>
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="contentBx noArrow">
-                                <div className="numWrp">
-                                    <div className="hiringNum">3</div>
+                            <ScrollAnimation animateIn="fadeIn">
+                                <div className="contentBx noArrow">
+                                    <div className="numWrp">
+                                        <div className="hiringNum">3</div>
+                                    </div>
+                                    <h3>Talk to One of Our Industry Experts</h3>
+                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
                                 </div>
-                                <h3>Talk to One of Our Industry Experts</h3>
-                                <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                            </ScrollAnimation>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="video">
+                <div className="videoBgImage">
+                    <img src="images/areaof-ecp-1.jpg" alt="" />
+                </div>
+                <div className="container">
+                    <div className="row">
+                    <div className="col-lg-4">
+                        <div className="video_box text-center">
+                            <a href="/" className="lightbox-image"><FontAwesomeIcon icon={faPlay} /></a>
+                        </div>
+                    </div>
+                    <div className="col-lg-2"></div>
+                    <div className="col-lg-6">
+                        <div className="title_all_box style_one text-end pb-5 mb-4">
+                            <div className="sectionHeading">
+                                <h2 className="mainHeading whiteTxt">Create Meaningful Experiences for employees</h2>
+                                <p className="my-4">Focus  people by understanding employees’ emotions and<br/>  perspectives at  all touch points, so you can take action and focus<br/> experiences on what matters to the people.</p>
+                            </div>
+                            <div className="theme_btn">
+                                <a href="/" className="colorBtn">Read more</a>
                             </div>
                         </div>
+                    </div>
+                    </div>
+                    <div className="row">
+                <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
+                    <div className="step_number">
+                        <h3>01.</h3>
+                    </div>
+                    <h2 className="title">
+                        <a href="/">Payroll Management</a>
+                    </h2>
+                </div>
+                <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
+                    <div className="step_number">
+                        <h3>02.</h3>
+                    </div>
+                    <h2 className="title">
+                        <a href="/">Employee Compensation</a>
+                    </h2>
+                </div>
+                <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
+                    <div className="step_number">
+                        <h3>03.</h3>
+                    </div>
+                    <h2 className="title">
+                        <a href="/">Benefits Management</a>
+                    </h2>
+                </div>
                     </div>
                 </div>
             </section>
@@ -350,56 +452,58 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row mt-5">
-                        <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <FontAwesomeIcon icon={faQuoteLeft} />
-                                <h3>I have been working with Toptal...</h3>
-                                <p>I have been working with Toptal engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond. I have relied on them as key team players and they have never felt like “outsiders”. Toptal as an organization has been professional and easy to work with.</p>
-                                <ul className="listInline">
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                </ul>
-                                <h4>Ian Stokes-Rees</h4>
-                                <h6>Partner</h6>
+                    <ScrollAnimation animateIn="fadeIn">
+                        <div className="row mt-5">
+                            <div className="col-md-4 col-12">
+                                <div className="contentBx">
+                                    <FontAwesomeIcon icon={faQuoteLeft} />
+                                    <h3>I have been working with Toptal...</h3>
+                                    <p>I have been working with Toptal engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond. I have relied on them as key team players and they have never felt like “outsiders”. Toptal as an organization has been professional and easy to work with.</p>
+                                    <ul className="listInline">
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                    </ul>
+                                    <h4>Ian Stokes-Rees</h4>
+                                    <h6>Partner</h6>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-12">
+                                <div className="contentBx">
+                                    <FontAwesomeIcon icon={faQuoteLeft} />
+                                    <h3>I have been working with Toptal...</h3>
+                                    <p>I have been working with Toptal engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond. I have relied on them as key team players and they have never felt like “outsiders”. Toptal as an organization has been professional and easy to work with.</p>
+                                    <ul className="listInline">
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                    </ul>
+                                    <h4>Ian Stokes-Rees</h4>
+                                    <h6>Partner</h6>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-12">
+                                <div className="contentBx">
+                                    <FontAwesomeIcon icon={faQuoteLeft} />
+                                    <h3>I have been working with Toptal...</h3>
+                                    <p>I have been working with Toptal engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond. I have relied on them as key team players and they have never felt like “outsiders”. Toptal as an organization has been professional and easy to work with.</p>
+                                    <ul className="listInline">
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                        <li><FontAwesomeIcon icon={faStar} /></li>
+                                    </ul>
+                                    <h4>Ian Stokes-Rees</h4>
+                                    <h6>Partner</h6>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <FontAwesomeIcon icon={faQuoteLeft} />
-                                <h3>I have been working with Toptal...</h3>
-                                <p>I have been working with Toptal engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond. I have relied on them as key team players and they have never felt like “outsiders”. Toptal as an organization has been professional and easy to work with.</p>
-                                <ul className="listInline">
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                </ul>
-                                <h4>Ian Stokes-Rees</h4>
-                                <h6>Partner</h6>
-                            </div>
-                        </div>
-                        <div className="col-md-4 col-12">
-                            <div className="contentBx">
-                                <FontAwesomeIcon icon={faQuoteLeft} />
-                                <h3>I have been working with Toptal...</h3>
-                                <p>I have been working with Toptal engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond. I have relied on them as key team players and they have never felt like “outsiders”. Toptal as an organization has been professional and easy to work with.</p>
-                                <ul className="listInline">
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                    <li><FontAwesomeIcon icon={faStar} /></li>
-                                </ul>
-                                <h4>Ian Stokes-Rees</h4>
-                                <h6>Partner</h6>
-                            </div>
-                        </div>
-                    </div>
+                    </ScrollAnimation>
                 </div>
             </section>
             <section className="blog">
@@ -412,112 +516,114 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row mt-5">
-                        <div className="col-md-5 col-12">
-                            <div className="blogBx blogBig">
-                                <div className="blogImg">
-                                    <img src="images/blog.png" alt=""/>
-                                    <div className="blogAuthImg">
-                                        <img src="images/user.jpeg" alt=""/>
-                                    </div>
-                                </div>
-                                <div className="blogContent">
-                                    <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                    <h5>By <b>Pinka Sharma</b></h5>
-                                    <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                    <div className="d-flex justify-content-between">
-                                        <h6>7 min read</h6>
-                                        <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-7 col-12">
-                            <div className="row">
-                                <div className="col-md-6 col-12">
-                                    <div className="blogBx blogSmall">
-                                        <div className="blogImg">
-                                            <img src="images/blog.png" alt=""/>
-                                            <div className="blogAuthImg">
-                                                <img src="images/user.jpeg" alt=""/>
-                                            </div>
-                                        </div>
-                                        <div className="blogContent">
-                                            <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                            <h5>By <b>Pinka Sharma</b></h5>
-                                            <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                            <div className="d-flex justify-content-between">
-                                                <h6>7 min read</h6>
-                                                <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                            </div>
+                    <ScrollAnimation animateIn="fadeIn">
+                        <div className="row mt-5">
+                            <div className="col-md-5 col-12">
+                                <div className="blogBx blogBig">
+                                    <div className="blogImg">
+                                        <img src="images/blog.png" alt=""/>
+                                        <div className="blogAuthImg">
+                                            <img src="images/user.jpeg" alt=""/>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-md-6 col-12">
-                                    <div className="blogBx blogSmall">
-                                        <div className="blogImg">
-                                            <img src="images/blog.png" alt=""/>
-                                            <div className="blogAuthImg">
-                                                <img src="images/user.jpeg" alt=""/>
-                                            </div>
-                                        </div>
-                                        <div className="blogContent">
-                                            <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                            <h5>By <b>Pinka Sharma</b></h5>
-                                            <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                            <div className="d-flex justify-content-between">
-                                                <h6>7 min read</h6>
-                                                <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6 col-12">
-                                    <div className="blogBx blogSmall">
-                                        <div className="blogImg">
-                                            <img src="images/blog.png" alt=""/>
-                                            <div className="blogAuthImg">
-                                                <img src="images/user.jpeg" alt=""/>
-                                            </div>
-                                        </div>
-                                        <div className="blogContent">
-                                            <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                            <h5>By <b>Pinka Sharma</b></h5>
-                                            <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                            <div className="d-flex justify-content-between">
-                                                <h6>7 min read</h6>
-                                                <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6 col-12">
-                                    <div className="blogBx blogSmall">
-                                        <div className="blogImg">
-                                            <img src="images/blog.png" alt=""/>
-                                            <div className="blogAuthImg">
-                                                <img src="images/user.jpeg" alt=""/>
-                                            </div>
-                                        </div>
-                                        <div className="blogContent">
-                                            <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                            <h5>By <b>Pinka Sharma</b></h5>
-                                            <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                            <div className="d-flex justify-content-between">
-                                                <h6>7 min read</h6>
-                                                <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                            </div>
+                                    <div className="blogContent">
+                                        <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
+                                        <h5>By <b>Pinka Sharma</b></h5>
+                                        <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
+                                        <div className="d-flex justify-content-between">
+                                            <h6>7 min read</h6>
+                                            <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-12 mt-4">
-                            <div className="text-center">
-                                <a href="/" className="lineBtn">Read More</a>
+                            <div className="col-md-7 col-12">
+                                <div className="row">
+                                    <div className="col-md-6 col-12">
+                                        <div className="blogBx blogSmall">
+                                            <div className="blogImg">
+                                                <img src="images/blog.png" alt=""/>
+                                                <div className="blogAuthImg">
+                                                    <img src="images/user.jpeg" alt=""/>
+                                                </div>
+                                            </div>
+                                            <div className="blogContent">
+                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
+                                                <h5>By <b>Pinka Sharma</b></h5>
+                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
+                                                <div className="d-flex justify-content-between">
+                                                    <h6>7 min read</h6>
+                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <div className="blogBx blogSmall">
+                                            <div className="blogImg">
+                                                <img src="images/blog.png" alt=""/>
+                                                <div className="blogAuthImg">
+                                                    <img src="images/user.jpeg" alt=""/>
+                                                </div>
+                                            </div>
+                                            <div className="blogContent">
+                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
+                                                <h5>By <b>Pinka Sharma</b></h5>
+                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
+                                                <div className="d-flex justify-content-between">
+                                                    <h6>7 min read</h6>
+                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <div className="blogBx blogSmall">
+                                            <div className="blogImg">
+                                                <img src="images/blog.png" alt=""/>
+                                                <div className="blogAuthImg">
+                                                    <img src="images/user.jpeg" alt=""/>
+                                                </div>
+                                            </div>
+                                            <div className="blogContent">
+                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
+                                                <h5>By <b>Pinka Sharma</b></h5>
+                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
+                                                <div className="d-flex justify-content-between">
+                                                    <h6>7 min read</h6>
+                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <div className="blogBx blogSmall">
+                                            <div className="blogImg">
+                                                <img src="images/blog.png" alt=""/>
+                                                <div className="blogAuthImg">
+                                                    <img src="images/user.jpeg" alt=""/>
+                                                </div>
+                                            </div>
+                                            <div className="blogContent">
+                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
+                                                <h5>By <b>Pinka Sharma</b></h5>
+                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
+                                                <div className="d-flex justify-content-between">
+                                                    <h6>7 min read</h6>
+                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 mt-4">
+                                <div className="text-center">
+                                    <a href="/" className="lineBtn">Read More</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollAnimation>
                 </div>
             </section>
             <section className="getInTouch">
