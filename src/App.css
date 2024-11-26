@@ -405,10 +405,10 @@ section.profile .bannerProfileDetails:before{
   font-size: 40px;
 }
 .slick-prev {
-  left: -40px;
+  left: -25px;
 }
 .slick-next {
-  right: -25px;
+  right: -35px;
 }
 .contentBx img {
   width: 80px;
@@ -933,24 +933,16 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
 
 @media only screen and (max-width:991px){
   .navbar-brand img{
-    max-width: 250px;
+    max-width: 150px;
   }
-  .slide .container h1 {
-      font-size: 40px;
-      line-height: 50px;
-  }
+.getStarted .lineBtn {
+    padding: 7px 10px;
+    gap: 5px;
+    font-size: 12px;
+}
 
-  .slide .container h3 {
-      font-size: 16px;
-      line-height: 24px;
-  }
-  .colorBx{
-    margin-bottom: 30px;
-  }
-  .con_content {
-    flex-wrap: wrap;
-  }
-  body{padding-top: 60px; overflow-x: hidden;}
+
+  body{padding-top: 80px; overflow-x: hidden;}
   section{
       overflow: hidden;
   }
@@ -962,13 +954,16 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
   }
   nav#mainNav .nav-item > a {
       padding: 10px 0;
-      border-bottom: solid 1px #c3c3c329;
       display: flex;
       justify-content: space-between;
+  }
+  .dropDown{
+    justify-content: space-between;
   }
   
  nav#mainNav .nav-item{
   padding: 0;
+  border-bottom: solid 1px #c3c3c329;
  }
  nav#mainNav{
   padding: 15px 0px;
@@ -1031,5 +1026,70 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
   }
   .cross-toggler img{
     max-width: 15px;
+  }
+  header.mainHeader.scrolled .colorLogo {
+      display: none;
+  }
+
+  header.mainHeader.scrolled img.logoWhite {
+      display: inline-block !important;
+  }
+  .mainHeader.scrolled nav#mainNav .nav-item > a{
+    color: #fff;
+  }
+  .banner .bannerProfile{
+    display: block !important;
+  }
+  section.banner{
+    padding: 60px 0 30px;
+  }
+  .banner .bannerProfile >img {
+    height: 200px;
+    object-fit: contain;
+  }
+  section#servicesSec {
+    padding-bottom: 0;
+  }
+  
+  .hiringProcess .contentBx {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .hiringProcess .contentBx:before {
+    display: none;
+  }
+  
+  .numWrp:after, .numWrp:before {
+    display: none;
+  }
+  .blogBx.blogBig .blogContent p {
+    min-height: 1px;
+  }
+    .colorBx{
+      margin-bottom: 30px;
+    }
+    .con_content {
+      flex-wrap: wrap;
+    }
+  .blogBx.blogBig .blogContent p {
+      min-height: 1px;
+  }
+
+  .contactForm {
+      padding: 30px;
+      margin-bottom: 50px;
+  }
+
+  .contactForm .listInline {
+      flex-wrap: wrap;
+  }
+
+  section.getInTouch .ps-5 {
+      padding-left: 15px !important;
+  }
+
+  .clients {
+      flex-wrap: wrap;
   }
 }

@@ -35,7 +35,7 @@ const Header = () => {
                         </button>
                         <ul className="navbar-nav m-auto">
                             <li className="mobile">
-                                <img src="images/logo.png" alt="" />
+                                <img src="images/logo2.png" alt="" />
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/">Home</Link>

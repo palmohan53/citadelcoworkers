@@ -8,8 +8,8 @@ const Footer = () => {
             <footer className="footer">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4 col-6 pe-5">
-                            <div className="footerLinks">
+                        <div className="col-md-4 col-12 pe-5">
+                            <div className="footerLinks mb-4">
                                 <div className="logo mb-2">
                                     <a href="/">
                                         <img src="images/logo2.png" alt=""/>
@@ -23,7 +23,7 @@ const Footer = () => {
                         </div>
                         
                         <div className="col">
-                            <div className="footerLinks">
+                            <div className="footerLinks mb-4">
                                 <h3>Policy</h3>
                                 <ul className="unorderList">
                                     <li><a href="/">Home</a></li>
@@ -36,7 +36,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="col">
-                            <div className="footerLinks">
+                            <div className="footerLinks mb-4">
                                 <h3>Information</h3>
                                 <ul className="unorderList">
                                     <li><a href="/">Home</a></li>
@@ -48,7 +48,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-md-3 col-6 ftTouch">
+                        <div className="col-md-3 col-12 ftTouch">
                             <div className="footerLinks">
                                 <h3>Get In Touch</h3>
                                 <div className="d-block mb-4">
