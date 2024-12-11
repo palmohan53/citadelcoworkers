@@ -7,22 +7,22 @@ import API_ENDPOINTS from "../config/APIEndPoints";
 
 const BlogDetails = () => {
     const {blog} = useParams()
-    const [blogDetails, setBlogDetails] = useState([]);
+    const [blogDetails, setBlogDetails] = useState();
 
-    const getBlogDetails = async () => {
-        await axios.get(`${API_HOST}${API_ENDPOINTS.blogDetails}${blog}`)
+    const getBlogDetails = () => {
+        axios.get(`${API_HOST}${API_ENDPOINTS.blogDetails}${blog}`)
         .then((response) => {
             console.log(response.data);
-            setBlogDetails(response.data)
+            setBlogDetails(response.data.post)
         })
         .catch((err)=>{
             console.log(err)
         })
     }
-      useEffect(() => {
+   useEffect(()=>{
         getBlogDetails()
-        window.scrollTo(0, 0)
-      }, [])
+        //eslint-disable-next-line
+   }, [])
     return(
         <React.Fragment>
         <section className="innerBanner">
@@ -37,7 +37,7 @@ const BlogDetails = () => {
                     <h3>Why</h3>
                     <h2>Choose Us</h2>
                 </div> */}
-                <div className="blogDetailsBx" dangerouslySetInnerHTML={{ __html: blogDetails?.post?.post_content }}></div>
+                <div className="blogDetailsBx" dangerouslySetInnerHTML={{ __html: blogDetails?.post_content }}></div>
                {/* {blogDetails.post.post_content} */}
             </div>
         </section>
