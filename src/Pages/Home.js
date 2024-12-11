@@ -1,5 +1,8 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from 'react-router-dom';
+import axios from "axios";
+import API_HOST from "../config/APIHost";
+import API_ENDPOINTS from "../config/APIEndPoints";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,10 +11,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faQuoteLeft, faStar, faPhone, faEnvelope, faTrophy, faCode, faCircleCheck, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.compat.css"
+import "animate.css/animate.compat.css";
 
 
 const Home = () => {
+    const [blogList, setBlogList] = useState([])
+
     let bannerSettings = {
         dots: false,
         arrows:false,
@@ -46,9 +51,21 @@ const Home = () => {
             }
         ]
     };
+    const getBlogList = async () => {
+        await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
+        .then((response) => {
+            console.log(response.data);
+            setBlogList(response.data.listing)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
     useEffect(() => {
+        getBlogList()
         window.scrollTo(0, 0)
       }, [])
+
     return(
         <React.Fragment>
             <section className="banner">
@@ -526,95 +543,50 @@ const Home = () => {
                                             <img src="images/user.jpeg" alt=""/>
                                         </div>
                                     </div>
+                                    {/* {console.log(blogList.listing[0].post_title)} */}
                                     <div className="blogContent">
-                                        <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                        <h5>By <b>Pinka Sharma</b></h5>
-                                        <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
+                                        <h3>{blogList[0]?.post_title}</h3>
+                                        <h5>By <b>{blogList[0]?.display_name}</b></h5>
+                                        <p>{blogList[0]?.post_content}</p>
                                         <div className="d-flex justify-content-between">
                                             <h6>7 min read</h6>
-                                            <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
+                                            <a href={`/blog/${blogList[0]?.post_name}`} className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-md-7 col-12">
                                 <div className="row">
-                                    <div className="col-md-6 col-12">
-                                        <div className="blogBx blogSmall">
-                                            <div className="blogImg">
-                                                <img src="images/blog.png" alt=""/>
-                                                <div className="blogAuthImg">
-                                                    <img src="images/user.jpeg" alt=""/>
-                                                </div>
-                                            </div>
-                                            <div className="blogContent">
-                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                                <h5>By <b>Pinka Sharma</b></h5>
-                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                                <div className="d-flex justify-content-between">
-                                                    <h6>7 min read</h6>
-                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 col-12">
-                                        <div className="blogBx blogSmall">
-                                            <div className="blogImg">
-                                                <img src="images/blog.png" alt=""/>
-                                                <div className="blogAuthImg">
-                                                    <img src="images/user.jpeg" alt=""/>
-                                                </div>
-                                            </div>
-                                            <div className="blogContent">
-                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                                <h5>By <b>Pinka Sharma</b></h5>
-                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                                <div className="d-flex justify-content-between">
-                                                    <h6>7 min read</h6>
-                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 col-12">
-                                        <div className="blogBx blogSmall">
-                                            <div className="blogImg">
-                                                <img src="images/blog.png" alt=""/>
-                                                <div className="blogAuthImg">
-                                                    <img src="images/user.jpeg" alt=""/>
-                                                </div>
-                                            </div>
-                                            <div className="blogContent">
-                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                                <h5>By <b>Pinka Sharma</b></h5>
-                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                                <div className="d-flex justify-content-between">
-                                                    <h6>7 min read</h6>
-                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-6 col-12">
-                                        <div className="blogBx blogSmall">
-                                            <div className="blogImg">
-                                                <img src="images/blog.png" alt=""/>
-                                                <div className="blogAuthImg">
-                                                    <img src="images/user.jpeg" alt=""/>
-                                                </div>
-                                            </div>
-                                            <div className="blogContent">
-                                                <h3>The Cost Of Professional Writers For Hire: What To Expect</h3>
-                                                <h5>By <b>Pinka Sharma</b></h5>
-                                                <p>The 2022 crash shook the cryptocurrency market to its core, but investors are still buying digital coins. How does crypto work, and what does the future hold for it?</p>
-                                                <div className="d-flex justify-content-between">
-                                                    <h6>7 min read</h6>
-                                                    <a href="/" className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {
+                                        blogList.map((blog, index)=>{
+                                            return(
+                                                index !== 0 && index < 5 ? 
+                                                    <div className="col-md-6 col-12" key={index}>
+                                                        <Link to={`/blog/${blog?.post_name}`}>
+                                                            <div className="blogBx blogSmall">
+                                                                <div className="blogImg">
+                                                                    <img src="images/blog.png" alt=""/>
+                                                                    <div className="blogAuthImg">
+                                                                        <img src="images/user.jpeg" alt=""/>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="blogContent">
+                                                                    <h3>{blog.post_title}</h3>
+                                                                    <h5>By <b>{blog.display_name}</b></h5>
+                                                                    <p>{blog.post_content}</p>
+                                                                    <div className="d-flex justify-content-between">
+                                                                        <h6>7 min read</h6>
+                                                                        <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </Link>
+                                                    </div>
+                                                 : null
+                                            )
+                                        })
+                                    }
+                                   
                                 </div>
                             </div>
                             <div className="col-12 mt-4">

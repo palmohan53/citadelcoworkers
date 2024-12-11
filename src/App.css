@@ -1,3 +1,7 @@
+/*
+  Author: Rahul Bhardwaj
+  rajputrahul445@gmail.com
+*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 body {font-family: 'Noto Sans', sans-serif;background: #fff;overflow: auto;font-size: 14px;overflow-x: hidden;padding-top: 0px;}
 a, a:hover, a:focus {  text-decoration: none;  transition: all 400ms ease; }
@@ -918,7 +922,9 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
   background: #00cc83;
   height: 100%;
 }
-
+.blogDetailsBx img{
+  height: auto;
+}
 
 
 
