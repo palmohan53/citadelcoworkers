@@ -1,22 +1,27 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
+import { useQuery } from "react-query";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faQuoteLeft, faStar, faPhone, faEnvelope, faTrophy, faCode, faCircleCheck, faPlay } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight, faQuoteLeft, faStar, faCode, faCircleCheck, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
+import ContactForm from "../Component/ContactForm";
 
-
+const getBlogList = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
+    const data = await response;
+    return data;
+}
 const Home = () => {
-    const [blogList, setBlogList] = useState([])
-
+    // const [blogList, setBlogList] = useState([]);
+    const { data, status } = useQuery("users", getBlogList);
     let bannerSettings = {
         dots: false,
         arrows:false,
@@ -51,21 +56,14 @@ const Home = () => {
             }
         ]
     };
-    const getBlogList = async () => {
-        await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
-        .then((response) => {
-            console.log(response.data);
-            setBlogList(response.data.listing)
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
-    }
+
     useEffect(() => {
-        getBlogList()
+        // getBlogList()
         window.scrollTo(0, 0)
       }, [])
-
+      if (status === 'loading') {
+        return <div className="loaderWrp"><span class="loader"></span></div>
+      }
     return(
         <React.Fragment>
             <section className="banner">
@@ -536,44 +534,58 @@ const Home = () => {
                     <ScrollAnimation animateIn="fadeIn">
                         <div className="row mt-5">
                             <div className="col-md-5 col-12">
-                                <div className="blogBx blogBig">
-                                    <div className="blogImg">
-                                        <img src="images/blog.png" alt=""/>
-                                        <div className="blogAuthImg">
-                                            <img src="images/user.jpeg" alt=""/>
+                                <Link to={`/blog/${data?.data?.listing[0]?.post_name}`} className="d-block">
+                                    <div className="blogBx blogBig">
+                                        <div className="blogImg">
+                                            <img src="images/blog.png" alt=""/>
+                                            <div className="blogAuthImg">
+                                                {
+                                                    data?.data?.listing[0]?.display_name === "Pinka Sharma"
+                                                    ?
+                                                    <img src="/images/pinka.png" alt=""/>
+                                                    :
+                                                    <img src="images/suresh.png" alt=""/>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div className="blogContent">
+                                            <h3>{data?.data?.listing[0]?.post_title}</h3>
+                                            <h5>By <b>{data?.data?.listing[0]?.display_name}</b></h5>
+                                            <p>{data?.data?.listing[0]?.post_content}</p>
+                                            <div className="d-flex justify-content-between">
+                                                <h6>7 min read</h6>
+                                                <button className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></button>
+                                            </div>
                                         </div>
                                     </div>
-                                    {/* {console.log(blogList.listing[0].post_title)} */}
-                                    <div className="blogContent">
-                                        <h3>{blogList[0]?.post_title}</h3>
-                                        <h5>By <b>{blogList[0]?.display_name}</b></h5>
-                                        <p>{blogList[0]?.post_content}</p>
-                                        <div className="d-flex justify-content-between">
-                                            <h6>7 min read</h6>
-                                            <a href={`/blog/${blogList[0]?.post_name}`} className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></a>
-                                        </div>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                             <div className="col-md-7 col-12">
                                 <div className="row">
                                     {
-                                        blogList.map((blog, index)=>{
+                                        data?.data.listing?.map((blog, index)=>{
                                             return(
                                                 index !== 0 && index < 5 ? 
                                                     <div className="col-md-6 col-12" key={index}>
-                                                        <Link to={`/blog/${blog?.post_name}`}>
+                                                        <Link to={`/blog/${blog?.post_name}`}  className="d-block">
                                                             <div className="blogBx blogSmall">
                                                                 <div className="blogImg">
                                                                     <img src="images/blog.png" alt=""/>
                                                                     <div className="blogAuthImg">
-                                                                        <img src="images/user.jpeg" alt=""/>
+                                                                    {
+                                                                        blog?.display_name === "Pinka Sharma"
+                                                                        ?
+                                                                        <img src="/images/pinka.png" alt=""/>
+                                                                        :
+                                                                        <img src="images/suresh.png" alt=""/>
+                                                                    }
                                                                     </div>
                                                                 </div>
                                                                 <div className="blogContent">
                                                                     <h3>{blog.post_title}</h3>
                                                                     <h5>By <b>{blog.display_name}</b></h5>
-                                                                    <p>{blog.post_content}</p>
+                                                                    <p dangerouslySetInnerHTML={{ __html: blog.post_content }}></p>
+                                                                    
                                                                     <div className="d-flex justify-content-between">
                                                                         <h6>7 min read</h6>
                                                                         <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></button>
@@ -591,118 +603,14 @@ const Home = () => {
                             </div>
                             <div className="col-12 mt-4">
                                 <div className="text-center">
-                                    <a href="/" className="lineBtn">Read More</a>
+                                    <Link to="/blog" className="lineBtn">Read More</Link>
                                 </div>
                             </div>
                         </div>
                     </ScrollAnimation>
                 </div>
             </section>
-            <section className="getInTouch">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-md-7 col-12">
-                            <div className="contactForm">
-                                <h2>Get In Touch</h2>
-                                <p>Our team will get back to you within 8 business hours or less.</p>
-                                <ul className="listInline">
-                                    <li>
-                                        <a href="/"><FontAwesomeIcon icon={faPhone} /> Book a Call</a>
-                                    </li>
-                                    <li>
-                                        <a href="/"><FontAwesomeIcon icon={faEnvelope} /> Email Us</a>
-                                    </li>
-                                    <li>
-                                        <a href="/"><FontAwesomeIcon icon={faWhatsapp} /> Whatsapp</a>
-                                    </li>
-                                </ul>
-                                <div className="formInr">
-                                    <div className="row">
-                                        <div className="col-md-6 col-12">
-                                            <div className="form-group">
-                                                <label>Full Name *</label>
-                                                <input type="text" name="name" className="form-control" id=""/> 
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-12">
-                                            <div className="form-group">
-                                                <label>Email *</label>
-                                                <input type="email" name="email" className="form-control" id=""/> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-6 col-12">
-                                            <div className="form-group">
-                                                <label>Country *</label>
-                                                <input type="text" name="Country" className="form-control" id=""/> 
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6 col-12">
-                                            <div className="form-group">
-                                                <label>Phone Number (Optional)</label>
-                                                <input type="number" name="number" className="form-control" id=""/> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="col-md-12 col-12">
-                                            <div className="form-group">
-                                                <label>Select your service *</label>
-                                                <input type="text" name="service" className="form-control" id=""/> 
-                                            </div>
-                                        </div>
-                                        <div className="col-md-12 col-12">
-                                            <div className="form-group">
-                                                <label>How can we help?*</label>
-                                                <textarea name="" className="form-control" rows={5}></textarea>
-                                            </div>
-                                        </div>
-                                        <div className="d-flex mt-3">
-                                            <button className="colorBtn wideBtn">Send Your Query</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-5 col-12 ps-5">
-                            <div className="contentContent">
-                                <h3>Trusted by startups and Fortune 500 companies</h3>
-                                <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faTrophy} /></div>
-                                    <div className="detName">
-                                        <h4>20+ years of experience</h4>
-                                        <p>We can handle projects of all complexities.</p>
-                                    </div>
-                                </div>
-                                <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faTrophy} /></div>
-                                    <div className="detName">
-                                        <h4>20+ years of experience</h4>
-                                        <p>We can handle projects of all complexities.</p>
-                                    </div>
-                                </div>
-                                <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faTrophy} /></div>
-                                    <div className="detName">
-                                        <h4>20+ years of experience</h4>
-                                        <p>We can handle projects of all complexities.</p>
-                                    </div>
-                                </div>
-                                <div className="clients">
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <ContactForm/>
         </React.Fragment>
     )
 }

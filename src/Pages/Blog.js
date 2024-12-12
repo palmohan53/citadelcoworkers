@@ -1,87 +1,97 @@
 import React, {useEffect} from "react";
 import { Link } from 'react-router-dom';
-import servicesContent from '../Content/services.json';
-import whyChooseContent from '../Content/whyChoose.json';
+import axios from "axios";
+import API_HOST from "../config/APIHost";
+import API_ENDPOINTS from "../config/APIEndPoints";
+import { useQuery } from "react-query";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-const Blog = () => {
+const getBlogList = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
+    const data = await response;
+    return data;
+}
+const Blog = ({isRecentBlog}) => {
+    const { data, status } = useQuery("users", getBlogList);
+    const blogHtml = (blog, index)=> {
+        return(
+            <div className="col-md-4 col-12" key={index}>
+                <Link to={`/blog/${blog?.post_name}`}  className="d-block">
+                    <div className="blogBx blogSmall">
+                        <div className="blogImg">
+                            <img src="/images/blog.png" alt=""/>
+                            <div className="blogAuthImg">
+                                {
+                                    blog.display_name === "Pinka Sharma"
+                                    ?
+                                    <img src="/images/pinka.png" alt=""/>
+                                    :
+                                    <img src="/images/suresh.png" alt=""/>
+                                }
+                            </div>
+                        </div>
+                        <div className="blogContent">
+                            <h3>{blog.post_title}</h3>
+                            <h5>By <b>{blog.display_name}</b></h5>
+                            <p dangerouslySetInnerHTML={{ __html: blog.post_content }}></p>
+                            <div className="d-flex justify-content-between">
+                                <h6>7 min read</h6>
+                                <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></button>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+            </div>
+        )
+    }
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
+    if (status === 'loading') {
+        return <div className="loaderWrp"><span class="loader"></span></div>
+    }
     return(
         <React.Fragment>
-        <section className="innerBanner">
-            <img src="images/pexels-hillaryfox-1595385.jpg" alt=""/>
-            <h1>BlogDetails</h1>
-            <div className="bannerOvelay"></div>
-        </section>
-        <section className="explore" id="BlogDetailsSec">
-            <div className="container">
-                <div className="row align-items-center mb-3">
-                    <div className="col-md-6 col-12">
-                        <div className="sectionHeading">
-                            <h3>Explore</h3>
-                            <h2>Our BlogDetails</h2>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-12">
-                        <p className="m-0 para">{servicesContent.paragraph[0].body}</p>
-                    </div>
-                </div>
-                <div className="row mt-5">
-                    {
-                        servicesContent.services.map((data, index)=>{
-                            return(
-                                <div className="col-lg-3 col-md-6 col-12" key={index}>
-                                    <div className="colorBx">
-                                        <React.Fragment>
-                                            <img src={data.imageUrl} alt="" />
-                                            <h3>{data.title}</h3>
-                                            <p>{data.body}</p>
-                                            <div className="text-end">
-                                                <Link to="/BlogDetails" className="colorBtn">Explore </Link>
-                                            </div>
-                                        </React.Fragment>
-                                    </div>
+            {!isRecentBlog && <section className="innerBanner">
+                <img src="images/pexels-hillaryfox-1595385.jpg" alt=""/>
+                <h1>Blog</h1>
+                <div className="bannerOvelay"></div>
+            </section>}
+            <section className="blog" id="BlogDetailsSec">
+                <div className="container">
+                    <div className="row">
+                        {
+                            isRecentBlog &&
+                            <div className="col-12">
+                                <div className="sectionHeading text-center mb-5">
+                                    <h2>Recent Blogs</h2>
                                 </div>
+                            </div>
+                        }
+                    {
+                        data?.data.listing?.map((blog, index)=>{
+                            return(
+                            <React.Fragment key={index}>
+                                {
+                                    isRecentBlog
+                                    ?
+                                    index < 3 &&
+                                    blogHtml(blog, index)
+                                    :
+                                    blogHtml(blog, index)
+                                }
+                                    
+                                </React.Fragment>  
                             )
                         })
                     }
+                    
                 </div>
-            </div>
-        </section>
-        <section className="whyUs">
-            <div className="container">
-                {/* <div className="sectionHeading">
-                    <h3>Why</h3>
-                    <h2>Choose Us</h2>
-                </div> */}
-                <div className="row align-items-center">
-                    <div className="col-md-5 col-12">
-                        <img src="images/why-us.png" alt="" className="whyUsThumb"/>
-                    </div>
-                    <div className="col-md-7 col-12 ps-5">
-                        <div className="row">
-                            {
-                                whyChooseContent.map((data, index)=>{
-                                    return(
-                                        <div className="col-md-6 col-12 mb-4" key={index}>
-                                            <div className="whyUsBx">
-                                                <div className="text-end">
-                                                    <img src={data.imageUrl} alt=""/>
-                                                </div>
-                                                <h3>{data.title}</h3>
-                                                <p>{data.body}</p>
-                                            </div>
-                                        </div>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
-    </React.Fragment>
+            </section>
+        
+        </React.Fragment>
     )
 };
 

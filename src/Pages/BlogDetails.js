@@ -1,46 +1,45 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import { useParams } from 'react-router-dom';
+import { useQuery } from "react-query";
 import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
+import RecentBlog from "../Component/RecentBlog";
+
 
 
 const BlogDetails = () => {
     const {blog} = useParams()
-    const [blogDetails, setBlogDetails] = useState();
-
-    const getBlogDetails = () => {
-        axios.get(`${API_HOST}${API_ENDPOINTS.blogDetails}${blog}`)
-        .then((response) => {
-            console.log(response.data);
-            setBlogDetails(response.data.post)
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
+    const getBlogDetails = async () => {
+        window.scrollTo(0, 0)
+        const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogDetails}${blog}`)
+        const data = await response.data;
+        return data;
     }
+    const { data, status } = useQuery(["user", blog], getBlogDetails);
+  
    useEffect(()=>{
-        getBlogDetails()
-        //eslint-disable-next-line
+    window.scrollTo(0, 0)
+    //eslint-disable-next-line
    }, [])
+   
+    if (status === 'loading') {
+        return <div className="loaderWrp"><span class="loader"></span></div>
+    }
     return(
         <React.Fragment>
-        <section className="innerBanner">
+        <section className="innerBanner text-center">
             <img src="images/pexels-hillaryfox-1595385.jpg" alt=""/>
-            <h1>BlogDetails</h1>
+            <h1>{data?.post?.post_title}</h1>
             <div className="bannerOvelay"></div>
         </section>
      
-        <section className="blogDetails">
+        <section className="blogDetails pb-0">
             <div className="container">
-                {/* <div className="sectionHeading">
-                    <h3>Why</h3>
-                    <h2>Choose Us</h2>
-                </div> */}
-                <div className="blogDetailsBx" dangerouslySetInnerHTML={{ __html: blogDetails?.post_content }}></div>
-               {/* {blogDetails.post.post_content} */}
+                <div className="blogDetailsBx" dangerouslySetInnerHTML={{ __html: data?.post?.post_content }}></div>
             </div>
         </section>
+        <RecentBlog/>
     </React.Fragment>
     )
 };
