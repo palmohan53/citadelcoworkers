@@ -31,7 +31,7 @@ const Services = () => {
                     {
                         servicesContent.services.map((data, index)=>{
                             return(
-                                <div className="col-lg-3 col-md-6 col-12" key={index}>
+                                <div className="col-lg-4 col-md-6 col-12" key={index}>
                                     <div className="colorBx">
                                         <React.Fragment>
                                             <img src={data.imageUrl} alt="" />

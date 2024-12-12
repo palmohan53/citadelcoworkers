@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,15 +17,16 @@ const Header = () => {
             }
         });
     }, [])
+
     
     return(
         <header className={`mainHeader ${scrolltopdata}`}>
             <nav className="navbar navbar-expand-lg navbar-light" id="mainNav">
                 <div className="container">
-                    <a className="navbar-brand p-0" href="/">
+                    <NavLink className="navbar-brand p-0" to="/">
                         <img src="/images/logo.png" alt="" className="colorLogo" />
                         <img src="/images/logo2.png" alt="" className="logoWhite" />
-                    </a>
+                    </NavLink>
                     <button className="navbar-toggler" onClick={openToggle}>
                         <img src="images/toggle.png" alt="" />
                     </button>
@@ -38,32 +39,32 @@ const Header = () => {
                                 <img src="/images/logo2.png" alt="" />
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Home</Link>
+                                <NavLink className="nav-link" to="/">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/about-us">About Us</Link>
+                                <NavLink className="nav-link" to="/about-us">About Us</NavLink>
                             </li>
                             <li className="nav-item dropDown">
-                                <Link className="nav-link" to="/services">Services</Link>
+                                <NavLink className="nav-link" to="/services">Services</NavLink>
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul>
-                                    <li><Link className="nav-link" to="/services">Services 1</Link></li>
-                                    <li><Link className="nav-link" to="/services">Services 2</Link></li>
-                                    <li><Link className="nav-link" to="/services">Services 3</Link></li>
-                                    <li><Link className="nav-link" to="/services">Services 4</Link></li>
-                                    <li><Link className="nav-link" to="/services">Services 5</Link></li>
+                                    <li><NavLink className="nav-link" to="/services">Services 1</NavLink></li>
+                                    <li><NavLink className="nav-link" to="/services">Services 2</NavLink></li>
+                                    <li><NavLink className="nav-link" to="/services">Services 3</NavLink></li>
+                                    <li><NavLink className="nav-link" to="/services">Services 4</NavLink></li>
+                                    <li><NavLink className="nav-link" to="/services">Services 5</NavLink></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/blog">Blog</Link>
+                                <NavLink className="nav-link" to="/blog">Blog</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/contact-us">Contact Us</Link>
+                                <NavLink className="nav-link" to="/contact-us">Contact Us</NavLink>
                             </li>
                         </ul>
                     </div>
                     <div className="getStarted">
-                        <Link className="lineBtn" to="/contact-us">Get Started <FontAwesomeIcon icon={faArrowRight} /></Link>
+                        <NavLink className="lineBtn" to="/contact-us">Get Started <FontAwesomeIcon icon={faArrowRight} /></NavLink>
                     </div>
 
                 </div>

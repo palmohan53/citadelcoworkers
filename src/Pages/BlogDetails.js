@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import {Helmet} from "react-helmet";
 import { useParams } from 'react-router-dom';
 import { useQuery } from "react-query";
 import axios from "axios";
@@ -24,22 +25,31 @@ const BlogDetails = () => {
    }, [])
    
     if (status === 'loading') {
-        return <div className="loaderWrp"><span class="loader"></span></div>
+        return <div className="loaderWrp"><span className="loader"></span></div>
     }
     return(
         <React.Fragment>
+            <Helmet>
+                <title>{data?.post?.post_title}</title>
+                <meta name="description" content="Nested component" />
+            </Helmet>
         <section className="innerBanner text-center">
             <img src="images/pexels-hillaryfox-1595385.jpg" alt=""/>
-            <h1>{data?.post?.post_title}</h1>
+            <div className="innerBannerContent">
+                <h1>{data?.post?.post_title}</h1>
+                
+            </div>
             <div className="bannerOvelay"></div>
         </section>
      
-        <section className="blogDetails pb-0">
+        <section className="blogDetails">
             <div className="container">
                 <div className="blogDetailsBx" dangerouslySetInnerHTML={{ __html: data?.post?.post_content }}></div>
             </div>
         </section>
-        <RecentBlog/>
+        <div className="liteGreyBg">
+            <RecentBlog/>
+        </div>
     </React.Fragment>
     )
 };
