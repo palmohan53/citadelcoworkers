@@ -1009,7 +1009,7 @@ section.innerBanner {
   padding: 0;
 }
 
-section.innerBanner img {
+section.innerBanner > img {
   width: 100%;
   height: 400px;
   object-fit: cover;
@@ -1024,6 +1024,7 @@ section.innerBanner .innerBannerContent {
   max-width: 1100px;
   width: 100%;
   text-align: center;
+  padding-top: 80px;
 }
 .innerBannerContent{
   color: #fff;
@@ -1069,6 +1070,295 @@ section.innerBanner .innerBannerContent {
 .blogPageBx .blogSmall{
   display: flex;
 }
+.blogAuth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.blogAuth img {
+  height: 70px;
+  border: solid 2px #fff;
+  border-radius: 50%;
+}
+
+.blogAuth h5 {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 300;
+}
+
+
+
+
+
+.icon_box_all.style_three {
+  text-align: center;
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .09);
+}
+.icon_box_all.style_three .icon_content {
+  position: relative;
+}
+.icon_box_all.style_three .icon_content .icon {
+  position: relative;
+  display: block;
+  margin-bottom: 0px;
+}
+.pd_bottom_20 {
+  padding-bottom: 20px;
+}
+.icon_box_all.style_three .icon_content .txt_content h3 a {
+  display: block;
+  color: #282f3b;
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.icon_box_all.style_three .icon_content .txt_content p {
+  margin-bottom: 0px;
+}
+.icon_box_all.style_three .icon_content .txt_content ul {
+  margin: 30px 0 35px;
+  padding: 0;
+}
+.icon_box_all.style_three .icon_content .txt_content ul li {
+  text-align: left;
+  list-style: none;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.icon_box_all.style_three .icon_content .txt_content ul li::before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  border: 2px solid #e4e7ee;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.bg_light_1 {
+  background: #f8fbff !important;
+}
+.simple_image_boxes {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.height_264px, .height_264 {
+  height: 264px !important;
+}
+.parallax_cover img {
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.team_box {
+  position: relative;
+  margin-bottom: 30px;
+}
+.team_box.style_two .team_box_outer {
+  position: relative;
+  background: #f0f3f9;
+  margin-bottom: 30px;
+  margin: 0px 0px 30px;
+  border-radius: 0px 0px 5px 5px;
+}
+.team_box.style_two .team_box_outer .content_box {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  padding: 30px 30px;
+  z-index: 0;
+  border-radius: 0px 0px 5px 5px;
+}
+.team_box.style_two .team_box_outer .image_box {
+  position: relative;
+  overflow: hidden;
+}
+.team_box.style_two .team_box_outer .image_box::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  text-align: center;
+  transition: all 0.5s;
+  background-color: #282f3b;
+  z-index: 10;
+}
+.team_box.style_two .team_box_outer .image_box img {
+  height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.team_box.style_two .team_box_outer .image_box .overlay {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+.team_box.style_two .team_box_outer .content_box {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  padding: 30px 30px;
+  z-index: 0;
+  border-radius: 0px 0px 5px 5px;
+}
+.team_box.style_two .team_box_outer .content_box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 100%;
+  background: var(--primary-color-one);
+  transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  z-index: -1;
+}
+.team_box.style_two .team_box_outer .content_box p.job_details {
+  font-weight: 600;
+  font-size: 16px;
+  color: #00cc83;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e4e7ee;
+  transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+}
+.team_box.style_two .team_box_outer .content_box p {
+  margin-bottom: 0px;
+}
+.team_box.style_two .team_box_outer:hover .image_box::before {
+  opacity: 0.9;
+  top: 0;
+}
+.team_box.style_two .team_box_outer .image_box .overlay .read_m {
+  position: absolute;
+  top: 38%;
+  opacity: 0;
+  text-align: center;
+  left: 0;
+  font-size: 16px;
+  font-weight: 500;
+  right: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+  color: #fff;
+}
+.team_box.style_two .team_box_outer .image_box .overlay ul {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 40px;
+  text-align: center;
+}
+.team_box.style_two .team_box_outer .image_box .overlay ul li {
+  padding: 0px 10px;
+  display: inline-block;
+  transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+}
+.team_box.style_two .team_box_outer .image_box .overlay ul li:first-child {
+  transform: translateY(200px);
+}
+.team_box.style_two .team_box_outer:hover .image_box .overlay ul li {
+  transform: translateY(0);
+}
+.team_box.style_two .team_box_outer .image_box .overlay ul li a {
+  color: #282f3b;
+  font-size: 15px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  background: #fff;
+  transition: all 0.9s ease-in-out;
+  -moz-transition: all 0.9s ease-in-out;
+  -ms-transition: all 0.9s ease-in-out;
+  -o-transition: all 0.9s ease-in-out;
+}
+.team_box.style_two .team_box_outer:hover .image_box .overlay .read_m {
+  color: #fff;
+  top: 34%;
+  opacity: 1;
+}
+.team_box.style_two .team_box_outer:hover .content_box::before {
+  top: 0;
+}
+.team_box.style_two .team_box_outer:hover .content_box p.job_details {
+  color: #fff;
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.team_box.style_two .team_box_outer .content_box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 100%;
+  background: #00cc83;
+  transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  z-index: -1;
+}
+
+.team_box.style_two .team_box_outer .image_box .overlay ul li:nth-child(2) {
+  transform: translateY(300px);
+}
+.team_box.style_two .team_box_outer .image_box .overlay ul li:nth-child(3) {
+  transform: translateY(400px);
+}
+.team_box.style_two .team_box_outer .image_box .overlay ul li:nth-child(4) {
+  transform: translateY(500px);
+}
+.team_box.style_two .team_box_outer:hover .image_box .overlay ul li {
+  transform: translateY(0);
+}
+.team_box.style_two .team_box_outer:hover h2, .team_box.style_two .team_box_outer:hover p {
+  color: #fff;
+}
+
+
 
 
 

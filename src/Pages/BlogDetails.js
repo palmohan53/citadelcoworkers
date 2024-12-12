@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Helmet} from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { useQuery } from "react-query";
 import axios from "axios";
@@ -29,6 +29,7 @@ const BlogDetails = () => {
     }
     return(
         <React.Fragment>
+            <HelmetProvider>
             <Helmet>
                 <title>{data?.post?.post_title}</title>
                 <meta name="description" content="Nested component" />
@@ -37,7 +38,17 @@ const BlogDetails = () => {
             <img src="images/pexels-hillaryfox-1595385.jpg" alt=""/>
             <div className="innerBannerContent">
                 <h1>{data?.post?.post_title}</h1>
-                
+                <div className="blogAuth">
+                    {
+                        data.post.auther_name === "Pinka Sharma"
+                        ?
+                        <img src="/images/pinka.png" alt=""/>
+                        :
+                        <img src="/images/suresh.png" alt=""/>
+                    }
+                    <h5>{data.post.auther_name}</h5>
+                    <h5>{data.post.post_modified}</h5>
+                </div>
             </div>
             <div className="bannerOvelay"></div>
         </section>
@@ -50,6 +61,7 @@ const BlogDetails = () => {
         <div className="liteGreyBg">
             <RecentBlog/>
         </div>
+        </HelmetProvider>
     </React.Fragment>
     )
 };

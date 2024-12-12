@@ -1,10 +1,11 @@
 import React, {useEffect} from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import {Helmet} from "react-helmet";
+// import {Helmet} from "react-helmet";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -68,8 +69,9 @@ const Home = () => {
       }
     return(
         <React.Fragment>
+            <HelmetProvider>
             <Helmet>
-                <title>Homepage</title>
+                <title>Homepage Title renderd from Local</title>
                 <meta name="description" content="Homepag Nested component" />
             </Helmet>
             <section className="banner">
@@ -164,7 +166,7 @@ const Home = () => {
                                                     <h3>{data.title}</h3>
                                                     <p>{data.body}</p>
                                                     <div className="text-start">
-                                                        <Link to="/services" className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                                                        <Link to="//services" className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
                                                     </div>
                                                 </React.Fragment>
                                             </div>
@@ -546,7 +548,7 @@ const Home = () => {
                             </div>
                             <div className="col-12 mt-4">
                                 <div className="text-center">
-                                    <Link to="/blog" className="lineBtn">Read More</Link>
+                                    <Link to="//blog" className="lineBtn">Read More</Link>
                                 </div>
                             </div>
                         </div>
@@ -554,6 +556,7 @@ const Home = () => {
                 </div>
             </section>
             <ContactForm/>
+            </HelmetProvider>
         </React.Fragment>
     )
 }
