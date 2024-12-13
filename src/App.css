@@ -13,7 +13,7 @@ input, button { outline: none; box-shadow: none;  }
     text-align: right;
 }
 section{
-    padding: 80px 0;
+    padding: 60px 0;
 }
 .sectionHeading h2, .blogDetailsBx h2{
     font-size: 32px;
@@ -326,7 +326,7 @@ section.banner h1{
   height: 90px;
   /* filter: grayscale(1); */
   width: 90px;
-  background: #144260;
+  background: #42bd6d;
   padding: 20px;
   border-radius: 10px;
   border: solid 1px transparent;
@@ -358,7 +358,7 @@ section.banner h1{
   border-bottom: none;
 }
 .sideBorder:hover {
-  background: #144260;
+  background: #42bd6d;
     transition: all 500ms ease;
 }
 
@@ -384,7 +384,7 @@ section.banner h1{
   color: #979696;
 }
 section.profile {
-  background: #144260;
+  background: #42bd6d;
 }
 section.profile .bannerProfile{
   transform: scale(1);
@@ -723,7 +723,7 @@ footer {
   content: '';
   width: 70px;
   height: 3px;
-  background: #5dcd84;
+  background: #42bd6d;
   left: 0;
   bottom: -15px;
 }
@@ -1387,8 +1387,8 @@ span.icon-cell.site-text-primary {
 
 .pagination .active a.page-link {
   color: #fff;
-  background: #5dcd84;
-  border-color: #5dcd84;
+  background: #42bd6d;
+  border-color: #42bd6d;
 }
 .service_box.style_three {
   margin-left: 25px;
