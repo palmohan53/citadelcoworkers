@@ -1,6 +1,8 @@
 import React,{useEffect} from "react";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faUmbrella, faMountainSun } from '@fortawesome/free-solid-svg-icons';
 import aboutContent from '../Content/about.json';
 import Testimonial from "../Component/Testimonial";
 
@@ -42,15 +44,15 @@ const About = () => {
                                         )
                                     })
                                 }
-                                <div className="row about-one-icon-box">
+                                <div className="row about-one-icon-box mb-4">
                                     <div className="col-xl-6 col-md-12 col-sm-6 m-t30">
                                         <div className="wt-icon-box-wraper left">
                                             <div className="icon-md inline-icon m-b20">
-                                                <span className="icon-cell site-text-primary"><i className="flaticon-worker"></i></span>
+                                                <span className="icon-cell site-text-primary"><FontAwesomeIcon icon={faUmbrella} /></span>
                                             </div>
                                             <div className="icon-content">
                                                 <h4 className="wt-tilte">Construction Services</h4>
-                                                <p>Lorem ipsum dolor sit piscing sed nonmy</p>
+                                                <p>Lorem ipsum dolor sit piscing sed nonmy Lorem ipsum dolor sit piscing sed Lorem ipsum dolor sit piscing sed nonmy.</p>
                                             </div>
                                         </div>                                         
                                     </div>  
@@ -58,15 +60,19 @@ const About = () => {
                                     <div className="col-xl-6 col-md-12 col-sm-6 m-t30">
                                         <div className="wt-icon-box-wraper left">
                                             <div className="icon-md inline-icon m-b20">
-                                                <span className="icon-cell site-text-primary"><i className="flaticon-design"></i></span>
+                                                <span className="icon-cell site-text-primary"><FontAwesomeIcon icon={faMountainSun} /></span>
                                             </div>
                                             <div className="icon-content">
                                                 <h4 className="wt-tilte ">Unique Technology</h4>
-                                                <p>Lorem ipsum dolor sit piscing sed nonmy</p>
+                                                <p>Lorem ipsum dolor sit piscing sed nonmy Lorem ipsum dolor sit piscing sed Lorem ipsum dolor sit piscing sed nonmy.</p>
                                             </div>
                                         </div> 
                                     </div>
                                                     
+                                </div>
+                                <div className="d-flex gap-3">
+                                    <Link to='/services' class="lineBtn">View More</Link>
+                                    <Link to='/contact-us' class="colorBtn">Contact Us</Link>
                                 </div>
                             </div>
                         </div>

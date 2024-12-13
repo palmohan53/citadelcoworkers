@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-// import {Helmet} from "react-helmet";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
@@ -11,7 +10,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faCode, faCircleCheck, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faCode, faCircleCheck, faPlay, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
@@ -23,7 +22,6 @@ const getBlogList = async () => {
     return data;
 }
 const Home = () => {
-    // const [blogList, setBlogList] = useState([]);
     const { data, status } = useQuery("users", getBlogList);
     let bannerSettings = {
         dots: false,
@@ -298,7 +296,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="process">
+            {/* <section className="process">
                 <div className="container">
                     <div className="row mb-3">
                         <div className="col-md-12 col-12">
@@ -365,7 +363,142 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+            <section className="service-section-two bg_light_1">
+                <div className="container pd_zero">
+                    <div className="row mb-5">
+                        <div className="col-lg-12">
+                            <div className="title_all_box style_one text-center  dark_color">
+                                <div class="sectionHeading">
+                                    <h2>Build Amazing Teams,<br/>On Demand</h2>
+                                    <p>Quickly assemble the teams you need, exactly when you need them.</p>
+                                </div>
+                            </div>
+                        </div>                                            
+                    </div>
+                    <div className="row gutter_15px">
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className="icon-dollar">
+                                            <FontAwesomeIcon icon={faPeopleRoof} />
+                                            <i></i>
+                                        </span>
+                                        <small className="nom">01</small>
+                                        <h2 className="semiHeading">Employee Compensation</h2>
+                                        <p>Holds in these matters principles selection right rejects.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div className="mr_bottom_30"></div>                        
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className="icon-pharmacy"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                        <small className="nom">02</small>
+                                        <h2 className="semiHeading">Health Care Benefit</h2>
+                                        <p>The great explorer of the truth the master builders human happiness.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div className="mr_bottom_30"></div>                        
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className="icon-service"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                        <small className="nom">03</small>
+                                        <h2 className="semiHeading">Talent Managemen</h2>
+                                        <p>Laborious physo except obtains some advantage from it right.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div className="mr_bottom_30"></div>                        
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className=" icon-dollar"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                        <small className="nom">04</small>
+                                        <h2 className="semiHeading">Risk Managemen</h2>
+                                        <p>Right to find fault with a mans who chooses enjoy has no annoying.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className="icon-dollar">
+                                            <FontAwesomeIcon icon={faPeopleRoof} />
+                                            <i></i>
+                                        </span>
+                                        <small className="nom">05</small>
+                                        <h2 className="semiHeading">Employee Compensation</h2>
+                                        <p>Holds in these matters principles selection right rejects.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div className="mr_bottom_30"></div>                        
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className="icon-pharmacy"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                        <small className="nom">06</small>
+                                        <h2 className="semiHeading">Health Care Benefit</h2>
+                                        <p>The great explorer of the truth the master builders human happiness.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div className="mr_bottom_30"></div>                        
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className="icon-service"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                        <small className="nom">07</small>
+                                        <h2 className="semiHeading">Talent Managemen</h2>
+                                        <p>Laborious physo except obtains some advantage from it right.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                        
+                            <div className="mr_bottom_30"></div>                        
+                        </div>
+                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
+                            <div className="service_box style_three dark_color">
+                                <div className="service_content">
+                                    <div className="content_inner">
+                                        <span className=" icon-dollar"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                        <small className="nom">08</small>
+                                        <h2 className="semiHeading">Risk Managemen</h2>
+                                        <p>Right to find fault with a mans who chooses enjoy has no annoying.</p>
+                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="pd_bottom_50"></div>
+                
+                </section>
             <section className="hiringProcess">
                 <div className="container">
                     <div className="row align-items-center mb-3">
@@ -548,7 +681,7 @@ const Home = () => {
                             </div>
                             <div className="col-12 mt-4">
                                 <div className="text-center">
-                                    <Link to="//blog" className="lineBtn">Read More</Link>
+                                    <Link to="/blog" className="lineBtn">Read More</Link>
                                 </div>
                             </div>
                         </div>

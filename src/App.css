@@ -1112,7 +1112,9 @@ section.innerBanner .innerBannerContent {
 .pd_bottom_20 {
   padding-bottom: 20px;
 }
-.icon_box_all.style_three .icon_content .txt_content h3 a {
+.icon_box_all.style_three .icon_content .txt_content h3 a,
+.team_box.style_two .team_box_outer .content_box h2,
+.icon-content h4, .semiHeading {
   display: block;
   color: #282f3b;
   line-height: 30px;
@@ -1190,6 +1192,7 @@ section.innerBanner .innerBannerContent {
 .team_box.style_two .team_box_outer .image_box {
   position: relative;
   overflow: hidden;
+  padding-top: 30px;
 }
 .team_box.style_two .team_box_outer .image_box::before {
   position: absolute;
@@ -1357,181 +1360,118 @@ section.innerBanner .innerBannerContent {
 .team_box.style_two .team_box_outer:hover h2, .team_box.style_two .team_box_outer:hover p {
   color: #fff;
 }
+.wt-icon-box-wraper.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
+.wt-icon-box-wraper.left svg {
+  color: #fff;
+  height: 20px;
+}
 
+span.icon-cell.site-text-primary {
+  width: 50px;
+  height: 50px;
+  background: #00cc83;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00000059;
+}
+.pagination a.page-link {
+  color: #000;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width:991px){
-  .navbar-brand img{
-    max-width: 150px;
-  }
-.getStarted .lineBtn {
-    padding: 7px 10px;
-    gap: 5px;
-    font-size: 12px;
+.pagination .active a.page-link {
+  color: #fff;
+  background: #5dcd84;
+  border-color: #5dcd84;
+}
+.service_box.style_three {
+  margin-left: 25px;
+}
+.service_box.style_three .service_content {
+  position: relative;
+  padding: 25px;
+  background: #fff;
+  border-radius: 0px 0px 30px 0px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .09);
+}
+.service_box.style_three .service_content .content_inner {
+  position: relative;
+  padding-top: 85px;
+}
+.service_box.style_three .service_content .content_inner span {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 110px;
+  height: 110px;
+  background: #00cc83;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50px;
+  line-height: 110px;
+}
+.service_box.style_three .service_content .content_inner span i {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: transparent;
+  top: -10px;
+  left: 9px;
+  border: 4px solid #282f3b;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+.service_box.style_three .service_content .content_inner .nom {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #00cc83;
+  opacity: 0.5;
+  transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+}
+.service_box.style_three .service_content .content_inner .read_more {
+  font-size: 12px;
+  font-weight: 600;
+  color: #282f3b;
+  text-transform: uppercase;
+  display: block;
+  line-height: 23px;
+  margin-top: 5px;
+}
+.service_box.style_three:hover .service_content .content_inner small {
+  font-size: 60px;
+  color: #00cc83;
+}
+.service_box.style_three:hover .service_content .content_inner span i {
+  top: 0;
+  left: 0;
+}
+.service_content h2.semiHeading {
+  min-height: 60px;
 }
 
 
-  body{padding-top: 80px; overflow-x: hidden;}
-  section{
-      overflow: hidden;
-  }
-  .mobile{display: block  !important;}
-  .desktop{display: none;}
-  .navbar-toggler i {
-      color: #fff;
-      font-size: 28px;
-  }
-  nav#mainNav .nav-item > a {
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
-  }
-  .dropDown{
-    justify-content: space-between;
-  }
-  
- nav#mainNav .nav-item{
-  padding: 0;
-  border-bottom: solid 1px #c3c3c329;
- }
- nav#mainNav{
-  padding: 15px 0px;
-  background: #253F89 !important;
- }
-  .navbar-light .navbar-toggler {
-      border: none;
-      padding: 0;
-      outline: none;
-      box-shadow: none;
-  }
-  div#navbarSupportedContent {
-      position: fixed;
-      top: 0;
-      width: 320px;
-      left: -0px;
-      background: #253F89;
-      height: 100vh;
-      padding: 20px;
-      z-index: 9;
-      display: block;
-      transform: translateX(-320px);
-      transition: all 400ms ease;
-      padding-top: 60px;
-  }
-  .cross-toggler {
-      background: #fff;
-      border: none;
-      color: #000;
-      padding: 0;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      z-index: 9999;
-  }
-  ul.navbar-nav.ml-auto {
-      height: calc(100vh - 60px);
-      overflow: auto;
-  }
-  div#navbarSupportedContent.active{
-      left: 320px;
-      transition: all 400ms ease;
-  }
-  .overLay {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: rgb(0 0 0 / 51%);
-      top: 0;
-      left: 0;
-      display: none;
-  }
 
-  .overLay.active {
-      display: block;
-  }
-  .cross-toggler img{
-    max-width: 15px;
-  }
-  header.mainHeader.scrolled .colorLogo {
-      display: none;
-  }
 
-  header.mainHeader.scrolled img.logoWhite {
-      display: inline-block !important;
-  }
-  .mainHeader.scrolled nav#mainNav .nav-item > a{
-    color: #fff;
-  }
-  .banner .bannerProfile{
-    display: block !important;
-  }
-  section.banner{
-    padding: 60px 0 30px;
-  }
-  .banner .bannerProfile >img {
-    height: 200px;
-    object-fit: contain;
-  }
-  section#servicesSec {
-    padding-bottom: 0;
-  }
-  
-  .hiringProcess .contentBx {
-    max-width: 100%;
-    padding-right: 0;
-  }
-  
-  .hiringProcess .contentBx:before {
-    display: none;
-  }
-  
-  .numWrp:after, .numWrp:before {
-    display: none;
-  }
-  .blogBx.blogBig .blogContent p {
-    min-height: 1px;
-  }
-    .colorBx{
-      margin-bottom: 30px;
-    }
-    .con_content {
-      flex-wrap: wrap;
-    }
-  .blogBx.blogBig .blogContent p {
-      min-height: 1px;
-  }
 
-  .contactForm {
-      padding: 30px;
-      margin-bottom: 50px;
-  }
 
-  .contactForm .listInline {
-      flex-wrap: wrap;
-  }
 
-  section.getInTouch .ps-5 {
-      padding-left: 15px !important;
-  }
 
-  .clients {
-      flex-wrap: wrap;
-  }
-}
+
+

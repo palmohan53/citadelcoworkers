@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
@@ -7,6 +7,7 @@ import { useQuery } from "react-query";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Testimonial from "../Component/Testimonial";
+import Pagination from "../Component/Pagination";
 
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
@@ -14,7 +15,19 @@ const getBlogList = async () => {
     return data;
 }
 const Blog = ({isRecentBlog}) => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(10);
+    
+
+
     const { data, status } = useQuery("users", getBlogList);
+
+    const indexOfLastPost = currentPage * postsPerPage;
+
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+
+    const currentPosts = data?.data.listing.slice(indexOfFirstPost, indexOfLastPost);
+
     const blogHtml = (blog, index)=> {
         return(
             <div className={`${!isRecentBlog ? 'blogPageBx col-md-6 col-12' : 'col-md-4 col-12'}`} key={index}>
@@ -75,7 +88,7 @@ const Blog = ({isRecentBlog}) => {
                             </div>
                         }
                         {
-                            data?.data.listing?.map((blog, index)=>{
+                            currentPosts?.map((blog, index)=>{
                                 return(
                                 <React.Fragment key={index}>
                                     {
@@ -94,7 +107,14 @@ const Blog = ({isRecentBlog}) => {
                         
                     </div>
                 </div>
+                {!isRecentBlog && <Pagination
+                    postsPerPage={postsPerPage}
+                    totalPosts={data?.data.listing.length}
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
+                />}
             </section>
+            
             {!isRecentBlog && <Testimonial />}
         </React.Fragment>
     )

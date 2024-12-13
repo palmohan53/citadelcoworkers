@@ -10,6 +10,7 @@ import BlogDetails from './Pages/BlogDetails';
 import Blog from './Pages/Blog';
 
 import './App.css';
+import './Media.css';
 function App() {
   return (
     <div className="App">
