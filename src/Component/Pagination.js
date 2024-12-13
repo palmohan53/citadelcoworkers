@@ -3,8 +3,8 @@ import React from 'react';
 const Pagination = ({
     postsPerPage,
     totalPosts,
-    setCurrentPage,
     currentPage,
+    paginate
   }) => {
     const pageNumbers = [];
   
@@ -12,10 +12,7 @@ const Pagination = ({
       pageNumbers.push(i);
     }
   
-    const paginate = (pageNumber, e) => {
-      e.preventDefault();
-      setCurrentPage(pageNumber);
-    };
+    
   
     return (
       <nav>

@@ -8,6 +8,21 @@ body {
 .align-items-center {
     align-items: center !important;
 }
+.align-items-start {
+    align-items: start !important;
+}
+.align-items-end {
+    align-items: end !important;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-start{
+    justify-content: start;
+}
+.justify-content-end{
+    justify-content: end;
+}
 .p-0 {
     padding: 0 !important;
 }
@@ -353,4 +368,17 @@ p {
 }
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
+}
+.pagination {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.page-item a {
+    padding: 10px 15px;
+    background: #e8e8e8;
+    display: block;
 }

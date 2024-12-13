@@ -83,14 +83,9 @@ const About = () => {
                 <div className="container">
                   <div className="row">
                      <div className="col-lg-12">
-                        <div className="title_all_box style_one text-center dark_color">
-                           <div className="title_sections">
-                              <div className="before_title">Our Business</div>
-                              <h2 className="title">Stand Out From The Rest</h2>
-                           </div>
-                           
-                           <div className="pd_bottom_20"></div>
-                           
+                        <div className="sectionHeading text-center mb-5">
+                            <h2>Leverage World-Class Talent</h2>
+                            <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
                         </div>
                      </div>
                   </div>
@@ -162,12 +157,9 @@ const About = () => {
             </section>
             <section class="team-section">
                 <div className="container">
-                    <div className="title_all_box style_one text-center dark_color">
-                        <div className="title_sections">
-                            <div className="before_title">Our Team</div>
-                            <h2 className="title">Stand Out From The Rest</h2>
-                        </div>
-                        <div className="pd_bottom_20"></div>
+                    <div className="sectionHeading text-center mb-5">
+                        <h2>Our Team</h2>
+                        <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
                     </div>
                     <div class="row">
                         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">

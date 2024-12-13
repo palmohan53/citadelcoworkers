@@ -17,16 +17,16 @@ const getBlogList = async () => {
 const Blog = ({isRecentBlog}) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10);
-    
-
-
     const { data, status } = useQuery("users", getBlogList);
-
+    
     const indexOfLastPost = currentPage * postsPerPage;
-
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-
     const currentPosts = data?.data.listing.slice(indexOfFirstPost, indexOfLastPost);
+    const paginate = (pageNumber, e) => {
+        e.preventDefault();
+        window.scrollTo(0, 320)
+        setCurrentPage(pageNumber);
+    };
 
     const blogHtml = (blog, index)=> {
         return(
@@ -110,7 +110,7 @@ const Blog = ({isRecentBlog}) => {
                 {!isRecentBlog && <Pagination
                     postsPerPage={postsPerPage}
                     totalPosts={data?.data.listing.length}
-                    setCurrentPage={setCurrentPage}
+                    paginate={paginate}
                     currentPage={currentPage}
                 />}
             </section>
