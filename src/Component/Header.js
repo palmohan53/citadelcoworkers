@@ -24,7 +24,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg navbar-light" id="mainNav">
                 <div className="container">
                     <NavLink className="navbar-brand p-0" to="/">
-                        <img src="/images/logo.png" alt="" className="colorLogo" />
+                        <img src="/images/logo-new.png" alt="" className="colorLogo" />
                         <img src="/images/logo2.png" alt="" className="logoWhite" />
                     </NavLink>
                     <button className="navbar-toggler" onClick={openToggle}>
