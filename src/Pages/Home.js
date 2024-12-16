@@ -8,7 +8,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import servicesContent from '../Content/services.json';
+// import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faCode, faCircleCheck, faPlay, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -29,6 +29,7 @@ const getServiceList = async () => {
 const Home = () => {
     const { data, status } = useQuery("blog", getBlogList);
     const { data:services, status:serviceStatus } = useQuery("service", getServiceList);
+    console.log(serviceStatus)
     let bannerSettings = {
         dots: false,
         arrows:false,
