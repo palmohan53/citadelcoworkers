@@ -35,7 +35,7 @@ const BlogDetails = () => {
                 <meta name="description" content="Nested component" />
             </Helmet>
         <section className="innerBanner text-center">
-            <img src="images/pexels-hillaryfox-1595385.jpg" alt=""/>
+            <img src={data.banner} alt=""/>
             <div className="innerBannerContent">
                 <h1>{data?.post?.post_title}</h1>
                 <div className="blogAuth">

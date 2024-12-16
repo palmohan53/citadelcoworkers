@@ -53,12 +53,32 @@ body {
 .mb-4 {
     margin-bottom: 1.5rem !important;
 }
+.mt-1{
+    margin-top: 0.25rem !important;
+}
+.mt-2{
+    margin-top: 0.5rem !important;
+}
+.mt-3{
+    margin-top: 1rem !important;
+}
+.mt-4{
+    margin-top: 2rem !important;
+}
 .mt-5 {
     margin-top: 3rem !important;
+}
+.my-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
 }
 .my-4 {
     margin-top: 1.5rem !important;
     margin-bottom: 1.5rem !important;
+}
+.my-5 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
 }
 img, svg {
     vertical-align: middle;

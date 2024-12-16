@@ -3,6 +3,31 @@
   rajputrahul445@gmail.com
 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* @font-face {
+  font-family: 'ProductSansRegular';
+  src: url('fonts/ProductSansRegular.eot');
+  src: url('fonts/ProductSansRegular.eot') format('embedded-opentype'),
+       url('fonts/ProductSansRegular.woff2') format('woff2'),
+       url('fonts/ProductSansRegular.woff') format('woff'),
+       url('fonts/ProductSansRegular.ttf') format('truetype'),
+       url('fonts/ProductSansRegular.svg#ProductSansRegular') format('svg');
+} */
+/* 
+@font-face {
+  font-family: 'Nexa';
+  src: local('Nexa'),url('fonts/NotoSans-VariableFont_wdth,wght') format('woff2'),
+      local('Nexa'),url('fonts/Nexa-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nexa';
+  src: local('Nexa'),url('fonts/Nexa-Black.woff2') format('woff2'),
+      local('Nexa'),url('fonts/Nexa-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+} */
 body {font-family: 'Noto Sans', sans-serif;background: #fff;overflow: auto;font-size: 14px;overflow-x: hidden;padding-top: 0px;}
 a, a:hover, a:focus {  text-decoration: none;  transition: all 400ms ease; }
 img{max-width: 100%}
@@ -131,7 +156,7 @@ header.mainHeader.scrolled {
   box-shadow: 0 0 10px #00000061;
 }
 .scrolled .lineBtn {
-  background: #00cc83;
+  background: linear-gradient(to right, #0b88cb, #00cc83, #00cc83);
   border: solid 1px #00cc83;
   color: #fff !important;
 }
@@ -147,16 +172,18 @@ header.mainHeader.scrolled .logoWhite {
   color: #000;
 }
 .greenText{
-  color: #00cc83;
+  color: transparent;
+  -webkit-text-stroke: 2px #00cc83;
+  font-weight: 900;
 }
 .text-underline{
   text-decoration: underline;
 }
 .lineBtn, .colorBtn, .blueBtn, .greyBtn {
   display: inline-flex;
-  padding: 10px 20px;
-  background: #00cc83;
-  border-radius: 5px;
+  padding: 10px 25px;
+  background: linear-gradient(to right, #0b88cb, #00cc83, #00cc83);
+  border-radius: 50px;
   color: #ffffff !important;
   position: relative;
   z-index: 1;
@@ -195,7 +222,7 @@ header.mainHeader.scrolled .logoWhite {
 }
 .wideBtn{
   font-size: 16px;
-  padding: 13px 50px;
+  padding: 15px 50px;
   transition: all 500ms ease;
 }
 .lineBtn:hover, .colorBtn:hover, .blueBtn:hover, .greyBtn:hover{
@@ -322,7 +349,7 @@ section.banner h4{
 section.banner h1{
   color: #fff;
 }
-.sideBorder .colorBx img {
+.sideBorder .colorBx .post_name {
   height: 90px;
   /* filter: grayscale(1); */
   width: 90px;
@@ -384,7 +411,7 @@ section.banner h1{
   color: #979696;
 }
 section.profile {
-  background: #42bd6d;
+  background: linear-gradient(to bottom, #0b88cb, #00cc83, #05a26a);
 }
 section.profile .bannerProfile{
   transform: scale(1);
@@ -848,7 +875,7 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
   color: #00cc83;
   width: 70px;
   height: 70px;
-  line-height: 75px;
+  line-height: 70px;
   text-align: center !important;
   border-radius: 50%;
   background: #fff;

@@ -21,8 +21,14 @@ const getBlogList = async () => {
     const data = await response;
     return data;
 }
+const getServiceList = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceListing}`)
+    const data = await response;
+    return data;
+}
 const Home = () => {
-    const { data, status } = useQuery("users", getBlogList);
+    const { data, status } = useQuery("blog", getBlogList);
+    const { data:services, status:serviceStatus } = useQuery("service", getServiceList);
     let bannerSettings = {
         dots: false,
         arrows:false,
@@ -78,7 +84,7 @@ const Home = () => {
                         <div className="col-md-5 col-12 pb-5">
                             <h1>Hire the <span className="greenText">Top 3%</span> of Freelance Talent®</h1>
                             <h4>Toptal is an exclusive network of the top freelance software developers, designers, marketing experts, finance experts, product managers, and project managers in the world. Top companies hire Toptal freelancers for their most important projects.</h4>
-                            <a href="/" className="colorBtn wideBtn">Hire Top Talent</a>
+                            <Link to="/contact-us" className="colorBtn wideBtn">Hire Top Talent</Link>
                         </div>
                         <div className="col-md-7 col-12">
                             <div className="sliderWrp">
@@ -152,27 +158,32 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row mt-5 borderBox">
-                        
+                        {console.log(services)}
                         {
-                            servicesContent.services.map((data, index)=>{
+                            services?.data?.listing.map((data, index)=>{
                                 return(
-                                    <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
-                                        <ScrollAnimation animateIn="fadeIn" delay={index * 100}>
+                                    <React.Fragment>
+                                    {index < 6 && <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
+                                        <ScrollAnimation animateIn="fadeIn">
                                             <div className="colorBx">
                                                 <React.Fragment>
-                                                    <img src={data.imageUrl} alt="" />
-                                                    <h3>{data.title}</h3>
-                                                    <p>{data.body}</p>
+                                                    <img src={data.imageUrl} alt="" className="ServiceIco" />
+                                                    <h3>{data.post_title}</h3>
+                                                    <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
                                                     <div className="text-start">
-                                                        <Link to="//services" className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                                                        <Link to={`/services/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
                                                     </div>
                                                 </React.Fragment>
                                             </div>
                                         </ScrollAnimation>
-                                    </div>
+                                    </div>}
+                                    </React.Fragment>
                                 )
                             })
                         }
+                    </div>
+                    <div className="text-center mt-4">
+                        <Link to="/services" className="colorBtn wideBtn">View All</Link>
                     </div>
                 </div>
             </section>
@@ -369,7 +380,7 @@ const Home = () => {
                     <div className="row mb-5">
                         <div className="col-lg-12">
                             <div className="title_all_box style_one text-center  dark_color">
-                                <div class="sectionHeading">
+                                <div className="sectionHeading">
                                     <h2>Build Amazing Teams,<br/>On Demand</h2>
                                     <p>Quickly assemble the teams you need, exactly when you need them.</p>
                                 </div>
