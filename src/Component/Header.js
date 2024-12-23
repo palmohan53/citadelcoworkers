@@ -2,11 +2,21 @@ import React, {useState, useEffect} from "react";
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { useQuery } from "react-query";
+import axios from "axios";
+import API_HOST from "../config/APIHost";
+import API_ENDPOINTS from "../config/APIEndPoints";
 
 const Header = () => {
     const [activeClass, setActiveClass] = useState(false);
-    const openToggle = () => setActiveClass(!activeClass);
     const [scrolltopdata, setscrolltopdata] = useState('');
+    const openToggle = () => setActiveClass(!activeClass);
+    const getServiceList = async () => {
+        const response = await axios.get(`${API_HOST}${API_ENDPOINTS.servicesMenuList}`)
+        const data = await response;
+        return data;
+    }
+    const { data } = useQuery("serviceMenu", getServiceList);
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -48,11 +58,19 @@ const Header = () => {
                                 <NavLink className="nav-link" to="/services">Services</NavLink>
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul>
-                                    <li><NavLink className="nav-link" to="/services">Services 1</NavLink></li>
+                                    {console.log(data?.data, 'menu')}
+                                    {
+                                        data?.data?.services?.map((menu, index)=>{
+                                            return(
+                                                <li key={index}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.name}</NavLink></li>
+                                            )
+                                        })
+                                    }
+                                    {/* <li><NavLink className="nav-link" to="/services">Services 1</NavLink></li>
                                     <li><NavLink className="nav-link" to="/services">Services 2</NavLink></li>
                                     <li><NavLink className="nav-link" to="/services">Services 3</NavLink></li>
                                     <li><NavLink className="nav-link" to="/services">Services 4</NavLink></li>
-                                    <li><NavLink className="nav-link" to="/services">Services 5</NavLink></li>
+                                    <li><NavLink className="nav-link" to="/services">Services 5</NavLink></li> */}
                                 </ul>
                             </li>
                             <li className="nav-item">

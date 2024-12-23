@@ -28,8 +28,7 @@ const getServiceList = async () => {
 }
 const Home = () => {
     const { data, status } = useQuery("blog", getBlogList);
-    const { data:services, status:serviceStatus } = useQuery("service", getServiceList);
-    console.log(serviceStatus)
+    const { data:services } = useQuery("service", getServiceList);
     let bannerSettings = {
         dots: false,
         arrows:false,
@@ -163,7 +162,7 @@ const Home = () => {
                         {
                             services?.data?.listing.map((data, index)=>{
                                 return(
-                                    <React.Fragment>
+                                    <React.Fragment key={index}>
                                     {index < 6 && <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
                                         <ScrollAnimation animateIn="fadeIn">
                                             <div className="colorBx">
