@@ -8,8 +8,11 @@ const Contact = () => {
     return(
         <React.Fragment>
             <section className="innerBanner">
-                <img src="images/pexels-picjumbo-com-55570-225232.jpg" alt=""/>
-                <h1>Contact Us</h1>
+                <img src="/images/contact-banner.jpg" alt=""/>
+                <div className="innerBannerContent">
+                    <h1>Contact Us</h1>
+                    <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p>
+                </div>
                 <div className="bannerOvelay"></div>
             </section>
             <ContactForm />

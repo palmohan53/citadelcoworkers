@@ -349,6 +349,15 @@ section.banner h4{
 section.banner h1{
   color: #fff;
 }
+.serviceIco {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: solid 1px transparent;
+}
 .sideBorder .colorBx .post_name {
   height: 90px;
   /* filter: grayscale(1); */
@@ -381,7 +390,9 @@ section.banner h1{
 .sideBorder:nth-child(3n){
   border-right: none;
 }
-.sideBorder:nth-child(3n) ~ .sideBorder{
+.sideBorder:nth-last-child(1),
+.sideBorder:nth-last-child(2),
+.sideBorder:nth-last-child(3){
   border-bottom: none;
 }
 .sideBorder:hover {
@@ -559,6 +570,7 @@ section.testimonial {
 }
 .blogImg > img {
   width: 100%;
+  border: solid 1px #cccccc75;
 }
 
 .blogBx {
@@ -628,7 +640,7 @@ section.testimonial {
 }
 
 .blogBx.blogBig .blogContent p {
-  min-height: 330px;
+  min-height: 300px;
 }
 .blogContent h2 {
   font-weight: 300;

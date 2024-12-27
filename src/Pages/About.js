@@ -110,7 +110,7 @@ const About = () => {
                             </div>
                         </div>
                      </div>
-                     <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-4 mt-lg-0 mt-xl-0">
+                     <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div className="icon_box_all style_three">
                            <div className="icon_content ">
                               <div className="icon">
@@ -134,7 +134,7 @@ const About = () => {
                            </div>
                         </div>
                      </div>
-                     <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-4 mt-lg-4 mt-xl-0">
+                     <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div className="icon_box_all style_three">
                            <div className="icon_content ">
                               <div className="icon">

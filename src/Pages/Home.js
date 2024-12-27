@@ -158,7 +158,6 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row mt-5 borderBox">
-                        {console.log(services)}
                         {
                             services?.data?.listing.map((data, index)=>{
                                 return(
@@ -167,7 +166,7 @@ const Home = () => {
                                         <ScrollAnimation animateIn="fadeIn">
                                             <div className="colorBx">
                                                 <React.Fragment>
-                                                    <img src={data.imageUrl} alt="" className="ServiceIco" />
+                                                    <img src={data.banner} alt="" className="serviceIco" />
                                                     <h3>{data.post_title}</h3>
                                                     <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
                                                     <div className="text-start">
@@ -626,7 +625,7 @@ const Home = () => {
                                 <Link to={`/blog/${data?.data?.listing[0]?.post_name}`} className="d-block">
                                     <div className="blogBx blogBig">
                                         <div className="blogImg">
-                                            <img src="images/blog.png" alt=""/>
+                                            <img src={data?.data?.listing[0]?.banner} alt=""/>
                                             <div className="blogAuthImg">
                                                 {
                                                     data?.data?.listing[0]?.display_name === "Pinka Sharma"
@@ -659,7 +658,7 @@ const Home = () => {
                                                         <Link to={`/blog/${blog?.post_name}`}  className="d-block">
                                                             <div className="blogBx blogSmall">
                                                                 <div className="blogImg">
-                                                                    <img src="images/blog.png" alt=""/>
+                                                                    <img src={blog.banner} alt={blog.post_title}/>
                                                                     <div className="blogAuthImg">
                                                                     {
                                                                         blog?.display_name === "Pinka Sharma"

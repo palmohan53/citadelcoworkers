@@ -34,7 +34,7 @@ const Blog = ({isRecentBlog}) => {
                 <Link to={`/blog/${blog?.post_name}`}  className="d-block">
                     <div className="blogBx blogSmall">
                         <div className="blogImg">
-                            <img src="/images/blog.png" alt=""/>
+                            <img src={blog.banner} alt={blog.post_title}/>
                             <div className="blogAuthImg">
                                 {
                                     blog.display_name === "Pinka Sharma"
@@ -69,7 +69,7 @@ const Blog = ({isRecentBlog}) => {
     return(
         <React.Fragment>
             {!isRecentBlog && <section className="innerBanner">
-                <img src="/images/inr-banner.jpg" alt=""/>
+                <img src="/images/blog-banner.jpg" alt=""/>
                 <div className="innerBannerContent">
                     <h1>Blog</h1>
                     <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p>
