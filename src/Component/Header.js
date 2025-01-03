@@ -12,7 +12,7 @@ const Header = () => {
     const [scrolltopdata, setscrolltopdata] = useState('');
     const openToggle = () => setActiveClass(!activeClass);
     const getServiceList = async () => {
-        const response = await axios.get(`${API_HOST}${API_ENDPOINTS.servicesMenuList}`)
+        const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceListing}`)
         const data = await response;
         return data;
     }
@@ -58,11 +58,11 @@ const Header = () => {
                                 <NavLink className="nav-link" to="/services">Services</NavLink>
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul>
-                                    {console.log(data?.data, 'menu')}
+                                    {/* {console.log(data?.data.listing.reverse(), 'menu')} */}
                                     {
-                                        data?.data?.services?.map((menu, index)=>{
+                                        data?.data?.listing?.reverse().map((menu, index)=>{
                                             return(
-                                                <li key={index}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.name}</NavLink></li>
+                                                <li key={index}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.post_title}</NavLink></li>
                                             )
                                         })
                                     }
