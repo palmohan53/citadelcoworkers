@@ -5,6 +5,7 @@ const API_ENDPOINTS = {
     servicesMenuList: 'api/services.php',
     serviceListing: 'api/getServicesListing.php?post_type=home_services&post_name=services',
     subServiceListing: 'api/getServicesListing.php?post_type=home_services&post_name=',
+    profile: 'api/getOurTeam.php?post_type=our_team',
 }
 
 export default API_ENDPOINTS;

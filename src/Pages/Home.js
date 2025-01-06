@@ -15,6 +15,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
+import Profile from "../Component/Profile";
 
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
@@ -39,30 +40,7 @@ const Home = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
-    let settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-        ]
-    };
+    
 
     useEffect(() => {
         // getBlogList()
@@ -82,8 +60,8 @@ const Home = () => {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5 col-12 pb-5">
-                            <h1>Hire the <span className="greenText">Top 3%</span> of Freelance Talent®</h1>
-                            <h4>Toptal is an exclusive network of the top freelance software developers, designers, marketing experts, finance experts, product managers, and project managers in the world. Top companies hire Toptal freelancers for their most important projects.</h4>
+                            <h1>Hire the <span className="greenText">Top 3%</span> Virtual Employees in India.</h1>
+                            <h4>We connect you with India’s most skilled virtual professionals in fields ranging from Finance to Software Development. Whether you need tech innovators, creative designers, or strategic thinkers, our experts deliver solutions that drive success.</h4>
                             <Link to="/contact-us" className="colorBtn wideBtn">Hire Top Talent</Link>
                         </div>
                         <div className="col-md-7 col-12">
@@ -152,8 +130,8 @@ const Home = () => {
                     <div className="row align-items-center mb-3">
                         <div className="col-md-12 col-12">
                             <div className="sectionHeading text-center">
-                                <h2>Leverage World-Class Talent</h2>
-                                <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
+                                <h2>Unlock Global Expertise</h2>
+                                <p>Partner with Citadel Coworkers to access the best in business, design, and technology talent.<br/>Simplify your operations and achieve exceptional results with our top-tier professionals.</p>
                             </div>
                         </div>
                     </div>
@@ -198,110 +176,7 @@ const Home = () => {
                     </div>
                     <div className="row mt-5">
                         <div className="col-12">
-                            <Slider {...settings}>
-                                <ScrollAnimation animateIn="fadeIn">
-                                    <div className="bannerProfile">
-                                        <img src="images/pro.png" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
-                                            <ul className="listInline tags">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                                <ScrollAnimation animateIn="fadeIn">
-                                    <div className="bannerProfile">
-                                        <img src="images/pro.png" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
-                                            <ul className="listInline tags">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                                <ScrollAnimation animateIn="fadeIn">
-                                    <div className="bannerProfile">
-                                        <img src="images/pro.png" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
-                                            <ul className="listInline tags">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                                <ScrollAnimation animateIn="fadeIn">
-                                    <div className="bannerProfile">
-                                        <img src="images/pro.png" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
-                                            <ul className="listInline tags">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                                <ScrollAnimation animateIn="fadeIn">
-                                    <div className="bannerProfile">
-                                        <img src="images/pro.png" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
-                                            <ul className="listInline tags">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                                <ScrollAnimation animateIn="fadeIn">
-                                    <div className="bannerProfile">
-                                        <img src="images/pro.png" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
-                                            <ul className="listInline tags">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </ScrollAnimation>
-                            </Slider>
+                            <Profile />
                         </div>
                     </div>
                 </div>
@@ -380,7 +255,7 @@ const Home = () => {
                         <div className="col-lg-12">
                             <div className="title_all_box style_one text-center  dark_color">
                                 <div className="sectionHeading">
-                                    <h2>Build Amazing Teams,<br/>On Demand</h2>
+                                    <h2>4 Simple Steps to Streamline Success</h2>
                                     <p>Quickly assemble the teams you need, exactly when you need them.</p>
                                 </div>
                             </div>
@@ -445,64 +320,7 @@ const Home = () => {
                                 </div>
                             </div>                            
                         </div>
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className="icon-dollar">
-                                            <FontAwesomeIcon icon={faPeopleRoof} />
-                                            <i></i>
-                                        </span>
-                                        <small className="nom">05</small>
-                                        <h2 className="semiHeading">Employee Compensation</h2>
-                                        <p>Holds in these matters principles selection right rejects.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div className="mr_bottom_30"></div>                        
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className="icon-pharmacy"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
-                                        <small className="nom">06</small>
-                                        <h2 className="semiHeading">Health Care Benefit</h2>
-                                        <p>The great explorer of the truth the master builders human happiness.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div className="mr_bottom_30"></div>                        
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className="icon-service"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
-                                        <small className="nom">07</small>
-                                        <h2 className="semiHeading">Talent Managemen</h2>
-                                        <p>Laborious physo except obtains some advantage from it right.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div className="mr_bottom_30"></div>                        
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className=" icon-dollar"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
-                                        <small className="nom">08</small>
-                                        <h2 className="semiHeading">Risk Managemen</h2>
-                                        <p>Right to find fault with a mans who chooses enjoy has no annoying.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
+                        
                     </div>
                 </div>
                 

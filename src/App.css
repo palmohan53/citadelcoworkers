@@ -253,6 +253,8 @@ header.mainHeader.scrolled .logoWhite {
 }
 .bannerProfile > img {
   max-width: 100%;
+  height: 200px;
+  margin: 0 auto;
 }
 .banner .bannerProfile >img{
   width: 100%;
@@ -1447,28 +1449,28 @@ span.icon-cell.site-text-primary {
   position: absolute;
   top: -50px;
   left: -50px;
-  width: 110px;
-  height: 110px;
-  background: #00cc83;
-  color: #fff;
+  width: 80px;
+  height: 80px;
+  background: #e8e8e8;
+  color: #666666;
   border-radius: 50%;
   text-align: center;
-  font-size: 50px;
-  line-height: 110px;
+  font-size: 40px;
+  line-height: 70px;
 }
 .service_box.style_three .service_content .content_inner span i {
   position: absolute;
-  width: 110px;
-  height: 110px;
-  background: transparent;
-  top: -10px;
-  left: 9px;
-  border: 4px solid #282f3b;
-  border-radius: 50%;
-  transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  -ms-transition: 0.5s ease-in-out;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    top: -7px;
+    left: 5px;
+    border: 3px solid #a8a8a8;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
 }
 .service_box.style_three .service_content .content_inner .nom {
   position: absolute;
