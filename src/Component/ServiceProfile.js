@@ -1,9 +1,6 @@
 
 import React, {useEffect} from "react";
-import axios from "axios";
-import API_HOST from "../config/APIHost";
-import API_ENDPOINTS from "../config/APIEndPoints";
-import { useQuery } from "react-query";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faCircleCheck} from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -12,7 +9,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Profile = () => {
+const ServiceProfile = ({serviceProfile}) => {
     let settings = {
         dots: false,
         infinite: true,
@@ -37,23 +34,18 @@ const Profile = () => {
             }
         ]
     };
-    const getProfileList = async () => {
-        const response = await axios.get(`${API_HOST}${API_ENDPOINTS.profile}`)
-        const data = await response;
-        return data;
-    }
-    const { data, status } = useQuery("Profile", getProfileList);
+    
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
-    if (status === 'loading') {
-        return <div className="loaderWrp"><span className="loader"></span></div>
-    }
+    // if (status === 'loading') {
+    //     return <div className="loaderWrp"><span className="loader"></span></div>
+    // }
     return(
        
         <Slider {...settings}>
             {
-                data?.data?.listing?.map((data, index)=>{
+                serviceProfile?.data?.listing?.map((data, index)=>{
                     return(
                         <React.Fragment key={index}>
                             
@@ -65,12 +57,13 @@ const Profile = () => {
                                         <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
                                         <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                         <p>Expertise</p>
-                                        <ul className="listInline tags">
+                                        <ul className="listInline tags mb-2">
                                             <li>DevOps</li>
                                             <li>Git</li>
                                             <li>Node.js</li>
                                             <li>Java</li>
                                         </ul>
+                                        <button className="colorBtn">Hire Now</button>
                                     </div>
                                 </div>
                             </ScrollAnimation>
@@ -84,4 +77,4 @@ const Profile = () => {
     )
 };
 
-export default Profile;
+export default ServiceProfile;

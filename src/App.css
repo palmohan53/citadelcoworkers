@@ -423,12 +423,15 @@ section.banner h1{
   font-size: 12px;
   color: #979696;
 }
-section.profile {
+/* section.profile {
   background: linear-gradient(to bottom, #0b88cb, #00cc83, #05a26a);
-}
+} */
 section.profile .bannerProfile{
   transform: scale(1);
   transition: all 500ms ease;
+}
+.slick-prev:before, .slick-next:before{
+  color: #000;
 }
 section.profile .slick-track {
   padding: 20px 0;
@@ -443,9 +446,9 @@ section.profile .bannerProfile:hover {
 section.profile .bannerProfileDetails:before{
   display: none;
 }
-.profile .sectionHeading.text-center, .profile .sectionHeading.text-center h2 {
+/* .profile .sectionHeading.text-center, .profile .sectionHeading.text-center h2 {
   color: #fff;
-}
+} */
 .slick-prev, .slick-next {
   width: auto;
   height: auto;
@@ -635,7 +638,9 @@ section.testimonial {
   height: 150px;
   object-fit: cover;
 }
-
+.blogPageBx .blogBx.blogSmall .blogImg > img {
+  height: 250px;
+}
 .blogBx.blogBig .blogImg > img {
   height: 350px;
   object-fit: cover;
@@ -1086,7 +1091,7 @@ section.innerBanner .innerBannerContent {
 }
 
 
-
+/* 
 .blogPageBx .blogImg {
   min-width: 35%;
 }
@@ -1110,7 +1115,7 @@ section.innerBanner .innerBannerContent {
 }
 .blogPageBx .blogSmall{
   display: flex;
-}
+} */
 .blogAuth {
   display: flex;
   justify-content: center;

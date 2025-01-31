@@ -7,26 +7,60 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Testimonial from "../Component/Testimonial";
 import { useParams } from 'react-router-dom';
+import ServiceProfile from "../Component/ServiceProfile";
 
 import servicesContent from '../Content/services.json';
+import RecentBlog from "../Component/RecentBlog";
+import ServiceBulkContent from "../Component/ServiceBulkContent";
 
 const SubServices = () => {
     const {subService} = useParams();
-    const [data, setData] = useState([])
+    const [servicedata, setServicedata] = useState([]);
+    const [serviceProfile, setServiceProfile] = useState([]);
+    const [serviceBulkContent, setServiceBulkContent] = useState([]);
     const getServiceList = async () => {
         await axios.get(`${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`)
         .then((res)=>{
-            setData(res);
+            setServicedata(res);
         })
         .catch((err)=>{
-            setData([])
+            setServicedata([])
             console.log(err)
         })
     }
+    const getProfileList = async () => {
+        await axios.get(`${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`)
+        .then((res)=>{
+            setServiceProfile(res);
+        })
+        .catch((err)=>{
+            setServiceProfile([])
+            console.log(err)
+        })
+    }
+    const getServiceBulkContent = async () => {
+        await axios.get(`${API_HOST}${API_ENDPOINTS.serviceBulkcontent}${subService}`)
+        .then((res)=>{
+            setServiceBulkContent(res);
+            console.log(res, 'bulk')
+        })
+        .catch((err)=>{
+            setServiceBulkContent([])
+            console.log(err)
+        })
+    }
+    // const getProfileList = async () => {
+    //     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`)
+    //     const data = await response;
+    //     return data;
+    // }
+    // const { data, status } = useQuery("Profile", getProfileList);
     useEffect(() => {
         window.scrollTo(0, 0);
         if(subService){
-            getServiceList()
+            getServiceList();
+            getProfileList();
+            getServiceBulkContent();
         }
         //eslint-disable-next-line
     }, [subService])
@@ -56,7 +90,7 @@ const SubServices = () => {
                 </div>
                 <div className="row mt-5 borderBox">
                     {
-                        data?.data?.listing?.map((data, index)=>{
+                        servicedata?.data?.listing?.map((data, index)=>{
                             return(
                                 <React.Fragment key={index}>
                                     <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
@@ -78,7 +112,30 @@ const SubServices = () => {
                 </div>
             </div>
         </section>
+        
+        <section className="profile">
+            <div className="container">
+                <div className="row align-items-center mb-3">
+                    <div className="col-md-12 col-12">
+                        <div className="sectionHeading text-center">
+                            <h2>Meet Talent in Our Network</h2>
+                            <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="row mt-5">
+                    <div className="col-12">
+                        <ServiceProfile serviceProfile={serviceProfile}/>
+                    </div>
+                </div>
+            </div>
+        </section>
         <Testimonial />
+        <section className="serviceBulkContent">
+            <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
+        </section>
+        
+        <RecentBlog />
     </React.Fragment>
     )
 };
