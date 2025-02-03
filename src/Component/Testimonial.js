@@ -11,8 +11,8 @@ const Testimonial = () => {
                 <div className="row align-items-center mb-3">
                     <div className="col-md-12 col-12">
                         <div className="sectionHeading text-center">
-                            <h2>Our Clients’ Satisfaction is Our Top Priority</h2>
-                            <p>We have a reputation for helping clients around the world find success on their most important projects</p>
+                            <p>Trusted by 200+ Clients</p>
+                            <h2>Our Clients' Success Stories</h2>
                         </div>
                     </div>
                 </div>

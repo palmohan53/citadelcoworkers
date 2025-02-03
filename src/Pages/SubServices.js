@@ -9,9 +9,11 @@ import Testimonial from "../Component/Testimonial";
 import { useParams } from 'react-router-dom';
 import ServiceProfile from "../Component/ServiceProfile";
 
-import servicesContent from '../Content/services.json';
+// import servicesContent from '../Content/services.json';
 import RecentBlog from "../Component/RecentBlog";
 import ServiceBulkContent from "../Component/ServiceBulkContent";
+import Steps from "../Component/Steps";
+import Pricing from "../Component/Pricing";
 
 const SubServices = () => {
     const {subService} = useParams();
@@ -78,14 +80,11 @@ const SubServices = () => {
         <section className="explore" id="servicesSec">
             <div className="container">
                 <div className="row align-items-center mb-3">
-                    <div className="col-md-6 col-12">
+                    <div className="col-md-12 col-12 text-center">
                         <div className="sectionHeading">
-                            <h3>Explore</h3>
-                            <h2>Our Services</h2>
+                            <h2>Efficient Business Support Solutions</h2>
+                            <h4>Leverage the power of virtual personal assistants to help you streamline operations and focus on growth</h4>
                         </div>
-                    </div>
-                    <div className="col-md-6 col-12">
-                        <p className="m-0 para">{servicesContent.paragraph[0].body}</p>
                     </div>
                 </div>
                 <div className="row mt-5 borderBox">
@@ -118,8 +117,8 @@ const SubServices = () => {
                 <div className="row align-items-center mb-3">
                     <div className="col-md-12 col-12">
                         <div className="sectionHeading text-center">
-                            <h2>Meet Talent in Our Network</h2>
-                            <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
+                            <h2>Our Expert Team</h2>
+                            <p>Meet our diverse team of skilled professionals dedicated to delivering excellence across a spectrum of services,<br/>ensuring tailored solutions for your business needs.</p>
                         </div>
                     </div>
                 </div>
@@ -131,6 +130,8 @@ const SubServices = () => {
             </div>
         </section>
         <Testimonial />
+        <Steps />
+        <Pricing/>
         <section className="serviceBulkContent">
             <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
         </section>

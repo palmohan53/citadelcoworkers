@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Testimonial from "../Component/Testimonial";
 
-import servicesContent from '../Content/services.json';
+// import servicesContent from '../Content/services.json';
 
 const Services = () => {
     const getServiceList = async () => {
@@ -29,23 +29,11 @@ const Services = () => {
             <img src="/images/service-banner.jpg" alt=""/>
             <div className="innerBannerContent">
                 <h1>Services</h1>
-                <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p>
             </div>
             <div className="bannerOvelay"></div>
         </section>
         <section className="explore" id="servicesSec">
             <div className="container">
-                <div className="row align-items-center mb-3">
-                    <div className="col-md-6 col-12">
-                        <div className="sectionHeading">
-                            <h3>Explore</h3>
-                            <h2>Our Services</h2>
-                        </div>
-                    </div>
-                    <div className="col-md-6 col-12">
-                        <p className="m-0 para">{servicesContent.paragraph[0].body}</p>
-                    </div>
-                </div>
                 <div className="row mt-5 borderBox">
                     {
                         data?.data?.listing.map((data, index)=>{

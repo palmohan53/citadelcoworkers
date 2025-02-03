@@ -1,10 +1,44 @@
 {
     "services":[
         {
-            "imageUrl": "images/aggregate.png",
-            "title": "IT Outsourcing",
-            "body": "We deliver end-to-end IT solutions, including custom software development, mobile app design, IT support, cloud computing, and cybersecurity services, ensuring your technical infrastructure stays ahead of the competition."
-        },
+            "categoryUrl": "virtual-assistant",
+            "categoryName": "Virtual Assistant",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Virtual Assistants in India",
+                        "body": "Accelerate Your Business Growth with Specialized Virtual Assistants – Starts at USD 5/Hour."
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Efficient Business Support Solutions",
+                        "body": "Leverage the power of virtual personal assistants to help you streamline operations and focus on growth"
+                    }
+                ],
+            "clientsNumber":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Skilled Virtual Employee",
+                        "body": "22+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Happy Clients",
+                        "body": "60+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Market Verticals",
+                        "body": "12+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Countries Served",
+                        "body": "10+"
+                    }
+                ]
+            },
         {
             "imageUrl": "images/aggregate.png",
             "title": "Digital Marketing",

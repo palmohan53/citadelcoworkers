@@ -5,17 +5,16 @@ import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 // import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faCode, faCircleCheck, faPlay, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
 import Profile from "../Component/Profile";
+import Steps from "../Component/Steps";
 
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
@@ -30,16 +29,7 @@ const getServiceList = async () => {
 const Home = () => {
     const { data, status } = useQuery("blog", getBlogList);
     const { data:services } = useQuery("service", getServiceList);
-    let bannerSettings = {
-        dots: false,
-        arrows:false,
-        infinite: true,
-        fade: true,
-        autoplay: true,
-        speed: 1500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
+  
     
 
     useEffect(() => {
@@ -53,68 +43,18 @@ const Home = () => {
         <React.Fragment>
             <HelmetProvider>
             <Helmet>
-                <title>Homepage Title renderd from Local</title>
-                <meta name="description" content="Homepag Nested component" />
+                <title>Hire Virtual Employees in India Starting US $5 - Citadel Coworkers</title>
+                <meta name="description" content="Citadel Coworkers is the #1 company helping businesses globally by providing innovative solutions tailored to your business across the world." />
             </Helmet>
             <section className="banner">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-md-5 col-12 pb-5">
-                            <h1>Hire the <span className="greenText">Top 3%</span> Virtual Employees in India.</h1>
-                            <h4>We connect you with India’s most skilled virtual professionals in fields ranging from Finance to Software Development. Whether you need tech innovators, creative designers, or strategic thinkers, our experts deliver solutions that drive success.</h4>
+                        <div className="col-md-12 col-12 text-center">
+                            <h1>Hire the <span className="greenText">Top 3%</span><br/>Virtual Employees in India.</h1>
+                            <h4>We connect you with India’s most skilled virtual professionals in fields ranging from Finance to Software Development.<br/>Whether you need tech innovators, creative designers, or strategic thinkers, our experts deliver solutions that drive success.</h4>
                             <Link to="/contact-us" className="colorBtn wideBtn">Hire Top Talent</Link>
                         </div>
-                        <div className="col-md-7 col-12">
-                            <div className="sliderWrp">
-                                <Slider {...bannerSettings}>
-                                    <div className="bannerProfile">
-                                        <img src="images/profile.png" srcSet="images/profile.png 350w, images/profile.png 400w, images/profile.png 400w" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
-                                            <ul className="listInline tags mt-3">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="bannerProfile">
-                                        <img src="images/profile2.png" srcSet="images/profile2.png 350w, images/profile2.png 400w, images/profile2.png 400w" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe 2</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                                <p>Expertise</p>
-                                                <ul className="listInline tags mt-3">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="bannerProfile">
-                                        <img src="images/profile3.png" srcSet="images/profile3.png 350w, images/profile3.png 400w, images/profile3.png 400w" alt="" />
-                                        <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe 3</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
-                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                                <p>Expertise</p>
-                                                <ul className="listInline tags mt-3">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </Slider>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <div className="videoBg">
@@ -130,8 +70,10 @@ const Home = () => {
                     <div className="row align-items-center mb-3">
                         <div className="col-md-12 col-12">
                             <div className="sectionHeading text-center">
-                                <h2>Unlock Global Expertise</h2>
-                                <p>Partner with Citadel Coworkers to access the best in business, design, and technology talent.<br/>Simplify your operations and achieve exceptional results with our top-tier professionals.</p>
+                                <h3>Employ a Remote Staff in Various Fields</h3>
+                                <h2>Can Tasks Be Completed Solely Using Technology?<br/>
+                                If Affirmative, Then You Can Contract a Remote Staff</h2>
+                                <p>Hire a remote staff from 150+ domains, spanning tech and non-tech fields like software engineering, online promotion, and design. Our location near India's NCR ensures access to skilled English-proficient professionals for your needs.</p>
                             </div>
                         </div>
                     </div>
@@ -181,152 +123,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            {/* <section className="process">
-                <div className="container">
-                    <div className="row mb-3">
-                        <div className="col-md-12 col-12">
-                            <div className="sectionHeading">
-                                <h2>Build Amazing Teams,<br />On Demand</h2>
-                                <p>Quickly assemble the teams you need, exactly when you need them.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row mt-5">
-                        <div className="col-md-4 col-12">
-                            <ScrollAnimation animateIn="fadeIn">
-                                <div className="contentBx">
-                                    <img src='images/aggregate-color.png' alt="" />
-                                    <h3>Hire Quickly</h3>
-                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                        <div className="col-md-4 col-12">
-                            <ScrollAnimation animateIn="fadeIn">
-                                <div className="contentBx">
-                                    <img src='images/aggregate-color.png' alt="" />
-                                    <h3>Hire Quickly</h3>
-                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                        <div className="col-md-4 col-12">
-                            <ScrollAnimation animateIn="fadeIn">
-                                <div className="contentBx">
-                                    <img src='images/aggregate-color.png' alt="" />
-                                    <h3>Hire Quickly</h3>
-                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                        <div className="col-md-4 col-12">
-                            <ScrollAnimation animateIn="fadeIn">
-                                <div className="contentBx">
-                                    <img src='images/aggregate-color.png' alt="" />
-                                    <h3>Hire Quickly</h3>
-                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                        <div className="col-md-4 col-12">
-                            <ScrollAnimation animateIn="fadeIn">
-                                <div className="contentBx">
-                                    <img src='images/aggregate-color.png' alt="" />
-                                    <h3>Hire Quickly</h3>
-                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                        <div className="col-md-4 col-12">
-                            <ScrollAnimation animateIn="fadeIn">
-                                <div className="contentBx">
-                                    <img src='images/aggregate-color.png' alt="" />
-                                    <h3>Hire Quickly</h3>
-                                    <p>Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                                </div>
-                            </ScrollAnimation>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
-            <section className="service-section-two bg_light_1">
-                <div className="container pd_zero">
-                    <div className="row mb-5">
-                        <div className="col-lg-12">
-                            <div className="title_all_box style_one text-center  dark_color">
-                                <div className="sectionHeading">
-                                    <h2>4 Simple Steps to Streamline Success</h2>
-                                    <p>Quickly assemble the teams you need, exactly when you need them.</p>
-                                </div>
-                            </div>
-                        </div>                                            
-                    </div>
-                    <div className="row gutter_15px">
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className="icon-dollar">
-                                            <FontAwesomeIcon icon={faPeopleRoof} />
-                                            <i></i>
-                                        </span>
-                                        <small className="nom">01</small>
-                                        <h2 className="semiHeading">Employee Compensation</h2>
-                                        <p>Holds in these matters principles selection right rejects.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div className="mr_bottom_30"></div>                        
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className="icon-pharmacy"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
-                                        <small className="nom">02</small>
-                                        <h2 className="semiHeading">Health Care Benefit</h2>
-                                        <p>The great explorer of the truth the master builders human happiness.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div className="mr_bottom_30"></div>                        
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className="icon-service"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
-                                        <small className="nom">03</small>
-                                        <h2 className="semiHeading">Talent Managemen</h2>
-                                        <p>Laborious physo except obtains some advantage from it right.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div className="mr_bottom_30"></div>                        
-                        </div>
-                        <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4">
-                            <div className="service_box style_three dark_color">
-                                <div className="service_content">
-                                    <div className="content_inner">
-                                        <span className=" icon-dollar"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
-                                        <small className="nom">04</small>
-                                        <h2 className="semiHeading">Risk Managemen</h2>
-                                        <p>Right to find fault with a mans who chooses enjoy has no annoying.</p>
-                                        <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                <div className="pd_bottom_50"></div>
-                
-                </section>
+            <Steps />
             <section className="hiringProcess">
                 <div className="container">
                     <div className="row align-items-center mb-3">
