@@ -71,8 +71,8 @@ const About = () => {
                                                     
                                 </div>
                                 <div className="d-flex gap-3">
-                                    <Link to='/services' class="lineBtn">View More</Link>
-                                    <Link to='/contact-us' class="colorBtn">Contact Us</Link>
+                                    <Link to='/services' className="lineBtn">View More</Link>
+                                    <Link to='/contact-us' className="colorBtn">Contact Us</Link>
                                 </div>
                             </div>
                         </div>
@@ -155,19 +155,19 @@ const About = () => {
                   </div>
                 </div>
             </section>
-            <section class="team-section">
+            <section className="team-section">
                 <div className="container">
                     <div className="sectionHeading text-center mb-5">
                         <h2>Our Team</h2>
                         <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                            <div class="team_box style_two">
-                                <div class="team_box_outer">
-                                <div class="image_box ">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <div className="team_box style_two">
+                                <div className="team_box_outer">
+                                <div className="image_box ">
                                     <img src="/images/KJSingh.jpg" alt="team"/>
-                                    <div class="overlay ">
+                                    <div className="overlay ">
                                         <ul>
                                             <li><a href="/"><FontAwesomeIcon icon={faFacebookF} /> </a></li>
                                             <li><a href="/"><FontAwesomeIcon icon={faTwitter} /></a></li>
@@ -175,20 +175,20 @@ const About = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="content_box ">
+                                <div className="content_box ">
                                     <h2>Kamal Jeet Singh</h2>
-                                    <p class="job_details">Co-Founder/Director</p>
+                                    <p className="job_details">Co-Founder/Director</p>
                                     <p>Kamal brings a wealth of experience and a futuristic approach to IT solutions. His vision for Citadel Coworkers is not just to adapt to the changing technological landscape but to be the force that drives it.</p>
                                 </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                            <div class="team_box style_two">
-                                <div class="team_box_outer">
-                                <div class="image_box ">
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <div className="team_box style_two">
+                                <div className="team_box_outer">
+                                <div className="image_box ">
                                     <img src="/images/steptodown.com450532-768x531.png" alt="team"/>
-                                    <div class="overlay ">
+                                    <div className="overlay ">
                                         <ul>
                                             <li><a href="/"><FontAwesomeIcon icon={faFacebookF} /> </a></li>
                                             <li><a href="/"><FontAwesomeIcon icon={faTwitter} /></a></li>
@@ -196,20 +196,20 @@ const About = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="content_box ">
+                                <div className="content_box ">
                                     <h2>Navjot Chadda</h2>
-                                    <p class="job_details">Managing Director</p>
+                                    <p className="job_details">Managing Director</p>
                                     <p>With an astute business acumen and a deep understanding of market dynamics, Navjot ensures that every strategy is robust and every execution flawless. He's the keystone of our operational excellence and client satisfaction. </p>
                                 </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                            <div class="team_box style_two">
-                                <div class="team_box_outer">
-                                <div class="image_box ">
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <div className="team_box style_two">
+                                <div className="team_box_outer">
+                                <div className="image_box ">
                                     <img src="/images/Pinka-Sharma-768x569.jpg" alt="team"/>
-                                    <div class="overlay ">
+                                    <div className="overlay ">
                                         <ul>
                                             <li><a href="/"><FontAwesomeIcon icon={faFacebookF} /> </a></li>
                                             <li><a href="/"><FontAwesomeIcon icon={faTwitter} /></a></li>
@@ -217,9 +217,9 @@ const About = () => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="content_box ">
+                                <div className="content_box ">
                                     <h2>Pinka Sharma</h2>
-                                    <p class="job_details">Content Writer</p>
+                                    <p className="job_details">Content Writer</p>
                                     <p>Pinka Sharma, our dedicated content writer, brings creativity and expertise to our team. Her exceptional writing skills and passion for storytelling enhance our projects, delivering compelling and engaging content every time.</p>
                                 </div>
                                 </div>

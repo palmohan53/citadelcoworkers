@@ -17,6 +17,7 @@
                     }
                 ],
             "clientsNumber":[
+                   
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Virtual Employee",
@@ -37,37 +38,26 @@
                         "title": "Countries Served",
                         "body": "10+"
                     }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can virtual assistants help with specialized tasks?",
+                        "body": "Yes, besides administrative support, virtual assistants can handle a wide array of specialized tasks including bookkeeping, digital marketing, content writing, and more—each assistant brings unique skills tailored to your needs."
+                    },
+                    {
+                        "title": "02. Can virtual assistants help with complex tasks?",
+                        "body": "Indeed, our virtual assistants from India specialize not just in day-to-day tasks but can also manage complex assignments, including bookkeeping, social media, and executive assistance."
+                    },
+                    {
+                        "title": "03. What’s the first thing to outsource to my virtual assistant?",
+                        "body": "At Citadel, many clients choose to delegate inbox and calendar management first, as these are often the most time-consuming tasks. By offloading these to your virtual assistant, you can reclaim your day immediately."
+                    },
+                    {
+                        "title": "04. What tasks do virtual assistants perform?",
+                        "body": "Citadel’s virtual assistants are adept at a broad range of tasks from basic administrative duties to more complex operations such as content creation, customer service, and specialized project work."
+                    }
                 ]
-            },
-        {
-            "imageUrl": "images/aggregate.png",
-            "title": "Digital Marketing",
-            "body": "Our expert team boosts your online presence with SEO, PPC campaigns, social media strategies, email marketing, and content marketing, helping you reach your target audience and achieve measurable business growth."
-        },
-        {
-            "imageUrl": "images/aggregate.png",
-            "title": "Content Writing",
-            "body": "We craft engaging blogs, articles, technical documentation, and marketing copy, tailored to your audience and business goals, ensuring clear, impactful communication across all platforms."
-        },
-        {
-            "imageUrl": "images/aggregate.png",
-            "title": "Graphic & Web Design",
-            "body": "We create visually captivating websites, branding materials, animations, and multimedia content that enhance your brand identity and engage your audience effectively across all platforms."
-        },
-        {
-            "imageUrl": "images/aggregate.png",
-            "title": "Engineering & Architecture",
-            "body": "From CAD designs to structural analysis, mechanical and civil engineering, we offer precise solutions for architectural projects and engineering innovations that meet global standards."
-        },
-        {
-            "imageUrl": "images/aggregate.png",
-            "title": "Finance & Accounting",
-            "body": "Our services include bookkeeping, tax preparation, financial analysis, payroll processing, and financial strategy consultation, helping you manage your finances accurately and efficiently."
         }
-    ],
-    "paragraph":[
-        {
-            "body": "Virtual Assistant 24x7 was founded by industry-leading information governance experts with a vision to modernize information management processes and extract meaningful value from data. Over the years, the company has evolved into a trusted provider of cutting-edge solutions and consulting services, pioneering the use of technology to address global regulatory compliance needs and deliver transformative business outcomes."
-        }
+        
     ]
 }

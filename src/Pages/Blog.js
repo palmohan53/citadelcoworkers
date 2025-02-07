@@ -83,7 +83,8 @@ const Blog = ({isRecentBlog}) => {
                             isRecentBlog &&
                             <div className="col-12">
                                 <div className="sectionHeading text-center mb-4">
-                                    <h2>Recent Blogs</h2>
+                                    <h2>From our blog</h2>
+                                    <p>Ensure outsourcing success from the start with key insider tips and trends for <b>over 150 industries</b>, right at your fingertips.</p>
                                 </div>
                             </div>
                         }

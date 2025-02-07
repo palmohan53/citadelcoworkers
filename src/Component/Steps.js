@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
+import { faClipboardList, faPeopleArrows, faSitemap, faHouseLaptop } from '@fortawesome/free-solid-svg-icons';
 const Steps = () => {
     return(
         <React.Fragment>
@@ -11,7 +11,7 @@ const Steps = () => {
                                         <div className="title_all_box style_one text-center  dark_color">
                                             <div className="sectionHeading">
                                                 <h3>STEPS</h3>
-                                                <h2>4 Simple Steps to Streamline Success</h2>
+                                                <h2>4 Simple Steps to Build Your Remote Dream Team</h2>
                                             </div>
                                         </div>
                                     </div>                                            
@@ -22,12 +22,12 @@ const Steps = () => {
                                             <div className="service_content">
                                                 <div className="content_inner">
                                                     <span className="icon-dollar">
-                                                        <FontAwesomeIcon icon={faPeopleRoof} />
+                                                        <FontAwesomeIcon icon={faClipboardList} />
                                                         <i></i>
                                                     </span>
                                                     <small className="nom">01</small>
-                                                    <h2 className="semiHeading">Define Your Needs</h2>
-                                                    <p>Detail the administrative or creative tasks you’re looking to outsource. From data entry to digital marketing needs, start your journey to operational efficiency.</p>
+                                                    <h2 className="semiHeading">Tell Us What You Need</h2>
+                                                    <p>Let us know the skills and expertise you require—whether it's accounting, software development, customer support, or digital marketing. We match you with top-tier professionals in your domain.</p>
                                                     {/* <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a> */}
                                                 </div>
                                             </div>
@@ -38,10 +38,10 @@ const Steps = () => {
                                         <div className="service_box style_three dark_color">
                                             <div className="service_content">
                                                 <div className="content_inner">
-                                                    <span className="icon-pharmacy"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                                    <span className="icon-pharmacy"><FontAwesomeIcon icon={faPeopleArrows} /><i></i></span>
                                                     <small className="nom">02</small>
-                                                    <h2 className="semiHeading">Choose Your Assistant</h2>
-                                                    <p>Connect with a seasoned personal assistant or administrative assistant. Our experts are skilled in Microsoft Excel, email management, and more to tailor our services to your unique needs.</p>
+                                                    <h2 className="semiHeading">Get Pre-Vetted Talent Options</h2>
+                                                    <p>We shortlist highly skilled and experienced virtual professionals tailored to your needs. Review profiles, interview candidates, and select the best fit for your business.</p>
                                                     {/* <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a> */}
                                                 </div>
                                             </div>
@@ -52,10 +52,10 @@ const Steps = () => {
                                         <div className="service_box style_three dark_color">
                                             <div className="service_content">
                                                 <div className="content_inner">
-                                                    <span className="icon-service"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                                    <span className="icon-service"><FontAwesomeIcon icon={faSitemap} /><i></i></span>
                                                     <small className="nom">03</small>
-                                                    <h2 className="semiHeading">Customize Your Service</h2>
-                                                    <p>Plan your assistance down to the last detail – from bookkeeping & accounting to travel research. Our virtual assistants are versatile, adaptable, and ready to support your business endeavors.</p>
+                                                    <h2 className="semiHeading">Onboard & Customize Your Team</h2>
+                                                    <p>Once you've selected your remote staff, we ensure a seamless onboarding process with role-specific training, workflow integration, and reporting setup—making remote collaboration effortless.</p>
                                                     {/* <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a> */}
                                                 </div>
                                             </div>
@@ -66,10 +66,10 @@ const Steps = () => {
                                         <div className="service_box style_three dark_color">
                                             <div className="service_content">
                                                 <div className="content_inner">
-                                                    <span className=" icon-dollar"><FontAwesomeIcon icon={faPeopleRoof} /><i></i></span>
+                                                    <span className=" icon-dollar"><FontAwesomeIcon icon={faHouseLaptop} /><i></i></span>
                                                     <small className="nom">04</small>
-                                                    <h2 className="semiHeading">Start Collaborating</h2>
-                                                    <p>Engage with your virtual assistant and witness the transformation in your productivity. Let our experts handle everything from social media management to content writing, so you can focus on growing your business.</p>
+                                                    <h2 className="semiHeading">Scale & Optimize with Ease</h2>
+                                                    <p>Your dedicated remote team works as an extension of your business. Need more hands on deck? Easily scale up while we handle compliance, payroll, and HR, so you can focus on growth.</p>
                                                     {/* <a href="/" className="read_more">Read more <FontAwesomeIcon icon={faArrowRight} /></a> */}
                                                 </div>
                                             </div>

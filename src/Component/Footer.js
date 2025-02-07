@@ -16,7 +16,7 @@ const Footer = () => {
                                     </a>
                                 </div>
                                 <div className="content_in_r mt-4">
-                                    <p> Duty the obligations of business will frequently occur that pleasure have too repudiated annoyances  endures accepted.</p>
+                                    <p> Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers. Partner for competitive success.</p>
 
                                 </div>
                             </div>
@@ -24,27 +24,23 @@ const Footer = () => {
                         
                         <div className="col">
                             <div className="footerLinks mb-4">
-                                <h3>Policy</h3>
+                                <h3>Why Citadel Coworkers</h3>
                                 <ul className="unorderList">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/">About Us</a></li>
-                                    <li><a href="/">Contact</a></li>
-                                    <li><a href="/">Professionals</a></li>
-                                    <li><a href="/">Insights</a></li>
-                                    <li><a href="/">HR Solutions</a></li>
+                                    <li><a href="/">Citadel Advantage</a></li>
+                                    <li><a href="/">How Does Citadel Works</a></li>
+                                    <li><a href="/">Your Offshore Office in India</a></li>
+                                    <li><a href="/">Data Security at Citadel</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col">
                             <div className="footerLinks mb-4">
-                                <h3>Information</h3>
+                                <h3>Policy</h3>
                                 <ul className="unorderList">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/">About Us</a></li>
-                                    <li><a href="/">Contact</a></li>
-                                    <li><a href="/">Professionals</a></li>
-                                    <li><a href="/">Insights</a></li>
-                                    <li><a href="/">HR Solutions</a></li>
+                                    <li><a href="/">Refund Policy</a></li>
+                                    <li><a href="/">Privacy Policy</a></li>
+                                    <li><a href="/">Cookie Policy</a></li>
+                                    <li><a href="/">User Agreement</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -53,17 +49,17 @@ const Footer = () => {
                                 <h3>Get In Touch</h3>
                                 <div className="d-block mb-4">
                                     <h6>Location</h6>
-                                    <p>280 Dummy State Drive Suite #200 Lancaster, PA 1760</p>
+                                    <p>HN – 59 Sector -62 Noida 201309</p>
                                 </div>
                                 <div className="bottom">
                             <h6> Contact</h6>
                             <div className="con_content">
                                 <h5> Phone :</h5>
-                                <a href="tel:+98 060 712 34"> +91 98 060 712 34</a>
+                                <a href="tel:+1 (646) -583-0053"> +1 (646) -583-0053</a>
                             </div>
                             <div className="con_content">
                                 <h5> Mail Us :</h5>
-                                <a href="tel:sendmail@creote.com"> sendmail@ymail.com</a>
+                                <a href="tel:sales@citadelcoworkers.com"> sales@citadelcoworkers.com</a>
                             </div>
                             </div>
                             </div>

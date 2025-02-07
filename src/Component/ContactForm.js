@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faTrophy } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faWandMagicSparkles, faHourglass, faHeadset, faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const ContactForm = () => {
@@ -31,42 +31,50 @@ const ContactForm = () => {
                                     <div className="row">
                                         <div className="col-md-6 col-12">
                                             <div className="form-group">
-                                                <label>Full Name *</label>
-                                                <input type="text" name="name" className="form-control" id=""/> 
+                                                <input type="text" name="name" className="form-control" id="" placeholder="Name" /> 
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-12">
                                             <div className="form-group">
-                                                <label>Email *</label>
-                                                <input type="email" name="email" className="form-control" id=""/> 
+                                                <input type="email" name="email" className="form-control" id="" placeholder="Email"/> 
                                             </div>
                                         </div>
                                     </div>
                                     <div className="row">
                                         <div className="col-md-6 col-12">
                                             <div className="form-group">
-                                                <label>Country *</label>
-                                                <input type="text" name="Country" className="form-control" id=""/> 
+                                                <input type="number" name="number" className="form-control" id="" placeholder="Phone Number"/> 
                                             </div>
                                         </div>
                                         <div className="col-md-6 col-12">
                                             <div className="form-group">
-                                                <label>Phone Number (Optional)</label>
-                                                <input type="number" name="number" className="form-control" id=""/> 
+                                                <input type="text" name="Country" className="form-control" id="" placeholder="Website"/> 
                                             </div>
                                         </div>
+                                        
                                     </div>
                                     <div className="row">
-                                        <div className="col-md-12 col-12">
+                                        <div className="col-md-6 col-12">
                                             <div className="form-group">
-                                                <label>Select your service *</label>
-                                                <input type="text" name="service" className="form-control" id=""/> 
+                                                <select name="duration" className="form-control" id="">
+                                                    <option value="Project Duration">Project Duration</option>
+                                                    <option value="Less then one month">Less then one month</option>
+                                                    <option value="1 to 3 months">1 to 3 months</option>
+                                                    <option value="3 to 6 months">3 to 6 months</option>
+                                                    <option value="6 to 12 months">6 to 12 months</option>
+                                                    <option value="more then 1 year">more then 1 year</option>
+                                                    <option value="Not sure">Not sure</option>
+                                                </select> 
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6 col-12">
+                                            <div className="form-group">
+                                                <input type="text" name="Country" className="form-control" id="" placeholder="Company Name"/> 
                                             </div>
                                         </div>
                                         <div className="col-md-12 col-12">
                                             <div className="form-group">
-                                                <label>How can we help?*</label>
-                                                <textarea name="" className="form-control" rows={5}></textarea>
+                                                <textarea name="" className="form-control" rows={5} placeholder="Share your requirement"></textarea>
                                             </div>
                                         </div>
                                         <div className="d-flex mt-3">
@@ -78,37 +86,44 @@ const ContactForm = () => {
                         </div>
                         <div className="col-md-5 col-12 ps-5">
                             <div className="contentContent">
-                                <h3>Trusted by startups and Fortune 500 companies</h3>
+                                <h3>Why Choose Us</h3>
                                 <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faTrophy} /></div>
+                                    <div className="detIco"><FontAwesomeIcon icon={faHeadset} /></div>
                                     <div className="detName">
-                                        <h4>20+ years of experience</h4>
-                                        <p>We can handle projects of all complexities.</p>
+                                        <h4>Personalized Virtual Assistance</h4>
+                                        <p>Discover tailored support from experienced virtual assistants. Enhance productivity and focus on your business growth.</p>
                                     </div>
                                 </div>
                                 <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faTrophy} /></div>
+                                    <div className="detIco"><FontAwesomeIcon icon={faWandMagicSparkles} /></div>
                                     <div className="detName">
-                                        <h4>20+ years of experience</h4>
-                                        <p>We can handle projects of all complexities.</p>
+                                        <h4>Flexible Service Options</h4>
+                                        <p>With our adaptable service plans, including month-to-month contracts, you get the help you need without long-term commitments.</p>
                                     </div>
                                 </div>
                                 <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faTrophy} /></div>
+                                    <div className="detIco"><FontAwesomeIcon icon={faUsersViewfinder} /></div>
                                     <div className="detName">
-                                        <h4>20+ years of experience</h4>
-                                        <p>We can handle projects of all complexities.</p>
+                                        <h4>Diverse Skill Set</h4>
+                                        <p>Whether it's administrative tasks, customer support, or digital marketing, our assistants have the expertise you seek.</p>
                                     </div>
                                 </div>
-                                <div className="clients">
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
+                                <div className="detWrp">
+                                    <div className="detIco"><FontAwesomeIcon icon={faHourglass} /></div>
+                                    <div className="detName">
+                                        <h4>Reliable Support Across Time Zones</h4>
+                                        <p>Our Indian virtual assistants are available round the clock, ensuring that your business receives uninterrupted assistance.</p>
+                                    </div>
                                 </div>
+                                {/* <div className="clients">
+                                    <img src="images/cont-cl01.svg" alt="" />
+                                    <img src="images/cont-cl01.svg" alt="" />
+                                    <img src="images/cont-cl01.svg" alt="" />
+                                    <img src="images/cont-cl01.svg" alt="" />
+                                    <img src="images/cont-cl01.svg" alt="" />
+                                    <img src="images/cont-cl01.svg" alt="" />
+                                    <img src="images/cont-cl01.svg" alt="" />
+                                </div> */}
                             </div>
                         </div>
                     </div>

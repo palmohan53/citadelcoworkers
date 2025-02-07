@@ -65,12 +65,14 @@ const Profile = () => {
                                         <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
                                         <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                         <p>Expertise</p>
-                                        <ul className="listInline tags">
+                                        {/* <span className="Expertise">{data.post_content}</span> */}
+                                        <ul className="listInline tags mb-2">
                                             <li>DevOps</li>
                                             <li>Git</li>
                                             <li>Node.js</li>
                                             <li>Java</li>
                                         </ul>
+                                        <button className="colorBtn">Hire Now</button>
                                     </div>
                                 </div>
                             </ScrollAnimation>
