@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
@@ -36,7 +36,10 @@ const Home = () => {
     const { data:services } = useQuery("service", getServiceList);
     const { data:serviceTestimonial } = useQuery("testimonial", getTestimonial);
   
-    
+    const contactref = useRef(null);
+    const handleScrollClick = () => {
+        contactref.current?.scrollIntoView({behavior: 'smooth'});
+    };
 
     useEffect(() => {
         // getBlogList()
@@ -123,7 +126,7 @@ const Home = () => {
                         </div>
                         <div className="row mt-5">
                             <div className="col-12">
-                                <Profile />
+                                <Profile handleScrollClick={handleScrollClick}/>
                             </div>
                         </div>
                     </div>
@@ -318,7 +321,9 @@ const Home = () => {
                         </ScrollAnimation>
                     </div>
                 </section>
-                <ContactForm/>
+                <div ref={contactref}>
+                    <ContactForm />
+                </div>
             </HelmetProvider>
         </React.Fragment>
     )
