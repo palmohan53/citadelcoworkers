@@ -193,7 +193,7 @@ const Home = () => {
                         <div className="col-lg-2"></div>
                         <div className="col-lg-6">
                             <div className="title_all_box style_one text-end pb-5 mb-4">
-                                <div className="sectionHeading">
+                                <div className="sectionHeading min-width-100">
                                     <h2 className="mainHeading whiteTxt">Seamless Remote Hiring – Build Your Dream Team Today</h2>
                                     <p className="my-4">Find and hire top-tier professionals across various industries. From finance to software development, our experts are ready to integrate into your team and deliver results. Scale your workforce effortlessly, with flexible hiring models designed for your business success.</p>
                                 </div>
