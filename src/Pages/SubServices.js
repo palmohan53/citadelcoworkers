@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
@@ -26,7 +26,10 @@ const SubServices = () => {
     const [serviceTestimonial, setServiceTestimonial] = useState([]);
     const [serviceContent, setServiceContent] = useState([])
 
-
+    const contactref = useRef(null);
+    const handleScrollClick = () => {
+        contactref.current?.scrollIntoView({behavior: 'smooth'});
+    };
 
     const getServiceList = async () => {
         await axios.get(`${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`)
@@ -187,7 +190,7 @@ const SubServices = () => {
                 </div>
                 <div className="row mt-5">
                     <div className="col-12">
-                        <ServiceProfile serviceProfile={serviceProfile}/>
+                        <ServiceProfile serviceProfile={serviceProfile} handleScrollClick={handleScrollClick}/>
                     </div>
                 </div>
             </div>
@@ -198,12 +201,14 @@ const SubServices = () => {
         
         <Testimonial serviceTestimonial={serviceTestimonial} />
         <Steps />
-        <Pricing/>
+        <Pricing handleScrollClick={handleScrollClick}/>
         <section className="serviceBulkContent">
             <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
         </section>
         <Faq faqData={faqData}/>
-        <ContactForm />
+        <div ref={contactref}>
+            <ContactForm />
+        </div>
         <RecentBlog />
         <section className="bottomCon pt-0">
             <div className="container">

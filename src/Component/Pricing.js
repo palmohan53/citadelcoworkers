@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-const Pricing = () => {
+const Pricing = ({handleScrollClick}) => {
     return(
         <React.Fragment>
             <section className="pricing">
@@ -44,7 +44,7 @@ const Pricing = () => {
                                     </div>
                                     
                                 </div>
-                                <Link to="/contact-us" className="colorBtn justify-content-center">Get Started</Link>
+                                <button onClick={handleScrollClick} className="colorBtn justify-content-center">Get Started</button>
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
@@ -74,7 +74,7 @@ const Pricing = () => {
                                         <div className="pricing-item-text">Dedicated resource</div>
                                     </div>
                                 </div>
-                                <Link to="/contact-us" className="colorBtn justify-content-center">Get Started</Link>
+                                <button onClick={handleScrollClick} className="colorBtn justify-content-center">Get Started</button>
                             </div>
                         </div>
                         <div className="col-md-4 col-12">
@@ -105,7 +105,7 @@ const Pricing = () => {
                                     </div>
                                 
                                 </div>
-                                <Link to="/contact-us" className="colorBtn justify-content-center">Get Started</Link>
+                                <button onClick={handleScrollClick} className="colorBtn justify-content-center">Get Started</button>
                             </div>
                         </div>
                     </div>

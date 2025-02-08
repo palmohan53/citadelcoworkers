@@ -9,7 +9,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ServiceProfile = ({serviceProfile}) => {
+const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
     let settings = {
         dots: false,
         infinite: false,
@@ -63,7 +63,7 @@ const ServiceProfile = ({serviceProfile}) => {
                                             <li>Node.js</li>
                                             <li>Java</li>
                                         </ul>
-                                        <button className="colorBtn">Hire Now</button>
+                                        <button className="colorBtn" onClick={handleScrollClick}>Hire Now</button>
                                     </div>
                                 </div>
                             </ScrollAnimation>
