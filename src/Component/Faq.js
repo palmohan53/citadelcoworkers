@@ -4,7 +4,7 @@ import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 
 const Faq = ({faqData}) => {
     return(
-        <section className="faqSec">
+        <section className="faqSec bg_light_1">
             <div className="container">
                 <div className="row align-items-center mb-3">
                     <div className="col-md-12 col-12">

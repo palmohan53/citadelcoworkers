@@ -2,7 +2,7 @@
 import React, {useEffect} from "react";
 
 
-const ServiceBulkContentUpper = ({serviceBulkContent}) => {
+const ServiceBulkContentUpper = ({serviceBulkContentUpper}) => {
     
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -13,12 +13,15 @@ const ServiceBulkContentUpper = ({serviceBulkContent}) => {
     return(
        
             <div className="container">
-                <div className="row align-items-center mb-3">
-                    <div className="col-md-12 col-12">
+                {console.log(serviceBulkContentUpper)}
+                <div className="row align-items-center">
+                    <div className="col-md-12 col-12 mb-3">
                         <div className="sectionHeading text-center">
-                            <h2>{serviceBulkContent?.data?.listing[0].post_title}</h2>
+                            <h2>{serviceBulkContentUpper?.data?.listing[0].post_title}</h2>
                         </div>
-                        <p className="para">{serviceBulkContent?.data?.listing[0].post_content}</p>
+                    </div>
+                    <div className="col-12">
+                        <p className="para" dangerouslySetInnerHTML={{ __html: serviceBulkContentUpper?.data?.listing[0].post_content }}></p>
                     </div>
                 </div>
             </div>       

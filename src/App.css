@@ -40,6 +40,13 @@ input, button { outline: none; box-shadow: none;  }
 section{
     padding: 60px 0;
 }
+.sectionHeading {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.min-width-100{
+  min-width: 100%;
+}
 .sectionHeading h2, .blogDetailsBx h2{
     font-size: 32px;
     color: #05164d;
@@ -321,7 +328,7 @@ section.banner {
   position: relative;
 }
 
-.videoBg video, .videoOverlay {
+.videoBg video, .videoOverlay, .bannerOvelay {
   position: absolute;
   object-fit: cover;
     width: 100%;
@@ -659,6 +666,7 @@ section.testimonial {
 }
 .blogPageBx .blogBx.blogSmall .blogImg > img {
   height: 250px;
+  object-fit: cover;
 }
 .blogBx.blogBig .blogImg > img {
   height: 350px;
@@ -720,6 +728,7 @@ section.getInTouch {
   resize: none;
   font-size: 14px;
   padding: 7px 10px;
+  font-family: inherit;
 }
 
 .contactForm {
@@ -1101,7 +1110,7 @@ section.innerBanner .innerBannerContent {
   margin: 0;
   line-height: 1.8;
 }
-.bannerOvelay {
+/* .bannerOvelay {
   position: absolute;
   left: 0;
   top: 0;
@@ -1109,7 +1118,7 @@ section.innerBanner .innerBannerContent {
   width: 100%;
   background: #000000b5;
   z-index: 1;
-}
+} */
 
 
 /* 
@@ -1441,7 +1450,7 @@ section.innerBanner .innerBannerContent {
 span.icon-cell.site-text-primary {
   width: 50px;
   height: 50px;
-  background: #00cc83;
+  background: #05164d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1637,20 +1646,23 @@ span.icon-cell.site-text-primary {
   text-align: left;
   padding: 10px 0px;
   font-size: 19px;
-  background: #fff;
+  background: transparent;
   border: none;
   position: relative;
 }
 
 .accordion {
-  padding-bottom: 10px;
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 1px #cccccc80;
   margin-bottom: 10px;
+  background: #fff;
+  padding: 10px 15px;
 }
 
 .szh-accordion__item-content {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
 .szh-accordion__item.szh-accordion__item--status-entered.szh-accordion__item--expanded button {
@@ -1678,6 +1690,137 @@ span.icon-cell.site-text-primary {
   background: #5dcd84;
   transform: rotate(45deg);
 }
+section.serviceBulkContent img {
+  display: inline-block;
+  width: 35%;
+  height: auto;
+  border: solid 2px #ccc;
+  padding: 5px;
+}
+
+section.serviceBulkContent p.para {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+section.serviceBulkContent ul{
+  min-width: 100%;
+}
+.about2-images {
+  position: relative;
+  height: 500px;
+  text-align: center;
+}
+.about2-images .image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+.about2-images .image2 {
+  padding-top: 50px;
+}
+.about2-images .image3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+.about2-images .counter-box {
+  background-color: #05164d;
+  width: 200px;
+  padding: 20px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.about2-images .counter-box h3 {
+  font-size: 44px;
+  line-height: 1;
+  color: #fff;
+  font-weight: 700;
+}
+.about2-images .counter-box p {
+  text-align: start;
+  padding-left: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #fff;
+}
+.about-tabs .tab-content-box {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 55px 32px;
+}
+.about-tabs .tab-content-box .heading1 h5 {
+  color: #0D0E10;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+.about-tabs .tab-content-box p {
+  line-height: 1.8;
+}
+span.text {
+  font-weight: bold;
+  color: #05164d;
+}
+
+.contectContent {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.contectContent h3 {
+  font-size: 28px;
+  margin: 0 0 20px;
+  font-weight: 700;
+  color: #05164d;
+}
+
+.contectContent .d-flex {
+  align-items: center;
+}
+
+.contectContent .d-flex p {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #0b0b0b;
+  font-weight: bold;
+}
+
+.contectContent .d-flex svg {
+  width: 40px;
+  height: 40px;
+  background: #05164d;
+  border-radius: 50%;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 0 20px #0000004a;
+}
+
+.contectContent .d-flex p a {
+  color: #5dcd85;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -57,6 +57,73 @@
                         "body": "Citadel’s virtual assistants are adept at a broad range of tasks from basic administrative duties to more complex operations such as content creation, customer service, and specialized project work."
                     }
                 ]
+        },
+        {
+            "categoryUrl": "mobile-app-development",
+            "categoryName": "Mobile App Development",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Outsource Mobile App Development to India",
+                        "body": "Crafting Next-Generation Mobile App Experiences, Starting at USD 8/Hour"
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Our 360° Mobile App Development Services",
+                        "body": "Take your business to the next level with our cutting-edge mobile app development services, custom-made to your unique needs. From idea to launch, we will provide you with end-to-end solutions that will smoothly power your business and impress your audience."
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Mobile App Projects Completed",
+                        "body": "30+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Satisfied Clients",
+                        "body": "80+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Catered to",
+                        "body": "15+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Average Years of Experience",
+                        "body": "4+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Countries Reached",
+                        "body": "20+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How Can Mobile App Development Help You?",
+                        "body": "Services for developing mobile apps are crucial for companies trying to make a big name for themselves online. Mobile app developers can help with many important jobs, whether you're an established business looking to optimise your mobile strategy or a startup hoping to launch a new app."
+                    },
+                    {
+                        "title": "02. What Tasks Can Mobile App Developers Help You With?",
+                        "body": "Throughout the app development lifecycle, Indian mobile application development businesses can offer full assistance. Conceptualisation, design, development, testing, deployment, and continuing maintenance are all included in this. They can also assist with backend integration, app optimisation, UI/UX design, platform-specific programming (iOS, Android, cross-platform), and making sure that app store policies are followed."
+                    },
+                    {
+                        "title": "03.  Can You Choose a Mobile App Developer with Expertise in Your Industry?",
+                        "body": "Indeed, a lot of remote mobile app developers focus on particular sectors like gaming, e- commerce, healthcare, and finance. Selecting a developer with experience in a certain field guarantees that they are aware of your target market, current market trends, and legal requirements, which will result in a more customised solution."
+                    },
+                    {
+                        "title": "04. How Do You Ensure the Security of Your Data During Mobile App Development?",
+                        "body": "In the development of mobile apps, security is crucial. Make sure the developer complies with applicable data protection laws, such as GDPR or HIPAA, and follows industry best practices for data encryption and safe backend integration. In addition, think about putting policies in place like frequent security audits and two-factor authentication."
+                    },
+                    {
+                        "title": "05. How Quickly Can You Get Started with Mobile App Development?",
+                        "body": "The length of time it takes to begin developing a mobile app varies on a number of variables, including the project's complexity, scope, and developer availability. To allow for adequate planning and resource allocation, many developers, nevertheless, strive to begin working on projects within a few weeks of the first discussions."
+                    }
+                ]
         }
         
     ]

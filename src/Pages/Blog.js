@@ -6,7 +6,7 @@ import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Testimonial from "../Component/Testimonial";
+// import Testimonial from "../Component/Testimonial";
 import Pagination from "../Component/Pagination";
 
 const getBlogList = async () => {
@@ -72,7 +72,7 @@ const Blog = ({isRecentBlog}) => {
                 <img src="/images/blog-banner.jpg" alt=""/>
                 <div className="innerBannerContent">
                     <h1>Blog</h1>
-                    <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p>
+                    {/* <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p> */}
                 </div>
                 <div className="bannerOvelay"></div>
             </section>}
@@ -116,7 +116,7 @@ const Blog = ({isRecentBlog}) => {
                 />}
             </section>
             
-            {!isRecentBlog && <Testimonial />}
+            {/* {!isRecentBlog && <Testimonial />} */}
         </React.Fragment>
     )
 };

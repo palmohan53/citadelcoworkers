@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faUmbrella, faMountainSun } from '@fortawesome/free-solid-svg-icons';
 import aboutContent from '../Content/about.json';
-import Testimonial from "../Component/Testimonial";
+// import Testimonial from "../Component/Testimonial";
 
 const About = () => {
     useEffect(() => {
@@ -16,30 +16,26 @@ const About = () => {
                 <img src="/images/inr-banner.jpg" alt=""/>
                 <div className="innerBannerContent">
                     <h1>About Us</h1>
-                    <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p>
+                    {/* <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p> */}
                 </div>
                 <div className="bannerOvelay"></div>
             </section>
             <section className="aboutUs mb-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 col-md-5">
-                            <div className="aboutUsThumb">
-                                <img src="/images/about-sample-img-2.png" alt=""/>
-                            </div>
-                        </div>
-                        <div className="col-12 col-md-7 pt-5 pr-5">
+                        
+                        <div className="col-12 col-md-6 pr-5">
                             <div className="aboutUsContent">
                                 {
                                     aboutContent.about.map((data, index)=>{
                                         return(
                                             <React.Fragment key={index}>
-                                                <div className="sectionHeading mb-3">
+                                                <div className="sectionHeading mb-3 min-width-100">
                                                     <h3>{data.topTitle}</h3>
                                                     <h2>{data.title}</h2>
                                                 </div>
                                                 <h4>{data.subTitle}</h4>
-                                                <p className="para">{data.body}</p>
+                                                <p className="para">Dummy Content Lorem ipsum {data.body}</p>
                                             </React.Fragment>
                                         )
                                     })
@@ -74,6 +70,48 @@ const About = () => {
                                     <Link to='/services' className="lineBtn">View More</Link>
                                     <Link to='/contact-us' className="colorBtn">Contact Us</Link>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-6 pt-5">
+                            {/* <div className="aboutUsThumb">
+                                <img src="/images/about-sample-img-2.png" alt=""/>
+                            </div> */}
+                            <div class="about2-images">
+                                <div class="image1">
+                                    <img src="/images/about2-img1.png" alt=""/>
+                                </div>
+                                <div class="image2">
+                                    <img src="/images/about2-img2.png" alt=""/>
+                                </div>
+                                <div class="image3">
+                                    <img src="/images/about2-img3.png" alt=""/>
+                                </div>
+                                <div class="counter-box">
+                                    <h3>05</h3>
+                                    <p>Years Of <br/> Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="about-tabs bg_light_1">
+                <div className="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="tab-content-box">
+                                <div class="heading1">
+                                    <h5>2017 - A Legacy of Innovation</h5>
+                                    <div class="space24"></div>
+                                    <p><span class="text">Early Years:</span> In the early years, Steve Jobs recognized the growing importance of technology in business and set out to create a company that could help organizations leverage the power of digital innovation. With a small team of passionate individuals.</p>
+                                    <div class="space16"></div>
+                                    <p><span class="text">Expansion &amp; Innovation:</span> As technology continued to evolve, so did [Company Name]. We expanded our service offerings to include a wide range of solutions, from cybersecurity and cloud computing to data analytics and artificial intelligence.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="image">
+                                <img src="/images/about-tab-img.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -228,7 +266,7 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <Testimonial />
+            {/* <Testimonial /> */}
         </React.Fragment>
     )
 };
