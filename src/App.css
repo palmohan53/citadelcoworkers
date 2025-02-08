@@ -1698,11 +1698,10 @@ section.serviceBulkContent img {
   padding: 5px;
 }
 
-section.serviceBulkContent p.para {
+section.serviceBulkContent .para {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
 }
 section.serviceBulkContent ul{
   min-width: 100%;
@@ -1812,15 +1811,18 @@ span.text {
   color: #5dcd85;
   display: block;
 }
-section.serviceBulkContent p.para h2 {
+section.serviceBulkContent .para h2 {
   font-size: 22px;
   font-weight: 600;
 }
 
-section.serviceBulkContent p.para {
+section.serviceBulkContent .para {
   line-height: 1.8;
 }
-
+.bulkContent {
+  display: flex;
+  gap: 30px;
+}
 
 
 

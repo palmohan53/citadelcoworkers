@@ -11,17 +11,19 @@ const ServiceBulkContent = ({serviceBulkContent}) => {
     //     return <div className="loaderWrp"><span className="loader"></span></div>
     // }
     return(
-       
-            <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-md-12 col-12">
-                        <div className="sectionHeading text-center mb-3">
-                            <h2>{serviceBulkContent?.data?.listing[0].post_title}</h2>
-                        </div>
-                        <p className="para"  dangerouslySetInnerHTML={{ __html: serviceBulkContent?.data?.listing[0].post_content }}></p>
+        <div className="container">
+            <div className="row align-items-center">
+                <div className="col-md-12 col-12">
+                    <div className="sectionHeading text-center mb-3">
+                        <h2>{serviceBulkContent?.data?.listing[0]?.post_title}</h2>
+                    </div>
+                    <div className="bulkContent">
+                        <img src={serviceBulkContent?.data?.listing[0]?.banner} alt="" className="serviceIco" />
+                        <div className="para"  dangerouslySetInnerHTML={{ __html: serviceBulkContent?.data?.listing[0].post_content }}></div>
                     </div>
                 </div>
-            </div>       
+            </div>
+        </div>       
     )
 };
 

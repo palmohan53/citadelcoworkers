@@ -11,20 +11,19 @@ const ServiceBulkContentUpper = ({serviceBulkContentUpper}) => {
     //     return <div className="loaderWrp"><span className="loader"></span></div>
     // }
     return(
-       
-            <div className="container">
-                {console.log(serviceBulkContentUpper)}
-                <div className="row align-items-center">
-                    <div className="col-md-12 col-12 mb-3">
-                        <div className="sectionHeading text-center">
-                            <h2>{serviceBulkContentUpper?.data?.listing[0].post_title}</h2>
-                        </div>
+        <div className="container">
+            <div className="row align-items-center">
+                <div className="col-md-12 col-12">
+                    <div className="sectionHeading text-center mb-3">
+                        <h2>{serviceBulkContentUpper?.data?.listing[0]?.post_title}</h2>
                     </div>
-                    <div className="col-12">
-                        <p className="para" dangerouslySetInnerHTML={{ __html: serviceBulkContentUpper?.data?.listing[0].post_content }}></p>
+                    <div className="bulkContent">
+                        <img src={serviceBulkContentUpper?.data?.listing[0]?.banner} alt="" className="serviceIco" />
+                        <div className="para"  dangerouslySetInnerHTML={{ __html: serviceBulkContentUpper?.data?.listing[0].post_content }}></div>
                     </div>
                 </div>
-            </div>       
+            </div>
+        </div>      
     )
 };
 
