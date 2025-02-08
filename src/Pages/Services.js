@@ -6,7 +6,7 @@ import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Testimonial from "../Component/Testimonial";
+// import Testimonial from "../Component/Testimonial";
 
 // import servicesContent from '../Content/services.json';
 
@@ -58,7 +58,7 @@ const Services = () => {
                 </div>
             </div>
         </section>
-        <Testimonial />
+        {/* <Testimonial /> */}
     </React.Fragment>
     )
 };
