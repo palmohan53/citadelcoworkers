@@ -15,6 +15,7 @@ import Steps from "../Component/Steps";
 import Pricing from "../Component/Pricing";
 import ServiceBulkContentUpper from "../Component/ServiceBulkContentUpper";
 import Faq from "../Component/Faq";
+import ContactForm from "../Component/ContactForm";
 
 const SubServices = () => {
     const {subService} = useParams();
@@ -154,8 +155,7 @@ const SubServices = () => {
                 <div className="row align-items-center mb-3">
                     <div className="col-md-12 col-12 text-center">
                         <div className="sectionHeading">
-                            <h2>Hire Virtual Assistants & Boost Your Business for Global Client Satisfaction & Specialized Support
-                            </h2>
+                            <h2>{serviceContent[0]?.clientsNumberHeading[0]?.title}</h2>
                         </div>
                     </div>
                     <div className="col-md-12">
@@ -193,15 +193,17 @@ const SubServices = () => {
             </div>
         </section>
         <section className="serviceBulkContent">
-            <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
+            <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
         </section>
+        
         <Testimonial serviceTestimonial={serviceTestimonial} />
         <Steps />
         <Pricing/>
         <section className="serviceBulkContent">
-            <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
+            <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
         </section>
         <Faq faqData={faqData}/>
+        <ContactForm />
         <RecentBlog />
         <section className="bottomCon pt-0">
             <div className="container">

@@ -1811,9 +1811,14 @@ span.text {
   color: #5dcd85;
   display: block;
 }
+section.serviceBulkContent .para h2.elementor-widget-container {
+  font-size: 24px;
+  margin: 0;
+}
 section.serviceBulkContent .para h2 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
+  margin: 10px 0 0;
 }
 
 section.serviceBulkContent .para {
@@ -1822,6 +1827,10 @@ section.serviceBulkContent .para {
 .bulkContent {
   display: flex;
   gap: 30px;
+}
+section.serviceBulkContent .para strong {
+  display: block;
+  font-size: 16px;
 }
 
 
