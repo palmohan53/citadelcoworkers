@@ -1812,7 +1812,14 @@ span.text {
   color: #5dcd85;
   display: block;
 }
+section.serviceBulkContent p.para h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
 
+section.serviceBulkContent p.para {
+  line-height: 1.8;
+}
 
 
 

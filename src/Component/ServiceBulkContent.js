@@ -13,9 +13,9 @@ const ServiceBulkContent = ({serviceBulkContent}) => {
     return(
        
             <div className="container">
-                <div className="row align-items-center mb-3">
+                <div className="row align-items-center">
                     <div className="col-md-12 col-12">
-                        <div className="sectionHeading text-center">
+                        <div className="sectionHeading text-center mb-3">
                             <h2>{serviceBulkContent?.data?.listing[0].post_title}</h2>
                         </div>
                         <p className="para"  dangerouslySetInnerHTML={{ __html: serviceBulkContent?.data?.listing[0].post_content }}></p>
