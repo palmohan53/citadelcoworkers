@@ -76,17 +76,17 @@ const About = () => {
                             {/* <div className="aboutUsThumb">
                                 <img src="/images/about-sample-img-2.png" alt=""/>
                             </div> */}
-                            <div class="about2-images">
-                                <div class="image1">
+                            <div className="about2-images">
+                                <div className="image1">
                                     <img src="/images/about2-img1.png" alt=""/>
                                 </div>
-                                <div class="image2">
+                                <div className="image2">
                                     <img src="/images/about2-img2.png" alt=""/>
                                 </div>
-                                <div class="image3">
+                                <div className="image3">
                                     <img src="/images/about2-img3.png" alt=""/>
                                 </div>
-                                <div class="counter-box">
+                                <div className="counter-box">
                                     <h3>05</h3>
                                     <p>Years Of <br/> Experience</p>
                                 </div>
@@ -97,20 +97,20 @@ const About = () => {
             </section>
             <section className="about-tabs bg_light_1">
                 <div className="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="tab-content-box">
-                                <div class="heading1">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6">
+                            <div className="tab-content-box">
+                                <div className="heading1">
                                     <h5>2017 - A Legacy of Innovation</h5>
-                                    <div class="space24"></div>
-                                    <p><span class="text">Early Years:</span> In the early years, Steve Jobs recognized the growing importance of technology in business and set out to create a company that could help organizations leverage the power of digital innovation. With a small team of passionate individuals.</p>
-                                    <div class="space16"></div>
-                                    <p><span class="text">Expansion &amp; Innovation:</span> As technology continued to evolve, so did [Company Name]. We expanded our service offerings to include a wide range of solutions, from cybersecurity and cloud computing to data analytics and artificial intelligence.</p>
+                                    <div className="space24"></div>
+                                    <p><span className="text">Early Years:</span> In the early years, Steve Jobs recognized the growing importance of technology in business and set out to create a company that could help organizations leverage the power of digital innovation. With a small team of passionate individuals.</p>
+                                    <div className="space16"></div>
+                                    <p><span className="text">Expansion &amp; Innovation:</span> As technology continued to evolve, so did [Company Name]. We expanded our service offerings to include a wide range of solutions, from cybersecurity and cloud computing to data analytics and artificial intelligence.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="image">
+                        <div className="col-lg-6">
+                            <div className="image">
                                 <img src="/images/about-tab-img.png" alt="" />
                             </div>
                         </div>
