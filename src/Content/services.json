@@ -60,6 +60,28 @@
                         "title": "04. What tasks do virtual assistants perform?",
                         "body": "Citadel’s virtual assistants are adept at a broad range of tasks from basic administrative duties to more complex operations such as content creation, customer service, and specialized project work."
                     }
+                ],
+            "bottomServices":[
+                    {
+                        "title": "Administrative Excellence",
+                        "body": "From scheduling meetings to managing your Microsoft Excel spreadsheets, virtual assistants handle the minutiae with precision. They are the unseen gears that keep the corporate clock ticking, the diligent force behind seamless day-to-day operations."
+                    },
+                    {
+                        "title": "Specialized Skill Sets",
+                        "body": "Our Indian virtual assistants are not just generalists; many have specialized skill sets. Whether it's handling your accounts, crafting your next marketing campaign, or managing your social media presence, their expertise is a valuable asset."
+                    },
+                    {
+                        "title": "Seamless Integration with Your Operations",
+                        "body": "With advanced communication technologies and collaboration tools, integrating a virtual assistant into your operations has never been easier. They can swiftly adapt to your business’s specific needs, managing projects, and tasks as if they were in the office next door."
+                    },
+                    {
+                        "title": "Business Growth and Development",
+                        "body": "When routine tasks are expertly managed, business leaders can focus on core competencies and growth. A virtual assistant serves as the catalyst for this development, enabling you to pursue opportunities that were previously out of reach due to time constraints."
+                    },
+                    {
+                        "title": "Customer Engagement and Satisfaction",
+                        "body": "In today's digital-first landscape, customer support can make or break a business. Virtual assistants ensure that customer queries are handled promptly and professionally, fostering a reputation for reliability and attentive service."
+                    }
                 ]
         },
         {
@@ -131,7 +153,29 @@
                         "title": "05. How Quickly Can You Get Started with Mobile App Development?",
                         "body": "The length of time it takes to begin developing a mobile app varies on a number of variables, including the project's complexity, scope, and developer availability. To allow for adequate planning and resource allocation, many developers, nevertheless, strive to begin working on projects within a few weeks of the first discussions."
                     }
-                ]
+                ],
+            "bottomServices":[
+                {
+                    "title": "Creating State-of-the-Art Mobile Solutions",
+                    "body": "Our team of mobile app development professionals is committed to producing smooth, user-friendly apps that connect with your audience from concept to launch. We are experts in turning your concepts into useful, approachable mobile applications."
+                },
+                {
+                    "title": "Specialised Knowledge",
+                    "body": "Developing mobile apps necessitates a deep comprehension of numerous platforms and technologies. Because of their expertise in iOS, Android, and cross-platform development, our remote mobile app developers can guarantee that your app will function well and be accessible on a variety of devices."
+                },
+                {
+                    "title": "Boost User Interest",
+                    "body": "Success in today's cutthroat app market depends on user engagement. Whether it's via user-friendly interfaces, tailored experiences, or smooth platform integrations, our developers are adept at creating features that draw in and hold on to users."
+                },
+                {
+                    "title": "Promote Business Expansion",
+                    "body": "Hire mobile app developer in India for your team so you can concentrate on growing your company. Our mobile solutions offer the cornerstone for long-term success, regardless of your goals—enhancing client loyalty, breaking into new markets, or introducing a new product."
+                },
+                {
+                    "title": "Fluid Combination",
+                    "body": "Outsource mobile application development to your existing ecosystem. In order to ensure that the development process is in line with your business objectives and smoothly integrates with your current infrastructure, our developers work in seamless collaboration with your team."
+                }
+            ]
         }
         
     ]

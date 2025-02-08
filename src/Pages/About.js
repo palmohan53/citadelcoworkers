@@ -103,9 +103,9 @@ const About = () => {
                                 <div className="heading1">
                                     <h5>2017 - A Legacy of Innovation</h5>
                                     <div className="space24"></div>
-                                    <p><span className="text">Early Years:</span> In the early years, Steve Jobs recognized the growing importance of technology in business and set out to create a company that could help organizations leverage the power of digital innovation. With a small team of passionate individuals.</p>
+                                    <p><span className="text">Early Years:</span> Lorem Ipsum dummy text In the early years, Steve Jobs recognized the growing importance of technology in business and set out to create a company that could help organizations leverage the power of digital innovation. With a small team of passionate individuals.</p>
                                     <div className="space16"></div>
-                                    <p><span className="text">Expansion &amp; Innovation:</span> As technology continued to evolve, so did [Company Name]. We expanded our service offerings to include a wide range of solutions, from cybersecurity and cloud computing to data analytics and artificial intelligence.</p>
+                                    <p><span className="text">Expansion &amp; Innovation:</span> Lorem Ipsum dummy text As technology continued to evolve, so did [Company Name]. We expanded our service offerings to include a wide range of solutions, from cybersecurity and cloud computing to data analytics and artificial intelligence.</p>
                                 </div>
                             </div>
                         </div>

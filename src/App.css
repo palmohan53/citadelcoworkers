@@ -1759,7 +1759,7 @@ section.serviceBulkContent ul{
   padding: 55px 32px;
 }
 .about-tabs .tab-content-box .heading1 h5 {
-  color: #0D0E10;
+  color: #05164d;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
@@ -1833,7 +1833,33 @@ section.serviceBulkContent .para strong {
   display: block;
   font-size: 16px;
 }
+.bottomServiceContent {
+  padding: 30px;
+  background: #fff;
+  max-width: 30%;
+  box-shadow: 0px 0px 10px #0000001f;
+}
 
+.bottomServiceContent h3 {
+  color: #05164d;
+  display: block;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 15px;
+  /* min-height: 60px; */
+}
+
+.bottomServicesWrp {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bottomServiceContent p {
+  margin: 0;
+}
 
 
 

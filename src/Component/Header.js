@@ -13,10 +13,10 @@ const Header = () => {
     const openToggle = () => setActiveClass(!activeClass);
     const getServiceList = async () => {
         const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceListing}`)
-        const data = await response;
+        const data = await response.data?.listing?.reverse();
         return data;
     }
-    const { data } = useQuery("serviceMenu", getServiceList);
+    const { data:serviceMenu } = useQuery("serviceMenu", getServiceList);
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
@@ -58,9 +58,8 @@ const Header = () => {
                                 <NavLink className="nav-link" to="/services">Services</NavLink>
                                 <FontAwesomeIcon icon={faAngleDown} />
                                 <ul>
-                                    {/* {console.log(data?.data.listing.reverse(), 'menu')} */}
                                     {
-                                        data?.data?.listing?.reverse().map((menu, index)=>{
+                                        serviceMenu && serviceMenu?.map((menu, index)=>{
                                             return(
                                                 <li key={index}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.post_title}</NavLink></li>
                                             )

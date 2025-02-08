@@ -210,6 +210,24 @@ const SubServices = () => {
             <ContactForm />
         </div>
         <RecentBlog />
+        <section className="bottomServices bg_light_1">
+            <div className="container">
+                <div className="sectionHeading text-center mb-3">
+                    <h2 className="mb-4">We are at Your Service for:</h2>
+                </div>
+                <div className="bottomServicesWrp">
+                    {serviceContent[0]?.bottomServices?.map((data, index)=>{
+                        return(
+                            <div className="bottomServiceContent" key={index}>
+                                {/* <img src={data.imageUrl} alt={data.title} /> */}
+                                <h3>{data.title}</h3>
+                                <p>{data.body}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        </section>
         <section className="bottomCon pt-0">
             <div className="container">
                 <div className="sectionHeading text-center">
