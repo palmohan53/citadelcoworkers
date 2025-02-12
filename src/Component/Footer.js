@@ -12,7 +12,7 @@ const Footer = () => {
                             <div className="footerLinks mb-4">
                                 <div className="logo mb-2">
                                     <a href="/">
-                                        <img src="/images/logo2.png" alt=""/>
+                                        <img src="/images/logo-new-white.png" alt=""/>
                                     </a>
                                 </div>
                                 <div className="content_in_r mt-4">

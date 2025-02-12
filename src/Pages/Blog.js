@@ -51,7 +51,7 @@ const Blog = ({isRecentBlog}) => {
                             <p dangerouslySetInnerHTML={{ __html: blog.post_content }}></p>
                             <div className="d-flex justify-content-between">
                                 <h6>7 min read</h6>
-                                <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></button>
+                                <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
                             </div>
                         </div>
                     </div>

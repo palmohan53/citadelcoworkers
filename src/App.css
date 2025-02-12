@@ -129,9 +129,9 @@ nav#mainNav .nav-item {
 .dropDown  ul {
   margin: 0;
   list-style-type: none;
-  min-width: 220px;
+  min-width: 270px;
   background: #fff;
-  padding: 5px 0;
+  padding: 10px;
   border-radius: 5px;
   position: absolute;
   top: 100%;
@@ -151,9 +151,14 @@ nav#mainNav .nav-item {
 }
 .dropDown ul a {
   color: #000;
-  padding: 7px 15px !important;
+  padding: 10px 15px !important;
+  border-radius: 5px;
+  transition: all 500ms ease;
 }
-
+.dropDown ul a:hover {
+  background: #1749d521;
+  transition: all 500ms ease;
+}
 .dropDown {
   position: relative;
   display: flex;
@@ -192,6 +197,9 @@ header.mainHeader.scrolled .logoWhite {
 
 .mainHeader.scrolled nav#mainNav .nav-item > a {
   color: #000;
+}
+.mainHeader.scrolled nav#mainNav .nav-item:hover > a {
+  color: #1749d5;
 }
 .greenText{
   color: #00cc83;
@@ -723,7 +731,7 @@ section.testimonial {
   transition: all 500ms ease;
 }
 section.getInTouch {
-  background: #1749d5;
+  background: #fcfcfc;
 }
 
 .contactForm h2 {
@@ -776,7 +784,7 @@ section.getInTouch {
   box-shadow: 0 0 20px #00000047;
 }
 .contentContent h3 {
-  color: #ffffffd1;
+  color: #000;
   margin: 0 0 30px;
   font-size: 28px;
 }
@@ -791,7 +799,7 @@ section.getInTouch {
 .detIco {
   min-width: 60px;
   height: 60px;
-  background: #ffffff45;
+  background: #000;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -802,7 +810,7 @@ section.getInTouch {
 }
 
 .detName {
-  color: #ffffffd1;
+  color: #000;
   font-size: 16px;
 }
 .detName h4 {
