@@ -13,8 +13,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
-import Profile from "../Component/Profile";
-import Steps from "../Component/Steps";
+// import Profile from "../Component/Profile";
+// import Steps from "../Component/Steps";
 
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
