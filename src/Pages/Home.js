@@ -309,7 +309,7 @@ const Home = () => {
                 </section>
                 <section className="video">
                     <div className="videoBgImage">
-                        <img src="images/areaof-ecp-1.jpg" alt="" />
+                        <img src="/images/home-banner.png" alt="" />
                     </div>
                     <div className="container">
                         <div className="row">
