@@ -213,9 +213,10 @@ const SubServices = () => {
         <section className="bottomServices bg_light_1">
             <div className="container">
                 <div className="sectionHeading text-center mb-3">
-                    <h2 className="mb-4">We are at Your Service for:</h2>
+                    <h2>{serviceContent[0]?.bottomServicesHeading[0]?.title}</h2>
+                    <p>{serviceContent[0]?.bottomServicesHeading[0]?.body}</p>
                 </div>
-                <div className="bottomServicesWrp">
+                <div className="bottomServicesWrp mt-3">
                     {serviceContent[0]?.bottomServices?.map((data, index)=>{
                         return(
                             <div className="bottomServiceContent" key={index}>

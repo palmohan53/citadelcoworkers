@@ -34,8 +34,8 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg navbar-light" id="mainNav">
                 <div className="container">
                     <NavLink className="navbar-brand p-0" to="/">
-                        <img src="/images/logo-new-shadow.png" alt="" className="colorLogo" />
-                        <img src="/images/logo2.png" alt="" className="logoWhite" />
+                        <img src="/images/logo-new-black.png" alt="" className="colorLogo" />
+                        <img src="/images/logo-new-white.png" alt="" className="logoWhite" />
                     </NavLink>
                     <button className="navbar-toggler" onClick={openToggle}>
                         <img src="images/toggle.png" alt="" />
@@ -46,7 +46,7 @@ const Header = () => {
                         </button>
                         <ul className="navbar-nav m-auto">
                             <li className="mobile">
-                                <img src="/images/logo2.png" alt="" />
+                                <img src="/images/logo-new-white.png" alt="" />
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/">Home</NavLink>

@@ -61,6 +61,12 @@
                         "body": "Citadel’s virtual assistants are adept at a broad range of tasks from basic administrative duties to more complex operations such as content creation, customer service, and specialized project work."
                     }
                 ],
+            "bottomServicesHeading":[
+                {
+                    "title": "We are at Your Service for:",
+                    "body": "This is dummy paragraph Creating State-of-the-Art Mobile Solutions Creating State-of-the-Art Mobile Solutions"
+                }
+            ],
             "bottomServices":[
                     {
                         "title": "Administrative Excellence",
@@ -154,7 +160,13 @@
                         "body": "The length of time it takes to begin developing a mobile app varies on a number of variables, including the project's complexity, scope, and developer availability. To allow for adequate planning and resource allocation, many developers, nevertheless, strive to begin working on projects within a few weeks of the first discussions."
                     }
                 ],
-            "bottomServices":[
+        "bottomServicesHeading":[
+                {
+                    "title": "Our Dedicated Mobile App Developers are at Your Service for:",
+                    "body": "This is dummy paragraph Creating State-of-the-Art Mobile Solutions Creating State-of-the-Art Mobile Solutions"
+                }
+            ],
+        "bottomServices":[
                 {
                     "title": "Creating State-of-the-Art Mobile Solutions",
                     "body": "Our team of mobile app development professionals is committed to producing smooth, user-friendly apps that connect with your audience from concept to launch. We are experts in turning your concepts into useful, approachable mobile applications."

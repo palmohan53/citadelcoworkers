@@ -1,6 +1,6 @@
 
 import { Accordion, AccordionItem } from '@szhsin/react-accordion';
-
+import { Link } from 'react-router-dom';
 
 const Faq = ({faqData}) => {
     return(
@@ -29,6 +29,9 @@ const Faq = ({faqData}) => {
                         )
                     })}
                     </Accordion>
+                    <div className='text-center mt-5'>
+                        <Link to="/" className="colorBtn wideBtn">View All</Link>
+                    </div>
                 </div>
             </div>
         </section>

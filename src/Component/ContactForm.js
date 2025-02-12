@@ -78,7 +78,7 @@ const ContactForm = () => {
                                             </div>
                                         </div>
                                         <div className="d-flex mt-3">
-                                            <button className="colorBtn wideBtn">Send Your Query</button>
+                                            <button className="colorBtn wideBtn">Submit</button>
                                         </div>
                                     </div>
                                 </div>

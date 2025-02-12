@@ -95,21 +95,36 @@ nav#mainNav .nav-item > a {
     font-size: 15px;
     color: #fff;
     font-weight: 600;
-    padding: 15px 5px;
+    padding: 15px 0px;
     position: relative;
     display: flex;
     gap: 5px;
     align-items: center;
     text-transform: capitalize;
+    position: relative;
 }
-nav#mainNav .nav-item > a.active{
-  color: #00cc83 !important;
+nav#mainNav .nav-item > a:after{
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #1749d5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
 }
+nav#mainNav .nav-item > a:hover:after{
+  width: 100%;
+  transition: all 500ms ease;
+}
+/* nav#mainNav .nav-item > a.active{
+  color: #1749d5 !important;
+} */
 nav#mainNav .nav-item:hover > a, .dropDown:hover > svg {
-    color: #00cc83;
+    color: #1749d5;
 }
 nav#mainNav .nav-item {
-    padding: 0 15px;
+    padding: 0 20px;
 }
 .dropDown  ul {
   margin: 0;
@@ -152,7 +167,7 @@ nav#mainNav .nav-item {
   color: #000;
 }
 .dropDown ul a:hover{
-  color: #00cc83;
+  color: #1749d5;
 }
 header.mainHeader .colorLogo {
   display: none;
@@ -162,8 +177,8 @@ header.mainHeader.scrolled {
   background: #fff;
   box-shadow: 0 0 10px #00000061;
 }
-.scrolled .lineBtn {
-  background: linear-gradient(to right, #0b88cb, #00cc83, #00cc83);
+.mainHeader .lineBtn {
+  background: #00cc83;
   border: solid 1px #00cc83;
   color: #fff !important;
 }
@@ -179,9 +194,7 @@ header.mainHeader.scrolled .logoWhite {
   color: #000;
 }
 .greenText{
-  color: transparent;
-  -webkit-text-stroke: 2px #00cc83;
-  font-weight: 900;
+  color: #00cc83;
 }
 .text-underline{
   text-decoration: underline;
@@ -189,7 +202,7 @@ header.mainHeader.scrolled .logoWhite {
 .lineBtn, .colorBtn, .blueBtn, .greyBtn {
   display: inline-flex;
   padding: 10px 25px;
-  background: linear-gradient(to right, #0b88cb, #00cc83, #00cc83);
+  background: #00cc83;
   border-radius: 50px;
   color: #ffffff !important;
   position: relative;
@@ -296,15 +309,17 @@ header.mainHeader.scrolled .logoWhite {
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent; 
   border-right:30px solid #fff; 
+  opacity: 0;
 }
 .bannerProfile h3 {
-  font-size: 21px;
-  margin: 0px 0 10px;
+  font-size: 18px;
+  margin: 10px 0 5px;
   color: #05164d;
+  text-transform: capitalize;
 }
 .bannerProfileDetails p {
   font-weight: 600;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 section.profile .bannerProfileDetails {
   padding-top: 15px;
@@ -316,7 +331,7 @@ section.profile .bannerProfileDetails {
 .bannerProfileDetails button.colorBtn {
   width: 100%;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .bannerProfile h6 {
   font-size: 14px;
@@ -333,7 +348,7 @@ section.banner {
   position: relative;
 }
 
-.videoBg video, .videoOverlay, .bannerOvelay {
+.videoBg video, .videoOverlay, .bannerOvelay, .videoBg img {
   position: absolute;
   object-fit: cover;
     width: 100%;
@@ -355,11 +370,29 @@ section.banner {
   z-index: 2;
 }
 section.banner h4{
-  margin: 30px 0px;
+  margin: 10px 0px;
   line-height: 1.8;
   color: #fff;
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 24px;
+  font-weight: 600;
+}
+section.banner h5 {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+}
+
+section.banner h5:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 100px;
+  height: 2px;
+  background: #00cc83;
+  transform: translateX(-50%);
 }
 section.banner h1{
   color: #fff;
@@ -415,7 +448,7 @@ section.banner p {
   border-bottom: none;
 }
 .sideBorder:hover {
-  background: #3893cb;
+  background: #1749d5;
     transition: all 500ms ease;
 }
 
@@ -482,7 +515,7 @@ section.profile .bannerProfileDetails:before{
 }
 .contentBx img {
   width: 80px;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: all 500ms ease;
 }
 .process .contentBx:hover img {
@@ -690,7 +723,7 @@ section.testimonial {
   transition: all 500ms ease;
 }
 section.getInTouch {
-  background: #03b172;
+  background: #1749d5;
 }
 
 .contactForm h2 {
@@ -704,8 +737,8 @@ section.getInTouch {
 }
 
 .contactForm ul a {
-  color: #50b274;
-  border: solid 1px #50b274;
+  color: #1749d5;
+  border: solid 1px #1749d5;
   padding: 4px 10px;
   border-radius: 9px;
   font-size: 13px;
@@ -1480,11 +1513,26 @@ span.icon-cell.site-text-primary {
   background: #fff;
   border-radius: 0px 0px 30px 0px;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, .09);
+  text-align: center;
+}
+.service-section-two .service_box.style_three .service_content{
   min-height: 365px;
 }
-.service_box.style_three .service_content .content_inner {
+.service-section-two  .service_box.style_three .service_content .content_inner {
   position: relative;
   padding-top: 85px;
+}
+.threebox .content_inner img {
+  max-width: 70px;
+  opacity: 0.8;
+}
+
+.threebox .content_inner h2 {
+  margin-top: 20px;
+}
+.threebox .sectionHeading h4 {
+  font-size: 18px;
+  font-weight: 700;
 }
 .service_box.style_three .service_content .content_inner span {
   position: absolute;
@@ -1544,8 +1592,46 @@ span.icon-cell.site-text-primary {
   top: 0;
   left: 0;
 }
-.service_content h2.semiHeading {
+/* .service_content h2.semiHeading {
   min-height: 60px;
+} */
+.profileBxBx .bannerProfile:nth-child(2) {
+  left: 235px !important;
+  top: -10px;
+  z-index: 2;
+}
+
+.profileBxBx .bannerProfile {
+  position: absolute;
+  left: -40px;
+  width: 270px;
+  top: -50px;
+  z-index: 1;
+}
+
+.profileBxBx {
+  position: relative;
+}
+.process .contentBx {
+  margin-bottom: 70px;
+}
+
+.process .contentBx h3 {
+  margin: 20px 0 15px;
+}
+
+.process .contentBx p {
+  line-height: 1.8;
+}
+.profileBxBx .bannerProfile > img {
+  height: 200px;
+  object-fit: cover !important;
+  width: 100%;
+}
+.profileBxBx .bannerProfile:nth-child(3) {
+  left: 40px;
+    top: 340px;
+    z-index: 0;
 }
 .pricing-collection-list {
   grid-column-gap: 2.25rem;
@@ -1667,7 +1753,7 @@ span.icon-cell.site-text-primary {
 .szh-accordion__item-content {
   font-size: 15px;
   font-weight: 300;
-  margin-top: 10px;
+  margin: 10px 0 20px;
   line-height: 1.6;
 }
 
@@ -1702,6 +1788,7 @@ section.serviceBulkContent img {
   height: auto;
   border: solid 2px #ccc;
   padding: 5px;
+  max-height: min-content;
 }
 
 section.serviceBulkContent .para {

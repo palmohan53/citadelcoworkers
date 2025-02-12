@@ -8,7 +8,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faPlay, faCode, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
@@ -31,16 +31,22 @@ const getTestimonial = async () => {
     const data = await response;
     return data;
 }
+const getProfileList = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.profile}`)
+    const data = await response;
+    return data;
+}
+
 const Home = () => {
     const { data, status } = useQuery("blog", getBlogList);
     const { data:services } = useQuery("service", getServiceList);
     const { data:serviceTestimonial } = useQuery("testimonial", getTestimonial);
+    const { data:profile } = useQuery("Profile", getProfileList);
   
     const contactref = useRef(null);
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
     };
-
     useEffect(() => {
         // getBlogList()
         window.scrollTo(0, 0)
@@ -59,19 +65,21 @@ const Home = () => {
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-md-12 col-12 text-center">
-                                <h1>Hire India's <b>Top 3% ✅</b> Virtual Talent<br/>Effortless, Reliable, Cost-Effective!</h1>
-                                <h4>Get access to India's top virtual professionals in Finance, Software, Design, and more.<br/>We provide vetted experts who deliver high-impact solutions—helping your business scale faster.</h4>
-                                <Link to="/contact-us" className="colorBtn wideBtn">Schedule a Free Consultation</Link>
-                                <p className="mt-3 mb-0">"No upfront cost. Pay only when you hire!"</p>
+                                <h1>Hire India’s Top 3% Virtual Employees</h1>
+                                <h4>Transform your business with elite virtual experts — Finance, Software, Design, and beyond.</h4>
+                                <h5>Starting from Just <span className="greenText">$777/month</span>.</h5>
+                                <Link to="/contact-us" className="colorBtn wideBtn">Start Your Free Trial Today</Link>
+                                {/* <p className="mt-3 mb-0">"No upfront cost. Pay only when you hire!"</p> */}
                             </div>
                             
                         </div>
                     </div>
                     <div className="videoBg">
-                        <video loop muted autoPlay playsInline>
+                        {/* <video loop muted autoPlay playsInline>
                             <source src="images/banner-video.mp4" type="video/mp4"/>
                             Your browser does not support the video tag.
-                        </video>
+                        </video> */}
+                        <img src="/images/home-banner-2.png" alt=""/>
                     </div>
                     <div className="videoOverlay"></div>
                 </section>
@@ -80,8 +88,8 @@ const Home = () => {
                         <div className="row align-items-center mb-3">
                             <div className="col-md-12 col-12">
                                 <div className="sectionHeading text-center">
-                                    <h2>Hire Remote Professionals for Your Business</h2>
-                                    <p>Looking to build a remote team? Get top-tier professionals across 150+ domains, including IT, marketing, design, legal, and more. Hire skilled experts, reduce costs, and scale faster!</p>
+                                    <h2>Comprehensive Virtual Staffing – Hire in Any Domain  </h2>
+                                    <p>Get flexible, cost-effective staffing solutions—hire top virtual professionals in any industry.   </p>
                                 </div>
                             </div>
                         </div>
@@ -114,24 +122,144 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section className="profile">
+                <section className="threebox bg_light_1">
                     <div className="container">
                         <div className="row align-items-center mb-3">
                             <div className="col-md-12 col-12">
                                 <div className="sectionHeading text-center">
-                                    <h2>Connect with Top-Tier Global Talent</h2>
-                                    <p>Hire pre-vetted professionals in business, design, and technology—ready to deliver results for your most important projects.</p>
+                                    <h2>Unlock the Power of a Remote Workforce</h2>
+                                    <p className="mb-3">Save up to 72% on hiring costs while building a flexible, high-performing team that keeps your business running seamlessly.</p>
+                                    <h4>3 Key Benefits of Hiring Remote Professionals</h4>
                                 </div>
                             </div>
                         </div>
-                        <div className="row mt-5">
-                            <div className="col-12">
-                                <Profile handleScrollClick={handleScrollClick}/>
+                        <div className="row gutter_15px mt-5">
+                            <div className="col-md-4 col-12">
+                                <div className="service_box style_three dark_color">
+                                    <div className="service_content">
+                                        <div className="content_inner">
+                                            <img src="/images/expert-ico.png" alt=""/>
+                                            <h2 className="semiHeading">Top Experts, On-Demand</h2>
+                                            <p>Hire skilled professionals in hours—ready to deliver from day one.</p>
+                                        </div>
+                                    </div>
+                                </div>                        
+                                <div className="mr_bottom_30"></div>                        
+                            </div>
+                            <div className="col-md-4 col-12">
+                                <div className="service_box style_three dark_color">
+                                    <div className="service_content">
+                                        <div className="content_inner">
+                                            <img src="/images/profit-ico.png" alt=""/>
+                                            <h2 className="semiHeading">Lower Costs, Higher Profits</h2>
+                                            <p>Cut office, payroll, and operational expenses while maximizing efficiency.</p>
+                                        </div>
+                                    </div>
+                                </div>                        
+                                <div className="mr_bottom_30"></div>                        
+                            </div>
+                            <div className="col-md-4 col-12">
+                                <div className="service_box style_three dark_color">
+                                    <div className="service_content">
+                                        <div className="content_inner">
+                                            <img src="/images/world-wide-ico.png" alt=""/>
+                                            <h2 className="semiHeading">24/7 Business Continuity</h2>
+                                            <p>Leverage global talent across time zones for uninterrupted growth.</p>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <section className="process">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-7 col-12">
+                                <div className="row mb-3">
+                                    <div className="col-md-12 col-12">
+                                        <div className="sectionHeading min-width-100">
+                                            <h2>Build High-Performing Teams,<br />On Demand</h2>
+                                            <p>Quickly assemble the virtual employees you need, exactly when you need them.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row mt-5">
+                                    <div className="col-md-6 col-12">
+                                        <ScrollAnimation animateIn="fadeIn">
+                                            <div className="contentBx">
+                                                <img src='/images/hire-quickly.png' alt="" />
+                                                <h3>Hire Quickly</h3>
+                                                <p>Hire in under 24 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                            </div>
+                                        </ScrollAnimation>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <ScrollAnimation animateIn="fadeIn">
+                                            <div className="contentBx">
+                                                <img src='/images/top-3.png' alt="" />
+                                                <h3>The Top 3%</h3>
+                                                <p>Every applicant to the Citadel network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
+                                            </div>
+                                        </ScrollAnimation>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <ScrollAnimation animateIn="fadeIn">
+                                            <div className="contentBx">
+                                                <img src='/images/future-innovation.png' alt="" />
+                                                <h3>Leading the Future of Work</h3>
+                                                <p>Our network is ready for tomorrow’s business challenges by embracing advanced and specialized skills, including blockchain and AI.</p>
+                                            </div>
+                                        </ScrollAnimation>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <ScrollAnimation animateIn="fadeIn">
+                                            <div className="contentBx">
+                                                <img src='/images/level-up.png' alt="" />
+                                                <h3>A Level Above</h3>
+                                                <p>Every single Virtual Employee in our global network embodies the highest levels of integrity, professionalism, and communication.</p>
+                                            </div>
+                                        </ScrollAnimation>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-5 col-12">
+                                <div className="profileBxBx">
+                                    {/* <Profile handleScrollClick={handleScrollClick} /> */}
+                                    {
+                                        profile?.data?.listing?.map((data, index)=>{
+                                            return(
+                                                <React.Fragment key={index}>
+                                                { index < 3 &&
+                                                    
+                                                        <div className="bannerProfile">
+                                                            <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
+                                                            <div className="bannerProfileDetails">
+                                                                <h3>{data.post_title}</h3>
+                                                                <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                                                <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                                                <p>Expertise</p>
+                                                                {/* <span className="Expertise">{data.post_content}</span> */}
+                                                                <ul className="listInline tags mb-2">
+                                                                    <li>DevOps</li>
+                                                                    <li>Git</li>
+                                                                    <li>Node.js</li>
+                                                                    <li>Java</li>
+                                                                </ul>
+                                                                <button className="colorBtn" onClick={handleScrollClick}>Hire Now</button>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </React.Fragment>
+                                            )
+                                        })
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <Steps />
                 <section className="hiringProcess">
                     <div className="container">
                         <div className="row align-items-center mb-3">
@@ -265,7 +393,7 @@ const Home = () => {
                                                 <p>{data?.data?.listing[0]?.post_content}</p>
                                                 <div className="d-flex justify-content-between">
                                                     <h6>7 min read</h6>
-                                                    <button className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></button>
+                                                    <button className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -299,7 +427,7 @@ const Home = () => {
                                                                         
                                                                         <div className="d-flex justify-content-between">
                                                                             <h6>7 min read</h6>
-                                                                            <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Continue Read <FontAwesomeIcon icon={faArrowRight}/></button>
+                                                                            <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
                                                                         </div>
                                                                     </div>
                                                                 </div>
