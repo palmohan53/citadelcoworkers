@@ -69,10 +69,10 @@ const Footer = () => {
             </footer>
             <div className="copyright">
                 <div className="container">
-                    <div className="row d-flex justify-content-between">
+                    <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-lg-6 col-md-12">
                         <div className="footer_copy_content">
-                        Copyright © 2024 Citadel Coworkers. All Rights Reserved.
+                        Copyright © 2009-2025. All Rights Reserved | All content on this website belongs to Citadel Coworkers LLP & Virtual Assistant 24x7 LLC USA and is copyright protected. All client agreements shall be through Citadel Coworkers LLP, India / Virtual Assistant 24x7 LLC, USA.'
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-12">

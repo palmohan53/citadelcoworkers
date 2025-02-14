@@ -51,7 +51,10 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                             
                             <ScrollAnimation animateIn="fadeIn">
                                 <div className="bannerProfile">
-                                    <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
+                                    <div className="profileImg">
+                                        <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
+                                        <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
+                                    </div>
                                     <div className="bannerProfileDetails">
                                         <h3>{data.post_title}</h3>
                                         <h6>{data.post_content}</h6>
@@ -63,7 +66,6 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                                             <li>Node.js</li>
                                             <li>Java</li>
                                         </ul>
-                                        <button className="colorBtn" onClick={handleScrollClick}>Hire Now</button>
                                     </div>
                                 </div>
                             </ScrollAnimation>
