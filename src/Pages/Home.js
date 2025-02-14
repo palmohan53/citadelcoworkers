@@ -8,7 +8,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 // import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faPlay, faCode, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faPlay, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
@@ -237,9 +237,9 @@ const Home = () => {
                                                             <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
                                                             <div className="bannerProfileDetails">
                                                                 <h3>{data.post_title}</h3>
-                                                                <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                                                <h6>{data.post_content}</h6>
                                                                 <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                                                <p>Expertise</p>
+                                                                <p>Skill Set</p>
                                                                 {/* <span className="Expertise">{data.post_content}</span> */}
                                                                 <ul className="listInline tags mb-2">
                                                                     <li>DevOps</li>

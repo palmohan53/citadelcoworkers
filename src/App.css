@@ -53,7 +53,7 @@ section{
     font-weight: 600;
 }
 .sectionHeading h3{
-    font-size: 32px;
+    font-size: 26px;
     color: #05164d;
     font-weight: 400;
     margin: 0 0 5px;
@@ -1242,7 +1242,7 @@ section.innerBanner .innerBannerContent {
   line-height: 30px;
   font-size: 21px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
 }
 .icon_box_all.style_three .icon_content .txt_content p {
   margin-bottom: 0px;
@@ -1486,8 +1486,11 @@ section.innerBanner .innerBannerContent {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-bottom: 15px;
 }
-
+.icon-content p {
+  margin: 0;
+}
 .wt-icon-box-wraper.left svg {
   color: #fff;
   height: 20px;
@@ -1961,14 +1964,105 @@ section.serviceBulkContent .para strong {
   margin: 0;
 }
 
+.SingleSliderContainer {
+  padding: 0 ;
+}
+section.industriesServed {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
 
+.bgImg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.industryBox {
+  padding: 0 30px 50px;
+  min-height: 550px;
+  display: flex !important;
+  align-items: end;
+  border-right: solid 1px #ffffff75;
+  background: linear-gradient(180deg, rgba(12, 20, 49, 0) 0%, #04091bd9 100%);
+  overflow: hidden;
+  transition: all .5s ease;
+}
+.industryBox:hover{
+  background: linear-gradient(180deg, rgba(12, 20, 49, 0) 0%, #04091b75 100%);
+  transition: all .5s ease;
+} 
+.SingleSliderContainer h2 {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  z-index: 9;
+  color: #fff;
+  font-family: Noto Sans;
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  opacity: .5;
+  font-weight: 700;
+}
+.industryBoxInr h3 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
 
+.industryBoxInr p {
+  color: #fff;
+  min-height: 50px;
+}
+.industryBox .industryBoxInr p, .industryBox .industryBoxInr a{
+  opacity: 0;
+  transition: all .5s ease;
+}
+.industryBox:hover .industryBoxInr p, .industryBox:hover .industryBoxInr a{
+  opacity: 1;
+  transition: all .5s ease;
+}
+.industryBox:hover .industryBoxInr {
+  top: 0;
+  transition: all .5s ease;
+}
 
+.industryBoxInr {
+  position: relative;
+  top: 100px;
+  transition: all .5s ease;
+}
+.SingleSliderContainer .slick-prev {
+  left: 0;
+  z-index: 9;
+}
 
+.SingleSliderContainer .slick-next {
+  right:0;
+}
+.SingleSliderContainer .slick-prev:before, .SingleSliderContainer .slick-next:before{
+  color: #fff;
+  opacity: 0;
+}
+.SingleSliderContainer:hover .slick-prev:before, .SingleSliderContainer:hover .slick-next:before{
+  opacity: 0.7;
+}
+.bottomTeam  h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
 
-
-
-
-
+.bottomTeam h4 {
+  font-size: 18px;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
 
