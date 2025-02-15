@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
     return(
@@ -72,16 +72,17 @@ const Footer = () => {
                     <div className="row d-flex justify-content-between align-items-center">
                     <div className="col-lg-6 col-md-12">
                         <div className="footer_copy_content">
-                        Copyright © 2009-2025. All Rights Reserved | All content on this website belongs to Citadel Coworkers LLP & Virtual Assistant 24x7 LLC USA and is copyright protected. All client agreements shall be through Citadel Coworkers LLP, India / Virtual Assistant 24x7 LLC, USA.'
+                        Copyright © 2009-2025. All Rights Reserved | All content on this website belongs to Citadel Coworkers LLP & Virtual Assistant 24x7 LLC USA and is copyright protected. All client agreements shall be through Citadel Coworkers LLP, India / Virtual Assistant 24x7 LLC, USA.
                         </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
                         <div className="footer_copy_content_right">
                             <div className="social_media_v_one">
                                 <ul className="listInline justify-content-end">
-                                    <li><a href="/"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                                    <li><a href="/"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                    <li><a href="/"><FontAwesomeIcon icon={faInstagram} /></a></li>
+                                    <li><a href="https://www.facebook.com/citadelcoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                                    <li><a href="https://twitter.com/citadelcoworker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                                    <li><a href="https://www.linkedin.com/company/96461265/admin/feed/posts/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                                    <li><a href="https://www.youtube.com/@CitadelCoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube} /></a></li>
                                 </ul>
                             </div>
                         </div>
