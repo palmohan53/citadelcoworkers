@@ -6,6 +6,7 @@ import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 // import Testimonial from "../Component/Testimonial";
 import Pagination from "../Component/Pagination";
 
@@ -68,6 +69,11 @@ const Blog = ({isRecentBlog}) => {
     }
     return(
         <React.Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Citadel's Blog: Insights on IT Outsourcing & Virtual Assistance</title>
+                    <meta name="description" content="Explore the Citadel Coworkers Blog for insights and regular updates on IT outsourcing, virtual assistance, remote work productivity, etc." />
+                </Helmet>
             {!isRecentBlog && <section className="innerBanner">
                 <img src="/images/blog-banner.jpg" alt=""/>
                 <div className="innerBannerContent">
@@ -117,6 +123,7 @@ const Blog = ({isRecentBlog}) => {
             </section>
             
             {/* {!isRecentBlog && <Testimonial />} */}
+            </HelmetProvider>
         </React.Fragment>
     )
 };

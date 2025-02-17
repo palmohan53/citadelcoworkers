@@ -32,7 +32,7 @@ const BlogDetails = () => {
             <HelmetProvider>
             <Helmet>
                 <title>{data?.post?.post_title}</title>
-                <meta name="description" content="Nested component" />
+                <meta name="description" content={data?.post?.post_title} />
             </Helmet>
         <section className="innerBanner text-center">
             <img src={data.banner} alt=""/>

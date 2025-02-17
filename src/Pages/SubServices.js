@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import Testimonial from "../Component/Testimonial";
 import { useParams } from 'react-router-dom';
@@ -107,136 +108,142 @@ const SubServices = () => {
 
     return(
         <React.Fragment>
-        <section className="innerBanner">
-            <img src="/images/service-banner.jpg" alt=""/>
-            <div className="innerBannerContent">
-                <h1>{serviceContent[0]?.banner[0]?.title}</h1>
-                <p>{serviceContent[0]?.banner[0]?.body}</p>
-                <div className="text-center mt-3">
-                    <Link to="/contact-us" className="colorBtn wideBtn">Hire {serviceContent[0]?.categoryName} Now</Link>
-                </div>
-            </div>
-            <div className="bannerOvelay"></div>
-        </section>
-        
-        <section className="explore" id="servicesSec">
-            <div className="container">
-                <div className="row align-items-center mb-3">
-                    <div className="col-md-12 col-12 text-center">
-                        <div className="sectionHeading">
-                            <h2>{serviceContent[0]?.serviceHeading[0]?.title}</h2>
-                            <h4>{serviceContent[0]?.serviceHeading[0]?.body}</h4>
-                        </div>
+            <HelmetProvider>
+                <Helmet>
+                    <title>{serviceContent[0]?.pageMetaTitle}</title>
+                    <meta name="description" content={serviceContent[0]?.pageMetaContent} />
+                </Helmet>
+            <section className="innerBanner">
+                <img src="/images/service-banner.jpg" alt=""/>
+                <div className="innerBannerContent">
+                    <h1>{serviceContent[0]?.banner[0]?.title}</h1>
+                    <p>{serviceContent[0]?.banner[0]?.body}</p>
+                    <div className="text-center mt-3">
+                        <Link to="/contact-us" className="colorBtn wideBtn">Hire {serviceContent[0]?.categoryName} Now</Link>
                     </div>
                 </div>
-                <div className="row mt-5 borderBox">
-                    {
-                        servicedata?.data?.listing?.map((data, index)=>{
-                            return(
-                                <React.Fragment key={index}>
-                                    <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
-                                        <div className="colorBx">
-                                            <React.Fragment>
-                                                <img src={data.banner} alt="" className="serviceIco" />
-                                                <h3>{data.post_title}</h3>
-                                                <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
-                                                {/* <div className="text-start">
-                                                    <Link to={`/services/${subService}/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
-                                                </div> */}
-                                            </React.Fragment>
-                                        </div>
-                                    </div>
-                                </React.Fragment>
-                            )
-                        })
-                    }
-                </div>
-            </div>
-        </section>
-        <section className="explore" id="servicesSec">
-            <div className="container">
-                <div className="row align-items-center mb-3">
-                    <div className="col-md-12 col-12 text-center">
-                        <div className="sectionHeading">
-                            <h2>{serviceContent[0]?.clientsNumberHeading[0]?.title}</h2>
-                        </div>
-                    </div>
-                    <div className="col-md-12">
-                        <div className="clientNum">
-                            
-                            {serviceContent[0]?.clientsNumber.map((data, index)=>{
-                                return(
-                                    <div className="clientBx" key={index}>
-                                        {/* <img src={data.imageUrl} alt={data.title} /> */}
-                                        <p>{data.body}</p>
-                                        <h3>{data.title}</h3>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section className="profile">
-            <div className="container">
-                <div className="row align-items-center mb-3">
-                    <div className="col-md-12 col-12">
-                        <div className="sectionHeading text-center">
-                            <h2>Our Expert Team</h2>
-                            <p>Meet our diverse team of skilled professionals dedicated to delivering excellence across a spectrum of services,<br/>ensuring tailored solutions for your business needs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="row mt-5">
-                    <div className="col-12">
-                        <ServiceProfile serviceProfile={serviceProfile} handleScrollClick={handleScrollClick}/>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section className="serviceBulkContent">
-            <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
-        </section>
-        
-        <Testimonial serviceTestimonial={serviceTestimonial} />
-        <Steps />
-        <Pricing handleScrollClick={handleScrollClick}/>
-        <section className="serviceBulkContent">
-            <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
-        </section>
-        <Faq faqData={faqData}/>
-        <div ref={contactref}>
-            <ContactForm />
-        </div>
-        <RecentBlog />
-        <section className={`bottomServices bg_light_1 ${serviceContent[0]?.bottomServices.length === 0 ? 'd-none': ''}`}>
-            <div className="container">
-                <div className="sectionHeading text-center mb-5">
-                    <h2>{serviceContent[0]?.bottomServicesHeading[0]?.title}</h2>
-                    <p>{serviceContent[0]?.bottomServicesHeading[0]?.body}</p>
-                </div>
-                <div className="bottomServicesWrp mt-3">
-                    {serviceContent[0]?.bottomServices?.map((data, index)=>{
-                        return(
-                            <div className="bottomServiceContent" key={index}>
-                                {/* <img src={data.imageUrl} alt={data.title} /> */}
-                                <h3>{data.title}</h3>
-                                <p>{data.body}</p>
+                <div className="bannerOvelay"></div>
+            </section>
+            
+            <section className="explore" id="servicesSec">
+                <div className="container">
+                    <div className="row align-items-center mb-3">
+                        <div className="col-md-12 col-12 text-center">
+                            <div className="sectionHeading">
+                                <h2>{serviceContent[0]?.serviceHeading[0]?.title}</h2>
+                                <h4>{serviceContent[0]?.serviceHeading[0]?.body}</h4>
                             </div>
-                        )
-                    })}
+                        </div>
+                    </div>
+                    <div className="row mt-5 borderBox">
+                        {
+                            servicedata?.data?.listing?.map((data, index)=>{
+                                return(
+                                    <React.Fragment key={index}>
+                                        <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
+                                            <div className="colorBx">
+                                                <React.Fragment>
+                                                    <img src={data.banner} alt="" className="serviceIco" />
+                                                    <h3>{data.post_title}</h3>
+                                                    <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
+                                                    {/* <div className="text-start">
+                                                        <Link to={`/services/${subService}/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                                                    </div> */}
+                                                </React.Fragment>
+                                            </div>
+                                        </div>
+                                    </React.Fragment>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section className="bottomCon pt-0">
-            <div className="container">
-                <div className="sectionHeading text-center">
-                    <h2 className="mb-4"><b>1600+ Clients in 18 Countries</b> Have Accelerated Their Business Growth With Citadel Co-Workers. You Could Be Next!"</h2>
-                    <Link to='/contact-us' className="colorBtn wideBtn">Send Your Requirement</Link>
+            </section>
+            <section className="explore" id="servicesSec">
+                <div className="container">
+                    <div className="row align-items-center mb-3">
+                        <div className="col-md-12 col-12 text-center">
+                            <div className="sectionHeading">
+                                <h2>{serviceContent[0]?.clientsNumberHeading[0]?.title}</h2>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="clientNum">
+                                
+                                {serviceContent[0]?.clientsNumber.map((data, index)=>{
+                                    return(
+                                        <div className="clientBx" key={index}>
+                                            {/* <img src={data.imageUrl} alt={data.title} /> */}
+                                            <p>{data.body}</p>
+                                            <h3>{data.title}</h3>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+            <section className="profile">
+                <div className="container">
+                    <div className="row align-items-center mb-3">
+                        <div className="col-md-12 col-12">
+                            <div className="sectionHeading text-center">
+                                <h2>Our Expert Team</h2>
+                                <p>Meet our diverse team of skilled professionals dedicated to delivering excellence across a spectrum of services,<br/>ensuring tailored solutions for your business needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row mt-5">
+                        <div className="col-12">
+                            <ServiceProfile serviceProfile={serviceProfile} handleScrollClick={handleScrollClick}/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="serviceBulkContent">
+                <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
+            </section>
+            
+            <Testimonial serviceTestimonial={serviceTestimonial} />
+            <Steps />
+            <Pricing handleScrollClick={handleScrollClick}/>
+            <section className="serviceBulkContent">
+                <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
+            </section>
+            <Faq faqData={faqData}/>
+            <div ref={contactref}>
+                <ContactForm />
             </div>
-        </section>
+            <RecentBlog />
+            <section className={`bottomServices bg_light_1 ${serviceContent[0]?.bottomServices.length === 0 ? 'd-none': ''}`}>
+                <div className="container">
+                    <div className="sectionHeading text-center mb-5">
+                        <h2>{serviceContent[0]?.bottomServicesHeading[0]?.title}</h2>
+                        <p>{serviceContent[0]?.bottomServicesHeading[0]?.body}</p>
+                    </div>
+                    <div className="bottomServicesWrp mt-3">
+                        {serviceContent[0]?.bottomServices?.map((data, index)=>{
+                            return(
+                                <div className="bottomServiceContent" key={index}>
+                                    {/* <img src={data.imageUrl} alt={data.title} /> */}
+                                    <h3>{data.title}</h3>
+                                    <p>{data.body}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+            </section>
+            <section className="bottomCon pt-0">
+                <div className="container">
+                    <div className="sectionHeading text-center">
+                        <h2 className="mb-4"><b>1600+ Clients in 18 Countries</b> Have Accelerated Their Business Growth With Citadel Co-Workers. You Could Be Next!"</h2>
+                        <Link to='/contact-us' className="colorBtn wideBtn">Send Your Requirement</Link>
+                    </div>
+                </div>
+            </section>
+        </HelmetProvider>
     </React.Fragment>
     )
 };
