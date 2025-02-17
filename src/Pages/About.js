@@ -3,7 +3,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faUsers, faWandMagicSparkles, faMoneyBillTrendUp, faHeadset, faTruckFast} from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faWandMagicSparkles, faMoneyBillTrendUp, faHeadset} from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 const About = () => {
     let settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -64,7 +64,7 @@ const About = () => {
                                     <p className="para">From <b>startups to enterprises</b>, we help organizations scale seamlessly with our <b>pre-vetted experts in IT, marketing, finance, design, legal support, and more.</b></p>
 
                                     <div className="row about-one-icon-box mb-4">
-                                        <div className="col-xl-6 col-md-12 col-sm-6 m-t30">
+                                        <div className="col-md-6 col-12">
                                             <div className="wt-icon-box-wraper left">
                                                 <div className="icon-md inline-icon m-b20">
                                                     <span className="icon-cell site-text-primary"><FontAwesomeIcon icon={faUsers} /></span>
@@ -76,7 +76,7 @@ const About = () => {
                                             </div>                                         
                                         </div>  
                                                                             
-                                        <div className="col-xl-6 col-md-12 col-sm-6 m-t30">
+                                        <div className="col-md-6 col-12">
                                             <div className="wt-icon-box-wraper left">
                                                 <div className="icon-md inline-icon m-b20">
                                                     <span className="icon-cell site-text-primary"><FontAwesomeIcon icon={faWandMagicSparkles} /></span>
@@ -87,7 +87,7 @@ const About = () => {
                                                 </div>
                                             </div> 
                                         </div>
-                                        <div className="col-xl-6 col-md-12 col-sm-6 m-t30">
+                                        <div className="col-md-6 col-12">
                                             <div className="wt-icon-box-wraper left">
                                                 <div className="icon-md inline-icon m-b20">
                                                     <span className="icon-cell site-text-primary"><FontAwesomeIcon icon={faMoneyBillTrendUp} /></span>
@@ -98,7 +98,7 @@ const About = () => {
                                                 </div>
                                             </div> 
                                         </div>
-                                        <div className="col-xl-6 col-md-12 col-sm-6 m-t30">
+                                        {/* <div className="col-md-6 col-12">
                                             <div className="wt-icon-box-wraper left">
                                                 <div className="icon-md inline-icon m-b20">
                                                     <span className="icon-cell site-text-primary"><FontAwesomeIcon icon={faTruckFast} /></span>
@@ -108,8 +108,8 @@ const About = () => {
                                                     <p>Get access to talent within 24 hours.</p>
                                                 </div>
                                             </div> 
-                                        </div>
-                                        <div className="col-xl-6 col-md-12 col-sm-6 m-t30">
+                                        </div> */}
+                                        <div className="col-md-6 col-12">
                                             <div className="wt-icon-box-wraper left">
                                                 <div className="icon-md inline-icon m-b20">
                                                     <span className="icon-cell site-text-primary"><FontAwesomeIcon icon={faHeadset} /></span>
@@ -152,13 +152,6 @@ const About = () => {
                     </div>
                 </section>
                 <section className="industriesServed">
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                
-                            </div>
-                        </div>
-                    </div>
                     <div className="SingleSliderContainer">
                         <div className="sectionHeading">
                             <h2>Industries We Serve</h2>
@@ -430,10 +423,12 @@ const About = () => {
                             </div>
                         </div>
                         <div className="text-center mt-5 bottomTeam">
-                            <h3>Join Hands with Citadel Coworkers</h3>
+                            <div className="sectionHeading">
+                                <h2>Join Hands with Citadel Coworkers</h2>
+                            </div>
                             <p>We believe in building long-term partnerships with businesses by providing the right people, at the right time, for the right roles.<br/>Whether you're looking for a single expert or a full team, Citadel Coworkers has you covered.</p>
                             <h4>🚀 Let's Build Your Dream Team </h4>
-                            <Link to='/contact-us' className="colorBtn">Contact Us Today!</Link>
+                            <Link to='/contact-us' className="colorBtn wideBtn">Contact Us Today!</Link>
                         </div>
                     </div>
                 </section>

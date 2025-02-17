@@ -476,6 +476,179 @@
                     "body": "Hire digital marketing employees into your workflow seamlessly with our advanced collaboration tools. They seamlessly adapt to your business processes, working as an extension of your team to achieve shared goals."
                 }
             ]
+        },
+        {
+            "categoryUrl": "legal-process-outsourcing",
+            "categoryName": "A Legal Processes",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Outsource Legal Processes to India",
+                        "body": "Maximize Efficiency in Your Legal Workflow – Starting at USD 8/Hour."
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Comprehensive Legal Process Outsourcing Services Outsourcing Services",
+                        "body": "Improve your bottom line with professional legal outsourcing aimed at enhancing productivity and reducing operational expenses"
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title": "Streamline Your Legal Services & Achieve Greater Efficiency for Exceptional Client Outcomes & Support"                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Legal Process Specialists",
+                        "body": "25+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Global Law Firms Served",
+                        "body": "50+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Legal Services Offered",
+                        "body": "25+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years’ Avg. Experience",
+                        "body": "5+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Do your experts offer assistance to automate document management processes?",
+                        "body": "Yes, our legal experts leverage modern Document Management Systems (DMS) that automate the arrangement, storage, and retrieval of legal documents. Using advanced indexing methods and Optical Character Recognition (OCR) technology, they simplify document workflows to enable faster access and better collaboration between legal teams."
+                    },
+                    {
+                        "title": "02. Can your legal team assist with compliance audits and regulatory requirements?",
+                        "body": "Absolutely. Our legal specialists leverage regulatory technology (RegTech) tools to perform compliance audits. These tools help in monitoring regulatory changes and ensure your processes conform to the existing legal standards. Our expert legal team performs comprehensive audits, recognizes compliance gaps, and delivers practical insights to defend your firm against potential risks."
+                    },
+                    {
+                        "title": "03. Are your legal professionals capable of handling multilingual legal documents?",
+                        "body": "Yes, our legal experts are adept at multilingual legal documentation. Through legal linguists and translation software, they ensure precision and compliance with jurisdictional requirements. This dual methodology ensures that your legal documents aren’t just correctly translated but also align with the respective regions’ legal standards."
+                    },
+                    {
+                        "title": "04.  Do your legal specialists offer assistance for legal research and case preparation?",
+                        "body": "Definitely. Our legal professionals provide extensive legal research services utilizing modern legal research platforms. They effectively collect and examine suitable case law, regulations, and statutes to aid your case preparation. This comprehensive method makes sure that your legal strategies are backed by solid evidence and precedent."
+                    },
+                    {
+                        "title": "05.  Can your legal experts offer e-discovery support in complex litigation cases?",
+                        "body": "Yes, our legal experts are well-equipped to handle e-discovery tasks for complex litigation. They leverage advanced e-discovery software that streamlines the recognition, collection, and assessment of Electronically Stored Information (ESI). This technology allows our legal team to effectively manage large data volumes to ensure adherence to legal standards and diminishing risks throughout the discovery phase."
+                    },
+                    {
+                        "title": "06.  Do your professionals deliver solutions for risk assessment in legal projects?",
+                        "body": "Certainly. Our legal professionals perform extensive risk assessments for legal projects by employing risk management and data analytics frameworks. They recognize possible legal risks, analyze their impact, and build mitigation strategies to make sure that your legal projects are seamlessly executed without any major legal challenges."
+                    }
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+            ]
+        },
+        {
+            "categoryUrl": "development",
+            "categoryName": "Developer",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Outsource Development Services to India",
+                        "body": "Crafting your needs with user-centric web solutions – Starts at $9/Hr"
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Seamless Business Support with Expert Development",
+                        "body": "Elevate your business efficiency with our Development and IT Solutions. Focus on scaling your business while we maximize your productivity with expert support"
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title": "Our Impact By The Numbers - Demonstrating Offshore Software Development Excellence"                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years of Experience",
+                        "body": "22+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Expert Developers",
+                        "body": "60+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industry Awards",
+                        "body": "12+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Global Partners",
+                        "body": "10+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Types of programmers available for hire?",
+                        "body": "We offer a diverse pool of experts, including web developers, software engineers, mobile app developers, and backend specialists. Our programmers are well-versed in cutting-edge technologies such as React, Node.js, Python, and more. Whether you need to hire a full stack developer in India or hire dedicated Indian developers, we have the right talent for your project."
+                    },
+                    {
+                        "title": "02.Common remote hiring mistakes to avoid?",
+                        "body": "Avoid skipping due diligence and unclear communication when hiring remotely. We help you navigate these pitfalls by thoroughly vetting candidates and facilitating clear, consistent communication. This approach ensures you hire remote developers in India successfully and achieve seamless collaboration."
+                    },
+                    {
+                        "title": "03.  Ensuring cultural fit with remote developers?",
+                        "body": "We prioritize matching you with developers whose skills and work style align with your team’s culture. By understanding your company’s values and work environment, we ensure a harmonious integration that enhances productivity and teamwork. Whether you hire Indian software developers or hire dedicated developers in India, cultural fit is our top priority."
+                    },
+                    {
+                        "title": "04. Managing remote collaboration effectively?",
+                        "body": "Utilize our proven strategies and tools for seamless remote teamwork and communication. We provide platforms for real-time collaboration, project management, and regular check-ins to keep your team aligned and projects on track. This is essential when you hire remote programmers or outsource development projects."
+                    },
+                    {
+                        "title": "05. Programmer availability in my time zone?",
+                        "body": "Our global talent pool allows for flexible scheduling to align with your work hours. Whether you need developers in your time zone or around-the-clock coverage, we ensure you have the support you need when you need it. This flexibility is crucial when you hire programmers in India for continuous project development."
+                    }
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Key Moments to Engage Offshore Expertise from CCW:",
+                    "body": "This is dummy paragraph Creating State-of-the-Art Mobile Solutions Creating State-of-the-Art Mobile Solutions"
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "When in-house resources are stretched thin.",
+                    "body": ""
+                },
+                {
+                    "title": "As you gear up for digital transformation.",
+                    "body": ""
+                },
+                {
+                    "title": "To navigate through complex project requirements.",
+                    "body": ""
+                },
+                {
+                    "title": "For strategic scaling of your development capabilities.",
+                    "body": ""
+                },
+                {
+                    "title": "In pursuit of cost-effective development without quality compromise.",
+                    "body": ""
+                }
+            ]
         }
         
     ]

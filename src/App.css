@@ -34,6 +34,9 @@ img{max-width: 100%}
 input, button { outline: none; box-shadow: none;  }
 .owl-carousel .owl-item img{width: auto;}
 .mobile{display: none !important;}
+.d-none {
+  display: none !important;
+}
 .text-end{
     text-align: right;
 }
@@ -1506,21 +1509,22 @@ section.innerBanner .innerBannerContent {
 }
 .wt-icon-box-wraper.left {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 15px;
   margin-bottom: 15px;
+
 }
 .icon-content p {
   margin: 0;
 }
 .wt-icon-box-wraper.left svg {
   color: #fff;
-  height: 20px;
+  height: 30px;
 }
 
 span.icon-cell.site-text-primary {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   background: #05164d;
   display: flex;
   align-items: center;

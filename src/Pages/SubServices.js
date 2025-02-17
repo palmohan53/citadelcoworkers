@@ -210,9 +210,9 @@ const SubServices = () => {
             <ContactForm />
         </div>
         <RecentBlog />
-        <section className="bottomServices bg_light_1">
+        <section className={`bottomServices bg_light_1 ${serviceContent[0]?.bottomServices.length === 0 ? 'd-none': ''}`}>
             <div className="container">
-                <div className="sectionHeading text-center mb-3">
+                <div className="sectionHeading text-center mb-5">
                     <h2>{serviceContent[0]?.bottomServicesHeading[0]?.title}</h2>
                     <p>{serviceContent[0]?.bottomServicesHeading[0]?.body}</p>
                 </div>
