@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useRef} from "react";
 import { Link } from 'react-router-dom';
+import CountUp from 'react-countup';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
@@ -124,7 +125,34 @@ const SubServices = () => {
                 </div>
                 <div className="bannerOvelay"></div>
             </section>
-            
+            <section className="explore" id="servicesSec">
+                <div className="container">
+                    <div className="row align-items-center mb-3">
+                        <div className="col-md-12 col-12 text-center">
+                            <div className="sectionHeading">
+                                <h2>{serviceContent[0]?.clientsNumberHeading[0]?.title}</h2>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="clientNum">
+                                
+                                {serviceContent[0]?.clientsNumber.map((data, index)=>{
+                                    const countNum = data.body;
+                                    return(
+                                        <div className="clientBx" key={index}>
+                                            {/* <img src={data.imageUrl} alt={data.title} /> */}
+                                            {/* <p>{data.body}</p> */}
+                                            <p><CountUp end={data.body} duration={30} />+</p>
+                                            {/* {console.log(countNum, 'countNum')} */}
+                                            <h3>{data.title}</h3>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="explore" id="servicesSec">
                 <div className="container">
                     <div className="row align-items-center mb-3">
@@ -159,31 +187,7 @@ const SubServices = () => {
                     </div>
                 </div>
             </section>
-            <section className="explore" id="servicesSec">
-                <div className="container">
-                    <div className="row align-items-center mb-3">
-                        <div className="col-md-12 col-12 text-center">
-                            <div className="sectionHeading">
-                                <h2>{serviceContent[0]?.clientsNumberHeading[0]?.title}</h2>
-                            </div>
-                        </div>
-                        <div className="col-md-12">
-                            <div className="clientNum">
-                                
-                                {serviceContent[0]?.clientsNumber.map((data, index)=>{
-                                    return(
-                                        <div className="clientBx" key={index}>
-                                            {/* <img src={data.imageUrl} alt={data.title} /> */}
-                                            <p>{data.body}</p>
-                                            <h3>{data.title}</h3>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
             <section className="profile">
                 <div className="container">
                     <div className="row align-items-center mb-3">
