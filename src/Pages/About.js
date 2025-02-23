@@ -124,7 +124,7 @@ const About = () => {
                                     </div>
                                     <div className="d-flex gap-3">
                                         {/* <Link to='/services' className="lineBtn">View More</Link> */}
-                                        <Link to='/contact-us' className="colorBtn">Contact Us</Link>
+                                        <Link to='/contact-us' className="colorBtn wideBtn">Contact Us</Link>
                                     </div>
                                 </div>
                             </div>
