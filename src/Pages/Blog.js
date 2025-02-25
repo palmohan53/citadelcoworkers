@@ -75,7 +75,7 @@ const Blog = ({isRecentBlog}) => {
                     <meta name="description" content="Explore the Citadel Coworkers Blog for insights and regular updates on IT outsourcing, virtual assistance, remote work productivity, etc." />
                 </Helmet>
             {!isRecentBlog && <section className="innerBanner">
-                <img src="/images/blog-banner.jpg" alt=""/>
+                {/* <img src="/images/blog-banner.jpg" alt=""/> */}
                 <div className="innerBannerContent">
                     <h1>Blog</h1>
                     {/* <p>The Toptal Design Blog is a hub for advanced design studies by professional designers in the Toptal network on all facets of digital design, ranging from detailed design tutorials to in-depth coverage of new design trends, techniques, and technologies.</p> */}

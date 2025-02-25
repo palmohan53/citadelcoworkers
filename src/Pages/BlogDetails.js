@@ -34,20 +34,30 @@ const BlogDetails = () => {
                 <title>{data?.post?.post_title}</title>
                 <meta name="description" content={data?.post?.post_title} />
             </Helmet>
-        <section className="innerBanner text-center">
-            <img src={data.banner} alt=""/>
-            <div className="innerBannerContent">
-                <h1>{data?.post?.post_title}</h1>
-                <div className="blogAuth">
-                    {
-                        data.post.auther_name === "Pinka Sharma"
-                        ?
-                        <img src="/images/pinka.png" alt=""/>
-                        :
-                        <img src="/images/suresh.png" alt=""/>
-                    }
-                    <h5>{data.post.auther_name}</h5>
-                    <h5>{data.post.post_modified}</h5>
+        <section className="innerBanner d-flex align-items-center pt-5">
+            
+            <div className="container pt-4">
+                <div className="row">
+                    <div className="col-md-7">
+                        <div className="">
+                            <h1>{data?.post?.post_title}</h1>
+                            <div className="blogAuth">
+                                {
+                                    data.post.auther_name === "Pinka Sharma"
+                                    ?
+                                    <img src="/images/pinka.png" alt=""/>
+                                    :
+                                    <img src="/images/suresh.png" alt=""/>
+                                }
+                                <h5>{data.post.auther_name}</h5>
+                                <h5>{data.post.post_modified}</h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className="col-md-5 col-12">
+                        <img src={data.banner} alt=""/>
+                    </div>
                 </div>
             </div>
             <div className="bannerOvelay"></div>

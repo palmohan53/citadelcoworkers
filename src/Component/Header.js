@@ -35,7 +35,7 @@ const Header = () => {
                 <div className="container">
                     <NavLink className="navbar-brand p-0" to="/">
                         <img src="/images/logo-new-black.png" alt="" className="colorLogo" />
-                        <img src="/images/logo-new-white.png" alt="" className="logoWhite" />
+                        <img src="/images/logo-new-black.png" alt="" className="logoWhite" />
                     </NavLink>
                     <button className="navbar-toggler" onClick={openToggle}>
                         <img src="images/toggle.png" alt="" />

@@ -26,7 +26,7 @@ const Services = () => {
     return(
         <React.Fragment>
         <section className="innerBanner">
-            <img src="/images/service-banner.jpg" alt=""/>
+            {/* <img src="/images/service-banner.jpg" alt=""/> */}
             <div className="innerBannerContent">
                 <h1>Services</h1>
             </div>

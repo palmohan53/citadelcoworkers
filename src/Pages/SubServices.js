@@ -115,7 +115,7 @@ const SubServices = () => {
                     <meta name="description" content={serviceContent[0]?.pageMetaContent} />
                 </Helmet>
             <section className="innerBanner">
-                <img src="/images/service-banner.jpg" alt=""/>
+                {/* <img src="/images/service-banner.jpg" alt=""/> */}
                 <div className="innerBannerContent">
                     <h1>{serviceContent[0]?.banner[0]?.title}</h1>
                     <p>{serviceContent[0]?.banner[0]?.body}</p>

@@ -1,9 +1,18 @@
 import React, {useEffect} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faWandMagicSparkles, faHourglass, faHeadset, faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ContactForm = () => {
+    let settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    };
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
@@ -15,16 +24,20 @@ const ContactForm = () => {
                         <div className="col-md-7 col-12">
                             <div className="contactForm">
                                 <h2>Get In Touch</h2>
-                                <p>Our team will get back to you within 8 business hours or less.</p>
+                                <p>Fill out the form below, and a Citadel representative will<br/>contact you as soon as possible.</p>
+                                <div className="sticyImgForm">
+                                    <img src="/images/cnbnr-02.svg" alt="" />
+                                    <img src="/images/nda.svg" alt="" />
+                                </div>
                                 <ul className="listInline">
                                     <li>
-                                        <a href="/"><FontAwesomeIcon icon={faPhone} /> Book a Call</a>
+                                        <a href="tel:+1 (646) -583-0053"><FontAwesomeIcon icon={faPhone} /> Book a Call</a>
                                     </li>
                                     <li>
-                                        <a href="/"><FontAwesomeIcon icon={faEnvelope} /> Email Us</a>
+                                        <a href="mailto:sales@citadelcoworkers.com"><FontAwesomeIcon icon={faEnvelope} /> Email Us</a>
                                     </li>
                                     <li>
-                                        <a href="/"><FontAwesomeIcon icon={faWhatsapp} /> Whatsapp</a>
+                                        <a href="https://wa.me/9891548011" style={{'color':'#5dcd84', 'borderColor': '#5dcd84'}}><FontAwesomeIcon icon={faWhatsapp} /> Whatsapp</a>
                                     </li>
                                 </ul>
                                 <div className="formInr">
@@ -77,7 +90,7 @@ const ContactForm = () => {
                                                 <textarea name="" className="form-control" rows={5} placeholder="Share your requirement"></textarea>
                                             </div>
                                         </div>
-                                        <div className="d-flex mt-3">
+                                        <div className="d-flex mt-3 justify-content-center">
                                             <button className="colorBtn wideBtn">Submit</button>
                                         </div>
                                     </div>
@@ -86,44 +99,17 @@ const ContactForm = () => {
                         </div>
                         <div className="col-md-5 col-12 ps-5">
                             <div className="contentContent">
-                                <h3>Why Choose Us</h3>
-                                <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faHeadset} /></div>
-                                    <div className="detName">
-                                        <h4>Personalized Virtual Assistance</h4>
-                                        <p>Discover tailored support from experienced virtual assistants. Enhance productivity and focus on your business growth.</p>
-                                    </div>
+                                <div className="sectionHeading text-center mb-4">
+                                    <h2>Trusted by Clients Worldwide</h2>
                                 </div>
-                                <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faWandMagicSparkles} /></div>
-                                    <div className="detName">
-                                        <h4>Flexible Service Options</h4>
-                                        <p>With our adaptable service plans, including month-to-month contracts, you get the help you need without long-term commitments.</p>
+                                <Carousel infiniteLoop preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} showStatus={false}>
+                                    <div className="videoTestimonial">
+                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/S8la1u6U1gc?si=vByJ9duuaLOLWP5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     </div>
-                                </div>
-                                <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faUsersViewfinder} /></div>
-                                    <div className="detName">
-                                        <h4>Diverse Skill Set</h4>
-                                        <p>Whether it's administrative tasks, customer support, or digital marketing, our assistants have the expertise you seek.</p>
+                                    <div className="videoTestimonial">
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3GHmGSKA9I?si=i27sgTjBRKM_63wG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     </div>
-                                </div>
-                                <div className="detWrp">
-                                    <div className="detIco"><FontAwesomeIcon icon={faHourglass} /></div>
-                                    <div className="detName">
-                                        <h4>Reliable Support Across Time Zones</h4>
-                                        <p>Our Indian virtual assistants are available round the clock, ensuring that your business receives uninterrupted assistance.</p>
-                                    </div>
-                                </div>
-                                {/* <div className="clients">
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                    <img src="images/cont-cl01.svg" alt="" />
-                                </div> */}
+                                </Carousel>
                             </div>
                         </div>
                     </div>

@@ -96,7 +96,7 @@ nav#mainNav {
 }
 nav#mainNav .nav-item > a {
     font-size: 15px;
-    color: #fff;
+    color: #000;
     font-weight: 600;
     padding: 15px 0px;
     position: relative;
@@ -169,7 +169,7 @@ nav#mainNav .nav-item {
   gap: 5px;
 }
 .dropDown > svg {
-  color: #fff;
+  color: #000;
 }
 .scrolled .dropDown > svg {
   color: #000;
@@ -381,17 +381,18 @@ section.banner {
   position: relative;
 }
 
-.videoBg video, .videoOverlay, .bannerOvelay, .videoBg img {
+.videoBg video, .videoOverlay, .videoBg img {
   position: absolute;
   object-fit: cover;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(354deg, #000000c2 50%, rgba(0, 0, 0, .09) 100%);
-    opacity: .9;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(354deg, #000000e3 50%, rgb(0 0 0 / 29%) 100%);
+  opacity: 0.5;
+  /* background: linear-gradient(0deg, rgba(1,15,56,1) 0%, rgba(0,32,124,0.9682247899159664) 52%, rgba(2,47,173,0.9346113445378151) 100%); */
 }
 
 .videoOverlay {
@@ -665,6 +666,7 @@ section.testimonial {
 }
 .testimonial .contentBx p{
   font-weight: 400;
+  min-height: 170px;
 }
 .testimonial .contentBx h6 {
   font-weight: 300;
@@ -770,8 +772,8 @@ section.getInTouch {
 }
 
 .contactForm ul a {
-  color: #1749d5;
-  border: solid 1px #1749d5;
+  color: #7a7a7a;
+  border: solid 1px #7a7a7a;
   padding: 4px 10px;
   border-radius: 9px;
   font-size: 13px;
@@ -807,6 +809,18 @@ section.getInTouch {
   border-radius: 10px;
   padding: 50px;
   box-shadow: 0 0 20px #00000047;
+  position: relative;
+}
+.sticyImgForm {
+  position: absolute;
+  right: 40px;
+  top: 45px;
+  display: flex;
+  gap: 10px;
+}
+
+.sticyImgForm img {
+  width: 70px;
 }
 .contentContent h3 {
   color: #000;
@@ -819,19 +833,20 @@ section.getInTouch {
   align-items: center;
   gap: 20px;
   margin-bottom: 15px;
+  border-bottom: dotted 2px #ccc;
 }
 
 .detIco {
   min-width: 60px;
-  height: 60px;
-  background: #000;
+  /* height: 60px; */
+  /* background: #05164d; */
   align-items: center;
   justify-content: center;
   display: flex;
   font-size: 30px;
   border-radius: 50%;
-  color: #fff;
-  opacity: 0.8;
+  color: #05164d;
+  opacity: 1;
 }
 
 .detName {
@@ -845,6 +860,17 @@ section.getInTouch {
 
 .detName p {
   font-size: 13px;
+}
+.contactPageContent{
+  box-shadow: 0 0 20px #00000047;
+  border-radius: 10px;
+  padding: 30px;
+}
+.contentContent button.control-arrow {
+  width: 30px;
+  height: 40px;
+  background: #000 !important;
+  top: calc(50% - 40px) !important;
 }
 .clients {
   display: flex;
@@ -1154,6 +1180,8 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
 section.innerBanner {
   position: relative;
   padding: 0;
+  background: #d2d6e2;
+  height: 400px;
 }
 
 section.innerBanner > img {
@@ -1174,7 +1202,7 @@ section.innerBanner .innerBannerContent {
   padding-top: 80px;
 }
 .innerBannerContent{
-  color: #fff;
+  color: #000;
 }
 .innerBannerContent p{
   font-weight: 300;
@@ -1904,14 +1932,13 @@ span.text {
 }
 
 .contectContent {
-  padding: 20px;
-  background: #fff;
-  margin-bottom: 20px;
+  padding: 15px;
+  /* background: #fff; */
 }
 
 .contectContent h3 {
-  font-size: 28px;
-  margin: 0 0 20px;
+  font-size: 20px;
+  margin: 0 0 5px;
   font-weight: 700;
   color: #05164d;
 }
@@ -1922,19 +1949,13 @@ span.text {
 
 .contectContent .d-flex p {
   margin: 0 0 5px;
-  font-size: 16px;
+  font-size: 15px;
   color: #0b0b0b;
-  font-weight: bold;
 }
 
 .contectContent .d-flex svg {
-  width: 40px;
-  height: 40px;
-  background: #05164d;
-  border-radius: 50%;
-  padding: 20px;
-  color: #fff;
-  box-shadow: 0 0 20px #0000004a;
+  color: #05164d;
+  height: 34px;
 }
 
 .contectContent .d-flex p a {
