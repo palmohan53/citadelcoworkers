@@ -137,7 +137,7 @@ const SubServices = () => {
                             <div className="clientNum">
                                 
                                 {serviceContent[0]?.clientsNumber.map((data, index)=>{
-                                    const countNum = data.body;
+                                    // const countNum = data.body;
                                     return(
                                         <div className="clientBx" key={index}>
                                             {/* <img src={data.imageUrl} alt={data.title} /> */}
