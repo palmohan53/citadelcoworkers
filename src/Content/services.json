@@ -663,6 +663,114 @@
                     "body": ""
                 }
             ]
+        },
+        {
+            "categoryUrl": "outsource-staff-augmentation-services",
+            "categoryName": "Skilled Experts",
+            "pageMetaTitle": "Hire Skilled Professionals in India Starting at $8/H",
+            "pageMetaContent": "Unlock Flexible, Cost-Effective Talent Solutions to Scale Your Business",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Skilled Professionals in India Starting at $8/H",
+                        "body": "Unlock Flexible, Cost-Effective Talent Solutions to Scale Your Business"
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "360° Staff Augmentation Services",
+                        "body": "From IT to Content Writing – Scale Faster with On-Demand Expertise"
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title": "Elevate Your Workforce with Tailored Staff Augmentation Solutions"                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Skilled Professionals",
+                        "body": "500"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Projects Delivered Globally",
+                        "body": "5000"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Served",
+                        "body": "30"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years’ Industry Experience",
+                        "body": "12"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How does staff augmentation differ from outsourcing?",
+                        "body": "While both involve external resources, outsourcing allows your business to delegate a complete project or a process to an external team. On the other hand, staff augmentation helps integrate skilled professionals into your current team to empower you to maintain control over your processes."
+                    },
+                    {
+                        "title": "02.Can staff augmentation adapt to short-term project needs?",
+                        "body": "Yes, staff augmentation is highly flexible. Your business can scale resources up or down according to the scope and duration of your project, which makes it the perfect solution for seasonal or short-term requirements."
+                    },
+                    {
+                        "title": "03. Is staff augmentation ideal for small companies or startups?",
+                        "body": "Absolutely. Staff augmentation assists small businesses and startups gain access to specialized expertise without the higher costs and long-term commitment linked to hiring full-time employees. This empowers your business to scale operations and meet skill gaps effectively."
+                    },
+                    {
+                        "title": "04. How is intellectual property managed in staff augmentation arrangements?",
+                        "body": "Reputable staff augmentation providers include clear terms in contracts to protect intellectual property. All deliverables, ideas, and work produced by the augmented staff remain your property."
+                    },
+                    {
+                        "title": "05. Are staff augmentation services industry-specific?",
+                        "body": "Staff augmentation is versatile and applies across various industries. Providers often have a pool of resources with domain-specific expertise, ensuring they understand industry nuances and regulations."
+                    }
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Why Outsource Staff Augmentation Services",
+                    "body": "Hire dedicated Indian developers who are not just coders, but innovators and problem-solvers"
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Cost-Effective Solutions",
+                    "body": "Unravel an economic alternative to building in-house teams in different domains. Ensure unmatched quality of service while reducing overhead costs with strategic outsourcing."
+                },
+                {
+                    "title": "Access to Global Talent",
+                    "body": "Gain access to a large pool of seasoned professionals with industry experience and domain-specific expertise."
+                },
+                {
+                    "title": "Focus on Core Competencies",
+                    "body": "Outsource time-consuming, repetitive tasks to experienced professionals while prioritizing strategic initiatives."
+                },
+                {
+                    "title": "Advanced Tools &amp; Technologies",
+                    "body": "Stay ahead with professionals who utilize the latest tools and technologies for better outcomes."
+                },
+                {
+                    "title": "Scalability &amp; Flexibility",
+                    "body": "Scale your team up or down as per project needs, enabling agility and cost efficiency."
+                },
+                {
+                    "title": "24/7 Support",
+                    "body": "Leverage time zone advantages for continuous project progress and round-the-clock support."
+                },
+                {
+                    "title": "Compliance &amp; Security",
+                    "body": "Ensure data protection and regulatory compliance with trusted, secure processes."
+                },
+                {
+                    "title": "Industry-Specific Expertise",
+                    "body": "Our seasoned professionals deliver custom solutions, ranging from IT to finance and legal to marketing, designed to meet your industry’s demands."
+                }
+            ]
         }
         
     ]
