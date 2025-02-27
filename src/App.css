@@ -868,9 +868,13 @@ section.getInTouch {
 }
 .contentContent button.control-arrow {
   width: 30px;
-  height: 40px;
+  height: 30px;
   background: #000 !important;
   top: calc(50% - 40px) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 .clients {
   display: flex;
