@@ -1849,18 +1849,19 @@ span.icon-cell.site-text-primary {
 }
 section.serviceBulkContent img {
   display: inline-block;
-  width: 35%;
+  width: 450px;
+  min-width: 450px;
   height: auto;
   border: solid 2px #ccc;
   padding: 5px;
   max-height: min-content;
 }
 
-section.serviceBulkContent .para {
+/* section.serviceBulkContent .para {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
+} */
 section.serviceBulkContent ul{
   min-width: 100%;
 }
@@ -2113,3 +2114,13 @@ section.industriesServed {
   font-weight: 600;
 }
 
+.videoTestimonial iframe, .videoTestimonial video {
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 0 20px #00000047;
+  border-radius: 10px;
+}
+
+.videoTestimonial {
+  padding: 20px 0;
+}

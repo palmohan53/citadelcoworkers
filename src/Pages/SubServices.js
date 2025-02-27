@@ -142,7 +142,7 @@ const SubServices = () => {
                                         <div className="clientBx" key={index}>
                                             {/* <img src={data.imageUrl} alt={data.title} /> */}
                                             {/* <p>{data.body}</p> */}
-                                            <p><CountUp end={data.body} duration={30} />+</p>
+                                            <p><CountUp end={data.body} duration={10} />+</p>
                                             {/* {console.log(countNum, 'countNum')} */}
                                             <h3>{data.title}</h3>
                                         </div>
