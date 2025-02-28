@@ -1,6 +1,7 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return(
@@ -11,9 +12,9 @@ const Footer = () => {
                         <div className="col-md-4 col-12 pe-5">
                             <div className="footerLinks mb-4">
                                 <div className="logo mb-2">
-                                    <a href="/">
+                                    <Link to="/">
                                         <img src="/images/logo-new-white.png" alt=""/>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="content_in_r mt-4">
                                     <p> Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers. Partner for competitive success.</p>
@@ -26,10 +27,10 @@ const Footer = () => {
                             <div className="footerLinks mb-4">
                                 <h3>Why Citadel Coworkers</h3>
                                 <ul className="unorderList">
-                                    <li><a href="/">Citadel Advantage</a></li>
-                                    <li><a href="/">How Does Citadel Works</a></li>
-                                    <li><a href="/">Your Offshore Office in India</a></li>
-                                    <li><a href="/">Data Security at Citadel</a></li>
+                                    <li><Link to="/">Citadel Advantage</Link></li>
+                                    <li><Link to="/">How Does Citadel Works</Link></li>
+                                    <li><Link to="/">Your Offshore Office in India</Link></li>
+                                    <li><Link to="/">Data Security at Citadel</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -37,10 +38,10 @@ const Footer = () => {
                             <div className="footerLinks mb-4">
                                 <h3>Policy</h3>
                                 <ul className="unorderList">
-                                    <li><a href="/">Refund Policy</a></li>
-                                    <li><a href="/">Privacy Policy</a></li>
-                                    <li><a href="/">Cookie Policy</a></li>
-                                    <li><a href="/">User Agreement</a></li>
+                                    <li><Link to="/refund-policy">Refund Policy</Link></li>
+                                    <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                                    <li><Link to="/cookie-policy">Cookie Policy</Link></li>
+                                    <li><Link to="/">User Agreement</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,11 +56,11 @@ const Footer = () => {
                             <h6> Contact</h6>
                             <div className="con_content">
                                 <h5> Phone :</h5>
-                                <a href="tel:+1 (646) -583-0053"> +1 (646) -583-0053</a>
+                                <Link to="tel:+1 (646) -583-0053"> +1 (646) -583-0053</Link>
                             </div>
                             <div className="con_content">
                                 <h5> Mail Us :</h5>
-                                <a href="tel:sales@citadelcoworkers.com"> sales@citadelcoworkers.com</a>
+                                <Link to="tel:sales@citadelcoworkers.com"> sales@citadelcoworkers.com</Link>
                             </div>
                             </div>
                             </div>
@@ -79,10 +80,10 @@ const Footer = () => {
                         <div className="footer_copy_content_right">
                             <div className="social_media_v_one">
                                 <ul className="listInline justify-content-end">
-                                    <li><a href="https://www.facebook.com/citadelcoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                                    <li><a href="https://twitter.com/citadelcoworker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                    <li><a href="https://www.linkedin.com/company/96461265/admin/feed/posts/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
-                                    <li><a href="https://www.youtube.com/@CitadelCoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube} /></a></li>
+                                    <li><Link to="https://www.facebook.com/citadelcoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebookF} /></Link></li>
+                                    <li><Link to="https://twitter.com/citadelcoworker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></Link></li>
+                                    <li><Link to="https://www.linkedin.com/company/96461265/admin/feed/posts/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></Link></li>
+                                    <li><Link to="https://www.youtube.com/@CitadelCoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube} /></Link></li>
                                 </ul>
                             </div>
                         </div>

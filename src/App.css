@@ -391,7 +391,7 @@ section.banner {
   bottom: 0;
   right: 0;
   background: linear-gradient(354deg, #000000e3 50%, rgb(0 0 0 / 29%) 100%);
-  opacity: 0.7;
+  opacity: 0.5;
   /* background: linear-gradient(0deg, rgba(1,15,56,1) 0%, rgba(0,32,124,0.9682247899159664) 52%, rgba(2,47,173,0.9346113445378151) 100%); */
 }
 
@@ -1206,7 +1206,7 @@ section.innerBanner .innerBannerContent {
   padding-top: 80px;
 }
 .innerBannerContent{
-  color: #000;
+  color: #05164d;
 }
 .innerBannerContent p{
   font-weight: 300;
@@ -2128,3 +2128,60 @@ section.industriesServed {
 .videoTestimonial {
   padding: 20px 0;
 }
+.contentRichContent h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #05164d;
+}
+
+.contentRichContent ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.eael-data-table {
+  width: 100%;
+  height: auto;
+  margin: 0 0 30px;
+  border-collapse: separate;
+  border: none;
+}
+.eael-data-table thead tr {
+  text-align: left;
+}
+.eael-data-table thead tr th {
+  color: #fff;
+  background-color: #4a4893;
+}
+.eael-data-table tbody>tr:nth-child(odd) td {
+  color: #000;
+}
+.eael-data-table thead tr th {
+  padding: 20px 15px;
+  background: #4a4893;
+  font-size: 16px;
+  font-weight: 600;
+  /* font-family: Montserrat, "sans-serif"; */
+  line-height: 1;
+  color: #fff;
+  border-color: #000;
+  border-width: 2px;
+  border-style: none;
+  background-clip: padding-box;
+}
+.eael-data-table tbody tr td {
+  padding: 20px 15px;
+  font-size: 14px;
+  font-family: Montserrat, "sans-serif";
+  line-height: 1;
+  border-width: 2px;
+  border-style: none;
+  background-clip: padding-box;
+}
+.eael-data-table tbody>tr:nth-child(2n) td {
+  color: #000;
+  background: #f2f2f2;
+}
+
+
+

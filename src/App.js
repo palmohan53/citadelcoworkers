@@ -13,6 +13,9 @@ import './Framework.css';
 import './App.css';
 import './Media.css';
 import SubServices from './Pages/SubServices';
+import RefundPolicy from './Pages/RefundPolicy';
+import PrivacyPolicy from './Pages/PrivacyPolicy';
+import CookiePolicy from './Pages/CookiePolicy';
 
 
 
@@ -32,6 +35,9 @@ function App() {
           <Route path="/blog/" element={<Blog />} />
           <Route path="/blog/:blog" element={<BlogDetails />} />
           <Route path="/contact-us" element={<Contact />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
         </Routes>
         <Footer />
     </div>

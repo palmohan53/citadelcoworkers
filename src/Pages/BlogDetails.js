@@ -37,7 +37,7 @@ const BlogDetails = () => {
         <section className="innerBanner d-flex align-items-center pt-5">
             
             <div className="container pt-4">
-                <div className="row">
+                <div className="row align-items-center">
                     <div className="col-md-7">
                         <div className="">
                             <h1>{data?.post?.post_title}</h1>
