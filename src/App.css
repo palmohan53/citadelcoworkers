@@ -2192,4 +2192,6 @@ section.industriesServed {
   padding: 5px;
   box-shadow: 0 0 20px #00000012;
 }
-
+section.innerBanner.blogDetailsSec {
+  height: 500px;
+}
