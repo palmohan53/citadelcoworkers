@@ -438,7 +438,7 @@ section.banner p {
 .serviceIco {
   width: 90px;
   height: 90px;
-  object-fit: cover;
+  /* object-fit: cover; */
   padding: 10px;
   background: #ffffff;
   border-radius: 10px;
