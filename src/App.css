@@ -2182,6 +2182,14 @@ section.industriesServed {
   color: #000;
   background: #f2f2f2;
 }
-
-
+.blogDetailsSec h1 {
+  font-size: 30px;
+  color: #05164d;
+  text-align: center;
+}
+.blogDetailsBanner {
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 0 20px #00000012;
+}
 

@@ -34,7 +34,7 @@ const BlogDetails = () => {
                 <title>{data?.post?.post_title}</title>
                 <meta name="description" content={data?.post?.post_title} />
             </Helmet>
-        <section className="innerBanner d-flex align-items-center pt-5">
+        <section className="innerBanner d-flex align-items-center pt-5 blogDetailsSec">
             
             <div className="container pt-4">
                 <div className="row align-items-center">
@@ -56,7 +56,9 @@ const BlogDetails = () => {
                         
                     </div>
                     <div className="col-md-5 col-12">
-                        <img src={data.banner} alt=""/>
+                        <div className="blogDetailsBanner">
+                            <img src={data.banner} alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
