@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faXTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return(
@@ -41,7 +41,7 @@ const Footer = () => {
                                     <li><Link to="/refund-policy">Refund Policy</Link></li>
                                     <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                                     <li><Link to="/cookie-policy">Cookie Policy</Link></li>
-                                    <li><Link to="/">User Agreement</Link></li>
+                                    <li><Link to="/citadel-coworkers-user-agreement">User Agreement</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                             <div className="social_media_v_one">
                                 <ul className="listInline justify-content-end">
                                     <li><Link to="https://www.facebook.com/citadelcoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebookF} /></Link></li>
-                                    <li><Link to="https://twitter.com/citadelcoworker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></Link></li>
+                                    <li><Link to="https://twitter.com/citadelcoworker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter} /></Link></li>
                                     <li><Link to="https://www.linkedin.com/company/96461265/admin/feed/posts/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></Link></li>
                                     <li><Link to="https://www.youtube.com/@CitadelCoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube} /></Link></li>
                                 </ul>

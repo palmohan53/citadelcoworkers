@@ -67,7 +67,7 @@ const Home = () => {
                             <div className="col-md-12 col-12 text-center">
                                 <h1>Hire India’s Top 3% Virtual Employees</h1>
                                 <h4>Transform your business with elite virtual experts — Finance, Software, Design, and beyond.</h4>
-                                <h5>Starting from Just <span className="greenText">$777/month</span>.</h5>
+                                <h5>Starting from Just $777/month.</h5>
                                 <Link to="/contact-us" className="colorBtn wideBtn">Start Your Free Trial Today</Link>
                                 {/* <p className="mt-3 mb-0">"No upfront cost. Pay only when you hire!"</p> */}
                             </div>

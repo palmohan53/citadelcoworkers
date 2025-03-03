@@ -134,7 +134,7 @@ const Contact = () => {
                         </div>*/}
                     </div>
                     <div className="row mt-5">
-                        <div className="col-lg-6 col-12">
+                        <div className="col-lg-7 col-12">
                                 <div className="contectContent">
                                     <h3>India</h3>
                                     <div className="d-flex gap-3">
@@ -145,7 +145,7 @@ const Contact = () => {
                                     </div>
                                 </div>
                             </div> 
-                            <div className="col-lg-6 col-12">
+                            <div className="col-lg-5 col-12">
                                 <div className="contectContent">
                                     <h3>USA</h3>
                                     <div className="d-flex gap-3">

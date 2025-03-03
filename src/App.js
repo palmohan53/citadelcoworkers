@@ -16,6 +16,7 @@ import SubServices from './Pages/SubServices';
 import RefundPolicy from './Pages/RefundPolicy';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
 import CookiePolicy from './Pages/CookiePolicy';
+import UserAgreement from './Pages/UserAgreement';
 
 
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/citadel-coworkers-user-agreement" element={<UserAgreement />} />
         </Routes>
         <Footer />
     </div>
