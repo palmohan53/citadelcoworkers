@@ -436,8 +436,8 @@ section.banner p {
   font-style: italic;
 }
 .serviceIco {
-  width: 90px;
-  height: 90px;
+  width: 64px;
+  height: 64px;
   /* object-fit: cover; */
   /* padding: 10px;
   background: #ffffff;
@@ -445,9 +445,9 @@ section.banner p {
   border: solid 1px transparent; */
 }
 .sideBorder .colorBx .post_name {
-  height: 64px;
+  height: 90px;
   /* filter: grayscale(1); */
-  width: 64px;
+  width: 90px;
   background: #42bd6d;
   padding: 20px;
   border-radius: 10px;
