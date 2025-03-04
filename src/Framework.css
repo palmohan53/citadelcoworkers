@@ -23,8 +23,20 @@ body {
 .justify-content-end{
     justify-content: end;
 }
+.w-100 {
+    width: 100%;
+}
 .p-0 {
     padding: 0 !important;
+}
+.p-4 {
+    padding: 1.5rem !important;
+}
+.p-5 {
+    padding: 2rem !important;
+}
+.pt-0 {
+    padding-top: 0;
 }
 .pt-4 {
     padding-top: 1.5rem !important;

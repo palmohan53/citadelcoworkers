@@ -29,7 +29,7 @@ const Footer = () => {
                                 <ul className="unorderList">
                                     <li><Link to="/">Citadel Advantage</Link></li>
                                     <li><Link to="/">How Does Citadel Works</Link></li>
-                                    <li><Link to="/">Your Offshore Office in India</Link></li>
+                                    <li><Link to="/offshore">Your Offshore Office in India</Link></li>
                                     <li><Link to="/">Data Security at Citadel</Link></li>
                                 </ul>
                             </div>

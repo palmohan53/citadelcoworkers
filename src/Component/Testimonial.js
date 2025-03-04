@@ -42,7 +42,7 @@ const Testimonial = ({serviceTestimonial}) => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-5">
+                <div className="mt-3">
                     <Slider {...settings}>
                         {serviceTestimonial?.data?.listing?.map((data, index)=>{
                             return(

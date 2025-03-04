@@ -2031,6 +2031,9 @@ section.serviceBulkContent .para h2 {
 section.serviceBulkContent .para {
   line-height: 1.8;
 }
+.serviceBulkContent .sectionHeading h2 {
+  margin-bottom: 30px;
+}
 .bulkContent {
   display: flex;
   gap: 30px;
@@ -2247,3 +2250,24 @@ section.innerBanner.blogDetailsSec {
   padding-top: 110px;
   padding-bottom: 60px;
 }
+.fontMed p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.newSecBottom .service_box.style_three .service_content svg {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #1749d5;
+}
+.minHeightBanner {
+  height: 550px;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
