@@ -439,10 +439,10 @@ section.banner p {
   width: 90px;
   height: 90px;
   /* object-fit: cover; */
-  padding: 10px;
+  /* padding: 10px;
   background: #ffffff;
   border-radius: 10px;
-  border: solid 1px transparent;
+  border: solid 1px transparent; */
 }
 .sideBorder .colorBx .post_name {
   height: 90px;
@@ -453,9 +453,9 @@ section.banner p {
   border-radius: 10px;
   border: solid 1px transparent;
 }
-.sideBorder:hover img {
+/* .sideBorder:hover img {
   border: solid 1px #ffffff3d;
-}
+} */
 .colorBx h3 {
   margin: 15px 0;
   font-size: 22px;
