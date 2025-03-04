@@ -470,7 +470,7 @@ section.banner p {
 .sideBorder {
   border-bottom: solid 1px #ccc;
   border-right: solid 1px #ccc;
-  padding: 30px;
+  padding: 40px;
   background: #cccccc38;
 }
 .sideBorder:nth-child(3n){
