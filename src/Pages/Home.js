@@ -232,6 +232,7 @@ const Home = () => {
                                     {/* <Profile handleScrollClick={handleScrollClick} /> */}
                                     {
                                         profile?.data?.listing?.map((data, index)=>{
+                                            let skillSet = data.Expertise.split(',');
                                             return(
                                                 <React.Fragment key={index}>
                                                 { index < 3 &&
@@ -248,10 +249,13 @@ const Home = () => {
                                                                 <p>Skill Set</p>
                                                                 {/* <span className="Expertise">{data.post_content}</span> */}
                                                                 <ul className="listInline tags mb-2">
-                                                                    <li>DevOps</li>
-                                                                    <li>Git</li>
-                                                                    <li>Node.js</li>
-                                                                    <li>Java</li>
+                                                                    {
+                                                                        skillSet.map((skill, index) => {
+                                                                            return(
+                                                                                <li key={index}>{skill}</li>
+                                                                            )
+                                                                        })
+                                                                    }
                                                                 </ul>
                                                             </div>
                                                         </div>

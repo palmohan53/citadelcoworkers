@@ -46,6 +46,7 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
         <Slider {...settings}>
             {
                 serviceProfile?.data?.listing?.map((data, index)=>{
+                    let skillSet = data.Expertise.split(',');
                     return(
                         <React.Fragment key={index}>
                             
@@ -60,11 +61,15 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                                         <h6>{data.post_content}</h6>
                                         <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                         <p>Skill Set</p>
+                                        {/* <span className="Expertise">{data.post_content}</span> */}
                                         <ul className="listInline tags mb-2">
-                                            <li>DevOps</li>
-                                            <li>Git</li>
-                                            <li>Node.js</li>
-                                            <li>Java</li>
+                                            {
+                                                skillSet.map((skill, index) => {
+                                                    return(
+                                                        <li key={index}>{skill}</li>
+                                                    )
+                                                })
+                                            }
                                         </ul>
                                     </div>
                                 </div>
