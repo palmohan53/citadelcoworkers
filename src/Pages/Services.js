@@ -42,7 +42,10 @@ const Services = () => {
                                     <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
                                         <div className="colorBx">
                                             <React.Fragment>
-                                                <img src={data.banner} alt="" className="serviceIco" />
+                                                <div className="servicesIcon">
+                                                    <img src={data.banner} alt="" className="serviceIco" />
+                                                    <img src={data.hover_image} alt="" className="serviceIco serviceHoverIco" />
+                                                </div>
                                                 <h3>{data.post_title}</h3>
                                                 <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
                                                 <div className="text-start">

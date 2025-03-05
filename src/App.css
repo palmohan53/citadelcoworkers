@@ -453,6 +453,17 @@ section.banner p {
   border-radius: 10px;
   border: solid 1px transparent;
 }
+.serviceHoverIco {
+  display: none;
+}
+
+.sideBorder:hover .servicesIcon .serviceIco {
+  display: none;
+}
+
+.sideBorder:hover .servicesIcon .serviceHoverIco {
+  display: block;
+}
 /* .sideBorder:hover img {
   border: solid 1px #ffffff3d;
 } */
