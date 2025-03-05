@@ -469,7 +469,8 @@ section.banner p {
 } */
 .colorBx h3 {
   margin: 15px 0;
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .colorBx p {
