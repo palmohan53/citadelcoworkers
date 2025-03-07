@@ -30,7 +30,7 @@ const Faq = ({faqData}) => {
                     })}
                     </Accordion>
                     <div className='text-center mt-5'>
-                        <Link to="/" className="colorBtn wideBtn">View All</Link>
+                        <Link to="/faq" className="colorBtn wideBtn">View All</Link>
                     </div>
                 </div>
             </div>
