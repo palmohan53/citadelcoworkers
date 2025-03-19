@@ -5,6 +5,12 @@ body {
     margin: 0;
     line-height: 1.5;
 }
+.ms-0{
+    margin-left: 0px !important;
+}
+.text-start{
+    text-align: left !important;
+}
 .align-items-center {
     align-items: center !important;
 }
@@ -46,6 +52,9 @@ body {
 }
 .pb-5 {
     padding-bottom: 3rem !important;
+}
+.ps-4 {
+    padding-left: 1.5rem !important;
 }
 .pe-5 {
     padding-right: 3rem !important;

@@ -19,6 +19,9 @@ import CookiePolicy from './Pages/CookiePolicy';
 import UserAgreement from './Pages/UserAgreement';
 import Offshore from './Pages/Offshore';
 import FaqPage from './Pages/FaqPage';
+import AboutCitadelAdvantage from './Pages/AboutCitadelAdvantage';
+import DataSecurity from './Pages/DataSecurity';
+import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
 
 
 
@@ -44,6 +47,9 @@ function App() {
           <Route path="/citadel-coworkers-user-agreement" element={<UserAgreement />} />
           <Route path="/offshore" element={<Offshore />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/about-citadel-advantage" element={<AboutCitadelAdvantage />} />
+          <Route path="/data-security" element={<DataSecurity />} />
+          <Route path="/how-does-citadel-works" element={<HowDoesCitadelWorks />} />
         </Routes>
         <Footer />
     </div>
