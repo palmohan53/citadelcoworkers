@@ -5,10 +5,10 @@ import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-
+import Slider from "react-slick";
 // import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faPlay, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faPlay, faCircleCheck, faCode } from '@fortawesome/free-solid-svg-icons';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
@@ -47,6 +47,16 @@ const Home = () => {
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
     };
+    let bannerSettings = {
+        dots: false,
+        arrows:false,
+        infinite: true,
+        fade: true,
+        autoplay: true,
+        speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     useEffect(() => {
         // getBlogList()
         window.scrollTo(0, 0)
@@ -61,7 +71,7 @@ const Home = () => {
                     <title>Hire Virtual Employees in India Starting US $5 - Citadel Coworkers</title>
                     <meta name="description" content="Citadel Coworkers is the #1 company helping businesses globally by providing innovative solutions tailored to your business across the world." />
                 </Helmet>
-                <section className="banner">
+                {/* <section className="banner">
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-md-12 col-12 text-center">
@@ -69,20 +79,82 @@ const Home = () => {
                                 <h4>Transform your business with elite virtual experts — Finance, Software, Design, and beyond.</h4>
                                 <h5>Starting from Just $777/month.</h5>
                                 <Link to="/contact-us" className="colorBtn wideBtn">Start Your Free Trial Today</Link>
-                                {/* <p className="mt-3 mb-0">"No upfront cost. Pay only when you hire!"</p> */}
                             </div>
                             
                         </div>
                     </div>
                     <div className="videoBg">
-                        {/* <video loop muted autoPlay playsInline>
-                            <source src="images/banner-video.mp4" type="video/mp4"/>
-                            Your browser does not support the video tag.
-                        </video> */}
                         <img src="/images/home-banner-2.png" alt=""/>
                     </div>
                     <div className="videoOverlay"></div>
-                </section>
+                </section> */}
+            <section className="banner">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-md-5 col-12 pb-5">
+                            <h1>Hire India’s Top 3% Virtual Employees</h1>
+                            <h4>Transform your business with elite virtual experts — Finance, Software, Design, and beyond.</h4>
+                            <h5>Starting from Just $777/month.</h5>
+                            <Link to="/contact-us" className="colorBtn wideBtn">Start Your Free Trial Today</Link>
+                        </div>
+                        <div className="col-md-7 col-12">
+                            <div className="sliderWrp">
+                                <Slider {...bannerSettings}>
+                                    <div className="bannerProfile">
+                                        <img src="images/profile.png" srcSet="images/profile.png 350w, images/profile.png 400w, images/profile.png 400w" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                            <p>Expertise</p>
+                                            <ul className="listInline tags mt-3">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="images/profile2.png" srcSet="images/profile2.png 350w, images/profile2.png 400w, images/profile2.png 400w" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe 2</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                                <p>Expertise</p>
+                                                <ul className="listInline tags mt-3">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="images/profile3.png" srcSet="images/profile3.png 350w, images/profile3.png 400w, images/profile3.png 400w" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Jhon Doe 3</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                                <p>Expertise</p>
+                                                <ul className="listInline tags mt-3">
+                                                <li>DevOps</li>
+                                                <li>Git</li>
+                                                <li>Node.js</li>
+                                                <li>Java</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Slider>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="videoBg">
+                    <img src="/images/home-banner-2.png" alt=""/>
+                </div>
+                <div className="videoOverlay"></div> */}
+            </section>
                 <section className="service" id="servicesSec">
                     <div className="container">
                         <div className="row align-items-center mb-3">
