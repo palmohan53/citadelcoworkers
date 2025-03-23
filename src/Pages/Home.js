@@ -101,7 +101,7 @@ const Home = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img src="images/profile.png" srcSet="images/profile.png 350w, images/profile.png 400w, images/profile.png 400w" alt="" />
+                                        <img src="/images/Gagandeep_Singh_Pic.jpeg" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Jhon Doe</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
@@ -116,7 +116,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="images/profile2.png" srcSet="images/profile2.png 350w, images/profile2.png 400w, images/profile2.png 400w" alt="" />
+                                        <img src="/images/Garvdeep_Singh_Pic.jpg"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Jhon Doe 2</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
@@ -131,7 +131,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="images/profile3.png" srcSet="images/profile3.png 350w, images/profile3.png 400w, images/profile3.png 400w" alt="" />
+                                        <img src="/images/Harshita_Dagral_Pic.jpeg" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Jhon Doe 3</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
@@ -464,7 +464,7 @@ const Home = () => {
                                                         ?
                                                         <img src="/images/pinka.png" alt=""/>
                                                         :
-                                                        <img src="images/suresh.png" alt=""/>
+                                                        <img src="/images/suresh.png" alt=""/>
                                                     }
                                                 </div>
                                             </div>
@@ -497,7 +497,7 @@ const Home = () => {
                                                                             ?
                                                                             <img src="/images/pinka.png" alt=""/>
                                                                             :
-                                                                            <img src="images/suresh.png" alt=""/>
+                                                                            <img src="/images/suresh.png" alt=""/>
                                                                         }
                                                                         </div>
                                                                     </div>

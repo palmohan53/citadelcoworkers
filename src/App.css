@@ -288,7 +288,7 @@ header.mainHeader.scrolled .logoWhite {
   object-fit: contain;
   height: 420px;
   max-width: 400px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 .bannerProfile .profileImg img {
   max-width: 100%;
@@ -328,7 +328,7 @@ header.mainHeader.scrolled .logoWhite {
   border-top: 30px solid transparent;
   border-bottom: 30px solid transparent; 
   border-right:30px solid #fff; 
-  opacity: 0;
+  opacity: 1;
 }
 .bannerProfile h3 {
   font-size: 18px;
