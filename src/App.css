@@ -427,7 +427,7 @@ section.banner h5 {
   position: relative;
 }
 
-section.banner h5:after {
+/* section.banner h5:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -436,7 +436,7 @@ section.banner h5:after {
   height: 2px;
   background: #00cc83;
   transform: translateX(-50%);
-}
+} */
 section.banner h1{
   color: #000;
   font-weight: 600;
