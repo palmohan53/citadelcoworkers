@@ -101,7 +101,7 @@ const Home = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img src="/images/Gagandeep_Singh_Pic.jpeg" alt="" />
+                                        <img src="/images/Harshita_Dagral_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Jhon Doe</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
@@ -116,7 +116,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Garvdeep_Singh_Pic.jpg"  alt="" />
+                                        <img src="/images/Gagandeep_Singh_Pic.png"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Jhon Doe 2</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
@@ -131,7 +131,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Harshita_Dagral_Pic.jpeg" alt="" />
+                                        <img src="/images/Garvdeep_Singh_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Jhon Doe 3</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
