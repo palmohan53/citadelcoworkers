@@ -521,6 +521,9 @@ section.banner p {
   background: transparent;
   opacity: 1;
 }
+.banner .bannerProfile .tags{
+  justify-content: center;
+}
 .tags li {
   display: inline-flex;
   padding: 2px 10px;
@@ -550,6 +553,10 @@ section.profile .serviceProfile:hover {
   position: absolute;
   left: -130px;
   top: 50px;
+  width: 250px;
+}
+.bannerProfile.serviceProfile .profileImg img {
+  width: 100%;
 }
 .bannerProfile.serviceProfile h3 {
   font-size: 26px;

@@ -58,9 +58,9 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                                     </div>
                                     <div className="bannerProfileDetails">
                                         <h3>{data.post_title}</h3>
-                                        <h6 className="my-2">{data.post_content}</h6>
+                                        <h6 className="my-2">{data.Designation}</h6>
                                         <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p className="my-3">Since 2014, Matthew has been working professionally in the fields he loves, software and data—culminating in him co-founding the Rubota corporation in 2017. Before that, he spent the past decade at Cornell University conducting scientific research specifically in statistical and biological physics. All in all, Matthew is an engaging, intense communicator with a passion for knowledge and understanding.</p>
+                                        <p className="my-3">{data.post_content}</p>
                                         <p><b>Skill Set</b></p>
                                         {/* <span className="Expertise">{data.post_content}</span> */}
                                         <ul className="listInline tags mb-3">

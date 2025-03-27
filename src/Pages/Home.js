@@ -101,48 +101,94 @@ const Home = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img src="/images/Harshita_Dagral_Pic.png" alt="" />
+                                        <img src="/images/Gagandeep_Singh_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <h3>Aarav Mehta</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Full Stack Developer</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                            <p>Expertise</p>
+                                            <p>Skill Set</p>
                                             <ul className="listInline tags mt-3">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
+                                                <li>React</li>
                                                 <li>Node.js</li>
-                                                <li>Java</li>
+                                                <li>MongoDB</li>
+                                                <li>JavaScript</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Gagandeep_Singh_Pic.png"  alt="" />
+                                        <img src="/images/Harshita_Dagral_Pic.png"  alt="" />
                                         <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe 2</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <h3>Isha Verma</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Graphic Designer</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                                <p>Expertise</p>
+                                                <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
+                                                    <li>Adobe</li>
+                                                    <li>Photoshop</li>
+                                                    <li>Illustrator</li>
+                                                    <li>Figma</li>
+                                                    <li>Canva  </li>
+                                                </ul>
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
                                         <img src="/images/Garvdeep_Singh_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
-                                            <h3>Jhon Doe 3</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Product Manager</h6>
+                                            <h3>Rohit Nair</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Virtual Assistant</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                                <p>Expertise</p>
+                                                <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
-                                                <li>DevOps</li>
-                                                <li>Git</li>
-                                                <li>Node.js</li>
-                                                <li>Java</li>
-                                            </ul>
+                                                    <li>Google Workspace</li>
+                                                    <li>Asana</li>
+                                                    <li>Calendar Management</li>
+                                                    <li>Data Entry </li>
+                                                </ul>
+                                        </div>
+                                    </div>
+
+                                    <div className="bannerProfile">
+                                        <img src="/images/Josephine_Vincent_Pic.png"  alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Kavita Sharma</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Accountant</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>QuickBooks</li>
+                                                    <li>Xero</li>
+                                                    <li>GST Filing</li>
+                                                    <li>Bank Reconciliation</li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="/images/Rohit_Kumar_Pic.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Arjun Kapoor</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Legal Assistant</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>Contract Drafting</li>
+                                                    <li>Legal Research</li>
+                                                    <li>LPO  MS Word</li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="/images/Roma_Roy_Pic.png" alt="" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Neha Joshi</h3>
+                                            <h6><FontAwesomeIcon icon={faCode} /> Content Writer</h6>
+                                            <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>SEO Writing</li>
+                                                    <li>Blogs</li>
+                                                    <li>Copywriting</li>
+                                                    <li>Grammarly</li>
+                                                </ul>
                                         </div>
                                     </div>
                                 </Slider>
@@ -316,7 +362,7 @@ const Home = () => {
                                                             </div>
                                                             <div className="bannerProfileDetails">
                                                                 <h3>{data.post_title}</h3>
-                                                                <h6>{data.post_content}</h6>
+                                                                <h6>{data.Designation}</h6>
                                                                 <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                                                 <p>Skill Set</p>
                                                                 {/* <span className="Expertise">{data.post_content}</span> */}
