@@ -337,8 +337,8 @@ header.mainHeader.scrolled .logoWhite {
   text-transform: capitalize;
 }
 .bannerProfileDetails p {
-  font-weight: 600;
   margin: 5px 0;
+  color: #455065;
 }
 
 .profileImg {
@@ -370,7 +370,7 @@ section.profile .bannerProfileDetails {
   font-size: 12px;
 }
 .bannerProfileDetails button.colorBtn {
-  width: 100%;
+  /* width: 100%; */
   justify-content: center;
   margin-top: 0px;
 }
@@ -532,6 +532,29 @@ section.banner p {
 /* section.profile {
   background: linear-gradient(to bottom, #0b88cb, #00cc83, #05a26a);
 } */
+.bannerProfile.serviceProfile {
+  position: relative;
+  background: #F3F4F6;
+  border: none;
+  border-radius: 0px;
+  max-width: 825px;
+  padding: 50px 50px 50px 180px;
+  min-height: 370px;
+  box-shadow: none;
+}
+section.profile .serviceProfile:hover {
+  transform: scale(1) !important;
+  transition: all 500ms ease;
+}
+.bannerProfile.serviceProfile .profileImg {
+  position: absolute;
+  left: -130px;
+  top: 50px;
+}
+.bannerProfile.serviceProfile h3 {
+  font-size: 26px;
+  font-weight: 600;
+}
 section.profile .bannerProfile{
   transform: scale(1);
   transition: all 500ms ease;

@@ -12,9 +12,9 @@ import "slick-carousel/slick/slick-theme.css";
 const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
     let settings = {
         dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 1,
         slidesToScroll: 1,
         responsive: [
             {
@@ -51,18 +51,19 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                         <React.Fragment key={index}>
                             
                             <ScrollAnimation animateIn="fadeIn">
-                                <div className="bannerProfile">
+                                <div className="bannerProfile serviceProfile">
                                     <div className="profileImg">
                                         <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
                                         <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
                                     </div>
                                     <div className="bannerProfileDetails">
                                         <h3>{data.post_title}</h3>
-                                        <h6>{data.post_content}</h6>
+                                        <h6 className="my-2">{data.post_content}</h6>
                                         <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p>Skill Set</p>
+                                        <p className="my-3">Since 2014, Matthew has been working professionally in the fields he loves, software and data—culminating in him co-founding the Rubota corporation in 2017. Before that, he spent the past decade at Cornell University conducting scientific research specifically in statistical and biological physics. All in all, Matthew is an engaging, intense communicator with a passion for knowledge and understanding.</p>
+                                        <p><b>Skill Set</b></p>
                                         {/* <span className="Expertise">{data.post_content}</span> */}
-                                        <ul className="listInline tags mb-2">
+                                        <ul className="listInline tags mb-3">
                                             {
                                                 skillSet.map((skill, index) => {
                                                     return(
@@ -71,6 +72,7 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                                                 })
                                             }
                                         </ul>
+                                        <button className="colorBtn wideBtn" onClick={handleScrollClick}>Hire Me</button>
                                     </div>
                                 </div>
                             </ScrollAnimation>
