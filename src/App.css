@@ -544,6 +544,7 @@ section.banner p {
   padding: 50px 50px 50px 180px;
   min-height: 370px;
   box-shadow: none;
+  left: 110px;
 }
 section.profile .serviceProfile:hover {
   transform: scale(1) !important;
