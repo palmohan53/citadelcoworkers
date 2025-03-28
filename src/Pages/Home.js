@@ -71,30 +71,14 @@ const Home = () => {
                     <title>Hire Virtual Employees in India Starting US $5 - Citadel Coworkers</title>
                     <meta name="description" content="Citadel Coworkers is the #1 company helping businesses globally by providing innovative solutions tailored to your business across the world." />
                 </Helmet>
-                {/* <section className="banner">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-md-12 col-12 text-center">
-                                <h1>Hire India’s Top 3% Virtual Employees</h1>
-                                <h4>Transform your business with elite virtual experts — Finance, Software, Design, and beyond.</h4>
-                                <h5>Starting from Just $777/month.</h5>
-                                <Link to="/contact-us" className="colorBtn wideBtn">Start Your Free Trial Today</Link>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div className="videoBg">
-                        <img src="/images/home-banner-2.png" alt=""/>
-                    </div>
-                    <div className="videoOverlay"></div>
-                </section> */}
             <section className="banner">
                 <div className="container">
-                    <div className="row align-items-center">
+                    <div className="row align-items-end">
                         <div className="col-md-5 col-12 pb-5">
-                            <h1>Hire India’s Top 3% Virtual Employees</h1>
-                            <h4>Transform your business with elite virtual experts — Finance, Software, Design, and beyond.</h4>
-                            <h5>Starting from Just <span className="greenText">$777/month</span>.</h5>
+                            <h1>Hire Virtual Employees from India — Pre-Vetted & Ready</h1>
+                            <h4>Work with India’s top 3% of remote talent in finance, tech, design, and support.<br/>
+                            Handpicked experts. No hiring hassle.</h4>
+                            <h5>Starts from <span className="greenText">$777/month</span> — Start your free trial today.</h5>
                             <Link to="/contact-us" className="colorBtn wideBtn">Start Your Free Trial Today</Link>
                         </div>
                         <div className="col-md-7 col-12">
