@@ -385,7 +385,7 @@ section.profile .bannerProfileDetails {
 }
 
 section.banner {
-  padding: 150px 0 0;
+  padding: 130px 0 0;
   position: relative;
   background: #D1D6E2;
 }
@@ -412,15 +412,15 @@ section.banner {
   position: relative;
   z-index: 2;
 }
-section.banner h4{
-  margin: 10px 0px;
-  line-height: 1.6;
+section.banner h4 {
+  margin: 15px 0px 20px;
+  line-height: 1.5;
   color: #455065;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
 }
 section.banner h5 {
-  font-size: 20px;
+  font-size: 19px;
   margin-bottom: 40px;
   color: #455065;
   font-weight: 500;
@@ -440,6 +440,8 @@ section.banner h5 {
 section.banner h1{
   color: #000;
   font-weight: 600;
+  font-size: 34px;
+  line-height: 1.4;
 }
 section.banner p {
   color: #000;
