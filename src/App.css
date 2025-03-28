@@ -545,11 +545,12 @@ section.banner p {
   background: #F3F4F6;
   border: none;
   border-radius: 0px;
-  max-width: 825px;
+  width: 825px;
   padding: 50px 50px 50px 180px;
   min-height: 370px;
   box-shadow: none;
-  left: 110px;
+  left: 70px;
+  max-width: 1100px;
 }
 section.profile .serviceProfile:hover {
   transform: scale(1) !important;
