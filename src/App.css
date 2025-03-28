@@ -437,6 +437,9 @@ section.banner h5 {
   background: #00cc83;
   transform: translateX(-50%);
 } */
+.bannerContent{
+  padding-bottom: 70px;
+}
 section.banner h1{
   color: #000;
   font-weight: 600;
