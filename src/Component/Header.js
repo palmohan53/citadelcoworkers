@@ -33,13 +33,14 @@ const Header = () => {
         <header className={`mainHeader ${scrolltopdata}`}>
             <nav className="navbar navbar-expand-lg navbar-light" id="mainNav">
                 <div className="container">
-                    <NavLink className="navbar-brand p-0" to="/">
+                    <NavLink className="navbar-brand p-0 gap-3 d-flex" to="/">
+                        <button className="navbar-toggler" onClick={openToggle}>
+                            <img src="/images/toggle.png" alt="" />
+                        </button>
                         <img src="/images/logo-new-black.png" alt="" className="colorLogo" />
                         <img src="/images/logo-new-black.png" alt="" className="logoWhite" />
                     </NavLink>
-                    <button className="navbar-toggler" onClick={openToggle}>
-                        <img src="images/toggle.png" alt="" />
-                    </button>
+                    
                     <div className={activeClass ? "collapse navbar-collapse active" : "collapse navbar-collapse"} id="navbarSupportedContent">
                         <button className="hidden-xs mobile cross-toggler" onClick={openToggle}>
                             <img src="images/close.png" alt="" />
