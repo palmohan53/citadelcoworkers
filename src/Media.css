@@ -245,4 +245,11 @@
   .clientBx h3 {
       font-size: 16px;
   }
+  .sticyImgForm {
+      top: 10px;
+      right: 10px;
+  }
+  .sticyImgForm img {
+    width: 50px;
+  }
 }
