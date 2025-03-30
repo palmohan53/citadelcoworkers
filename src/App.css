@@ -564,6 +564,11 @@ section.profile .serviceProfile:hover {
 }
 .bannerProfile.serviceProfile .profileImg img {
   width: 100%;
+  object-fit: contain;
+  background: #fff;
+  padding: 5px;
+  height: auto;
+  border: solid 1px #cccccc52;
 }
 .bannerProfile.serviceProfile h3 {
   font-size: 26px;
