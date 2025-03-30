@@ -10,7 +10,14 @@ import API_ENDPOINTS from "../config/APIEndPoints";
 const Header = () => {
     const [activeClass, setActiveClass] = useState(false);
     const [scrolltopdata, setscrolltopdata] = useState('');
-    const openToggle = () => setActiveClass(!activeClass);
+    const [subMenuClass, setSubMenuClass] = useState(false);
+    const openToggle = () => {
+        setActiveClass(!activeClass);
+        setSubMenuClass(false);
+    }
+    const subMenuToggle = () => {
+        setSubMenuClass(!subMenuClass);
+    };
     const getServiceList = async () => {
         const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceListing}`)
         const data = await response.data?.listing?.reverse();
@@ -33,50 +40,48 @@ const Header = () => {
         <header className={`mainHeader ${scrolltopdata}`}>
             <nav className="navbar navbar-expand-lg navbar-light" id="mainNav">
                 <div className="container">
-                    <NavLink className="navbar-brand p-0 gap-3 d-flex" to="/">
+                    <div className="navbar-brand p-0 gap-3 d-flex">
                         <button className="navbar-toggler" onClick={openToggle}>
                             <img src="/images/toggle.png" alt="" />
                         </button>
-                        <img src="/images/logo-new-black.png" alt="" className="colorLogo" />
-                        <img src="/images/logo-new-black.png" alt="" className="logoWhite" />
-                    </NavLink>
+                        <NavLink to="/">
+                            <img src="/images/logo-new-black.png" alt="" className="colorLogo" />
+                            <img src="/images/logo-new-black.png" alt="" className="logoWhite" />
+                        </NavLink>
+                    </div>
                     
                     <div className={activeClass ? "collapse navbar-collapse active" : "collapse navbar-collapse"} id="navbarSupportedContent">
                         <button className="hidden-xs mobile cross-toggler" onClick={openToggle}>
-                            <img src="images/close.png" alt="" />
+                            <img src="/images/close.png" alt="" />
                         </button>
                         <ul className="navbar-nav m-auto">
                             <li className="mobile">
-                                <img src="/images/logo-new-white.png" alt="" />
+                                <img src="/images/logo-new-black.png" alt="" className="mobile-logo" />
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/">Home</NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/about-us">About Us</NavLink>
                             </li>
                             <li className="nav-item dropDown">
-                                <NavLink className="nav-link" to="/services">Services</NavLink>
-                                <FontAwesomeIcon icon={faAngleDown} />
-                                <ul>
+                                <NavLink className="nav-link" to="/services" onClick={openToggle}>Services</NavLink>
+                                <FontAwesomeIcon icon={faAngleDown}  className="mobile" onClick={subMenuToggle}/>
+                                <FontAwesomeIcon icon={faAngleDown}  className="desktop"/>
+                                <ul className={subMenuClass ? "active" : ""}>
                                     {
                                         serviceMenu && serviceMenu?.map((menu, index)=>{
                                             return(
-                                                <li key={index}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.post_title}</NavLink></li>
+                                                <li key={index} onClick={()=>openToggle()}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.post_title}</NavLink></li>
                                             )
                                         })
                                     }
-                                    {/* <li><NavLink className="nav-link" to="/services">Services 1</NavLink></li>
-                                    <li><NavLink className="nav-link" to="/services">Services 2</NavLink></li>
-                                    <li><NavLink className="nav-link" to="/services">Services 3</NavLink></li>
-                                    <li><NavLink className="nav-link" to="/services">Services 4</NavLink></li>
-                                    <li><NavLink className="nav-link" to="/services">Services 5</NavLink></li> */}
                                 </ul>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/blog">Blog</NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/contact-us">Contact Us</NavLink>
                             </li>
                         </ul>

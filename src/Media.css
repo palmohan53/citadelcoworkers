@@ -26,15 +26,32 @@
         padding: 10px 0;
         display: flex;
         justify-content: space-between;
-        color: #fff;
+        color: #000;
     }
     .dropDown{
       justify-content: space-between;
+      flex-wrap: wrap;
     }
-    
+    .dropDown ul {
+      position: static;
+      max-height: 250px;
+        overflow: auto;
+    }
+    .dropDown ul {
+      position: static;
+      width: 100%;
+      z-index: 1;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+      display: none;
+  }
+  .dropDown ul.active {
+    display: block;
+  }
    nav#mainNav .nav-item{
     padding: 0;
-    border-bottom: solid 1px #c3c3c329;
+    border-bottom: solid 1px #c3c3c370;
    }
    nav#mainNav{
     padding: 15px 0px;
@@ -52,7 +69,7 @@
         top: 0;
         width: 320px;
         left: -0px;
-        background: #253F89;
+        background: #fff;
         height: 100vh;
         padding: 20px;
         z-index: 9;
@@ -106,9 +123,7 @@
     header.mainHeader.scrolled img.logoWhite {
         display: inline-block !important;
     }
-    .mainHeader.scrolled nav#mainNav .nav-item > a{
-      color: #fff;
-    }
+    
     .banner .bannerProfile{
       display: block !important;
     }
@@ -193,10 +208,13 @@
     }
     section.innerBanner{
       padding: 0 30px;
+      align-items: center;
+      display: flex;
     }
     section.innerBanner .innerBannerContent{
       position: static;
       transform: translate(-0%, -0%);
+      padding: 0;
     }
     .clientNum{
       gap: 20px;
@@ -207,5 +225,17 @@
   }
   .bottomServiceContent{
     max-width: 100%;
+  }
+  section.profile .bannerProfile {
+    width: 100%;
+      padding: 40px;
+      left: 0;
+  }
+
+  .bannerProfile.serviceProfile .profileImg {
+      position: static;
+  }
+  .mobile-logo {
+    max-width: 200px;
   }
 }
