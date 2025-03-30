@@ -317,7 +317,7 @@ header.mainHeader.scrolled .logoWhite {
   transform: translate(0px);
   transition: all 500ms ease;
 }
-.bannerProfileDetails:before{
+.banner .bannerProfileDetails:before{
   content: "";
   position: absolute;
   left: -15px;
@@ -1809,7 +1809,7 @@ span.icon-cell.site-text-primary {
 }
 .profileBxBx .bannerProfile .profileImg img {
   height: 200px;
-  object-fit: cover !important;
+  object-fit: contain !important;
   width: 100%;
 }
 .profileBxBx .bannerProfile:nth-child(3) {
@@ -1913,7 +1913,7 @@ span.icon-cell.site-text-primary {
 .clientBx p {
   margin: 0;
   margin-top: 0;
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 800;
 }
 .accordion .szh-accordion__item-heading button {
@@ -2424,7 +2424,9 @@ section.innerBanner.blogDetailsSec {
   position: relative;
   border-radius: 6px;
 }
-
+.clientNum {
+  gap: 20px;
+}
 
 
 

@@ -238,4 +238,11 @@
   .mobile-logo {
     max-width: 200px;
   }
+  .clientBx p {
+    font-size: 30px;
+  }
+
+  .clientBx h3 {
+      font-size: 16px;
+  }
 }

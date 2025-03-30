@@ -21,7 +21,7 @@ const ContactForm = () => {
             <section className="getInTouch">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-md-7 col-12">
+                        <div className="col-lg-7 col-12">
                             <div className="contactForm">
                                 <h2>Get In Touch</h2>
                                 <p>Fill out the form below, and a Citadel representative will<br/>contact you as soon as possible.</p>
@@ -97,7 +97,7 @@ const ContactForm = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-5 col-12 ps-5">
+                        <div className="col-lg-5 col-12 ps-5">
                             <div className="contentContent">
                                 <div className="sectionHeading text-center mb-4">
                                     <h2>Trusted by Clients Worldwide</h2>
