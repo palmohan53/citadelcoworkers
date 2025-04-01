@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { Carousel } from 'react-responsive-carousel';
+import API_HOST from "../config/APIHost";
+import API_ENDPOINTS from "../config/APIEndPoints";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ContactForm = () => {
@@ -33,7 +35,7 @@ const ContactForm = () => {
         setMessage('');
 
         try {
-            const response = await axios.post('https://citadelcoworkers.com/api/contactUsapi.php', formData);
+            const response = await axios.post(`${API_HOST}${API_ENDPOINTS.contactUs}`, formData);
             setMessage('Thank you for your submission!');
             // Reset form
             setFormData({

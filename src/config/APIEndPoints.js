@@ -11,6 +11,7 @@ const API_ENDPOINTS = {
     serviceBulkcontentUpper: 'api/getUpperBulkContent.php?post_type=upper_bulk_content&post_name=',
     serviceTestimonial: 'api/getTestimonial.php?post_type=testimonial&post_name=',
     testimonial: 'api/getTestimonial.php?post_type=testimonial',
+    contactUs: 'api/contactUsapi.php',
 }
 
 export default API_ENDPOINTS;
