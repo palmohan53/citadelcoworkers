@@ -216,7 +216,26 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/KJSingh.jpg" alt="team"/>
+                                            <img src="/images/amit-gupta-2.png" alt="team"/>
+                                            <div className="overlay ">
+                                                <ul>
+                                                    <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="content_box ">
+                                            <h2>Amit Gupta </h2>
+                                            <p className="job_details">Founder</p>
+                                            <p>Visionary leader with IT and Legal expertise, driving innovation and excellence in global remote staffing.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div className="team_box style_two">
+                                    <div className="team_box_outer">
+                                        <div className="image_box ">
+                                            <img src="/images/Suresh-Sharma.jpg" alt="team"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -225,7 +244,7 @@ const About = () => {
                                         </div>
                                         <div className="content_box ">
                                             <h2>Suresh Sharma </h2>
-                                            <p className="job_details">Founder & CEO</p>
+                                            <p className="job_details">Co-founder</p>
                                             <p>Visionary leader driving Citadel Coworkers towards innovation and excellence in virtual staffing.</p>
                                         </div>
                                     </div>
@@ -254,7 +273,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/KJSingh.jpg" alt="team"/>
+                                            <img src="/images/Anil.png" alt="team"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -262,9 +281,9 @@ const About = () => {
                                             </div>
                                         </div>
                                         <div className="content_box ">
-                                            <h2>Akshat Varshney </h2>
-                                            <p className="job_details">Vice President, Finance Department</p>
-                                            <p>Leading financial strategies to optimize business growth and efficiency.</p>
+                                            <h2>Anil Aggarwal </h2>
+                                            <p className="job_details">Director</p>
+                                            <p>Finance expert leading Citadel Coworkers with precision and trust in virtual accounting and financial services.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -273,7 +292,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                     <div className="image_box ">
-                                        <img src="/images/Pinka-sharma-768x569.jpg" alt="team"/>
+                                        <img src="/images/Akansha.png" alt="team"/>
                                         <div className="overlay ">
                                             <ul>
                                                 <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -292,7 +311,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Pinka-Sharma-768x569.jpg" alt="team"/>
+                                            <img src="/images/Meenu-Singh.png" alt="team"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -311,7 +330,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Pinka-Sharma-768x569.jpg" alt="team"/>
+                                            <img src="/images/Bhawana.png" alt="team"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -327,6 +346,28 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div className="team_box style_two">
+                                    <div className="team_box_outer">
+                                        <div className="image_box ">
+                                            <img src="/images/Akshat.png" alt="team"/>
+                                            <div className="overlay ">
+                                                <ul>
+                                                    <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="content_box ">
+                                            <h2>Akshat Varshney </h2>
+                                            <p className="job_details">Vice President, Finance Department</p>
+                                            <p>Leading financial strategies to optimize business growth and efficiency.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            {/* <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
@@ -420,7 +461,7 @@ const About = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="text-center mt-5 bottomTeam">
                             <div className="sectionHeading">

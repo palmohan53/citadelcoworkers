@@ -1487,7 +1487,7 @@ ul.breadcrumb li a {
 .team_box.style_two .team_box_outer .image_box {
   position: relative;
   overflow: hidden;
-  padding-top: 30px;
+  padding-top: 0px;
 }
 .team_box.style_two .team_box_outer .image_box::before {
   position: absolute;
@@ -1504,7 +1504,7 @@ ul.breadcrumb li a {
   z-index: 10;
 }
 .team_box.style_two .team_box_outer .image_box img {
-  height: 250px;
+  height: 470px;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
