@@ -45,6 +45,7 @@ const ContactForm = () => {
                 company_name: '',
                 description: ''
             });
+            console.log('Response:', response);
         } catch (error) {
             setMessage('Something went wrong. Please try again.');
             console.error('Error:', error);
