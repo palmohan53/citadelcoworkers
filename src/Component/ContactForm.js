@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from "react";
-import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { Carousel } from 'react-responsive-carousel';
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -35,22 +32,35 @@ const ContactForm = () => {
         setMessage('');
 
         try {
-            const response = await axios.post(`${API_HOST}${API_ENDPOINTS.contactUs}`, formData);
+            const response = await fetch(`${API_HOST}${API_ENDPOINTS.contactUs}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log('Success:', data);
             setMessage('Thank you for your submission!');
-            // Reset form
+            
+            // Reset form after successful submission
             setFormData({
                 name: '',
                 email: '',
-                phone_number: '',
+                phoneNumber: '',
                 website: '',
-                project_duration: 'Project Duration',
-                company_name: '',
+                projectDuration: 'Project Duration',
+                companyName: '',
                 description: ''
             });
-            console.log('Response:', response);
         } catch (error) {
-            setMessage('Something went wrong. Please try again.');
             console.error('Error:', error);
+            setMessage('Something went wrong. Please try again.');
         } finally {
             setLoading(false);
         }
@@ -210,14 +220,14 @@ const ContactForm = () => {
                                 <div className="sectionHeading text-center mb-4">
                                     <h2>Trusted by Clients Worldwide</h2>
                                 </div>
-                                <Carousel infiniteLoop preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} showStatus={false} showThumbs={false}>
+                                {/* <Carousel infiniteLoop preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} showStatus={false} showThumbs={false}>
                                     <div className="videoTestimonial">
-                                        {/* <iframe width="100%" height="315" src="https://www.youtube.com/embed/S8la1u6U1gc?si=vByJ9duuaLOLWP5k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
+                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/S8la1u6U1gc?si=vByJ9duuaLOLWP5k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                     </div>
                                     <div className="videoTestimonial">
-                                    {/* <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3GHmGSKA9I?si=i27sgTjBRKM_63wG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> */}
+                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3GHmGSKA9I?si=i27sgTjBRKM_63wG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                                     </div>
-                                </Carousel>
+                                </Carousel> */}
                             </div>
                         </div>
                     </div>

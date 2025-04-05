@@ -1,7 +1,9 @@
 
 
 @media only screen and (max-width:991px){
-    
+  section.banner h1 {
+    font-size: 28px;
+  }
 .navbar-brand img{
     max-width: 150px;
 }
