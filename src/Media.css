@@ -116,9 +116,9 @@
     .cross-toggler img{
       max-width: 15px;
     }
-    header.mainHeader.scrolled .colorLogo {
+    /* header.mainHeader.scrolled .colorLogo {
         display: none;
-    }
+    } */
   
     header.mainHeader.scrolled img.logoWhite {
         display: inline-block !important;

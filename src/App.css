@@ -2,32 +2,8 @@
   Author: Rahul Bhardwaj
   rajputrahul445@gmail.com
 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-/* @font-face {
-  font-family: 'ProductSansRegular';
-  src: url('fonts/ProductSansRegular.eot');
-  src: url('fonts/ProductSansRegular.eot') format('embedded-opentype'),
-       url('fonts/ProductSansRegular.woff2') format('woff2'),
-       url('fonts/ProductSansRegular.woff') format('woff'),
-       url('fonts/ProductSansRegular.ttf') format('truetype'),
-       url('fonts/ProductSansRegular.svg#ProductSansRegular') format('svg');
-} */
-/* 
-@font-face {
-  font-family: 'Nexa';
-  src: local('Nexa'),url('fonts/NotoSans-VariableFont_wdth,wght') format('woff2'),
-      local('Nexa'),url('fonts/Nexa-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Nexa';
-  src: local('Nexa'),url('fonts/Nexa-Black.woff2') format('woff2'),
-      local('Nexa'),url('fonts/Nexa-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-} */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+
 body {font-family: 'Noto Sans', sans-serif;background: #fff;overflow: auto;font-size: 14px;overflow-x: hidden;padding-top: 0px;}
 a, a:hover, a:focus {  text-decoration: none;  transition: all 400ms ease; }
 img{max-width: 100%}
@@ -178,9 +154,9 @@ nav#mainNav .nav-item {
 .dropDown ul a:hover{
   color: #1749d5;
 }
-header.mainHeader .colorLogo {
+/* header.mainHeader .colorLogo {
   display: none;
-}
+} */
 
 header.mainHeader.scrolled {
   background: #fff;

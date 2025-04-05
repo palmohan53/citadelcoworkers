@@ -46,7 +46,6 @@ const Header = () => {
                         </button>
                         <NavLink to="/">
                             <img src="/images/logo-new-black.png" alt="" className="colorLogo" />
-                            <img src="/images/logo-new-black.png" alt="" className="logoWhite" />
                         </NavLink>
                     </div>
                     
