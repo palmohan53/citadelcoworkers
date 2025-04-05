@@ -355,7 +355,9 @@ section.profile .bannerProfileDetails {
   color: #999;
   font-weight: 300;
 }
-
+.sliderWrp {
+  overflow: hidden;
+}
 .sliderWrp .slick-slide > div {
   text-align: center;
 }

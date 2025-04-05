@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-md-4 col-12">
-                            <div className="footerLinks">
+                            <div className="footerLinks footerLogoBx">
                                 <div className="logo-wrapper">
                                     <img 
                                         src="/images/logo-new-white.png" 

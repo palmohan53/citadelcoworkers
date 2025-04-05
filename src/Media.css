@@ -15,7 +15,7 @@
   section.banner h1 {
     font-size: 28px;
   }
-.navbar-brand img{
+.navbar-brand .colorLogo{
     max-width: 150px;
     height: 50px;
 }
@@ -322,7 +322,9 @@
   .content-wrapper {
       margin-bottom: 30px;
   }
-
+  .footerLogoBx{
+    min-height: 155px;
+  }
   .footer_copy_content {
       margin-bottom: 30px;
       min-height: 105px;
