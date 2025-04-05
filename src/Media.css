@@ -17,7 +17,7 @@
   }
 .navbar-brand img{
     max-width: 150px;
-    height: auto;
+    height: 50px;
 }
   .getStarted .lineBtn {
       padding: 7px 10px;
@@ -304,7 +304,7 @@
   }
   .logo-wrapper img{
     width: 180px;
-    height: auto;
+    height: 60px;
   }
 
   .content_in_r.mt-4 {
