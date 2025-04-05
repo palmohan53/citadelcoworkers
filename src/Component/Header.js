@@ -6,6 +6,9 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const Header = () => {
     const [activeClass, setActiveClass] = useState(false);
