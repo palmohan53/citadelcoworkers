@@ -3,8 +3,6 @@ import React, {useEffect} from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleCheck} from '@fortawesome/free-solid-svg-icons';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.compat.css";
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -50,7 +48,6 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                     return(
                         <React.Fragment key={index}>
                             
-                            <ScrollAnimation animateIn="fadeIn">
                                 <div className="bannerProfile serviceProfile">
                                     <div className="profileImg">
                                         <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
@@ -75,7 +72,6 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                                         <button className="colorBtn wideBtn" onClick={handleScrollClick}>Hire Me</button>
                                     </div>
                                 </div>
-                            </ScrollAnimation>
                         </React.Fragment>
                     )
                 })

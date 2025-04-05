@@ -29,7 +29,7 @@ const Footer = () => {
                         </div>
                         <div className="col-md-2 col-12">
                             <div className="footerLinks mb-4">
-                                <h3>Why Citadel Coworkers</h3>
+                                <div className="footerHeading">Why Citadel Coworkers</div>
                                 <ul className="unorderList">
                                     <li><Link to="/about-citadel-advantage">Citadel Advantage</Link></li>
                                     <li><Link to="/how-does-citadel-works">How Does Citadel Works</Link></li>
@@ -40,7 +40,7 @@ const Footer = () => {
                         </div>
                         <div className="col-md-2 col-12">
                             <div className="footerLinks mb-4">
-                                <h3>Policy</h3>
+                                <div className="footerHeading">Policy</div>
                                 <ul className="unorderList">
                                     <li><Link to="/refund-policy">Refund Policy</Link></li>
                                     <li><Link to="/privacy-policy">Privacy Policy</Link></li>
@@ -51,19 +51,19 @@ const Footer = () => {
                         </div>
                         <div className="col-md-3 col-12 ftTouch">
                             <div className="footerLinks">
-                                <h3>Get In Touch</h3>
+                                <div className="footerHeading">Get In Touch</div>
                                 <div className="d-block mb-4">
-                                    <h6>Location</h6>
+                                    <div className="footerSmlHeading">Location</div>
                                     <p>HN – 59 Sector -62 Noida 201309</p>
                                 </div>
                                 <div className="bottom">
-                            <h6> Contact</h6>
+                            <div className="footerSmlHeading"> Contact</div>
                             <div className="con_content">
-                                <h5> Phone :</h5>
+                                <div className="spt"> Phone :</div>
                                 <Link to="tel:+1 (646) -583-0053"> +1 (646) -583-0053</Link>
                             </div>
                             <div className="con_content">
-                                <h5> Mail Us :</h5>
+                                <div className="spt"> Mail Us :</div>
                                 <Link to="tel:sales@citadelcoworkers.com"> sales@citadelcoworkers.com</Link>
                             </div>
                             </div>

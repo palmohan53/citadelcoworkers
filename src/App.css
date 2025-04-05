@@ -930,14 +930,13 @@ footer {
 .logo-wrapper{
   margin-bottom: 10px;
 }
-.footerLinks h3 {
+.footerLinks h3, .footerHeading {
   color: #fff;
-  font-weight: 400;
   font-size: 18px;
   position: relative;
   margin-bottom: 40px;
 }
-.footerLinks h3:before {
+.footerLinks h3:before, .footerHeading:before {
   position: absolute;
   content: '';
   width: 70px;
@@ -965,11 +964,10 @@ footer {
   color: #aaafb8;
   margin-bottom: 0;
 }
-.footerLinks h6 {
+.footerLinks h6, .footerSmlHeading {
   font-size: 18px;
   line-height: 26px;
   color: #fff;
-  font-weight: 400;
   margin-bottom: 8px;
 }
 .copyright {
@@ -1003,7 +1001,7 @@ footer {
   gap: 10px;
 }
 
-.con_content h5 {
+.con_content .spt {
   display: inline-block;
   font-size: 14px;
   font-weight: 400;

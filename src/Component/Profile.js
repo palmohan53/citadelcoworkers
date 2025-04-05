@@ -6,8 +6,6 @@ import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faCircleCheck} from '@fortawesome/free-solid-svg-icons';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.compat.css";
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -57,7 +55,6 @@ const Profile = ({handleScrollClick}) => {
                     return(
                         <React.Fragment key={index}>
                             
-                            <ScrollAnimation animateIn="fadeIn">
                                 <div className="bannerProfile">
                                     <div className="profileImg">
                                         <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
@@ -77,7 +74,6 @@ const Profile = ({handleScrollClick}) => {
                                         </ul>
                                     </div>
                                 </div>
-                            </ScrollAnimation>
                         </React.Fragment>
                     )
                 })
