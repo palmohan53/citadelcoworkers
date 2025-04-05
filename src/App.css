@@ -418,7 +418,7 @@ section.banner h5 {
 }
 section.banner h1{
   color: #000;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 34px;
   line-height: 1.4;
 }
