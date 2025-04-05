@@ -1,5 +1,13 @@
 
 
+@media only screen and (max-width:1366px) and (min-width: 1200px){
+  .footerHeading, .footerLinks h6, .footerSmlHeading{
+    font-size: 15px;
+  }
+  .footerLinks ul li a{
+    font-size: 14px;
+  }
+}
 @media only screen and (max-width:991px){
   section.banner h1 {
     font-size: 28px;
@@ -281,8 +289,8 @@
   }
 
   .footerLinks ul li a, .con_content h5, .footer_copy_content {
-      font-size: 13px;
-      line-height: 20px;
+      font-size: 15px;
+      line-height: 23px;
   }
   .footerLinks .logo img {
     max-width: 200px;
