@@ -145,8 +145,9 @@
       padding: 60px 0 30px;
     }
     .banner .bannerProfile >img {
-      height: 200px;
-      object-fit: contain;
+      margin: 0 auto;
+      height: auto;
+      width: 200px;
     }
     section#servicesSec {
       padding-bottom: 0;
