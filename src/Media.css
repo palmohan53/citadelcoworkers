@@ -9,6 +9,9 @@
   }
 }
 @media only screen and (max-width:991px){
+  .sliderWrp{
+    overflow: hidden;
+  }
   section.banner h1 {
     font-size: 28px;
   }
