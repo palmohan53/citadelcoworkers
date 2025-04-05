@@ -485,3 +485,6 @@ p {
     background-color: #fff3cd;
     border-color: #ffeeba;
 }
+.d-block{
+    display: block ;
+}

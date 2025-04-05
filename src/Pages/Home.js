@@ -84,7 +84,7 @@ const Home = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img src="/images/Gagandeep_Singh_Pic.png" alt="" />
+                                        <img preload src="/images/Gagandeep_Singh_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Full Stack Developer</h6>
@@ -99,7 +99,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Harshita_Dagral_Pic.png"  alt="" />
+                                        <img preload src="/images/Harshita_Dagral_Pic.png"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Graphic Designer</h6>
@@ -115,7 +115,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Garvdeep_Singh_Pic.png" alt="" />
+                                        <img preload src="/images/Garvdeep_Singh_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Virtual Assistant</h6>
@@ -131,7 +131,7 @@ const Home = () => {
                                     </div>
 
                                     <div className="bannerProfile">
-                                        <img src="/images/Josephine_Vincent_Pic.png"  alt="" />
+                                        <img preload src="/images/Josephine_Vincent_Pic.png"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Accountant</h6>
@@ -146,7 +146,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Rohit_Kumar_Pic.png" alt="" />
+                                        <img preload src="/images/Rohit_Kumar_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Legal Assistant</h6>
@@ -160,7 +160,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Roma_Roy_Pic.png" alt="" />
+                                        <img preload src="/images/Roma_Roy_Pic.png" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Content Writer</h6>
