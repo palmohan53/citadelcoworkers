@@ -15,8 +15,8 @@ const Footer = () => {
                                     <img 
                                         src="/images/logo-new-white.png" 
                                         alt="Citadel Coworkers Logo" 
-                                        width="250"
-                                        height="83"
+                                        width="180"
+                                        height="60"
                                         className="logo-img"
                                         loading="eager"
                                         decoding="async"
