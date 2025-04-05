@@ -23,7 +23,7 @@ const Footer = () => {
                                     />
                                 </div>
                                 <div className="content-wrapper">
-                                    <p>Boost your business with our innovative outsourcing services.<br/>Elevate growth and productivity in a community designed for forward-thinkers.</p>
+                                    <p>Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers.</p>
                                 </div>
                             </div>
                         </div>
