@@ -246,6 +246,7 @@
     width: 100%;
       padding: 40px;
       left: 0;
+      aspect-ratio: 200 / 250;
   }
 
   .bannerProfile.serviceProfile .profileImg {
