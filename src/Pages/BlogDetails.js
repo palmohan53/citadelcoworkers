@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import { Link } from 'react-router-dom';
-import Moment from 'react-moment';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { useQuery } from "react-query";

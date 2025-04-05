@@ -2410,3 +2410,31 @@ section.innerBanner.blogDetailsSec {
 
 
 
+.logo-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.footerLinks {
+  margin-bottom: 2rem;
+}
+
+.unorderList {
+  padding-left: 0;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .footerLinks, .copyright {
+    text-align: center;
+  }
+
+  .footer_copy_content_right .listInline {
+    justify-content: center !important;
+  }
+
+  .footer_copy_content {
+    margin-bottom: 1rem;
+  }
+}
