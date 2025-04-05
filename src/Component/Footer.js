@@ -8,21 +8,10 @@ const Footer = () => {
         <React.Fragment>
             <footer className="footer">
                 <div className="container">
-                    <div className="row footer-row">
+                    <div className="row justify-content-between">
                         <div className="col-md-4 col-12">
                             <div className="footerLinks">
                                 <div className="logo-wrapper">
-                                    {/* <Link to="/">
-                                        <img 
-                                            src="/images/logo-new-white.png" 
-                                            alt="Citadel Coworkers Logo" 
-                                            width="250"
-                                            height="83"
-                                            className="logo-img"
-                                            loading="eager"
-                                            decoding="async"
-                                        />
-                                    </Link> */}
                                     <img 
                                         src="/images/logo-new-white.png" 
                                         alt="Citadel Coworkers Logo" 
@@ -34,11 +23,11 @@ const Footer = () => {
                                     />
                                 </div>
                                 <div className="content-wrapper">
-                                    <p>Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers.</p>
+                                    <p>Boost your business with our innovative outsourcing services.<br/>Elevate growth and productivity in a community designed for forward-thinkers.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col-md-2 col-12">
                             <div className="footerLinks mb-4">
                                 <h3>Why Citadel Coworkers</h3>
                                 <ul className="unorderList">
@@ -49,7 +38,7 @@ const Footer = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col">
+                        <div className="col-md-2 col-12">
                             <div className="footerLinks mb-4">
                                 <h3>Policy</h3>
                                 <ul className="unorderList">
@@ -95,10 +84,10 @@ const Footer = () => {
                         <div className="footer_copy_content_right">
                             <div className="social_media_v_one">
                                 <ul className="listInline justify-content-end">
-                                    <li><Link to="https://www.facebook.com/citadelcoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebookF} /></Link></li>
-                                    <li><Link to="https://twitter.com/citadelcoworker" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faXTwitter} /></Link></li>
-                                    <li><Link to="https://www.linkedin.com/company/96461265/admin/feed/posts/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></Link></li>
-                                    <li><Link to="https://www.youtube.com/@CitadelCoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faYoutube} /></Link></li>
+                                    <li><Link to="https://www.facebook.com/citadelcoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon size="lg" width="15" height="15" icon={faFacebookF} /></Link></li>
+                                    <li><Link to="https://twitter.com/citadelcoworker" target="_blank" rel="noreferrer"><FontAwesomeIcon size="lg" width="15" height="15" icon={faXTwitter} /></Link></li>
+                                    <li><Link to="https://www.linkedin.com/company/96461265/admin/feed/posts/" target="_blank" rel="noreferrer"><FontAwesomeIcon size="lg" width="15" height="15" icon={faLinkedinIn} /></Link></li>
+                                    <li><Link to="https://www.youtube.com/@CitadelCoworkers" target="_blank" rel="noreferrer"><FontAwesomeIcon size="lg" width="15" height="15" icon={faYoutube} /></Link></li>
                                 </ul>
                             </div>
                         </div>

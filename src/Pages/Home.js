@@ -6,15 +6,10 @@ import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Slider from "react-slick";
-// import servicesContent from '../Content/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPlay, faCircleCheck, faCode } from '@fortawesome/free-solid-svg-icons';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.compat.css";
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
-// import Profile from "../Component/Profile";
-// import Steps from "../Component/Steps";
 
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
@@ -84,7 +79,7 @@ const Home = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Gagandeep_Singh_Pic.webp" alt="" />
+                                        <img fetchpriority="high" src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Full Stack Developer</h6>
@@ -99,7 +94,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Harshita_Dagral_Pic.webp"  alt="" />
+                                        <img fetchpriority="high" src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Graphic Designer</h6>
@@ -115,7 +110,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Garvdeep_Singh_Pic.webp" alt="" />
+                                        <img fetchpriority="high" src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Virtual Assistant</h6>
@@ -131,7 +126,7 @@ const Home = () => {
                                     </div>
 
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Josephine_Vincent_Pic.webp"  alt="" />
+                                        <img fetchpriority="high" src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Accountant</h6>
@@ -146,7 +141,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Rohit_Kumar_Pic.webp" alt="" />
+                                        <img fetchpriority="high" src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Legal Assistant</h6>
@@ -160,7 +155,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Roma_Roy_Pic.webp" alt="" />
+                                        <img fetchpriority="high" src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
                                             <h6><FontAwesomeIcon icon={faCode} /> Content Writer</h6>
@@ -200,7 +195,6 @@ const Home = () => {
                                     return(
                                         <React.Fragment key={index}>
                                         {index < 6 && <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
-                                            <ScrollAnimation animateIn="fadeIn">
                                                 <div className="colorBx">
                                                     <React.Fragment>
                                                         <div className="servicesIcon">
@@ -214,7 +208,6 @@ const Home = () => {
                                                         </div>
                                                     </React.Fragment>
                                                 </div>
-                                            </ScrollAnimation>
                                         </div>}
                                         </React.Fragment>
                                     )
@@ -242,7 +235,7 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/expert-ico.png" alt=""/>
+                                            <img src="/images/expert-ico.png" alt="" width="70" height="70"/>
                                             <h2 className="semiHeading">Top Experts, On-Demand</h2>
                                             <p>Hire skilled professionals in hours—ready to deliver from day one.</p>
                                         </div>
@@ -254,7 +247,7 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/profit-ico.png" alt=""/>
+                                            <img src="/images/profit-ico.png" alt="" width="70" height="70"/>
                                             <h2 className="semiHeading">Lower Costs, Higher Profits</h2>
                                             <p>Cut office, payroll, and operational expenses while maximizing efficiency.</p>
                                         </div>
@@ -266,7 +259,7 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/world-wide-ico.png" alt=""/>
+                                            <img src="/images/world-wide-ico.png" alt="" width="70" height="70"/>
                                             <h2 className="semiHeading">24/7 Business Continuity</h2>
                                             <p>Leverage global talent across time zones for uninterrupted growth.</p>
                                         </div>
@@ -291,40 +284,32 @@ const Home = () => {
                                 </div>
                                 <div className="row mt-5">
                                     <div className="col-md-6 col-12">
-                                        <ScrollAnimation animateIn="fadeIn">
-                                            <div className="contentBx">
-                                                <img src='/images/hire-quickly.png' alt="" />
-                                                <h3>Hire Quickly</h3>
-                                                <p>Hire in under 24 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
-                                            </div>
-                                        </ScrollAnimation>
+                                        <div className="contentBx">
+                                            <img src='/images/hire-quickly.png' alt="" width="80" height="80" />
+                                            <h3>Hire Quickly</h3>
+                                            <p>Hire in under 24 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                        </div>
                                     </div>
                                     <div className="col-md-6 col-12">
-                                        <ScrollAnimation animateIn="fadeIn">
-                                            <div className="contentBx">
-                                                <img src='/images/top-3.png' alt="" />
-                                                <h3>The Top 3%</h3>
-                                                <p>Every applicant to the Citadel network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
-                                            </div>
-                                        </ScrollAnimation>
+                                        <div className="contentBx">
+                                            <img src='/images/top-3.png' alt="" width="80" height="80" />
+                                            <h3>The Top 3%</h3>
+                                            <p>Every applicant to the Citadel network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
+                                        </div>
                                     </div>
                                     <div className="col-md-6 col-12">
-                                        <ScrollAnimation animateIn="fadeIn">
-                                            <div className="contentBx">
-                                                <img src='/images/future-innovation.png' alt="" />
-                                                <h3>Leading the Future of Work</h3>
-                                                <p>Our network is ready for tomorrow’s business challenges by embracing advanced and specialized skills, including blockchain and AI.</p>
-                                            </div>
-                                        </ScrollAnimation>
+                                        <div className="contentBx">
+                                            <img src='/images/future-innovation.png' alt="" width="80" height="80" />
+                                            <h3>Leading the Future of Work</h3>
+                                            <p>Our network is ready for tomorrow’s business challenges by embracing advanced and specialized skills, including blockchain and AI.</p>
+                                        </div>
                                     </div>
                                     <div className="col-md-6 col-12">
-                                        <ScrollAnimation animateIn="fadeIn">
-                                            <div className="contentBx">
-                                                <img src='/images/level-up.png' alt="" />
-                                                <h3>A Level Above</h3>
-                                                <p>Every single Virtual Employee in our global network embodies the highest levels of integrity, professionalism, and communication.</p>
-                                            </div>
-                                        </ScrollAnimation>
+                                        <div className="contentBx">
+                                            <img src='/images/level-up.png' alt="" width="80" height="80" />
+                                            <h3>A Level Above</h3>
+                                            <p>Every single Virtual Employee in our global network embodies the highest levels of integrity, professionalism, and communication.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -382,7 +367,6 @@ const Home = () => {
                         </div>
                         <div className="row mt-5">
                             <div className="col-md-4 col-12">
-                                <ScrollAnimation animateIn="fadeIn">
                                     <div className="contentBx">
                                         <div className="numWrp">
                                             <div className="hiringNum">1</div>
@@ -390,10 +374,8 @@ const Home = () => {
                                         <h3>Tell Us What You Need</h3>
                                         <p>📌 Share your job role, required skills, and preferred working hours (full-time/part-time).</p>
                                     </div>
-                                </ScrollAnimation>
                             </div>
                             <div className="col-md-4 col-12">
-                                <ScrollAnimation animateIn="fadeIn">
                                     <div className="contentBx">
                                         <div className="numWrp">
                                             <div className="hiringNum">2</div>
@@ -401,10 +383,8 @@ const Home = () => {
                                         <h3>Get Matched Instantly</h3>
                                         <p>📋 We shortlist pre-vetted experts based on your exact needs. Review profiles, conduct quick interviews, and choose the best fit.</p>
                                     </div>
-                                </ScrollAnimation>
                             </div>
                             <div className="col-md-4 col-12">
-                                <ScrollAnimation animateIn="fadeIn">
                                     <div className="contentBx noArrow">
                                         <div className="numWrp">
                                             <div className="hiringNum">3</div>
@@ -412,7 +392,6 @@ const Home = () => {
                                         <h3>Start in 24 Hours</h3>
                                         <p>🚀 Once selected, your virtual professional is onboarded and ready to work within 24 hours—no setup hassle, just results!</p>
                                     </div>
-                                </ScrollAnimation>
                             </div>
                         </div>
                     </div>
@@ -480,7 +459,6 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <ScrollAnimation animateIn="fadeIn">
                             <div className="row mt-5">
                                 <div className="col-md-5 col-12">
                                     <Link to={`/blog/${data?.data?.listing[0]?.post_name}`} className="d-block">
@@ -556,7 +534,6 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                        </ScrollAnimation>
                     </div>
                 </section>
                 <div ref={contactref}>
