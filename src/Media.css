@@ -282,6 +282,7 @@
 
   .footerLinks ul li a, .con_content h5, .footer_copy_content {
       font-size: 13px;
+      line-height: 20px;
   }
   .footerLinks .logo img {
     max-width: 200px;
@@ -307,4 +308,18 @@
   .SingleSliderContainer .slick-next:before{
     opacity: 0.7;
   }
+  .content-wrapper {
+      margin-bottom: 30px;
+  }
+
+  .footer_copy_content {
+      margin-bottom: 30px;
+      min-height: 105px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .footer .col {
+    min-width: 100%;
+  }
+  
 }

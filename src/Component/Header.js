@@ -45,7 +45,7 @@ const Header = () => {
                 <div className="container">
                     <div className="navbar-brand p-0 gap-3 d-flex">
                         <button className="navbar-toggler" onClick={openToggle}>
-                            <img src="/images/toggle.png" alt="" />
+                            <img src="/images/toggle.png" alt="" width="25" height="22" />
                         </button>
                         <NavLink to="/">
                             <img src="/images/logo-new-black.png" alt="" className="colorLogo" width="200" height="67" />
