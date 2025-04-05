@@ -12,7 +12,7 @@ const Footer = () => {
                         <div className="col-md-4 col-12">
                             <div className="footerLinks">
                                 <div className="logo-wrapper">
-                                    <Link to="/">
+                                    {/* <Link to="/">
                                         <img 
                                             src="/images/logo-new-white.png" 
                                             alt="Citadel Coworkers Logo" 
@@ -22,7 +22,16 @@ const Footer = () => {
                                             loading="eager"
                                             decoding="async"
                                         />
-                                    </Link>
+                                    </Link> */}
+                                    <img 
+                                        src="/images/logo-new-white.png" 
+                                        alt="Citadel Coworkers Logo" 
+                                        width="250"
+                                        height="83"
+                                        className="logo-img"
+                                        loading="eager"
+                                        decoding="async"
+                                    />
                                 </div>
                                 <div className="content-wrapper">
                                     <p>Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers.</p>
