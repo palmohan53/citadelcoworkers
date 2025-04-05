@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from "react";
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+// import { Carousel } from 'react-responsive-carousel';
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -32,35 +35,22 @@ const ContactForm = () => {
         setMessage('');
 
         try {
-            const response = await fetch(`${API_HOST}${API_ENDPOINTS.contactUs}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            console.log('Success:', data);
+            const response = await axios.post(`${API_HOST}${API_ENDPOINTS.contactUs}`, formData);
             setMessage('Thank you for your submission!');
-            
-            // Reset form after successful submission
+            // Reset form
             setFormData({
                 name: '',
                 email: '',
-                phoneNumber: '',
+                phone_number: '',
                 website: '',
-                projectDuration: 'Project Duration',
-                companyName: '',
+                project_duration: 'Project Duration',
+                company_name: '',
                 description: ''
             });
+            console.log('Response:', response);
         } catch (error) {
-            console.error('Error:', error);
             setMessage('Something went wrong. Please try again.');
+            console.error('Error:', error);
         } finally {
             setLoading(false);
         }
