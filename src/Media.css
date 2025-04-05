@@ -6,6 +6,7 @@
   }
 .navbar-brand img{
     max-width: 150px;
+    height: auto;
 }
   .getStarted .lineBtn {
       padding: 7px 10px;
@@ -288,6 +289,10 @@
 
   footer.footer {
       padding: 40px 0px 60px 0px;
+  }
+  .logo-wrapper img{
+    width: 180px;
+    height: auto;
   }
 
   .content_in_r.mt-4 {

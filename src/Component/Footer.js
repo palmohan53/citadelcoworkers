@@ -8,45 +8,24 @@ const Footer = () => {
         <React.Fragment>
             <footer className="footer">
                 <div className="container">
-                    <div className="row">
-                        {/* <div className="col-md-4 col-12 pe-5">
-                            <div className="footerLinks mb-4">
-                                <div className="logo mb-2">
+                    <div className="row footer-row">
+                        <div className="col-md-4 col-12">
+                            <div className="footerLinks">
+                                <div className="logo-wrapper">
                                     <Link to="/">
-                                        <img src="/images/logo-new-white.png" alt="" width="300" height="100" preload/>
-                                    </Link>
-                                </div>
-                                <div className="content_in_r mt-4">
-                                    <p> Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers. Partner for competitive success.</p>
-
-                                </div>
-                            </div>
-                        </div> */}
-                        <div className="col-md-4 col-12 pe-5">
-                            <div className="footerLinks mb-4">
-                                <div className="logo mb-2">
-                                    <Link to="/" className="d-block">
                                         <img 
                                             src="/images/logo-new-white.png" 
                                             alt="Citadel Coworkers Logo" 
-                                            width="300" 
-                                            height="100"
-                                            loading="lazy"
-                                            fetchpriority="high"
-                                            style={{
-                                                aspectRatio: '3/1',
-                                                objectFit: 'contain',
-                                                width: '100%',
-                                                maxWidth: '300px',
-                                                height: 'auto'
-                                            }}
+                                            width="250"
+                                            height="83"
+                                            className="logo-img"
+                                            loading="eager"
+                                            decoding="async"
                                         />
                                     </Link>
                                 </div>
-                                <div className="content_in_r mt-4">
-                                    <p style={{ minHeight: '60px' }}> {/* Add minimum height for text content */}
-                                        Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers. Partner for competitive success.
-                                    </p>
+                                <div className="content-wrapper">
+                                    <p>Boost your business with our innovative outsourcing services. Elevate growth and productivity in a community designed for forward-thinkers.</p>
                                 </div>
                             </div>
                         </div>
