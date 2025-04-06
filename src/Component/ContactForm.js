@@ -72,7 +72,7 @@ const ContactForm = () => {
                                 <p>Fill out the form below, and a Citadel representative will<br/>contact you as soon as possible.</p>
                                 <div className="sticyImgForm">
                                     <img src="/images/cnbnr-02.webp" width="70" height="69" alt="" />
-                                    <img src="/images/nda.webp" width="70" height="" alt="69" />
+                                    <img src="/images/nda.webp" width="70" height="69" alt="" />
                                 </div>
                                 <ul className="listInline">
                                     <li>

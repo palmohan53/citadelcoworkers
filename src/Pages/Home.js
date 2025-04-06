@@ -7,7 +7,7 @@ import { useQuery } from "react-query";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faPlay, faCircleCheck, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faPlay, faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
 import BannerContent from '../Component/BannerContent';
@@ -80,7 +80,7 @@ const Home = () => {
                                         <img fetchpriority="high" src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Full Stack Developer</h6>
+                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Full Stack Developer</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                             <p>Skill Set</p>
                                             <ul className="listInline tags mt-3">
@@ -95,7 +95,7 @@ const Home = () => {
                                         <img fetchpriority="high" src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Graphic Designer</h6>
+                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -111,7 +111,7 @@ const Home = () => {
                                         <img fetchpriority="high" src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Virtual Assistant</h6>
+                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -127,7 +127,7 @@ const Home = () => {
                                         <img fetchpriority="high" src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Accountant</h6>
+                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Accountant</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -142,7 +142,7 @@ const Home = () => {
                                         <img fetchpriority="high" src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Legal Assistant</h6>
+                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -156,7 +156,7 @@ const Home = () => {
                                         <img fetchpriority="high" src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
-                                            <h6><FontAwesomeIcon icon={faCode} /> Content Writer</h6>
+                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Content Writer</h6>
                                             <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -323,12 +323,12 @@ const Home = () => {
                                                     
                                                         <div className="bannerProfile">
                                                             <div className="profileImg">
-                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
+                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" width="248" height="200" />
                                                                 <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
                                                             </div>
                                                             <div className="bannerProfileDetails">
                                                                 <h3>{data.post_title}</h3>
-                                                                <h6>{data.Designation}</h6>
+                                                                <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
                                                                 <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
                                                                 <p>Skill Set</p>
                                                                 {/* <span className="Expertise">{data.post_content}</span> */}

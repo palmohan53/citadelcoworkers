@@ -375,6 +375,12 @@ section.profile .bannerProfileDetails {
   font-size: 14px;
   color: #999;
   font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.sliderWrp .bannerProfile h6 {
+  justify-content: center;
 }
 .sliderWrp {
   overflow: hidden;
@@ -718,7 +724,7 @@ section.testimonial {
   align-items: center;
   gap: 10px;
 }
-.testimonial .contentBx img {
+.testimonial .contentBx .testimonialImg {
   width: 60px;
   opacity: 1;
   transition: all 500ms ease;
@@ -2470,4 +2476,9 @@ section.innerBanner.blogDetailsSec {
 
 .popupClose img {
   max-width: 12px;
+}
+.testimonial .contentBx img {
+  width: auto;
+  margin-bottom: 10px;
+  display: block;
 }

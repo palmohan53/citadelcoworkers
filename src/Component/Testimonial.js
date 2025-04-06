@@ -1,6 +1,6 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faStar} from '@fortawesome/free-solid-svg-icons';
+import { faStar} from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -47,7 +47,7 @@ const Testimonial = ({serviceTestimonial}) => {
                             return(
                                 <div className="px-3" key={index}>
                                     <div className="contentBx">
-                                        <FontAwesomeIcon icon={faQuoteLeft} />
+                                        <img src="/images/quote.webp" alt={data.post_content} className='quoteImg'/>
                                         {/* <h3>I have been working with Toptal...</h3> */}
                                         <p>{data.post_content}</p>
                                         <ul className="listInline">
