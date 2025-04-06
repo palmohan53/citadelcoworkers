@@ -1,6 +1,4 @@
-import React, { lazy, Suspense, useRef, useEffect } from 'react';
-
-
+import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
@@ -12,9 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPlay, faCircleCheck, faCode } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
-const AvatarComponent = lazy(() => import('../Component/BannerContent'));
+import BannerContent from '../Component/BannerContent';
 
-const renderLoader = () => <p>Loading</p>;
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -74,9 +71,7 @@ const Home = () => {
                 <div className="container">
                     <div className="row align-items-end">
                     <div className="col-md-5 col-12 bannerContent">
-                    <Suspense fallback={renderLoader()}>
-                        <AvatarComponent />
-                    </Suspense>
+                        <BannerContent/>
                     </div>
                         <div className="col-md-7 col-12">
                             <div className="sliderWrp">

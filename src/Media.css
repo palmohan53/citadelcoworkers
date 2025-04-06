@@ -345,11 +345,11 @@
   }
 }
 @media screen and (max-width: 575px) {
-  .semiHeading, .contentBx h3 {
+  .semiHeading {
     font-size: 18px;
   }
-  section.banner h4, section.banner h5, .banner-subtitle {
-    font-size: 14px;
+  .bannerContent{
+    min-height: 380px;
   }
   .expertise_box .title a {
       font-size: 20px;
@@ -382,47 +382,5 @@
   .popupContentInr iframe {
       height: 220px;
   }
-  .bannerContent {
-    contain: layout style;
-    content-visibility: auto;
-    contain-intrinsic-size: 0 400px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .banner-title {
-      font-size: clamp(1.5rem, 4vw, 2.5rem) !important; 
-      line-height: 1.2 !important;
-      margin-bottom: 1rem !important;
-      letter-spacing: -0.5px;
-  }
-
-  .banner-subtitle {
-      font-size: clamp(0.875rem, 3vw, 1.25rem) !important;
-      line-height: 1.5 !important;
-      margin: 1rem 0 !important;
-      font-weight: 400;
-      color: #4A5568;
-      text-wrap: balance;
-  }
-
-  .banner-pricing {
-      font-size: clamp(0.875rem, 2vw, 1rem);
-      margin: 1rem 0;
-      font-weight: 500;
-  }
-  .bannerContent {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .banner-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .banner-subtitle {
-    font-size: 1rem;
-    margin: 0.75rem 0;
-  }
+  
 }
