@@ -379,8 +379,13 @@ section.profile .bannerProfileDetails {
   align-items: center;
   gap: 6px;
 }
-.sliderWrp .bannerProfile h6 {
+.sliderWrp .bannerProfile h6, .sliderWrp .bannerProfile .verified {
   justify-content: center;
+}
+.sliderWrp .bannerProfile .verified{
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 .sliderWrp {
   overflow: hidden;

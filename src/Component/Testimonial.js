@@ -1,6 +1,5 @@
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar} from '@fortawesome/free-solid-svg-icons';
+
 import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -51,11 +50,8 @@ const Testimonial = ({serviceTestimonial}) => {
                                         {/* <h3>I have been working with Toptal...</h3> */}
                                         <p>{data.post_content}</p>
                                         <ul className="listInline">
-                                            <li><FontAwesomeIcon icon={faStar} /></li>
-                                            <li><FontAwesomeIcon icon={faStar} /></li>
-                                            <li><FontAwesomeIcon icon={faStar} /></li>
-                                            <li><FontAwesomeIcon icon={faStar} /></li>
-                                            <li><FontAwesomeIcon icon={faStar} /></li>
+                                            <li><img src="/images/stars.webp" alt="" width="100" height="14" className='stars'/></li>
+                                            
                                         </ul>
                                         <h4><img src={data.banner} alt={data.banner} className='testimonialImg'/> {data.post_title}</h4>
                                         {/* <h6>Partner</h6> */}
