@@ -4,7 +4,28 @@
 */
 /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
 
-body {font-family: 'Noto Sans', sans-serif;background: #fff;overflow: auto;font-size: 14px;overflow-x: hidden;padding-top: 0px;}
+@font-face {
+  font-family: 'Noto Sans';
+  src: local('Noto Sans SemiBold'), local('NotoSans-SemiBold'),
+      url('../public/fonts/NotoSans-SemiBold.woff2') format('woff2'),
+      url('../public/fonts/NotoSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+      url('../public/fonts/NotoSans-Regular.woff2') format('woff2'),
+      url('../public/fonts/NotoSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {font-family: 'Noto Sans';background: #fff;overflow: auto;font-size: 14px;overflow-x: hidden;padding-top: 0px;}
 a, a:hover, a:focus {  text-decoration: none;  transition: all 400ms ease; }
 img{max-width: 100%}
 input, button { outline: none; box-shadow: none;  }
@@ -1112,7 +1133,7 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
   font-size: 60px;
   line-height: 60px;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
 }
 .expertise_box .title a {
   position: relative;
@@ -1391,7 +1412,7 @@ ul.breadcrumb li a {
   color: #282f3b;
   line-height: 30px;
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0px;
 }
 .icon_box_all.style_three .icon_content .txt_content p {
@@ -1694,7 +1715,7 @@ span.icon-cell.site-text-primary {
 }
 .threebox .sectionHeading h4 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .service_box.style_three .service_content .content_inner span {
   position: absolute;
@@ -1729,7 +1750,7 @@ span.icon-cell.site-text-primary {
   right: 0;
   font-size: 36px;
   line-height: 60px;
-  font-weight: 700;
+  font-weight: 600;
   color: #00cc83;
   opacity: 0.5;
   transition: 0.5s ease-in-out;
@@ -1849,7 +1870,7 @@ span.icon-cell.site-text-primary {
 .pricing-price {
   color: #050505;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
 }
 .pricing-month {
@@ -1999,7 +2020,7 @@ section.serviceBulkContent ul{
   font-size: 44px;
   line-height: 1;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
 }
 .about2-images .counter-box p {
   text-align: start;
@@ -2038,7 +2059,7 @@ span.text {
 .contectContent h3 {
   font-size: 20px;
   margin: 0 0 5px;
-  font-weight: 700;
+  font-weight: 600;
   color: #05164d;
 }
 
@@ -2096,7 +2117,7 @@ section.serviceBulkContent .para strong {
   color: #05164d;
   display: block;
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 30px;
   margin-bottom: 15px;
   /* min-height: 60px; */
@@ -2158,7 +2179,7 @@ section.industriesServed {
   font-weight: 800;
   line-height: normal;
   opacity: .5;
-  font-weight: 700;
+  font-weight: 600;
 }
 .industryBoxInr h3 {
   font-size: 20px;
