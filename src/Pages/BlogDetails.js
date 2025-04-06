@@ -61,9 +61,9 @@ const BlogDetails = () => {
                                 {
                                     data.post.auther_name === "Pinka Sharma"
                                     ?
-                                    <img src="/images/pinka.png" alt=""/>
+                                    <img src="/images/pinka.webp" alt=""/>
                                     :
-                                    <img src="/images/suresh.png" alt=""/>
+                                    <img src="/images/suresh.webp" alt=""/>
                                 }
                                 <h5>{data.post.auther_name}</h5>
                                 <h6>{formatDate(data.post.post_modified)}</h6>

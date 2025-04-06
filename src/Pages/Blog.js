@@ -40,9 +40,9 @@ const Blog = ({isRecentBlog}) => {
                                 {
                                     blog.display_name === "Pinka Sharma"
                                     ?
-                                    <img src="/images/pinka.png" alt=""/>
+                                    <img src="/images/pinka.webp" alt=""/>
                                     :
-                                    <img src="/images/suresh.png" alt=""/>
+                                    <img src="/images/suresh.webp" alt=""/>
                                 }
                             </div>
                         </div>

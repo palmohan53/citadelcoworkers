@@ -196,8 +196,8 @@ const Home = () => {
                                                 <div className="colorBx">
                                                     <React.Fragment>
                                                         <div className="servicesIcon">
-                                                            <img src={data.banner} alt="" className="serviceIco" />
-                                                            <img src={data.hover_image} alt="" className="serviceIco serviceHoverIco" />
+                                                            <img src={data.banner} alt="" className="serviceIco" width="64" height="64"/>
+                                                            <img src={data.hover_image} alt="" className="serviceIco serviceHoverIco" width="64" height="64"/>
                                                         </div>
                                                         <h3>{data.post_title}</h3>
                                                         <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
@@ -467,9 +467,9 @@ const Home = () => {
                                                     {
                                                         data?.data?.listing[0]?.display_name === "Pinka Sharma"
                                                         ?
-                                                        <img src="/images/pinka.png" alt=""/>
+                                                        <img src="/images/pinka.webp" alt="" width="70" height="70"/>
                                                         :
-                                                        <img src="/images/suresh.png" alt=""/>
+                                                        <img src="/images/suresh.webp" alt="" width="70" height="70"/>
                                                     }
                                                 </div>
                                             </div>
@@ -500,9 +500,9 @@ const Home = () => {
                                                                         {
                                                                             blog?.display_name === "Pinka Sharma"
                                                                             ?
-                                                                            <img src="/images/pinka.png" alt=""/>
+                                                                            <img src="/images/pinka.webp" alt="" width="70" height="70"/>
                                                                             :
-                                                                            <img src="/images/suresh.png" alt=""/>
+                                                                            <img src="/images/suresh.webp" alt="" width="70" height="70"/>
                                                                         }
                                                                         </div>
                                                                     </div>
