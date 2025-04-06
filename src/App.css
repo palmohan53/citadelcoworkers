@@ -2410,3 +2410,56 @@ section.innerBanner.blogDetailsSec {
 
 
 
+.logo-wrapper {
+  width: 180px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.logo-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.footerHeading {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.footerSmlHeading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.listInline {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.listInline li {
+  display: inline-block;
+}
+
+.listInline a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+}
+
+.footerLinks ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footerLinks ul li {
+  margin-bottom: 0.4rem;
+}
