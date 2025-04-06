@@ -345,6 +345,9 @@
   .footer .col {
     min-width: 100%;
   }
+  .bannerProfile h6 svg, .testimonial .contentBx svg{
+    display: none;
+  }
   .videoThumb img {
       height: auto;
   }
