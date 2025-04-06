@@ -2435,17 +2435,17 @@ section.innerBanner.blogDetailsSec {
   margin-bottom: 0.25rem;
 }
 
-.listInline {
+.footer .listInline {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-.listInline li {
+.footer .listInline li {
   display: inline-block;
 }
 
-.listInline a {
+.footer .listInline a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
