@@ -348,7 +348,7 @@
   .semiHeading, .contentBx h3 {
     font-size: 18px;
   }
-  section.banner h4, section.banner h5 {
+  section.banner h4, section.banner h5, .banner-subtitle {
     font-size: 14px;
   }
   .expertise_box .title a {

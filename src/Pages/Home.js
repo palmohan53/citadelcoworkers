@@ -71,16 +71,9 @@ const Home = () => {
                     <div className="row align-items-end">
                         <div className="col-md-5 col-12 bannerContent">
                             <h1><b>Hire Virtual Employees from India</b></h1>
-                            <h4 
-                                className="banner-subtitle"
-                                style={{
-                                    fontDisplay: 'swap',
-                                    contentVisibility: 'auto',
-                                    containIntrinsicSize: '0 40px'
-                                }}
-                            >
+                            <div className="banner-subtitle">
                                 Work with India's top 3% of remote talent in finance, tech, design, and support. Handpicked experts. No hiring hassle.
-                            </h4>
+                            </div>
                             <h5>Starts from <span className="greenText">$777/month</span> — Start your free trial today.</h5>
                             <Link to="/contact-us" className="colorBtn wideBtn">Hire Remote Talent Now</Link>
                         </div>

@@ -390,7 +390,7 @@ section.banner {
   position: relative;
   z-index: 2;
 }
-section.banner h4 {
+section.banner h4, .banner-subtitle {
   margin: 15px 0px 20px;
   line-height: 1.5;
   color: #455065;
