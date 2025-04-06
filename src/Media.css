@@ -147,7 +147,8 @@
     .banner .bannerProfile >img {
       margin: 0 auto;
       height: auto;
-      width: 200px;
+      width: 150px;
+      aspect-ratio: 150 / 213;
     }
     section#servicesSec {
       padding-bottom: 0;
