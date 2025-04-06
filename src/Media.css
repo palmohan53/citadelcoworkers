@@ -345,7 +345,7 @@
   }
 }
 @media screen and (max-width: 575px) {
-  .semiHeading, .process .contentBx h3 {
+  .semiHeading, .contentBx h3 {
     font-size: 18px;
   }
   section.banner h4, section.banner h5 {
