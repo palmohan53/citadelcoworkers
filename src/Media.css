@@ -13,7 +13,7 @@
     overflow: hidden;
   }
   section.banner h1 {
-    font-size: 28px;
+    font-size: 22px;
   }
 .navbar-brand .colorLogo{
     max-width: 150px;
@@ -353,6 +353,14 @@
   }
   .expertise_box .title a {
       font-size: 20px;
+  }
+  .step_number h3 {
+      font-size: 40px;
+  }
+
+  .expertise_box {
+      padding: 20px 15px;
+      margin-top: 15px;
   }
   .footer .col {
     min-width: 100%;
