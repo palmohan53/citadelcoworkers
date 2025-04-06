@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import { Link } from 'react-router-dom';
-import Moment from 'react-moment';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { useQuery } from "react-query";
@@ -22,7 +21,15 @@ const BlogDetails = () => {
         return data;
     }
     const { data, status } = useQuery(["user", blog], getBlogDetails);
-  
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const month = months[date.getMonth()];
+        const day = date.getDate().toString().padStart(2, '0');
+        const year = date.getFullYear();
+        
+        return `${month} ${day}, ${year}`;
+    };
    useEffect(()=>{
     window.scrollTo(0, 0)
     //eslint-disable-next-line
@@ -59,7 +66,7 @@ const BlogDetails = () => {
                                     <img src="/images/suresh.png" alt=""/>
                                 }
                                 <h5>{data.post.auther_name}</h5>
-                                <h6><Moment date={data.post.post_modified} format="MMM DD, YYYY" /></h6>
+                                <h6>{formatDate(data.post.post_modified)}</h6>
                             </div>
                             <ul className="listInline socialShare">
                                 <li>Share: </li>
