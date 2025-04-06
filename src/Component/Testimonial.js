@@ -46,7 +46,7 @@ const Testimonial = ({serviceTestimonial}) => {
                             return(
                                 <div className="px-3" key={index}>
                                     <div className="contentBx">
-                                        <img src="/images/quote.webp" alt={data.post_content} className='quoteImg'/>
+                                        <img src="/images/quote.webp" alt="" className='quoteImg' width="26" height="19"/>
                                         {/* <h3>I have been working with Toptal...</h3> */}
                                         <p>{data.post_content}</p>
                                         <ul className="listInline">

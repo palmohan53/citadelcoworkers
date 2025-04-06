@@ -81,7 +81,7 @@ const Home = () => {
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Full Stack Developer</h6>
-                                            <div className="verified"><img src="/images/verified.webp" alt="" /> Verified Expert</div>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                             <p>Skill Set</p>
                                             <ul className="listInline tags mt-3">
                                                 <li>React</li>
@@ -96,7 +96,7 @@ const Home = () => {
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
-                                            <div className="verified"><img src="/images/verified.webp" alt="" /> Verified Expert</div>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
                                                     <li>Adobe</li>
@@ -112,7 +112,7 @@ const Home = () => {
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
-                                            <div className="verified"><img src="/images/verified.webp" alt="" /> Verified Expert</div>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
                                                     <li>Google Workspace</li>
@@ -128,7 +128,7 @@ const Home = () => {
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Accountant</h6>
-                                            <div className="verified"><img src="/images/verified.webp" alt="" /> Verified Expert</div>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
                                                     <li>QuickBooks</li>
@@ -143,7 +143,7 @@ const Home = () => {
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
-                                            <div className="verified"><img src="/images/verified.webp" alt="" /> Verified Expert</div>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
                                                     <li>Contract Drafting</li>
@@ -157,7 +157,7 @@ const Home = () => {
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Content Writer</h6>
-                                            <div className="verified"><img src="/images/verified.webp" alt="" /> Verified Expert</div>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
                                                     <li>SEO Writing</li>
@@ -329,7 +329,7 @@ const Home = () => {
                                                             <div className="bannerProfileDetails">
                                                                 <h3>{data.post_title}</h3>
                                                                 <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
-                                                                <div className="verified"><img src="/images/verified.webp" alt="" /> Verified Expert</div>
+                                                                <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                                 <p>Skill Set</p>
                                                                 {/* <span className="Expertise">{data.post_content}</span> */}
                                                                 <ul className="listInline tags mb-2">
