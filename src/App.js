@@ -1,9 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './Component/Footer';
 import Header from './Component/Header';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Home from './Pages/Home';
 import Services from './Pages/Services';
 import BlogDetails from './Pages/BlogDetails';
 import Blog from './Pages/Blog';
@@ -22,12 +23,7 @@ import AboutCitadelAdvantage from './Pages/AboutCitadelAdvantage';
 import DataSecurity from './Pages/DataSecurity';
 import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
 
-const Home = lazy(() => import('./Pages/Home'));
 
-const renderLoader = () => {
-  <div className="loaderWrp"><span className="loader"></span></div>;
-  
-};
 
 function App() {
   return (
@@ -37,11 +33,7 @@ function App() {
         
         <Header />
         <Routes>
-          <Route path="/" element={
-            <Suspense fallback={renderLoader()}>
-              <Home />
-            </Suspense>
-          } />
+          <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:subService" element={<SubServices />} />
