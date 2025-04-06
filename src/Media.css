@@ -368,7 +368,7 @@
   .sliderWrp{
     display: none;
   }
-  .bannerProfile h6 svg, .testimonial .contentBx svg{
+  .bannerProfile h6 svg, .testimonial .contentBx svg, div.bannerProfileDetails > h6 > svg{
     display: none;
   }
   .videoThumb img {
