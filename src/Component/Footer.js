@@ -8,7 +8,7 @@ const Footer = () => {
     useEffect(() => {
         window.addEventListener('scroll', () => {
             if (window.scrollY < 300) {
-                setFooterHide('d-none');
+                setFooterHide('');
             } else {
                 setFooterHide('');
             }

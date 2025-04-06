@@ -344,5 +344,15 @@
   .footer .col {
     min-width: 100%;
   }
-  
+  .videoThumb img {
+      height: auto;
+  }
+
+  .popupContent {
+      width: 350px;
+  }
+
+  .popupContentInr iframe {
+      height: 220px;
+  }
 }

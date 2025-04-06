@@ -20,6 +20,7 @@ const ContactForm = () => {
     });
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
+    const [videoPopup, setVideoPopup] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -28,7 +29,9 @@ const ContactForm = () => {
             [name]: value
         }));
     };
-
+    const handleVideoPopup = () => {
+        setVideoPopup(!videoPopup);
+    };
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -210,19 +213,25 @@ const ContactForm = () => {
                                 <div className="sectionHeading text-center mb-4">
                                     <h2>Trusted by Clients Worldwide</h2>
                                 </div>
-                                {/* <Carousel infiniteLoop preventMovementUntilSwipeScrollTolerance={true} showIndicators={false} showStatus={false} showThumbs={false}>
-                                    <div className="videoTestimonial">
-                                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/S8la1u6U1gc?si=vByJ9duuaLOLWP5k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                                    </div>
-                                    <div className="videoTestimonial">
-                                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3GHmGSKA9I?si=i27sgTjBRKM_63wG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                                    </div>
-                                </Carousel> */}
+                                <div className="videoThumb">
+                                    <img src="/images/youtube-thumb.webp" alt="" onClick={handleVideoPopup} width="447" height="306"/>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {videoPopup && <div className="popup">
+                <div className="popupContent">
+                    <div className="popupClose" onClick={handleVideoPopup}>
+                        <img src="/images/close.png" alt="" />
+                    </div>
+                    <div className="popupContentInr">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3GHmGSKA9I?si=i27sgTjBRKM_63wG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    </div>
+                </div>
+            </div>}
         </React.Fragment>
     )
 };
