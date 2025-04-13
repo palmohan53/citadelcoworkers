@@ -73,11 +73,11 @@ const Home = () => {
                     <div className="col-md-5 col-12 bannerContent">
                         <BannerContent/>
                     </div>
-                        <div className="col-md-7 col-12">
+                        {/* <div className="col-md-7 col-12">
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Full Stack Developer</h6>
@@ -92,7 +92,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="" />
+                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
@@ -108,7 +108,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
@@ -124,7 +124,7 @@ const Home = () => {
                                     </div>
 
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="" />
+                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Accountant</h6>
@@ -139,7 +139,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
@@ -153,7 +153,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img fetchpriority="high" src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="" />
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
                                             <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Content Writer</h6>
@@ -169,7 +169,7 @@ const Home = () => {
                                     </div>
                                 </Slider>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 {/* <div className="videoBg">
