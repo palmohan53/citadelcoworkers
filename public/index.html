@@ -43,7 +43,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet"> -->
     <link rel="preload" href="%PUBLIC_URL%/fonts/NotoSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="%PUBLIC_URL%/fonts/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  
+    <!-- Font face with swap -->
+  <style>
+    @font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans SemiBold'), local('NotoSans-SemiBold'),
+        url('/fonts/NotoSans-SemiBold.woff2') format('woff2'),
+        url('/fonts/NotoSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+        url('/fonts/NotoSans-Regular.woff2') format('woff2'),
+        url('/fonts/NotoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

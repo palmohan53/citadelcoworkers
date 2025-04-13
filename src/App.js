@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './Component/Footer';
 import Header from './Component/Header';
@@ -26,6 +26,21 @@ import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
 
 
 function App() {
+  useEffect(() => {
+    // 1. Load fonts after hydration
+    if ('fonts' in document) {
+      document.fonts.load('1em "Nato Sans"').then(() => {
+        document.documentElement.classList.add('fonts-loaded');
+      });
+    }
+    
+    // 2. Fallback for slow mobile devices
+    const timeout = setTimeout(() => {
+      document.documentElement.classList.add('fonts-loaded');
+    }, 500);
+    
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <div className="App">
      
