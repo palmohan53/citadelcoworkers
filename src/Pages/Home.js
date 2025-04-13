@@ -5,7 +5,7 @@ import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-// import Slider from "react-slick";
+import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
@@ -43,16 +43,16 @@ const Home = () => {
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
     };
-    // let bannerSettings = {
-    //     dots: false,
-    //     arrows:false,
-    //     infinite: true,
-    //     fade: true,
-    //     autoplay: true,
-    //     speed: 1500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    // };
+    let bannerSettings = {
+        dots: false,
+        arrows:false,
+        infinite: true,
+        fade: true,
+        autoplay: true,
+        speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     useEffect(() => {
         // getBlogList()
         window.scrollTo(0, 0)
@@ -73,7 +73,7 @@ const Home = () => {
                     <div className="col-md-5 col-12 bannerContent">
                         <BannerContent/>
                     </div>
-                        {/* <div className="col-md-7 col-12">
+                        <div className="col-md-7 col-12">
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
@@ -169,7 +169,7 @@ const Home = () => {
                                     </div>
                                 </Slider>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
                 {/* <div className="videoBg">
@@ -446,7 +446,7 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <Testimonial serviceTestimonial={serviceTestimonial}/>
+                <Testimonial serviceTestimonial={serviceTestimonial} />
                 <section className="blog">
                     <div className="container">
                         <div className="row mb-3">

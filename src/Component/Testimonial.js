@@ -44,7 +44,7 @@ const Testimonial = ({serviceTestimonial}) => {
                     <Slider {...settings}>
                         {serviceTestimonial?.data?.listing?.map((data, index)=>{
                             return(
-                                <div className="px-3" key={index}>
+                                index < 7 && <div className="px-3" key={index}>
                                     <div className="contentBx">
                                         <img src="/images/quote.webp" alt="" className='quoteImg' width="26" height="19"/>
                                         {/* <h3>I have been working with Toptal...</h3> */}
