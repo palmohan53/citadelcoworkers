@@ -5,7 +5,7 @@ import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { useQuery } from "react-query";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
@@ -43,16 +43,16 @@ const Home = () => {
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
     };
-    let bannerSettings = {
-        dots: false,
-        arrows:false,
-        infinite: true,
-        fade: true,
-        autoplay: true,
-        speed: 1500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
+    // let bannerSettings = {
+    //     dots: false,
+    //     arrows:false,
+    //     infinite: true,
+    //     fade: true,
+    //     autoplay: true,
+    //     speed: 1500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    // };
     useEffect(() => {
         // getBlogList()
         window.scrollTo(0, 0)
