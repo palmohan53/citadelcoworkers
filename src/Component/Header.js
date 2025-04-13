@@ -54,11 +54,11 @@ const Header = () => {
                     
                     <div className={activeClass ? "collapse navbar-collapse active" : "collapse navbar-collapse"} id="navbarSupportedContent">
                         <button className="hidden-xs mobile cross-toggler" onClick={openToggle}>
-                            <img src="/images/close.png" alt="" />
+                            <img src="/images/close.png" alt="" width="15" height="15" />
                         </button>
                         <ul className="navbar-nav m-auto">
                             <li className="mobile">
-                                <img src="/images/logo-new-black.png" alt="" className="mobile-logo" />
+                                <img src="/images/logo-new-black.png" alt="" className="mobile-logo" width="200" height="67"/>
                             </li>
                             <li className="nav-item" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/">Home</NavLink>
