@@ -252,7 +252,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/KJSingh.jpg" alt="team"/>
+                                            <img src="/images/KJSingh.png" alt="team"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>

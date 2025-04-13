@@ -343,6 +343,21 @@
       margin-bottom: 30px;
       min-height: 105px;
   }
+  section.innerBanner.blogDetailsSec {
+      padding-top: 50px;
+  }
+
+  ul.breadcrumb {
+      flex-wrap: wrap;
+  }
+  section.innerBanner.blogDetailsSec .row {
+      flex-direction: column-reverse;
+      gap: 30px;
+  }
+
+  .blogAuth {
+      flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 575px) {
   .semiHeading {
