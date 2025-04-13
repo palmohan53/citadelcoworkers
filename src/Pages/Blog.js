@@ -71,8 +71,8 @@ const Blog = ({isRecentBlog}) => {
         <React.Fragment>
             <HelmetProvider>
                 <Helmet>
-                    <title>Citadel's Blog: Insights on IT Outsourcing & Virtual Assistance</title>
-                    <meta name="description" content="Explore the Citadel Coworkers Blog for insights and regular updates on IT outsourcing, virtual assistance, remote work productivity, etc." />
+                    {/* <title>Citadel's Blog: Insights on IT Outsourcing & Virtual Assistance</title>
+                    <meta name="description" content="Explore the Citadel Coworkers Blog for insights and regular updates on IT outsourcing, virtual assistance, remote work productivity, etc." /> */}
                 </Helmet>
             {!isRecentBlog && <section className="innerBanner">
                 {/* <img src="/images/blog-banner.jpg" alt=""/> */}
