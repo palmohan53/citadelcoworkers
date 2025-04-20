@@ -30,10 +30,10 @@ const Header = () => {
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            if (window.scrollY < 115) {
+            if (window.scrollY < 50) {
                 setscrolltopdata('');
             } else {
-                setscrolltopdata('');
+                setscrolltopdata('scrolled');
             }
         });
     }, [])

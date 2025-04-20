@@ -146,8 +146,8 @@ const SubServices = () => {
                                     return(
                                         <div className="clientBx" key={index}>
                                             <p>
-                                                <CountUp end={data.body} duration={10} />
-                                                +
+                                                {/* <CountUp end={data.body} duration={10} /> */}
+                                                {data.body}+
                                             </p>
                                             <h3>{data.title}</h3>
                                         </div>

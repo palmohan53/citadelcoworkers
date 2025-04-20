@@ -402,9 +402,16 @@
   .popupContentInr iframe {
       height: 220px;
   }
+  .clientNum {
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-top: 50px;
+    height: 360px;
+}
   .clientBx {
     width: 47%;
-    height: 145px;
+    min-height: 145px;
   }
   .clientBx p{
     height: 45px;
