@@ -403,4 +403,7 @@
   .clientBx p{
     height: 45px;
   }
+  .clientBx h3{
+    height: 40px;
+  }
 }
