@@ -74,7 +74,7 @@ const Header = () => {
                                     {
                                         serviceMenu && serviceMenu?.map((menu, index)=>{
                                             return(
-                                                <li key={index} onClick={()=>openToggle()}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.post_title}</NavLink></li>
+                                                <li key={index} onClick={()=>openToggle()}><NavLink className="nav-link" to={`/${menu.post_name}`}>{menu.post_title}</NavLink></li>
                                             )
                                         })
                                     }
