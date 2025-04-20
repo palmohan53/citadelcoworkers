@@ -397,5 +397,10 @@
   .popupContentInr iframe {
       height: 220px;
   }
-  
+  .clientBx {
+    width: 47%;
+  }
+  .clientBx p{
+    height: 45px;
+  }
 }
