@@ -227,11 +227,13 @@
       align-items: center;
       display: flex;
       height: auto;
+      
     }
     section.innerBanner .innerBannerContent{
       position: static;
       transform: translate(-0%, -0%);
       padding: 0;
+      min-height: 230px;
     }
     .clientNum{
       gap: 20px;
@@ -247,7 +249,10 @@
     width: 100%;
       padding: 40px;
       left: 0;
-      aspect-ratio: 200 / 250;
+      
+  }
+  section.profile .bannerProfile .profileImg img{
+    aspect-ratio: 200 / 250;
   }
 
   .bannerProfile.serviceProfile .profileImg {
@@ -399,11 +404,23 @@
   }
   .clientBx {
     width: 47%;
+    height: 145px;
   }
   .clientBx p{
     height: 45px;
   }
   .clientBx h3{
     height: 40px;
+  }
+  .innerBannerContent .wideBtn{
+    min-height: 56px;
+    width: 172px;
+  }
+  .innerBannerContent p {
+    min-height: 90px;
+  }
+
+  .innerBannerContent h1 {
+      min-height: 70px;
   }
 }

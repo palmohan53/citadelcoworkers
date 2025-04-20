@@ -7,17 +7,17 @@ import Slider from "react-slick";
 const Testimonial = ({serviceTestimonial}) => {
     let settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         responsive: [
             {
-              breakpoint: 900,
+              breakpoint: 600,
               settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
+                slidesToScroll: 1,
+                initialSlide: 1
               }
             },
             {

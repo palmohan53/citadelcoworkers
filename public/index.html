@@ -44,6 +44,18 @@
     <link rel="preload" href="%PUBLIC_URL%/fonts/NotoSans-SemiBold.woff2&display=swap" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="%PUBLIC_URL%/fonts/NotoSans-Regular.woff2&display=swap" as="font" type="font/woff2" crossorigin>
     <!-- Font face with swap -->
+    <script id="dynamic-canonical">
+      (function() {
+        const path = window.location.pathname;
+        const canonicalUrl = 'https://www.citadelcoworkers.com' + path;
+        
+        const link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonicalUrl;
+        
+        document.head.appendChild(link);
+      })();
+    </script>
   <style>
     @font-face {
     font-family: 'Noto Sans';

@@ -49,7 +49,7 @@ const Services = () => {
                                                 <h3>{data.post_title}</h3>
                                                 <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
                                                 <div className="text-start">
-                                                    <Link to={`/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                                                    <Link to={`/services/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
                                                 </div>
                                             </React.Fragment>
                                         </div>

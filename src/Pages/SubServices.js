@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useState, useRef, Suspense} from "react";
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import axios from "axios";
@@ -6,9 +6,9 @@ import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-import Testimonial from "../Component/Testimonial";
+// import Testimonial from "../Component/Testimonial";
 import { useParams } from 'react-router-dom';
-import ServiceProfile from "../Component/ServiceProfile";
+// import ServiceProfile from "../Component/ServiceProfile";
 
 import servicesContent from '../Content/services.json';
 import RecentBlog from "../Component/RecentBlog";
@@ -18,6 +18,11 @@ import Pricing from "../Component/Pricing";
 import ServiceBulkContentUpper from "../Component/ServiceBulkContentUpper";
 import Faq from "../Component/Faq";
 import ContactForm from "../Component/ContactForm";
+
+const Testimonial = React.lazy(() => import('../Component/Testimonial'));
+const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
+
+
 
 const SubServices = () => {
     const {subService} = useParams();
@@ -120,12 +125,13 @@ const SubServices = () => {
                     <h1>{serviceContent[0]?.banner[0]?.title}</h1>
                     <p>{serviceContent[0]?.banner[0]?.body}</p>
                     <div className="text-center mt-3">
-                        <Link to="/contact-us" className="colorBtn wideBtn">Hire {serviceContent[0]?.categoryName} Now</Link>
+                        {/* <Link to="/contact-us" className="colorBtn wideBtn">Hire {serviceContent[0]?.categoryName} Now</Link> */}
+                        <Link to="/contact-us" className="colorBtn wideBtn">Hire  Now</Link>
                     </div>
                 </div>
                 <div className="bannerOvelay"></div>
             </section>
-            <section className="explore" id="servicesSec">
+            <section className="explore">
                 <div className="container">
                     <div className="row align-items-center mb-3">
                         <div className="col-md-12 col-12 text-center">
@@ -137,13 +143,12 @@ const SubServices = () => {
                             <div className="clientNum">
                                 
                                 {serviceContent[0]?.clientsNumber.map((data, index)=>{
-                                    // const countNum = data.body;
                                     return(
                                         <div className="clientBx" key={index}>
-                                            {/* <img src={data.imageUrl} alt={data.title} /> */}
-                                            {/* <p>{data.body}</p> */}
-                                            <p><CountUp end={data.body} duration={10} />+</p>
-                                            {/* {console.log(countNum, 'countNum')} */}
+                                            <p>
+                                                <CountUp end={data.body} duration={10} />
+                                                +
+                                            </p>
                                             <h3>{data.title}</h3>
                                         </div>
                                     )
@@ -190,7 +195,7 @@ const SubServices = () => {
                     </div>
                 </div>
             </section>
-            
+            <Suspense fallback={<div className="h-[400px] w-full" />}>
             <section className="profile">
                 <div className="container">
                     <div className="row align-items-center mb-3">
@@ -203,16 +208,22 @@ const SubServices = () => {
                     </div>
                     <div className="row mt-3">
                         <div className="col-12">
+                        
                             <ServiceProfile serviceProfile={serviceProfile} handleScrollClick={handleScrollClick}/>
+                            
                         </div>
                     </div>
                 </div>
             </section>
+            </Suspense>
             <section className="serviceBulkContent">
                 <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
             </section>
             
-            <Testimonial serviceTestimonial={serviceTestimonial} />
+            <Suspense fallback={<div className="h-[400px] w-full" />}>
+                <Testimonial serviceTestimonial={serviceTestimonial} />
+            </Suspense>
+            
             <Steps />
             <Pricing handleScrollClick={handleScrollClick}/>
             <section className="serviceBulkContent">
