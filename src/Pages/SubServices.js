@@ -172,8 +172,8 @@ const SubServices = () => {
                                             <div className="colorBx">
                                                 <React.Fragment>
                                                     <div className="servicesIcon">
-                                                        <img src={data.banner} alt="" className="serviceIco" />
-                                                        <img src={data.hover_image} alt="" className="serviceIco serviceHoverIco" />
+                                                        <img src={data.banner} alt="" className="serviceIco" width="64" height="64"/>
+                                                        <img src={data.hover_image} alt="" className="serviceIco serviceHoverIco" width="64" height="64" />
                                                     </div>
                                                     <h3>{data.post_title}</h3>
                                                     <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>

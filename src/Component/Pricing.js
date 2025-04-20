@@ -18,7 +18,7 @@ const Pricing = ({handleScrollClick}) => {
                         <div className="col-md-4 col-12">
                             <div className="pricing-content-wrapper">
                                 <div className="pricing-plan-wrapper">
-                                    <img src="/images/basic-icon.svg" alt="" className="pricing-plan-icon"/>
+                                    <img src="/images/basic-icon.svg" alt="" width="29" height="28" className="pricing-plan-icon"/>
                                     <div className="pricing-plan-name">Business Plan</div>
                                 </div>
                                 <div className="pricing-price-wrapper">
@@ -49,7 +49,7 @@ const Pricing = ({handleScrollClick}) => {
                         <div className="col-md-4 col-12">
                             <div className="pricing-content-wrapper">
                                 <div className="pricing-plan-wrapper">
-                                    <img src="/images/premium-icon.svg" alt="" className="pricing-plan-icon"/>
+                                    <img src="/images/premium-icon.svg" width="25" height="24" alt="" className="pricing-plan-icon"/>
                                     <div className="pricing-plan-name">Pro Plan</div>
                                 </div>
                                 <div className="pricing-price-wrapper">
@@ -79,7 +79,7 @@ const Pricing = ({handleScrollClick}) => {
                         <div className="col-md-4 col-12">
                             <div className="pricing-content-wrapper">
                                 <div className="pricing-plan-wrapper">
-                                    <img src="/images/standard-icon.svg" alt="" className="pricing-plan-icon"/>
+                                    <img src="/images/standard-icon.svg" width="24" height="24" alt="" className="pricing-plan-icon"/>
                                     <div className="pricing-plan-name"> Basic Plan</div>
                                 </div>
                                 <div className="pricing-price-wrapper">
