@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef, Suspense} from "react";
 import { Link } from 'react-router-dom';
-import CountUp from 'react-countup';
+// import CountUp from 'react-countup';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
