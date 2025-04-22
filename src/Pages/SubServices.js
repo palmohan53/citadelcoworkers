@@ -118,6 +118,7 @@ const SubServices = () => {
                 <Helmet>
                     <title>{serviceContent[0]?.pageMetaTitle}</title>
                     <meta name="description" content={serviceContent[0]?.pageMetaContent} />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
             <section className="innerBanner">
                 {/* <img src="/images/service-banner.jpg" alt=""/> */}

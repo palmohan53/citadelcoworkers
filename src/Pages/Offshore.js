@@ -14,6 +14,7 @@ const Offshore = () => {
                 <Helmet>
                     <title>Offshore - citadel coworkers</title>
                     <meta name="description" content="Understanding Offshore team Understanding an offshore team means embracing a global perspective where expertise knows no bounds. At Citadel Co-workers, we connect you with a pool of 250 specialized professionals, each dedicated to your business’s growth. With seven years of experience and two offices spanning continents, our collaboration has led to the satisfaction of 650 […]" />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
                 <section className="innerBanner">
                     {/* <img src="/images/inr-banner.jpg" alt=""/> */}

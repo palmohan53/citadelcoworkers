@@ -467,6 +467,7 @@ section.banner p {
 .serviceIco {
   /* width: 64px; */
   height: 64px;
+  width: auto;
   /* object-fit: cover; */
   /* padding: 10px;
   background: #ffffff;
@@ -2490,4 +2491,14 @@ section.innerBanner.blogDetailsSec {
   width: auto;
   margin-bottom: 10px;
   display: block;
+}
+.notFound img {
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.notFound {
+  padding: 120px 0 80px;
+  min-height: calc(calc(100vh - -130px));
 }

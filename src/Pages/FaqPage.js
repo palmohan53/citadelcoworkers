@@ -8,6 +8,7 @@ const FaqPage = () => {
             <Helmet>
                 <title>FAQ - citadel coworkers</title>
                 <meta name="description" content="how can we help you Common Queries Frequently Asked Questions 1. How can Citadel Coworkers help my business grow? CCW offers a large talent pool of professionals from various domains, whom you can hire as a dedicated employee for your business. Unlike a freelancer, CCW resources work exclusively for you, and you have absolute managerial […]" />
+                <link rel="canonical" href={window.location.href} />
             </Helmet>
             <section className="innerBanner">
                 {/* <img src="/images/inr-banner.jpg" alt=""/> */}

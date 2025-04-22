@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import ContactForm from "../Component/ContactForm";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { faMapLocationDot, faBusinessTime, faHeadset, faWandMagicSparkles, faHourglass, faUsersViewfinder} from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
@@ -9,6 +10,12 @@ const Contact = () => {
       }, [])
     return(
         <React.Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Contact Us - Citadel CoWorkers™</title>
+                    <meta name="description" content="We&#039;re a leader in IT and virtual assistant solutions tailored to enhance your business operations. Partner with Citadel to elevate your business with cost-effective and exceptional customer service." />
+                    <link rel="canonical" href={window.location.href} />
+                </Helmet>
             <section className="innerBanner">
                 {/* <img src="/images/contact-banner.jpg" alt=""/> */}
                 <div className="innerBannerContent">
@@ -159,6 +166,7 @@ const Contact = () => {
                     </div>
                 </div>
             </section>
+            </HelmetProvider>
         </React.Fragment>
     )
 };

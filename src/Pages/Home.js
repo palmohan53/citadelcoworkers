@@ -66,6 +66,7 @@ const Home = () => {
                 <Helmet>
                     <title>Hire Virtual Employees in India Starting US $5 - Citadel Coworkers</title>
                     <meta name="description" content="Citadel Coworkers is the #1 company helping businesses globally by providing innovative solutions tailored to your business across the world." />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
             <section className="banner">
                 <div className="container">

@@ -12,6 +12,7 @@ const RefundPolicy = () => {
                 <Helmet>
                     <title>Refund Policy - citadel coworkers</title>
                     <meta name="description" content="Refund Policy Contract Termination: Both Citadel Coworkers and the client reserve the right to terminate the contract with a 15-day written notice. Should either party require a longer notice period, arrangements can be made provided that both parties agree to the extended timeline. Refund Conditions: Complete Refund: If the performance of your assigned employee is […]" />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
                 <section className="innerBanner">
                     {/* <img src="/images/inr-banner.jpg" alt=""/> */}

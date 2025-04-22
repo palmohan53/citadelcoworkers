@@ -22,6 +22,7 @@ import FaqPage from './Pages/FaqPage';
 import AboutCitadelAdvantage from './Pages/AboutCitadelAdvantage';
 import DataSecurity from './Pages/DataSecurity';
 import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
+import NotFound from './Pages/NotFound';
 
 
 
@@ -65,6 +66,7 @@ function App() {
           <Route path="/about-citadel-advantage" element={<AboutCitadelAdvantage />} />
           <Route path="/data-security" element={<DataSecurity />} />
           <Route path="/how-does-citadel-works" element={<HowDoesCitadelWorks />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
     </div>

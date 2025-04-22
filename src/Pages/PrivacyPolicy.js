@@ -12,6 +12,7 @@ const PrivacyPolicy = () => {
                 <Helmet>
                     <title>Privacy Policy - citadel coworkers</title>
                     <meta name="description" content="Privacy Policy Introduction : We are committed to safeguarding the privacy of [our website visitors and service users]. This policy applies where we are acting as a data controller with respect to the personal data of [our website visitors and service users]; in other words, where we determine the purposes and means of the processing […]" />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
                 <section className="innerBanner">
                     {/* <img src="/images/inr-banner.jpg" alt=""/> */}

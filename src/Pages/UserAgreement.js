@@ -12,6 +12,7 @@ const UserAgreement = () => {
                 <Helmet>
                     <title>Citadel Coworkers User Agreemenaat - citadel coworkers</title>
                     <meta name="description" content="Citadel Coworkers User Agreement Acceptance of Terms: Citadel Coworkers, also known as Citadel Coworkers Private Limited, provides outsourcing services globally, with offices in India, the UK, and the US. By using our website, you agree to comply with and be bound by the following terms and conditions of use. Those not in agreement with these […]" />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
                 <section className="innerBanner">
                     {/* <img src="/images/inr-banner.jpg" alt=""/> */}

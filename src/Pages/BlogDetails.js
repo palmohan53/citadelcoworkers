@@ -44,6 +44,7 @@ const BlogDetails = () => {
             <Helmet>
                 <title>{data?.post?.post_title}</title>
                 <meta name="description" content={data?.post?.post_title} />
+                <link rel="canonical" href={window.location.href} />
             </Helmet>
         <section className="innerBanner blogDetailsSec">
             

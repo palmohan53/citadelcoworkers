@@ -40,6 +40,7 @@ const About = () => {
                 <Helmet>
                     <title>About Us - Citadel CoWorkers™</title>
                     <meta name="description" content="We&#039;re a leader in IT and virtual assistant solutions tailored to enhance your business operations. Partner with Citadel to elevate your business with cost-effective and exceptional customer service." />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
                 <section className="innerBanner">
                     {/* <img src="/images/inr-banner.jpg" alt=""/> */}

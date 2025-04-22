@@ -13,6 +13,7 @@ const HowDoesCitadelWorks = () => {
                 <Helmet>
                     <title>How Does Citadel - citadel coworkers</title>
                     <meta name="description" content="How Does Citadel Cookie List A cookie is a small piece of data (text file) that a website – when visited by a user – asks your browser to store on your device in order to remember information about you, such as your language preference or login information. Those cookies are set by us and called […]" />
+                    <link rel="canonical" href={window.location.href} />
                 </Helmet>
                 <section className="innerBanner">
                     {/* <img src="/images/inr-banner.jpg" alt=""/> */}
