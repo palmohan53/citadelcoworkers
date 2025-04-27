@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Footer from './Component/Footer';
 import Header from './Component/Header';
 import About from './Pages/About';
@@ -52,7 +52,33 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
+
+          
+          <Route path="/virtual-assistant" element={<Navigate to="/services/virtual-assistant" replace />} />
           <Route path="/services/:subService" element={<SubServices />} />
+
+          <Route path="/mobile-app-development" element={<Navigate to="/services/mobile-app-development" replace />} />
+          <Route path="/services/:subService" element={<SubServices />} />
+          
+          <Route path="/finance-and-accounting" element={<Navigate to="/services/finance-and-accounting" replace />} />
+          <Route path="/services/:subService" element={<SubServices />} />
+
+          <Route path="/digital-marketing" element={<Navigate to="/services/digital-marketing" replace />} />
+          <Route path="/services/:subService" element={<SubServices />} />
+
+          <Route path="/legal-process-outsourcing" element={<Navigate to="/services/legal-process-outsourcing" replace />} />
+          <Route path="/services/:subService" element={<SubServices />} />
+
+          <Route path="/development" element={<Navigate to="/services/development" replace />} />
+          <Route path="/services/:subService" element={<SubServices />} />
+
+          <Route path="/outsource-staff-augmentation-services" element={<Navigate to="/services/outsource-staff-augmentation-services" replace />} />
+          <Route path="/services/:subService" element={<SubServices />} />
+
+          <Route path="/hire-content-writers" element={<Navigate to="/services/hire-content-writers" replace />} />
+          <Route path="/services/:subService" element={<SubServices />} />
+          
+          {/* <Route path="/services/:subService" element={<SubServices />} /> */}
           <Route path="/services/:subService/:serviceDetails" element={<Services />} />
           <Route path="/blog/" element={<Blog />} />
           <Route path="/blog/:blog" element={<BlogDetails />} />
@@ -66,6 +92,7 @@ function App() {
           <Route path="/about-citadel-advantage" element={<AboutCitadelAdvantage />} />
           <Route path="/data-security" element={<DataSecurity />} />
           <Route path="/how-does-citadel-works" element={<HowDoesCitadelWorks />} />
+          <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

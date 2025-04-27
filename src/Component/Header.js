@@ -22,8 +22,9 @@ const Header = () => {
         setSubMenuClass(!subMenuClass);
     };
     const getServiceList = async () => {
-        const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceListing}`)
-        const data = await response.data?.listing?.reverse();
+        // const response = await axios.get(`https://www.citadelcoworkers.com/api/getMenulisting.php`)
+        const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceMenu}`)
+        const data = await response.data.menus;
         return data;
     }
     const { data:serviceMenu } = useQuery("serviceMenu", getServiceList);
@@ -74,7 +75,22 @@ const Header = () => {
                                     {
                                         serviceMenu && serviceMenu?.map((menu, index)=>{
                                             return(
-                                                <li key={index} onClick={()=>openToggle()}><NavLink className="nav-link" to={`/services/${menu.post_name}`}>{menu.post_title}</NavLink></li>
+                                                <li key={index} onClick={()=>openToggle()} className="dropDown">
+                                                    <NavLink className="nav-link" to={`/${menu.url}`}>{menu.menu}</NavLink>
+                                                    {/* menu.submenu && menu.submenu.length > 0 ? <FontAwesomeIcon icon={faAngleDown} className="mobile" onClick={subMenuToggle}/> : ""} */}
+                                                    
+                                                        {
+                                                            menu.submenus && menu.submenus.length > 0 ? menu.submenus.map((submenus, index)=>{
+                                                                return(
+                                                                    <ul>
+                                                                        <li key={index} onClick={()=>openToggle()}>
+                                                                            <NavLink className="nav-link" to={`/${submenus.url}`}>{submenus.name}</NavLink>
+                                                                        </li>
+                                                                    </ul>
+                                                                )
+                                                            }) : ""
+                                                        }
+                                                </li>
                                             )
                                         })
                                     }

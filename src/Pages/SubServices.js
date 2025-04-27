@@ -5,6 +5,7 @@ import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { useNavigate } from 'react-router-dom';
 
 // import Testimonial from "../Component/Testimonial";
 import { useParams } from 'react-router-dom';
@@ -25,6 +26,7 @@ const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
 
 
 const SubServices = () => {
+    const navigate = useNavigate();
     const {subService} = useParams();
     const [servicedata, setServicedata] = useState([]);
     const [serviceProfile, setServiceProfile] = useState([]);
@@ -41,7 +43,12 @@ const SubServices = () => {
     const getServiceList = async () => {
         await axios.get(`${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`)
         .then((res)=>{
-            setServicedata(res);
+            if(res.data.status === "fail"){
+                navigate('/not-found');
+            }else{
+                setServicedata(res);
+            }
+            console.log(res.data.status === "fail", 'res')
         })
         .catch((err)=>{
             setServicedata([])
