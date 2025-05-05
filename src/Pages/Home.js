@@ -78,10 +78,10 @@ const Home = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
-                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Full Stack Developer</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Full Stack Developer</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                             <p>Skill Set</p>
                                             <ul className="listInline tags mt-3">
@@ -93,10 +93,10 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="" />
+                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="Isha Verma" />
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
-                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -109,10 +109,10 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="Rohit Nair" />
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
-                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -125,10 +125,10 @@ const Home = () => {
                                     </div>
 
                                     <div className="bannerProfile">
-                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="" />
+                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="Kavita Sharma" />
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
-                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Accountant</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Accountant</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -140,10 +140,10 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="Arjun Kapoor" />
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
-                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -154,10 +154,10 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="" />
+                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="Neha Joshi" />
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
-                                            <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/> Content Writer</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Content Writer</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                 <p>Skill Set</p>
                                                 <ul className="listInline tags mt-3">
@@ -197,8 +197,8 @@ const Home = () => {
                                                 <div className="colorBx">
                                                     <React.Fragment>
                                                         <div className="servicesIcon">
-                                                            <img src={data.banner} alt="" className="serviceIco" width="64" height="64"/>
-                                                            <img src={data.hover_image} alt="" className="serviceIco serviceHoverIco" width="64" height="64"/>
+                                                            <img src={data.banner} alt={data.post_title} className="serviceIco" width="64" height="64"/>
+                                                            <img src={data.hover_image} alt={data.post_title} className="serviceIco serviceHoverIco" width="64" height="64"/>
                                                         </div>
                                                         <h3>{data.post_title}</h3>
                                                         <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
@@ -234,7 +234,7 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/expert-ico.png" alt="" width="70" height="70"/>
+                                            <img src="/images/expert-ico.png" alt="Top Experts, On-Demand" width="70" height="70"/>
                                             <h2 className="semiHeading">Top Experts, On-Demand</h2>
                                             <p>Hire skilled professionals in hours—ready to deliver from day one.</p>
                                         </div>
@@ -246,7 +246,7 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/profit-ico.png" alt="" width="70" height="70"/>
+                                            <img src="/images/profit-ico.png" alt="Lower Costs, Higher Profits" width="70" height="70"/>
                                             <h2 className="semiHeading">Lower Costs, Higher Profits</h2>
                                             <p>Cut office, payroll, and operational expenses while maximizing efficiency.</p>
                                         </div>
@@ -258,7 +258,7 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/world-wide-ico.png" alt="" width="70" height="70"/>
+                                            <img src="/images/world-wide-ico.png" alt="24/7 Business Continuity" width="70" height="70"/>
                                             <h2 className="semiHeading">24/7 Business Continuity</h2>
                                             <p>Leverage global talent across time zones for uninterrupted growth.</p>
                                         </div>
@@ -284,28 +284,28 @@ const Home = () => {
                                 <div className="row mt-5">
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/hire-quickly.png' alt="" width="80" height="80" />
+                                            <img src='/images/hire-quickly.png' alt="Hire Quickly" width="80" height="80" />
                                             <h3>Hire Quickly</h3>
                                             <p>Hire in under 24 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/top-3.png' alt="" width="80" height="80" />
+                                            <img src='/images/top-3.png' alt="The Top 3%" width="80" height="80" />
                                             <h3>The Top 3%</h3>
                                             <p>Every applicant to the Citadel network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/future-innovation.png' alt="" width="80" height="80" />
+                                            <img src='/images/future-innovation.png' alt="Leading the Future of Work" width="80" height="80" />
                                             <h3>Leading the Future of Work</h3>
                                             <p>Our network is ready for tomorrow’s business challenges by embracing advanced and specialized skills, including blockchain and AI.</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/level-up.png' alt="" width="80" height="80" />
+                                            <img src='/images/level-up.png' alt="A Level Above" width="80" height="80" />
                                             <h3>A Level Above</h3>
                                             <p>Every single Virtual Employee in our global network embodies the highest levels of integrity, professionalism, and communication.</p>
                                         </div>
@@ -324,12 +324,12 @@ const Home = () => {
                                                     
                                                         <div className="bannerProfile">
                                                             <div className="profileImg">
-                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" width="248" height="200" />
+                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="248" height="200" />
                                                                 <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
                                                             </div>
                                                             <div className="bannerProfileDetails">
                                                                 <h3>{data.post_title}</h3>
-                                                                <h6><img src="/images/code.webp" alt="" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
+                                                                <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
                                                                 <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                                                 <p>Skill Set</p>
                                                                 {/* <span className="Expertise">{data.post_content}</span> */}
@@ -397,7 +397,7 @@ const Home = () => {
                 </section>
                 <section className="video">
                     <div className="videoBgImage">
-                        <img src="/images/home-banner.png" alt="" />
+                        <img src="/images/home-banner.png" alt="Seamless Remote Hiring – Build Your Dream Team Today" />
                     </div>
                     <div className="container">
                         <div className="row">
@@ -463,14 +463,14 @@ const Home = () => {
                                     <Link to={`/blog/${data?.data?.listing[0]?.post_name}`} className="d-block">
                                         <div className="blogBx blogBig">
                                             <div className="blogImg">
-                                                <img src={data?.data?.listing[0]?.banner} alt=""/>
+                                                <img src={data?.data?.listing[0]?.banner} alt={data?.data?.listing[0]?.post_title}/>
                                                 <div className="blogAuthImg">
                                                     {
                                                         data?.data?.listing[0]?.display_name === "Pinka Sharma"
                                                         ?
-                                                        <img src="/images/pinka.webp" alt="" width="70" height="70"/>
+                                                        <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
                                                         :
-                                                        <img src="/images/suresh.webp" alt="" width="70" height="70"/>
+                                                        <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
                                                     }
                                                 </div>
                                             </div>
@@ -501,9 +501,9 @@ const Home = () => {
                                                                         {
                                                                             blog?.display_name === "Pinka Sharma"
                                                                             ?
-                                                                            <img src="/images/pinka.webp" alt="" width="70" height="70"/>
+                                                                            <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
                                                                             :
-                                                                            <img src="/images/suresh.webp" alt="" width="70" height="70"/>
+                                                                            <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
                                                                         }
                                                                         </div>
                                                                     </div>

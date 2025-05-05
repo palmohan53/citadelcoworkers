@@ -133,13 +133,13 @@ const About = () => {
                                 </div> */}
                                 <div className="about2-images">
                                     <div className="image1">
-                                        <img src="/images/about2-img1.png" alt=""/>
+                                        <img src="/images/about2-img1.png" alt="Empowering Businesses with Top Virtual Talent"/>
                                     </div>
                                     <div className="image2">
-                                        <img src="/images/about2-img2.png" alt=""/>
+                                        <img src="/images/about2-img2.png" alt="Empowering Businesses with Top Virtual Talent"/>
                                     </div>
                                     <div className="image3">
-                                        <img src="/images/about2-img3.png" alt=""/>
+                                        <img src="/images/about2-img3.png" alt="Empowering Businesses with Top Virtual Talent"/>
                                     </div>
                                     <div className="counter-box">
                                         <h3>05</h3>
@@ -200,7 +200,7 @@ const About = () => {
                             </div>
                         </Slider>
                         <div className="bgImg">
-                            <img src="/images/sky-bg.png" alt=""/>
+                            <img src="/images/sky-bg.png" alt="Industries We Serve"/>
                         </div>
                     </div>
                 </section>
@@ -215,7 +215,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/amit-gupta-2.png" alt="team"/>
+                                            <img src="/images/amit-gupta-2.png" alt="Amit Gupta"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -234,7 +234,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Suresh-Sharma.jpg" alt="team"/>
+                                            <img src="/images/Suresh-Sharma.jpg" alt="Suresh Sharma"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -253,7 +253,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/KJSingh.png" alt="team"/>
+                                            <img src="/images/KJSingh.png" alt="Kamaljeet Singh"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -272,7 +272,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Anil.png" alt="team"/>
+                                            <img src="/images/Anil.png" alt="Anil Aggarwal"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -291,7 +291,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                     <div className="image_box ">
-                                        <img src="/images/Akansha.png" alt="team"/>
+                                        <img src="/images/Akansha.png" alt="Akansha Sharma"/>
                                         <div className="overlay ">
                                             <ul>
                                                 <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -310,7 +310,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Meenu-Singh.png" alt="team"/>
+                                            <img src="/images/Meenu-Singh.png" alt="Meenu Singh"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -329,7 +329,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Bhawana.png" alt="team"/>
+                                            <img src="/images/Bhawana.png" alt="Bhawna"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -348,7 +348,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Akshat.png" alt="team"/>
+                                            <img src="/images/Akshat.png" alt="Akshat Varshney"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>

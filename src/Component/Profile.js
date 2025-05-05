@@ -57,7 +57,7 @@ const Profile = ({handleScrollClick}) => {
                             
                                 <div className="bannerProfile">
                                     <div className="profileImg">
-                                        <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt="" className="" />
+                                        <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" />
                                         <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
                                     </div>
                                     <div className="bannerProfileDetails">

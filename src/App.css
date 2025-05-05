@@ -2414,7 +2414,7 @@ section.innerBanner.blogDetailsSec {
 }
 
 /* Add arrows to the left container (pointing right) */
-.left::before {
+/* .left::before {
   content: " ";
   height: 0;
   position: absolute;
@@ -2425,7 +2425,7 @@ section.innerBanner.blogDetailsSec {
   border: medium solid #f8fbff;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #f8fbff;
-}
+} */
 
 /* Add arrows to the right container (pointing left) */
 .right::before {

@@ -71,8 +71,8 @@ const ContactForm = () => {
                                 <h2>Get In Touch</h2>
                                 <p>Fill out the form below, and a Citadel representative will<br/>contact you as soon as possible.</p>
                                 <div className="sticyImgForm">
-                                    <img src="/images/cnbnr-02.webp" width="70" height="69" alt="" />
-                                    <img src="/images/nda.webp" width="70" height="69" alt="" />
+                                    <img src="/images/cnbnr-02.webp" width="70" height="69" alt="CNBNR" />
+                                    <img src="/images/nda.webp" width="70" height="69" alt="NDA" />
                                 </div>
                                 <ul className="listInline">
                                     <li>
@@ -214,7 +214,7 @@ const ContactForm = () => {
                                     <h2>Trusted by Clients Worldwide</h2>
                                 </div>
                                 <div className="videoThumb">
-                                    <img src="/images/youtube-thumb.webp" alt="" onClick={handleVideoPopup} width="447" height="306"/>
+                                    <img src="/images/youtube-thumb.webp" alt="Trusted by Clients Worldwide" onClick={handleVideoPopup} width="447" height="306"/>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@ const ContactForm = () => {
             {videoPopup && <div className="popup">
                 <div className="popupContent">
                     <div className="popupClose" onClick={handleVideoPopup}>
-                        <img src="/images/close.png" alt="" />
+                        <img src="/images/close.png" alt="close" />
                     </div>
                     <div className="popupContentInr">
                         <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3GHmGSKA9I?si=i27sgTjBRKM_63wG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>

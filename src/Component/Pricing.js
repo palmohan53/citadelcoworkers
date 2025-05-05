@@ -18,7 +18,7 @@ const Pricing = ({handleScrollClick}) => {
                         <div className="col-md-4 col-12">
                             <div className="pricing-content-wrapper">
                                 <div className="pricing-plan-wrapper">
-                                    <img src="/images/basic-icon.svg" alt="" width="29" height="28" className="pricing-plan-icon"/>
+                                    <img src="/images/basic-icon.svg" alt="Business Plan" width="29" height="28" className="pricing-plan-icon"/>
                                     <div className="pricing-plan-name">Business Plan</div>
                                 </div>
                                 <div className="pricing-price-wrapper">
@@ -30,15 +30,15 @@ const Pricing = ({handleScrollClick}) => {
                                 </div> */}
                                 <div className="pricing-feature-list-wrapper">
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text"> 8 hours a day</div>
                                     </div>
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">5 days a week</div>
                                     </div>
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">Dedicated resource</div>
                                     </div>
                                     
@@ -49,7 +49,7 @@ const Pricing = ({handleScrollClick}) => {
                         <div className="col-md-4 col-12">
                             <div className="pricing-content-wrapper">
                                 <div className="pricing-plan-wrapper">
-                                    <img src="/images/premium-icon.svg" width="25" height="24" alt="" className="pricing-plan-icon"/>
+                                    <img src="/images/premium-icon.svg" width="25" height="24" alt="Pro Plan" className="pricing-plan-icon"/>
                                     <div className="pricing-plan-name">Pro Plan</div>
                                 </div>
                                 <div className="pricing-price-wrapper">
@@ -61,15 +61,15 @@ const Pricing = ({handleScrollClick}) => {
                                 </div> */}
                                 <div className="pricing-feature-list-wrapper">
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">4 hours a day</div>
                                     </div>
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">5 days a week</div>
                                     </div>
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">Dedicated resource</div>
                                     </div>
                                 </div>
@@ -79,7 +79,7 @@ const Pricing = ({handleScrollClick}) => {
                         <div className="col-md-4 col-12">
                             <div className="pricing-content-wrapper">
                                 <div className="pricing-plan-wrapper">
-                                    <img src="/images/standard-icon.svg" width="24" height="24" alt="" className="pricing-plan-icon"/>
+                                    <img src="/images/standard-icon.svg" width="24" height="24" alt="Basic Plan" className="pricing-plan-icon"/>
                                     <div className="pricing-plan-name"> Basic Plan</div>
                                 </div>
                                 <div className="pricing-price-wrapper">
@@ -91,15 +91,15 @@ const Pricing = ({handleScrollClick}) => {
                                 </div> */}
                                 <div className="pricing-feature-list-wrapper">
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">60 hours a month</div>
                                     </div>
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">Pay-as-you-consume</div>
                                     </div>
                                     <div className="pricing-item-wrapper">
-                                        <img src="/images/tick-02.svg" alt="" className="pricing-checkmark-icon"/>
+                                        <img src="/images/tick-02.svg" alt="Tick Icon" className="pricing-checkmark-icon"/>
                                         <div className="pricing-item-text">Ideal for low volume work</div>
                                     </div>
                                 

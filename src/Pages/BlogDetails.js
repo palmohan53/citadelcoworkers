@@ -62,9 +62,9 @@ const BlogDetails = () => {
                                 {
                                     data.post.auther_name === "Pinka Sharma"
                                     ?
-                                    <img src="/images/pinka.webp" alt=""/>
+                                    <img src="/images/pinka.webp" alt="Pinka Sharma"/>
                                     :
-                                    <img src="/images/suresh.webp" alt=""/>
+                                    <img src="/images/suresh.webp" alt="Suresh Sharma"/>
                                 }
                                 <h5>{data.post.auther_name}</h5>
                                 <h6>{formatDate(data.post.post_modified)}</h6>
@@ -82,7 +82,7 @@ const BlogDetails = () => {
                     </div>
                     <div className="col-md-6 col-12">
                         <div className="blogDetailsBanner">
-                            <img src={data.banner} alt=""/>
+                            <img src={data.banner} alt={data?.post?.post_title}/>
                         </div>
                     </div>
                 </div>
