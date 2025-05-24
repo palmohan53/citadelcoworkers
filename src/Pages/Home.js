@@ -235,7 +235,7 @@ const Home = () => {
                                     <div className="service_content">
                                         <div className="content_inner">
                                             <img src="/images/expert-ico.png" alt="Top Experts, On-Demand" width="70" height="70"/>
-                                            <h2 className="semiHeading">Top Experts, On-Demand</h2>
+                                            <h3 className="semiHeading">Top Experts, On-Demand</h3>
                                             <p>Hire skilled professionals in hours—ready to deliver from day one.</p>
                                         </div>
                                     </div>
@@ -247,7 +247,7 @@ const Home = () => {
                                     <div className="service_content">
                                         <div className="content_inner">
                                             <img src="/images/profit-ico.png" alt="Lower Costs, Higher Profits" width="70" height="70"/>
-                                            <h2 className="semiHeading">Lower Costs, Higher Profits</h2>
+                                            <h3 className="semiHeading">Lower Costs, Higher Profits</h3>
                                             <p>Cut office, payroll, and operational expenses while maximizing efficiency.</p>
                                         </div>
                                     </div>
@@ -259,7 +259,7 @@ const Home = () => {
                                     <div className="service_content">
                                         <div className="content_inner">
                                             <img src="/images/world-wide-ico.png" alt="24/7 Business Continuity" width="70" height="70"/>
-                                            <h2 className="semiHeading">24/7 Business Continuity</h2>
+                                            <h3 className="semiHeading">24/7 Business Continuity</h3>
                                             <p>Leverage global talent across time zones for uninterrupted growth.</p>
                                         </div>
                                     </div>
@@ -422,27 +422,27 @@ const Home = () => {
                         <div className="row">
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
                         <div className="step_number">
-                            <h3>01.</h3>
+                            <span className='hdCount'>01.</span>
                         </div>
-                        <h2 className="title">
+                        <h3 className="title">
                             <a href="/">Payroll Management</a>
-                        </h2>
+                        </h3>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
                         <div className="step_number">
-                            <h3>02.</h3>
+                            <span className='hdCount'>02.</span>
                         </div>
-                        <h2 className="title">
+                        <h3 className="title">
                             <a href="/">Employee Compensation</a>
-                        </h2>
+                        </h3>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
                         <div className="step_number">
-                            <h3>03.</h3>
+                            <span className='hdCount'>03.</span>
                         </div>
-                        <h2 className="title">
+                        <h3 className="title">
                             <a href="/">Benefits Management</a>
-                        </h2>
+                        </h3>
                     </div>
                         </div>
                     </div>

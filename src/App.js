@@ -51,38 +51,34 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/about" element={<Navigate to="/about-us" replace />} />
           <Route path="/services" element={<Services />} />
 
-          
+          <Route path="/graphic-web-design" element={<Navigate to="/services/graphic-web-design" replace />} />
           <Route path="/virtual-assistant" element={<Navigate to="/services/virtual-assistant" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
 
           <Route path="/mobile-app-development" element={<Navigate to="/services/mobile-app-development" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
           
           <Route path="/finance-and-accounting" element={<Navigate to="/services/finance-and-accounting" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
 
           <Route path="/digital-marketing" element={<Navigate to="/services/digital-marketing" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
 
           <Route path="/legal-process-outsourcing" element={<Navigate to="/services/legal-process-outsourcing" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
 
           <Route path="/development" element={<Navigate to="/services/development" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
+
+          <Route path="/category/development" element={<Navigate to="/services/development" replace />} />
 
           <Route path="/outsource-staff-augmentation-services" element={<Navigate to="/services/outsource-staff-augmentation-services" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
 
           <Route path="/hire-content-writers" element={<Navigate to="/services/hire-content-writers" replace />} />
           <Route path="/services/:subService" element={<SubServices />} />
           
-          {/* <Route path="/services/:subService" element={<SubServices />} /> */}
           <Route path="/services/:subService/:serviceDetails" element={<Services />} />
           <Route path="/blog/" element={<Blog />} />
           <Route path="/blog/:blog" element={<BlogDetails />} />
           <Route path="/contact-us" element={<Contact />} />
+          <Route path="/contact" element={<Navigate to="/contact-us" replace />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />

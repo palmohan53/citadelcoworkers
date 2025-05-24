@@ -1155,7 +1155,7 @@ section.video .sectionHeading h2, section.video .sectionHeading p {
   position: relative;
   z-index: 11;
 }
-.step_number h3 {
+.step_number .hdCount {
   font-size: 60px;
   line-height: 60px;
   color: #fff;
