@@ -74,7 +74,7 @@ function App() {
           <Route path="/hire-content-writers" element={<Navigate to="/services/hire-content-writers" replace />} />
           <Route path="/services/:subService" element={<SubServices />} />
           
-          <Route path="/services/:subService/:serviceDetails" element={<Services />} />
+          <Route path="/services/:subService/:serviceDetails" element={<SubServices />} />
           <Route path="/blog/" element={<Blog />} />
           <Route path="/blog/:blog" element={<BlogDetails />} />
           <Route path="/contact-us" element={<Contact />} />

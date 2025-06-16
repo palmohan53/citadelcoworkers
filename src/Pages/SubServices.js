@@ -27,7 +27,7 @@ const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
 
 const SubServices = () => {
     const navigate = useNavigate();
-    const {subService} = useParams();
+    const {subService, serviceDetails} = useParams();
     const [servicedata, setServicedata] = useState([]);
     const [serviceProfile, setServiceProfile] = useState([]);
     const [serviceBulkContent, setServiceBulkContent] = useState([]);
@@ -41,7 +41,12 @@ const SubServices = () => {
     };
 
     const getServiceList = async () => {
-        await axios.get(`${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`)
+        // await axios.get(`${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`)
+        let apiUrl = `${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`;
+        if(serviceDetails){
+            apiUrl = `${API_HOST}${API_ENDPOINTS.subServiceListing}${serviceDetails}`;
+        }
+        await axios.get(apiUrl)
         .then((res)=>{
             if(res.data.status === "fail"){
                 navigate('/not-found');
@@ -56,7 +61,12 @@ const SubServices = () => {
         })
     }
     const getProfileList = async () => {
-        await axios.get(`${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`)
+        let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`;
+        if(serviceDetails){
+            apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${serviceDetails}`;
+        }
+        await axios.get(apiUrl)
+        // await axios.get(`${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`)
         .then((res)=>{
             setServiceProfile(res);
         })
@@ -66,7 +76,12 @@ const SubServices = () => {
         })
     }
     const getServiceBulkContent = async () => {
-        await axios.get(`${API_HOST}${API_ENDPOINTS.serviceBulkcontent}${subService}`)
+        // await axios.get(`${API_HOST}${API_ENDPOINTS.serviceBulkcontent}${subService}`)
+        let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceBulkcontent}${subService}`;
+        if(serviceDetails){
+            apiUrl = `${API_HOST}${API_ENDPOINTS.serviceBulkcontent}${serviceDetails}`;
+        }
+        await axios.get(apiUrl)
         .then((res)=>{
             setServiceBulkContent(res);
         })
@@ -76,7 +91,12 @@ const SubServices = () => {
         })
     }
     const getServiceBulkContentUpper = async () => {
-        await axios.get(`${API_HOST}${API_ENDPOINTS.serviceBulkcontentUpper}${subService}`)
+        // await axios.get(`${API_HOST}${API_ENDPOINTS.serviceBulkcontentUpper}${subService}`)
+        let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceBulkcontentUpper}${subService}`;
+        if(serviceDetails){
+            apiUrl = `${API_HOST}${API_ENDPOINTS.serviceBulkcontentUpper}${serviceDetails}`;
+        }
+        await axios.get(apiUrl)
         .then((res)=>{
             setServiceBulkContentUpper(res);
         })
@@ -86,7 +106,12 @@ const SubServices = () => {
         })
     }
     const getServiceTestimonial = async () => {
-        await axios.get(`${API_HOST}${API_ENDPOINTS.serviceTestimonial}${subService}`)
+        // await axios.get(`${API_HOST}${API_ENDPOINTS.serviceTestimonial}${subService}`)
+        let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceTestimonial}${subService}`;
+        if(serviceDetails){
+            apiUrl = `${API_HOST}${API_ENDPOINTS.serviceTestimonial}${serviceDetails}`;
+        }
+        await axios.get(apiUrl)
         .then((res)=>{
             setServiceTestimonial(res);
         })
@@ -102,13 +127,13 @@ const SubServices = () => {
     // }
     // const { data, status } = useQuery("Profile", getProfileList);
     const filterServiceJson = () => {
-        const filterContent = servicesContent.services.filter(item=> item.categoryUrl === subService);
+        const filterContent = servicesContent.services.filter(item=> item.categoryUrl === (subService || serviceDetails));
         setServiceContent(filterContent);
     }
     const faqData = serviceContent[0]?.faq;
     useEffect(() => {
         window.scrollTo(0, 0);
-        if(subService){
+        if(subService || serviceDetails){
             getServiceList();
             getProfileList();
             getServiceBulkContent();
@@ -117,7 +142,7 @@ const SubServices = () => {
             filterServiceJson();
         }
         //eslint-disable-next-line
-    }, [subService])
+    }, [subService, serviceDetails])
 
     return(
         <React.Fragment>
