@@ -127,7 +127,10 @@ const SubServices = () => {
     // }
     // const { data, status } = useQuery("Profile", getProfileList);
     const filterServiceJson = () => {
-        const filterContent = servicesContent.services.filter(item=> item.categoryUrl === (subService || serviceDetails));
+        let filterContent = servicesContent.services.filter(item=> item.categoryUrl === (subService));
+        if(serviceDetails){
+            filterContent = servicesContent.services.filter(item=> item.categoryUrl === (serviceDetails));
+        }
         setServiceContent(filterContent);
     }
     const faqData = serviceContent[0]?.faq;
