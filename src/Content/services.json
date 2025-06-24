@@ -985,7 +985,104 @@
                     "body": "You can expect exclusive industry expertise with an offshore payroll specialist. They know the nuances of your industry, like wages and tax rules, and they can provide tailored solutions."
                 }
             ]
+        },
+        {
+            "categoryUrl": "real-estate",
+            "categoryName": "Real Estate",
+            "pageMetaTitle": "Hire a Real Estate in India",
+            "pageMetaContent": "Revolutionize Your Real Estate Operations with Specialized Assistance",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Real Estate Virtual Assistants in India – Starts at $6/H",
+                        "body": "Revolutionize Your Real Estate Operations with Specialized Assistance"
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Comprehensive Real Estate Virtual Assistant Services",
+                        "body": "From Generating Leads to Managing CRM Systems – We Have You Covered"
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title": "Transform Your Real Estate Business with Expert Virtual Assistance",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Skilled Virtual Assistants",
+                        "body": "50"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Queries Handled Daily",
+                        "body": "200"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Satisfied Global Clients",
+                        "body": "800"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years’ Industry Experience",
+                        "body": "10"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How can your virtual assistants help streamline property listing management?",
+                        "body": "Our virtual assistants craft SEO-optimized listings, update property information regularly, and ensure your properties gain maximum exposure on all platforms."
+                    },
+                    {
+                        "title": "02. Can your assistants assist with CRM migration and management?",
+                        "body": "Yes, our experts ensure a smooth transition during CRM migration and manage your client database efficiently, including organizing leads, tracking interactions, and scheduling follow-ups."
+                    },
+                    {
+                        "title": "03. Do you offer real estate market research services?",
+                        "body": "Absolutely. Our virtual assistants deliver in-depth market analysis, uncover emerging trends, and provide actionable insights precisely aligned with your business objectives."
+                    },
+                    {
+                        "title": "04. Can your team handle appointment scheduling for property viewings?",
+                        "body": "Yes, our scheduling services include managing calendars, coordinating viewings, and ensuring all appointments are well-organized to boost your operational efficiency."
+                    },
+                    {
+                        "title": "05. Do your image editing services improve property visuals for marketing?",
+                        "body": "Definitely. With advanced editing tools at our fingertips, we transform property photos into stunning, market-ready visuals designed to grab attention and boost engagement effortlessly."
+                    }
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Why Outsource Real Estate Virtual Assistant Services",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Cost-Effective:",
+                    "body": "Reduce overhead costs with affordable outsourcing options."
+                },
+                {
+                    "title": "Expert Assistance",
+                    "body": "Gain access to experienced professionals adept at managing real estate-specific tasks."
+                },
+                {
+                    "title": "Time-Saving",
+                    "body": "Delegate routine tasks to focus on client relationships and deal closures."
+                },
+                {
+                    "title": "Cutting-Edge Tools",
+                    "body": "Harness the power of advanced software to boost efficiency and deliver exceptional outcomes seamlessly."
+                },
+                {
+                    "title": "Flexibility",
+                    "body": "Effortlessly expand your resources as your business evolves—no recruitment headaches, just smooth scalability."
+                }
+            ]
         }
-        
     ]
 }
