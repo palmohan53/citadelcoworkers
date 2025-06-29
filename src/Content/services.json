@@ -1083,6 +1083,104 @@
                     "body": "Effortlessly expand your resources as your business evolves—no recruitment headaches, just smooth scalability."
                 }
             ]
+        },
+        {
+            "categoryUrl": "data-entry",
+            "categoryName": "Data Entry",
+            "pageMetaTitle": "Hire Data Entry Experts in India – Starting at Just $5/Hour",
+            "pageMetaContent": "Simplify Your Workload with Precision-Driven Data Entry Experts",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Data Entry Experts in India – Starting at Just $5/Hour",
+                        "body": "Simplify Your Workload with Precision-Driven Data Entry Experts"
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Comprehensive Data Entry Services",
+                        "body": "From Raw Input to Actionable Data – We&#39;ve Got You Covered"
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title": "Scale Smart with Reliable Data Entry Virtual Assistants",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Trained Data Specialists",
+                        "body": "120"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Projects Delivered",
+                        "body": "2500"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Served",
+                        "body": "25"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years of Industry Experience",
+                        "body": "12"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can your data entry experts handle high-volume projects?",
+                        "body": "Absolutely. Our team is trained to manage large datasets with strict turnaround times while maintaining 99.9% accuracy. We use batching, validation tools, and cross-verification to ensure output consistency."
+                    },
+                    {
+                        "title": "02. Do you provide real-time updates on project progress?",
+                        "body": "Yes. With dashboards and shared sheets, you can monitor status, validate records, and stay updated at every single step of the project lifecycle."
+                    },
+                    {
+                        "title": "03. How do your specialists ensure complete data security and confidentiality?",
+                        "body": "With ISO compliance in mind, our data entry experts implement best practices for data handling such as access control, encrypted file transfers, and signed NDAs for complete data confidentiality."
+                    },
+                    {
+                        "title": "04. Are your data entry experts skilled in using industry-specific tools?",
+                        "body": "Yes. Our data entry experts meet the relevant performance benchmarks and can quickly adapt to your preferred industry-standard plugins or proprietary software."
+                    },
+                    {
+                        "title": "05. Do your specialists provide data deduplication and cleansing solutions?",
+                        "body": "Definitely. Our data entry specialists are adept at finding errors, eradicating duplicates, and reformatting datasets to make sure your overall data is complete, clean, and analytics-ready."
+                    }
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "We Are at Your Service for:",
+                    "body": "Streamline Operations and Unlock Growth with Expert Data Entry Support"
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Data Accuracy",
+                    "body": "From transaction records to customer databases, our data entry experts ensure every detail is captured cleanly and precisely, providing your business a solid foundation to move faster and smarter."
+                },
+                {
+                    "title": "Specialized Expertise",
+                    "body": "Our offshore professionals aren’t just fast but also familiar with the nuances of sectors like healthcare, finance, e-commerce, etc. Your data isn&#39;t just entered, but it’s structured, validated, and business-ready."
+                },
+                {
+                    "title": "Seamless Collaboration",
+                    "body": "Our data entry experts integrate effortlessly with your platforms and processes to keep workflows smooth, projects on track, and operational headaches out of your way."
+                },
+                {
+                    "title": "More Focus &amp; Business Growth",
+                    "body": "Free from the weight of routine tasks, your leadership team can invest its energy where it matters most - expansion, innovation, and customer success."
+                },
+                {
+                    "title": "Stronger Customer Trust",
+                    "body": "Up-to-date, accurate information isn’t just internal hygiene but also a brand promise. Our data entry specialists help you deliver consistently reliable experiences that build loyalty and trust."
+                }
+            ]
         }
     ]
 }
