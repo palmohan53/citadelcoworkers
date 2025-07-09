@@ -51,9 +51,9 @@ const SubServices = () => {
             if(res.data.status === "fail"){
                 navigate('/not-found');
             }else{
-                setServicedata(res);
+                const revesrseList = res?.data?.listing?.reverse();
+                setServicedata(revesrseList);
             }
-            console.log(res.data.status === "fail", 'res')
         })
         .catch((err)=>{
             setServicedata([])
@@ -206,7 +206,7 @@ const SubServices = () => {
                     </div>
                     <div className="row mt-5 borderBox">
                         {
-                            servicedata?.data?.listing?.map((data, index)=>{
+                            servicedata?.map((data, index)=>{
                                 return(
                                     <React.Fragment key={index}>
                                         <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>

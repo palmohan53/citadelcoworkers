@@ -77,7 +77,7 @@ const Contact = () => {
                                     <FontAwesomeIcon icon={faHeadset} />
                                     <div className="d-block">
                                         <h3>Chat with Team</h3>
-                                        <p>Call Us 24×7: <a href="tel:+1 (646) -583-0053">+1 (646) -583-0053</a></p>
+                                        <p>Call Us 24×7: <a href="tel:+19294707900">+19294707900</a></p>
                                         <p>Write Us <a href="mailto:sales@citadelcoworkers.com">sales@citadelcoworkers.com</a></p>
                                     </div>
                                 </div>

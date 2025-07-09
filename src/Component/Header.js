@@ -82,8 +82,8 @@ const Header = () => {
                                                         {
                                                             menu.submenus && menu.submenus.length > 0 ? menu.submenus.map((submenus, index)=>{
                                                                 return(
-                                                                    <ul>
-                                                                        <li key={index} onClick={()=>openToggle()}>
+                                                                    <ul key={index}>
+                                                                        <li onClick={()=>openToggle()}>
                                                                             <NavLink className="nav-link" to={`/${submenus.url}`}>{submenus.name}</NavLink>
                                                                         </li>
                                                                     </ul>

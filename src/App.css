@@ -1836,7 +1836,7 @@ span.icon-cell.site-text-primary {
   height: 200px;
   object-fit: contain !important;
   width: 100%;
-  background: #cccccc21;
+  background: #fff;
 }
 .profileBxBx .bannerProfile:nth-child(3) {
   left: 40px;
