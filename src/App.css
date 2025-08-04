@@ -1994,10 +1994,13 @@ span.icon-cell.site-text-primary {
 }
 section.serviceBulkContent img {
   display: inline-block;
-  width: 450px;
-  min-width: 450px;
+  width: 50%;
+  min-width: 50%;
   height: auto;
-  border: solid 2px #ccc;
+  border: dashed 1px #ccc;
+  padding: 5px;
+  max-height: min-content;
+  border-radius: 10px;
   padding: 5px;
   max-height: min-content;
 }
@@ -2127,6 +2130,7 @@ section.serviceBulkContent .para {
 .bulkContent {
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 section.serviceBulkContent .para strong {
   display: block;
@@ -2511,4 +2515,37 @@ section.innerBanner.blogDetailsSec {
 .notFound {
   padding: 120px 0 80px;
   min-height: calc(calc(100vh - -130px));
+}
+
+.flex-dv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
+}
+
+.div1 {
+  background: #cccccc3b;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px dashed #1749d64a;
+}
+
+.div1 p {
+  margin-bottom: 0px;
+}
+
+.flex-dv {
+  
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
+  column-count: 2;
+  column-gap: 15px;
+}
+
+.div1 h4 {
+  margin-bottom: 10px;
+  color: #2351d6;
+  font-weight: 600;
 }
