@@ -14,6 +14,7 @@ import RecentBlog from "../Component/RecentBlog";
 
 const BlogDetails = () => {
     const {blog} = useParams();
+    
     const getBlogDetails = async () => {
         window.scrollTo(0, 0)
         const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogDetails}${blog}`)
