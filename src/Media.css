@@ -12,6 +12,16 @@
   .sliderWrp{
     overflow: hidden;
   }
+  .arrow-light {
+    display: none;
+}
+section.process.pb-100
+{
+  padding-bottom: 80px;
+}
+.arrow-for {
+    display: none;
+}
   section.banner h1 {
     font-size: 22px;
   }
@@ -251,9 +261,9 @@
       left: 0;
       
   }
-  section.profile .bannerProfile .profileImg img{
+  /*section.profile .bannerProfile .profileImg img{
     aspect-ratio: 200 / 250;
-  }
+  } */
 
   .bannerProfile.serviceProfile .profileImg {
       position: static;
@@ -364,6 +374,20 @@
       flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 767px) {
+.bannerProfile {
+    width: 100% !important;
+}
+
+    section.process.pb-100 {
+        padding-bottom: 60px;
+    }
+
+.profileImg img {
+    width: 100%;
+}
+}
+
 @media screen and (max-width: 575px) {
   .semiHeading {
     font-size: 18px;

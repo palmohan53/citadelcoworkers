@@ -79,16 +79,16 @@ const Header = () => {
                                                     <NavLink className="nav-link" to={`/${menu.url}`}>{menu.menu}</NavLink>
                                                     {/* menu.submenu && menu.submenu.length > 0 ? <FontAwesomeIcon icon={faAngleDown} className="mobile" onClick={subMenuToggle}/> : ""} */}
                                                     
-                                                        {
-                                                            menu.submenus && menu.submenus.length > 0 ? menu.submenus.map((submenus, index)=>{
-                                                                return(
-                                                                    <ul key={index}>
-                                                                        <li onClick={()=>openToggle()}>
-                                                                            <NavLink className="nav-link" to={`/${submenus.url}`}>{submenus.name}</NavLink>
-                                                                        </li>
-                                                                    </ul>
-                                                                )
-                                                            }) : ""
+                                                       {menu.submenus && menu.submenus.length > 0 && (
+                                                            <ul className="submenu">
+                                                                {menu.submenus.map((sub, subIndex) => (
+                                                                <li key={subIndex} onClick={openToggle}>
+                                                                    <NavLink className="nav-link" to={`/${sub.url}`}>{sub.name}</NavLink>
+                                                                </li>
+                                                                ))}
+                                                            </ul>
+                                                            )
+                                                            
                                                         }
                                                 </li>
                                             )

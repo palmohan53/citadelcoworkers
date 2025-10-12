@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
@@ -43,6 +43,37 @@ const Home = () => {
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
     };
+
+
+      const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);  // Add class when section is in viewport
+        } else {
+          setIsVisible(false); // Optional: remove if not in view
+        }
+      },
+      {
+        threshold: 0.1, // fire when at least 10% is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+
     let bannerSettings = {
         dots: false,
         arrows:false,
@@ -81,7 +112,7 @@ const Home = () => {
                                         <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
-                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Full Stack Developer</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/> Full Stack Developer</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                             <p>Skill Set</p>
                                             <ul className="listInline tags mt-3">
@@ -178,7 +209,7 @@ const Home = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
-                <section className="service" id="servicesSec">
+                <section className="service home-page" id="servicesSec">
                     <div className="container">
                         <div className="row align-items-center mb-3">
                             <div className="col-md-12 col-12">
@@ -234,7 +265,8 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/expert-ico.png" alt="Top Experts, On-Demand" width="70" height="70"/>
+                                            <img src="/images/expert.svg" alt="Top Experts, On-Demand" width="70" height="70"className="none-hover"/>
+                                            <img src="/images/expert-white.png" alt="Top Experts, On-Demand" width="70" height="70"className="hover-img"/>
                                             <h3 className="semiHeading">Top Experts, On-Demand</h3>
                                             <p>Hire skilled professionals in hours—ready to deliver from day one.</p>
                                         </div>
@@ -246,7 +278,8 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/profit-ico.png" alt="Lower Costs, Higher Profits" width="70" height="70"/>
+                                            <img src="/images/profit-ico.svg" alt="Lower Costs, Higher Profits" width="70" height="70"className="none-hover"/>
+                                             <img src="/images/profit-ico-white.webp " alt="Lower Costs, Higher Profits" width="70" height="70"className="hover-img"/>
                                             <h3 className="semiHeading">Lower Costs, Higher Profits</h3>
                                             <p>Cut office, payroll, and operational expenses while maximizing efficiency.</p>
                                         </div>
@@ -258,7 +291,8 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/world-wide-ico.png" alt="24/7 Business Continuity" width="70" height="70"/>
+                                            <img src="/images/time glob (1).svg" alt="24/7 Business Continuity" width="70" height="70"className="none-hover"/>
+                                             <img src="/images/time glob white.svg" alt="24/7 Business Continuity" width="70" height="70"className="hover-img"/>
                                             <h3 className="semiHeading">24/7 Business Continuity</h3>
                                             <p>Leverage global talent across time zones for uninterrupted growth.</p>
                                         </div>
@@ -269,7 +303,7 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section className="process">
+                <section className="process pb-100">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-7 col-12">
@@ -284,28 +318,28 @@ const Home = () => {
                                 <div className="row mt-5">
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/hire-quickly.png' alt="Hire Quickly" width="80" height="80" />
+                                            <img src='/images/hire-quickly-new.svg' alt="Hire Quickly" width="64px" height="64px" />
                                             <h3>Hire Quickly</h3>
                                             <p>Hire in under 24 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/top-3.png' alt="The Top 3%" width="80" height="80" />
+                                            <img src='/images/top-3 (2).svg' alt="The Top 3%" width="64px" height="64px" />
                                             <h3>The Top 3%</h3>
                                             <p>Every applicant to the Citadel network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/future-innovation.png' alt="Leading the Future of Work" width="80" height="80" />
+                                            <img src='/images/Future-work.png' alt="Leading the Future of Work" width="64px" height="64px" />
                                             <h3>Leading the Future of Work</h3>
                                             <p>Our network is ready for tomorrow’s business challenges by embracing advanced and specialized skills, including blockchain and AI.</p>
                                         </div>
                                     </div>
                                     <div className="col-md-6 col-12">
                                         <div className="contentBx">
-                                            <img src='/images/level-up.png' alt="A Level Above" width="80" height="80" />
+                                            <img src='/images/level.svg' alt="A Level Above" width="64px" height="64px" />
                                             <h3>A Level Above</h3>
                                             <p>Every single Virtual Employee in our global network embodies the highest levels of integrity, professionalism, and communication.</p>
                                         </div>
@@ -324,24 +358,24 @@ const Home = () => {
                                                     
                                                         <div className="bannerProfile">
                                                             <div className="profileImg">
-                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="248" height="200" />
+                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="" height="" />
                                                                 <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
                                                             </div>
                                                             <div className="bannerProfileDetails">
                                                                 <h3>{data.post_title}</h3>
-                                                                <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
                                                                 <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
-                                                                <p>Skill Set</p>
+                                             
+                                                                <h6><img src="/images/code (1).webp" alt="code icon" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
+                                                                                   <p>Skill Set</p>
                                                                 {/* <span className="Expertise">{data.post_content}</span> */}
-                                                                <ul className="listInline tags mb-2">
-                                                                    {
-                                                                        skillSet.map((skill, index) => {
-                                                                            return(
-                                                                                <li key={index}>{skill}</li>
-                                                                            )
-                                                                        })
-                                                                    }
-                                                                </ul>
+                                                              <ul className="listInline tags mb-2 f">
+  {skillSet.map((skillString, index) =>
+    skillString.split("·").map((skill, i) => (
+      <li key={`${index}-${i}`}>{skill.trim()}</li>
+    ))
+  )}
+</ul>
+
                                                             </div>
                                                         </div>
                                                     }
@@ -354,12 +388,15 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section className="hiringProcess">
+    <section
+      ref={sectionRef}
+      className={`hiringProcess ${isVisible ? "visible" : ""}`}
+    >
                     <div className="container">
                         <div className="row align-items-center mb-3">
                             <div className="col-md-12 col-12">
                                 <div className="sectionHeading text-center">
-                                    <h2>🚀 Hire in Just 24 Hours - Quick & Simple</h2>
+                                    <h2> Hire in Just 24 Hours - Quick & Simple</h2>
                                     {/* <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p> */}
                                 </div>
                             </div>
@@ -367,29 +404,42 @@ const Home = () => {
                         <div className="row mt-5">
                             <div className="col-md-4 col-12">
                                     <div className="contentBx">
+                                       
+
                                         <div className="numWrp">
+                                        <div className='arrow-light'>
+                                        <svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg>
+                                       
+                                       </div> 
                                             <div className="hiringNum">1</div>
+                                            <div className="arrow-for"><svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg></div>
                                         </div>
                                         <h3>Tell Us What You Need</h3>
-                                        <p>📌 Share your job role, required skills, and preferred working hours (full-time/part-time).</p>
+                                        <p> Share your job role, required skills, and preferred working hours (full-time/part-time).</p>
                                     </div>
-                            </div>
+                           </div>
                             <div className="col-md-4 col-12">
                                     <div className="contentBx">
+                                        
                                         <div className="numWrp">
                                             <div className="hiringNum">2</div>
+                                            <div className="arrow-for"><svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg></div>
                                         </div>
                                         <h3>Get Matched Instantly</h3>
-                                        <p>📋 We shortlist pre-vetted experts based on your exact needs. Review profiles, conduct quick interviews, and choose the best fit.</p>
+                                        <p> We shortlist pre-vetted experts based on your exact needs. Review profiles, conduct quick interviews, and choose the best fit.</p>
                                     </div>
                             </div>
                             <div className="col-md-4 col-12">
                                     <div className="contentBx noArrow">
                                         <div className="numWrp">
                                             <div className="hiringNum">3</div>
+                                               <div className='arrow-light last-div'>
+                                        <svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg>
+                                       
+                                       </div>
                                         </div>
                                         <h3>Start in 24 Hours</h3>
-                                        <p>🚀 Once selected, your virtual professional is onboarded and ready to work within 24 hours—no setup hassle, just results!</p>
+                                        <p>Once selected, your virtual professional is onboarded and ready to work within 24 hours—no setup hassle, just results!</p>
                                     </div>
                             </div>
                         </div>
@@ -487,12 +537,12 @@ const Home = () => {
                                     </Link>
                                 </div>
                                 <div className="col-md-7 col-12">
-                                    <div className="row">
+                                    <div className="row g-4">
                                         {
                                             data?.data.listing?.map((blog, index)=>{
                                                 return(
                                                     index !== 0 && index < 5 ? 
-                                                        <div className="col-md-6 col-12" key={index}>
+                                                        <div className=" blog-home col-md-6 col-12" key={index}>
                                                             <Link to={`/blog/${blog?.post_name}`}  className="d-block">
                                                                 <div className="blogBx blogSmall">
                                                                     <div className="blogImg">
@@ -529,7 +579,7 @@ const Home = () => {
                                 </div>
                                 <div className="col-12 mt-4">
                                     <div className="text-center">
-                                        <Link to="/blog" className="lineBtn">Read More</Link>
+                                        <Link to="/blog" className=" colorBtn wideBtn">Read More</Link>
                                     </div>
                                 </div>
                             </div>

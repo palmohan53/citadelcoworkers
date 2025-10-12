@@ -1,16 +1,19 @@
 
 
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+ import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// 🧩 Custom Arrows
 
 const Testimonial = ({serviceTestimonial}) => {
     let settings = {
         dots: false,
+        arrow:false,
         infinite: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 3,
+   
         responsive: [
             {
               breakpoint: 600,
@@ -48,7 +51,7 @@ const Testimonial = ({serviceTestimonial}) => {
                                     <div className="contentBx">
                                         <img src="/images/quote.webp" alt="" className='quoteImg' width="26" height="19"/>
                                         {/* <h3>I have been working with Toptal...</h3> */}
-                                        <p>{data.post_content}</p>
+                                      {data.post_content}
                                         <ul className="listInline">
                                             <li><img src="/images/stars.webp" alt="" width="100" height="14" className='stars'/></li>
                                             
@@ -59,7 +62,10 @@ const Testimonial = ({serviceTestimonial}) => {
                                 </div>
                             )
                         })}
+              
                     </Slider>
+                               {/* Bottom arrow container */}
+          
                     {/* <div className="col-md-4 col-12">
                         <div className="contentBx">
                             <FontAwesomeIcon icon={faQuoteLeft} />

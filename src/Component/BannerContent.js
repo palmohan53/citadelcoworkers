@@ -5,7 +5,7 @@ const BannerContent = () => {
     return(
         <>
             <h1 className="banner-title">
-                <b>Hire Virtual Employees from India</b>
+                <b>Hire Virtual Employees From India</b>
             </h1>
             <h4 
                 className="banner-subtitle"

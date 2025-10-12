@@ -49,7 +49,7 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                         <React.Fragment key={index}>
                             
                                 <div className="bannerProfile serviceProfile">
-                                    <div className="profileImg">
+                                    <div className="profileImg service-image">
                                         <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" />
                                         <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
                                     </div>
@@ -57,7 +57,7 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                                         <h3>{data.post_title}</h3>
                                         <h6 className="my-2">{data.Designation}</h6>
                                         <div className="verified"><FontAwesomeIcon icon={faCircleCheck} /> Verified Expert</div>
-                                        <p className="my-3">{data.post_content}</p>
+                                        <div className="my-3">{data.post_content}</div>
                                         <p><b>Skill Set</b></p>
                                         {/* <span className="Expertise">{data.post_content}</span> */}
                                         <ul className="listInline tags mb-3">
