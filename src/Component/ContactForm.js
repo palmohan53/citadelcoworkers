@@ -14,7 +14,6 @@ const ContactForm = () => {
         email: '',
         phone_number: '',
         website: '',
-        project_duration: 'Project Duration',
         company_name: '',
         description: ''
     });
@@ -46,7 +45,6 @@ const ContactForm = () => {
                 email: '',
                 phone_number: '',
                 website: '',
-                project_duration: 'Project Duration',
                 company_name: '',
                 description: ''
             });
@@ -140,37 +138,6 @@ const ContactForm = () => {
                                                 <div className="form-group">
                                                     <input 
                                                         type="text" 
-                                                        name="website" 
-                                                        className="form-control" 
-                                                        placeholder="Website"
-                                                        value={formData.website}
-                                                        onChange={handleChange}
-                                                    /> 
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-12">
-                                                <div className="form-group">
-                                                    <select 
-                                                        name="project_duration" 
-                                                        className="form-control"
-                                                        value={formData.project_duration}
-                                                        onChange={handleChange}
-                                                        required
-                                                    >
-                                                        <option value="Project Duration">Project Duration</option>
-                                                        <option value="Less then one month">Less then one month</option>
-                                                        <option value="1 to 3 months">1 to 3 months</option>
-                                                        <option value="3 to 6 months">3 to 6 months</option>
-                                                        <option value="6 to 12 months">6 to 12 months</option>
-                                                        <option value="more then 1 year">more then 1 year</option>
-                                                        <option value="Not sure">Not sure</option>
-                                                    </select> 
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-12">
-                                                <div className="form-group">
-                                                    <input 
-                                                        type="text" 
                                                         name="company_name" 
                                                         className="form-control" 
                                                         placeholder="Company Name"
@@ -186,7 +153,7 @@ const ContactForm = () => {
                                                         name="description" 
                                                         className="form-control" 
                                                         rows={5} 
-                                                        placeholder="Share your description"
+                                                        placeholder="Share your requirement"
                                                         value={formData.description}
                                                         onChange={handleChange}
                                                         required

@@ -854,14 +854,19 @@ section.testimonial .slick-next:before, section.testimonial .slick-prev:before {
   width: 100%;
   border: solid 1px #cccccc75;
 }
-
+.sideBorder:hover a {
+    color: #00cc83;
+}
 .blogBx {
   position: relative;
   box-shadow: 0 0 10px #0000000d;
   margin-bottom: 30px;
   transition: all 500ms ease;
+      height: 100%;
 }
-
+section#BlogDetailsSec a.d-block {
+    height: 100%;
+}
 .blogAuthImg {
   position: absolute;
   bottom: -30px;
@@ -1165,7 +1170,14 @@ span.icon-dollar img {
 .con_content a {
   color: #aaafb8;
 }
-
+span.icon-dollar {
+    background: #fff;
+    border: .75px solid #6383dd;
+    border-radius: 50%;
+    height: 80px;
+    left: 0;
+    width: 80px;
+}
 .video {
   position: relative;
   padding: 130px 0 0;
@@ -1819,9 +1831,7 @@ img.hover-img {
   background: #42bd6d;
   border-color: #42bd6d;
 }
-.service_box.style_three {
-  margin-left: 25px;
-}
+
 .service_box.style_three .service_content:hover {
     background: #1749d5;
     transition: all 500ms ease;
@@ -1847,8 +1857,12 @@ img.hover-img {
     text-align: center;
     border: 0.75px solid #6383dd;
 }
+.service_box.style_three.dark_color {
+    height: 100%;
+}
 .service-section-two .service_box.style_three .service_content{
-  min-height: 365px;
+
+  height: 100%;
 }
 .service-section-two  .service_box.style_three .service_content .content_inner {
   position: relative;

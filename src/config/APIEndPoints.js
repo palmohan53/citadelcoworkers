@@ -13,6 +13,7 @@ const API_ENDPOINTS = {
     testimonial: 'api/getTestimonial.php?post_type=testimonial',
     contactUs: 'api/contactUsapi.php',
     serviceMenu: 'api/getMenulisting.php',
+    serviceSection: 'api/getSection.php?post_type=steps_section&post_name=',
 }
 
 export default API_ENDPOINTS;
