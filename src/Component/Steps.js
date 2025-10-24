@@ -26,22 +26,22 @@ const Steps = ({ serviceSection }) => {
           {serviceSection?.listing?.map((item, index) => {
             const steps = [
               {
-                icon: faClipboardList,
+                icon: "/images/clipboard.png",
                 title: item.step_1_title,
                 description: item.step_1_description,
               },
               {
-                icon: faPeopleArrows,
+               icon: "/images/star.png",
                 title: item.step_2_title,
                 description: item.step_2_description,
               },
               {
-                icon: faSitemap,
+                      icon: "/images/sitemap.png",
                 title: item.step_3_title,
                 description: item.step_3_description,
               },
               {
-                icon: faHouseLaptop,
+                icon: "/images/work-from-home.png",
                 title: item.step_4_title,
                 description: item.step_4_description,
               },
@@ -57,7 +57,7 @@ const Steps = ({ serviceSection }) => {
                     <div className="content_inner">
                       <span className="icon-dollar">
                         
-                        <FontAwesomeIcon icon={step.icon} />
+                      <img src={step.icon} alt="icon"  />
                       </span>
                       <small className="nom">{`0${stepIndex + 1}`}</small>
                       <h4 className="semiHeading">{step.title}</h4>

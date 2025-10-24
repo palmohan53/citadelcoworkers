@@ -389,6 +389,14 @@ section.process.pb-100
 }
 
 @media screen and (max-width: 575px) {
+  .offer-popup-content {
+    width: 80%;
+}
+button.close-btn
+{
+  height: 30px;
+  width: 30px;
+}
   .semiHeading {
     font-size: 18px;
   }

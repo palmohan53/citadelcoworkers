@@ -3106,3 +3106,151 @@ margin-bottom: 20px;
     /* flex-direction: column; */
     /* height: 100%; */
 }
+.offer-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgb(0 0 0 / 78%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.offer-popup-content {
+    color: #fff;
+}
+.offer-popup-content h2 {
+    font-size: 40px;
+}
+.offer-popup-content {
+  background: #0d1d33;
+
+  border-radius: 8px;
+  width: 40%;
+  position: relative;
+  text-align: center;
+
+}
+.offer-image h4 {
+    font-size: 19px;
+}
+.highlight {
+  color: #00e676;
+  font-weight: 700;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.offer-popup-content:before {
+
+    position: absolute; 
+    background-image: url(/public/images/pump.webp);
+    width: 96%;
+    left: 0;
+    right: 0;
+    height: 96%;
+    top: 0;
+    opacity: .4;
+    z-index: 1;
+  background-repeat: no-repeat;
+    background-position: right bottom;
+ 
+}
+.offer-con h4 {
+    font-size: 20px;
+}
+p.hallwoen {
+    font-size: 18px;
+    margin-bottom: 6px !important
+}
+.offer-popup-content::after {
+
+    position: absolute; background-image: url(/public/images/bathal.png);
+      width: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    top: 0;
+  display: inline-block;
+  animation: wiggle 1.5s ease-in-out infinite;
+
+    background-repeat: no-repeat;
+ background-position: left;
+ 
+}
+.offer-popup-content h2 {
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+.offer-popup-content p {
+    margin-bottom: 25px;
+}
+.offer-popup-content {
+    background: #0d1d33;
+
+    border-radius: 8px;
+    width: 40%;
+    position: relative;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+border: 1px solid #00cc83;
+    align-items: center;
+    justify-content: center;
+}
+.offer-image {
+
+}
+.offer-con {
+
+}
+.offer-con img {
+    border-radius: 8px;
+}
+button.offer-btn {
+    margin-top: 20px;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+     z-index: 99999; 
+
+}
+.offer-popup-content .offer-btn {
+    background: #00cc83;
+    border: solid 1px #00cc83;
+    color: #fff !important;
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 20px;
+        margin-bottom: 10px;
+
+}
+button.close-btn {
+    background: #00cc83;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: 18px;
+}
+@keyframes wiggle {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px); /* slight movement to the right */
+  }
+}

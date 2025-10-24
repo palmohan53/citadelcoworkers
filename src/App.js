@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
+
 import Footer from './Component/Footer';
 import Header from './Component/Header';
 import About from './Pages/About';
@@ -23,9 +24,9 @@ import AboutCitadelAdvantage from './Pages/AboutCitadelAdvantage';
 import DataSecurity from './Pages/DataSecurity';
 import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
 import NotFound from './Pages/NotFound';
+import OfferPopup from './Component/OfferPopup'; // Import the OfferPopup component
 
-
-
+const STORAGE_KEY = 'hasSeenOfferPopup';
 function App() {
   useEffect(() => {
     // 1. Load fonts after hydration
@@ -42,9 +43,43 @@ function App() {
     
     return () => clearTimeout(timeout);
   }, []);
+  const [isPopupOpen, setPopupOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname !== '/') return;
+
+    try {
+      const hasSeen = sessionStorage.getItem(STORAGE_KEY);
+
+      if (hasSeen !== 'true') {
+        // show popup after a short delay (e.g., 3 seconds)
+        const timer = setTimeout(() => {
+          setPopupOpen(true);
+          sessionStorage.setItem(STORAGE_KEY, 'true'); // mark as seen
+        }, 1000); // delay in milliseconds
+
+        return () => clearTimeout(timer);
+      }
+    } catch {
+      // fallback if session storage unavailable (Safari private mode etc.)
+      const timer = setTimeout(() => setPopupOpen(true), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
+
+  const closePopup = () => {
+    setPopupOpen(false);
+  };
+
   return (
     <div className="App">
-     
+     {/* Show the OfferPopup only on home page */}
+      {isPopupOpen && (
+        <OfferPopup isOpen={isPopupOpen} onClose={closePopup}>
+          <a href="/contact-us"><img src="/images/popup-hall.png"></img></a>
+        </OfferPopup>
+      )}
         {/* <Home /> */}
         
         <Header />
