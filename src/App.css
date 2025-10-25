@@ -2682,7 +2682,7 @@ section.innerBanner.blogDetailsSec {
   max-width: 12px;
 }
 .testimonial .contentBx img {
-  width: auto;
+ 
   margin-bottom: 10px;
   display: block;
 }
@@ -3253,4 +3253,10 @@ button.close-btn {
   50% {
     transform: translateX(4px); /* slight movement to the right */
   }
+}
+
+.testimonial .contentBx {
+    display: flex
+;
+    flex-direction: column;
 }

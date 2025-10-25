@@ -51,7 +51,7 @@ const Testimonial = ({serviceTestimonial}) => {
                                     <div className="contentBx">
                                         <img src="/images/quote.webp" alt="" className='quoteImg' width="26" height="19"/>
                                         {/* <h3>I have been working with Toptal...</h3> */}
-                                      {data.post_content}
+                                      <div class="">{data.post_content}</div>
                                         <ul className="listInline">
                                             <li><img src="/images/stars.webp" alt="" width="100" height="14" className='stars'/></li>
                                             

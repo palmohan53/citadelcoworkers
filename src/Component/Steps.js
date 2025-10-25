@@ -15,7 +15,7 @@ const Steps = ({ serviceSection }) => {
           <div className="col-lg-12">
             <div className="title_all_box style_one text-center dark_color">
               <div className="sectionHeading">
-                <h3>STEPS</h3>
+                {/* <h3>STEPS</h3>  */}
                 <h2>4 Simple Steps to Build Your Remote Dream Team</h2>
               </div>
             </div>
