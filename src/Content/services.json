@@ -2321,7 +2321,7 @@
 		{
             "categoryUrl": "chat-support-expert",
             "categoryName": "Chat Support Expert",
-            "pageMetaTitle": "Hire Chat Support Expert Services  in India, Outsource Chat Support Expert Services   to Citadel Coworkers",
+            "pageMetaTitle": "Hire Chat Support Expert in India",
             "pageMetaContent": "Hire a Chat Support Expert Services   from 5/Hour.",
             "banner":[
                     {
@@ -2421,6 +2421,106 @@
                 {
                     "title": "More Time for Growth",
                     "body": "Let us handle the chats so you can focus on big-picture goals like expanding your business or launching new products."
+                }
+				
+            ]
+			
+        }
+		,
+		{
+            "categoryUrl": "account-payable",
+            "categoryName": "Accounts Payable",
+            "pageMetaTitle": "Hire Accounts Payable Expert in India",
+            "pageMetaContent": "Hire a Accounts Payable Expert Services   from 5/Hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Accounts Payable Specialists in India ",
+                        "body": "Address delayed vendor payments, improve cash flow visibility and ensure full compliance - Starts at USD 5/Hour."
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Streamline Payments With Accounts Payable Outsourcing",
+                        "body": "Stay ahead of every payment deadline and build trusted partnerships with vendors with expert accounts payable outsourcing services. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Outsource Accounts Payable Services With Ease and Get Full Control Over Invoice Management, Vendor Communications and Cash Flow. ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Accounts Payable Experts ",
+                        "body": "40"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Served",
+                        "body": "15"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": " Vendors' Invoices Processed Monthly ",
+                        "body": "3500"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Accuracy in AP Reconciliation ",
+                        "body": "98"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Why should I choose Citadel Coworkers for accounts payable outsourcing?",
+                        "body": "Our experts are skilled in automation tools and processes. We deliver the best accounts payable outsourcing services by ensuring accuracy, transparency and accountability in every transaction."
+                    },
+                    {
+                        "title": "02. Can your AP team integrate with our existing ERP systems?",
+                        "body": "Absolutely, our team of AP experts can smoothly integrate with all major accounting software so that there is no disruption when they set up as part of your team. "
+                    },
+                    {
+                        "title": "03. How secure is my financial data with Citadel Coworkers?",
+                        "body": "We believe in protecting your privacy, which is why we strictly adhere to all data security standards, including encryption and other compliance, making it one of the trusted AP providers."
+
+                    },
+                    {
+                        "title": "04. Can I scale my accounts payable team as needed?",
+                        "body": "Yes, our payables outsourcing models are flexible and easily scale with your team, depending on project needs and workloads. "
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "How Citadel Coworkers keeps your payables (and business) running smoothly",
+                    "body": "Helping You Connect Smartly"
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Seamless Vendor Integration",
+                    "body": "We make sure that every invoice is captured, verified and validated before moving ahead with the payment. We handle data entry and tax compliance to prevent any form of delay and errors. With us, you get a fully organised payment timeline along with real-time visibility. "
+                },
+				 {
+                    "title": " Error-free Invoice Management",
+                    "body": "We make sure that every invoice is captured, verified and validated before moving ahead with the payment. We handle data entry and tax compliance to prevent any form of delay and errors. With us, you get a fully organised payment timeline along with real-time visibility. "
+                },
+                {
+                    "title": " Tailored Approval Framework",
+                    "body": "Our experts design a multi-level approval structure that aligns with your internal controls. This helps each invoice reach the right authentication under the relevant expense categories. It makes decision-making faster and more transparent. "
+                },
+                {
+                    "title": "Reliable Payments & Reconciliation",
+                    "body": "We execute vendor payments securely, no matter the payment mode. Our accounts payable specialists reconcile every transaction to maintain accuracy in your ledgers. Your vendors stay happy, the accounts remain clean, and the business continues without any disruption."
+                },
+                {
+                    "title": "Transparent Reporting & Insights",
+                    "body": "At Citadel Coworkers, we go beyond just offering details regarding payables ageing, pending payments and vendor performance. Our analytics help you by optimising your payment cycles, managing your working capital and staying audit-ready throughout the year. "
                 }
 				
             ]
