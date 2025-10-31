@@ -895,6 +895,7 @@ section.service.home-page {
   font-size: 18px;
   color: #212529;
   margin: 0 0 20px;
+  min-height: 67px;
 }
 .blogContent h5 b {
     font-weight: 400 !important;
@@ -1526,8 +1527,17 @@ ul.breadcrumb li a {
   font-weight: 600;
   color: #05164d;
 }
-
-
+p.ma-00 {
+    margin-bottom: 0;
+}
+section#BlogDetailsSec section#BlogDetailsSec {
+    display: -webkit-box;
+  -webkit-line-clamp: 3; /* limits text to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 3;
+  text-overflow: ellipsis;
+}
 .icon_box_all.style_three {
   text-align: center;
   background: #fff;
@@ -1552,10 +1562,10 @@ ul.breadcrumb li a {
   display: block;
   color: #282f3b;
   line-height: 30px;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
-  margin-top: 21px;
+  margin-top: 10px;
 }
 .icon_box_all.style_three .icon_content .txt_content p {
   margin-bottom: 0px;
@@ -3205,12 +3215,7 @@ border: 1px solid #00cc83;
     align-items: center;
     justify-content: center;
 }
-.offer-image {
 
-}
-.offer-con {
-
-}
 .offer-con img {
     border-radius: 8px;
 }

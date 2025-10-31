@@ -17,7 +17,7 @@ const ServiceBulkContent = ({serviceBulkContent}) => {
                     <div className="sectionHeading text-center mb-3">
                         <h2>{serviceBulkContent?.data?.listing[0]?.post_title}</h2>
                     </div>
-                    <div className="bulkContent">
+                    <div className="bulkContent mt-5">
                         <div className="para"  dangerouslySetInnerHTML={{ __html: serviceBulkContent?.data?.listing[0].post_content }}></div>
                     <img src={serviceBulkContent?.data?.listing[0]?.banner} alt={serviceBulkContent?.data?.listing[0]?.post_title} className="serviceIco" />
                     </div>

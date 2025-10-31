@@ -317,7 +317,7 @@ const SubServices = () => {
             <section className="bottomCon">
                 <div className="container">
                     <div className="sectionHeading text-center">
-                        <h2 className="mb-4"><b>1600+ Clients in 18 Countries</b> Have Accelerated Their Business Growth With Citadel Co-Workers. You Could Be Next!"</h2>
+                        <h2 className="mb-4"><b>1600+ Clients in 18 Countries</b> Have Accelerated Their Business Growth With Citadel Co-Workers. You Could Be Next!</h2>
                         <Link to='/contact-us' className="colorBtn wideBtn">Send Your Requirement</Link>
                     </div>
                 </div>

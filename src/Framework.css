@@ -385,12 +385,12 @@ p {
 
 @media (min-width: 576px) {
     .container, .container-sm {
-        max-width: 540px;
+        max-width: 600px;
     }
 }
 @media (min-width: 768px) {
     .container, .container-md, .container-sm {
-        max-width: 720px;
+        max-width: 850px;
     }
 }
 @media (min-width: 992px) {

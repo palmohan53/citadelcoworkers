@@ -12,6 +12,16 @@
   .sliderWrp{
     overflow: hidden;
   }
+  .bulkContent {
+    display: block;
+    
+}
+.sideBorder:nth-last-child(1), .sideBorder:nth-last-child(2), .sideBorder:nth-last-child(3)
+{border-bottom: solid 1px #ccc;}
+.sideBorder {
+  
+    border-right: 1px solid #ccc !important;
+}
   .arrow-light {
     display: none;
 }
@@ -373,12 +383,15 @@ section.process.pb-100
   .blogAuth {
       flex-wrap: wrap;
   }
+
 }
 @media screen and (max-width: 767px) {
 .bannerProfile {
     width: 100% !important;
 }
-
+section.pricing .row {
+    gap: 20px !important;
+}
     section.process.pb-100 {
         padding-bottom: 60px;
     }

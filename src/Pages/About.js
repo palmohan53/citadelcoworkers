@@ -310,7 +310,7 @@ const About = () => {
                                 <div className="team_box style_two">
                                     <div className="team_box_outer">
                                         <div className="image_box ">
-                                            <img src="/images/Meenu-Singh.png" alt="Meenu Singh"/>
+                                            <img src="/images/Meenu-Singh.png" alt="Ashmeet Kaur"/>
                                             <div className="overlay ">
                                                 <ul>
                                                     <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
@@ -318,7 +318,7 @@ const About = () => {
                                             </div>
                                         </div>
                                         <div className="content_box ">
-                                            <h2>Meenu Singh </h2>
+                                            <h2>Ashmeet Kaur </h2>
                                             <p className="job_details">HR Generalist & Talent Acquisition Head</p>
                                             <p>Building a high-performing workforce through expert talent acquisition.</p>
                                         </div>

@@ -49,7 +49,7 @@ const Steps = ({ serviceSection }) => {
 
             return steps.map((step, stepIndex) => (
               <div
-                className="col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 my-4"
+                className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 my-4"
                 key={`${index}-${stepIndex}`}
               >
                 <div className="service_box style_three dark_color">
