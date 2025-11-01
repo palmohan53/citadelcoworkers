@@ -74,13 +74,7 @@ function App() {
 
   return (
     <div className="App">
-     {/* Show the OfferPopup only on home page */}
-      {isPopupOpen && (
-        <OfferPopup isOpen={isPopupOpen} onClose={closePopup}>
-          <a href="/contact-us"><img src="/images/popup-hall.png"></img></a>
-        </OfferPopup>
-      )}
-        {/* <Home /> */}
+    
         
         <Header />
         <Routes>

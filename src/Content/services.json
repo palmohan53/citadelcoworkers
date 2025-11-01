@@ -408,7 +408,7 @@
             "serviceHeading":[
                     {
                         "title": "Efficient Business Support with Digital Marketing Solutions",
-                        "body": "Boost your business efficiency with our customized services, covering everything from SEO to Continuous Monitoring and Reporting. Maximize productivity and concentrate on scaling your business with our expert support."
+                        "body": "Boost efficiency with our targeted marketing strategies, monitoring and reporting services, helping you stay productive and focused on business growth."
                     }
                 ],
             "clientsNumberHeading":[
@@ -453,7 +453,7 @@
                     },
                     {
                         "title": "04. Can I choose a digital marketer with expertise in my industry?",
-                        "body": "Yes, many digital marketing agencies or freelancers offer specialized services tailored to specific industries. You can often request a digital marketer with experience in your industry to ensure they understand your unique needs and target audience."
+                        "body": "Yes, we match you with the marketers who have proven experience in your industry or similar niches. We shortlist candidates with relevant portfolios, then you can interview them and select your team. "
                     },
                     {
                         "title": "05. How quickly can I get started with a digital marketer?",
@@ -469,7 +469,7 @@
         "bottomServices":[
                 {
                     "title": "Streamline Your Operations",
-                    "body": "From coordinating campaigns to analyzing data, our digital marketing experts npmexcel at managing the intricate details, ensuring smooth execution of your marketing strategies."
+                    "body": "From coordinating campaigns to analyzing data, our digital marketing experts excel at managing the intricate details, ensuring smooth execution of your marketing strategies."
                 },
                 {
                     "title": "Specialized Proficiency",
@@ -497,7 +497,7 @@
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
-                        "title": "Outsource Legal Processes to India",
+                        "title": "Comprehensive Legal Process Outsourcing Services",
                         "body": "Maximize Efficiency in Your Legal Workflow – Starts at USD 8/Hour."
                     }
                 ],
@@ -783,7 +783,7 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire Content Writers in India",
-                        "body": "Transform Your Content Strategy with Engaging, Optimized Writing Solutions"
+                        "body": "Transform Your Content Strategy with Engaging, Optimized Writing Solutions - Starts at USD 5/Hour."
                     }
                 ],
             "serviceHeading":[
@@ -844,7 +844,7 @@
         "bottomServicesHeading":[
                 {
                     "title": "We are at Your Service for",
-                    "body": ""
+                    "body": "We deliver compelling, high-quality content that matches your brand voice and audience."
                 }
             ],
         "bottomServices":[
@@ -1192,7 +1192,7 @@
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
-                        "title": "Hire Research Assistants in India",
+                        "title": "Hire Research Analyst in India",
                         "body": "Back Decisions with Research, Not Guesswork – Starts at $5/Hour  "
                     }
                 ],
@@ -1395,7 +1395,7 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire Virtual Personal Assistants in India",
-                        "body": "Unlock Hours in Your Day – Hire a Remote Personal Assistant – Starts at USD 5/Hour."
+                        "body": "Unlock Hours in Your Day with Professional Assistants Who Make Every Minute Count – Starts at USD 5/Hour."
                     }
                 ],
             "serviceHeading":[
@@ -2103,7 +2103,7 @@
                 },
                 {
                     "title": "Payment Tracking & Allocation",
-                    "body": "Our accounts receivable specialists immediately process payments as soon as they come in. They match these payments with the corresponding invoices and highlight any discrepancies or shortfalls. This crucial step ensures you have a clear view of your cash flow and outstanding balances, all while keeping your ledger tidy."
+                    "body": "Our accounts receivable specialists process payments as soon as they come in. They match these payments with the corresponding invoices and highlight any discrepancies. This ensures you have a clear view of your cash flow and outstanding balances."
                 },
                 {
                     "title": "Receivables Accounting & Risk Monitoring",
@@ -2113,11 +2113,7 @@
                     "title": "Reporting, Insights & Final Reconciliation",
                     "body": "Lastly, we put together personalized AR reports, analyze trends, and provide valuable insights into DSO and customer payment behaviors. Similarly, we ensure that all accounts are thoroughly reconciled and verified for accuracy to make informed decisions and confidently manage your cash flow."
                 }
-                ,
-                {
-                    "title": "Payment Tracking & Allocation",
-                    "body": "Our accounts receivable specialists process payments as soon as they come in. They match these payments with the corresponding invoices and highlight any discrepancies. This ensures you have a clear view of your cash flow and outstanding balances."
-                }
+                
 				
             ]
 			
@@ -2460,7 +2456,7 @@
                 ],
             "clientsNumberHeading":[
                     {
-                        "title":"Outsource Accounts Payable for streamlined invoicing, vendor handling and cash flow control ",
+                        "title":"Outsource Accounts Payable for Streamlined Invoicing, Vendor Handling and Cash Flow Control ",
                         "body": ""
                     }
                 ],
