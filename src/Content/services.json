@@ -27,22 +27,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Virtual Employee",
-                        "body": "22"
+                        "body": "22+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Happy Clients",
-                        "body": "60"
+                        "body": "60+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Market Verticals",
-                        "body": "12"
+                        "body": "12+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Countries Served",
-                        "body": "10"
+                        "body": "10+"
                     }
                 ],
             "faq":[
@@ -124,23 +124,23 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Projects Completed",
-                        "body": "30"
+                        "body": "30+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Satisfied Clients",
-                        "body": "80"
+                        "body": "80+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Catered to",
-                        "body": "15"
+                        "body": "15+"
                     },
                    
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Countries Reached",
-                        "body": "20"
+                        "body": "20+"
                     }
                 ],
             "faq":[
@@ -221,22 +221,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Creative Designers",
-                        "body": "22"
+                        "body": "22+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Satisfied Clients",
-                        "body": "60"
+                        "body": "60+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Diverse Industries",
-                        "body": "70"
+                        "body": "70+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Countries Reached",
-                        "body": "15"
+                        "body": "15+"
                     }
                 ],
             "faq":[
@@ -319,22 +319,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Finance Experts",
-                        "body": "40"
+                        "body": "40+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "12"
+                        "body": "12+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Happy Clients",
-                        "body": "60"
+                        "body": "60+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Countries Served",
-                        "body": "10"
+                        "body": "10+"
                     }
                 ],
             "faq":[
@@ -420,22 +420,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "SEO Experts",
-                        "body": "22"
+                        "body": "22+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "PPC Experts",
-                        "body": "30"
+                        "body": "30+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Satisfied Clients",
-                        "body": "70"
+                        "body": "70+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industry Verticals",
-                        "body": "15"
+                        "body": "15+"
                     }
                 ],
             "faq":[
@@ -497,13 +497,13 @@
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
-                        "title": "Comprehensive Legal Process Outsourcing Services",
+                        "title": "Outsource Legal Processes to India",
                         "body": "Maximize Efficiency in Your Legal Workflow – Starts at USD 8/Hour."
                     }
                 ],
             "serviceHeading":[
                     {
-                        "title": "Comprehensive Legal Process Outsourcing Services Outsourcing Services",
+                        "title": "Comprehensive Legal Process Outsourcing Services",
                         "body": "Improve your bottom line with professional legal outsourcing aimed at enhancing productivity and reducing operational expenses"
                     }
                 ],
@@ -516,22 +516,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Legal Process Specialists",
-                        "body": "25"
+                        "body": "25+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Global Law Firms Served",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Legal Services Offered",
-                        "body": "25"
+                        "body": "25+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years’ Avg. Experience",
-                        "body": "5"
+                        "body": "5+"
                     }
                 ],
             "faq":[
@@ -554,20 +554,31 @@
                     {
                         "title": "05.  Can your legal experts offer e-discovery support in complex litigation cases?",
                         "body": "Yes, our legal experts are well-equipped to handle e-discovery tasks for complex litigation. They leverage advanced e-discovery software that streamlines the recognition, collection, and assessment of Electronically Stored Information (ESI). This technology allows our legal team to effectively manage large data volumes to ensure adherence to legal standards and diminishing risks throughout the discovery phase."
-                    },
-                    {
-                        "title": "06.  Do your professionals deliver solutions for risk assessment in legal projects?",
-                        "body": "Certainly. Our legal professionals perform extensive risk assessments for legal projects by employing risk management and data analytics frameworks. They recognize possible legal risks, analyze their impact, and build mitigation strategies to make sure that your legal projects are seamlessly executed without any major legal challenges."
                     }
                 ],
         "bottomServicesHeading":[
                 {
-                    "title": "",
-                    "body": ""
+                    "title": "We are at Your Service for",
+                    "body": "Comprehensive legal support designed to save time and maintain accuracy at all times."
                 }
             ],
         "bottomServices":[
-                
+                 {
+                    "title": "Contract Management ",
+                    "body": "Our legal experts handle your contracts with precision, ensuring compliance, minimizing risks and maintaining consistency across all business agreements."
+                }, {
+                    "title": "Research & Analysis",
+                    "body": "We conduct thorough legal research to support your cases or filings with accurate data and case laws, saving you valuable hours. "
+                }, {
+                    "title": "Document Review",
+                    "body": "Our professionals review large documents for litigation or due diligence, which helps identify key facts and red flags quickly and accurately. "
+                }, {
+                    "title": "Litigation Support ",
+                    "body": "From organizing evidence to summarizing the case, we help law firms and legal departments prepare for hearing trials and other proceedings."
+                }, {
+                    "title": "Compliance Management",
+                    "body": "We monitor and manage your regulatory requirements, ensuring that your business stays aligned with local and international laws and preventing potential penalties. "
+                }
             ]
         },
         {
@@ -597,31 +608,31 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years of Experience",
-                        "body": "22"
+                        "body": "22+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Expert Developers",
-                        "body": "60"
+                        "body": "60+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industry Awards",
-                        "body": "12"
+                        "body": "12+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Global Partners",
-                        "body": "10"
+                        "body": "10+"
                     }
                 ],
             "faq":[
                     {
-                        "title": "01. Types of programmers available for hire?",
+                        "title": "01. What types of programmers can I hire through Citadel Coworkers?",
                         "body": "We offer a diverse pool of experts, including web developers, software engineers, mobile app developers, and backend specialists. Our programmers are well-versed in cutting-edge technologies such as React, Node.js, Python, and more. Whether you need to hire a full stack developer in India or hire dedicated Indian developers, we have the right talent for your project."
                     },
                     {
-                        "title": "02.Common remote hiring mistakes to avoid?",
+                        "title": "02. What common mistakes should I avoid when hiring remote developers? ",
                         "body": "Avoid skipping due diligence and unclear communication when hiring remotely. We help you navigate these pitfalls by thoroughly vetting candidates and facilitating clear, consistent communication. This approach ensures you hire remote developers in India successfully and achieve seamless collaboration."
                     },
                     {
@@ -629,11 +640,11 @@
                         "body": "We prioritize matching you with developers whose skills and work style align with your team’s culture. By understanding your company’s values and work environment, we ensure a harmonious integration that enhances productivity and teamwork. Whether you hire Indian software developers or hire dedicated developers in India, cultural fit is our top priority."
                     },
                     {
-                        "title": "04. Managing remote collaboration effectively?",
+                        "title": "04. How can I manage collaboration effectively with remote programmers?",
                         "body": "Utilize our proven strategies and tools for seamless remote teamwork and communication. We provide platforms for real-time collaboration, project management, and regular check-ins to keep your team aligned and projects on track. This is essential when you hire remote programmers or outsource development projects."
                     },
                     {
-                        "title": "05. Programmer availability in my time zone?",
+                        "title": "05. Are programmers available to work in my time zone? ",
                         "body": "Our global talent pool allows for flexible scheduling to align with your work hours. Whether you need developers in your time zone or around-the-clock coverage, we ensure you have the support you need when you need it. This flexibility is crucial when you hire programmers in India for continuous project development."
                     }
                 ],
@@ -645,24 +656,24 @@
             ],
         "bottomServices":[
                 {
-                    "title": "When in-house resources are stretched thin.",
-                    "body": ""
+                    "title": "Lack of Resources",
+                    "body": " Our professional developers may easily join your in-house team when they're busy to keep things running smoothly without sacrificing quality or efficiency.  We give you the appropriate people at the right moment. "
                 },
                 {
-                    "title": "As you gear up for digital transformation.",
-                    "body": ""
+                    "title": "Change to Digital ",
+                    "body": " Our developers have new ideas that will help you embrace digital change.  We help your firm make the switch quickly, creatively, and with as few problems as possible. "
                 },
                 {
-                    "title": "To navigate through complex project requirements.",
-                    "body": ""
+                    "title": "Difficult Projects",
+                    "body": " Our developers are quite good at handling complicated coding and integration.  Their way of thinking about problems makes sure that you can get over technical problems and find high-performing solutions that help you reach your company goals. "
                 },
                 {
-                    "title": "For strategic scaling of your development capabilities.",
-                    "body": ""
+                    "title": "Scaling With a Plan ",
+                    "body": " You can quickly add more people to your teams with our flexible engagement models.  We give your firm the technical help it needs to expand in a way that will last, whether it's for a long time or a short time."
                 },
                 {
-                    "title": "In pursuit of cost-effective development without quality compromise.",
-                    "body": ""
+                    "title": "Cost-Effectiveness",
+                    "body": " When you hire our offshore developers, you get access to top talent from around the world at competitive rates and clear methods that add a lot of value to every development project."
                 }
             ]
         },
@@ -693,22 +704,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Professionals",
-                        "body": "500"
+                        "body": "500+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Projects Delivered Globally",
-                        "body": "5000"
+                        "body": "5K"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "30"
+                        "body": "30+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years’ Industry Experience",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -736,13 +747,13 @@
         "bottomServicesHeading":[
                 {
                     "title": "We are at Your Service for",
-                    "body": "Hire dedicated Indian developers who are not just coders, but innovators and problem-solvers"
+                    "body": "Empower your team with skilled professionals who bring expertise and innovation to every project"
                 }
             ],
         "bottomServices":[
                 {
                     "title": "Cost-Effective Solutions",
-                    "body": "Unravel an economic alternative to building in-house teams in different domains. Ensure unmatched quality of service while reducing overhead costs with strategic outsourcing."
+                    "body": "Ensure unmatched quality of service while reducing overhead costs with strategic outsourcing."
                 },
                 {
                     "title": "Access to Global Talent",
@@ -770,7 +781,7 @@
                 },
                 {
                     "title": "Industry-Specific Expertise",
-                    "body": "Our seasoned professionals deliver custom solutions, ranging from IT to finance and legal to marketing, designed to meet your industry’s demands."
+                    "body": "Our seasoned professionals deliver custom solutions designed to meet your industry’s demands."
                 }
             ]
         },
@@ -783,7 +794,7 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire Content Writers in India",
-                        "body": "Transform Your Content Strategy with Engaging, Optimized Writing Solutions - Starts at USD 5/Hour."
+                        "body": "Transform Your Content Strategy with Engaging, Optimized Writing Solutions - Starts at USD 7/Hour."
                     }
                 ],
             "serviceHeading":[
@@ -801,22 +812,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Certified Content Writers",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Content Pieces Delivered",
-                        "body": "5000"
+                        "body": "10K"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Covered",
-                        "body": "20"
+                        "body": "20+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years’ Industry Experience",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -911,22 +922,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Payroll Specialists",
-                        "body": "40"
+                        "body": "40+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "12"
+                        "body": "12+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Happy Clients",
-                        "body": "60"
+                        "body": "60+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Payroll Software",
-                        "body": "10"
+                        "body": "10+"
                     }
                 ],
             "faq":[
@@ -1017,17 +1028,17 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Virtual Assistants",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Queries Handled Daily",
-                        "body": "200"
+                        "body": "200+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Satisfied Global Clients",
-                        "body": "800"
+                        "body": "100+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
@@ -1115,12 +1126,12 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Trained Data Specialists",
-                        "body": "120"
+                        "body": "120+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Projects Delivered",
-                        "body": "750"
+                        "body": "750+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
@@ -1130,7 +1141,7 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years of Industry Experience",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -1213,22 +1224,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Research Experts ",
-                        "body": "20"
+                        "body": "20+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Global Clients Assisted",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "10"
+                        "body": "10+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Countries Supported",
-                        "body": "10"
+                        "body": "10+"
                     }
                 ],
             "faq":[
@@ -1315,22 +1326,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Certified Bookkeepers",
-                        "body": "40"
+                        "body": "40+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "15"
+                        "body": "15+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Happy Clients",
-                        "body": "100"
+                        "body": "100+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Reconciliations a month",
-                        "body": "1,000"
+                        "body": "1,000+"
                     }
                 ],
             "faq":[
@@ -1415,22 +1426,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Virtual Personal Assistants",
-                        "body": "25"
+                        "body": "25+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Global Clients Assisted",
-                        "body": "60"
+                        "body": "60+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "12"
+                        "body": "12+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Countries Served",
-                        "body": "10"
+                        "body": "10+"
                     }
                 ],
             "faq":[
@@ -1519,7 +1530,7 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Accountants",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
@@ -1529,12 +1540,12 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "20"
+                        "body": "20+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years of Accounting Expertise",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -1623,7 +1634,7 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Accountants",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
@@ -1633,12 +1644,12 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "20"
+                        "body": "20+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years of Accounting Expertise",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -1726,22 +1737,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Skilled Payroll Specialists",
-                        "body": "40"
+                        "body": "40+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "12"
+                        "body": "12+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Happy Clients",
-                        "body": "60"
+                        "body": "60+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Payroll Software",
-                        "body": "10"
+                        "body": "10+"
                     }
                 ],
             "faq":[
@@ -1834,22 +1845,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Certified Tax Preparers",
-                        "body": "40"
+                        "body": "40+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "15"
+                        "body": "15+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Satisfied Clients",
-                        "body": "100"
+                        "body": "100+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Accurate Tax Filings",
-                        "body": "100"
+                        "body": "100+"
                     }
                 ],
             "faq":[
@@ -1936,7 +1947,7 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Engineers & Architects",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
@@ -1946,12 +1957,12 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "20"
+                        "body": "20+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years’ Industry Experience",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -1969,18 +1980,14 @@
 
                     },
                     {
-                        "title": "04. Can your experts deliver seismic-resistant building designs?",
-                        "body": "Definitely. Leveraging modern structural analysis tools, our skilled engineers design buildings to counter seismic activity. They ensure safety and resilience in earthquake-prone areas by following international seismic design standards, calculating loads carefully, and employing structural reinforcements."
+                        "title": "04. Can your experts support Building Information Modeling (BIM) for collaborative projects?",
+                        "body": "Absolutely. Using advanced software like AutoCAD and Revit, our skilled BIM specialists can design comprehensive 3D models effectively. Facilitating collaboration across teams, these models help eliminate errors and enhance coordination across architecture, engineering, and construction stages to augment project efficiency."
                     },
                     {
                         "title": "05. Do your engineers offer solutions to optimize HVAC systems in complex structures?",
                         "body": "Yes, our dedicated engineering team is adept at designing efficient HVAC systems adapted to the requirements of complex structures. Utilizing the latest software and tools, our MEP engineers model airflow, energy usage, and temperature distribution to craft solutions that enhance comfort while diminishing operational costs."
                     }
-					,
-                    {
-                        "title": "06. Can your experts support Building Information Modeling (BIM) for collaborative projects?",
-                        "body": "Absolutely. Using advanced software like AutoCAD and Revit, our skilled BIM specialists can design comprehensive 3D models effectively. Facilitating collaboration across teams, these models help eliminate errors and enhance coordination across architecture, engineering, and construction stages to augment project efficiency."
-                    }
+					
                    
                 ],
         "bottomServicesHeading":[
@@ -2043,22 +2050,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Virtual Accounts Receivable Experts",
-                        "body": "40"
+                        "body": "40+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "15"
+                        "body": "15+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Non-Payment Issues Resolved",
-                        "body": "3500"
+                        "body": "3500+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Accuracy in Cash Forecasting",
-                        "body": "96"
+                        "body": "96%"
                     }
                 ],
             "faq":[
@@ -2147,22 +2154,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Dedicated Admins",
-                        "body": "30"
+                        "body": "30+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Global Clients Assisted",
-                        "body": "80"
+                        "body": "80+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "15"
+                        "body": "15+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Countries Supported",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -2252,22 +2259,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Engineers & Architects",
-                        "body": "50"
+                        "body": "50+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "15"
+                        "body": "15+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Financial Statements Analyzed",
-                        "body": "1650"
+                        "body": "1650+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Assured Cost Savings",
-                        "body": "50"
+                        "body": "50+"
                     }
                 ],
             "faq":[
@@ -2356,22 +2363,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Chat Specialists ",
-                        "body": "120"
+                        "body": "120+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Projects Delivered ",
-                        "body": "150"
+                        "body": "150+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": " Industries Served ",
-                        "body": "25"
+                        "body": "25+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Years of Industry Experience",
-                        "body": "12"
+                        "body": "12+"
                     }
                 ],
             "faq":[
@@ -2465,22 +2472,22 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Accounts Payable Experts ",
-                        "body": "40"
+                        "body": "40+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Industries Served",
-                        "body": "15"
+                        "body": "15+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": " Vendors' Invoices Processed Monthly ",
-                        "body": "3500"
+                        "body": "3500+"
                     },
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Accuracy in AP Reconciliation ",
-                        "body": "98"
+                        "body": "98%"
                     }
                 ],
             "faq":[
