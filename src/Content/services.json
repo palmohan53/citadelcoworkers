@@ -2545,6 +2545,109 @@
 				
             ]
 			
+        }	,
+		{
+            "categoryUrl": "hire-microsoft-excel-experts",
+            "categoryName": "Microsoft Excel",
+            "pageMetaTitle": "Hire Microsoft Excel Experts in India – Data Automation & Reporting at $5/hr",
+            "pageMetaContent": "Hire certified Microsoft Excel experts in India for data entry, automation, dashboards, Power Query, and reporting—starting at just $5/hour. Improve accuracy and save 70% costs.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Microsoft Excel Experts in India",
+                        "body": "With data-driven accuracy and automation, you can make your firm more productive - Starts at USD 5/Hour."
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Simplify Data Management With Excel Outsourcing Services",
+                        "body": "From data entry to dashboard creation, our Microsoft Excel experts analyze your business data with precision."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Make Your Data Work Smarter by Outsourcing to Certified Excel Experts",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Certified Excel specialists",
+                        "body": "50+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Served",
+                        "body": "25+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": " Spreadsheets Automated ",
+                        "body": "5000+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": " Accuracy in Data Entry  ",
+                        "body": "99%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can your Excel professionals make my current spreadsheets work automatically?",
+                        "body": "Yes, our Microsoft Excel experts know how to employ macros, VBA and formula automation to help you get things done faster."
+                    },
+                    {
+                        "title": "02. How safe is my data while it is being worked on?",
+                        "body": "To keep data confidential at all times we use strict access controls and encryption on several levels."
+                    },
+                    {
+                        "title": "03. Can I hire Excel experts for short-term work?",
+                        "body": "Of course. Depending on what you need, you can hire an Excel expert by the hour, month or project. "
+
+                    },
+                    {
+                        "title": "04. Are your Excel specialists able to work with complicated datasets?",
+                        "body": "Yes, our skilled Excel experts can handle big datasets. They use new methods to automate & inspect things to make sure they are accurate and work smoothly."
+                    },
+                    {
+                        "title": "05. Why should I outsource Excel data entry to Citadel Coworkers?",
+                        "body": "We offer Excel outsourcing work that is handled by certified professionals who help you maintain 99% accuracy and quick turnaround."
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "We are at Your Service for",
+                    "body": "Empowering your business with seamless, automated and accurate Excel solutions that help you keep your data organized and insightful."
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Seamless Data Integration ",
+                    "body": "We connect your Excel sheets with ERP, CRM and accounting systems so that the data is synchronized in real-time, allowing a smooth flow of data and improved accuracy across all business operations.  "
+                },
+				 {
+                    "title": "Data Management",
+                    "body": "Our offshore Excel data entry services keep your data clean and ready for an audit by making sure it is accurate and remove any duplicates and manual errors."
+                },
+                {
+                    "title": "Customised Automation Setup ",
+                    "body": "We create better Excel macros and formulas that fit your workflow. We achieve this by giving you better ways to manage your data and automating tasks."
+                },
+                {
+                    "title": "Reporting and Analytics",
+                    "body": "Our experts have made a lot of Excel dashboards and analytics reports that help make complicated data easier to understand, give you useful information and help your company make better decisions with clear visuals.  "
+                },
+                {
+                    "title": "Open Teamwork",
+                    "body": "We keep everything open by delivering you regular updates, progress reports and performance insights. This way you can stay on top of your projects and be in charge of them. "
+                }
+				
+            ]
+			
         }
     ]
 }

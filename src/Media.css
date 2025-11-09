@@ -267,9 +267,16 @@ section.process.pb-100
   }
   section.profile .bannerProfile {
     width: 100%;
-      padding: 40px;
+      padding: 15px;
       left: 0;
       
+  }
+  section.profile {
+    padding-top: 60px;
+}
+  .bannerProfile.serviceProfile .profileImg
+  {
+    width: 100% !important
   }
   /*section.profile .bannerProfile .profileImg img{
     aspect-ratio: 200 / 250;

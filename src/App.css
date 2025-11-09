@@ -284,7 +284,7 @@ header.mainHeader.scrolled .logoWhite {
 }
 .wideBtn{
   font-size: 20px;
-  padding: 15px 50px;
+  padding: 10px 25px;
   transition: all 500ms ease;
 }
 .lineBtn:hover, .colorBtn:hover, .blueBtn:hover, .greyBtn:hover{
