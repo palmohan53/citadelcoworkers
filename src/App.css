@@ -269,6 +269,9 @@ header.mainHeader.scrolled .logoWhite {
    border: solid 1px #00cc83;
    color: #00cc83 !important;
 }
+.blogPageBx {
+    margin-bottom: 20px;
+}
 .blueBtn{
     background: #338cc4;
     padding: 10px 25px;

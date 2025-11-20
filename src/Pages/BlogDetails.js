@@ -83,7 +83,7 @@ const BlogDetails = () => {
                     </div>
                     <div className="col-md-6 col-12">
                         <div className="blogDetailsBanner">
-                            <img src={data.banner} alt={data?.post?.post_title}/>
+                            <img src={data.banner} alt={data?.post?.post_title} className="sss"/>
                         </div>
                     </div>
                 </div>
