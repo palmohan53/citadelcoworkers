@@ -74,7 +74,7 @@ const ContactForm = () => {
                                 </div>
                                 <ul className="listInline">
                                     <li>
-                                        <a href="tel:+19294707900"><FontAwesomeIcon icon={faPhone} /> Book a Call</a>
+                                        <a href="tel:+19294707990"><FontAwesomeIcon icon={faPhone} /> Book a Call</a>
                                     </li>
                                     <li>
                                         <a href="mailto:sales@citadelcoworkers.com"><FontAwesomeIcon icon={faEnvelope} /> Email Us</a>

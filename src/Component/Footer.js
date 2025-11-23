@@ -73,7 +73,7 @@ const Footer = () => {
                                     <div className="footerSmlHeading">Contact</div>
                                     <div className="con_content">
                                         <div className="spt">Phone:</div>
-                                        <a href="tel:+19294707900">+19294707900</a>
+                                        <a href="tel:+19294707990">+19294707990</a>
                                     </div>
                                     <div className="con_content">
                                         <div className="spt">Mail Us:</div>

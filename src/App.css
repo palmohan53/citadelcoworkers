@@ -312,7 +312,11 @@ section.process.pb-100 {
   border-radius: 5px;
   align-items: center;
 }
-
+section.blogDetails a {
+    color: #1749d6;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
 .banner .bannerProfile {
   border: none;
   padding: 0px;

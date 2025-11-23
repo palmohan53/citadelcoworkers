@@ -181,10 +181,11 @@ const SubServices = () => {
                 <div className="innerBannerContent">
                     <h1>{serviceContent[0]?.banner[0]?.title}</h1>
                     <p>{serviceContent[0]?.banner[0]?.body}</p>
-                    <div className="text-center mt-3">
-                        {/* <Link to="/contact-us" className="colorBtn wideBtn">Hire {serviceContent[0]?.categoryName} Now</Link> */}
-                        <Link to="/contact-us" className="colorBtn wideBtn">Hire  Now</Link>
-                    </div>
+                  <div className="text-center mt-3">
+    <Link to="/contact-us" className="colorBtn wideBtn">
+        {serviceContent[0]?.banner[0]?.buttonText || "Hire Now"}
+    </Link>
+</div>
                 </div>
                 <div className="bannerOvelay"></div>
             </section>
