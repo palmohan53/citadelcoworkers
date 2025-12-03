@@ -2754,8 +2754,8 @@
         }
 		,
 		{
-            "categoryUrl": "hire-financial-controller-india",
-            "categoryName": "Hire Financial Controller",
+            "categoryUrl": "hire-financial-controller",
+            "categoryName": "Financial Controller",
             "pageMetaTitle": "Remote Financial Controller in India ",
             "pageMetaContent": "Hire trained remote Financial Controller in India  just $8/hour.",
             "banner":[
@@ -2775,7 +2775,7 @@
                 ],
             "clientsNumberHeading":[
                     {
-                        "title":"24/7 Financial Oversight to Power your Growth ",
+                        "title":"24/7 Financial Oversight to Power Your Growth ",
                         "body": ""
                     }
                 ],
@@ -2857,6 +2857,218 @@
 				
             ]
 			
+        },
+		{
+            "categoryUrl": "hire-finance-manager",
+            "categoryName": "Finance Manager",
+            "pageMetaTitle": "Remote Finance Manager in India ",
+            "pageMetaContent": "Hire trained remote Finance Manager in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Finance Manager From India",
+                        "body": "Stop Losing Money to Delayed Reports, Compliance Gaps and Hiring Mistakes. Get Dedicated Finance Managers - Starts at USD 8/Hour.",
+                        "buttonText": "Hire Now"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Take Full Control of Your Finances With Expert Controller Services",
+                        "body": "From reporting to forecasting - our financial controllers manage every number with precision and insights. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Expert Financial Management to Power Your Growth ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Qualified Finance Professionals",
+                        "body": "120+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Global Finance Projects Delivered",
+                        "body": "2500+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Supported",
+                        "body": "25+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years of Expertise",
+                        "body": "12+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can I hire a finance manager to help me with my long-term plans?",
+                        "body": "Yes. We may provide finance managers full-time, part-time, or as retainers, and we can tailor the way we work with you to meet your organization's pace and budget."
+                    },
+                    {
+                        "title": "02. Do your management take care of financial reporting for investors?",
+                        "body": "Yes. Our experts develop board decks, updates for investors, cap tables and materials for raising money. They know how to show financials that make people feel good about them."
+                    },
+                    {
+                        "title": "03. Can your finance managers work with our current accounting team?",
+                        "body": "No problem. Our managers will match your company to provide strategic, analytical or specialised oversight where it is most needed, whether you have a bookkeeper handling your daily transactions or a controller in charge of the closing process."
+
+                    },
+                    {
+                        "title": "04. How can you keep critical financial information private?",
+                        "body": "We make sure that NDAs, encrypted communication protocols and access limits are in place from the start. Our experts follow your security framework or the criteria that are relevant to your sector."
+                    },
+                    {
+                        "title": "05. Can I only hire a finance manager for M&A or restructuring projects?",
+                        "body": "Yes. We connect you with professionals who have experience with buy-side/sell-side due diligence, post-merger integration, or turnaround finance, people who have worked on complicated deals and are ready to go right away."
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Finance Team That Moves Your Business Forward",
+                    "body": "We deploy finance managers who don't just close books but open possibilities."
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Capital Allocation Intelligence",
+                    "body": "Our managers identify your highest-ROI opportunities, renegotiating vendor terms to unlock working capital, restructuring pricing for better margins turning finance from reporting into a strategic advantage."
+                },
+				 {
+                    "title": "Investor-Ready Financials",
+                    "body": "We architect financials that compel, not just comply. Our managers normalize EBITDA, model unit economics investors trust, and we've supported 2,500+ engagements including fundraising prep and due diligence defense."
+                },
+                {
+                    "title": "Crisis-Tested Frameworks",
+                    "body": "Our managers bring battle-tested tools for scenario planning and burn rate optimization without sacrificing growth. When conditions tighten, you get leaders who've navigated it before."
+                },
+                {
+                    "title": "Cross-Functional Translation",
+                    "body": "Great finance professionals speak every department's language. Our managers show sales how pricing changes improve revenue lift and show operations how efficiency creates margin expansion. "
+                },
+                {
+                    "title": "Offshore Economics Expertise",
+                    "body": "You get strategic thinking, investor-ready outputs, and crisis-tested judgement at rates starting from $8/hr. No executive onboarding delays. Just finance leadership that accelerates decisions and positions your business for growth."
+                }
+				
+            ]
+			
         }
+		,
+		{
+            "categoryUrl": "hire-legal-assistant",
+            "categoryName": "Legal Assistant",
+            "pageMetaTitle": "Remote Legal Assistant in India ",
+            "pageMetaContent": "Hire trained remote Legal Assistant in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Legal Assistant from India",
+                        "body": "Elevate your legal practice with an offshore legal assistance service that combines US-trained expertise with unmatched cost efficiency  - Starts at USD 8/Hour.",
+                        "buttonText": "Hire Legal Support Now"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Comprehensive Legal Support That Multiplies Your Capacity",
+                        "body": "Billable hours lost to administrative chaos don't just hurt profitability, they erode client relationships and partnership prospects. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Elite Legal Support That Transforms Practice Economics",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Legal Experts",
+                        "body": "120+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Cases Handled",
+                        "body": "2500+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Practice Areas",
+                        "body": "25+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years of Expertise",
+                        "body": "12+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can I hire a remote legal assistant to support me in handling my case on a constant basis?",
+                        "body": "Absolutely. We support you as you engage with our virtual legal assistant services that meet your workflow, case complexity, and timetable. This is the case whether you need constant assistance in all your cases or just specific types of cases."
+                    },
+                    {
+                        "title": "02. Are your assistants trained on the US legal system?",
+                        "body": "Yes. Our assistants have been trained in the English common law systems and have been educated in jurisdictions where US legal concepts are taught and have collaborated with American companies. They are familiar with the legal vocabulary, the intricacies of the court system, and the standards of legal practice in America."
+                    },
+                    {
+                        "title": "03. We have practice management software. Can your assistants work on that?",
+                        "body": "Yes. Our virtual legal assistants are familiar with most of the legal technology systems such as Clio, MyCase, and PracticePanther. They will adapt to your firm’s custom workflows and not create any disruptions."
+
+                    },
+                    {
+                        "title": "04. How do you protect the confidentiality of the private information of your clients?",
+                        "body": "From the start, we have NDAs, secure communication channels, and the strictest access control to ensure compliance with the attorney-client privilege requirements. Our staff operate within your security parameters, and are familiar with the compliance requirements to legal confidentiality."
+                    },
+                    {
+                        "title": "05. Can we hire legal assistants in India for only litigation support or transactional work?",
+                        "body": "Yes. We deploy legal assistants in specialized fields like regulatory compliance, discovery, contract drafting, or IP research. This way, you get specialized assistance, and you do not get general assistance and have to train assistants the whole time."
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Hire a Legal Team That Safeguards Your Business Growth",
+                    "body": "Our legal assistants go beyond document management; they cut risk and increase speed."
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Contract Velocity Engine",
+                    "body": "Our legal assistants accelerate negotiation processes by creating templates to automate and streamline legal workflows, identifying and flagging potentially problematic clauses, and changing legal from a bottleneck to a streamlined competitive advantage."
+                },
+				 {
+                    "title": "Compliance Safeguards",
+                    "body": "Our assistants establish and maintain corporate governance frameworks, monitor compliance obligations that put a spotlight on time-sensitive documents from investors, and we have backed various compliance interactions including audit support and entity management."
+                },
+                {
+                    "title": "Risk Prevention",
+                    "body": "We have systems and processes to do vendor agreement reviews and IP-related documentation without deal-crippling slowdowns. When risk and loss potential is present, we align you with preventative professionals."
+                },
+                {
+                    "title": "Business-centric Communication",
+                    "body": "Contract complexity is transformed into simplicity by great legal assistants. Our team works with sales to understand how contract clauses impact closing from sales. We empower operations by ensuring they have documentation that does not block workflows. "
+                },
+                {
+                    "title": "Offshore Legal Expertise",
+                    "body": "You get meticulous execution, investor-grade documentation and risk-aware judgment at rates starting from $8/hr. No lengthy training periods. Just legal support that removes friction and positions your business for sustainable growth."
+                }
+				
+            ]
+			
+        }
+		
     ]
 }
