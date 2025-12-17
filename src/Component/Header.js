@@ -83,7 +83,7 @@ const Header = () => {
                                                             <ul className="submenu">
                                                                 {menu.submenus.map((sub, subIndex) => (
                                                                 <li key={subIndex} onClick={openToggle}>
-                                                                    <NavLink className="nav-link" to={`/${sub.url}`}>{sub.name}</NavLink>
+                                                                    <NavLink className="nav-link" to={`/${sub.url}`}>{sub.acf_menu_name}</NavLink>
                                                                 </li>
                                                                 ))}
                                                             </ul>

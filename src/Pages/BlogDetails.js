@@ -43,10 +43,15 @@ const BlogDetails = () => {
         <React.Fragment>
             <HelmetProvider>
             <Helmet>
-                <title>{data?.post?.post_title}</title>
-                <meta name="description" content={data?.post?.post_title} />
-                <link rel="canonical" href={window.location.href} />
-            </Helmet>
+  <title>{data?.seo?.meta_title || data?.post?.post_title}</title>
+
+  <meta
+    name="description"
+    content={data?.seo?.meta_description || data?.post?.post_excerpt || data?.post?.post_title}
+  />
+
+  <link rel="canonical" href={window.location.href} />
+</Helmet>
         <section className="innerBanner blogDetailsSec">
             
             <div className="container pt-4">
@@ -60,15 +65,17 @@ const BlogDetails = () => {
                             </ul>
                             <h1>{data?.post?.post_title}</h1>
                             <div className="blogAuth">
-                                {
-                                    data.post.auther_name === "Pinka Sharma"
-                                    ?
-                                    <img src="/images/pinka.webp" alt="Pinka Sharma"/>
-                                    :
-                                    <img src="/images/suresh.webp" alt="Suresh Sharma"/>
-                                }
-                                <h5>{data.post.auther_name}</h5>
-                                <h6>{formatDate(data.post.post_modified)}</h6>
+                               {
+  data.post.author_name === "Pinka Sharma" ? (
+    <img src="/images/pinka.webp" alt="Pinka Sharma" />
+  ) : data.post.author_name === "Kumari Santosh" ? (
+    <img src="/images/Santosh.webp" alt="Kumari Santosh" />
+  ) : (
+    <img src="/images/suresh.webp" alt="Suresh Sharma" />
+  )
+}
+                                <h5>{data.post.author_name}</h5>
+                                <h6>{formatDate(data.post.post_date)}</h6>
                             </div>
                             <ul className="listInline socialShare">
                                 <li>Share: </li>

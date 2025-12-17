@@ -38,11 +38,13 @@ const Blog = ({isRecentBlog}) => {
                             <img src={blog.banner} alt={blog.post_title}/>
                             <div className="blogAuthImg">
                                 {
-                                    blog.display_name === "Pinka Sharma"
-                                    ?
-                                    <img src="/images/pinka.webp" alt=""/>
-                                    :
-                                    <img src="/images/suresh.webp" alt=""/>
+                                    blog.display_name === "Pinka Sharma" ? (
+                                        <img src="/images/pinka.webp" alt="Pinka Sharma" />
+                                    ) : blog.display_name === "Kumari Santosh" ? (
+                                        <img src="/images/Santosh.webp" alt="Kumari Santosh" />
+                                    ) : (
+                                        <img src="/images/suresh.webp" alt="Suresh Sharma" />
+                                    )
                                 }
                             </div>
                         </div>
@@ -111,7 +113,6 @@ const Blog = ({isRecentBlog}) => {
                                 )
                             })
                         }
-                        
                     </div>
                 </div>
                 {!isRecentBlog && <Pagination

@@ -14,6 +14,7 @@ const API_ENDPOINTS = {
     contactUs: 'api/contactUsapi.php',
     serviceMenu: 'api/getMenulisting.php',
     serviceSection: 'api/getSection.php?post_type=steps_section&post_name=',
+    Toolssection: 'api/getToolSection.php?post_type=tool_section&post_name=',
 }
 
 export default API_ENDPOINTS;

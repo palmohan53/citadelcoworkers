@@ -514,15 +514,17 @@ const Home = () => {
                                         <div className="blogBx blogBig">
                                             <div className="blogImg">
                                                 <img src={data?.data?.listing[0]?.banner} alt={data?.data?.listing[0]?.post_title}/>
-                                                <div className="blogAuthImg">
-                                                    {
-                                                        data?.data?.listing[0]?.display_name === "Pinka Sharma"
-                                                        ?
-                                                        <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
-                                                        :
-                                                        <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
-                                                    }
-                                                </div>
+                                               <div className="blogAuthImg">
+  {
+    data?.data?.listing[0]?.display_name === "Pinka Sharma"
+      ? <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70" />
+      : data?.data?.listing[0]?.display_name === "Kumari Santosh"
+      ? <img src="/images/Santosh.webp" alt="Kumari Santosh" width="70" height="70" />
+      : data?.data?.listing[0]?.display_name === "Suresh Sharma"
+      ? <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70" />
+      : <img src="/images/suresh.webp" alt="Default Author" width="70" height="70" />
+  }
+</div>
                                             </div>
                                             <div className="blogContent">
                                                 <h3>{data?.data?.listing[0]?.post_title}</h3>
@@ -544,7 +546,7 @@ const Home = () => {
                                                     index !== 0 && index < 5 ? 
                                                         <div className=" blog-home col-md-6 col-12" key={index}>
                                                             <Link to={`/blog/${blog?.post_name}`}  className="d-block">
-                                                                <div className="blogBx blogSmall">
+                                                                <div className="blogBx blogSmall ggg">
                                                                     <div className="blogImg">
                                                                         <img src={blog.banner} alt={blog.post_title}/>
                                                                         <div className="blogAuthImg">

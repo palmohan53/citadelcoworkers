@@ -472,9 +472,11 @@ button.close-btn
     height: 40px;
   }
   .innerBannerContent .wideBtn{
-    min-height: 56px;
-    width: 172px;
-  }
+width: 100% ! IMPORTANT;
+    text-align: center !important;
+    display: block !important;
+}
+  
   .innerBannerContent p {
     min-height: 90px;
   }

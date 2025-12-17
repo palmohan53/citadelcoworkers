@@ -6,7 +6,8 @@ import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // import Testimonial from "../Component/Testimonial";
 import { useParams } from 'react-router-dom';
 // import ServiceProfile from "../Component/ServiceProfile";
@@ -14,6 +15,7 @@ import { useParams } from 'react-router-dom';
 import servicesContent from '../Content/services.json';
 import RecentBlog from "../Component/RecentBlog";
 import ServiceBulkContent from "../Component/ServiceBulkContent";
+import ToolsSection from "../Component/ToolsSection"
 //import Steps from "../Component/Steps";
 import Pricing from "../Component/Pricing";
 import ServiceBulkContentUpper from "../Component/ServiceBulkContentUpper";
@@ -35,7 +37,10 @@ const SubServices = () => {
     const [serviceTestimonial, setServiceTestimonial] = useState([]);
     const [serviceContent, setServiceContent] = useState([])
     const [serviceSection,setServiceSection] = useState([]);
-
+const [serviceTools, setServiceTools] = useState({
+  slider_title: "",
+  tools: []
+});
     const contactref = useRef(null);
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
@@ -120,7 +125,50 @@ const SubServices = () => {
             setServiceTestimonial([])
             console.log(err)
         })
+    };
+    
+const getServiceTools = async () => {
+  try {
+    let apiUrl = `${API_HOST}${API_ENDPOINTS.Toolssection}${subService}`;
+    if (serviceDetails) {
+      apiUrl = `${API_HOST}${API_ENDPOINTS.Toolssection}${serviceDetails}`;
     }
+
+    const res = await axios.get(apiUrl);
+    console.log("Full API Response:", res.data);
+
+    const listing = res.data.listing[0];
+
+    // Collect tool images
+    const toolsArray = [];
+    for (let i = 1; i <= 10; i++) {
+      const key = i === 1 ? "tool_icon_1" : `tool_icon${i}`;
+      if (listing[key] && listing[key].file_url) {
+        toolsArray.push({
+          url: listing[key].file_url,
+          title: listing[key].title || `Tool ${i}`
+        });
+      }
+    }
+
+    // ✅ FINAL STRUCTURE (title + tools)
+    setServiceTools({
+      slider_title: listing.slider_title,
+      tools: toolsArray
+    });
+
+    console.log("Tools loaded:", toolsArray);
+
+  } catch (err) {
+    console.error("API Error:", err);
+
+    setServiceTools({
+      slider_title: "",
+      tools: []
+    });
+  }
+};
+
 
 
    const getServiceSection = async () => {
@@ -140,6 +188,7 @@ const SubServices = () => {
   }
 };
 
+
     // const getProfileList = async () => {
     //     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`)
     //     const data = await response;
@@ -153,6 +202,7 @@ const SubServices = () => {
         }
         setServiceContent(filterContent);
     }
+    
     const faqData = serviceContent[0]?.faq;
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -164,6 +214,7 @@ const SubServices = () => {
             getServiceTestimonial();
             filterServiceJson();
             getServiceSection();
+            getServiceTools();
         }
         //eslint-disable-next-line
     }, [subService, serviceDetails])
@@ -234,13 +285,20 @@ const SubServices = () => {
                                         <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
                                             <div className="colorBx">
                                                 <React.Fragment>
-                                                    <div className="servicesIcon">
+                                                    <div className="servicesIcon sub-ser">
                                                         <img src={data.banner} alt={data.post_title} className="serviceIco" width="64" height="64"/>
                                                         <img src={data.hover_image} alt={data.post_title} className="serviceIco serviceHoverIco" width="64" height="64" />
-                                                    </div>
+       
+    </div>
                                                     <h3>{data.post_title}</h3>
                                                     <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
-                                                    {/* <div className="text-start">
+                                                                                                {data.top_menu === "Yes" && (
+   <div className="text-start"><Link to={`/services/${subService}/${data.post_name}` }  className="blueBtn">
+     
+                                          View More <FontAwesomeIcon icon={faArrowRight} />         
+                                             
+  </Link>  </div>
+)}                                         {/* <div className="text-start">
                                                         <Link to={`/services/${subService}/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
                                                     </div> */}
                                                 </React.Fragment>
@@ -253,8 +311,9 @@ const SubServices = () => {
                     </div>
                 </div>
             </section>
+
             <Suspense fallback={<div className="h-[400px] w-full" />}>
-            <section className="profile">
+         <section className={`profile ${serviceDetails || subService || ''}`}>
                 <div className="container">
                     <div className="row align-items-center mb-3">
                         <div className="col-md-12 col-12">
@@ -274,10 +333,14 @@ const SubServices = () => {
                 </div>
             </section>
             </Suspense>
+            <Suspense fallback={<div className="h-[400px] w-full" />}>
+            <ToolsSection serviceTools={serviceTools} />
+            </Suspense>
             <section className="serviceBulkContent">
                 <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
             </section>
             
+          
             <Suspense fallback={<div className="h-[400px] w-full" />}>
                 <Testimonial serviceTestimonial={serviceTestimonial} />
             </Suspense>
