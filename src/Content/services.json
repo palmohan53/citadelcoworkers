@@ -1095,7 +1095,12 @@
                     "title": "Smooth Transactions & Documentation",
                     "body": "Our experts prepare contracts to track deadlines and ensure all paperwork is in order for stress-free transactions. "
                 }
-            ]
+            ],
+              "Contacttext":[
+            {
+               "text": "Hire Real Estate VA"
+            }
+        ]
         },
         {
             "categoryUrl": "data-entry",
@@ -1193,7 +1198,14 @@
                     "title": "Stronger Customer Trust",
                     "body": "Up-to-date, accurate information isn’t just internal hygiene but also a brand promise. Our data entry specialists help you deliver consistently reliable experiences that build loyalty and trust."
                 }
-            ]
+            ],
+            
+		  "Contacttext":[
+            {
+               "text": "Hire Data Entry Experts"
+            }
+        ]
+            
         },
          {
             "categoryUrl": "research-analyst",
@@ -1295,7 +1307,12 @@
                     "title": "Scalable Support, Global Standards",
                     "body": "Need light research for a blog this week and full-scale analysis next? Scale up or down with zero hiring delays. Our virtual research assistants adapt to your tools, timelines, and depth of need."
                 }
-            ]
+            ],
+              "Contacttext":[
+            {
+               "text": "Hire Research Analyst"
+            }
+        ]
         },
         {
             "categoryUrl": "bookeeper",
@@ -1396,6 +1413,14 @@
                     "body": "From quickBooks to Xero to Zoho BOoks our bookkeepers are trained across leading platforms, ensuring smooth operations. "
                 }
             ]
+            ,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Bookeeper"
+            }
+        ]
         },
         {
             "categoryUrl": "personal-assistant",
@@ -1499,7 +1524,12 @@
                     "title": "Research & Admin on Tap",
                     "body": "From online research to light bookkeeping, your remote personal assistant is your behind-the-scenes analyst and admin pro, ready when you need them."
                 }
-            ]
+            ],
+             "Contacttext":[
+            {
+               "text": "Hire Personal Assistants"
+            }
+        ]
         },
         {
             "categoryUrl": "comprehensive-accounting-services",
@@ -1604,6 +1634,14 @@
                     "body": "Adapt financial resources based on business growth and seasonal needs."
                 }
             ]
+            ,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Accountants"
+            }
+        ]
         },
 		{
             "categoryUrl": "quickbooks-setup",
@@ -1705,6 +1743,14 @@
                     "body": "Adapt financial resources based on business growth and seasonal needs."
                 }
             ]
+            ,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire QuickBooks Expert"
+            }
+        ]
 			
         }
 		,
@@ -1813,7 +1859,14 @@
                     "body": "As your business grows, so do the services of your chosen payroll provider. Most of them are built to expand and shrink corresponding to your business, no matter how quickly you do it."
                 }
 				
-            ]
+            ],
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Payroll Expert"
+            }
+        ]
 			
         },
 		{
@@ -1915,7 +1968,14 @@
                     "body": "If your business is experiencing chronic turnover or understaffing, outsourcing is a viable solution. Outsourced tax preparation provides access to a pool of skilled professionals at a lower cost and risk."
                 }
 				
-            ]
+            ],
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Tax Expert"
+            }
+        ]
 			
         },
 		{
@@ -2123,6 +2183,14 @@
                 
 				
             ]
+            ,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire AR Specialist"
+            }
+        ]
 			
         },
 		{
@@ -2228,7 +2296,12 @@
                     "body": "Need help for a one-off task today and full-time assistance next month? Our virtual administrative assistants scale with your pace; no hiring lags, no disruption."
                 }
 				
-            ]
+            ],
+            "Contacttext":[
+            {
+               "text": "Hire Administrative Assistants"
+            }
+        ]
 			
         },{
             "categoryUrl": "hire-financial-analysts",
@@ -2331,6 +2404,14 @@
                 }
 				
             ]
+            ,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Financial Analysts"
+            }
+        ]
 			
         }
 		,
@@ -2439,7 +2520,15 @@
                     "body": "Let us handle the chats so you can focus on big-picture goals like expanding your business or launching new products."
                 }
 				
-            ]
+            ],
+            
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Chat Support Experts"
+            }
+        ]
 			
         }
 		,
@@ -2544,6 +2633,14 @@
                 }
 				
             ]
+            ,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire AP Specialist"
+            }
+        ]
 			
         }	,
 		{
@@ -2646,7 +2743,12 @@
                     "body": "We keep everything open by delivering you regular updates, progress reports and performance insights. This way you can stay on top of your projects and be in charge of them. "
                 }
 				
-            ]
+            ],
+            		  "Contacttext":[
+            {
+               "text": "Hire Microsoft Excel Experts"
+            }
+        ]
 			
         },
 		{
@@ -2749,7 +2851,12 @@
                     "body": "Our client relationship managers do more than just make transactions; they also establish relationships by keeping in touch with customers after the sale and enhancing your brand's relationship. "
                 }
 				
-            ]
+            ],
+            		  "Contacttext":[
+            {
+               "text": "Hire Sales Assistant"
+            }
+                      ]
 			
         }
 		,
@@ -2856,7 +2963,14 @@
                 }
 				
             ]
-			
+			,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Financial Controller"
+            }
+        ]
         },
 		{
             "categoryUrl": "hire-finance-manager",
@@ -2960,8 +3074,12 @@
                     "body": "You get strategic thinking, investor-ready outputs, and crisis-tested judgement at rates starting from $8/hr. No executive onboarding delays. Just finance leadership that accelerates decisions and positions your business for growth."
                 }
 				
+            ],
+		  "Contacttext":[
+            {
+               "text": "Hire Finance Manager"
+            }
             ]
-			
         }
 		,
 		{
@@ -3067,7 +3185,14 @@
                 }
 				
             ]
-			
+			,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Legal Assistant"
+            }
+        ]
         }
 		,
 		{
@@ -3173,8 +3298,456 @@
                 }
 				
             ]
+			,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Financial Paraplanner"
+            }
+        ]
+        },
+		{
+            "categoryUrl": "hire-web-designer",
+            "categoryName": "Web Designing",
+            "pageMetaTitle": "Remote Web Designer in India ",
+            "pageMetaContent": "Hire trained remote Web Designer in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Web Designer From India",
+                        "body": "Build modern, responsive, and SEO-ready websites with our offshore web designers - Starts at USD 8/Hour.",
+                        "buttonText": "Hire Now"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Professional Website Design Services That Amplify Your Conversions",
+                        "body": "Every second your site struggles, your prospects slip away. A professionally built website is no longer optional it’s your edge."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Design Talent That Transforms Digital Performance",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Web Designer Experts",
+                        "body": "30+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Websites Delivered",
+                        "body": "1500+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Served",
+                        "body": "30+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years of Design Excellence",
+                        "body": "12+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Who owns the final design files, project assets and intellectual property?",
+                        "body": "You retain 100% ownership of all work created. Once the project is completed we provide you with the source design files along with a complete, clean developer handoff package. Your intellectual property is secured under a strict non-disclosure agreement."
+                    },
+                    {
+                        "title": "02. Do you offer a free trial period for the web designer services?",
+                        "body": "We provide a free trial of 1 week. This lets you see how well your dedicated professional web designer fits with the project, how quickly they can communicate and how well they can do a certain work. This way, you can be sure that they are the right person for the job before you hire them full-time."
+                    },
+                    {
+                        "title": "03. How do you check that the designer is skilled and does good work before I hire them?",
+                        "body": "Every designer goes through a tough three-step screening process that checks their technical skills, portfolio and ability to communicate. We check to see if they know how to use CRO frameworks, design systems, and the whole Figma-to-code process. You also have a last interview to see if you fit."
+
+                    },
+                    {
+                        "title": "04. Is there a guarantee or service level agreement for how quickly and well the work will be done?",
+                        "body": "Yes, our contracts have a defined service level agreement that states what the expected response times, work hours and output quality criteria are. If the designers are unable to fulfill the KPIs outlined in the first term, we will find a replacement."
+                    },
+                    {
+                        "title": "05. How does an offshore web designer handle communication and collaboration?",
+                        "body": "In order to achieve seamless collaboration, we share daily updates through any communication channels that you prefer, conduct weekly progress reviews and share documents so that all stakeholders can provide feedback in real time. Your dedicated professional web designer works during the business hours that overlap with your time zone and communicates in an organized manner."
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Hire Web Designer Talent That Transforms Visitors Into Revenue",
+                    "body": "Our professional website designers don't just create attractive layouts, they architect conversion experiences that turn traffic into business growth."
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Conversion Architecture",
+                    "body": "Our professional web designers structure pages using proven information hierarchy and friction-reducing page flows. CTAs are positioned based on user intent and scroll behavior."
+                },
+				 {
+                    "title": "Brand Consistency",
+                    "body": "Our offshore website designers create and keep systematic design systems, which include color tokens, typography scales, component libraries and layout standards. This makes sure that all webpages look the same."
+                },
+                {
+                    "title": "Usability Standards",
+                    "body": "Our skilled site designers use WCAG guidelines to make sure that accessibility is always their first priority. This involves having the right color contrast ratios, readable font sizes, logical heading structures and navigation that works with a keyboard."
+                },
+                {
+                    "title": "Performance Optimization",
+                    "body": "Our professional website designers optimize designs for speed and usability by reducing layout complexity, applying responsive image strategies, maintaining efficient structures and designing above-the-fold content for faster rendering."
+                },
+                {
+                    "title": "Web Designer Excellence",
+                    "body": "Get pixel-perfect responsive designs, smooth design-to-HTML handoffs and continuing visual improvements that make your work easier, build trust in your brand and help your business develop in a sustainable way."
+                }
+				
+            ]
+			,
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire Web Designer"
+            }
+        ]
+        },
+		{
+            "categoryUrl": "hire-microsoft-office-experts",
+            "categoryName": "Microsoft Office",
+            "pageMetaTitle": "Remote Microsoft Office Experts in India ",
+            "pageMetaContent": "Hire trained remote Microsoft Office Experts in India  just $6/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire MS Office Experts in India",
+                        "body": "From Spreadsheets to Strategy Hire a Microsoft Office Virtual Assistant  - Starts at USD 6/Hour.",
+                        "buttonText": "Hire Now"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "MS Office Automations That Reduce Effort & Boost Productivity",
+                        "body": "Work faster and smarter with MS Office solutions developed exclusively for your processes"
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Empower Every Workflow with Microsoft Office Expertise",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Certified MS Office Specialists",
+                        "body": "30+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Global Clients Handled",
+                        "body": "100+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Served",
+                        "body": "30+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Countries Supported",
+                        "body": "12+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can your MS Office experts handle specialized business tasks?",
+                        "body": "Definitely. Our certified MS Office experts have hands-on experience across a wide range of industries - finance, legal, SaaS, healthcare, and more. They don’t just know the software; they understand how your business runs. From day one, they work with your tools, data formats, and workflows to deliver results that fit your exact operational needs."
+                    },
+                    {
+                        "title": "02. What kind of work would my Office expert perform?",
+                        "body": "Our virtual MS Office experts handle everything from Excel automation, PowerPoint design, and Word documentation to SharePoint setup, data reporting, and dashboard creation. If it runs on Office 365, our experts handle it."
+                    },
+                    {
+                        "title": "03. Can I request custom templates, dashboards, or automation workflows?",
+                        "body": "Absolutely. Whether you need Excel VBA macros, SharePoint forms, Power BI dashboards, or branded doc templates,  your Microsoft Office specialist expert builds everything to match your unique style, structure, and system. Every detail is customized to help your team work smarter and faster."
+
+                    },
+                    {
+                        "title": "04. How do you ensure data accuracy and security?",
+                        "body": "All tasks go through strict QA and validation checkpoints. Our offshore MS Office experts follow ISO-aligned data protection protocols and maintain daily reporting transparency to ensure precision and security in every deliverable."
+                    },
+                    {
+                        "title": "05. Do you support third-party integrations and collaboration tools?",
+                        "body": "Yes. Our experts work seamlessly across your ecosystem, including Microsoft Teams, OneDrive, Power Automate, Slack, Zoom, and Google Workspace: no training required - your tools, your rules, your workflow."
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "We Are at Your Service For",
+                    "body": "Helping You Work Smarter, Not Harder"
+                }
+            ],
+        "bottomServices":[
+                {
+                    "title": "Systems That Don’t Slow You Down",
+                    "body": "From Excel automation to SharePoint structuring, your MS Office expert builds workflows that stay reliable even when deadlines tighten and data piles up."
+                },
+				 {
+                    "title": "Real-Time Problem Solving",
+                    "body": "Need to clean up a dataset, automate a process, or format a last-minute presentation? Your Microsoft Office virtual assistant delivers quick, accurate fixes exactly when you need them."
+                },
+                {
+                    "title": "Documents That Speak Your Brand",
+                    "body": "Whether it’s a pitch deck, proposal, or report, your Office 365 specialist crafts clean, consistent, and branded templates that make your business look as sharp as it runs."
+                },
+                {
+                    "title": "Data That’s Organized, Not Overwhelming",
+                    "body": "No more broken links or scattered files. From Excel to OneDrive, your expert keeps data structured, centralized, and easily accessible across your Microsoft ecosystem."
+                },
+                {
+                    "title": "Error-Free Execution Every Time",
+                    "body": "From Excel macros to Power BI dashboards, every calculation, formula, and report is verified for accuracy before it reaches your screen, precision guaranteed."
+                }
+				,
+                {
+                    "title": "Support That Grows With You",
+                    "body": "Need an extra hand for a project this week or a dedicated team next quarter? Outsource MS Office experts who scale with your business - no hiring delays, no workflow disruption."
+                }
+            ],
+            
+
+
+		  "Contacttext":[
+            {
+               "text": "Hire MS Office Experts"
+            }
+        ]
 			
         }
-		
+		,
+		{
+            "categoryUrl": "hire-graphic-designer",
+            "categoryName": "Graphic Designing",
+            "pageMetaTitle": "Remote Graphic Designer in India ",
+            "pageMetaContent": "Hire trained remote Graphic Designer in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Graphic Designer from India",
+                        "body": "Build a stronger visual identity with offshore graphic designers specializing in brand-aligned, scalable design- Starts at USD 8/Hour.",
+                        "buttonText": "Hire Now"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "360° Design Services Crafted for Maximum Brand Impact",
+                        "body": "Every moment your brand lacks visual clarity you lose attention. Professional graphic design isn’t a luxury, it’s the difference between being remembered and being ignored. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Design Talent That Shapes Brands",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Graphic Design Experts",
+                        "body": "20+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Visual Assets Delivered",
+                        "body": "2500+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industries Served",
+                        "body": "25+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Years of Design Excellence",
+                        "body": "12+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How does the final approval procedure work?",
+                        "body": "The approval process is organized: your designer sends you work at certain points and you give them input. We won't move on to the next step (or ultimate delivery) unless we get your clear written approval. This makes sure that the creative process is absolutely safe for you."
+                    },
+                    {
+                        "title": "02. How do cycles of feedback and changes work?",
+                        "body": "Every project has planned review stages with explicit goals for what needs to be done. You give feedback in the way that works best for you, whether that's by writing comments, making videos, marking up PDFs or making live calls. Your designer makes adjustments in a planned way, explains their reasoning when needed and keeps making improvements until you are happy with the final product. Your engagement model includes revision cycles at no extra cost."
+                    },
+                    {
+                        "title": "03. How do you make sure that the quality of the work always meets our brand's high standards?",
+                        "body": "Quality assurance is not simply a guarantee; it's a key part of how we do business. We assign a specific Team Lead whose job is to make sure that all work meets the original requirement and your brand guide. Also, before a design gets to you, it is evaluated against an internal quality scorecard. This makes sure that the final products are always ready to be printed and optimized for digital use."
+
+                    },
+                    {
+                        "title": "04. Can my designer work directly with my in-house teams, like Marketing or Development?",
+                        "body": "Yes, our standard model is for everything to work together smoothly. Your offshore graphic designer works with your internal personnel and uses the communication and project management platforms you like, such as Slack, Asana and Teams. They are set up to work directly with your marketing managers on ad creatives. "
+                    },
+                    {
+                        "title": "05. Are your designers able to work on both digital and print design projects?",
+                        "body": "Yes, the graphic design outsourcing companies we partner with have designers who are adept at making things seem nice in both print and digital form. They know what each type of media needs in terms of technology, including the variations between RGB and CMYK color spaces, the resolution needs, the bleed specs, how to get files ready for different printing processes and how to make files work better on different platforms. One designer can handle all of your design demands across all media."
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Hire Graphic Designer Talent That Turns Ideas Into High-Impact Visuals",
+                    "body": "Our Indian graphic designers craft visuals that convert attention into revenue, build trust, and elevate your brand across every channel."
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "Brand Consistency",
+                    "body": "When you outsource graphic design services through Citadel, you get designers who create and keep up with full design systems. They make sure that every email, social media post, presentation and product package uses the same visual language. "
+                },
+                {
+                    "title": "Conversion Optimized",
+                    "body": "Our offshore graphic design services connect you with designers trained in attention architecture. They use size, color, contrast and white space to guide eyes exactly where you need them. Call-to-action buttons get noticed, key messages get read."
+                },
+                {
+                    "title": "Psychology Backed ",
+                    "body": "When you hire an expert graphic designer through our network, they make sure every decision in psychological principles like what color associations trigger intended emotions, typography choices that affect perceived credibility, and compositional balance that feels trustworthy."
+                },
+                {
+                    "title": "Production-Ready",
+                    "body": "Our graphic design services in India include designers who understand production requirements across all media. They make print files that pass preflighting, export online images that load quickly and provide printers, developers and production teams all the information they need to carry out your vision exactly as you planned."
+                }
+				,
+                {
+                    "title": "Scalable Designs",
+                    "body": "When you hire professional graphics designers, they don't just develop things; they also build systems. They create templates that speed up future production, component libraries that make sure everything is the same, style guides that help internal teams work together and scalable frameworks that grow with your organization."
+                }
+            ]
+			
+        },
+		{
+            "categoryUrl": "hire-seo-expert",
+            "categoryName": "SEO",
+            "pageMetaTitle": "Remote SEO Expert in India ",
+            "pageMetaContent": "Hire trained remote SEO Expert in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire SEO Experts From India",
+                        "body": "Build a powerful search presence with dedicated SEO specialists who understand user intent, algorithms and measurable growth- Starts at USD 8/Hour.",
+                        "buttonText": "Hire Now"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Advanced SEO Services for Sustainable Organic Growth",
+                        "body": "Professional SEO services exist to connect what people search for with what your business actually sells; it’s about capturing intent at the exact moment of need."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"SEO Talent That Drives Organic Growth",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "SEO/GEO Experts",
+                        "body": "20+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Websites Optimized",
+                        "body": "2500+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Search Impressions Driven",
+                        "body": "1000M+"
+                    },
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Industry Tools Expertise",
+                        "body": "30+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Do you guarantee SEO results and higher rankings?",
+                        "body": "SEO does not come with a fixed guarantee because the search algorithms, competition and user behaviour are always evolving. What we guarantee is a data-driven process, ethical practices and consistent optimization that is focused on sustainable growth. Our strategies improve visibility, traffic quality and conversion potentials. "
+                    },
+                    {
+                        "title": "02. How do the cycles of feedback and the change process work?",
+                        "body": "There are defined review stages with specific deliverables for each project. You can get feedback in the form of comments, calls or reports, whichever you like. Your expert goes over everything step by step explaining modifications until you are happy. Revisions are included in engagement models at no extra cost."
+                    },
+                    {
+                        "title": "03. How do you make sure the quality of work is as per our high standards?",
+                        "body": "Quality is embedded in our operations. A dedicated Team Lead verifies that the work aligns with your goals and making sure they follow all the best practices. Before the work is delivered it is scored against an internal checklist, guaranteeing that it is algorithm-compliant and performance-ready."
+
+                    },
+                    {
+                        "title": "04. Can an SEO professional work directly with in-house teams like Marketing or Development?",
+                        "body": "Yes, our experts can work effectively with your team. You hire a Google SEO expert who works with your team using platforms like Google Workspace, Trello or Slack. They collaborate with marketers to make content and with engineers to come up with technological fixes. "
+                    },
+                    {
+                        "title": "05. Do I need to hire separate content writer, designer and development resources?",
+                        "body": "No, our SEO experts work closely with the in-house support as part of the engagement. Whether it is for on-page content updates and design suggestions to technical fixes, everything that is required for SEO execution is covered without additional charge or separate contracts. "
+                    }
+					
+                   
+                ],
+        "bottomServicesHeading":[
+                {
+                    "title": "Hire Graphic Designer Talent That Turns Ideas Into High-Impact Visuals",
+                    "body": "Our Indian graphic designers craft visuals that convert attention into revenue, build trust, and elevate your brand across every channel."
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": " "
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ]
+			
+        }
     ]
 }

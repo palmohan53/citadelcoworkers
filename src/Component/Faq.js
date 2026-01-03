@@ -3,6 +3,19 @@ import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import { Link } from 'react-router-dom';
 
 const Faq = ({faqData}) => {
+
+  const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqData?.map(item => ({
+            "@type": "Question",
+            "name": item.title,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.body
+            }
+        }))
+    };
     return(
         <section className="faqSec bg_light_1">
             <div className="container">
@@ -32,7 +45,14 @@ const Faq = ({faqData}) => {
                     <div className='text-center mt-5'>
                         <Link to="/faq" className="colorBtn wideBtn">View All</Link>
                     </div>
+					
                 </div>
+				
+                {/* Step 2: Add FAQ JSON-LD */}
+                <script type="application/ld+json">
+                    {JSON.stringify(faqSchema)}
+                </script>
+
             </div>
         </section>
     )

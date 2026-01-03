@@ -7,8 +7,9 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useNavigate } from "react-router-dom";
 
-const ContactForm = () => {
+const ContactForm = ({ buttonText = "Start Your Project" }) => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -31,6 +32,7 @@ const ContactForm = () => {
     const handleVideoPopup = () => {
         setVideoPopup(!videoPopup);
     };
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -38,6 +40,8 @@ const ContactForm = () => {
 
         try {
             const response = await axios.post(`${API_HOST}${API_ENDPOINTS.contactUs}`, formData);
+               // ✅ Redirect only after successful API response
+  navigate("/thank-you", { state: { fromForm: true } });
             setMessage('Thank you for your submission!');
             // Reset form
             setFormData({
@@ -66,12 +70,10 @@ const ContactForm = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-7 col-12">
                             <div className="contactForm">
-                                <h2>Get In Touch</h2>
-                                <p>Fill out the form below, and a Citadel representative will<br/>contact you as soon as possible.</p>
-                                <div className="sticyImgForm">
-                                    <img src="/images/cnbnr-02.webp" width="70" height="69" alt="CNBNR" />
-                                    <img src="/images/nda.webp" width="70" height="69" alt="NDA" />
-                                </div>
+                                <h2>Share Your Requirement — We’ll Take it From Here</h2>
+                                <p>Send us the details and our team will get back with the best strategy to move forward.
+</p>
+                               
                                 <ul className="listInline">
                                     <li>
                                         <a href="tel:+19294707990"><FontAwesomeIcon icon={faPhone} /> Book a Call</a>
@@ -167,7 +169,7 @@ const ContactForm = () => {
                                                     className="colorBtn wideBtn"
                                                     disabled={loading}
                                                 >
-                                                    {loading ? 'Submitting...' : 'Submit'}
+                                                      {loading ? "Submitting..." : buttonText}
                                                 </button>
                                             </div>
                                         </div>

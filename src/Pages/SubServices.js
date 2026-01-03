@@ -351,12 +351,12 @@ const getServiceTools = async () => {
             </Suspense>
 
             <Pricing handleScrollClick={handleScrollClick}/>
-            <section className="serviceBulkContent">
+            <section className="serviceBulkContent fff">
                 <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
             </section>
             <Faq faqData={faqData}/>
             <div ref={contactref}>
-                <ContactForm />
+<ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
             </div>
             <RecentBlog />
             <section className={`bottomServices bg_light_1 ${serviceContent[0]?.bottomServices.length === 0 ? 'd-none': ''}`}>

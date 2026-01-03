@@ -25,7 +25,7 @@ import DataSecurity from './Pages/DataSecurity';
 import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
 import NotFound from './Pages/NotFound';
 import OfferPopup from './Component/OfferPopup'; // Import the OfferPopup component
-
+import ThankYou from "././Component/ThankYou";
 const STORAGE_KEY = 'hasSeenOfferPopup';
 function App() {
   useEffect(() => {
@@ -118,6 +118,7 @@ function App() {
           <Route path="/data-security" element={<DataSecurity />} />
           <Route path="/how-does-citadel-works" element={<HowDoesCitadelWorks />} />
           <Route path="/not-found" element={<NotFound />} />
+           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

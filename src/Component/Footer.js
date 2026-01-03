@@ -16,7 +16,7 @@ const Footer = () => {
     }, [])
     return (
         <React.Fragment>
-            <footer className={`footer ${footerHide}`}>
+            <footer className={`footer `}>
                 <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-md-4 col-12">

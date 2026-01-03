@@ -11,7 +11,7 @@ import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
 import BannerContent from '../Component/BannerContent';
-
+import BrandSlider  from '../Component/Brandsslider'
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -209,6 +209,7 @@ const Home = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
+          
                 <section className="service home-page" id="servicesSec">
                     <div className="container">
                         <div className="row align-items-center mb-3">
@@ -358,7 +359,7 @@ const Home = () => {
                                                     
                                                         <div className="bannerProfile">
                                                             <div className="profileImg">
-                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="" height="" />
+                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="261" height="261" />
                                                                 <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
                                                             </div>
                                                             <div className="bannerProfileDetails">
@@ -514,12 +515,12 @@ const Home = () => {
                                         <div className="blogBx blogBig">
                                             <div className="blogImg">
                                                 <img src={data?.data?.listing[0]?.banner} alt={data?.data?.listing[0]?.post_title}/>
-                                               <div className="blogAuthImg">
+                                               <div className="blogAuthImg ff">
   {
     data?.data?.listing[0]?.display_name === "Pinka Sharma"
       ? <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70" />
       : data?.data?.listing[0]?.display_name === "Kumari Santosh"
-      ? <img src="/images/Santosh.webp" alt="Kumari Santosh" width="70" height="70" />
+      ?     <img src="/images/Santosh.webp" alt="Kumari Santosh" />
       : data?.data?.listing[0]?.display_name === "Suresh Sharma"
       ? <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70" />
       : <img src="/images/suresh.webp" alt="Default Author" width="70" height="70" />
@@ -549,14 +550,16 @@ const Home = () => {
                                                                 <div className="blogBx blogSmall ggg">
                                                                     <div className="blogImg">
                                                                         <img src={blog.banner} alt={blog.post_title}/>
-                                                                        <div className="blogAuthImg">
-                                                                        {
-                                                                            blog?.display_name === "Pinka Sharma"
-                                                                            ?
-                                                                            <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
-                                                                            :
-                                                                            <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
-                                                                        }
+                                                                        <div className="blogAuthImg ggggg">
+                                                                       {
+  blog?.display_name === "Pinka Sharma" ? (
+    <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
+  ) : blog?.display_name === "Kumari Santosh" ? (
+   <img src="/images/Santosh.webp" alt="Kumari Santosh"  width="70" height="70"/>
+  ) : (
+    <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
+  )
+}
                                                                         </div>
                                                                     </div>
                                                                     <div className="blogContent">

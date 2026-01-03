@@ -9,10 +9,7 @@ const BannerContent = () => {
             </h1>
             <h4 
                 className="banner-subtitle"
-                style={{
-                    containIntrinsicSize: '0 88px',
-                    contentVisibility: 'auto'
-                }}
+              
             >
                 Work with India's top 3% of remote talent in finance, tech, design, and support. Handpicked experts. No hiring hassle.
             </h4>

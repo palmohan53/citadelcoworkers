@@ -253,7 +253,7 @@ section.process.pb-100
       position: static;
       transform: translate(-0%, -0%);
       padding: 0;
-      min-height: 230px;
+            min-height: max-content;
     }
     .clientNum{
       gap: 20px;
@@ -404,6 +404,9 @@ section.pricing .row {
     }
 
 .profileImg img {
+    width: 100%;
+}
+.innerBannerContent.Thank-you-header img {
     width: 100%;
 }
 }
