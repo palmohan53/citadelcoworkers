@@ -11,7 +11,8 @@ import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
 import BannerContent from '../Component/BannerContent';
-import BrandSlider  from '../Component/Brandsslider'
+import BrandSlider  from '../Component/Brandsslider';
+
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -209,7 +210,8 @@ const Home = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
-          
+               <section className="serviceb bg-dark" id=""><div className="container"><BrandSlider /></div></section>
+ 
                 <section className="service home-page" id="servicesSec">
                     <div className="container">
                         <div className="row align-items-center mb-3">
@@ -266,7 +268,7 @@ const Home = () => {
                                 <div className="service_box style_three dark_color">
                                     <div className="service_content">
                                         <div className="content_inner">
-                                            <img src="/images/expert.svg" alt="Top Experts, On-Demand" width="70" height="70"className="none-hover"/>
+                                            <img src="/images/expert (2).webp" alt="Top Experts, On-Demand" width="70" height="70"className="none-hover"/>
                                             <img src="/images/expert-white.png" alt="Top Experts, On-Demand" width="70" height="70"className="hover-img"/>
                                             <h3 className="semiHeading">Top Experts, On-Demand</h3>
                                             <p>Hire skilled professionals in hours—ready to deliver from day one.</p>

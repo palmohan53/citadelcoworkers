@@ -105,12 +105,8 @@ const BrandSlider = () => {
         </img>
         </div>
         </div>
-         <div className="slide">
-          <h2>Slide Three</h2>
-        </div>
-         <div className="slide">
-          <h2>Slide Three</h2>
-        </div>
+       
+       
       </Slider>
        </div>
        </div>

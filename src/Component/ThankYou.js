@@ -22,7 +22,8 @@ const ThankYou = () => {
 <div className="innerBannerContent Thank-you-header">
     <img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/thank.webp"></img>
 
-<p>We’ve received your request, and we will reach out to you to discuss the best way forward. 
+<p>We’ve received your request, and our team will get in touch within the next 24 hours to discuss the best way forward. In the meantime, 
+you’re welcome to call us at <a href="tel:+19294707990">+19294707990</a> or write to <a href="mailto:sales@citadelcoworkers.com">sales@citadelcoworkers.com</a> for any questions. 
 </p>
 <div className="text-center mt-3"><a className="colorBtn wideBtn" href="/contact-us" data-discover="true">Go to Home </a></div>
 </div></section>
@@ -34,7 +35,7 @@ const ThankYou = () => {
     <h2>Continue Exploring Citadel </h2>
     <ul className="follow-Us-Thankyou">
 <li>
-<a rel="noreferrer" href="https://www.facebook.com/citadelcoworkers" target="_blank">
+<a rel="noreferrer" href="https://www.facebook.com/citadelcoworkersllc" target="_blank">
 <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-inline--fa fa-facebook-f " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"></path></svg></a></li>
 <li>
     <a rel="noreferrer" href="https://x.com/citadelcoworker" target="_blank"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="x-twitter" class="svg-inline--fa fa-x-twitter " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a></li>

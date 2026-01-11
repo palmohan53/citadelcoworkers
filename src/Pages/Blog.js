@@ -15,40 +15,71 @@ const getBlogList = async () => {
 };
 
 const Blog = ({isRecentBlog}) => {
+
   const [currentPage,setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
-  const {data,status} = useQuery("users", getBlogList);
+
+  const {data,status} = useQuery("blogList", getBlogList);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
-  // ✅ URL Slugs (supports /virtual-assistant/data-entry)
+  // ✅ URL Slugs
   const pathSlugs = window.location.pathname.split("/").filter(Boolean);
   const lastSlug = pathSlugs[pathSlugs.length - 1] || "";
   const parentSlug = pathSlugs[pathSlugs.length - 2] || "";
 
   const allBlogs = data?.data?.listing || [];
 
-  // ✅ First try: match last slug (data-entry)
-  const blogsByLastSlug = allBlogs.filter((blog) => {
-    return blog?.category_slug && blog.category_slug.includes(lastSlug);
-  });
+  // ✅ SAFE slug matcher (string / array / null safe)
+  const hasSlug = (categorySlug, slug = "") => {
+    if (!slug || !categorySlug) return false;
 
-  // ✅ Fallback: if last slug no match, match parent slug (virtual-assistant)
-  const blogsByParentSlug = allBlogs.filter((blog) => {
-    return blog?.category_slug && blog.category_slug.includes(parentSlug);
-  });
+    // case 1: array
+    if (Array.isArray(categorySlug)) {
+      return categorySlug
+        .map(s => String(s).trim())
+        .includes(slug);
+    }
 
-  // ✅ Final list for recent blog section
+    // case 2: string
+    if (typeof categorySlug === "string") {
+      return categorySlug
+        .split(",")
+        .map(s => s.trim())
+        .includes(slug);
+    }
+
+    return false;
+  };
+
+  // ✅ lastSlug blogs
+  const blogsByLastSlug = allBlogs.filter(blog =>
+    hasSlug(blog?.category_slug, lastSlug)
+  );
+
+  // ✅ parentSlug blogs (no duplicates)
+  const blogsByParentSlug = allBlogs
+    .filter(blog => hasSlug(blog?.category_slug, parentSlug))
+    .filter(parentBlog =>
+      !blogsByLastSlug.some(lastBlog => lastBlog.ID === parentBlog.ID)
+    );
+
+  // ✅ Final blogs list
   const blogsToRender = !isRecentBlog
     ? allBlogs
-    : blogsByLastSlug.length > 0
-      ? blogsByLastSlug
-      : blogsByParentSlug.length > 0
-        ? blogsByParentSlug
-        : allBlogs;
+    : [
+        ...blogsByLastSlug,
+        ...blogsByParentSlug,
+        ...allBlogs.filter(b =>
+          !blogsByLastSlug.some(x => x.ID === b.ID) &&
+          !blogsByParentSlug.some(x => x.ID === b.ID)
+        )
+      ].slice(0, 3);
 
-  const currentPosts = blogsToRender.slice(indexOfFirstPost,indexOfLastPost);
+  const currentPosts = !isRecentBlog
+    ? blogsToRender.slice(indexOfFirstPost, indexOfLastPost)
+    : blogsToRender;
 
   const paginate = (pageNumber,e) => {
     e.preventDefault();
@@ -57,27 +88,29 @@ const Blog = ({isRecentBlog}) => {
   };
 
   const blogHtml = (blog,index) => (
-    <div className={`${!isRecentBlog ? "blogPageBx col-md-6 col-12" : "col-md-4 col-12"}`} key={index}>
+    <div
+      className={`${!isRecentBlog ? "blogPageBx col-md-6 col-12" : "col-md-4 col-12"}`}
+      key={index}
+    >
       <Link to={`/blog/${blog?.post_name}`} className="d-block">
         <div className="blogBx blogSmall">
           <div className="blogImg">
-            <img src={blog.banner} alt={blog.post_title}/>
+            <img src={blog.banner} alt={blog.post_title} />
             <div className="blogAuthImg">
-               {
-                                    blog.display_name === "Pinka Sharma" ? (
-                                        <img src="/images/pinka.webp" alt="Pinka Sharma" />
-                                    ) : blog.display_name === "Kumari Santosh" ? (
-                                        <img src="/images/Santosh.webp" alt="Kumari Santosh" />
-                                    ) : (
-                                        <img src="/images/suresh.webp" alt="Suresh Sharma" />
-                                    )
-                                }
+              {blog.display_name === "Pinka Sharma" ? (
+                <img src="/images/pinka.webp" alt="Pinka Sharma" />
+              ) : blog.display_name === "Kumari Santosh" ? (
+                <img src="/images/Santosh.webp" alt="Kumari Santosh" />
+              ) : (
+                <img src="/images/suresh.webp" alt="Suresh Sharma" />
+              )}
             </div>
           </div>
+
           <div className="blogContent">
             <h3>{blog.post_title}</h3>
             <h5>By <b>{blog.display_name}</b></h5>
-            <p dangerouslySetInnerHTML={{__html:blog.post_content}}/>
+            <p dangerouslySetInnerHTML={{__html: blog.post_content}} />
             <div className="d-flex justify-content-between">
               <h6>7 min read</h6>
               <button className="simpleBtn">
@@ -90,7 +123,9 @@ const Blog = ({isRecentBlog}) => {
     </div>
   );
 
-  useEffect(() => { window.scrollTo(0,0) }, []);
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
 
   if(status === "loading"){
     return <div className="loaderWrp"><span className="loader"/></div>;
@@ -99,7 +134,8 @@ const Blog = ({isRecentBlog}) => {
   return(
     <React.Fragment>
       <HelmetProvider>
-        <Helmet/>
+        <Helmet />
+
         {!isRecentBlog && (
           <section className="innerBanner">
             <div className="innerBannerContent">
@@ -112,6 +148,7 @@ const Blog = ({isRecentBlog}) => {
         <section className="blog" id="BlogDetailsSec">
           <div className="container">
             <div className="row">
+
               {isRecentBlog && (
                 <div className="col-12">
                   <div className="sectionHeading text-center mb-4">
@@ -123,17 +160,15 @@ const Blog = ({isRecentBlog}) => {
                 </div>
               )}
 
-              {currentPosts
-                ?.slice(0, isRecentBlog ? 3 : currentPosts.length)
-                .map((blog,index) => blogHtml(blog,index))
-              }
+              {currentPosts.map((blog,index) => blogHtml(blog,index))}
+
             </div>
           </div>
 
           {!isRecentBlog && (
             <Pagination
               postsPerPage={postsPerPage}
-              totalPosts={data?.data?.listing?.length}
+              totalPosts={blogsToRender.length}
               paginate={paginate}
               currentPage={currentPage}
             />

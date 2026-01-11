@@ -396,6 +396,19 @@ section.process.pb-100
 .bannerProfile {
     width: 100% !important;
 }
+.left-content {
+    width: 100%;
+    float: left;
+}
+.content-image {
+    display: block !important;
+    align-items: center;
+    gap: 15px;
+}
+.right-cont-img {
+    width: 100%;
+    float: left;
+}
 section.pricing .row {
     gap: 20px !important;
 }
@@ -463,6 +476,7 @@ button.close-btn
     margin-top: 0;
     padding-top: 50px;
     min-height: 360px;
+            row-gap: 49px;
 }
   .clientBx {
     width: 47%;

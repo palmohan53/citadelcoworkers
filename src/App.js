@@ -9,7 +9,7 @@ import Home from './Pages/Home';
 import Services from './Pages/Services';
 import BlogDetails from './Pages/BlogDetails';
 import Blog from './Pages/Blog';
-
+import FloatingContact from "./Component/FloatingContact";
 import './Framework.css';
 import './App.css';
 import './Media.css';
@@ -122,6 +122,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
+         <FloatingContact />   {/* ✅ contact Popup */}
     </div>
   );
 }

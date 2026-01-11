@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef, Suspense} from "react";
 import { Link } from 'react-router-dom';
-// import CountUp from 'react-countup';
+ import CountUp from 'react-countup';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
 import API_ENDPOINTS from "../config/APIEndPoints";
@@ -11,11 +11,12 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // import Testimonial from "../Component/Testimonial";
 import { useParams } from 'react-router-dom';
 // import ServiceProfile from "../Component/ServiceProfile";
-
+//import NewSection from "../Component/NewSection";
 import servicesContent from '../Content/services.json';
 import RecentBlog from "../Component/RecentBlog";
 import ServiceBulkContent from "../Component/ServiceBulkContent";
 import ToolsSection from "../Component/ToolsSection"
+import CertificateSection from "../Component/CertificationSection";
 //import Steps from "../Component/Steps";
 import Pricing from "../Component/Pricing";
 import ServiceBulkContentUpper from "../Component/ServiceBulkContentUpper";
@@ -28,10 +29,16 @@ const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
 
 
 const SubServices = () => {
+    
     const navigate = useNavigate();
+    
     const {subService, serviceDetails} = useParams();
     const [servicedata, setServicedata] = useState([]);
-    const [serviceProfile, setServiceProfile] = useState([]);
+const [serviceProfile, setServiceProfile] = useState(null); // full response
+const [profileHeading, setProfileHeading] = useState({
+    heading: "",
+    subheading: ""
+});
     const [serviceBulkContent, setServiceBulkContent] = useState([]);
     const [serviceBulkContentUpper, setServiceBulkContentUpper] = useState([]);
     const [serviceTestimonial, setServiceTestimonial] = useState([]);
@@ -40,6 +47,11 @@ const SubServices = () => {
 const [serviceTools, setServiceTools] = useState({
   slider_title: "",
   tools: []
+});
+const [certificationData, setCertificationData] = useState({
+  heading: "",
+  subheading: "",
+  certifications: []
 });
     const contactref = useRef(null);
     const handleScrollClick = () => {
@@ -66,21 +78,33 @@ const [serviceTools, setServiceTools] = useState({
             console.log(err)
         })
     }
-    const getProfileList = async () => {
-        let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`;
-        if(serviceDetails){
-            apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${serviceDetails}`;
-        }
-        await axios.get(apiUrl)
-        // await axios.get(`${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`)
-        .then((res)=>{
-            setServiceProfile(res);
-        })
-        .catch((err)=>{
-            setServiceProfile([])
-            console.log(err)
-        })
+    
+   const getProfileList = async () => {
+    let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`;
+    if (serviceDetails) {
+        apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${serviceDetails}`;
     }
+
+    try {
+        const res = await axios.get(apiUrl);
+
+        // ✅ PURANA STRUCTURE SAFE
+        setServiceProfile(res);
+
+        // ✅ Heading alag se
+        setProfileHeading({
+            heading: res.data?.parent?.Heading,
+            subheading: res.data?.parent?.Subheading
+        });
+
+        console.log("Full res", res);
+        console.log("Heading", res.data.parent.Heading);
+    } catch (err) {
+        setServiceProfile(null);
+        console.log(err);
+    }
+};
+
     const getServiceBulkContent = async () => {
         // await axios.get(`${API_HOST}${API_ENDPOINTS.serviceBulkcontent}${subService}`)
         let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceBulkcontent}${subService}`;
@@ -126,7 +150,78 @@ const [serviceTools, setServiceTools] = useState({
             console.log(err)
         })
     };
-    
+ 
+const getCertificationSection = async () => {
+  try {
+    let apiUrl = `${API_HOST}${API_ENDPOINTS.Certificationsection}${subService}`;
+    if (serviceDetails) {
+      apiUrl = `${API_HOST}${API_ENDPOINTS.Certificationsection}${serviceDetails}`;
+    }
+
+    const res = await axios.get(apiUrl);
+    console.log("Full Certification API Response:", res.data);
+
+    const listing = res.data?.listing?.[0];
+console.log("PARENT certificationData:", certificationData);
+    // Safety fallback
+    if (!listing) {
+      setCertificationData({
+        heading: "",
+        subheading: "",
+        certifications: []
+      });
+      return;
+    }
+
+    // ✅ certifications array mapping
+    const certificationsArray =
+      (listing.certifications || [])
+        .filter((item) => item?.image?.file_url) // only valid images
+        .map((item) => ({
+          index: item.index,
+          name: item.name || "",
+          imageUrl: item.image.file_url,
+          imageAlt: item.image.alt_text || item.name || "Certification"
+        }));
+
+    // ✅ FINAL STRUCTURE
+    setCertificationData({
+      heading: listing.heading || "",
+      subheading: listing.subheading || "",
+      certifications: certificationsArray
+    });
+
+    console.log("Certifications loaded:", certificationsArray);
+  } catch (err) {
+    console.error("Certification API Error:", err);
+
+    setCertificationData({
+      heading: "",
+      subheading: "",
+      certifications: []
+    });
+  }
+};
+const sc0 = serviceContent?.[0] || {};
+const bottomServicesRaw = Array.isArray(sc0.bottomServices) ? sc0.bottomServices : [];
+const iconHeadingArr = Array.isArray(sc0?.icontextdesignheading) ? sc0.icontextdesignheading : [];
+const iconItems = Array.isArray(sc0?.icontextdesign) ? sc0.icontextdesign : [];
+const centerImageUrl = iconHeadingArr?.[0]?.centerImageUrl || "";
+// ✅ show condition
+const shouldShowIconSection = iconItems.length > 0 || iconHeadingArr.length > 0;
+const bottomServices = bottomServicesRaw.filter((item) => {
+  const title = (item?.title || "").trim();
+  const body = (item?.body || "").trim();
+  return title !== "" || body !== ""; // koi bhi field me content ho
+});
+
+const heading = sc0?.bottomServicesHeading?.[0] || {};
+const headingTitle = (heading?.title || "").trim();
+const headingBody  = (heading?.body || "").trim();
+
+const shouldShowBottomServices =
+  bottomServices.length > 0 && (headingTitle !== "" || headingBody !== "");
+
 const getServiceTools = async () => {
   try {
     let apiUrl = `${API_HOST}${API_ENDPOINTS.Toolssection}${subService}`;
@@ -215,6 +310,7 @@ const getServiceTools = async () => {
             filterServiceJson();
             getServiceSection();
             getServiceTools();
+            getCertificationSection();
         }
         //eslint-disable-next-line
     }, [subService, serviceDetails])
@@ -252,13 +348,27 @@ const getServiceTools = async () => {
                             <div className="clientNum">
                                 
                                 {serviceContent[0]?.clientsNumber.map((data, index)=>{
+                                      const numberOnly = parseInt(data.body.replace(/\D/g, ""));
+                                      const hasPlus = data.body.includes("+");
+    const hasPercent = data.body.includes("%");
+  const hasMillion = data.body.toLowerCase().includes("m"); // 100M, 5M, etc.
                                     return(
                                         <div className="clientBx" key={index}>
-                                            <p>
-                                                {/* <CountUp end={data.body} duration={10} /> */}
-                                                {data.body}
-                                            </p>
-                                            <h3>{data.title}</h3>
+                                      <div className="client-icon"> <img src={data.imageUrl} alt={data.title}></img></div>
+        <p>
+          <CountUp
+            start={0}
+            end={numberOnly}
+            duration={1}
+            separator=","
+          />
+            {hasMillion && "M"}
+       {hasPlus && "+"}
+          {hasPercent && "%"}
+            
+        </p>
+
+        <h3>{data.title}</h3>
                                         </div>
                                     )
                                 })}
@@ -318,8 +428,17 @@ const getServiceTools = async () => {
                     <div className="row align-items-center mb-3">
                         <div className="col-md-12 col-12">
                             <div className="sectionHeading text-center">
-                                <h2>Our Expert Team</h2>
-                                <p>Meet our diverse team of skilled professionals dedicated to delivering excellence across a spectrum of services,<br/>ensuring tailored solutions for your business needs.</p>
+                                 <h2>
+        {profileHeading.heading && profileHeading.heading !== "NA"
+            ? profileHeading.heading
+            : "Our Expert Team"}
+    </h2>
+
+    <p>
+        {profileHeading.subheading && profileHeading.subheading !== "NA"
+            ? profileHeading.subheading
+            : "Meet our diverse team of skilled professionals dedicated to delivering excellence across a spectrum of services,ensuring tailored solutions for your business needs."}
+    </p>
                             </div>
                         </div>
                     </div>
@@ -345,7 +464,11 @@ const getServiceTools = async () => {
                 <Testimonial serviceTestimonial={serviceTestimonial} />
             </Suspense>
             
-      
+ {certificationData?.certifications?.length > 0 && (
+  <section>
+    <CertificateSection certificationData={certificationData} />
+  </section>
+)}
            <Suspense fallback={<div className="h-[400px] w-full" />}>
                 <Steps serviceSection={serviceSection} />
             </Suspense>
@@ -359,25 +482,90 @@ const getServiceTools = async () => {
 <ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
             </div>
             <RecentBlog />
-            <section className={`bottomServices bg_light_1 ${serviceContent[0]?.bottomServices.length === 0 ? 'd-none': ''}`}>
-                <div className="container">
-                    <div className="sectionHeading text-center mb-5">
-                        <h2>{serviceContent[0]?.bottomServicesHeading[0]?.title}</h2>
-                        <p>{serviceContent[0]?.bottomServicesHeading[0]?.body}</p>
-                    </div>
-                    <div className="bottomServicesWrp mt-3">
-                        {serviceContent[0]?.bottomServices?.map((data, index)=>{
-                            return(
-                                <div className="bottomServiceContent" key={index}>
-                                    {/* <img src={data.imageUrl} alt={data.title} /> */}
-                                    <h3>{data.title}</h3>
-                                    <p>{data.body}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
+         {shouldShowBottomServices && (
+        <section className="bottomServices bg_light_1">
+          <div className="container">
+            <div className="sectionHeading text-center mb-5">
+              {headingTitle && <h2>{headingTitle}</h2>}
+              {headingBody && <p>{headingBody}</p>}
+            </div>
+
+            <div className="bottomServicesWrp mt-3">
+              {bottomServices.map((data, index) => (
+                <div className="bottomServiceContent" key={index}>
+                  {data?.title?.trim() && <h3>{data.title}</h3>}
+                  {data?.body?.trim() && <p>{data.body}</p>}
                 </div>
-            </section>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+{shouldShowIconSection && (() => {
+  const mid = Math.ceil(iconItems.length / 2);
+  const leftItems = iconItems.slice(0, mid);
+  const rightItems = iconItems.slice(mid);
+
+  // ✅ agar center image JSON me nahi hai to yaha direct de do
+
+
+  const renderCard = (item, index, startIndex = 0) => {
+    const ribbonNum = String(startIndex + index + 1).padStart(2, "0");
+
+    return (
+      <div className="card" key={`${ribbonNum}-${index}`}>
+        <div className="ribbon">{ribbonNum}</div>
+        <div className="content">
+          {item?.imageUrl && (
+            <div className="icon-box">
+              <img src={item.imageUrl} alt={item?.body || ""} />
+            </div>
+          )}
+          {item?.body?.trim() && (
+            <div className="text-box">
+              <h3>{item.body}</h3>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <section className="bottomServices bg_light_1 icontextdesign">
+     <div className="container">
+        {iconHeadingArr.map((data, index) => (
+          <div className="sectionHeading text-center mb-4" key={index}>
+            {data?.title?.trim() && <h2>{data.title}</h2>}
+            {data?.body?.trim() && <p>{data.body}</p>}
+          </div>
+        ))}
+
+        <div className="steps-grid">
+          {/* LEFT */}
+          <div className="steps-col left">
+            {leftItems.map((item, index) => renderCard(item, index, 0))}
+          </div>
+
+          {/* CENTER IMAGE */}
+          <div className="center-card">
+            {centerImageUrl ? <img src={centerImageUrl} alt="Center" /> : null}
+          </div>
+
+          {/* RIGHT */}
+          <div className="steps-col right">
+            {rightItems.map((item, index) =>
+              renderCard(item, index, leftItems.length)
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+})()}
+ 
+        
+
             <section className="bottomCon">
                 <div className="container">
                     <div className="sectionHeading text-center">
