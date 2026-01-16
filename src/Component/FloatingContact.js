@@ -60,13 +60,7 @@ window.tidioChatApi?.on("close", function () {
             <div className="fc-actions">
               <a href="tel:+19294707990"><img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/phone-call-1.png"></img> Call</a>
               <a href="mailto:sales@citadelcoworkers.com"><img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/email-4.png"></img> Email</a>
-              <a
-                href="https://wa.me/+19294707990"
-                target="_blank"
-                rel="noreferrer"
-              >
-             <img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/whatsapp-1.png"></img>WhatsApp
-              </a>
+            
 
               <button
                 onClick={() => {

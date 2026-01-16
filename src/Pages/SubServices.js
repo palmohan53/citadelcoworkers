@@ -22,6 +22,7 @@ import Pricing from "../Component/Pricing";
 import ServiceBulkContentUpper from "../Component/ServiceBulkContentUpper";
 import Faq from "../Component/Faq";
 import ContactForm from "../Component/ContactForm";
+
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
@@ -53,6 +54,11 @@ const [certificationData, setCertificationData] = useState({
   subheading: "",
   certifications: []
 });
+const concluding = serviceContent?.[0]?.Concludingtext?.[0] || {};
+const concludingText = (concluding?.text || "").trim();
+const concludingBtnText = (concluding?.buttontext || "").trim();
+
+const shouldShowConcluding = concludingText !== "" || concludingBtnText !== "";
     const contactref = useRef(null);
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
@@ -342,6 +348,7 @@ const getServiceTools = async () => {
                         <div className="col-md-12 col-12 text-center">
                             <div className="sectionHeading">
                                 <h2>{serviceContent[0]?.clientsNumberHeading[0]?.title}</h2>
+                                   <h4>{serviceContent[0]?.clientsNumberHeading[0]?.body}</h4>
                             </div>
                         </div>
                         <div className="col-md-12">
@@ -565,15 +572,36 @@ const getServiceTools = async () => {
 })()}
  
         
+          <section className="bottomCon">
+  <div className="container">
+    <div className="sectionHeading text-center">
+      {shouldShowConcluding ? (
+        <>
+          <h2 className="mb-4">
+            <b>{concludingText || "Hire Now"}</b>
+          </h2>
 
-            <section className="bottomCon">
-                <div className="container">
-                    <div className="sectionHeading text-center">
-                        <h2 className="mb-4"><b>1600+ Clients in 18 Countries</b> Have Accelerated Their Business Growth With Citadel Co-Workers. You Could Be Next!</h2>
-                        <Link to='/contact-us' className="colorBtn wideBtn">Send Your Requirement</Link>
-                    </div>
-                </div>
-            </section>
+          <Link to="/contact-us" className="colorBtn wideBtn">
+            {concludingBtnText || "Send Your Requirement"}
+          </Link>
+        </>
+      ) : (
+        <>
+          <h2 className="mb-4">
+            <b>
+              1600+ Clients in 18 Countries
+            </b>{" "}
+            Have Accelerated Their Business Growth With Citadel Co-Workers. You Could Be Next!
+          </h2>
+
+          <Link to="/contact-us" className="colorBtn wideBtn">
+            Send Your Requirement
+          </Link>
+        </>
+      )}
+    </div>
+  </div>
+</section>
         </HelmetProvider>
     </React.Fragment>
     )

@@ -210,7 +210,7 @@ const Home = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
-               <section className="serviceb bg-dark" id=""><div className="container"><BrandSlider /></div></section>
+              {/*  <section className="serviceb bg-dark" id=""><div className="container"><BrandSlider /></div></section> */}
  
                 <section className="service home-page" id="servicesSec">
                     <div className="container">

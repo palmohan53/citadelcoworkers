@@ -667,6 +667,9 @@ section.bg_light_1.brands-slids {
     width: 78%;
     float: left;
 }
+section.blogDetails ul li b {
+    font-weight: bold;
+}
 .sideBorder:hover .servicesIcon .serviceHoverIco {
   display: block;
 }
@@ -679,7 +682,7 @@ section.bg_light_1.brands-slids {
  section.profile.hire-web-designer img,.profileBxBx .bannerProfile .profileImg img{
     filter: none !important;
 }
-section.profile.hire-microsoft-office-experts img,section.profile.hire-graphic-designer img,section.profile.hire-seo-expert img
+section.profile.hire-microsoft-office-experts img,section.profile.hire-graphic-designer img,section.profile.hire-seo-expert img,section.profile.hire-photoshop-expert img
 {
    filter: none !important;
 }
