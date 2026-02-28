@@ -24,105 +24,104 @@ import AboutCitadelAdvantage from './Pages/AboutCitadelAdvantage';
 import DataSecurity from './Pages/DataSecurity';
 import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
 import NotFound from './Pages/NotFound';
-import OfferPopup from './Component/OfferPopup'; // Import the OfferPopup component
-import ThankYou from "././Component/ThankYou";
-const STORAGE_KEY = 'hasSeenOfferPopup';
+import ThankYou from "./Component/ThankYou";
+import CaseStudySingle from './Component/CaseStudySingle';
+
+const COOKIE_KEY = "cookieConsent";
+
 function App() {
+
+  const [cookieConsent, setCookieConsent] = useState(null);
+
   useEffect(() => {
-    // 1. Load fonts after hydration
-    if ('fonts' in document) {
-      document.fonts.load('1em "Nato Sans"').then(() => {
-        document.documentElement.classList.add('fonts-loaded');
-      });
+    const savedConsent = localStorage.getItem(COOKIE_KEY);
+    if (savedConsent) {
+      setCookieConsent(savedConsent);
     }
-    
-    // 2. Fallback for slow mobile devices
-    const timeout = setTimeout(() => {
-      document.documentElement.classList.add('fonts-loaded');
-    }, 500);
-    
-    return () => clearTimeout(timeout);
   }, []);
-  const [isPopupOpen, setPopupOpen] = useState(false);
-  const location = useLocation();
 
+  // 🔥 Load Google Analytics only after Accept
   useEffect(() => {
-    if (location.pathname !== '/') return;
+    if (cookieConsent === "accepted") {
+      const script = document.createElement("script");
+      script.src = "https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID";
+      script.async = true;
+      document.body.appendChild(script);
 
-    try {
-      const hasSeen = sessionStorage.getItem(STORAGE_KEY);
-
-      if (hasSeen !== 'true') {
-        // show popup after a short delay (e.g., 3 seconds)
-        const timer = setTimeout(() => {
-          setPopupOpen(true);
-          sessionStorage.setItem(STORAGE_KEY, 'true'); // mark as seen
-        }, 1000); // delay in milliseconds
-
-        return () => clearTimeout(timer);
-      }
-    } catch {
-      // fallback if session storage unavailable (Safari private mode etc.)
-      const timer = setTimeout(() => setPopupOpen(true), 500);
-      return () => clearTimeout(timer);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "YOUR_GA_ID");
     }
-  }, [location.pathname]);
+  }, [cookieConsent]);
 
-  const closePopup = () => {
-    setPopupOpen(false);
+  const handleAccept = () => {
+    localStorage.setItem(COOKIE_KEY, "accepted");
+    setCookieConsent("accepted");
   };
 
   return (
     <div className="App">
-    
-        
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<About />} />
-          <Route path="/about" element={<Navigate to="/about-us" replace />} />
-          <Route path="/services" element={<Services />} />
 
-          <Route path="/graphic-web-design" element={<Navigate to="/services/graphic-web-design" replace />} />
-          <Route path="/virtual-assistant" element={<Navigate to="/services/virtual-assistant" replace />} />
+      <Header />
 
-          <Route path="/mobile-app-development" element={<Navigate to="/services/mobile-app-development" replace />} />
-          
-          <Route path="/finance-and-accounting" element={<Navigate to="/services/finance-and-accounting" replace />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/about" element={<Navigate to="/about-us" replace />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:subService" element={<SubServices />} />
+        <Route path="/services/:subService/:serviceDetails" element={<SubServices />} />
+        <Route path="/blog/" element={<Blog />} />
+        <Route path="/blog/:blog" element={<BlogDetails />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="/citadel-coworkers-user-agreement" element={<UserAgreement />} />
+        <Route path="/offshore" element={<Offshore />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/about-citadel-advantage" element={<AboutCitadelAdvantage />} />
+        <Route path="/data-security" element={<DataSecurity />} />
+        <Route path="/how-does-citadel-works" element={<HowDoesCitadelWorks />} />
+        <Route path="/not-found" element={<NotFound />} />
+        <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/case-studies/:parent/:slug" element={<CaseStudySingle />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
-          <Route path="/digital-marketing" element={<Navigate to="/services/digital-marketing" replace />} />
+      <Footer />
 
-          <Route path="/legal-process-outsourcing" element={<Navigate to="/services/legal-process-outsourcing" replace />} />
+      {/* 🔥 Cookie Banner */}
+      {!cookieConsent && (
+        <div style={{
+          position: "fixed",
+          bottom: 0,
+          width: "100%",
+          background: "#111827",
+          color: "#fff",
+          padding: "15px",
+          textAlign: "center",
+          zIndex: 9999
+        }}>
+      This website uses cookies to ensure proper functionality, analyze performance, and deliver relevant content. By clicking "Accept", you consent to the use of cookies in accordance with our Privacy Policy and Cookie Policy.
+          <button
+            onClick={handleAccept}
+            style={{
+              marginLeft: "15px",
+              padding: "8px 15px",
+              background: "#2563eb",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+              cursor: "pointer"
+            }}
+          >
+            Accept
+          </button>
+        </div>
+      )}
 
-          <Route path="/development" element={<Navigate to="/services/development" replace />} />
-
-          <Route path="/category/development" element={<Navigate to="/services/development" replace />} />
-
-          <Route path="/outsource-staff-augmentation-services" element={<Navigate to="/services/outsource-staff-augmentation-services" replace />} />
-
-          <Route path="/hire-content-writers" element={<Navigate to="/services/hire-content-writers" replace />} />
-          <Route path="/services/:subService" element={<SubServices />} />
-          
-          <Route path="/services/:subService/:serviceDetails" element={<SubServices />} />
-          <Route path="/blog/" element={<Blog />} />
-          <Route path="/blog/:blog" element={<BlogDetails />} />
-          <Route path="/contact-us" element={<Contact />} />
-          <Route path="/contact" element={<Navigate to="/contact-us" replace />} />
-          <Route path="/refund-policy" element={<RefundPolicy />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/citadel-coworkers-user-agreement" element={<UserAgreement />} />
-          <Route path="/offshore" element={<Offshore />} />
-          <Route path="/faq" element={<FaqPage />} />
-          <Route path="/about-citadel-advantage" element={<AboutCitadelAdvantage />} />
-          <Route path="/data-security" element={<DataSecurity />} />
-          <Route path="/how-does-citadel-works" element={<HowDoesCitadelWorks />} />
-          <Route path="/not-found" element={<NotFound />} />
-           <Route path="/thank-you" element={<ThankYou />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-         <FloatingContact />   {/* ✅ contact Popup */}
     </div>
   );
 }

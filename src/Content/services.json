@@ -95,7 +95,14 @@
                         "title": "Customer Engagement and Satisfaction",
                         "body": "In today's digital-first landscape, customer support can make or break a business. Virtual assistants ensure that customer queries are handled promptly and professionally, fostering a reputation for reliability and attentive service."
                     }
-                ]
+                ],
+                
+		 "Concludingtext":[
+            {
+               "text": "Hire a dedicated virtual assistant & join global brands that have saved 72% on overhead costs & reclaimed 3000+ hours yearly",
+			   "buttontext":"Hire a Virtual Assistant Now"
+            }
+        ]
         },
         {
             "categoryUrl": "mobile-app-development",
@@ -192,7 +199,13 @@
                     "title": "Fluid Combination",
                     "body": "Outsource mobile application development to your existing ecosystem. In order to ensure that the development process is in line with your business objectives and smoothly integrates with your current infrastructure, our developers work in seamless collaboration with your team."
                 }
-            ]
+            ],
+             "Concludingtext":[
+            {
+               "text": "Outsource Your Mobile App Development & Join Entrepreneurs Who Have Delivered Cross-Platform Solutions with 95% Crash-Free Rates",
+			   "buttontext":"Hire Mobile App Developer Now"
+            }
+        ]
         },
         {
             "categoryUrl": "graphic-web-design",
@@ -289,7 +302,13 @@
                     "title": "Flexibility and Scalability",
                     "body": "Scale your design support effortlessly as your business evolves. Whether it's a one-time redesign or ongoing creative support, our flexible model ensures that your brand stays visually fresh."
                 }
-            ]
+            ],
+             "Concludingtext":[
+            {
+               "text": "Outsource Your Graphic & Web Design Services and Join Global Brands That Have Created Visuals for 1M+ Impressions & Ensured Timely Project Delivery",
+			   "buttontext":""
+            }
+        ]
         },
         {
             "categoryUrl": "finance-and-accounting",
@@ -391,7 +410,13 @@
                     "title": "Processes must be Secure and Compliant",
                     "body": "In this digital world, data security and compliance are of utmost importance. We follow foolproof and monitored processes."
                 }
-            ]
+            ],
+             "Concludingtext":[
+            {
+               "text": "Outsource Your Finance & Accounting and Join Growing Brands That Have Optimized Cash Flow & Fueled 3× Scalable Business Growth",
+			   "buttontext":""
+            }
+        ]
         },
         {
             "categoryUrl": "digital-marketing",
@@ -487,7 +512,14 @@
                     "title": "Seamless Integration",
                     "body": "Hire digital marketing employees into your workflow seamlessly with our advanced collaboration tools. They seamlessly adapt to your business processes, working as an extension of your team to achieve shared goals."
                 }
-            ]
+            ],
+            
+             "Concludingtext":[
+            {
+               "text": "Outsource Your Digital Marketing & Join Growing Brands That Have Scaled Keyword Coverage by 180% & Driven 300% Organic Traffic Growth",
+			   "buttontext":""
+            }
+        ]
         },
         {
             "categoryUrl": "legal-process-outsourcing",
@@ -579,7 +611,13 @@
                     "title": "Compliance Management",
                     "body": "We monitor and manage your regulatory requirements, ensuring that your business stays aligned with local and international laws and preventing potential penalties. "
                 }
-            ]
+            ],
+             "Concludingtext":[
+            {
+               "text": "Outsource Your Legal Processes & Join Businesses That Reduced Legal Costs by 70% & Achieved 100% Compliance Accuracy",
+			   "buttontext":""
+            }
+        ]
         },
         {
             "categoryUrl": "development",
@@ -675,7 +713,12 @@
                     "title": "Cost-Effectiveness",
                     "body": " When you hire our offshore developers, you get access to top talent from around the world at competitive rates and clear methods that add a lot of value to every development project."
                 }
-            ]
+            ], "Concludingtext":[
+            {
+               "text": "Outsource Your Development & IT Experts to Join Entrepreneurs Who Have Built Scalable Solutions for 10M+ Users & Achieved 99% Uptime",
+			   "buttontext":"Hire Developers Now"
+            }
+        ]
         },
         {
             "categoryUrl": "outsource-staff-augmentation-services",
@@ -783,7 +826,12 @@
                     "title": "Industry-Specific Expertise",
                     "body": "Our seasoned professionals deliver custom solutions designed to meet your industry’s demands."
                 }
-            ]
+            ], "Concludingtext":[
+            {
+               "text": "Outsource Staff Augmentation & Join Global Brands That Have Scaled Teams Instantly & Achieved 98% Trial-to-Hire Success with Top Talent",
+			   "buttontext":" "
+            }
+        ]
         },
         {
             "categoryUrl": "hire-content-writers",
@@ -891,7 +939,13 @@
                     "title": "Industry-Specific Expertise",
                     "body": "Hire content writers skilled in multiple domains and industries like healthcare, finance, technology, etc. These content enthusiasts truly understand the nuances of your sector and draft content that builds a strong connection with your audience to boost engagement and credibility."
                 }
-            ]
+            ],
+             "Concludingtext":[
+            {
+               "text": "Outsource Your Content Writing & Join Entrepreneurs and Global Brands in Creating Copy That Drives 100× Social Growth & Millions in Engagement",
+			   "buttontext":""
+            }
+        ]
         },
         {
             "categoryUrl": "hire-payroll-expert",
@@ -1100,6 +1154,12 @@
             {
                "text": "Hire Real Estate VA"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Dedicated Real Estate Assistants to Reduce Back-Office Work by 35%, Improve Lead Response Times, and Close Deals Faster",
+			   "buttontext":"Hire Real Estate VA Now"
+            }
         ]
         },
         {
@@ -1203,6 +1263,12 @@
 		  "Contacttext":[
             {
                "text": "Hire Data Entry Experts"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Join growing businesses that have reduced manual data workloads by 40% and scale operations reliably with consistent accuracy ",
+			   "buttontext":"Hire Data Entry Experts Now"
             }
         ]
             
@@ -1311,6 +1377,12 @@
               "Contacttext":[
             {
                "text": "Hire Research Analyst"
+            }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire Research Analysts to Improve Your Market Coverage by 2× and Reduce Turnaround Time with Up to 99% Data Accuracy",
+			   "buttontext":"Hire Research Analysts Now"
             }
         ]
         },
@@ -1529,6 +1601,12 @@
             {
                "text": "Hire Personal Assistants"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Join Growing Leaders Who’ve Reduced Daily Admin Load by Up to 40% and Focus on High-Impact Decisions with Dedicated Personal Assistants",
+			   "buttontext":"Hire Personal Assistants Now"
+            }
         ]
         },
         {
@@ -1641,6 +1719,12 @@
             {
                "text": "Hire Accountants"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire Dedicated Accountants & Join Global Businesses That Have Maintained Error-Free Books for 100M+ Transactions & Achieved 4× Faster Reconciliations",
+			   "buttontext":"Hire Accountants Now"
+            }
         ]
         },
 		{
@@ -1749,6 +1833,11 @@
 		  "Contacttext":[
             {
                "text": "Hire QuickBooks Expert"
+            }
+        ], "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated QuickBooks Expert & Join Growing Brands That Have Streamlined Bookkeeping for 1,000+ Monthly Transactions & Achieved 70% Cost Savings",
+			   "buttontext":"Hire QuickBooks Expert Now"
             }
         ]
 			
@@ -1866,6 +1955,12 @@
             {
                "text": "Hire Payroll Expert"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Payroll Specialist & Join Growing Brands That Have Reduced Payroll Errors by 95% & Saved 60% on Processing Costs",
+			   "buttontext":"Hire Payroll Expert Now"
+            }
         ]
 			
         },
@@ -1975,6 +2070,12 @@
             {
                "text": "Hire Tax Expert"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire a Dedicated Tax Expert & Join Growing Brands That Have Saved $10M+ in Tax Liabilities & Achieved 100% Audit-Ready Compliance",
+			   "buttontext":"Hire Tax Expert Now"
+            }
         ]
 			
         },
@@ -2078,7 +2179,12 @@
                     "body": "Every deliverable goes through a rigorous quality control process and transparent communication cycle—ensuring accuracy, compliance, and on-time delivery."
                 }
 				
-            ]
+            ], "Concludingtext":[
+            {
+               "text": "Outsource Your Engineering & Architecture Teams & Join Entrepreneurs That Have Reduced Design Costs by 60% & Accelerated Project Timelines",
+			   "buttontext":""
+            }
+        ]
 			
         },
 		{
@@ -2190,6 +2296,12 @@
             {
                "text": "Hire AR Specialist"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire AR Specialists & Join Businesses That Have Reduced DSO by 45 Days & Recovered $5M+ in Outstanding Invoices",
+			   "buttontext":"Hire AR Specialists Now"
+            }
         ]
 			
         },
@@ -2300,6 +2412,12 @@
             "Contacttext":[
             {
                "text": "Hire Administrative Assistants"
+            }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Build Your Administrative Support Team to Cut Manual Work by Up to 35%, Improve Responsiveness & Keep Operations Running Smoothly",
+			   "buttontext":"Hire Administrative Assistants Now"
             }
         ]
 			
@@ -2528,6 +2646,11 @@
             {
                "text": "Hire Chat Support Experts"
             }
+        ], "Concludingtext":[
+            {
+               "text": "Hire Chat Support Experts Trusted by Global Businesses, Delivering Faster Resolution & 30% Higher Customer Satisfaction",
+			   "buttontext":"Hire Chat Support Experts Now"
+            }
         ]
 			
         }
@@ -2748,6 +2871,12 @@
             {
                "text": "Hire Microsoft Excel Experts"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire Excel Experts to Reduce Spreadsheet Errors by Up to 35%, Accelerate Reporting & Support Smarter Business Decisions",
+			   "buttontext":"Hire Excel Experts Now"
+            }
         ]
 			
         },
@@ -2856,7 +2985,13 @@
             {
                "text": "Hire Sales Assistant"
             }
-                      ]
+                      ],
+                       "Concludingtext":[
+            {
+               "text": "Build Your Sales Support Team and Reduce Admin Work by 40%, Improve Lead Responsiveness & Achieve Faster Deal Closures",
+			   "buttontext":"Hire Sales Assistant Now"
+            }
+        ]
 			
         }
 		,
@@ -2969,6 +3104,12 @@
 		  "Contacttext":[
             {
                "text": "Hire Financial Controller"
+            }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire a Dedicated Financial Controller & Join Brands That Have Improved Cash Flow Forecasting Accuracy by 90% & Driven 5× Strategic Growth",
+			   "buttontext":"Hire Financial Controller Now"
             }
         ]
         },
@@ -3192,6 +3333,12 @@
             {
                "text": "Hire Legal Assistant"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire Your Paralegal Support & Join Global Businesses That Have Supported 5,000+ Cases & Streamlined Document Preparation by 60%",
+			   "buttontext":"Hire Legal Assistant Now"
+            }
         ]
         }
 		,
@@ -3305,6 +3452,12 @@
             {
                "text": "Hire Financial Paraplanner"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Financial Paraplanner & Join a Growing Brand That Has Supported 5,000+ Client Plans & Achieved 98% Compliance Accuracy",
+			   "buttontext":"Hire Financial Paraplanner Now"
+            }
         ]
         },
 		{
@@ -3416,6 +3569,12 @@
 		  "Contacttext":[
             {
                "text": "Hire Web Designer"
+            }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Build Your Web Design Team & Join Leading Businesses Across Industries in Lowering Website Bounce Rates & Achieving 4× Faster Load Times",
+			   "buttontext":"Hire Web Designer Now"
             }
         ]
         },
@@ -3533,6 +3692,11 @@
             {
                "text": "Hire MS Office Experts"
             }
+        ], "Concludingtext":[
+            {
+               "text": "Join Global Businesses That Have Streamlined Reporting and Documentation with Office Experts Delivering 40% Faster Turnaround & Error-Free Outputs",
+			   "buttontext":"Hire MS Office Experts Now"
+            }
         ]
 			
         }
@@ -3648,7 +3812,15 @@
             {
                "text": "Hire Graphic Designer"
             }
+        ],
+         "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Graphic Designer & Join Global Businesses That Have Created Logos Boosting Brand Recognition by 40% and Achieving Millions in Reach",
+			   "buttontext":"Hire Graphic Designer Now"
+            }
         ]
+        
+        
 			
         },
 		{
@@ -3776,7 +3948,13 @@
     { "imageUrl": "/images/icon4.png", "body": "Build Authority at the Topic Level" },
     { "imageUrl": "/images/icon6.png", "body": "Monitor Engagement Signals as Early Warnings" },
     { "imageUrl": "/images/icon5.png", "body": "E-E-A-T through verified expertise and brand trust" }
-  ]
+  ],
+   "Concludingtext":[
+            {
+               "text": "Hire a Dedicated SEO Strategist & Join Growing Brands That Have Ranked #1 for 1,000+ Keywords & Driven 300% Organic Traffic Growth",
+			   "buttontext":"Hire SEO Expert Now"
+            }
+        ]
         },
 		{
             "categoryUrl": "hire-photoshop-expert",
@@ -3905,15 +4083,15 @@
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire Offshore PPC Experts from India",
-                        "body": "Boost your ROI with our PPC specialists who have an in-depth understanding of user intent and building an algorithm that is optimized for conversion,- Starts at USD 8/Hour.",
+                        "body": "Boost your ROI with our PPC specialists who have an in-depth understanding of user intent and building an algorithm that is optimized for conversion - Starts at USD 8/Hour.",
                         "buttonText": " Hire a PPC Expert "
                         
                     }
                 ],
             "serviceHeading":[
                     {
-                        "title": "Professional Photoshop Services That Enhance Your Visual Storytelling",
-                        "body": "Our Photoshop experts have expertise in professional retouching and cohesive visual execution that strengthens brand confidence across touchpoints."
+                        "title": "Advanced PPC Services for Maximizing ROI and Conversions ",
+                        "body": "Our PPC services are focused on creating the perfect strategy that will help reduce costs and drive measurable results. "
                     }
                 ],
             "clientsNumberHeading":[
@@ -3931,7 +4109,7 @@
                     },
                     {
                         "imageUrl": "/images/optimization (1).png",
-                        "title": "Optimized Google, Bing & Social ",
+                        "title": "Accounts Optimized Google, Bing & Social ",
                         "body": "2000+"
                     },
                     {
@@ -4015,16 +4193,16 @@
     {
       "title": "PPC Strategies That are Built to Withstand Platform Changes",
       "body": "Our method is based on solid foundations that will last high-quality scores, good conversion monitoring, audience insights and creative relevancy.",
-      "centerImageUrl": "/images/ppc.webp"
+      "centerImageUrl": "/images/PPC.png"
     }
   ],
   "icontextdesign": [
-    { "imageUrl": "/images/icon1.png", "body": "Monitor auction insights and competition daily" },
+    { "imageUrl": "/images/quality-control (5).png", "body": "Monitor auction insights and competition daily" },
     { "imageUrl": "/images/icon2.png", "body": "Optimize for all match types and intent signals" },
-    { "imageUrl": "/images/icon3.png", "body": "Maintain high Quality Scores for lower CPCs" },
-    { "imageUrl": "/images/icon4.png", "body": "Test new features early (Performance Max, RSA)" },
-    { "imageUrl": "/images/icon6.png", "body": "Track cross-channel attribution accurately" },
-    { "imageUrl": "/images/icon5.png", "body": "Ht" }
+    { "imageUrl": "/images/icon5.png", "body": "Maintain high Quality Scores for lower CPCs" },
+    { "imageUrl": "/images/New-feature.webp", "body": "Test new features early (Performance Max, RSA)" },
+    { "imageUrl": "/images/cross.webp", "body": "Track cross-channel attribution accurately" },
+    { "imageUrl": "/images/icon5.png", "body": "Adapt bids using real-time performance signals" }
   ],
 		  "Contacttext":[
             {
@@ -4033,8 +4211,828 @@
         ],
 		 "Concludingtext":[
             {
-               "text": "Hire Your Dedicated Offshore PPC Expert & Join Entrepreneurs who have Scaled ROAS to 6x+ with 24/7 Timezone Advantage",
+               "text": "Hire Your Dedicated Offshore PPC Expert & Join Entrepreneurs who have Scaled ROAS to 6X with 24/7 Timezone Advantage",
 			   "buttontext":"Hire a PPC Expert Now"
+            }
+        ]
+		
+        },
+		{
+            "categoryUrl": "hire-social-media-marketing-expert",
+            "categoryName": "Social Media Marketing",
+            "pageMetaTitle": "Hire Social Media Marketing Expert | Outsource Social Media  to India  ",
+            "pageMetaContent": "Hire top social media marketing experts from India to boost engagement, brand visibility & ROI. Scalable remote talent for Facebook, Instagram, LinkedIn & more.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire a Social Media Marketing Expert",
+                        "body": "Dedicated SMM specialists handling content, interactions, analytics & trends trusted for consistent 35%+ engagement growth - Starts at USD 8/Hour.  ",
+                        "buttonText": " Hire Your Specialists Now!"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "360° Social Media Marketing Services for Sustainable Growth",
+                        "body": "Professional social media marketing means always connecting your brand with the right people when they're ready to interact, which builds trust, awareness and measurable conversions. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Social Media Talent That Drives Brand Growth ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Social Media Experts",
+                        "body": "20+"
+                    },
+                    {
+                        "imageUrl": "/images/optimization (1).png",
+                        "title": "Average Growth in Engagement ",
+                        "body": "35%"
+                    },
+                    {
+                        "imageUrl": "/images/Ad impressions.png",
+                        "title": "Active Accounts Managed",
+                        "body": "300+"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                        "title": "Industry Tools Expertise",
+                        "body": "30+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can you guarantee specific results like a certain number of followers, engagement rates or sales?",
+                        "body": "The growth of social media as a whole depends on your industry, your target audience, your budget and the latest trends in marketing. We can't promise any precise numbers, but we can promise that we will do strategic planning, always do high-quality work, make adjustments based on data and be completely open about everything in order to grow your reach, engagement and conversion over the long term."
+                    },
+                    {
+                        "title": "02. How does the feedback cycle and revision work progress on posts, stories and ad campaigns?",
+                        "body": "Our experts provide you with weekly performance reports, schedule regular review calls and are directly in conversation with your internal team. All the content, captions, visuals or ad creatives can be revised as many times as you need. Revisions are included at no additional cost until you’re completely satisfied with the content. "
+                    },
+                    {
+                        "title": "03. How do you make sure that all the content fits with our brand voice and rules?",
+                        "body": "A senior team lead checks every piece of content against all of your brand's tone, rules and visual identity before it goes live. We also build a unique style guide when you start working with us to make sure that everything is on-brand."
+
+                    },
+                    {
+                        "title": "04. Is it possible for your social media expert to collaborate directly with our marketing or creative team?",
+                        "body": "Yes, our experts can easily join your team using applications like Slack, Asana or Google Workspace. They work with your team every day to get content approved, make sure campaigns are on the same page, share assets and talk about strategy. This makes the collaboration feel like a natural part of your internal team."
+                    },
+                    {
+                        "title": "05. Do I need to hire a separate graphic designer, copywriters or ad specialists for all the tasks for SMM?",
+                        "body": "No, your dedicated SMM expert handles everything. Whether it is social media strategy, creating a content calendar, ensuring all visual assets are up to the mark, copywriting, scheduling and paid advertising. You get full-service management without any requirement for additional resources. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Social Media Strategies Built for Platform & Algorithm Changes",
+      "body": "We focus on timeless ideas that help you develop real connections, make content that is valuable to your audience and understand your audience. This will keep your growth steady even when algorithms change.",
+      "centerImageUrl": "/images/social.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "/images/quality-control (5).png", "body": "Detect platform shifts early" },
+    { "imageUrl": "/images/icon2.png", "body": "Create content that serves multiple formats" },
+    { "imageUrl": "/images/icon5.png", "body": "Build genuine community engagement" },
+    { "imageUrl": "/images/New-feature.webp", "body": "Diversify across platforms" },
+    { "imageUrl": "/images/cross.webp", "body": "Track meaningful metrics beyond vanity numbers" },
+    { "imageUrl": "/images/icon5.png", "body": "Amplify reach through UGC and strategic partnerships" }
+  ],
+		  "Contacttext":[
+            {
+               "text": " Hire an SMM Expert "
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated SMM Expert Starting at $8/Hour & Join Growing Brands That Have Driven 100M+ Impressions &  5X ROAS",
+			   "buttontext":"Hire an SMM Expert Now"
+            }
+        ]
+		
+        }
+		,
+		{
+            "categoryUrl": "hire-illustrator",
+            "categoryName": "Illustration",
+            "pageMetaTitle": "Hire an Offshore Illustrator from India",
+            "pageMetaContent": "Hire trained remote Illustrator in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire an Offshore Illustrator From India",
+                        "body": "Elevate engagement and conversions with custom and brand-aligned illustrations from expert offshore illustrators in India - Starts at USD 8/Hour.",
+                        "buttonText": "Hire an Illustrator "
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Professional Illustrator Services that Elevate Your Identity",
+                        "body": "Businesses need visuals that communicate instantly with the audience and are memorable. Our illustration services focus on consistency and conversion, whether you need marketing graphics or editorial artwork. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Illustration Talent That Transforms Brand Visuals ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Illustrator experts ",
+                        "body": "20+"
+                    },
+                    {
+                        "imageUrl": "/images/optimization (1).png",
+                        "title": "Illustrations delivered ",
+                        "body": "1500+"
+                    },
+                    {
+                        "imageUrl": "/images/Industires.png",
+                        "title": "Industries served ",
+                        "body": "30+"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                        "title": "Illustration styles and tools ",
+                        "body": "25+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Who holds the full ownership of the illustrations, source files and IP rights?",
+                        "body": "You have 100% ownership of the final artwork and intellectual property from day one. We transfer all commercial rights along with all the editable source files. All of this is done with a clear agreement upon project completion and payment. "
+                    },
+                    {
+                        "title": "02. Is there a trial period during which I can work with an illustrator before making a long-term commitment?",
+                        "body": "Yes, we do have a trial project that lasts for a week. This enables you to check the quality, communication, speed and general fit with real work before you make regular or monthly staffing agreements."
+                    },
+                    {
+                        "title": "03. How do you ensure it is matched with my requirements? ",
+                        "body": "Every illustrator, before they are connected with you, goes through a three-step vetting process wherein we conduct a technical skills test, do an in-depth portfolio review of their work and assess if they can communicate. You also get to take the final video interview to confirm creative and cultural alignment. "
+
+                    },
+                    {
+                        "title": "04. What happens if the illustrator doesn't fulfill deadlines or expectations?",
+                        "body": "All contracts have defined SLAs that spell out how long it will take to respond, make changes, and reach objectives. If any of the agreed-upon standards are not satisfied during the first time, we will replace the illustrator at no extra expense."
+                    },
+                    {
+                        "title": "05. How does working with an offshore illustrator in India affect daily communication?",
+                        "body": "Your illustrators from India work in overlapping hours, giving you the advantage of a 24/7 work process. The communication is done with your preferred tools and provides daily updates along with weekly calls.  "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Offshore Illustration Excellence That Is Built for Brand Impact",
+      "body": "We don’t just draw illustrations but rather deliver strategic visual assets that elevate your brand, boost engagement and drive sustainable growth across all marketing channels. ",
+      "centerImageUrl": "/images/Illustration (1).png"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "/images/quality-control (5).png", "body": "Mood boards & concept sketches" },
+    { "imageUrl": "/images/icon2.png", "body": "Multiple design options" },
+    { "imageUrl": "/images/icon5.png", "body": "Comprehensive style guides" },
+    { "imageUrl": "/images/New-feature.webp", "body": "Inclusive  & accessible design" },
+    { "imageUrl": "/images/cross.webp", "body": "Multi-format file optimization" },
+    { "imageUrl": "/images/icon5.png", "body": "Original artwork with revisions" }
+  ],
+		  "Contacttext":[
+            {
+               "text": " Hire an SMM Expert "
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Experiences Illustrators with Citadel Coworkers who’ve elevated brands' growth with 1500+ high-impact brand visuals. ",
+			   "buttontext":"Hire an Illustrator Now"
+            }
+        ]
+		
+        }	,
+		{
+            "categoryUrl": "hire-video-editor",
+            "categoryName": "Video Editor",
+            "pageMetaTitle": "Hire an Offshore Video Editor from India",
+            "pageMetaContent": "Hire trained remote Video Editor in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire a Video Editor in India",
+                        "body": "Expert video editors delivering sharp edits, cinematic visual appeal, AI-powered enhancements & motion graphics for maintaining brand consistency - Starts at USD 8/Hour.",
+                        "buttonText": "Hire Video Editors"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "360° Professional Video Editing Services",
+                        "body": "Video editing services turn unedited material into interesting stories. These catch people's attention and get outcomes that can be measured on all platforms."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers that Reflect Our Video Editing Talent ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Professional Video Editors ",
+                        "body": "15+"
+                    },
+                    {
+                        "imageUrl": "/images/optimization (1).png",
+                        "title": "Active Projects Managed ",
+                        "body": "500+"
+                    },
+                    {
+                        "imageUrl": "/images/videodel.png",
+                        "title": "Videos Delivered",
+                        "body": "1000+"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                        "title": " Higher Replay Value  ",
+                        "body": "30%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Do you Guarantee a Certain Number of Views, Subscribers or that My Video Will Go Viral?",
+                        "body": "The short answer is no, the success of a video depends on many factors like the raw content quality how it’s promoted, algorithm changes and audience response. What we guarantee you is retention-focused editing with onsiging data based tweaks that ensure a long-term improvement. "
+                    },
+                    {
+                        "title": "02. What’s Your Process for Revisions and Feedback on the Edits?",
+                        "body": "You get unlimited revisions with no extra cost until you are 100% happy with the end results. We use Frame.io for precise timestamped notes, plus we schedule regular calls and stay in touch with direct chat via Slack or email for easy communication."
+                    },
+                    {
+                        "title": "03. How Do you Make Sure the Final Video Matches Our Brand Look and Voice?",
+                        "body": "During onboarding itself, we build a custom style guide with your brand-focused colours, fonts, tone, pacing preferences and rules. A senior editor reviews every deliverable against this style guide before you see it. "
+
+                    },
+                    {
+                        "title": "04. Can the Editor Work Directly With our Internal Team like an Extended Member?",
+                        "body": "Yes, our offshore editors are completely dedicated to your projects. They join in your daily workflow using tools like Slack, Google workspace or any other tools that you are already using. This allows the feedback, approvals and all other alignment happen in real time. "
+                    },
+                    {
+                        "title": "05. Do We Still Need to Hire Extra People for Motion Graphics, Sound Design or Colour Grading? ",
+                        "body": "No, your dedicated video editor takes care of the whole post-production process, including editing, adding effects, fixing colors, mixing audio, adding subtitles and making thumbnails. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers’ Offshore Video Editors in India ",
+      "body": "We do edits to help your videos stand out and do better. Citadel Coworkers enables you to achieve dependable editing that increases retention, views and outcomes without breaking the bank. ",
+      "centerImageUrl": "/images/videp.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "/images/clock.png", "body": "Faster edits through time zone advantage " },
+    { "imageUrl": "/images/talent.png", "body": "Leverage India's dynamic talent pool" },
+    { "imageUrl": "/images/expenses.png", "body": "Zero overhead expenses " },
+    { "imageUrl": "/images/New-feature.webp", "body": "Hire pre-vetted top professionals " },
+    { "imageUrl": "/images/cross.webp", "body": "Get specialized talent for your niche" },
+    { "imageUrl": "/images/icon5.png", "body": "Scale editing team effortlessly & with flexibility" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire a Video Editor Now"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire a dedicated video editor & join brands that have drived 30% higher engagement with every video.",
+			   "buttontext":"Hire a Video Editor Now"
+            }
+        ]
+		
+        }	,
+		{
+            "categoryUrl": "hire-cro-experts",
+            "categoryName": "Conversion Rate Optimization (CRO)",
+            "pageMetaTitle": "Hire an Offshore Conversion Rate Optimization (CRO) from India",
+            "pageMetaContent": "Hire trained remote Conversion Rate Optimization (CRO) in India  just $8/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire CRO Experts From India",
+                        "body": "Turn your existing traffic into revenue with dedicated Conversion Rate Optimization specialists who master user psychology & behaviour - Starts at USD 8/Hour.",
+                        "buttonText": "Hire a CRO Expert"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Advanced 360° CRO Services for Sustainable Revenue Growth",
+                        "body": "Professional conversion rate optimization services exist to maximize the value of every visitor, it's about turning clicks into customers at the exact moment of intent. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"CRO Talent That Drives Revenue Growth",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Conversion Rate Experts",
+                        "body": "15+"
+                    },
+					  {
+                        "imageUrl": "/images/optimization (1).png",
+                        "title": "Websites Optimized for Conversions ",
+                        "body": "200+"
+                    },
+                    {
+                        "imageUrl": "/images/Industires.png",
+                        "title": " Industry Tools Expertise",
+                        "body": "30+"
+                    },
+                    {
+                        "imageUrl": "/images/Ad impressions.png",
+                    "title": "Additional Revenue Driven ",   
+                        "body": "$50M+"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Do you guarantee specific conversion rate increases? ",
+                        "body": "The short answer is no, the success of a video depends on many factors like the raw content quality how it’s promoted, algorithm changes and audience response. What we guarantee you is retention-focused editing with onsiging data based tweaks that ensure a long-term improvement. "
+                    },
+                    {
+                        "title": "02. How do you ensure that the work of the experts matches our quality standards?",
+                        "body": "We follow a set of steps for reviews, each with its own distinct goals. You can give feedback by leaving comments, calling or sending shared reports. Your conversion optimization expert will walk through every change until you’re satisfied. Reviews are included without the extra cost. "
+                    },
+                    {
+                        "title": "03. How Do you Make Sure the Final Video Matches Our Brand Look and Voice?",
+                        "body": "Quality is built into every engagement from the very beginning and is continued at every engagement. A dedicated team lead reviews all the recommendations against your goals and best practices followed in the industry. All the deliverables are scored against internal statistics before sharing them with you, making sure they are performance-ready. "
+
+                    },
+                    {
+                        "title": "04. Is it possible for a CRO expert to work directly with our Marketing or Development teams?",
+                        "body": "Yes. When you hire professional conversion rate optimization experts, they work together without any problems using platforms like Slack, Google Workspace or any other method your team prefers. They work with your internal staff and stay in touch with them all the time to make sure everything goes smoothly. "
+                    },
+                    {
+                        "title": "05.  Do I need to hire a separate designer, copywriters, or developers?",
+                        "body": "No. When you hire our conversion rate optimization experts, they will take care of everything that needs to be done, such as writing copy drafts, making design ideas and writing implementation requirements. This means you won't have to sign any more contracts or obtain any more resources."
+                    },
+                    {
+                        "title": "06. How do your CRO experts work closely with SEO, paid marketers and designers?",
+                        "body": "Our dedicated CRP experts integrate seamlessly with your SEO, paid marketing and design team using your preferred communication tool. They align on changes, high performing landing pages and intuitive UX improvements to maximize revenue across all channels. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "CRO Strategies Built to Maximize Every Visitor ",
+      "body": "Our method for optimizing conversions is meant to bring in more and more money over time. We focus on user psychology, strict statistics and constant testing so that your performance becomes better with each new version.",
+      "centerImageUrl": "/images/cro.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "/images/clock.png", "body": "Find friction areas that have a big effect early on" },
+    { "imageUrl": "/images/talent.png", "body": "Put hypotheses in order of how much extra money they could make" },
+    { "imageUrl": "/images/expenses.png", "body": "Run experiments that are statistically significant on a large scale" },
+    { "imageUrl": "/images/New-feature.webp", "body": "Make experiences unique based on how people act" },
+    { "imageUrl": "/images/cross.webp", "body": "Keep an eye on performance after implementation" },
+    { "imageUrl": "/images/icon5.png", "body": "Build trust by being clear and using social proof that works" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire a CRO Expert"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated CRO Expert & Join Growing Brands That Have Driven $50M Additional Revenue & 2X Conversion Lifts",
+			   "buttontext":"Hire a CRO Expert Now"
+            }
+        ]
+		
+        }
+		,
+		{
+            "categoryUrl": "hire-influencer-marketing-expert",
+            "categoryName": "Influencer Marketing",
+            "pageMetaTitle": "Influencer Marketing Services in India",
+            "pageMetaContent": "Hire certified influencer marketing experts in India starting at $9/hour. Drive 5X ROI with authentic creators, real engagement & performance-driven campaigns.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire an Influencer Marketer in India",
+                        "body": "Influencer marketers manage outreach, collaborations and performance driven campaigns that turn in real revenue - Starts at USD 9/Hour.",
+                        "buttonText": "Get Your Influencer Marketing Expert"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "360° Influencer Marketing Services for Measurable Growth ",
+                        "body": "Professional influencer marketing connects your brand with audiences, building credibility, driving traffic and high-conversion results. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Influencer Marketing Talent That Drives Authentic Brand Growth ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Certified Influencer Specialists ",
+                        "body": "18+"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "ROI Across Campaigns",
+                        "body": "5X"
+                    },
+                    {
+                        "imageUrl": "/images/deal (1).png",
+                        "title": " Influencer Collaborations ",
+                        "body": "350+"
+                    },
+                    {
+                        "imageUrl": "/images/influencer (1).png",
+                    "title": "Niche-Matched Creators",   
+                        "body": "100%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How do you find genuine influencers and avoid fake followers?",
+                        "body": "We look at the quality of their audience, how they interact with it and how it has grown over time using both advanced tools and manual assessments. Our experts evaluate the creators to see whether they have phony followers, bots or any other strange behavior. We make sure that you only work with actual influencers who can provide you with real engagement and outcomes that you can measure. "
+                    },
+                    {
+                        "title": "02.  How long does it usually take to start seeing results from influencer marketing?",
+                        "body": "Most influencer campaigns start showing engagement and traffic within 3-4 weeks. Sales and ROI improvements take time and can usually be seen within 1-3 months, depending on your industry, budget and campaign goals. We continuously optimize campaigns that are helpful in improving performance over time. "
+                    },
+                    {
+                        "title": "03. Will I get a dedicated influencer expert for my brand?",
+                        "body": "Yes, you will be given a dedicated influencer marketing expert who will handle your campaigns, communication and performance tracking. They act like an extended member of your team & make sure that the campaigns are carried out the same way on all platforms. "
+
+                    },
+                    {
+                        "title": "04. How do you measure ROI and track the sales from influencer campaigns?",
+                        "body": "We use affiliate links, promo codes, UTM links and analytics tools to keep an eye on how well the influencer campaign is doing. Our reports show how many people saw your ad, how many people interacted with it, how many people bought something and how much money you made. You will get clear monthly reports that indicate how the influencer's work is helping your business develop and make money.  "
+                    },
+                    {
+                        "title": "05. Can you manage campaigns for my specific industry and target audience?",
+                        "body": "Yes, we match you with those influencers who have experience in your industry and audience segment. Our team researches do an in depth research in your market, competitors and customer behaviour to create customized influencer strategies that align with your niche, goals and budget. "
+                    },
+                    {
+                        "title": "06. Will your team handle negotiations with the influencers?",
+                        "body": "Yes, our influencer marketing experts take on the full responsibility to manage negotiations, which includes discussing the rates, deliverables and discussing timelines. They also discuss the exclusivity clause along with the contract terms. We secure optimal deals on your behalf that perfectly align with your budget and goals. All you have to do is make final payments directly to the influencers after final approvals are done.  "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Influencer Marketing Strategies Built For Platform & Creator Evolution ",
+      "body": "We prioritize authentic relationship building with influencers to build trust with the audiences and review performance data over trends alone for lasting results. ",
+      "centerImageUrl": "/images/INFU.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "/images/clock.png", "body": "Early detection of platform policy changes " },
+    { "imageUrl": "/images/talent.png", "body": "Multi-tier influencer mix (nano to macro)" },
+    { "imageUrl": "/images/expenses.png", "body": "Authentic content over scripted posts " },
+    { "imageUrl": "/images/New-feature.webp", "body": "Cross-platform synergy" },
+    { "imageUrl": "/images/cross.webp", "body": "ROI tracking beyond vanity metrics " },
+    { "imageUrl": "/images/icon5.png", "body": "Long-term ambassador programs" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Influencer Marketer"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Influencer Marketers & Scale Your Brand With Conversions Rising Up To 250% And 5X ROI ",
+			   "buttontext":"Hire Your Dedicated Influencer Marketer Today"
+            }
+        ]
+		
+        },
+		{
+            "categoryUrl": "hire-email-marketing-expert",
+            "categoryName": "Email Marketing",
+            "pageMetaTitle": "Email Marketing Services in India",
+            "pageMetaContent": "Hire certified Email Marketing experts in India starting at $9/hour. Drive 5X ROI with authentic creators, real engagement & performance-driven campaigns.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire an Email Marketing Expert in India ",
+                        "body": "Turn subscribers into steady revenue with AI-driven segmentation and personalized campaigns- starts at $9/hour",
+                        "buttonText": "Hire Email Marketing Experts "
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Full-Spectrum Professional Email Marketing Services ",
+                        "body": "Email marketing services help you generate revenue by creating campaigns that get people to interact with your content, nurture leads and bring in money across all industries."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers Reflecting Our Email Marketing Talent ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Certified Specialists ",
+                        "body": "20+"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "Active Campaigns Managed ",
+                        "body": "800+"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                        "title": "Email Tools Certified ",
+                        "body": "350+"
+                    },
+                    {
+                        "imageUrl": "/images/high.png",
+                    "title": "Higher Conversion Rates ",   
+                        "body": "30%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Do you promise certain open rates, clicks or income from email?",
+                        "body": "There are no set figures that can be guaranteed because results depend on things like the quality of the list, the strength of the offer, market conditions, audience involvement and outside factors like inbox algorithms. We promise to follow best practices, keep optimizing, make changes based on data and see consistent increases in performance metrics over time. "
+                    },
+                    {
+                        "title": "02.  What's your revision and feedback process?",
+                        "body": "You can make as many changes as you want at no extra expense until you are completely happy with each campaign. We use Litmus to get accurate previews on all devices and we accept feedback with timestamps through Slack, email or any other sharing tool you want. We set up regular review conversations so that we can work together smoothly and make changes quickly. "
+                    },
+                    {
+                        "title": "03. How do you make sure that campaigns sound like our brand? ",
+                        "body": "As part of the onboarding process we work together to produce a complete brand guideline document that includes your tone of voice, style preferences, messaging hierarchy and real-life examples. To make sure everything is always the same, a senior email marketing executive checks every draft against this guidance before giving it the green light or sending it. "
+
+                    },
+                    {
+                        "title": "04. Is it possible for the specialist to work with our own team?",
+                        "body": "Yes, our specialized offshore email marketing experts will work with you every day. As an extra member of your team, they use the tools you like best to keep in touch in real time, get fast feedback, plan together, get approvals and stay on the same page. "
+                    },
+                    {
+                        "title": "05. Do we need to hire different people for copy, design, automation or analytics?",
+                        "body": "No, one dedicated email marketing professional takes care of everything from start to finish. They make the plan based on your objectives, write the copy, make designs, setting up automation. Working on launching the campaigns with the help of A/B testing, analyzing the performance and sharing timely reports. They also continuously work on improving the process for better outcomes. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers’ Email Marketers",
+      "body": "We deliver reliable, revenue-focused email marketing that scales engagement and results without overhead costs. ",
+      "centerImageUrl": "/images/EMAIL (1).webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "/images/clock.png", "body": "Faster Campaigns Through Time Zone Advantage " },
+    { "imageUrl": "/images/talent.png", "body": "Access India’s Proven Digital Marketing Talent Pool" },
+    { "imageUrl": "/images/expenses.png", "body": "Zero Overhead or Recruitment Costs" },
+    { "imageUrl": "/images/New-feature.webp", "body": "Pre-vetted Certified Email Marketing Specialists" },
+    { "imageUrl": "/images/cross.webp", "body": "Niche expertise for E-commerce, SaaS, Small Business and More" },
+    { "imageUrl": "/images/icon5.png", "body": "Flexible Scaling – Ramp Up/Down as Needed" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire an Email Marketing Expert"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire your own email marketing specialist and join the growing brands that get 30–50% open rates and make more money from email.",
+			   "buttontext":"Hire an Email Marketing Expert Now"
             }
         ]
 		

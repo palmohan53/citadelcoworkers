@@ -1,295 +1,422 @@
-import React from "react";
+import React, { useMemo, useRef, useState, useCallback, useEffect } from "react";
 
 /**
- * Medical Case Study Hero (CitadelCoworkers color style)
- * ✅ Pure React + CSS (no bootstrap needed)
- * ✅ Replace images/text via props
+ * SIMPLE slider only:
+ * ✅ No wheel/scroll intercept
+ * ✅ Slide change via dots (and autoplay)
+ * ✅ Touch swipe works (native horizontal scroll)
+ * ✅ Autoplay (pauses on user interaction + hover)
+ *
+ * ✅ This version shows ONLY:
+ * - Logo (optional)
+ * - Title
+ * - Description
+ * - Button
+ * - Dots
  */
-const CaseStudy = ({
-  brandName = "Citadel Coworkers",
-  titleTop = "MEDICAL",
-  titleBottom = "CASE STUDY",
-  subtitle = "Understanding a patient’s condition\nand treatment journey.",
-  websiteText = "www.citadelcoworkers.com",
-  websiteUrl = "https://citadelcoworkers.com/",
-  dateText = "8 May, 2055",
-  mainImage = "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=1400&q=80",
-  mainImageAlt = "Medical team",
-  smallImage = "https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=900&q=80",
-  smallImageAlt = "Doctor writing notes",
-}) => {
+export default function HeroMarqueeInfoSlider() {
+  const trackRef = useRef(null);
+  const lastUserActionRef = useRef(Date.now());
+  const autoplayRef = useRef(null);
+
+  const slides = useMemo(
+    () => [
+      {
+        id: "s1",
+        title: "Driving Global B2B Demand for a UAE-Based Busbar Manufacturer",
+        description: "Through an integrated digital marketing strategy, Adinath Enterprises scaled its online visibility beyond regional markets, achieving 450% traffic growth, strong keyword dominance, and consistent international B2B leads from EV and renewable energy sectors.",
+        btn: "Read Case Study",
+        href: "#",
+        images: [
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Home-adinathenterprises.com_-scaled.png",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Portfolio-adinathenterprises.com_-scaled.png",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Products-adinathenterprises.com_.png",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Our-Team-adinathenterprises.com_-scaled.webp",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Contact-adinathenterprises.com_.webp",
+        ],
+        brandColor: "#643a0e",
+        logo: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Adinath-Enterprises-1.png",
+      },
+      {
+        id: "s2",
+        title: "Strengthening SEO Delivery with Scalable Virtual Support",
+        description:
+          "VirtualAssistantSEO.com scaled SEO operations efficiently, supporting ongoing optimization efforts and contributing to sustained improvements in organic reach and discoverability.",
+        btn: "View Case Study",
+        href: "#",
+        images: [
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Hire-Virtual-Assistant-SEO-Expert-in-India-1-scaled.webp",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Our-Process-Virtual-Assistant-SEO-scaled.webp",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Hire-Virtual-Assistant-SEO-Expert-in-India-2-scaled.webp",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Hire-Virtual-Assistant-SEO-Expert-in-India-2-scaled.webp",
+          "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Contact-Virtual-Assistant-SEO-scaled.webp",
+        ],
+        brandColor: "#9a57d7",
+        logo: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Click-1.png",
+      },
+    ],
+    []
+  );
+
+  const [active, setActive] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
+  const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+
+  const markUserAction = () => {
+    lastUserActionRef.current = Date.now();
+  };
+
+  const goTo = useCallback(
+    (idx, behavior = "smooth") => {
+      const el = trackRef.current;
+      if (!el) return;
+      const next = clamp(idx, 0, slides.length - 1);
+      setActive(next);
+      el.scrollTo({ left: next * el.clientWidth, behavior });
+    },
+    [slides.length]
+  );
+
+  // Keep active index synced with scroll position
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+
+    let raf = 0;
+    const onScroll = () => {
+      markUserAction();
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const w = el.clientWidth || 1;
+        const idx = Math.round(el.scrollLeft / w);
+        if (idx !== active) setActive(idx);
+      });
+    };
+
+    const onPointerDown = () => markUserAction();
+    const onTouchStart = () => markUserAction();
+    const onWheel = () => markUserAction(); // doesn't block wheel; only pauses autoplay
+
+    el.addEventListener("scroll", onScroll, { passive: true });
+    el.addEventListener("pointerdown", onPointerDown, { passive: true });
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("wheel", onWheel, { passive: true });
+
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      el.removeEventListener("pointerdown", onPointerDown);
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("wheel", onWheel);
+      cancelAnimationFrame(raf);
+    };
+  }, [active]);
+
+  // Autoplay
+  useEffect(() => {
+    const AUTOPLAY_MS = 4500;
+    const USER_PAUSE_MS = 2500; // wait after user interaction
+    const el = trackRef.current;
+    if (!el) return;
+
+    const tick = () => {
+      // pause on hover OR if tab hidden
+      if (isHovering) return;
+      if (typeof document !== "undefined" && document.hidden) return;
+
+      // pause shortly after user interaction
+      const idleFor = Date.now() - lastUserActionRef.current;
+      if (idleFor < USER_PAUSE_MS) return;
+
+      const next = (active + 1) % slides.length;
+      goTo(next, "smooth");
+    };
+
+    if (autoplayRef.current) clearInterval(autoplayRef.current);
+    autoplayRef.current = setInterval(tick, AUTOPLAY_MS);
+
+    return () => {
+      if (autoplayRef.current) clearInterval(autoplayRef.current);
+    };
+  }, [active, slides.length, goTo, isHovering]);
+
   return (
-    <section className="cc-case-hero">
-      <div className="cc-case-hero__container">
-        {/* Left */}
-        <div className="cc-case-hero__left">
-          <div className="cc-case-hero__brand">
-            <span className="cc-case-hero__logo-dot" aria-hidden="true" />
-            <span className="cc-case-hero__brand-name">{brandName}</span>
-          </div>
+    <>
+      <div
+        className="hmiHero"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <div className="hmiTrack" ref={trackRef}>
+          {slides.map((s, i) => {
+            const isActive = i === active;
+            const loopList = [...s.images, ...s.images];
 
-          <h1 className="cc-case-hero__title">
-            {titleTop}
-            <br />
-            {titleBottom}
-          </h1>
+            return (
+              <article
+                key={s.id}
+                className={`hmiSlide ${isActive ? "isActive" : ""}`}
+              >
+                <div className="hmiContainer">
+                  <div className="hmiGrid">
+                    {/* LEFT: moving images */}
+                    <div className="hmiLeft" aria-hidden="true">
+                      <div className="hmiCols">
+                        <div className="hmiCol up">
+                          <div className="hmiColTrack">
+                            {loopList.map((src, k) => (
+                              <div className="hmiImg" key={k}>
+                                <img src={src} alt="" loading="lazy" />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
 
-          <p className="cc-case-hero__subtitle">
-            {subtitle.split("\n").map((line, idx) => (
-              <React.Fragment key={idx}>
-                {line}
-                {idx !== subtitle.split("\n").length - 1 && <br />}
-              </React.Fragment>
-            ))}
-          </p>
+                        <div className="hmiCol down">
+                          <div className="hmiColTrack">
+                            {loopList.map((src, k) => (
+                              <div className="hmiImg" key={k}>
+                                <img src={src} alt="" loading="lazy" />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-          <div className="cc-case-hero__meta">
-            <a
-              className="cc-case-hero__pill cc-case-hero__pill--link"
-              href={websiteUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {websiteText}
-            </a>
-            <span className="cc-case-hero__pill cc-case-hero__pill--date">
-              {dateText}
-            </span>
-          </div>
-        </div>
+                    {/* RIGHT: ONLY title + description */}
+                    <div className="hmiRight">
+                      {s.logo && (
+                        <div className="hmiLogoWrap">
+                          <img src={s.logo} alt="Brand Logo" />
+                        </div>
+                      )}
 
-        {/* Right */}
-        <div className="cc-case-hero__right">
-          <div className="cc-case-hero__shape" aria-hidden="true" />
+                      <h2 className="hmiTitle">{s.title}</h2>
 
-          <figure className="cc-case-hero__card cc-case-hero__card--main">
-            <img src={mainImage} alt={mainImageAlt} />
-          </figure>
+                      {s.description ? (
+                        <p className="hmiDesc">{s.description}</p>
+                      ) : null}
 
-          <figure className="cc-case-hero__card cc-case-hero__card--small">
-            <img src={smallImage} alt={smallImageAlt} />
-          </figure>
+                      <div className="hmiActions">
+                        <a
+                          className="lineBtn"
+                          href={s.href}
+                          style={{ background: s.brandColor }}
+                        >
+                          {s.btn}
+                        </a>
+                      </div>
 
-          <div className="cc-case-hero__dots" aria-hidden="true" />
+                      <div className="hmiDots">
+                        {slides.map((_, di) => (
+                          <button
+                            key={di}
+                            className={`hmiDot ${di === active ? "on" : ""}`}
+                            onClick={() => {
+                              markUserAction();
+                              goTo(di);
+                            }}
+                            aria-label={`Go to slide ${di + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
 
-      {/* ✅ Component CSS */}
       <style>{`
-        :root{
-          --cc-navy:#00255b;
-          --cc-blue:#0b63ce;
-          --cc-sky:#e9f3ff;
-          --cc-text:#0c1b2a;
-          --cc-muted:#5a6b7f;
-          --cc-border:rgba(0,37,91,.12);
-          --cc-shadow:0 18px 40px rgba(0,37,91,.18);
+        .hmiHero{
+          width: 100%;
+          position: relative;
+          overflow: hidden;
         }
 
-        .cc-case-hero{
-          position:relative;
-          padding:64px 0;
-          
-          overflow:hidden;
+        /* slider track */
+        .hmiTrack{
+          height: 100%;
+          width: 100%;
+          display: flex;
+          overflow-x: auto;
+          overflow-y: hidden;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+        .hmiTrack::-webkit-scrollbar{ height: 0; }
+
+        .hmiSlide{
+          min-width: 100%;
+          height: 100%;
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+          position: relative;
         }
 
-        .cc-case-hero__container{
-          width:min(1180px, calc(100% - 32px));
-          margin:0 auto;
-          display:grid;
-          grid-template-columns:1.15fr 1fr;
-          gap:36px;
-          align-items:center;
+        .hmiContainer{
+          height: 100%;
+          width: 100%;
+          display: grid;
+          place-items: center;
+          margin-top: 37px;
         }
 
-        .cc-case-hero__brand{
-          display:inline-flex;
-          align-items:center;
-          gap:10px;
-          padding:8px 12px;
-          border:1px solid var(--cc-border);
-          border-radius:999px;
-          background:rgba(233,243,255,.55);
-          backdrop-filter:blur(6px);
-          width:fit-content;
+        .hmiGrid{
+          width: min(1180px, 100%);
+          height: 100%;
+          display: grid;
+          grid-template-columns: 0.95fr 1.05fr;
+          gap: clamp(18px, 3.2vw, 46px);
+          align-items: center;
         }
 
-        .cc-case-hero__logo-dot{
-          width:22px;height:22px;border-radius:50%;
-          background:linear-gradient(135deg,var(--cc-navy),var(--cc-blue));
-          box-shadow:0 10px 22px rgba(11,99,206,.25);
-          display:inline-block;
+        /* LEFT moving images */
+        .hmiLeft{
+          position: relative;
+          height: clamp(420px, 72vh, 760px);
+          border-radius: 18px;
+          overflow: hidden;
+          background: rgba(255,255,255,.5);
+          border: 1px solid rgba(0,0,0,.06);
+          box-shadow: 0 30px 90px rgba(0,0,0,.10);
         }
 
-        .cc-case-hero__brand-name{
-          font:600 14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-          color:var(--cc-navy);
-          letter-spacing:.2px;
+        .hmiCols{
+          position: absolute;
+          inset: 0;
+          display: flex;
+          gap: 14px;
+          padding: 18px;
         }
 
-        .cc-case-hero__title{
-          margin:18px 0 10px;
-          font:800 clamp(38px, 4.2vw, 66px) / .95 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-          letter-spacing:1px;
-          color:var(--cc-blue);
-          text-transform:uppercase;
+        .hmiCol{
+          flex: 1;
+          height: 100%;
+          overflow: hidden;
+          border-radius: 14px;
         }
 
-        .cc-case-hero__subtitle{
-          margin:0;
-          font:500 16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-          color:var(--cc-muted);
-          max-width:420px;
+        .hmiColTrack{
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          will-change: transform;
         }
 
-        .cc-case-hero__meta{
-          margin-top:22px;
-          display:flex;
-          gap:12px;
-          flex-wrap:wrap;
-          align-items:center;
+        .hmiImg img{
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 14px;
         }
 
-        .cc-case-hero__pill{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          padding:10px 16px;
-          border-radius:999px;
-          border:1px solid rgba(11,99,206,.18);
-          background:rgba(233,243,255,.7);
-          color:var(--cc-navy);
-          font:600 14px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-          text-decoration:none;
-          transition:transform .15s ease, background .15s ease;
+        @keyframes moveUp {
+          0%   { transform: translateY(0); }
+          100% { transform: translateY(-50%); }
+        }
+        @keyframes moveDown {
+          0%   { transform: translateY(-50%); }
+          100% { transform: translateY(0); }
+        }
+        .hmiCol.up .hmiColTrack{ animation: moveUp 18s linear infinite; }
+        .hmiCol.down .hmiColTrack{ animation: moveDown 18s linear infinite; }
+
+        /* RIGHT info */
+        .hmiRight{ padding: clamp(6px, 1vw, 16px); }
+
+        /* Underlined title like screenshot */
+        .hmiTitle{
+          margin: 0 0 16px;
+          font-size: 20px;
+          font-weight: 800;
+          color: rgba(0,0,0,.92);
+         
+          text-underline-offset: 5px;
+          opacity: 0;
+          transform: translateY(14px);
+          transition: 650ms cubic-bezier(.2,.8,.2,1);
         }
 
-        .cc-case-hero__pill--link:hover{
-          transform:translateY(-1px);
-          background:rgba(233,243,255,.95);
+        .hmiDesc{
+          margin: 0 0 10px;
+          max-width: 620px;
+          line-height: 1.7;
+          font-size: 13px;
+          color: rgba(0,0,0,.72);
+          opacity: 0;
+          transform: translateY(14px);
+          transition: 650ms cubic-bezier(.2,.8,.2,1);
+          transition-delay: 70ms;
         }
 
-        .cc-case-hero__pill--date{
-          border-color:rgba(0,37,91,.14);
+        .hmiActions{
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+          opacity: 0;
+          transform: translateY(14px);
+          transition: 650ms cubic-bezier(.2,.8,.2,1);
+          transition-delay: 140ms;
         }
 
-        .cc-case-hero__right{
-          position:relative;
-          min-height:420px;
-          display:grid;
-          place-items:center;
+        .lineBtn{
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 26px;
+          border-radius: 999px;
+          text-decoration: none;
+          font-weight: 800;
+          color: #fff;
         }
 
-        .cc-case-hero__shape{
-          position:absolute;
-          right:-22px;
-          top:-22px;
-          width:min(420px, 70%);
-          height:min(520px, 92%);
-          background:linear-gradient(180deg,var(--cc-blue), #0a56b5);
-          border-radius:28px;
-          box-shadow:var(--cc-shadow);
+        .hmiDots{
+          margin-top: 18px;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          opacity: 0;
+          transform: translateY(14px);
+          transition: 650ms cubic-bezier(.2,.8,.2,1);
+          transition-delay: 170ms;
+        }
+        .hmiDot{
+          width: 7px; height: 7px;
+          border-radius: 999px;
+          border: 0;
+          background: rgba(0,0,0,.18);
+          cursor: pointer;
+        }
+        .hmiDot.on{ background: rgba(0,0,0,.62); }
+
+        /* entrance */
+        .hmiSlide.isActive .hmiTitle,
+        .hmiSlide.isActive .hmiDesc,
+        .hmiSlide.isActive .hmiActions,
+        .hmiSlide.isActive .hmiDots{
+          opacity: 1;
+          transform: translateY(0);
         }
 
-        .cc-case-hero__card{
-          position:absolute;
-          border-radius:26px;
-          overflow:hidden;
-          border:6px solid rgba(255,255,255,.92);
-          box-shadow:0 14px 34px rgba(0,37,91,.22);
-          background:#fff;
+        @media (max-width: 980px){
+          .hmiGrid{ grid-template-columns: 1fr; gap: 18px; }
+          .hmiLeft{ height: 420px; }
+          .hmiTitle{ font-size: 26px; }
         }
 
-        .cc-case-hero__card img{
-          width:100%;
-          height:100%;
-          object-fit:cover;
-          display:block;
-        }
-
-        .cc-case-hero__card--main{
-          width:min(420px, 92%);
-          height:320px;
-          right:26px;
-          top:18px;
-          border-radius:30px;
-        }
-
-        .cc-case-hero__card--small{
-          width:250px;
-          height:170px;
-          right:46px;
-          bottom:18px;
-          border-radius:22px;
-        }
-
-        .cc-case-hero__dots{
-          position:absolute;
-          left:24px;
-          top:10px;
-          width:90px;
-          height:56px;
-          background-image:radial-gradient(rgba(11,99,206,.35) 1.6px, transparent 1.7px);
-          background-size:10px 10px;
-          border-radius:14px;
-          filter:drop-shadow(0 10px 18px rgba(0,37,91,.18));
-          opacity:.9;
-        }
-
-        .cc-case-hero::after{
-          content:"";
-          position:absolute;
-          left:0; right:0; bottom:-40px;
-          height:120px;
-          background-image:radial-gradient(rgba(0,37,91,.10) 1.5px, transparent 1.6px);
-          background-size:14px 14px;
-          opacity:.55;
-          pointer-events:none;
-        }
-
-        @media (max-width: 992px){
-          .cc-case-hero__container{
-            grid-template-columns:1fr;
-            gap:26px;
-          }
-          .cc-case-hero__right{
-            min-height:420px;
-          }
-          .cc-case-hero__shape{
-            right:0;
-            width:100%;
-            height:100%;
-            border-radius:26px;
-          }
-          .cc-case-hero__card--main{
-            left:18px;
-            right:18px;
-          }
-          .cc-case-hero__card--small{
-            right:22px;
-          }
-        }
-
-        @media (max-width: 520px){
-          .cc-case-hero{
-            padding:44px 0;
-          }
-          .cc-case-hero__right{
-            min-height:360px;
-          }
-          .cc-case-hero__card--main{
-            height:260px;
-          }
-          .cc-case-hero__card--small{
-            width:220px;
-            height:150px;
-            right:16px;
-            bottom:14px;
-          }
+        .hmiLogoWrap img {
+          margin-bottom: 18px;
+          max-width: 60%;
+          height: auto;
+          display: block;
         }
       `}</style>
-    </section>
+    </>
   );
-};
-
-export default CaseStudy;
+}

@@ -11,7 +11,7 @@ import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
 import BannerContent from '../Component/BannerContent';
-import BrandSlider  from '../Component/Brandsslider';
+import FeaturedInMarquee  from '../Component/Brandsslider';
 
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
@@ -103,10 +103,10 @@ const Home = () => {
             <section className="banner">
                 <div className="container">
                     <div className="row align-items-end">
-                    <div className="col-md-5 col-12 bannerContent">
+                    <div className="col-md-6 col-12 bannerContent">
                         <BannerContent/>
                     </div>
-                        <div className="col-md-7 col-12">
+                        <div className="col-md-6 col-12">
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
@@ -210,7 +210,7 @@ const Home = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
-              {/*  <section className="serviceb bg-dark" id=""><div className="container"><BrandSlider /></div></section> */}
+               <section className="serviceb bg-dark" id=""><div className="container"><FeaturedInMarquee /></div></section>
  
                 <section className="service home-page" id="servicesSec">
                     <div className="container">

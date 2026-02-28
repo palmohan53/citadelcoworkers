@@ -396,6 +396,12 @@ section.process.pb-100
 .bannerProfile {
     width: 100% !important;
 }
+.bulkContent.mt-5 table {
+    width: 100%;
+    overflow-x: scroll;
+    display: block;
+    overflow-y: hidden !important;
+}
 .left-content {
     width: 100%;
     float: left;

@@ -16,6 +16,7 @@
     "compress-create-react-app": "^1.4.5",
     "react": "^18.3.1",
     "react-animate-on-scroll": "^2.1.9",
+    "react-cookie-consent": "^10.0.1",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",

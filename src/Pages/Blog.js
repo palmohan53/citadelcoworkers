@@ -161,7 +161,11 @@ const Blog = ({isRecentBlog}) => {
               )}
 
               {currentPosts.map((blog,index) => blogHtml(blog,index))}
-
+              <div className="text-center mt-4">
+  <Link to="/blog" className="colorBtn wideBtn">
+        View All Blogs <FontAwesomeIcon icon={faArrowRight}/>
+      </Link>
+</div>
             </div>
           </div>
 

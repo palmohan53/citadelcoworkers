@@ -5,12 +5,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 const ToolsSection = ({serviceTools}) => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    speed: 300,
+    speed: 500,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     slidesToShow: 7,
     slidesToScroll: 1,
 
@@ -26,7 +26,7 @@ const ToolsSection = ({serviceTools}) => {
 
   return (
     <section className='toolslider testimonial'>
-      <div className="">
+      <div className="pp-slider">
         <div className="heading-text">
           <div className="sectionHeading text-center mb-30">
          <h2>{serviceTools.slider_title}</h2>

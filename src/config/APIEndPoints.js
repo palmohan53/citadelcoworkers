@@ -16,6 +16,8 @@ const API_ENDPOINTS = {
     serviceSection: 'api/getSection.php?post_type=steps_section&post_name=',
     Toolssection: 'api/getToolSection.php?post_type=tool_section&post_name=',
     Certificationsection: 'api/getCertificationSection.php?post_type=certification&post_name=',
+     Portfolio: 'api/getPortfolio.php?post_type=portfolio&post_name=',
+     CaseStudy: 'api/getCaseStudy.php?post_type=case_study&post_name='
 }
 
 export default API_ENDPOINTS;

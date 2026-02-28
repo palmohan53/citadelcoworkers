@@ -1,4 +1,6 @@
 import React, {useEffect, useState, useRef, Suspense} from "react";
+import { useLocation } from "react-router-dom";
+
 import { Link } from 'react-router-dom';
  import CountUp from 'react-countup';
 import axios from "axios";
@@ -22,7 +24,11 @@ import Pricing from "../Component/Pricing";
 import ServiceBulkContentUpper from "../Component/ServiceBulkContentUpper";
 import Faq from "../Component/Faq";
 import ContactForm from "../Component/ContactForm";
-
+import HeroMarqueeInfoSlider from "../Component/CaseStudy";
+import CaseHeroSlider from "../Component/CaseStudyDesigin";
+import FeaturedInMarquee  from '../Component/Brandsslider';
+import ProjectsPortfolio from"../Component/ProjectsPortfolio";
+import VideoEditorSkillsSection from "../Component/VideoEditorSkillsSection";
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
@@ -30,11 +36,12 @@ const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
 
 
 const SubServices = () => {
-    
+      const location = useLocation();
     const navigate = useNavigate();
-    
+    console.log("Location Pathname:", location.pathname);
     const {subService, serviceDetails} = useParams();
     const [servicedata, setServicedata] = useState([]);
+    const [parentCTA, setParentCTA] = useState(""); // ✅ NEW STATE
 const [serviceProfile, setServiceProfile] = useState(null); // full response
 const [profileHeading, setProfileHeading] = useState({
     heading: "",
@@ -49,42 +56,150 @@ const [serviceTools, setServiceTools] = useState({
   slider_title: "",
   tools: []
 });
+const [portfolioData, setPortfolioData] = useState(null);
+const [portfolioTabs, setPortfolioTabs] = useState([{ term_id: 0, name: "Show All", slug: "show-all" }]);
+const [portfolioItems, setPortfolioItems] = useState([]);
+const [activePortfolioTab, setActivePortfolioTab] = useState("show-all");
+const [portfolioLoading, setPortfolioLoading] = useState(false);
+const [portfolioError, setPortfolioError] = useState("");
+const [visibleCount, setVisibleCount] = useState(3);
 const [certificationData, setCertificationData] = useState({
   heading: "",
   subheading: "",
   certifications: []
 });
+const [casestudyData , setCasestudyData] = useState({
+  parent: {},
+  listing: []
+});
 const concluding = serviceContent?.[0]?.Concludingtext?.[0] || {};
 const concludingText = (concluding?.text || "").trim();
 const concludingBtnText = (concluding?.buttontext || "").trim();
-
+const shouldShowServiceBulkContent =
+  serviceBulkContent?.status === "success" &&
+  Array.isArray(serviceBulkContent?.listing) &&
+  serviceBulkContent.listing.length > 0 &&
+  (serviceBulkContent.listing[0]?.post_content || "").trim() !== "";
 const shouldShowConcluding = concludingText !== "" || concludingBtnText !== "";
     const contactref = useRef(null);
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
     };
+/* =====================================================
+   GET SERVICE LIST + PARENT CTA
+===================================================== */
 
-    const getServiceList = async () => {
-        // await axios.get(`${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`)
-        let apiUrl = `${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`;
-        if(serviceDetails){
-            apiUrl = `${API_HOST}${API_ENDPOINTS.subServiceListing}${serviceDetails}`;
-        }
-        await axios.get(apiUrl)
-        .then((res)=>{
-            if(res.data.status === "fail"){
-                navigate('/not-found');
-            }else{
-                const revesrseList = res?.data?.listing?.reverse();
-                setServicedata(revesrseList);
-            }
-        })
-        .catch((err)=>{
-            setServicedata([])
-            console.log(err)
-        })
+const getServiceList = async () => {
+
+    let apiUrl = `${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`;
+    if(serviceDetails){
+        apiUrl = `${API_HOST}${API_ENDPOINTS.subServiceListing}${serviceDetails}`;
     }
-    
+
+    try{
+        const res = await axios.get(apiUrl);
+
+        if(res.data.status === "fail"){
+            navigate('/not-found');
+        }else{
+            const reverseList = res?.data?.listing?.reverse();
+            setServicedata(reverseList);
+
+            // ✅ Parent CTA store
+            setParentCTA(res.data.parent_cta_button || "");
+        }
+
+    }catch(err){
+        console.log(err);
+        setServicedata([]);
+        setParentCTA("");
+    }
+};
+
+/* =====================================================
+   USE EFFECT
+===================================================== */
+
+useEffect(() => {
+    window.scrollTo(0, 0);
+    if(subService || serviceDetails){
+        getServiceList();
+    }
+}, [subService, serviceDetails]);
+
+    const getPortfolio = async () => {
+  try {
+    setPortfolioLoading(true);
+    setPortfolioError("");
+
+    let apiUrl = `${API_HOST}${API_ENDPOINTS.Portfolio}${subService}`;
+    if (serviceDetails) {
+      apiUrl = `${API_HOST}${API_ENDPOINTS.Portfolio}${serviceDetails}`;
+    }
+
+    const res = await axios.get(apiUrl);
+    const json = res.data;
+
+    console.log("Full API Response:", json);
+
+    if (!json || json.status !== "success") {
+      setPortfolioError(json?.message || "Portfolio not found");
+      setPortfolioData(null);
+      setPortfolioTabs([{ term_id: 0, name: "Show All", slug: "show-all" }]);
+      setPortfolioItems([]);
+      return;
+    }
+
+    setPortfolioData(json);
+
+    // ✅ Tabs from API categories
+    const cats = json.categories || [];
+    const tabs = [
+      { term_id: 0, name: "Show All", slug: "show-all" },
+      ...cats.map((c) => ({ term_id: c.term_id, name: c.name, slug: c.slug })),
+    ];
+    setPortfolioTabs(tabs);
+
+    // ✅ Merge all items for Show All
+    const merged = [];
+    cats.forEach((cat) => {
+      (cat.items || []).forEach((it) => {
+        merged.push({
+          ...it,
+          _catName: cat.name,
+          _catSlug: cat.slug,
+          _img:
+            it.banner && it.banner !== "NA"
+              ? it.banner
+              : cat?.acf?.featured_image_url || "",
+        });
+      });
+    });
+
+    // ✅ unique by ID
+    const seen = new Set();
+    const uniqueMerged = merged.filter((x) => {
+      const k = String(x.ID);
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+
+    setActivePortfolioTab("show-all");
+    setVisibleCount(3);
+    setPortfolioItems(uniqueMerged);
+
+  } catch (err) {
+    console.error("API Error:", err);
+    setPortfolioError("Network error");
+    setPortfolioData(null);
+    setPortfolioTabs([{ term_id: 0, name: "Show All", slug: "show-all" }]);
+    setPortfolioItems([]);
+  } finally {
+    setPortfolioLoading(false);
+  }
+};
+
    const getProfileList = async () => {
     let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`;
     if (serviceDetails) {
@@ -119,7 +234,7 @@ const shouldShowConcluding = concludingText !== "" || concludingBtnText !== "";
         }
         await axios.get(apiUrl)
         .then((res)=>{
-            setServiceBulkContent(res);
+            setServiceBulkContent(res.data);
         })
         .catch((err)=>{
             setServiceBulkContent([])
@@ -288,14 +403,40 @@ const getServiceTools = async () => {
     setServiceSection([]);
   }
 };
+const getCaseStudy = async () => {
+  let apiUrl = `${API_HOST}${API_ENDPOINTS.CaseStudy}${subService}`;
+  if (serviceDetails) {
+    apiUrl = `${API_HOST}${API_ENDPOINTS.CaseStudy}${serviceDetails}`;
+  }
+
+  try {
+    const res = await axios.get(apiUrl);
+    const json = res.data;
+
+    console.log("CaseStudy JSON:", json);
+
+    if (!json || json.status !== "success") {
+      setCasestudyData({ parent: {}, listing: [] });
+      return;
+    }
+
+    // ✅ store full response (parent + listing)
+    setCasestudyData({
+      parent: json.parent || {},
+      listing: json.listing || [],
+      status: json.status,
+      message: json.message
+    });
+
+  } catch (err) {
+    console.log(err);
+    setCasestudyData({ parent: {}, listing: [] });
+  }
+};
 
 
-    // const getProfileList = async () => {
-    //     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`)
-    //     const data = await response;
-    //     return data;
-    // }
-    // const { data, status } = useQuery("Profile", getProfileList);
+
+   
     const filterServiceJson = () => {
         let filterContent = servicesContent.services.filter(item=> item.categoryUrl === (subService));
         if(serviceDetails){
@@ -317,6 +458,8 @@ const getServiceTools = async () => {
             getServiceSection();
             getServiceTools();
             getCertificationSection();
+              getPortfolio();
+			  getCaseStudy();
         }
         //eslint-disable-next-line
     }, [subService, serviceDetails])
@@ -384,6 +527,7 @@ const getServiceTools = async () => {
                     </div>
                 </div>
             </section>
+     
             <section className="explore" id="servicesSec">
                 <div className="container">
                     <div className="row align-items-center mb-3">
@@ -427,6 +571,11 @@ const getServiceTools = async () => {
                         }
                     </div>
                 </div>
+                {parentCTA && parentCTA !== "NA" && (
+  <div class="text-center mt-5">        <div dangerouslySetInnerHTML={{ __html: parentCTA }} /></div>
+
+
+)}
             </section>
 
             <Suspense fallback={<div className="h-[400px] w-full" />}>
@@ -459,6 +608,37 @@ const getServiceTools = async () => {
                 </div>
             </section>
             </Suspense>
+
+{certificationData?.certifications?.length > 0 && (
+  <section className="pt-0">
+    <CertificateSection certificationData={certificationData} />
+  </section>
+)}            {casestudyData?.listing?.length > 0 && (
+  <section className="bg_light_1">
+    <div className="sectionHeading text-center">
+      <p>Case Study</p>
+      <h2>We Build With Intent & It Shows In The Results</h2>
+    </div>
+ <CaseHeroSlider
+  casestudyData={casestudyData}
+  parentSlug={subService}
+/>
+  </section>
+)}
+{portfolioItems?.length > 0 && (
+  <section className="bg_light_1">
+    <div className="sectionHeading text-center">
+         <h2>Work We’re Proud Of</h2>
+      <p>Showcasing Impactful Designs Created to Help Brands Grow and Stand Out</p>
+   
+    </div>
+
+    <ProjectsPortfolio 
+      subService={subService} 
+      serviceDetails={serviceDetails} 
+    />
+  </section>
+)}
             <Suspense fallback={<div className="h-[400px] w-full" />}>
             <ToolsSection serviceTools={serviceTools} />
             </Suspense>
@@ -471,23 +651,33 @@ const getServiceTools = async () => {
                 <Testimonial serviceTestimonial={serviceTestimonial} />
             </Suspense>
             
- {certificationData?.certifications?.length > 0 && (
-  <section>
-    <CertificateSection certificationData={certificationData} />
-  </section>
-)}
+ 
+
            <Suspense fallback={<div className="h-[400px] w-full" />}>
                 <Steps serviceSection={serviceSection} />
             </Suspense>
 
             <Pricing handleScrollClick={handleScrollClick}/>
-            <section className="serviceBulkContent fff">
-                <ServiceBulkContent serviceBulkContent={serviceBulkContent}/>
-            </section>
+    <div>
+      
+    </div>
+ 
+ {location.pathname === "/services/graphic-web-design/hire-video-editor" && (
+  <section className="serviceBulkContent fff"><VideoEditorSkillsSection></VideoEditorSkillsSection></section>
+
+)}
+
+{shouldShowServiceBulkContent && (
+  <section className="serviceBulkContent fff">
+    <ServiceBulkContent serviceBulkContent={serviceBulkContent} />
+  </section>
+)}
+             
             <Faq faqData={faqData}/>
             <div ref={contactref}>
 <ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
             </div>
+           
             <RecentBlog />
          {shouldShowBottomServices && (
         <section className="bottomServices bg_light_1">
@@ -570,9 +760,10 @@ const getServiceTools = async () => {
     </section>
   );
 })()}
- 
-        
-          <section className="bottomCon">
+
+ <section className="serviceb bg-dark" id=""><div className="container"><FeaturedInMarquee /></div></section>
+
+         <section className="bottomCon">
   <div className="container">
     <div className="sectionHeading text-center">
       {shouldShowConcluding ? (
@@ -602,9 +793,11 @@ const getServiceTools = async () => {
     </div>
   </div>
 </section>
+
+
         </HelmetProvider>
     </React.Fragment>
     )
 };
-
+  
 export default SubServices;

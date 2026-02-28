@@ -364,7 +364,25 @@ const About = () => {
                                 </div>
                             </div>
                             
-                            
+                              <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <div className="team_box style_two">
+                                    <div className="team_box_outer">
+                                        <div className="image_box ">
+                                            <img src="/images/mansij.png" alt="Mansij Kureel"/>
+                                            <div className="overlay ">
+                                                <ul>
+                                                    <li><a href="/"><FontAwesomeIcon icon={faLinkedinIn} /> </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="content_box ">
+                                            <h2>Mansij Kureel </h2>
+                                            <p className="job_details">Vice President, Ops & Client Relations</p>
+                                            <p>Led diverse teams ensuring cultural alignment with 24/7 coverage.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
                             {/* <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                                 <div className="team_box style_two">

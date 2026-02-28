@@ -1,38 +1,54 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 
 const FloatingContact = () => {
   const [open, setOpen] = useState(false);
+  const [showLiveChat, setShowLiveChat] = useState(true);
+
+  // 🔍 Check country on load
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.country === "IN") {
+          setShowLiveChat(false);
+          if (window.tidioChatApi) window.tidioChatApi.hide();
+        }
+      })
+      .catch(() => {
+        // fallback using language
+        const lang = navigator.language || "";
+        if (lang.startsWith("hi") || lang === "en-IN") {
+          setShowLiveChat(false);
+          if (window.tidioChatApi) window.tidioChatApi.hide();
+        }
+      });
+  }, []);
 
   const handleOpen = () => {
-    // 🔒 FIRST hide Tidio so it cannot catch click
+    // hide Tidio before opening popup
     if (window.tidioChatApi) {
       window.tidioChatApi.hide();
     }
-
-    // 🔓 Then open your popup
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
- window.tidioChatApi.hide();
-    // 🔁 Show Tidio back
     if (window.tidioChatApi) {
       window.tidioChatApi.hide();
     }
   };
-window.tidioChatApi?.on("close", function () {
-  window.tidioChatApi.hide();
-});
+
+  // Ensure tidio stays hidden if someone closes it
+  window.tidioChatApi?.on("close", function () {
+    window.tidioChatApi.hide();
+  });
+
   return (
     <>
       {/* Floating Button */}
       <div className="fab-wrapper">
-        <div
-          className="contact-message-box"
-          onClickCapture={handleOpen}   // 👈 VERY IMPORTANT
-        >
+        <div className="contact-message-box" onClickCapture={handleOpen}>
           <div className="static">
             <img
               src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/Untitled-design-15.gif"
@@ -58,21 +74,31 @@ window.tidioChatApi?.on("close", function () {
             </div>
 
             <div className="fc-actions">
-              <a href="tel:+19294707990"><img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/phone-call-1.png"></img> Call</a>
-              <a href="mailto:sales@citadelcoworkers.com"><img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/email-4.png"></img> Email</a>
-            
+              <a href="tel:+19294707990">
+                <img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/phone-call-1.png" />
+                Call
+              </a>
+              <a href="mailto:sales@citadelcoworkers.com">
+                <img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/email-4.png" />
+                Email
+              </a>
+           
 
-              <button
-                onClick={() => {
-                  if (window.tidioChatApi) {
-                    window.tidioChatApi.show();
-                    window.tidioChatApi.open();
-                  }
-                  setOpen(false);
-                }}
-              >
-                <img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/chat-1-1.png"></img> Live Chat
-              </button>
+              {/* 🔥 Live Chat button only for non-India users */}
+              {showLiveChat && (
+                <button
+                  onClick={() => {
+                    if (window.tidioChatApi) {
+                      window.tidioChatApi.show();
+                      window.tidioChatApi.open();
+                    }
+                    setOpen(false);
+                  }}
+                >
+                  <img src="https://virtualassistant24x7.com/wp-content/uploads/2026/01/chat-1-1.png" />
+                  Live Chat
+                </button>
+              )}
             </div>
           </div>
         </>
