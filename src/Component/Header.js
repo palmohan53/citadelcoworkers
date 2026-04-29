@@ -64,8 +64,29 @@ const Header = () => {
                             <li className="nav-item" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/">Home</NavLink>
                             </li>
-                            <li className="nav-item" onClick={openToggle}>
+                            <li className="nav-item dropDown" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/about-us">About Us</NavLink>
+                                  <FontAwesomeIcon icon={faAngleDown}  className="mobile" onClick={subMenuToggle}/>
+                                <FontAwesomeIcon icon={faAngleDown}  className="desktop"/>
+                                    <ul className={subMenuClass ? "active" : ""}>
+                                        <li onClick={openToggle}>
+    <NavLink className="nav-link" to="/our-mission">
+      Our Mission
+    </NavLink>
+  </li>
+  
+     <li onClick={openToggle}>
+    <NavLink className="nav-link" to="/about-citadel-advantage">
+      Citadel Advantage
+    </NavLink>
+  </li>
+  
+     <li onClick={openToggle}>
+    <NavLink className="nav-link" to="/how-does-citadel-works">
+      How Does Citadel Works
+	  </NavLink>
+  </li>
+                                    </ul>
                             </li>
                             <li className="nav-item dropDown">
                                 <NavLink className="nav-link" to="/services" onClick={openToggle}>Services</NavLink>

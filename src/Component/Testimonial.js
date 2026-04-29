@@ -203,7 +203,12 @@ const TestimonialAcfSlider = ({ listing }) => {
                 // ✅ Removed px-3 (was breaking width)
                 <div key={index}>
                   <div className="acfCard">
-                    {header ? <h2 className="acfMainTitle">{header}</h2> : null}
+                  {header ? (
+  <h2
+    className="acfMainTitle"
+    dangerouslySetInnerHTML={{ __html: header }}
+  />
+) : null}
 
                     <div
                       className="acfQuote"
@@ -345,7 +350,7 @@ const acfCss = `
   flex-wrap:wrap;
 }
 .acfOutcomeBox{
-       width: 240px;
+       flex: 1;
     border: 1.6px dashed #2551d5;
     border-radius: 14px;
     padding: 18px 14px;

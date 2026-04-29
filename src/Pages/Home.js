@@ -391,6 +391,87 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
+
+
+                <section className="Lead-flow-home">
+    <div className="container">
+        <div class="sectionHeading text-center mb-4">
+            <div class="titile-tag">How Citadel Works</div>
+            <h2>Your Business Runs On Systems. <br></br>
+We Build Them For You. </h2>
+<div class="para">Growing your business isn’t about adding more people; it's about fixing gaps in your system. CCW virtual teams, combined with powerful AI tools and agentic workflows, don’t just execute tasks but handle all your missed leads, stalled follow-ups and scattered operations. They install new systems that keep everything moving. </div></div>
+   
+
+        <div className="grid">
+            <div className="card"><span className="badge">1</span>
+                <div className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waypoints w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><circle cx="12" cy="4.5" r="2.5"></circle><path d="m10.2 6.3-3.9 3.9"></path><circle cx="4.5" cy="12" r="2.5"></circle><path d="M7 12h10"></path><circle cx="19.5" cy="12" r="2.5"></circle><path d="m13.8 17.7 3.9-3.9"></path><circle cx="12" cy="19.5" r="2.5"></circle></svg>
+                </div>
+                <h3>Lead Flow </h3>
+                <p className="bold-text">A lead that isn’t followed up on is a lead you’ve already lost </p>
+				<p>We map out your entire lead generation journey from the first contact to the closed deal, using automated workflows. This cuts response time and conversion rates climb. 
+</p>
+            </div>
+            <div className="card"><span className="badge">2</span>
+                <div className="icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg>
+                </div>
+                <h3>Operations </h3>
+                 <p className="bold-text">Your week shouldn’t depend on who remembered what 
+</p><p>
+We build predictable workflows for recurring tasks, internal coordination and vendor follow-ups. This ensures your team knows exactly what to do and so do our experts. 
+</p>
+            </div>
+            <div className="card"><span className="badge">3</span>
+                <div className="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
+                </div>
+                <h3>Communication </h3>
+                <p className="bold-text">Unanswered emails are deals that don’t close
+</p>
+                <p>We handle your inbox, outreach campaigns and client updates using AI-assisted tools so that reporting is done on time, every time. Your clients feel the attention. 
+</p>
+            </div>
+            <div className="card"><span className="badge">4</span>
+                <div className="icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
+                </div>
+                <h3>Fiance Ops </h3>
+         <p className="bold-text">Bookkeeping shouldn’t wait for you to have a free afternoon</p>
+
+<p>We keep invoices, reconciliation or expense tracking clear and current. This allows you to know where the business stands without the last-minute scramble. </p>
+
+
+
+
+            </div>
+            <div className="card"><span className="badge">5</span>
+                <div className="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                </div>
+                <h3>Marketing Ops 
+</h3>
+                <p className="bold-text">Inconsistent presence is invisible presence 
+</p><p>
+We manage your content calendars, post scheduling and campaign coordination. This keeps your brand present in front of prospects, ensuring you’re already on their mind. 
+</p>
+            </div>
+            <div className="card"><span className="badge">6</span>
+                <div className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-line w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+                </div>
+                <h3>Reporting</h3>
+                <p className="bold-text">Decisions made without data are just expensive guesses 
+</p>
+                <p>We build AI-powered dashboards and weekly reports so you always know what's working and what isn’t. Our focus is defined without spending hours pulling numbers. 
+</p>
+            </div>
+          
+         
+          
+        </div>
+    </div>
+</section>
     <section
       ref={sectionRef}
       className={`hiringProcess ${isVisible ? "visible" : ""}`}
@@ -448,6 +529,8 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
+
+        
                 <section className="video">
                     <div className="videoBgImage">
                         <img src="/images/home-banner.png" alt="Seamless Remote Hiring – Build Your Dream Team Today" />

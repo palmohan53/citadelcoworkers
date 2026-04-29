@@ -65,7 +65,7 @@ const ContactForm = ({ buttonText = "Start Your Project" }) => {
       }, [])
     return(
         <React.Fragment>
-            <section className="getInTouch">
+            <div className="getInTouch">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-7 col-12">
@@ -189,7 +189,7 @@ const ContactForm = ({ buttonText = "Start Your Project" }) => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
 
             {videoPopup && <div className="popup">

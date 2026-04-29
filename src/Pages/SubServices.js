@@ -29,10 +29,12 @@ import CaseHeroSlider from "../Component/CaseStudyDesigin";
 import FeaturedInMarquee  from '../Component/Brandsslider';
 import ProjectsPortfolio from"../Component/ProjectsPortfolio";
 import VideoEditorSkillsSection from "../Component/VideoEditorSkillsSection";
+import IndustriesSection from "../Component/3DIndustriesSection";
+import WorkflowSplit from "../Component/process3DAnimation";
+import BrandAssets from "../Component/Brand AssetsPrinkpackingpage";
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
-
 
 
 const SubServices = () => {
@@ -63,6 +65,9 @@ const [activePortfolioTab, setActivePortfolioTab] = useState("show-all");
 const [portfolioLoading, setPortfolioLoading] = useState(false);
 const [portfolioError, setPortfolioError] = useState("");
 const [visibleCount, setVisibleCount] = useState(3);
+const [skillsetData, setSkillsetData] = useState(null);
+const [skillsetLoading, setSkillsetLoading] = useState(false);
+const [skillsetError, setSkillsetError] = useState("");
 const [certificationData, setCertificationData] = useState({
   heading: "",
   subheading: "",
@@ -82,13 +87,55 @@ const shouldShowServiceBulkContent =
   (serviceBulkContent.listing[0]?.post_content || "").trim() !== "";
 const shouldShowConcluding = concludingText !== "" || concludingBtnText !== "";
     const contactref = useRef(null);
-    const handleScrollClick = () => {
-        contactref.current?.scrollIntoView({behavior: 'smooth'});
-    };
+ const handleScrollClick = () => {
+  const element = contactref.current;
+  const offset = 100; // 👈 navbar height (adjust karo 80–120)
+
+  const y =
+    element.getBoundingClientRect().top +
+    window.pageYOffset -
+    offset;
+
+  window.scrollTo({ top: y, behavior: "smooth" });
+};
 /* =====================================================
    GET SERVICE LIST + PARENT CTA
 ===================================================== */
+useEffect(() => {
+  const scrollToHash = () => {
+    const hash = window.location.hash;
+    if (!hash) return;
 
+    const element = document.querySelector(hash);
+    if (!element) return;
+
+    const header = document.querySelector("header");
+    const offset = header ? header.offsetHeight : 100;
+
+    const y =
+      element.getBoundingClientRect().top +
+      window.pageYOffset -
+      offset - 10;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+
+    // 🔥 HASH REMOVE (IMPORTANT)
+  setTimeout(() => {
+  window.history.replaceState(null, null, window.location.pathname);
+}, 50);
+  };
+
+  scrollToHash();
+
+  window.addEventListener("hashchange", scrollToHash);
+
+  return () => {
+    window.removeEventListener("hashchange", scrollToHash);
+  };
+}, []);
 const getServiceList = async () => {
 
     let apiUrl = `${API_HOST}${API_ENDPOINTS.subServiceListing}${subService}`;
@@ -412,6 +459,7 @@ const getCaseStudy = async () => {
   try {
     const res = await axios.get(apiUrl);
     const json = res.data;
+    // json.parent.slug = subService;
 
     console.log("CaseStudy JSON:", json);
 
@@ -433,8 +481,45 @@ const getCaseStudy = async () => {
     setCasestudyData({ parent: {}, listing: [] });
   }
 };
+const getSkillset = async () => {
+  try {
+    setSkillsetLoading(true);
 
+    let apiUrl = `${API_HOST}${API_ENDPOINTS.Skillset}${subService}`;
+    if (serviceDetails) {
+      apiUrl = `${API_HOST}${API_ENDPOINTS.Skillset}${serviceDetails}`;
+    }
 
+    const res = await axios.get(apiUrl);
+    const json = res.data;
+
+    console.log("FULL API:", json); // 👈 DEBUG
+
+    if (!json || json.status !== "success") {
+      setSkillsetData(null);
+      return;
+    }
+
+    const parent = json.parent || {};
+    const item = json.listing?.[0] || {};
+
+    console.log("ITEM DATA:", item); // 👈 IMPORTANT
+
+    setSkillsetData({
+      main_heading: parent.main_heading || "",
+      main_description: parent.main_description || "",
+      technical_skills: item.technical_skills || "",
+      professional_skills: item.professional_skills || "",
+    });
+
+  } catch (err) {
+    console.error(err);
+    setSkillsetData(null);
+  } finally {
+    setSkillsetLoading(false);
+  }
+};
+console.log("Service Section Data:", subService, '---------', serviceDetails, serviceSection) ;
 
    
     const filterServiceJson = () => {
@@ -460,10 +545,470 @@ const getCaseStudy = async () => {
             getCertificationSection();
               getPortfolio();
 			  getCaseStudy();
+        getSkillset()
         }
         //eslint-disable-next-line
     }, [subService, serviceDetails])
 
+    
+useEffect(() => {
+  const timeout = setTimeout(() => {
+    const elements = document.querySelectorAll(".reveal");
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -80px 0px",
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+  }, 300); // 👈 delay important
+
+  return () => clearTimeout(timeout);
+}, [
+  serviceContent,
+  servicedata,
+  certificationData,
+  portfolioItems,
+  casestudyData
+]);
+
+
+const currentService = serviceContent[0];
+const isDynamic = currentService?.useDynamicSections;
+
+
+const sectionsOrder = currentService?.sectionsOrder || [
+"hero",
+"number",
+"Services",
+"TeamSection",
+"ToolsSection",
+"ServiceBulkContentUpper",
+"Testimonial",
+"Steps",
+"pricing",
+"ServiceBulkContent",
+"faq",
+"ContactForm",
+"Blogs",
+"BottomServices",
+"FeaturedInMarquee",
+"ConcludingSec",
+"certifications",
+"industries3DImpact",
+"CasestudyData",
+"portfolioItems",
+"WorkflowSplit",
+"IndustriesSection",
+"BrandAssets",
+"SkillsSection",
+"Icondesign",
+];
+const sectionMap = {
+  hero: (
+    <section className="innerBanner">
+      <div className="innerBannerContent">
+        <h1>{serviceContent[0]?.banner?.[0]?.title}</h1>
+        <p>{serviceContent[0]?.banner?.[0]?.body}</p>
+
+        <div className="text-center mt-3">
+          <button onClick={handleScrollClick} className="colorBtn wideBtn">
+            {serviceContent[0]?.banner?.[0]?.buttonText || "Hire Now"}
+          </button>
+        </div>
+      </div>
+      <div className="bannerOvelay"></div>
+    </section>
+  ),
+
+  number: (
+      <section className="explore">
+                <div className="container">
+                    <div className="row align-items-center mb-3">
+                        <div className="col-md-12 col-12 text-center">
+                            <div className="sectionHeading">
+                                <h2>{serviceContent[0]?.clientsNumberHeading[0]?.title}</h2>
+                                   <h4>{serviceContent[0]?.clientsNumberHeading[0]?.body}</h4>
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="clientNum">
+                                
+                     {serviceContent[0]?.clientsNumber.map((data, index) => {
+
+  const isFlip = !!data.flipcontent;
+
+  const match = data.body?.match(/^([^0-9]*)([\d,.]+)(.*)$/);
+
+  const prefix = match ? match[1] : "";
+  const numberOnly = match
+    ? parseFloat(match[2].replace(/,/g, ""))
+    : 0;
+  const suffix = match ? match[3] : "";
+
+  const hasDecimal = String(numberOnly).includes(".");
+
+  return (
+    <div className={`clientBx ${isFlip ? "flip-card" : ""}`} key={index}>
+
+      {isFlip ? (
+        // ✅ FLIP DESIGN
+        <div className="flip-inner">
+
+          {/* FRONT */}
+          <div className="flip-front">
+            <div className="client-icon">
+              <img src={data.imageUrl} alt={data.title} />
+            </div>
+
+            <p><span>{data.body}</span></p>
+
+            <h3>{data.title}</h3>
+          </div>
+
+          {/* BACK */}
+          <div className="flip-back">
+            <p>{data.flipcontent}</p>
+          </div>
+
+        </div>
+      ) : (
+        // ✅ NORMAL COUNT DESIGN
+        <>
+          <div className="client-icon">
+            <img src={data.imageUrl} alt={data.title} />
+          </div>
+
+          <p>
+            {prefix}
+            <CountUp
+              start={0}
+              end={numberOnly}
+              duration={1}
+              separator=","
+              decimals={hasDecimal ? 1 : 0}
+            />
+            {suffix}
+          </p>
+
+          <h3>{data.title}</h3>
+        </>
+      )}
+
+    </div>
+  );
+})}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+  ),
+
+  Services: (
+    <section className="explore" id="servicesSec">
+                <div className="container">
+                    <div className="row align-items-center mb-3">
+                        <div className="col-md-12 col-12 text-center">
+                            <div className="sectionHeading">
+                                <h2>{serviceContent[0]?.serviceHeading[0]?.title}</h2>
+                                <h4>{serviceContent[0]?.serviceHeading[0]?.body}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row mt-5 borderBox">
+                        {
+                            servicedata?.map((data, index)=>{
+                                return(
+                                    <React.Fragment key={index}>
+                                        <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
+                                            <div className="colorBx">
+                                                <React.Fragment>
+                                                    <div className="servicesIcon sub-ser">
+                                                        <img src={data.banner} alt={data.post_title} className="serviceIco" width="64" height="64"/>
+                                                        <img src={data.hover_image} alt={data.post_title} className="serviceIco serviceHoverIco" width="64" height="64" />
+       
+    </div>
+                                                    <h3>{data.post_title}</h3>
+                                                    <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
+                                                                                                {data.top_menu === "Yes" && (
+   <div className="text-start"><Link to={`/services/${subService}/${data.post_name}` }  className="blueBtn">
+     
+                                          View More <FontAwesomeIcon icon={faArrowRight} />         
+                                             
+  </Link>  </div>
+)}                                         {/* <div className="text-start">
+                                                        <Link to={`/services/${subService}/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                                                    </div> */}
+                                                </React.Fragment>
+                                            </div>
+                                        </div>
+                                    </React.Fragment>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+                {parentCTA && parentCTA !== "NA" && (
+  <div class="text-center mt-5">        <div dangerouslySetInnerHTML={{ __html: parentCTA }} /></div>
+
+
+)}
+            </section>
+  ),
+
+  TeamSection: (
+   <Suspense fallback={<div className="h-[400px] w-full" />}>
+         <section className={`profile ${serviceDetails || subService || ''}`}>
+                <div className="container">
+                    <div className="row align-items-center mb-3">
+                        <div className="col-md-12 col-12">
+                            <div className="sectionHeading text-center">
+                                 <h2>
+        {profileHeading.heading && profileHeading.heading !== "NA"
+            ? profileHeading.heading
+            : "Our Expert Team"}
+    </h2>
+
+    <p>
+        {profileHeading.subheading && profileHeading.subheading !== "NA"
+            ? profileHeading.subheading
+            : "Meet our diverse team of skilled professionals dedicated to delivering excellence across a spectrum of services,ensuring tailored solutions for your business needs."}
+    </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row mt-3">
+                        <div className="col-12">
+                        
+                            <ServiceProfile serviceProfile={serviceProfile} handleScrollClick={handleScrollClick}/>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </Suspense>
+  ),
+
+certifications: ( <section className=" reveal">
+      <CertificateSection certificationData={certificationData} />
+    </section>),
+
+
+CasestudyData: () => {
+  if (!casestudyData?.listing?.length) return null;
+
+  return (
+    <section className="bg_light_1">
+      <div className="sectionHeading text-center">
+        <p>Case Study</p>
+        <h2>We Build With Intent & It Shows In The Results</h2>
+      </div>
+
+      <CaseHeroSlider
+        casestudyData={casestudyData}
+        parentSlug={subService}
+      />
+    </section>
+  );
+},
+
+
+  portfolioItems:  <section className="bg_light_1">
+      <div className="sectionHeading text-center">
+        <h2>Work We’re Proud Of</h2>
+        <p>
+          Showcasing Impactful Designs Created to Help Brands Grow and Stand Out
+        </p>
+      </div>
+
+      <ProjectsPortfolio
+        subService={subService}
+        serviceDetails={serviceDetails}
+      />
+    </section>,
+  ToolsSection: (
+  <Suspense fallback={<div className="h-[400px] w-full" />}>
+            <ToolsSection serviceTools={serviceTools} />
+            </Suspense>
+  ),
+ServiceBulkContentUpper:(   <section className="serviceBulkContent">
+                <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
+            </section>)
+
+,
+Testimonial:(<Suspense fallback={<div className="h-[400px] w-full" />}>
+                <Testimonial serviceTestimonial={serviceTestimonial} />
+            </Suspense>),
+
+serviceSection:(  <Suspense fallback={<div className="h-[400px] w-full" />}>
+                <Steps serviceSection={serviceSection} />
+            </Suspense>),
+
+  BrandAssets: <BrandAssets />,
+  industries3DImpact: <IndustriesSection />,
+  WorkflowSplit: <WorkflowSplit />,
+Serviceconent:(    <Suspense fallback={<div className="h-[400px] w-full" />}>
+                <Steps serviceSection={serviceSection} />
+            </Suspense>),
+  process: (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Steps serviceSection={serviceSection} />
+    </Suspense>
+  ),
+SkillsSection: () => {
+  if (!skillsetData) return null;
+
+  return (
+    <section className="serviceBulkContent no-padding">
+      <VideoEditorSkillsSection skillsetData={skillsetData} />
+    </section>
+  );
+},
+
+  faq:      <Faq faqData={faqData}/>,
+
+  ContactForm: ( <section ref={contactref} id="contactFormSection">
+              <ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
+            </section>),
+            Blogs:<RecentBlog />,
+ pricing:   <Pricing handleScrollClick={handleScrollClick}/>,
+ServiceBulkContent:
+  shouldShowServiceBulkContent ? (
+    <section className="serviceBulkContent fff">
+      <ServiceBulkContent serviceBulkContent={serviceBulkContent} />
+    </section>
+  ) : null,
+  FeaturedInMarquee:
+   <section className="serviceb bg-dark" id=""><div className="container"><FeaturedInMarquee /></div></section>,
+ BottomServices:
+  shouldShowBottomServices ? (
+    <section className="bottomServices bg_light_1">
+      <div className="container">
+        <div className="sectionHeading text-center mb-5">
+          {headingTitle && <h2>{headingTitle}</h2>}
+          {headingBody && <p>{headingBody}</p>}
+        </div>
+
+        <div className="bottomServicesWrp mt-3">
+          {bottomServices.map((data, index) => (
+            <div className="bottomServiceContent" key={index}>
+              {data?.title?.trim() && <h3>{data.title}</h3>}
+              {data?.body?.trim() && <p>{data.body}</p>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  ) : null,
+  Icondesign: shouldShowIconSection ? (
+  (() => {
+    const mid = Math.ceil(iconItems.length / 2);
+    const leftItems = iconItems.slice(0, mid);
+    const rightItems = iconItems.slice(mid);
+
+    const renderCard = (item, index, startIndex = 0) => {
+      const ribbonNum = String(startIndex + index + 1).padStart(2, "0");
+
+      return (
+        <div className="card" key={`${ribbonNum}-${index}`}>
+          <div className="ribbon">{ribbonNum}</div>
+          <div className="content">
+            {item?.imageUrl && (
+              <div className="icon-box">
+                <img src={item.imageUrl} alt={item?.body || ""} />
+              </div>
+            )}
+            {item?.body?.trim() && (
+              <div className="text-box">
+                <h3 dangerouslySetInnerHTML={{ __html: item.body }}></h3>
+              </div>
+            )}
+          </div>
+        </div>
+      );
+      
+    };
+
+    return (
+      <section className="bottomServices bg_light_1 icontextdesign">
+        <div className="container">
+          
+          {iconHeadingArr.map((data, index) => (
+            <div className="sectionHeading text-center mb-4" key={index}>
+              {data?.title?.trim() && <h2>{data.title}</h2>}
+              {data?.body?.trim() && <p>{data.body}</p>}
+            </div>
+          ))}
+
+          <div className="steps-grid">
+            
+            {/* LEFT */}
+            <div className="steps-col reveal reveal-left">
+              {leftItems.map((item, index) => renderCard(item, index, 0))}
+            </div>
+
+            {/* CENTER */}
+            <div className="center-card">
+              {centerImageUrl && <img src={centerImageUrl} alt="Center" />}
+            </div>
+
+            {/* RIGHT */}
+            <div className="steps-col reveal reveal-right">
+              {rightItems.map((item, index) =>
+                renderCard(item, index, leftItems.length)
+              )}
+            </div>
+
+          </div>
+        </div>
+      </section>
+    );
+  })()
+) : null,
+ConcludingSec:(  <section className="bottomCon">
+  <div className="container">
+    <div className="sectionHeading text-center">
+      {shouldShowConcluding ? (
+        <>
+          <h2 className="mb-4">
+            <b>{concludingText || "Hire Now"}</b>
+          </h2>
+
+        <button onClick={handleScrollClick} className="colorBtn wideBtn">
+  {concludingBtnText || "Send Your Requirement"}
+</button>
+        </>
+      ) : (
+        <>
+          <h2 className="mb-4">
+            <b>
+              1600+ Clients in 18 Countries
+            </b>{" "}
+            Have Accelerated Their Business Growth With Citadel Co-Workers. You Could Be Next!
+          </h2>
+
+          <Link to="/contact-us" className="colorBtn wideBtn">
+            Send Your Requirement
+          </Link>
+        </>
+      )}
+    </div>
+  </div>
+</section>),    
+};
     return(
         <React.Fragment>
             <HelmetProvider>
@@ -472,15 +1017,17 @@ const getCaseStudy = async () => {
                     <meta name="description" content={serviceContent[0]?.pageMetaContent} />
                     <link rel="canonical" href={window.location.href} />
                 </Helmet>
+             {!isDynamic && (
+  <> 
             <section className="innerBanner">
                 {/* <img src="/images/service-banner.jpg" alt=""/> */}
                 <div className="innerBannerContent">
                     <h1>{serviceContent[0]?.banner[0]?.title}</h1>
                     <p>{serviceContent[0]?.banner[0]?.body}</p>
                   <div className="text-center mt-3">
-    <Link to="/contact-us" className="colorBtn wideBtn">
-        {serviceContent[0]?.banner[0]?.buttonText || "Hire Now"}
-    </Link>
+   <button onClick={handleScrollClick} className="colorBtn wideBtn">
+  {serviceContent[0]?.banner[0]?.buttonText || "Hire Now"}
+</button>
 </div>
                 </div>
                 <div className="bannerOvelay"></div>
@@ -497,31 +1044,41 @@ const getCaseStudy = async () => {
                         <div className="col-md-12">
                             <div className="clientNum">
                                 
-                                {serviceContent[0]?.clientsNumber.map((data, index)=>{
-                                      const numberOnly = parseInt(data.body.replace(/\D/g, ""));
-                                      const hasPlus = data.body.includes("+");
-    const hasPercent = data.body.includes("%");
-  const hasMillion = data.body.toLowerCase().includes("m"); // 100M, 5M, etc.
-                                    return(
-                                        <div className="clientBx" key={index}>
-                                      <div className="client-icon"> <img src={data.imageUrl} alt={data.title}></img></div>
-        <p>
-          <CountUp
-            start={0}
-            end={numberOnly}
-            duration={1}
-            separator=","
-          />
-            {hasMillion && "M"}
-       {hasPlus && "+"}
-          {hasPercent && "%"}
-            
-        </p>
+                     {serviceContent[0]?.clientsNumber.map((data, index) => {
 
-        <h3>{data.title}</h3>
-                                        </div>
-                                    )
-                                })}
+  // ✅ Extract prefix ($, ₹ etc.), number, suffix (M, K, +, % etc.)
+  const match = data.body?.match(/^([^0-9]*)([\d,.]+)(.*)$/);
+
+  const prefix = match ? match[1] : "";
+  const numberOnly = match
+    ? parseFloat(match[2].replace(/,/g, ""))
+    : 0;
+  const suffix = match ? match[3] : "";
+
+  const hasDecimal = String(numberOnly).includes(".");
+
+  return (
+    <div className="clientBx" key={index}>
+      <div className="client-icon">
+        <img src={data.imageUrl} alt={data.title} />
+      </div>
+
+      <p>
+        {prefix}
+        <CountUp
+          start={0}
+          end={numberOnly}
+          duration={1}
+          separator=","
+          decimals={hasDecimal ? 1 : 0}
+        />
+        {suffix}
+      </p>
+
+      <h3>{data.title}</h3>
+    </div>
+  );
+})}
                             </div>
                         </div>
                     </div>
@@ -610,7 +1167,7 @@ const getCaseStudy = async () => {
             </Suspense>
 
 {certificationData?.certifications?.length > 0 && (
-  <section className="pt-0">
+  <section className="pt-0 reveal">
     <CertificateSection certificationData={certificationData} />
   </section>
 )}            {casestudyData?.listing?.length > 0 && (
@@ -642,6 +1199,7 @@ const getCaseStudy = async () => {
             <Suspense fallback={<div className="h-[400px] w-full" />}>
             <ToolsSection serviceTools={serviceTools} />
             </Suspense>
+         
             <section className="serviceBulkContent">
                 <ServiceBulkContentUpper serviceBulkContentUpper={serviceBulkContentUpper}/>
             </section>
@@ -662,9 +1220,10 @@ const getCaseStudy = async () => {
       
     </div>
  
- {location.pathname === "/services/graphic-web-design/hire-video-editor" && (
-  <section className="serviceBulkContent fff"><VideoEditorSkillsSection></VideoEditorSkillsSection></section>
-
+{skillsetData && (
+  <section className="serviceBulkContent no-padding">
+    <VideoEditorSkillsSection skillsetData={skillsetData} />
+  </section>
 )}
 
 {shouldShowServiceBulkContent && (
@@ -674,9 +1233,9 @@ const getCaseStudy = async () => {
 )}
              
             <Faq faqData={faqData}/>
-            <div ref={contactref}>
-<ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
-            </div>
+            <section ref={contactref} id="contactFormSection">
+              <ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
+            </section>
            
             <RecentBlog />
          {shouldShowBottomServices && (
@@ -720,7 +1279,7 @@ const getCaseStudy = async () => {
           )}
           {item?.body?.trim() && (
             <div className="text-box">
-              <h3>{item.body}</h3>
+           <h3 dangerouslySetInnerHTML={{ __html: item.body }}></h3>
             </div>
           )}
         </div>
@@ -740,7 +1299,7 @@ const getCaseStudy = async () => {
 
         <div className="steps-grid">
           {/* LEFT */}
-          <div className="steps-col left">
+          <div className="steps-col  reveal  reveal-left">
             {leftItems.map((item, index) => renderCard(item, index, 0))}
           </div>
 
@@ -750,7 +1309,7 @@ const getCaseStudy = async () => {
           </div>
 
           {/* RIGHT */}
-          <div className="steps-col right">
+          <div className="steps-col  reveal  reveal-right">
             {rightItems.map((item, index) =>
               renderCard(item, index, leftItems.length)
             )}
@@ -772,9 +1331,9 @@ const getCaseStudy = async () => {
             <b>{concludingText || "Hire Now"}</b>
           </h2>
 
-          <Link to="/contact-us" className="colorBtn wideBtn">
-            {concludingBtnText || "Send Your Requirement"}
-          </Link>
+        <button onClick={handleScrollClick} className="colorBtn wideBtn">
+  {concludingBtnText || "Send Your Requirement"}
+</button>
         </>
       ) : (
         <>
@@ -793,7 +1352,14 @@ const getCaseStudy = async () => {
     </div>
   </div>
 </section>
-
+ </>
+)}
+{isDynamic && (
+  <>
+    {/* NEW SYSTEM */}
+    {sectionsOrder.map((section) => sectionMap[section])}
+  </>
+)}
 
         </HelmetProvider>
     </React.Fragment>

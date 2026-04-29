@@ -102,7 +102,7 @@ const CertificateSection = ({ certificationData }) => {
     border-color: #1749d521; }
         .cert-item.active{ background:#1749d521; border-color:#1749d521; font-weight:600; }
         .cert-preview{ border-radius:14px; overflow:hidden; border: 1px solid #efefef;}
-        .cert-image-wrap{  overflow:hidden; height:300px}
+        .cert-image-wrap{  overflow:hidden;}
         .cert-image-wrap img{ width:100%; display:block;     height: 100%;
     object-fit: contain;}
         @media (max-width:900px){

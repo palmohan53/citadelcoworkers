@@ -1,51 +1,50 @@
 import React from "react";
 
-export default function VideoEditorSkillsSection() {
-  const technical = [
-    "Premiere Pro, After Effects, DaVinci Resolve & CapCut mastery",
-    "Advanced motion graphics, VFX and cinematic grading",
-    "Precise audio sync, sound design and mixing",
-    "Platform optimization for YouTube, TikTok and Instagram",
-    "AI-powered editing workflows",
-    "Multi-format exports with accessibility compliance",
-  ];
+export default function VideoEditorSkillsSection({ skillsetData }) {
 
-  const professional = [
-    "Creative storytelling with trend awareness",
-    "Strict brand consistency and visual precision",
-    "24-hour offshore delivery workflow",
-    "Seamless collaboration with your team",
-    "Data-driven engagement improvements",
-    "Unlimited revisions with full ownership handover",
-  ];
+  if (!skillsetData) return null;
 
   return (
     <section className="ve-section">
-      <div className="ve-container">
+      <div className="container">
+
         {/* LEFT SIDE */}
         <div className="ve-left">
           <h2>
-            Skills that make our
-            <br />
-            <span>video editors stand out</span>
+            {skillsetData?.main_heading ||
+              "Skills That Make Our Experts Stand Out"}
           </h2>
+
           <p>
-            A blend of technical precision and creative storytelling designed
-            to maximize engagement, retention, and brand impact.
+            {skillsetData?.main_description ||
+              "A blend of technical precision and creative storytelling designed to maximize engagement."}
           </p>
         </div>
 
         {/* RIGHT SIDE */}
         <div className="ve-right">
-          <SkillBlock
-            title="Technical Excellence"
-            items={technical}
-          />
-          <SkillBlock
-            title="Performance-Driven Mindset"
-            items={professional}
-          />
+
+          {skillsetData?.technical_skills && (
+            <div
+              className="ve-block"
+              dangerouslySetInnerHTML={{
+                __html: skillsetData.technical_skills || ""
+              }}
+            />
+          )}
+
+          {skillsetData?.professional_skills && (
+            
+            <div
+              className="ve-block"
+              dangerouslySetInnerHTML={{
+                __html: skillsetData.professional_skills || ""
+              }}
+            />
+          )}
+
         </div>
+
       </div>
 
       <style>{`
@@ -53,10 +52,12 @@ export default function VideoEditorSkillsSection() {
   padding: 80px 80px;
   background: radial-gradient(circle at 20% 20%, #1e3a8a, #020617);
   color: white;
-  position: relative;
-  overflow: hidden;
 }
-
+.skill-set-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .ve-container {
   max-width: 1150px;
   margin: auto;
@@ -65,62 +66,6 @@ export default function VideoEditorSkillsSection() {
   gap: 60px;
   align-items: center;
 }
-
-.ve-left h2 {
-    font-size: 32px;
-    color: #05164d;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-
-
-.ve-left p {
- 
-  color: #cbd5f5;
-  max-width: 420px;
-}
-
-.ve-right {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.ve-block {
-  padding: 28px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: 0.35s ease;
-}
-
-.ve-block:hover {
-  transform: translateY(-6px);
-  background: rgba(255,255,255,0.1);
-}
-
-.ve-block h3 {
-  font-size: 20px;
-  margin-bottom: 18px;
-  font-weight: 700;
-}
-
-.ve-list {
-  display: grid;
-  gap: 12px;
-}
-
-.ve-item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  font-size: 15px;
-  color: #e2e8f0;
-}
-
 .ve-check {
   width: 22px;
   height: 22px;
@@ -132,36 +77,50 @@ export default function VideoEditorSkillsSection() {
   font-size: 12px;
   font-weight: bold;
   flex-shrink: 0;
+    margin-bottom: 0px !important;
+
+}
+.ve-left h2 {
+  font-size: 32px;
+  font-weight: 600;
+      text-align: center;
+  margin-bottom: 20px;
 }
 
-/* responsive */
-@media (max-width: 900px) {
-  .ve-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .ve-left h2 {
-    font-size: 36px;
-  }
+.ve-left p {
+  color: #cbd5f5;
+    text-align: center;
+    margin-bottom: 50px;
 }
+
+.ve-right {
+  display: flex;
+
+  gap: 30px;
+}
+
+.ve-block {
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.ve-block h3 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+/* ✅ IMPORTANT FIX */
+.ve-block * {
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}
+
       `}</style>
-    </section>
-  );
-}
 
-function SkillBlock({ title, items }) {
-  return (
-    <div className="ve-block">
-      <h3>{title}</h3>
-      <div className="ve-list">
-        {items.map((item, i) => (
-          <div className="ve-item" key={i}>
-            <div className="ve-check">✓</div>
-            <div>{item}</div>
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }

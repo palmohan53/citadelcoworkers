@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState, useCallback } from "react";
 import axios from "axios";
 import Slider from "react-slick";
 
-// Slick CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -18,12 +17,11 @@ export default function ProjectsPortfolio({
   const [err, setErr] = useState("");
   const [data, setData] = useState(null);
 
-  // Tabs
   const [activeCat, setActiveCat] = useState("all");
 
-  // Lightbox state
+  // 🔥 LIGHTBOX
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxImg, setLightboxImg] = useState("");
+  const [lightboxMedia, setLightboxMedia] = useState("");
   const [lightboxAlt, setLightboxAlt] = useState("");
 
   // ----------------------------
@@ -49,13 +47,22 @@ export default function ProjectsPortfolio({
     );
   };
 
+  const getCardVideo = (item) => {
+    const a = item?.acf || {};
+    return (
+      getFileUrl(a.video_url) ||
+      getFileUrl(a.file_name) ||
+      ""
+    );
+  };
+
   const getCardDesc = (item) => {
     const a = item?.acf || {};
     return a.descption || a.description || item?.post_excerpt || "";
   };
 
   // ----------------------------
-  // Build API URL
+  // API
   // ----------------------------
   const apiUrl = useMemo(() => {
     let url = `${API_HOST}${API_ENDPOINTS.Portfolio}${subService}`;
@@ -64,9 +71,6 @@ export default function ProjectsPortfolio({
     return url;
   }, [subService, serviceDetails]);
 
-  // ----------------------------
-  // Fetch Portfolio
-  // ----------------------------
   const getPortfolio = useCallback(async () => {
     try {
       setLoading(true);
@@ -83,7 +87,6 @@ export default function ProjectsPortfolio({
 
       setData(json);
     } catch (e) {
-      console.error("API Error:", e);
       setErr("Network error");
       setData(null);
     } finally {
@@ -95,16 +98,10 @@ export default function ProjectsPortfolio({
     if (apiUrl) getPortfolio();
   }, [apiUrl, getPortfolio]);
 
-  // ----------------------------
-  // Categories
-  // ----------------------------
   const categories = useMemo(() => {
     return data?.categories || [];
   }, [data]);
 
-  // ----------------------------
-  // Filtered Items
-  // ----------------------------
   const filteredItems = useMemo(() => {
     const cats = data?.categories || [];
     const merged = [];
@@ -115,178 +112,127 @@ export default function ProjectsPortfolio({
           merged.push({
             ...it,
             _img: getCardImage(it, cat),
+            _video: getCardVideo(it),
             _desc: getCardDesc(it),
           });
         });
       }
     });
 
-    const seen = new Set();
-    return merged.filter((x) => {
-      const key = String(x?.ID ?? "");
-      if (!key || seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    });
+    return merged;
   }, [data, activeCat]);
 
   // ----------------------------
-  // Lightbox handlers
+  // LIGHTBOX
   // ----------------------------
-  const openLightbox = (img, alt = "") => {
-    if (!img) return;
-    setLightboxImg(img);
+  const openLightbox = (media, alt = "") => {
+    if (!media) return;
+    setLightboxMedia(media);
     setLightboxAlt(alt);
     setLightboxOpen(true);
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    setLightboxImg("");
+    setLightboxMedia("");
     setLightboxAlt("");
   };
 
   // ----------------------------
-  // Hide if needed
+  // UI STATES
   // ----------------------------
-  if (loading) return null;
-  if (err || !filteredItems.length) return null;
+  if (loading) {
+    return <div style={{ textAlign: "center" }}>Loading...</div>;
+  }
 
-  // ----------------------------
-  // Slider settings
-  // ----------------------------
+  if (err) {
+    return <div style={{ textAlign: "center" }}>Error: {err}</div>;
+  }
+
   const sliderSettings = {
     dots: true,
     arrows: false,
-    speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
     autoplay: true,
-    autoplaySpeed: 2500,
-    pauseOnHover: true,
-    cssEase: "ease-in-out",
+      infinite: false, 
+        slidesToScroll: 1,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
     ],
   };
 
   return (
     <div className="pp-wrap">
       <div className="container">
-        {heading && (
-          <div className="pp-head">
-            <h2>{heading}</h2>
-          </div>
-        )}
 
-        {/* Tabs */}
-        {categories.length > 1 && (
-          <div className="pp-tabs">
-            <button
-              className={activeCat === "all" ? "active" : ""}
-              onClick={() => setActiveCat("all")}
-            >
-              All
-            </button>
+        {heading && <h2>{heading}</h2>}
 
-            {categories.map((cat) => (
-              <button
-                key={cat.slug}
-                className={activeCat === cat.slug ? "active" : ""}
-                onClick={() => setActiveCat(cat.slug)}
-              >
-                {cat.name}
-              </button>
-            ))}
-          </div>
-        )}
-
-        {/* Slider */}
-        <div className="pp-slider">
+        <div className="pp-slider port">
           <Slider {...sliderSettings}>
             {filteredItems.map((item) => (
               <div key={item.ID} className="pp-slide">
                 <article className="pp-card">
+
                   <div className="pp-img">
                     {item._img ? (
                       <img
                         src={item._img}
-                        alt={item?.post_title || "Project"}
-                        loading="lazy"
                         onClick={() =>
-                          openLightbox(
-                            item._img,
-                            item?.post_title || "Project"
-                          )
+                          openLightbox(item._img, item?.acf?.heading)
                         }
-                        style={{ cursor: "zoom-in" }}
+                        style={{ cursor: "pointer" }}
                       />
-                    ) : (
-                      <div className="pp-img-placeholder" />
-                    )}
+                    ) : item._video ? (
+                      <video
+                        src={item._video}
+                        autoPlay
+                        muted
+                        loop
+                        onClick={() =>
+                          openLightbox(item._video, item?.acf?.heading)
+                        }
+                        style={{ cursor: "pointer", width: "100%" }}
+                      />
+                    ) : null}
                   </div>
 
                   <div className="pp-body">
-                    <h3>{item?.post_title}</h3>
-                    {item._desc && (
-                      <p className="pp-desc">{item._desc}</p>
-                    )}
+                    <h3>{item?.acf?.heading}</h3>
+                    <p>{item._desc}</p>
                   </div>
+
                 </article>
               </div>
             ))}
           </Slider>
         </div>
+
       </div>
 
-      {/* Lightbox */}
+      {/* 🔥 LIGHTBOX */}
       {lightboxOpen && (
         <div className="pp-lightbox" onClick={closeLightbox}>
-          <div
-            className="pp-lightbox-inner"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="pp-lightbox-close" onClick={closeLightbox}>
-              ×
-            </button>
-            <img src={lightboxImg} alt={lightboxAlt} />
+          <div onClick={(e) => e.stopPropagation()}>
+
+            {lightboxMedia.includes(".mp4") ? (
+              <video
+                src={lightboxMedia}
+                controls
+                autoPlay
+                style={{ maxWidth: "90vw", maxHeight: "80vh" }}
+              />
+            ) : (
+              <img
+                src={lightboxMedia}
+                alt={lightboxAlt}
+                style={{ maxWidth: "90vw", maxHeight: "80vh" }}
+              />
+            )}
+
           </div>
         </div>
       )}
-
-      {/* Styles */}
-      <style>{`
-.pp-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-
-.pp-tabs button {
-  padding: 8px 18px;
-  border-radius: 999px;
-  border: 1.5px solid #2563eb;
-  background: #fff;
-  color: #2563eb;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.pp-tabs button.active,
-.pp-tabs button:hover {
-  background: #2563eb;
-  color: #fff;
-}
-
-.pp-slider {
-  position: relative;
-  padding-bottom: 60px;
-}
-`}</style>
     </div>
   );
 }

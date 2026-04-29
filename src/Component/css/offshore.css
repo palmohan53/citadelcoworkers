@@ -1,0 +1,355 @@
+
+.offshore-page .hero {
+  position: relative;
+  height: 100vh;
+  background: url('https://virtualassistant24x7.com/wp-content/uploads/2026/04/offshore.webp')
+    center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.offshore-page .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(8, 20, 40, 0.95) 0%, rgba(8, 20, 40, 0.85) 40%, rgba(8, 20, 40, 0.6) 100%);
+}
+
+.offshore-page .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgb(29 143 122 / 26%);
+    border: 1px solid rgb(29 143 122 / 26%);
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    width: fit-content;
+}
+
+
+
+
+.offshore-page  .desc {
+ 
+  color: #d1d5db;
+    margin-bottom: 38px;
+
+}
+
+.offshore-page .sub-desc {
+  font-size: 14px;
+  color: #9ca3af;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.offshore-page  .buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.offshore-page  .btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+.offshore-page .primary:hover {
+    color: #4f6df5;
+    background: #fff !important;
+}
+.offshore-page .primary {
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(90deg, #4f6df5, #3b82f6);
+    color: white;
+    box-shadow: 0 10px 25px rgba(79, 109, 245, 0.25);
+    font-size: 15px;
+    transition: all .25s ease;
+}
+
+.offshore-page .primary:hover {
+  background: #e0a800;
+}
+
+.offshore-page .secondary {
+  border: 1px solid #ccc;
+  color: #fff;
+}
+
+.offshore-page .secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.offshore-page .stats {
+  display: flex;
+  gap: 50px;
+}
+
+.offshore-page .stats h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.offshore-page .stats p {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.offshore-page .hero h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.offshore-page .banner-content {
+    position: relative;
+    width: 70%;
+        text-align: left;
+}
+
+.offshore-page .citadelSection {
+    padding: 80px 20px;
+    background: #f5f7fb;
+}
+.offshore-page .grid {
+    display: grid;
+    margin-top: 36px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.offshore-page .left {
+    flex: 1;
+}
+.offshore-page section.citadelSection .row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.offshore-page section.citadelSection .desc {
+    color: #000;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.offshore-page section.citadelSection .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.offshore-page  .imageCard {
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.offshore-page section.citadelSection .card:hover {
+    background: rgb(29 143 122 / 26%);
+}
+.offshore-page section.citadelSection .card {
+  position: relative;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.offshore-page section.citadelSection .icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    background: #1749d5;
+    margin-bottom: 13px;
+}
+.offshore-page section.citadelSection .card p {
+      font-size: 16px;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+section.full-control {
+    background: radial-gradient(circle at 20% 20%, #1e3a8a, #020617);
+    color: #fff;
+    padding-bottom: 100px;
+}
+section.full-control  h2.page-title-sub {
+    color: #fff;
+}
+section.full-control .flex-div {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top:40px;
+}
+section.full-control .left-content {
+    width: 50%;
+    position: relative;
+}
+section.full-control .right-side-content {
+    width: 50%;
+}
+section.full-control .right-side-content .card p
+  {
+margin-bottom: 0px ;
+  }
+  section.full-control .right-side-content .card svg {
+    color: #0a163a;
+}
+section.full-control .right-side-content .card {
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+h2.page-title-sub{
+  margin-bottom: 20px !important;
+}
+section.full-control .right-side-content .card .icon {
+    background: #c5e2dd;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+section.full-control .img-bottom-content {
+    border: 7px solid #c5e2dd;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.bootom-card-100 {
+    width: max-content;
+    background: #0e1c46;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 21px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    border: 7px solid #c5e2dd;
+    right: 20px                                                       ;
+    bottom: -42px;
+}
+section.full-control h2.page-title-sub
+{
+  margin-bottom: 20px;
+}
+
+
+.offshore-page .flow-item {
+    background: #c5e2dd;
+    border-radius: 10px;
+    box-shadow: 0 30px 60px #0000000d;
+    margin-bottom: 13px;
+    padding: 30px;
+    position: relative;
+    transition: .4s ease;
+}
+.offshore-page .flow-item h4 {
+    margin-bottom: 0px;
+}
+.offshore-page .email-2026-flow {
+    margin-top: 40px;
+    display: grid;
+    margin-top: 36px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+ .flow-number {
+    background: #2563eb;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    left: 40px;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    position: absolute;
+    top: -20px;
+}
+.offshore-page .Last-sec {
+    align-items: center;
+    background: radial-gradient(circle at 20% 20%, #1e3a8a, #020617);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+
+.offshore-page .Last-sec:after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.offshore-page .Last-sec:after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.offshore-page .Last-sec:before {
+    background: url(https://virtualassistant24x7.com/wp-content/uploads/2026/04/offshore-2.webp) 50% / cover no-repeat;
+    content: "";
+    inset: 0;
+    opacity: .1;
+    position: absolute;
+    z-index: 1;
+}
+
+.offshore-page .Last-content {
+    color: #fff;
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.offshore-page .Last-sec h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.offshore-page .primary {
+    background: #00cc83;
+    color: #fff;
+}
+.offshore-page .btn {
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 12px 20px;
+    text-decoration: none;
+}

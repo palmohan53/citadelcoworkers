@@ -1,0 +1,146 @@
+.workflow-split {
+  padding: 60px 60px;
+  background: #f9fbfc;
+  font-family: sans-serif;
+}
+.workflow-split span.icon {
+    width: 80px;
+    height: 80px
+}
+
+.workflow-split span.icon img {
+    width: 100% !important;
+}
+.workflow-split .title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.workflow-split .wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+/* LEFT SIDE (ACCORDION) */
+.workflow-split .left {
+  flex: 1;
+}
+
+.workflow-split .accordion {
+  background: #f1f5f9;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  padding: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.workflow-split .accordion:hover {
+  transform: translateY(-2px);
+}
+
+.workflow-split .accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.workflow-split .accordion h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.workflow-split .icon {
+  font-size: 20px;
+}
+
+/* BODY */
+.workflow-split .accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.workflow-split .accordion.active {
+  background: #e6f7f3;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.workflow-split .accordion.active .accordion-body {
+  max-height: 200px;
+  margin-top: 10px;
+  opacity: 1;
+}
+
+.workflow-split .accordion p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* RIGHT SIDE */
+.workflow-split .right {
+  flex: 1;
+  position: relative;
+}
+
+.workflow-split.workflow-graphic {
+  position: relative;
+  height: 320px;
+}
+
+/* CURVE */
+.workflow-split .path {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+}
+
+/* BUBBLES */
+.workflow-split .bubble {
+  width: 65px;
+  height: 65px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(135deg, #34d399, #22d3ee, #3b82f6);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: 0.3s;
+}
+
+/* ACTIVE BUBBLE */
+.workflow-split .bubble.active {
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* POSITIONS */
+.workflow-split .b1 { left: 0%; top: 150px; }
+.workflow-split .b2 { left: 18%; top: 50px; }
+.workflow-split .b3 { left: 36%; top: 150px; }
+.workflow-split .b4 { left: 54%; top: 50px; }
+.workflow-split .b5 { left: 72%; top: 150px; }
+.workflow-split .b6 { left: 90%; top: 80px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .workflow-split .wrapper {
+    flex-direction: column;
+  }
+
+  .workflow-split .workflow-graphic {
+    height: 250px;
+  }
+}

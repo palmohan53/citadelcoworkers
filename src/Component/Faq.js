@@ -35,9 +35,9 @@ const Faq = ({faqData}) => {
                         {faqData?.map((data, index)=>{
                         return(
                             <div className="accordion" key={index}>
-                                <AccordionItem header={data.title}>
-                                    {data.body}
-                                </AccordionItem>
+                          <AccordionItem header={data.title}>
+  <div dangerouslySetInnerHTML={{ __html: data.body }} />
+</AccordionItem>
                             </div>
                         )
                     })}

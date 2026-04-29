@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 
 import Footer from './Component/Footer';
@@ -9,10 +9,6 @@ import Home from './Pages/Home';
 import Services from './Pages/Services';
 import BlogDetails from './Pages/BlogDetails';
 import Blog from './Pages/Blog';
-import FloatingContact from "./Component/FloatingContact";
-import './Framework.css';
-import './App.css';
-import './Media.css';
 import SubServices from './Pages/SubServices';
 import RefundPolicy from './Pages/RefundPolicy';
 import PrivacyPolicy from './Pages/PrivacyPolicy';
@@ -26,43 +22,101 @@ import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
 import NotFound from './Pages/NotFound';
 import ThankYou from "./Component/ThankYou";
 import CaseStudySingle from './Component/CaseStudySingle';
+import Newabout from './Pages/NewAboutus';
+import OurMission from './Pages/OurMission';
 
-const COOKIE_KEY = "cookieConsent";
+import FinanceAccounting from './Pages/FinanceAccounting'
+import CookieBanner from './Component/CookieBanner';
+import './Framework.css';
+import './App.css';
+import './Media.css';
 
 function App() {
+  const location = useLocation();
+useEffect(() => {
+  // 🔹 Step 1: Purana Tidio data clean (optional but ok)
+  Object.keys(localStorage).forEach((key) => {
+    if (key.startsWith("tidio")) {
+      localStorage.removeItem(key);
+    }
+  });
 
-  const [cookieConsent, setCookieConsent] = useState(null);
+  document.cookie.split(";").forEach((c) => {
+    if (c.includes("tidio")) {
+      document.cookie =
+        c.trim().split("=")[0] +
+        "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+    }
+  });
 
+  // 🔹 Step 2: Country check FIRST
+  fetch("https://ipapi.co/json/")
+    .then((res) => res.json())
+    .then((data) => {
+      // 👉 Sirf NON-India ke liye load karo
+      if (data?.country_code !== "IN") {
+        const script = document.createElement("script");
+        script.src = "https://code.tidio.co/c3t8trmg8jhatth3b5w8akf4gj4sxtad.js";
+        script.async = true;
+        document.body.appendChild(script);
+      } else {
+        console.log("Tidio blocked for India 🚫");
+      }
+    })
+    .catch(() => {
+      // 🔹 Fallback: safe side → India assume karo → load mat karo
+      console.log("Geo fetch failed → blocking Tidio");
+    });
+}, []);
+  // ✅ GTM Load
   useEffect(() => {
-    const savedConsent = localStorage.getItem(COOKIE_KEY);
-    if (savedConsent) {
-      setCookieConsent(savedConsent);
+    if (!window.gtmLoaded) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "gtm.js" });
+
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-PPG89VBT";
+      document.head.appendChild(script);
+
+      window.gtmLoaded = true;
+      console.log("GTM Loaded ✅");
     }
   }, []);
 
-  // 🔥 Load Google Analytics only after Accept
-  useEffect(() => {
-    if (cookieConsent === "accepted") {
-      const script = document.createElement("script");
-      script.src = "https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID";
-      script.async = true;
-      document.body.appendChild(script);
+  // ✅ Dynamic class based on route
+  const getPageClass = () => {
+    const path = location.pathname;
 
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){window.dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "YOUR_GA_ID");
+    // services pages
+    if (path.startsWith("/services")) {
+      const parts = path.split("/");
+      return parts[parts.length - 1]; // last slug (seo / video-editing)
     }
-  }, [cookieConsent]);
 
-  const handleAccept = () => {
-    localStorage.setItem(COOKIE_KEY, "accepted");
-    setCookieConsent("accepted");
+    // other pages
+    if (path === "/") return "home-page";
+    if (path.includes("about")) return "about-page";
+    if (path.includes("contact")) return "contact-page";
+    if (path.includes("blog")) return "blog-page";
+
+    return "";
   };
 
   return (
-    <div className="App">
+    <div className={`App ${getPageClass()}`}>
 
+      {/* ✅ GTM Noscript */}
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-PPG89VBT"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+          title="gtm"
+        ></iframe>
+      </noscript>
+ <CookieBanner />
       <Header />
 
       <Routes>
@@ -79,7 +133,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
         <Route path="/citadel-coworkers-user-agreement" element={<UserAgreement />} />
-        <Route path="/offshore" element={<Offshore />} />
+        <Route path="/your-offshore-office-in-india" element={<Offshore />} />
         <Route path="/faq" element={<FaqPage />} />
         <Route path="/about-citadel-advantage" element={<AboutCitadelAdvantage />} />
         <Route path="/data-security" element={<DataSecurity />} />
@@ -87,41 +141,16 @@ function App() {
         <Route path="/not-found" element={<NotFound />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/case-studies/:parent/:slug" element={<CaseStudySingle />} />
+        <Route path="/case-study/:slug" element={<CaseStudySingle />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/about-new" element={<Newabout />} />
+          <Route path="/services/finance-accounting" element={<FinanceAccounting />} />
+        <Route path="/our-mission" element={<OurMission />} />
+        <Route path="/virtual-assistant" element={<Navigate to="/services/virtual-assistant" replace />} />
+		 <Route path="/offshore" element={<Navigate to="/your-offshore-office-in-india" replace />} />
       </Routes>
 
       <Footer />
-
-      {/* 🔥 Cookie Banner */}
-      {!cookieConsent && (
-        <div style={{
-          position: "fixed",
-          bottom: 0,
-          width: "100%",
-          background: "#111827",
-          color: "#fff",
-          padding: "15px",
-          textAlign: "center",
-          zIndex: 9999
-        }}>
-      This website uses cookies to ensure proper functionality, analyze performance, and deliver relevant content. By clicking "Accept", you consent to the use of cookies in accordance with our Privacy Policy and Cookie Policy.
-          <button
-            onClick={handleAccept}
-            style={{
-              marginLeft: "15px",
-              padding: "8px 15px",
-              background: "#2563eb",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              cursor: "pointer"
-            }}
-          >
-            Accept
-          </button>
-        </div>
-      )}
-
     </div>
   );
 }

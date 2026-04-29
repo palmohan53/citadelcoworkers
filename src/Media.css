@@ -16,6 +16,14 @@
     display: block;
     
 }
+.ve-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.ve-container {
+    display: block !important;
+    width: 100% !important;
+}
 .sideBorder:nth-last-child(1), .sideBorder:nth-last-child(2), .sideBorder:nth-last-child(3)
 {border-bottom: solid 1px #ccc;}
 .sideBorder {
@@ -318,9 +326,18 @@ section.process.pb-100
   .timeline::after {
       display: none;
   }
+.top-content-case {
+   
+grid-template-columns: 1fr !important;
+gap:30px;
 
-  .sectionHeading h2, .blogDetailsBx h2 {
-      font-size: 20px;
+}
+.timeline-row
+{
+  display: block !important;
+}
+  .sectionHeading h2, .blogDetailsBx h2,.pricing-price,.ve-left h2 {
+      font-size: 25px !important;
   }
   .colorBx h3{
     font-size: 16px;
@@ -394,6 +411,50 @@ section.process.pb-100
 }
 @media screen and (max-width: 767px) {
 .bannerProfile {
+    width: 100% !important;
+}
+.final-cta-boxed .cta-content
+{
+  padding: 15px;
+}
+a.cc-btn {
+    text-align: center;
+}
+.Advantage-card.reveal-bottom {
+    flex-direction: column;
+}
+.flow-item {
+    margin-bottom: 30px !important;
+}
+section.seo-timeline-sec {
+    padding: 0 20px;
+}
+.case-single section.innerBanner, .bannerfullheight section.innerBanner
+{height: auto !important;}
+   .case-study-page .container {
+        margin: 0px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0;
+    }
+.video-premium-section,.stack-2026-sec
+{
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+section.cc-impact-sec {
+    padding: 60px 20px;
+}
+button.colorBtn.wideBtn,.wideBtn {
+    WHITE-SPACE: break-spaces ! IMPORTANT;
+    FONT-SIZE: 15PX;
+}
+section.ve-section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+.ve-container {
+    display: block;
     width: 100% !important;
 }
 .bulkContent.mt-5 table {
@@ -498,6 +559,8 @@ button.close-btn
 width: 100% ! IMPORTANT;
     text-align: center !important;
     display: block !important;
+    font-size: 15px;
+        white-space: break-spaces !important;
 }
   
   .innerBannerContent p {

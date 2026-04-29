@@ -82,7 +82,9 @@ export default function CaseHeroSlider({ casestudyData }) {
         ],
 
         btnText: "View Full Case Study",
-        link: `/case-studies/${casestudyData?.parent?.slug}/${item?.slug}`,
+link: item?.single_page_url 
+  ? item.single_page_url 
+  : `/case-study/${item?.slug}`,
       };
     });
   }, [listing, casestudyData]);

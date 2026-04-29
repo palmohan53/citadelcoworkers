@@ -28,21 +28,25 @@
                         "imageUrl": "/images/creative-thinking (2).png",
                         "title": "Skilled Virtual Employee",
                         "body": "22+"
+						
                     },
                     {
                         "imageUrl": "/images/rating (3).png",
                         "title": "Happy Clients",
                         "body": "60+"
+					
                     },
                     {
                         "imageUrl": "/images/time-to-market (2).png",
                         "title": "Market Verticals",
                         "body": "12+"
+						
                     },
                     {
                         "imageUrl": "/images/countries.png",
                         "title": "Countries Served",
                         "body": "10+"
+						
                     }
                 ],
             "faq":[
@@ -4785,7 +4789,7 @@
                 ],
             "clientsNumberHeading":[
                     {
-                        "title":"Influencer Marketing Talent That Drives Authentic Brand Growth ",
+                        "title":"Numbers Behind CCW’s Influencer Marketing Edge",
                         "body": ""
                     }
                 ],
@@ -4876,18 +4880,18 @@
             ],
              "icontextdesignheading": [
     {
-      "title": "Influencer Marketing Strategies Built For Platform & Creator Evolution ",
-      "body": "We prioritize authentic relationship building with influencers to build trust with the audiences and review performance data over trends alone for lasting results. ",
+      "title": "Why Leading Brands Trust Citadel Coworkers’ Offshore Influencer Marketing In India",
+      "body": "The market is driven by trust and authentic influencer partnerships.  With Citadel Coworkers, you gain access to top influencer talent in India who deliver professional and brand-aligned content that helps your brand scale without markups. ",
       "centerImageUrl": "/images/INFU.webp"
     }
   ],
   "icontextdesign": [
-    { "imageUrl": "/images/clock.png", "body": "Early detection of platform policy changes " },
-    { "imageUrl": "/images/talent.png", "body": "Multi-tier influencer mix (nano to macro)" },
-    { "imageUrl": "/images/expenses.png", "body": "Authentic content over scripted posts " },
-    { "imageUrl": "/images/New-feature.webp", "body": "Cross-platform synergy" },
-    { "imageUrl": "/images/cross.webp", "body": "ROI tracking beyond vanity metrics " },
-    { "imageUrl": "/images/icon5.png", "body": "Long-term ambassador programs" }
+    { "imageUrl": "", "body": "Access to India’s top influencer talent" },
+    { "imageUrl": "", "body": "Cost-efficient campaign scaling without markups )" },
+    { "imageUrl": "", "body": "24/7 workflow advantage " },
+    { "imageUrl": "", "body": "Deep creator economy talent pool " },
+    { "imageUrl": "", "body": "Pre-vetted influencer reliability " },
+    { "imageUrl": "", "body": "Niche-focused campaign expertise" }
   ],
 		  "Contacttext":[
             {
@@ -4943,7 +4947,7 @@
                     {
                         "imageUrl": "/images/Experience.png",
                         "title": "Email Tools Certified ",
-                        "body": "350+"
+                        "body": "10+"
                     },
                     {
                         "imageUrl": "/images/high.png",
@@ -4967,7 +4971,7 @@
                     },
                     {
                         "title": "04. Is it possible for the specialist to work with our own team?",
-                        "body": "Yes, our specialized offshore email marketing experts will work with you every day. As an extra member of your team, they use the tools you like best to keep in touch in real time, get fast feedback, plan together, get approvals and stay on the same page. "
+                        "body": "Yes, <a href=\"/\">our specialized offshore email marketing experts</a> will work with you every day. As an extra member of your team, they use the tools you like best to keep in touch in real time, get fast feedback, plan together, get approvals and stay on the same page. "
                     },
                     {
                         "title": "05. Do we need to hire different people for copy, design, automation or analytics?",
@@ -5013,12 +5017,12 @@
     {
       "title": "Why Leading Brands Trust Citadel Coworkers’ Email Marketers",
       "body": "We deliver reliable, revenue-focused email marketing that scales engagement and results without overhead costs. ",
-      "centerImageUrl": "/images/EMAIL (1).webp"
+      "centerImageUrl": "/images/email (2).webp"
     }
   ],
   "icontextdesign": [
     { "imageUrl": "/images/clock.png", "body": "Faster Campaigns Through Time Zone Advantage " },
-    { "imageUrl": "/images/talent.png", "body": "Access India’s Proven Digital Marketing Talent Pool" },
+    { "imageUrl": "/images/talent.png", "body": "<a href=\"/\">Access India’s Proven Digital Marketing Talent Pool</a>" },
     { "imageUrl": "/images/expenses.png", "body": "Zero Overhead or Recruitment Costs" },
     { "imageUrl": "/images/New-feature.webp", "body": "Pre-vetted Certified Email Marketing Specialists" },
     { "imageUrl": "/images/cross.webp", "body": "Niche expertise for E-commerce, SaaS, Small Business and More" },
@@ -5031,11 +5035,749 @@
         ],
 		 "Concludingtext":[
             {
-               "text": "Hire your own email marketing specialist and join the growing brands that get 30–50% open rates and make more money from email.",
-			   "buttontext":"Hire an Email Marketing Expert Now"
+               "text": "Hire Your Own Email Marketing Specialist and Achieve  20% Revenue Growth & Boost Clicks By 30%",
+			   "buttontext":"Hire Email Marketing Expert Now"
+            }
+        ]
+		
+        },
+		{
+            "categoryUrl": "hire-content-marketing-experts",
+            "categoryName": "Content Marketing",
+            "pageMetaTitle": "Content Marketing Services in India",
+            "pageMetaContent": "Hire certified Content Marketing experts in India starting at $8/hour. Drive 5X ROI with authentic creators, real engagement & performance-driven campaigns.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Dedicated Content Marketing Experts ",
+                        "body": "Scale your brand visibility, authority and leads with offshore content marketing specialists - starts at $8/hour",
+                        "buttonText": "Hire Your Dedicated Content Marketer "
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "360° Comprehensive Content Marketing Services ",
+                        "body": "Content marketing that is done well can help you reach your desired audience by giving them meaningful and consistent information. Over time, they create trust and authority that turns readers into consumers. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Strategic Advantage of Hiring Content Talent With CCW",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Content Strategy Experts",
+                        "body": "12+"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "Monthly Organic Visitors Driven ",
+                        "body": "10M+"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                        "title": "Content Pieces Published ",
+                        "body": "500K+"
+                    },
+                    {
+                        "imageUrl": "/images/high.png",
+                    "title": "Client Retention  Rate",   
+                        "body": "92%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How do your experts make sure that the content matches the brand voice?",
+                        "body": "During the onboarding process, we carefully read your brand rules, tone examples and style preferences. Our team lead checks every content piece against your standards and the best practices in the field, before its sent to you. We make sure that all the content maintains the same voice so that the quality seems real and connected. "
+                    },
+                    {
+                        "title": "02.  How do your content marketers collaborate with SEO, paid ads and sales teams?",
+                        "body": "Our experts work closely with SEO, paid ads and the sales team so that every content piece supports a larger strategy. With the SEO team, they align on keywords, search intent and ranking opportunities. With paid ads team, they craft conversion-focused landing pages copies and ad messaging that aligns with the campaign goals. And with the help of sales team we develop case studies and email sequences."
+                    },
+                    {
+                        "title": "03. Can the content marketer work directly with our team?",
+                        "body": "Yes, when you hire a content marketing expert who integrates seamlessly into any of your preferred tools. They collaborate in real time with marketing, design, SEO and sales teams. This ensures that all the goals, progress and ensure smooth execution. "
+
+                    },
+                    {
+                        "title": "04. How does the feedback and revision process work? ",
+                        "body": "We make sure to stick to the planned review processes and set clear timelines for everyone to see. You can give feedback by leaving comments on papers, calling or sending messages. Your content marketer will make changes quickly and continue making them until you are fully happy with the content. There is no extra cost for all the adjustments. "
+                    },
+                    {
+                        "title": "05. How soon can the experts start after the decision is made to hire? ",
+                        "body": "After you have shared your essential requirements and the agreement is done, we match you with the ideal content marketers and complete the onboarding within 2 days. They get immediate access to your tools, guidelines and assets which helps you start delivering high-quality content right away through <a href=\"/\">our efficient remote hiring and onboarding process.</a>  "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Content Strategies Built To Attract And Convert Every Visitor ",
+      "body": "Our content marketing approach is designed for compounding growth. We focus on your audience’s needs, search intent and ensure consistent execution to improve performance with every content piece. ",
+      "centerImageUrl": "/images/Content-web.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Find themes that have a lot of intent and are good for business. " },
+    { "imageUrl": "", "body": "Make topic clusters that are closely related to your business. " },
+    { "imageUrl": "", "body": "Make information that is useful and easy to read that fosters trust." },
+    { "imageUrl": "", "body": "Use top performers in different channels" },
+    { "imageUrl": "", "body": "Keep an eye on performance and update assets that aren't doing well." },
+    { "imageUrl": "", "body": "Improve the voice search and featured snippets" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Your Dedicated Content Marketer"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Experts Who Build Content Systems That Generate Consistent 5X Organic Growth",
+			   "buttontext":"Hire Your Dedicated Content Marketer Today"
+            }
+        ]
+		
+        },
+		{
+            "categoryUrl": "hire-video-marketing-expert",
+            "categoryName": "Video Marketing",
+            "pageMetaTitle": "Video Marketing Services in India",
+            "pageMetaContent": "Hire certified Video Marketing experts in India starting at $7/hour.",
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire a Dedicated Video Marketing Expert ",
+                        "body": "Get high-impact marketing videos optimized for search and social algorithms designed to turn views into measurable results - starts at $7/hour",
+                        "buttonText": "Get Your Video Marketing Expert"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "360° Video Marketing Services for Measurable Growth ",
+                        "body": "Professional video marketing services help you create high-retention videos that build trust, drive traffic and deliver measurable conversions by blending creative storytelling with data-driven distribution across platforms. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers That Define CCW’s Video Marketing Expertise",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": " Video Marketing Specialists ",
+                        "body": "12+"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "ROI Across Campaigns ",
+                        "body": "6X"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                        "title": "Projects Delivered ",
+                        "body": "200+"
+                    },
+                    {
+                        "imageUrl": "/images/high.png",
+                    "title": "Higher Watch Time & CTR",   
+                        "body": "40%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How do you ensure your videos rank and avoid any shadow bans?",
+                        "body": "Our video marketing experts combine their knowledge of SEO to optimize the videos for different platforms. They ensure that the titles are under 60 characters, customized thumbnails and end screens are created, along with trending audio. They monitor algorithm updates daily and follow the best practices to protect your brand's reach and drive consistent organic YouTube, Instagram and TikTok. "
+                    },
+                    {
+                        "title": "02. How soon will I see results from video content marketing services? ",
+                        "body": "Engagement, views and traffic will become noticeable from 2-4 weeks after the launch. However, subscriber growth, sales and rise in conversions can be seen in 1-3 months' time, which depends on your niche, budget and consistency. Our dedicated teams continuously optimize the strategy weekly to deliver faster and stronger results every month. "
+                    },
+                    {
+                        "title": "03. How do you track ROI from video advertising on social media and YouTube? ",
+                        "body": "We consistently keep track of ROI using UTM parameters, meta and Google Pixel events and advanced platform analytics. Every video piece is connected from views and watch time to clicks, leads and actual sales. You receive a clear and detailed monthly report showing the exact revenue attribution, ROAS and cost per acquisition for complete transparency. "
+
+                    },
+                    {
+                        "title": "04.  Can your experts handle my industry and create platform-specific content? ",
+                        "body": "Absolutely, we match you with the video marketers who already have expertise in working in your industry and target audience. Whatever your needs are in respect of video editing, they have hands-on experience in running the campaigns in your favour across all platforms, which will lead to maximizing engagement and conversion for your business and also make you stand out. "
+                    },
+                    {
+                        "title": "05. Do you provide royalty-free music, voiceovers and multilingual subtitles? ",
+                        "body": "Yes, all the audio used is from premium libraries, professional voiceover in different languages and adds perfectly timed subtitles. This ensures that the videos created are 100% copyright safe, easily accessible to you and are ready for both Indian and global audiences without any hassles over additional licensing. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Choose Citadel Coworkers’ Offshore Video Marketing Teams For Scalable Content Production",
+      "body": "Video marketing requires a consistent pipeline of high-quality content. We help brands access skilled professionals in India, enabling them to scale production efficiently while maintaining performance-focused strategies.  ",
+      "centerImageUrl": "/images/VIDEOMARKTING.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Scale content without hiring overhead" },
+    { "imageUrl": "", "body": "Faster turnaround across video formats " },
+    { "imageUrl": "", "body": "Platform-first video strategy execution" },
+    { "imageUrl": "", "body": "Performance-let video metrics" },
+    { "imageUrl": "", "body": "Integrated video + Ads + distribution" },
+    { "imageUrl": "", "body": "Agile teams built for algorithm shifts " }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Dedicated Video Marketing Experts"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Partner With Teams That Deliver Video-Led Growth at Scale and achieve 6X ROI",
+			   "buttontext":"Hire Dedicated Video Marketing Experts Today"
             }
         ]
 		
         }
+		,
+		{
+            "categoryUrl": "hire-lead-generation-expert",
+            "categoryName": "Lead Generation",
+            "pageMetaTitle": "Lead Generation Services in India",
+            "pageMetaContent": "Hire certified Lead Generation experts in India starting at $7/hour.",
+             
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Lead Generation Expert In India ",
+                        "body": "Build a predictable sales pipeline that turns discovery calls into closed revenue while we take care of your lead generation - starts at $7/hour",
+                        "buttonText": "Get Your Lead Generation Expert "
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Full-Spectrum Lead Generation Services For Measurable Growth ",
+                        "body": "Our professional lead generation experts connect your brand with qualified prospects. They make sure to build a proper pipeline to drive the traffic and get you high-conversion results. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers Behind CCW’s Lead Generation Edge ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Certified Lead Generation Specialists ",
+                        "body": "18+"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "ROI Across Campaigns ",
+                        "body": "5X"
+                    },
+                    {
+                        "imageUrl": "/images/leads.png",
+                        "title": "Lead Generation Campaigns ",
+                        "body": "350+"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": " Niche-Matched Prospects ",   
+                        "body": "40%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How do you ensure the quality of leads you generate?",
+                        "body": "Our specialists verify prospects' data through various databases and tools. Every lead is checked to ensure it aligns with your business, decision maker roles, and whether or not the contact information provided is active. This helps make sure that the final prospects your team receives are accurate and have a greater chance of conversion. "
+                    },
+                    {
+                        "title": "02. How long does it take to start generating leads?",
+                        "body": "Most of our lead generation campaigns have started showing responses and qualified prospects within 3-4 weeks. However, this is not a fixed timeline. The timeline for leads differs depending on the industry competition, targeting criteria and outreach volume. Our expertise continuously optimizes the campaigns which improves response rates and pipeline growth. "
+                    },
+                    {
+                        "title": "03. How will the leads be delivered to my sales team? ",
+                        "body": "Our experts maintain detailed datasheets regarding the qualified leads. The same data is delivered to your team through any preferred CRM by your team or through a shared prospect database. Our experts can seamlessly integrate with any platform or CRM your team is currently working on so that you can easily track conversations, follow-ups and deal progress. "
+
+                    },
+                    {
+                        "title": "04.  What channels do you use to generate leads for my business? ",
+                        "body": "We use a combination of proven lead generation channels that are based on where your ideal customers are most active. This includes LinkedIn outreach, cold email campaigns, database prospecting and targeted list building. The channels mix is customized for your industry and audience so that you get better engagement, higher response rates and more qualified leads. "
+                    },
+                    {
+                        "title": "05. Will I get a dedicated lead generation specialist for my campaigns?",
+                        "body": "Yes, you will be assigned a dedicated lead gen specialist who manages prospect research, outreach campaigns and reporting. They work closely with your team and act as an extension of your sales department to ensure consistent communication and campaign performance. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers’ Offshore Lead Generation Specialist In India",
+      "body": "Businesses want to build trustworthy and authentic prospect partnerships. With Citadel Coworkers, you gain access to top lead generation talent in India who not only deliver brand-aligned campaigns but also help your brand scale.  ",
+      "centerImageUrl": "/images/LEAD-GEN.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Each lead generation specialist has 5+ years of experience" },
+    { "imageUrl": "", "body": "Pre-vetted talent across B2B & B2C campaigns" },
+    { "imageUrl": "", "body": "End-to-end campaign execution expertise" },
+    { "imageUrl": "", "body": "Focus on high-quality leads " },
+    { "imageUrl": "", "body": "Skilled in CRM & automation tools" },
+    { "imageUrl": "", "body": "Cost-efficient offshore scaling with no overheads" },
+     { "imageUrl": "", "body": "24/7 workflow for faster execution" },
+      { "imageUrl": "", "body": "Niche-focused industry experience" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Your Lead Generation Expert"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Lead Generation Experts & Scale Your Brand With Conversions Rising Up To 250% And 5X ROI",
+			   "buttontext":"Hire Your Lead Generation Expert Today"
+            }
+        ]
+		
+        }		,
+		{
+            "categoryUrl": "hire-3d-animators",
+            "categoryName": "3D Animation",
+            "pageMetaTitle": "Hire 3D Animation Expert In India ",
+            "pageMetaContent": "Hire 3D Animation Expert In India  starting at $7/hour.",
+              "useDynamicSections": true,
+           "sectionsOrder": [
+    "hero",
+    "number",
+    "Services",
+    "TeamSection",
+    "portfolioItems",
+    "certifications",
+     "ServiceBulkContentUpper",
+    "CasestudyData",
+    "ToolsSection",
+      "IndustriesSection",
+   
+    "industries3DImpact",
+  "WorkflowSplit",
+    "Testimonial",
+    "serviceSection",
+    "SkillsSection",
+    "ServiceBulkContent",
+    "faq",
+   "Blogs",
+   
+ 
+    "pricing",
+       "ContactForm",
+  
+    "Icondesign",
+	 "FeaturedInMarquee",
+     "ConcludingSec"
+  ],
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire 3D Animation Expert In India ",
+                        "body": "Accelerate your brand’s visual storytelling with photorealistic renders that are designed for consistent output growth - starts at $7/hour",
+                        "buttonText": "Get Your 3D Animator"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Comprehensive 3D Animation Services For Measurable Growth",
+                        "body": "Our 3D product animation professionals have experience of working with different industries to bring your vision to life. They create detailed assets and deliver final renders that help elevate your brand's storytelling and engage your audience. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers Representing CCW’s 3D Animation Edge ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Certified 3D animators",
+                        "body": "10+"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "Faster Production Cycles",
+                        "body": "3.5X"
+                    },
+                    {
+                        "imageUrl": "/images/Projects.png",
+                        "title": "Projects Delivered ",
+                        "body": "250+"
+                    },
+                    {
+                        "imageUrl": "/images/Industires.png",
+                    "title": " Seamless Software Integration ",   
+                        "body": "100%"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. How can I be sure that the 3D models and animations will be of high quality?",
+                        "body": "Each one of our models goes through a strict topology check, with UV validation and scale testing plus multiple render passes. We work on internal reviews, playblasts and final high resolution previews. Our 3D animation experts make sure you get perfectly production ready files that fit perfectly into your pipeline. "
+                    },
+                    {
+                        "title": "02.  How quickly can I get my first 3D models or animations after starting?",
+                        "body": "Most of our clients receive their first approved batch within 3 to 4 weeks. The timelines for project delivery depend on complexity. But we help keep shortening the delivery time and improving the quality with every step so that the assets arrive even faster. "
+                    },
+                    {
+                        "title": "03. How will you send the finished 3D files to my team? ",
+                        "body": "We help you deliver everything through secure pipelines via Dropbox, Google Drive or direct integration via any tool that you are already using internally. Our specialists ensure that you get all the files, textures, rigs, render passes and documentation so that your team can start using them right away. "
+
+                    },
+                    {
+                        "title": "04. What styles and platforms do you create 3D animations for?",
+                        "body": "Our 3D product animation services are designed to support photorealistic, stylized, cartoon, low-poly, product visualization, architectural walkthrough and motion graphics. Our experts are fully capable and have years of experience working in different styles and platforms for social media, websites, games, films or advertising. "
+                    },
+                    {
+                        "title": "05. Will I be able to see the progress at every stage or do I just receive the final file?",
+                        "body": "You’ll have access to the progress of the project at key stages like rough animatics, blocked animation, lit previews and final renders. Our experts keep you in the loop from the very beginning and work on your input. This collaborative approach is helpful in avoiding any big changes that can appear at the later stages of the process and ensures that the final delivery product matches your vision. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers’ Offshore 3D Animator Specialists In India ",
+      "body": "Businesses want to partner with creative partners who help in delivering on-brand, production ready 3D product animation at scale. Citadel Coworkers, you gain access to India’s top animation professionals who deliver studio quality videos without the overhead. ",
+      "centerImageUrl": "/images/3DAnimator.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Specialists aligned to your exact animation needs" },
+    { "imageUrl": "", "body": "Process-driven execution" },
+    { "imageUrl": "", "body": "Parallel workflows for faster content delivery" },
+    { "imageUrl": "", "body": "Scale output without operational bottlenecks" },
+    { "imageUrl": "", "body": "Focused on product and performance-led animation" },
+    { "imageUrl": "", "body": "Reliable execution without in-house dependencies " }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Your 3D Animator Exper"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated 3D Animator Experts & Grow Your Visual Engagement Rising Up To 280% And 6X ROI",
+			   "buttontext":"Hire Your 3D Animator Expert Today "
+            }
+        ]
+		
+        }
+		,
+		{
+            "categoryUrl": "hire-print-packaging-designer",
+            "categoryName": "Print & Packaging Design",
+            "pageMetaTitle": "Print & Packaging Design Services in India",
+            "pageMetaContent": "Hire certified Print & Packaging Design experts in India starting at $7/hour.",
+              "useDynamicSections": true,
+           "sectionsOrder": [
+    "hero",
+    "number",
+    "Services",
+    "TeamSection",
+	  "certifications",
+	   "ServiceBulkContentUpper",
+	     "ToolsSection",
+	   "Testimonial",
+    "portfolioItems",
+   "serviceSection",
+  "ServiceBulkContent",
+	   "BrandAssets",
+    "faq",
+   "Blogs",
+    "FeaturedInMarquee",
+ 
+    "pricing",
+       "ContactForm",
+  
+    "Icondesign",
+     "ConcludingSec"
+  ],
+            "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire Print & Packaging Designer In India ",
+                        "body": "Turn shelf presence into sales with premium packaging that captivates customers and drives real conversions - starts at $7/hour",
+                        "buttonText": "Get Your Print & Packaging Designer "
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Full-Spectrum Print & Packaging Design Services For Every Brand Touchpoint ",
+                        "body": "Our professional designers craft visuals that communicate your brand message clearly and look flawless in every format. Our team integrates seamlessly into your workflow for both one-time campaigns and ongoing support based on your requirements. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers Behind Our Print & Packaging Design Edge",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Designers",
+                        "body": "15+",
+                        "flipcontent":"Certified experts in print & packaging"
+                    },
+					  {
+                        "imageUrl": "/images/Projects.png",
+                        "title": "Projects Delivered",
+                        "body": "280+",
+                        "flipcontent":" Across FMCG, E-commerce & B2B Brands"
+                    },
+                    {
+                        "imageUrl": "/images/satisfaction.webp",
+                        "title": "Satisfaction",
+                        "body": "98%",
+                        "flipcontent":" With repeat clients from US & UK"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": "Brand-aligned",   
+                        "body": "100%",
+                        "flipcontent":"Zero rework for print vendors"
+                    }
+                ],
+            "faq":[
+                    {
+                        "title": "01. Can your packaging designers work with my existing dieline templates?",
+                        "body": "Yes, our packaging designers are experienced in working with dieline templates provided by you. We utilize the templates across standard retail, e-commerce and pharmaceutical formats. In case you don’t have an existing dieline we create one from scratch with proper structural template for your product dimensions."
+                    },
+                    {
+                        "title": "02. How quickly can you deliver a flyer or poster design?",
+                        "body": "There is no specific timeline as it depends on the project complexity. Like for a standard flyer design online and poster design are delivered within 72 hours. At the same time for creating a custom brochure printing project or full product packaging design the timeline range can be from 5 to 15 business days based on SKUs and revision rounds. "
+                    },
+                    {
+                        "title": "03. Do you offer print design services for digital formats too? ",
+                        "body": "Absolutely, our print designers are proficient in digital output formats. When you hire a flyer designer specialist from our team you receive optimized files for both physical print and digital distribution. They include web resolution JPEGs and PNGs for digital challenges along with print resolution formats in PDFs for your vendors. "
+
+                    },
+                    {
+                        "title": "04.  Is there a minimum commitment when I hire a print designer? ",
+                        "body": "No, we offer flexible hiring models starting from project based engagement with no minimum commitment. Whether you are looking to hire a packaging designer on retainer, full-time part-time or even on hourly basis, we have you covered. Our goal is to match the engagement model to your actual workload and budget.  "
+                    },
+                    {
+                        "title": "05. How do you ensure brand consistency across all print materials?",
+                        "body": "Before any work gets started, your assigned designer reviews your brand guidelines in detail. Even if you do not have formal guidelines we help you to document that also. Every deliverable from letterhead to printing files is checked against the brand standards before they get submitted for approval.  "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers’ Offshore Print & Packaging Designers in India ",
+      "body": "Businesses want print and packaging design that can perform whether it is through shelf, in the box and at the point of sale. CCW provides you with access to top print design talent in India. Our designers combine creative skills and category knowledge to deliver brand aligned assets that drive results. ",
+      "centerImageUrl": "/images/des.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Access to India’s top print & packaging talent " },
+    { "imageUrl": "", "body": "Cost-effective design scaling " },
+    { "imageUrl": "", "body": "24/7 workflow advantage for global campaigns " },
+    { "imageUrl": "", "body": "Deep specialization across FCMG, e-commerce and B2B sectors" },
+    { "imageUrl": "", "body": "Pre-vetted designers with verified portfolios" },
+    { "imageUrl": "", "body": "Zero pre-press rejection on first delivery" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Print & Packaging Designer"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Print & Packaging Designer: Elevating Your Brand Touchpoint With Design That Converts ",
+			   "buttontext":"Hire Print & Packaging Designer Today "
+            }
+        ]
+		
+        }	
     ]
 }
