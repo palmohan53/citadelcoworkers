@@ -182,8 +182,10 @@ const ContactForm = ({ buttonText = "Start Your Project" }) => {
                                 <div className="sectionHeading text-center mb-4">
                                     <h2>Trusted by Clients Worldwide</h2>
                                 </div>
+                              
+                     
                                 <div className="videoThumb">
-                                    <img src="/images/youtube-thumb.webp" alt="Trusted by Clients Worldwide" onClick={handleVideoPopup} width="447" height="306"/>
+                                    <img src="/images/Thubnail (3).png" alt="Trusted by Clients Worldwide" onClick={handleVideoPopup} width="447" height=""/>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +200,7 @@ const ContactForm = ({ buttonText = "Start Your Project" }) => {
                         <img src="/images/close.png" alt="close" />
                     </div>
                     <div className="popupContentInr">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/o3GHmGSKA9I?si=i27sgTjBRKM_63wG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        <iframe width="100%" height="315" src="/images/clinet.mp4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                 </div>
             </div>}

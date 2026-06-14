@@ -13,13 +13,26 @@ export default function CaseStudySingle() {
   /* =====================
      BODY CLASS
   ===================== */
-  useEffect(() => {
-    document.body.classList.add("case-study-page");
+useEffect(() => {
+  document.body.classList.add("case-study-page");
 
-    return () => {
-      document.body.classList.remove("case-study-page");
-    };
-  }, []);
+  // existing slug class
+  if (slug) {
+    document.body.classList.add(`case-${slug}`);
+
+    // second extra class
+    document.body.classList.add(`${slug}-page`);
+  }
+
+  return () => {
+    document.body.classList.remove("case-study-page");
+
+    if (slug) {
+      document.body.classList.remove(`case-${slug}`);
+      document.body.classList.remove(`${slug}-page`);
+    }
+  };
+}, [slug]);
 
   /* =====================
      FETCH DATA (NEW API)
@@ -104,7 +117,90 @@ const getCaseStudy = async () => {
       };
     });
   }, [caseItem]);
+useEffect(() => {
+  if (!caseItem) return;
 
+  // Hero fade-in
+  setTimeout(() => {
+    document.getElementById("ghost0")?.classList.add("on");
+
+    [
+      "hero-d1",
+      "hero-d2",
+      "hero-d3",
+      "hero-d4",
+      "hero-d5",
+      "hero-card",
+    ].forEach((id) => {
+      document.getElementById(id)?.classList.add("on");
+    });
+  }, 80);
+
+  // Counter Animation
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute("data-target"), 10);
+    const suffix = el.getAttribute("data-suffix") || "";
+
+    if (isNaN(target)) return;
+
+    let current = 0;
+    const step = Math.ceil(target / 40) || 1;
+
+    const timer = setInterval(() => {
+      current += step;
+
+      if (current >= target) {
+        el.textContent = target + suffix;
+        clearInterval(timer);
+      } else {
+        el.textContent = current + suffix;
+      }
+    }, 28);
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("on");
+
+        entry.target
+          .querySelectorAll(".fu")
+          .forEach((el) => el.classList.add("on"));
+
+        if (entry.target.id === "stats-grid") {
+          entry.target
+            .querySelectorAll(".stat-value")
+            .forEach(animateCounter);
+        }
+
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  [
+    "stats-grid",
+    "ch-head",
+    "ap-head",
+    "tl-head",
+    "res-head",
+    "testimonial",
+  ].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+
+  document
+    .querySelectorAll(
+      ".challenges-list .fu, .approach-grid .fu, .timeline-list .fu, .results-grid .fu"
+    )
+    .forEach((el) => observer.observe(el));
+
+  return () => observer.disconnect();
+}, [caseItem]);
   /* =====================
      SCROLL REVEAL
   ===================== */

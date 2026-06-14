@@ -12,7 +12,8 @@ import ContactForm from "../Component/ContactForm";
 import Testimonial from "../Component/Testimonial";
 import BannerContent from '../Component/BannerContent';
 import FeaturedInMarquee  from '../Component/Brandsslider';
-
+import VideoTestimonial from "../Component/VideoTestimonial";
+import Videosection  from "../Component/Videosechome"
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -39,7 +40,7 @@ const Home = () => {
     const { data:services } = useQuery("service", getServiceList);
     const { data:serviceTestimonial } = useQuery("testimonial", getTestimonial);
     const { data:profile } = useQuery("Profile", getProfileList);
-  
+  const [showVideo, setShowVideo] = useState(false);
     const contactref = useRef(null);
     const handleScrollClick = () => {
         contactref.current?.scrollIntoView({behavior: 'smooth'});
@@ -210,7 +211,7 @@ const Home = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
-               <section className="serviceb bg-dark" id=""><div className="container"><FeaturedInMarquee /></div></section>
+               <section className="serviceb bg-dark" id="FREA"><div className="container"><FeaturedInMarquee /></div></section>
  
                 <section className="service home-page" id="servicesSec">
                     <div className="container">
@@ -436,7 +437,7 @@ We build predictable workflows for recurring tasks, internal coordination and ve
                 <div className="icon">
                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
                 </div>
-                <h3>Fiance Ops </h3>
+                <h3>Finance Ops </h3>
          <p className="bold-text">Bookkeeping shouldn’t wait for you to have a free afternoon</p>
 
 <p>We keep invoices, reconciliation or expense tracking clear and current. This allows you to know where the business stands without the last-minute scramble. </p>
@@ -530,59 +531,14 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
                     </div>
                 </section>
 
-        
-                <section className="video">
-                    <div className="videoBgImage">
-                        <img src="/images/home-banner.png" alt="Seamless Remote Hiring – Build Your Dream Team Today" />
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                        <div className="col-lg-4">
-                            <div className="video_box text-center">
-                                <a href="/" className="lightbox-image"><FontAwesomeIcon icon={faPlay} /></a>
-                            </div>
-                        </div>
-                        <div className="col-lg-2"></div>
-                        <div className="col-lg-6">
-                            <div className="title_all_box style_one text-end pb-5 mb-4">
-                                <div className="sectionHeading min-width-100">
-                                    <h2 className="mainHeading whiteTxt">Seamless Remote Hiring – Build Your Dream Team Today</h2>
-                                    <p className="my-4">Find and hire top-tier professionals across various industries. From finance to software development, our experts are ready to integrate into your team and deliver results. Scale your workforce effortlessly, with flexible hiring models designed for your business success.</p>
-                                </div>
-                                <div className="theme_btn">
-                                    <a href="/contact-us" className="colorBtn">Meet Your Next Hire</a>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div className="row">
-                    <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
-                        <div className="step_number">
-                            <span className='hdCount'>01.</span>
-                        </div>
-                        <h3 className="title">
-                            <a href="/">Payroll Management</a>
-                        </h3>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
-                        <div className="step_number">
-                            <span className='hdCount'>02.</span>
-                        </div>
-                        <h3 className="title">
-                            <a href="/">Employee Compensation</a>
-                        </h3>
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12 col-12 expertise_box">
-                        <div className="step_number">
-                            <span className='hdCount'>03.</span>
-                        </div>
-                        <h3 className="title">
-                            <a href="/">Benefits Management</a>
-                        </h3>
-                    </div>
-                        </div>
-                    </div>
-                </section>
+      
+
+          <VideoTestimonial></VideoTestimonial>
+
+
+<Videosection></Videosection>
+			
+		
                 <Testimonial serviceTestimonial={serviceTestimonial} />
                 <section className="blog">
                     <div className="container">
@@ -678,6 +634,7 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
                 <div ref={contactref}>
                     <ContactForm />
                 </div>
+            
             </HelmetProvider>
         </React.Fragment>
     )

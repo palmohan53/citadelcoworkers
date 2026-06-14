@@ -100,6 +100,7 @@ export default function VideoEditorSkillsSection({ skillsetData }) {
 }
 
 .ve-block {
+flex: 1;
   padding: 28px;
   border-radius: 18px;
   background: rgba(255,255,255,0.06);

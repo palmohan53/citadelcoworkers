@@ -3,7 +3,7 @@ import ContactForm from "../Component/ContactForm";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { faMapLocationDot, faBusinessTime, faHeadset, faWandMagicSparkles, faHourglass, faUsersViewfinder} from '@fortawesome/free-solid-svg-icons';
-
+import VideoTestimonial  from "../Component/VideoTestimonial";
 const Contact = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -140,6 +140,7 @@ const Contact = () => {
                             </div>
                         </div>*/}
                     </div>
+<VideoTestimonial></VideoTestimonial>
                     <div className="row mt-5">
                         <div className="col-lg-7 col-12">
                                 <div className="contectContent">

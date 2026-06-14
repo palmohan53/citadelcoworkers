@@ -52,9 +52,15 @@ const CertificateSection = ({ certificationData }) => {
       <div className="container">
         <div className="heading-text">
             <div className="sectionHeading text-center mb-30">
+    
                <h2>{certificationData?.heading || "Certifications"}</h2>
                   <p>
-            {certificationData?.subheading || ""}
+                    
+                   <div
+  dangerouslySetInnerHTML={{
+    __html: certificationData?.subheading,
+  }}
+/>
           </p>
                 </div>
                

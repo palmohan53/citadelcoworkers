@@ -116,7 +116,7 @@ export default function FinanceBrandslider() {
 
         .fi-label {
           min-width: 140px;
-          font-size: 14px;
+          font-size: 21px;
           font-weight: 700;
           letter-spacing: 1px;
         }
@@ -138,7 +138,7 @@ export default function FinanceBrandslider() {
         }
 
         .fi-logo {
-          width: 150px;
+          width: 130px;
           object-fit: contain;
         }
 
@@ -193,7 +193,7 @@ export default function FinanceBrandslider() {
 
       <div className="fi-container">
         <div className="fi-row">
-          <div className="fi-label">FEATURED IN</div>
+          <div className="fi-label">FEATURED <span class="greenText">IN</span></div>
 
           <div className="fi-marquee">
             <div className="fi-track">

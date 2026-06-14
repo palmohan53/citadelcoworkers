@@ -17,11 +17,45 @@ const getBlogList = async () => {
 const Blog = ({ isRecentBlog = false }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 10;
-
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [sortOrder, setSortOrder] = useState("latest"); // ✅ NEW
   const { data, status } = useQuery("blogList", getBlogList);
 
   const allBlogs = data?.listing || [];
-
+// ✅ CATEGORY MAP
+  const categoryMap = {
+    "finance-and-accounting": [
+      "finance-and-accounting",
+      "bookkeeper",
+      "comprehensive-accounting-services",
+      "tax-preparation-services",
+      "quickbooks-setup"
+    ],
+    "digital-marketing": [
+      "digital-marketing",
+      "seo",
+      "hire-content-marketing-experts",
+      "hire-influencer-marketing-expert",
+      "hire-content-writers"
+    ],
+    "mobile-app-development": [
+      "mobile-app-development",
+      "android-development",
+      "ios-app",
+      "flutter",
+      "react-native"
+    ],
+    "graphic-web-design": ["graphic-web-design"],
+    "legal-process-outsourcing": ["legal-process-outsourcing"],
+    "outsource-staff-augmentation": ["outsource-staff-augmentation"],
+    "virtual-assistant": [
+      "virtual-assistant",
+      "data-entry",
+      "administrative-support"
+    ]
+  };
+  
+  
   // ✅ Get URL Slugs
   const pathSlugs = window.location.pathname.split("/").filter(Boolean);
   const lastSlug = pathSlugs[pathSlugs.length - 1] || "";
@@ -45,6 +79,23 @@ const Blog = ({ isRecentBlog = false }) => {
     return false;
   };
 
+  // ✅ SORT LOGIC
+  const sortedBlogs = [...allBlogs].sort((a, b) => {
+    if (sortOrder === "latest") {
+      return new Date(b.post_date) - new Date(a.post_date);
+    } else {
+      return new Date(a.post_date) - new Date(b.post_date);
+    }
+  });
+
+  // ✅ FILTER
+  const filteredBlogs =
+    selectedCategory && !isRecentBlog
+      ? sortedBlogs.filter(blog => {
+          const allowed = categoryMap[selectedCategory] || [selectedCategory];
+          return blog.category_slug?.some(cat => allowed.includes(cat));
+        })
+      : sortedBlogs;
   // ✅ Filter by slug
   const blogsByLastSlug = allBlogs.filter(blog =>
     hasSlug(blog?.category_slug, lastSlug)
@@ -56,13 +107,10 @@ const Blog = ({ isRecentBlog = false }) => {
       !blogsByLastSlug.some(lastBlog => lastBlog.ID === parentBlog.ID)
     );
 
-  // ✅ FINAL BLOG LIST (with latest sorting)
-  const sortedBlogs = [...allBlogs].sort(
-    (a, b) => new Date(b.post_date) - new Date(a.post_date)
-  );
+ 
 
   const blogsToRender = !isRecentBlog
-    ? sortedBlogs
+    ? filteredBlogs
     : [
         ...blogsByLastSlug,
         ...blogsByParentSlug,
@@ -152,15 +200,63 @@ const Blog = ({ isRecentBlog = false }) => {
         <Helmet />
 
         {!isRecentBlog && (
-          <section className="innerBanner">
+            <section className="innerBanner heroSectionblog">
+		  <div class="heroOverlay"></div>
             <div className="innerBannerContent">
               <h1>Blog</h1>
+			  <p>Not just blogs — the insights you need to outthink, outpace and outperform.</p>
             </div>
           </section>
         )}
 
         <section className="blog" id="BlogDetailsSec">
           <div className="container">
+		  
+		    {/* 🔥 FILTER + SORT BAR */}
+            {!isRecentBlog && (
+              <div className="blogFilterBar mb-4">
+                <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
+
+                  <div className="align-items-center gap-2 ">
+                    <span className="fw-bold">Filter By:</span>
+
+                    <select
+                      className="form-select customSelect"
+                      value={selectedCategory}
+                      onChange={(e) => setSelectedCategory(e.target.value)}
+                    >
+                      <option value="">All Categories</option>
+                      <option value="virtual-assistant">Virtual Assistant</option>
+                      <option value="finance-and-accounting">Finance & Accounting</option>
+                      <option value="graphic-web-design">Graphic & Web Design</option>
+                      <option value="digital-marketing">Digital Marketing</option>
+                      <option value="legal-process-outsourcing">Legal Process Outsourcing</option>
+                      <option value="mobile-app-development">Mobile App Development</option>
+                      <option value="outsource-staff-augmentation">Staff Augmentation</option>
+                      <option value="hire-content-writers">Content Writing</option>
+                      <option value="development">Development & IT</option>
+                      <option value="engineering-and-architecture">Engineering & Architecture</option>
+                    </select>
+                  </div>
+
+                  <div className="align-items-center gap-2 flex-dd">
+                    <span className="fw-bold">Sort By:</span>
+
+                    <select
+                      className="form-select customSelect"
+                      value={sortOrder}
+                      onChange={(e) => setSortOrder(e.target.value)}
+                    >
+                      <option value="latest">Recent </option>
+                      <option value="oldest">Oldest</option>
+                    </select>
+                  </div>
+
+                </div>
+              </div>
+            )}
+			
+			
             <div className="row">
 
               {isRecentBlog && (

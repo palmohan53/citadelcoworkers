@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Footer from './Component/Footer';
 import Header from './Component/Header';
 import About from './Pages/About';
@@ -24,13 +25,18 @@ import ThankYou from "./Component/ThankYou";
 import CaseStudySingle from './Component/CaseStudySingle';
 import Newabout from './Pages/NewAboutus';
 import OurMission from './Pages/OurMission';
-
-import FinanceAccounting from './Pages/FinanceAccounting'
+import SystemlandingPage from './Pages/Dummypage.js';
+import FinanceAccounting from './Pages/FinanceAccounting';
 import CookieBanner from './Component/CookieBanner';
+import TestHome from './Pages/TestPage.js'
+import FinaceAccountingmetaads2 from './Pages/FinaceAccountingmetaads2.js'
 import './Framework.css';
 import './App.css';
 import './Media.css';
-
+import FounderInterviewPage from './Pages/InterviewWithCEo.js';
+import WorkingRemotely from './Pages/WorkingRemotely.js';
+import MeetOurTeam from './Pages/OurTeam.js';
+import UkFiancemeta from './Pages/UkFiancemeta.js';
 function App() {
   const location = useLocation();
 useEffect(() => {
@@ -68,21 +74,21 @@ useEffect(() => {
       console.log("Geo fetch failed → blocking Tidio");
     });
 }, []);
-  // ✅ GTM Load
-  useEffect(() => {
+useEffect(() => {
+  const timer = setTimeout(() => {
     if (!window.gtmLoaded) {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "gtm.js" });
-
       const script = document.createElement("script");
       script.async = true;
-      script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-PPG89VBT";
+      script.src =
+        "https://www.googletagmanager.com/gtm.js?id=GTM-PPG89VBT";
       document.head.appendChild(script);
 
       window.gtmLoaded = true;
-      console.log("GTM Loaded ✅");
     }
-  }, []);
+  }, 3000);
+
+  return () => clearTimeout(timer);
+}, []);
 
   // ✅ Dynamic class based on route
   const getPageClass = () => {
@@ -146,8 +152,16 @@ useEffect(() => {
         <Route path="/about-new" element={<Newabout />} />
           <Route path="/services/finance-accounting" element={<FinanceAccounting />} />
         <Route path="/our-mission" element={<OurMission />} />
+            <Route path="/interview-with-the-ceo" element={<FounderInterviewPage />} />
         <Route path="/virtual-assistant" element={<Navigate to="/services/virtual-assistant" replace />} />
 		 <Route path="/offshore" element={<Navigate to="/your-offshore-office-in-india" replace />} />
+     	 <Route path="/services/SystemlandingPage" element={<SystemlandingPage />} />
+ 	 <Route path="/services/team" element={<FinaceAccountingmetaads2 />} />
+    	 <Route path="/services/team-uk" element={<UkFiancemeta />} />
+         <Route path="/working-remotely" element={<WorkingRemotely />} />
+         <Route path="/formhome" element={<TestHome></TestHome>} />
+         <Route path="/meet-our-team" element={<MeetOurTeam />} />
+   
       </Routes>
 
       <Footer />

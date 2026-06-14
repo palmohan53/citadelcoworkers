@@ -1,0 +1,686 @@
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from 'react-router-dom';
+import axios from "axios";
+import API_HOST from "../config/APIHost";
+import API_ENDPOINTS from "../config/APIEndPoints";
+import { useQuery } from "react-query";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Slider from "react-slick";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
+import ContactForm from "../Component/ContactForm";
+import Testimonial from "../Component/Testimonial";
+import BannerContent from '../Component/BannerContent';
+import FeaturedInMarquee  from '../Component/Brandsslider';
+import VideoTestimonial from "../Component/VideoTestimonial";
+import Videosection  from "../Component/Videosechome"
+import ContactFormSingle from "../Component/singlecontactform";
+const getBlogList = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
+    const data = await response;
+    return data;
+}
+const getServiceList = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.serviceListing}`)
+    const data = await response;
+    return data;
+}
+const getTestimonial = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.testimonial}`)
+    const data = await response;
+    return data;
+}
+const getProfileList = async () => {
+    const response = await axios.get(`${API_HOST}${API_ENDPOINTS.profile}`)
+    const data = await response;
+    return data;
+}
+
+const TestHome = () => {
+    const { data, status } = useQuery("blog", getBlogList);
+    const { data:services } = useQuery("service", getServiceList);
+    const { data:serviceTestimonial } = useQuery("testimonial", getTestimonial);
+    const { data:profile } = useQuery("Profile", getProfileList);
+  const [showVideo, setShowVideo] = useState(false);
+    const contactref = useRef(null);
+    const handleScrollClick = () => {
+        contactref.current?.scrollIntoView({behavior: 'smooth'});
+    };
+
+
+      const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);  // Add class when section is in viewport
+        } else {
+          setIsVisible(false); // Optional: remove if not in view
+        }
+      },
+      {
+        threshold: 0.1, // fire when at least 10% is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+
+    let bannerSettings = {
+        dots: false,
+        arrows:false,
+        infinite: true,
+        fade: true,
+        autoplay: true,
+        speed: 1500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+    useEffect(() => {
+        // getBlogList()
+        window.scrollTo(0, 0)
+      }, [])
+      if (status === 'loading') {
+        return <div className="loaderWrp"><span className="loader"></span></div>
+      }
+    return(
+        <React.Fragment>
+            <HelmetProvider>
+                <Helmet>
+                    <title>Hire Virtual Employees in India Starting US $5 - Citadel Coworkers</title>
+                    <meta name="description" content="Citadel Coworkers is the #1 company helping businesses globally by providing innovative solutions tailored to your business across the world." />
+                    <link rel="canonical" href={window.location.href} />
+                </Helmet>
+            <section className="banner">
+                <div className="container">
+                    <div className="row align-items-end">
+                    <div className="col-md-6 col-12 bannerContent">
+                        <BannerContent/>
+                    </div>
+                        <div className="col-md-6 col-12">
+                            <div className="sliderWrp">
+                                <Slider {...bannerSettings}>
+                                    <div className="bannerProfile">
+                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Aarav Mehta</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/> Full Stack Developer</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                            <p>Skill Set</p>
+                                            <ul className="listInline tags mt-3">
+                                                <li>React</li>
+                                                <li>Node.js</li>
+                                                <li>MongoDB</li>
+                                                <li>JavaScript</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="Isha Verma" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Isha Verma</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>Adobe</li>
+                                                    <li>Photoshop</li>
+                                                    <li>Illustrator</li>
+                                                    <li>Figma</li>
+                                                    <li>Canva  </li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="Rohit Nair" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Rohit Nair</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>Google Workspace</li>
+                                                    <li>Asana</li>
+                                                    <li>Calendar Management</li>
+                                                    <li>Data Entry </li>
+                                                </ul>
+                                        </div>
+                                    </div>
+
+                                    <div className="bannerProfile">
+                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="Kavita Sharma" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Kavita Sharma</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Accountant</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>QuickBooks</li>
+                                                    <li>Xero</li>
+                                                    <li>GST Filing</li>
+                                                    <li>Bank Reconciliation</li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="Arjun Kapoor" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Arjun Kapoor</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>Contract Drafting</li>
+                                                    <li>Legal Research</li>
+                                                    <li>LPO  MS Word</li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div className="bannerProfile">
+                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="Neha Joshi" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Neha Joshi</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Content Writer</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                                <p>Skill Set</p>
+                                                <ul className="listInline tags mt-3">
+                                                    <li>SEO Writing</li>
+                                                    <li>Blogs</li>
+                                                    <li>Copywriting</li>
+                                                    <li>Grammarly</li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                </Slider>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* <div className="videoBg">
+                    <img src="/images/home-banner-2.png" alt=""/>
+                </div>
+                <div className="videoOverlay"></div> */}
+            </section>
+               <section className="serviceb bg-dark" id="FREA"><div className="container"><FeaturedInMarquee /></div></section>
+ 
+                <section className="service home-page" id="servicesSec">
+                    <div className="container">
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-12 col-12">
+                                <div className="sectionHeading text-center">
+                                    <h2>Comprehensive Virtual Staffing – Hire in Any Domain  </h2>
+                                    <p>Get flexible, cost-effective staffing solutions—hire top virtual professionals in any industry.   </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row mt-5 borderBox">
+                            {
+                                services?.data?.listing.map((data, index)=>{
+                                    return(
+                                        <React.Fragment key={index}>
+                                        {index < 6 && <div className="col-lg-4 col-md-6 col-12 sideBorder" key={index}>
+                                                <div className="colorBx">
+                                                    <React.Fragment>
+                                                        <div className="servicesIcon">
+                                                            <img src={data.banner} alt={data.post_title} className="serviceIco" width="64" height="64"/>
+                                                            <img src={data.hover_image} alt={data.post_title} className="serviceIco serviceHoverIco" width="64" height="64"/>
+                                                        </div>
+                                                        <h3>{data.post_title}</h3>
+                                                        <p dangerouslySetInnerHTML={{ __html: data.post_content }}></p>
+                                                        <div className="text-start">
+                                                            <Link to={`/services/${data.post_name}`} className="blueBtn">View More <FontAwesomeIcon icon={faArrowRight} /></Link>
+                                                        </div>
+                                                    </React.Fragment>
+                                                </div>
+                                        </div>}
+                                        </React.Fragment>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div className="text-center mt-4">
+                            <Link to="/services" className="colorBtn wideBtn">View All</Link>
+                        </div>
+                    </div>
+                </section>
+                <section className="threebox bg_light_1">
+                    <div className="container">
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-12 col-12">
+                                <div className="sectionHeading text-center">
+                                    <h2>Unlock the Power of a Remote Workforce</h2>
+                                    <p className="mb-3">Save up to 72% on hiring costs while building a flexible, high-performing team that keeps your business running seamlessly.</p>
+                                    <h4>3 Key Benefits of Hiring Remote Professionals</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row gutter_15px mt-5">
+                            <div className="col-md-4 col-12">
+                                <div className="service_box style_three dark_color">
+                                    <div className="service_content">
+                                        <div className="content_inner">
+                                            <img src="/images/expert (2).webp" alt="Top Experts, On-Demand" width="70" height="70"className="none-hover"/>
+                                            <img src="/images/expert-white.png" alt="Top Experts, On-Demand" width="70" height="70"className="hover-img"/>
+                                            <h3 className="semiHeading">Top Experts, On-Demand</h3>
+                                            <p>Hire skilled professionals in hours—ready to deliver from day one.</p>
+                                        </div>
+                                    </div>
+                                </div>                        
+                                <div className="mr_bottom_30"></div>                        
+                            </div>
+                            <div className="col-md-4 col-12">
+                                <div className="service_box style_three dark_color">
+                                    <div className="service_content">
+                                        <div className="content_inner">
+                                            <img src="/images/profit-ico.svg" alt="Lower Costs, Higher Profits" width="70" height="70"className="none-hover"/>
+                                             <img src="/images/profit-ico-white.webp " alt="Lower Costs, Higher Profits" width="70" height="70"className="hover-img"/>
+                                            <h3 className="semiHeading">Lower Costs, Higher Profits</h3>
+                                            <p>Cut office, payroll, and operational expenses while maximizing efficiency.</p>
+                                        </div>
+                                    </div>
+                                </div>                        
+                                <div className="mr_bottom_30"></div>                        
+                            </div>
+                            <div className="col-md-4 col-12">
+                                <div className="service_box style_three dark_color">
+                                    <div className="service_content">
+                                        <div className="content_inner">
+                                            <img src="/images/time glob (1).svg" alt="24/7 Business Continuity" width="70" height="70"className="none-hover"/>
+                                             <img src="/images/time glob white.svg" alt="24/7 Business Continuity" width="70" height="70"className="hover-img"/>
+                                            <h3 className="semiHeading">24/7 Business Continuity</h3>
+                                            <p>Leverage global talent across time zones for uninterrupted growth.</p>
+                                        </div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <section className="process pb-100">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-7 col-12">
+                                <div className="row mb-3">
+                                    <div className="col-md-12 col-12">
+                                        <div className="sectionHeading min-width-100">
+                                            <h2>Build High-Performing Teams,<br />On Demand</h2>
+                                            <p>Quickly assemble the virtual employees you need, exactly when you need them.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row mt-5">
+                                    <div className="col-md-6 col-12">
+                                        <div className="contentBx">
+                                            <img src='/images/hire-quickly-new.svg' alt="Hire Quickly" width="64px" height="64px" />
+                                            <h3>Hire Quickly</h3>
+                                            <p>Hire in under 24 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <div className="contentBx">
+                                            <img src='/images/top-3 (2).svg' alt="The Top 3%" width="64px" height="64px" />
+                                            <h3>The Top 3%</h3>
+                                            <p>Every applicant to the Citadel network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <div className="contentBx">
+                                            <img src='/images/Future-work.png' alt="Leading the Future of Work" width="64px" height="64px" />
+                                            <h3>Leading the Future of Work</h3>
+                                            <p>Our network is ready for tomorrow’s business challenges by embracing advanced and specialized skills, including blockchain and AI.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6 col-12">
+                                        <div className="contentBx">
+                                            <img src='/images/level.svg' alt="A Level Above" width="64px" height="64px" />
+                                            <h3>A Level Above</h3>
+                                            <p>Every single Virtual Employee in our global network embodies the highest levels of integrity, professionalism, and communication.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-5 col-12">
+                                <div className="profileBxBx">
+                                    {/* <Profile handleScrollClick={handleScrollClick} /> */}
+                                    {
+                                        profile?.data?.listing?.map((data, index)=>{
+                                            let skillSet = data.Expertise.split(',');
+                                            return(
+                                                <React.Fragment key={index}>
+                                                { index < 3 &&
+                                                    
+                                                        <div className="bannerProfile">
+                                                            <div className="profileImg">
+                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="261" height="261" />
+                                                                <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
+                                                            </div>
+                                                            <div className="bannerProfileDetails">
+                                                                <h3>{data.post_title}</h3>
+                                                                <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                             
+                                                                <h6><img src="/images/code (1).webp" alt="code icon" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
+                                                                                   <p>Skill Set</p>
+                                                                {/* <span className="Expertise">{data.post_content}</span> */}
+                                                              <ul className="listInline tags mb-2 f">
+  {skillSet.map((skillString, index) =>
+    skillString.split("·").map((skill, i) => (
+      <li key={`${index}-${i}`}>{skill.trim()}</li>
+    ))
+  )}
+</ul>
+
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                </React.Fragment>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section className="Lead-flow-home">
+    <div className="container">
+        <div class="sectionHeading text-center mb-4">
+            <div class="titile-tag">How Citadel Works</div>
+            <h2>Your Business Runs On Systems. <br></br>
+We Build Them For You. </h2>
+<div class="para">Growing your business isn’t about adding more people; it's about fixing gaps in your system. CCW virtual teams, combined with powerful AI tools and agentic workflows, don’t just execute tasks but handle all your missed leads, stalled follow-ups and scattered operations. They install new systems that keep everything moving. </div></div>
+   
+
+        <div className="grid">
+            <div className="card"><span className="badge">1</span>
+                <div className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-waypoints w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><circle cx="12" cy="4.5" r="2.5"></circle><path d="m10.2 6.3-3.9 3.9"></path><circle cx="4.5" cy="12" r="2.5"></circle><path d="M7 12h10"></path><circle cx="19.5" cy="12" r="2.5"></circle><path d="m13.8 17.7 3.9-3.9"></path><circle cx="12" cy="19.5" r="2.5"></circle></svg>
+                </div>
+                <h3>Lead Flow </h3>
+                <p className="bold-text">A lead that isn’t followed up on is a lead you’ve already lost </p>
+				<p>We map out your entire lead generation journey from the first contact to the closed deal, using automated workflows. This cuts response time and conversion rates climb. 
+</p>
+            </div>
+            <div className="card"><span className="badge">2</span>
+                <div className="icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg>
+                </div>
+                <h3>Operations </h3>
+                 <p className="bold-text">Your week shouldn’t depend on who remembered what 
+</p><p>
+We build predictable workflows for recurring tasks, internal coordination and vendor follow-ups. This ensures your team knows exactly what to do and so do our experts. 
+</p>
+            </div>
+            <div className="card"><span className="badge">3</span>
+                <div className="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></svg>
+                </div>
+                <h3>Communication </h3>
+                <p className="bold-text">Unanswered emails are deals that don’t close
+</p>
+                <p>We handle your inbox, outreach campaigns and client updates using AI-assisted tools so that reporting is done on time, every time. Your clients feel the attention. 
+</p>
+            </div>
+            <div className="card"><span className="badge">4</span>
+                <div className="icon">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"></path><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path></svg>
+                </div>
+                <h3>Finance Ops </h3>
+         <p className="bold-text">Bookkeeping shouldn’t wait for you to have a free afternoon</p>
+
+<p>We keep invoices, reconciliation or expense tracking clear and current. This allows you to know where the business stands without the last-minute scramble. </p>
+
+
+
+
+            </div>
+            <div className="card"><span className="badge">5</span>
+                <div className="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+                </div>
+                <h3>Marketing Ops 
+</h3>
+                <p className="bold-text">Inconsistent presence is invisible presence 
+</p><p>
+We manage your content calendars, post scheduling and campaign coordination. This keeps your brand present in front of prospects, ensuring you’re already on their mind. 
+</p>
+            </div>
+            <div className="card"><span className="badge">6</span>
+                <div className="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-line w-4 h-4 text-ink" data-source-location="components/site/SystemicFlow:88:10" data-dynamic-content="false"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
+                </div>
+                <h3>Reporting</h3>
+                <p className="bold-text">Decisions made without data are just expensive guesses 
+</p>
+                <p>We build AI-powered dashboards and weekly reports so you always know what's working and what isn’t. Our focus is defined without spending hours pulling numbers. 
+</p>
+            </div>
+          
+         
+          
+        </div>
+    </div>
+</section>
+    <section
+      ref={sectionRef}
+      className={`hiringProcess ${isVisible ? "visible" : ""}`}
+    >
+                    <div className="container">
+                        <div className="row align-items-center mb-3">
+                            <div className="col-md-12 col-12">
+                                <div className="sectionHeading text-center">
+                                    <h2> Hire in Just 24 Hours - Quick & Simple</h2>
+                                    {/* <p>We are the largest, globally-distributed network of top business, design, and technology talent,<br/> ready to tackle your most important initiatives.</p> */}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row mt-5">
+                            <div className="col-md-4 col-12">
+                                    <div className="contentBx">
+                                       
+
+                                        <div className="numWrp">
+                                        <div className='arrow-light'>
+                                        <svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg>
+                                       
+                                       </div> 
+                                            <div className="hiringNum">1</div>
+                                            <div className="arrow-for"><svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg></div>
+                                        </div>
+                                        <h3>Tell Us What You Need</h3>
+                                        <p> Share your job role, required skills, and preferred working hours (full-time/part-time).</p>
+                                    </div>
+                           </div>
+                            <div className="col-md-4 col-12">
+                                    <div className="contentBx">
+                                        
+                                        <div className="numWrp">
+                                            <div className="hiringNum">2</div>
+                                            <div className="arrow-for"><svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg></div>
+                                        </div>
+                                        <h3>Get Matched Instantly</h3>
+                                        <p> We shortlist pre-vetted experts based on your exact needs. Review profiles, conduct quick interviews, and choose the best fit.</p>
+                                    </div>
+                            </div>
+                            <div className="col-md-4 col-12">
+                                    <div className="contentBx noArrow">
+                                        <div className="numWrp">
+                                            <div className="hiringNum">3</div>
+                                               <div className='arrow-light last-div'>
+                                        <svg viewBox="0 0 15 29" height="15" width="29" className="_3K4Dh5HC"><path d="m.707.707 13.678 13.678-13.678 13.677" fill="none" stroke="currentColor"></path></svg>
+                                       
+                                       </div>
+                                        </div>
+                                        <h3>Start in 24 Hours</h3>
+                                        <p>Once selected, your virtual professional is onboarded and ready to work within 24 hours—no setup hassle, just results!</p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+      
+
+          <VideoTestimonial></VideoTestimonial>
+
+
+<Videosection></Videosection>
+			
+		
+                <Testimonial serviceTestimonial={serviceTestimonial} />
+                <section className="blog">
+                    <div className="container">
+                        <div className="row mb-3">
+                            <div className="col-md-12 col-12">
+                                <div className="sectionHeading text-center">
+                                    <h2>Where Ideas Flourish</h2>
+                                    <p>Ensure outsourcing success from the start with key insider tips and trends for over 150 industries, right at your fingertips.</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div className="row mt-5">
+                                <div className="col-md-5 col-12">
+                                    <Link to={`/blog/${data?.data?.listing[0]?.post_name}`} className="d-block">
+                                        <div className="blogBx blogBig">
+                                            <div className="blogImg">
+                                                <img src={data?.data?.listing[0]?.banner} alt={data?.data?.listing[0]?.post_title}/>
+                                               <div className="blogAuthImg ff">
+  {
+    data?.data?.listing[0]?.display_name === "Pinka Sharma"
+      ? <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70" />
+      : data?.data?.listing[0]?.display_name === "Kumari Santosh"
+      ?     <img src="/images/Santosh.webp" alt="Kumari Santosh" />
+      : data?.data?.listing[0]?.display_name === "Suresh Sharma"
+      ? <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70" />
+      : <img src="/images/suresh.webp" alt="Default Author" width="70" height="70" />
+  }
+</div>
+                                            </div>
+                                            <div className="blogContent">
+                                                <h3>{data?.data?.listing[0]?.post_title}</h3>
+                                                <h5>By <b>{data?.data?.listing[0]?.display_name}</b></h5>
+                                                <p>{data?.data?.listing[0]?.post_content}</p>
+                                                <div className="d-flex justify-content-between">
+                                                    <h6>7 min read</h6>
+                                                    <button className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </div>
+                                <div className="col-md-7 col-12">
+                                    <div className="row g-4">
+                                        {
+                                            data?.data.listing?.map((blog, index)=>{
+                                                return(
+                                                    index !== 0 && index < 5 ? 
+                                                        <div className=" blog-home col-md-6 col-12" key={index}>
+                                                            <Link to={`/blog/${blog?.post_name}`}  className="d-block">
+                                                                <div className="blogBx blogSmall ggg">
+                                                                    <div className="blogImg">
+                                                                        <img src={blog.banner} alt={blog.post_title}/>
+                                                                        <div className="blogAuthImg ggggg">
+                                                                       {
+  blog?.display_name === "Pinka Sharma" ? (
+    <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
+  ) : blog?.display_name === "Kumari Santosh" ? (
+   <img src="/images/Santosh.webp" alt="Kumari Santosh"  width="70" height="70"/>
+  ) : (
+    <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
+  )
+}
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="blogContent">
+                                                                        <h3>{blog.post_title}</h3>
+                                                                        <h5>By <b>{blog.display_name}</b></h5>
+                                                                        <p dangerouslySetInnerHTML={{ __html: blog.post_content }}></p>
+                                                                        
+                                                                        <div className="d-flex justify-content-between">
+                                                                            <h6>7 min read</h6>
+                                                                            <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </Link>
+                                                        </div>
+                                                    : null
+                                                )
+                                            })
+                                        }
+                                    
+                                    </div>
+                                </div>
+                                <div className="col-12 mt-4">
+                                    <div className="text-center">
+                                        <Link to="/blog" className=" colorBtn wideBtn">Read More</Link>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </section>
+
+                <section className="Form-section-new">
+  <div className="container">
+<div className="form-flex-d">
+    <div className="hero-left">
+      <span className="hero-tag">Hire Remote Talent</span>
+
+      <h1>
+        Build Your Team With
+        <span class="word-slider">
+          <span>
+              <b>Virtual Assistants</b>
+            <b>Consultants</b>
+            <b>Designers</b>
+            <b>Developers</b>
+            <b>Marketers</b>
+            <b>Sales Experts</b>
+
+
+              <b>Virtual Assistants</b>
+            <b>Consultants</b>
+            <b>Designers</b>
+            <b>Developers</b>
+            <b>Marketers</b>
+            <b>Sales Experts</b>
+          </span>
+        </span>
+      </h1>
+
+      <p>
+Hire experienced remote professionals for your business — without full-time hiring costs.
+      </p>
+
+   <div class="benefits-box"><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>No long-term contracts</h4><p>Month-to-month, scale up or down any time</p></div></div><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>Transparent pricing from US $7/hr</h4><p>All-inclusive — no hidden fees</p></div></div><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>Dedicated resource model</h4><p>Your resource, your time zone, your tools</p></div></div><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>Free 1-week trial</h4><p>Try before you commit — zero risk</p></div></div></div>
+    </div>
+
+    <div class="hero-right">
+      <div class="form-cardn">
+     <ContactFormSingle />
+
+      </div>
+    </div>
+
+  </div>  </div>
+</section>
+          
+            
+            </HelmetProvider>
+        </React.Fragment>
+    )
+}
+export default TestHome;

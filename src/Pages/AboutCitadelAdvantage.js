@@ -2,7 +2,7 @@ import React,{useEffect} from "react";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
-
+import VideoTestimonial  from "../Component/VideoTestimonial";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const AboutCitadelAdvantage = () => {
@@ -960,152 +960,8 @@ section.citadelSection .card p {
        
       </div></div>
     </section>
+<VideoTestimonial></VideoTestimonial>
 
-<section className="citadel-testimonial">
-  <div className="container">
-
-    <h2>Client Success Stories</h2>
-
-    <Slider
-      dots={true}
-      arrows={true}
-      infinite={true}
-      speed={500}
-      slidesToShow={1}
-      slidesToScroll={1}
-      autoplay={true}
-      autoplaySpeed={3000}
-    >
-
-      {/* CARD 1 */}
-      <div>
-        <div className="testimonial-card">
-          <div className="quote"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-6 w-6 text-white" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg></div>
-          <span className="tag">HIRED – WEB DEVELOPER & MARKETING ASSISTANT
-</span>
-          <p className="text">
-            "We needed reliable support without going through long hiring cycles. Citadel Coworkers connected us with professionals who integrated
-             quickly with our internal workflows and started contributing almost immediately."
-          </p>
-          <div className="results">
-            <h4 class="text-lg font-semibold text-blue-200 mb-4">KEY RESULTS</h4>
-            <p>✔ Faster hiring for specialized roles</p>
-            <p>✔ Seamless integration with internal teams</p>
-              <p>✔ Reduced operational workload
-</p>
-          </div>
-		  
-		  	   <div className="footer">
-  <div className="client-info">
-
-    <img 
-      src="/images/clinet 2.webp" 
-      alt="client" 
-      className="client-img"
-    />
-
-    <div>
- <strong>Daniel Whitmore</strong>
-            <span>Chief Operating Officer<br></br>Digital Services Firm
-
-</span>
-    </div>
-
-  </div>
-</div>
-        
-        
-        </div>
-      </div>
-
-      {/* CARD 2 */}
-      <div>
-        <div className="testimonial-card">
-          <div className="quote"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-6 w-6 text-white" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg></div>
-          <span className="tag">HIRED – DIGITAL MARKETING SPECIALIST & VIRTUAL ASSISTANT
-</span>
-          <p className="text">
-            "Hiring locally for every role was becoming expensive and time-consuming. Citadel helped us access skilled professionals who handle execution tasks 
-            consistently, allowing our core team to stay focused on strategy and client growth."
-          </p>
-          <div className="results">
-            <h4 class="text-lg font-semibold text-blue-200 mb-4">KEY RESULTS</h4>
-            <p>✔Lower hiring and operational costs
-</p>
-            <p>✔ Reliable execution support
-</p>
-<p>✔ More time for strategic planning
-
-</p>
-          </div>
-		  
-		   <div className="footer">
-  <div className="client-info">
-
-    <img 
-      src="/images/Lauren Mitchell.webp" 
-      alt="client" 
-      className="client-img"
-    />
-
-    <div>
- <strong>Lauren Mitchell</strong>
-          <span>Founder<br></br>
-Marketing & Consulting Agency 
-</span>
-    </div>
-
-  </div>
-</div>
-         
-        </div>
-      </div>
-
-      {/* CARD 3 */}
-      <div>
-        <div className="testimonial-card">
-          <div className="quote"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote h-6 w-6 text-white" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg></div>
-          <span className="tag">HIRED – PHP DEVELOPER & QA TESTER</span>
-          <p className="text">
-            "As our projects grew, we needed a flexible way to expand the team without committing to permanent hires. Citadel Coworkers provided dependable professionals who helped us maintain delivery timelines while scaling operations."
-          </p>
-          <div className="results">
-            <h4 class="text-lg font-semibold text-blue-200 mb-4">KEY RESULTS</h4>
-            <p>✔ Flexible team scaling for projects
-</p>
-            <p>✔Flexible team scaling for projects
-</p>  <p>✔ Reduced hiring delays
-
-</p>
-          </div>
-
-          <div className="footer">
-  <div className="client-info">
-
-    <img 
-      src="/images/clinett1.webp" 
-      alt="client" 
-      className="client-img"
-    />
-
-    <div>
-      <strong>Christopher Bennett</strong>
-      <span>Managing Director<br></br>
-Technology Solutions Company
-</span>
-    </div>
-
-  </div>
-</div>
-        
-        </div>
-      </div>
-
-    </Slider>
-
-  </div>
-</section>
-           
                 <section className="bottom-sec">
                     <div className="container">
                         <div className="sectionHeading text-center">

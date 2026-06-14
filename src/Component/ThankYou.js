@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import VideoTestimonial  from "../Component/VideoTestimonial";
 import { useLocation, useNavigate } from "react-router-dom";
 const ThankYou = () => {
   const location = useLocation();
@@ -27,6 +27,7 @@ you’re welcome to call us at <a href="tel:+19294707990">+19294707990</a> or wr
 </p>
 <div className="text-center mt-3"><a className="colorBtn wideBtn" href="/contact-us" data-discover="true">Go to Home </a></div>
 </div></section>
+<VideoTestimonial></VideoTestimonial>
 <section className="bottom-cards">
     <div class="container">
     <div className="row">

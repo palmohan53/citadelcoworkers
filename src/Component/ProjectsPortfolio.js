@@ -165,8 +165,23 @@ export default function ProjectsPortfolio({
   return (
     <div className="pp-wrap">
       <div className="container">
+<div className="sectionHeading text-center">
 
-        {heading && <h2>{heading}</h2>}
+  <h2>
+    {data?.parent?.acf?.heading ||
+      heading ||
+      "Work We’re Proud Of"}
+  </h2>
+
+  <p className="pp-top-desc">
+    {data?.parent?.acf?.descption ||
+      "Showcasing Impactful Designs Created to Help Brands Grow and Stand Out"}
+  </p>
+
+</div>
+
+
+
 
         <div className="pp-slider port">
           <Slider {...sliderSettings}>

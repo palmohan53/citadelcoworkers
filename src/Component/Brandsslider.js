@@ -93,11 +93,7 @@ export default function FeaturedInMarqueeFixedLabel() {
   return (
     <>
       <style>{`
-        .fi-container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 16px;
-        }
+      
 
         .fi-row {
           display: flex;
@@ -107,7 +103,7 @@ export default function FeaturedInMarqueeFixedLabel() {
 
         .fi-label {
           min-width: 140px;
-          font-size: 14px;
+          font-size: 21px;
           font-weight: 700;
           letter-spacing: 1px;
         }
@@ -185,7 +181,7 @@ export default function FeaturedInMarqueeFixedLabel() {
 
       <div className="fi-container">
         <div className="fi-row">
-          <div className="fi-label">FEATURED IN</div>
+          <div className="fi-label">FEATURED <span class="greenText">IN</span></div>
 
           <div className="fi-marquee">
             <div className="fi-track">

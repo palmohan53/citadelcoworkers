@@ -546,9 +546,14 @@ button.close-btn
             row-gap: 49px;
 }
   .clientBx {
-    width: 47%;
+    width: 100%;
     min-height: 145px;
   }
+  .clientNum {
+    min-height: auto;
+    flex-direction: column;
+    width: 100% !important;
+}
   .clientBx p{
     height: 45px;
   }

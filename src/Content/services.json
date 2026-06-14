@@ -49,6 +49,7 @@
 						
                     }
                 ],
+
             "faq":[
                     {
                         "title": "01. Can virtual assistants help with specialized tasks?",
@@ -1156,7 +1157,8 @@
             ],
               "Contacttext":[
             {
-               "text": "Hire Real Estate VA"
+               "text": "Hire Real Estate VA",
+               "heading" : " Real Estate VA"
             }
         ],
          "Concludingtext":[
@@ -1266,7 +1268,8 @@
             
 		  "Contacttext":[
             {
-               "text": "Hire Data Entry Experts"
+               "text": "Hire Data Entry Experts",
+               "heading": "Data Entry Experts"
             }
         ],
 		 "Concludingtext":[
@@ -1380,7 +1383,8 @@
             ],
               "Contacttext":[
             {
-               "text": "Hire Research Analyst"
+               "text": "Hire Research Analyst",
+                "heading": "Research Analysts"
             }
         ],
          "Concludingtext":[
@@ -5684,7 +5688,7 @@
                         "imageUrl": "/images/satisfaction.webp",
                         "title": "Satisfaction",
                         "body": "98%",
-                        "flipcontent":" With repeat clients from US & UK"
+                        "flipcontent":"With repeat clients from US, UK, Canada & Australia"
                     },
                     {
                         "imageUrl": "/images/Experience.png",
@@ -5704,12 +5708,12 @@
                     },
                     {
                         "title": "03. Do you offer print design services for digital formats too? ",
-                        "body": "Absolutely, our print designers are proficient in digital output formats. When you hire a flyer designer specialist from our team you receive optimized files for both physical print and digital distribution. They include web resolution JPEGs and PNGs for digital challenges along with print resolution formats in PDFs for your vendors. "
+                        "body": "Absolutely, our print designers are proficient in digital output formats. When you <a href=\"/\">hire a designer from our team</a> you receive optimized files for both physical print and digital distribution. They include web resolution JPEGs and PNGs for digital challenges along with print resolution formats in PDFs for your vendors. "
 
                     },
                     {
                         "title": "04.  Is there a minimum commitment when I hire a print designer? ",
-                        "body": "No, we offer flexible hiring models starting from project based engagement with no minimum commitment. Whether you are looking to hire a packaging designer on retainer, full-time part-time or even on hourly basis, we have you covered. Our goal is to match the engagement model to your actual workload and budget.  "
+                        "body": "No, we offer <a href=\"/\">flexible hiring</a> models starting from project based engagement with no minimum commitment. Whether you are looking to hire a packaging designer on retainer, full-time part-time or even on hourly basis, we have you covered. Our goal is to match the engagement model to your actual workload and budget.  "
                     },
                     {
                         "title": "05. How do you ensure brand consistency across all print materials?",
@@ -5778,6 +5782,661 @@
             }
         ]
 		
-        }	
+        }	,
+		{
+            "categoryUrl": "hire-product-designer",
+            "categoryName": "Product Designer",
+            "pageMetaTitle": "Hire A Product Designer In India ",
+            "pageMetaContent": "Hire A Product Designer In India  experts in India starting at $8/hour.",
+           "useDynamicSections": true,
+           "sectionsOrder": [
+    "hero",
+    "number",
+	"UnderstandingProductDesigner",
+    "Services",
+    "TeamSection",
+	 "portfolioItems",
+	  "certifications",
+	   "ServiceBulkContentUpper",
+	     "ToolsSection",
+         "Comparison",
+         "ProductDesignerIndustrySection",
+         "WorkflowSection",
+	   "Testimonial",
+
+   "serviceSection",
+  "ServiceBulkContent",
+	
+    "faq",
+
+    "FeaturedInMarquee",
+ 
+    "pricing",
+       "ContactForm",
+  
+    "Icondesign",
+     "ConcludingSec"
+  ],
+        "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire A Product Designer In India ",
+                        "body": "Access top product designers who turn UX into revenue growth and build scalable design systems  - starts at $8/hour",
+                        "buttonText": "Get Your Product Designer Today"
+                        
+                    }
+                ],
+                "UnderstandingProductDesigner":{
+ "title": "Understanding The Role Of A Product Designer",
+ "des": "Product designers are professionals responsible for creating user-centered digital experiences by combining UX and UI design and usability testing to improve product performance. They help businesses bridge the gap between user needs and business goals which translates strategy into interfaces that people find intuitive, accessible and engaging."
+                },
+            "serviceHeading":[
+                    {
+                        "title": "Comprehensive Product Design Services For Measurable Growth ",
+                        "body": "Our product designers bring their expertise across research, strategy, visual design and usability. They turn your business goals into products that people genuinely want to use. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Our Product Design Edge In Numbers",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Dedicated Product Designers",
+                        "body": "10+",
+                        "flipcontent":"Expert team delivering user-focused design "
+                    },
+					  {
+                        "imageUrl": "/images/Projects.png",
+                        "title": "Faster Go-to-Market Cycles",
+                        "body": "3X",
+                        "flipcontent":"Faster launches without quality loss"
+                    },
+                    {
+                        "imageUrl": "/images/satisfaction.webp",
+                        "title": "Products Designed ",
+                        "body": "300+",
+                        "flipcontent":"Experience across different industries & products"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": "Client Retention Rate",   
+                        "body": "96%",
+                        "flipcontent":"Strong & long-term client relationships"
+                    }
+                ],
+				
+				
+				
+				"Comparison":	{
+  "title": "In-House Vs Offshore Product Designers: The Smarter Choice?",
+  "body": "When evaluating how to scale product design, businesses typically choose between building an in-house team or partnering with an offshore product design specialist. ",
+    "tableData": [
+
+
+	
+  {
+    "factor": "Cost",
+    "inHouseDesigner": "High with salary benefits + tools",
+    "citadelCoworkers": "Pay only for work done starting at $8"
+  },
+  {
+    "factor": "Hiring Time",
+    "inHouseDesigner": "Usual 30-60 days average time to fill",
+    "citadelCoworkers": "24-48 hours to match vetted designers"
+  },
+  {
+    "factor": "Flexibility",
+    "inHouseDesigner": "Fixed hours and fixed scope",
+    "citadelCoworkers": "Scale up or down based on project needs"
+  },
+  {
+    "factor": "Scalability",
+    "inHouseDesigner": "Rehiring is required for every growth phase",
+    "citadelCoworkers": "On-demand team expansion with no overhead"
+  },
+  {
+    "factor": "Design system expertise",
+    "inHouseDesigner": "Dependent on the individual hire’s background",
+    "citadelCoworkers": "Certified professionals with documented system delivery"
+  },
+  {
+    "factor": "Accessibility compliance",
+    "inHouseDesigner": "Varies and often starts deprioritised",
+    "citadelCoworkers": "WCAG 2.1 AA standard on every project"
+  },
+  {
+    "factor": "Scalability",
+    "inHouseDesigner": "Rehiring is required for every growth phase",
+    "citadelCoworkers": "On-demand team expansion with no overhead"
+  }
+  ]
+},
+
+            "faq":[
+                    {
+                        "title": "01. How do I know the product designs that match our brand and user expectations?",
+                        "body": "Every engagement begins with a deep discovery phase where we align on your brand guidelines, user personas and product goals. Our product designers create moodboards and style tiles for approval before they get started with UI design. All the designs are validated through usability testing with real users before handoff, so that you receive a product that has been proven to work. "
+                    },
+                    {
+                        "title": "02.  How quickly can I get my first design deliverables after starting? ",
+                        "body": "Most clients receive wireframes and research outputs within 5 to 7 business days. The timeline depends on the complexity of the brief, but our onboarding process is structured to move fast without sacrificing quality. We prioritise early visibility so that you can provide feedback and align on direction from the outset. "
+                    },
+                    {
+                        "title": "03.  What tools and file formats will you deliver? ",
+                        "body": "We use Figma and provide component-based design files that your team can manage. We also support Adobe XD and Sketch if your team requires it. Deliverables from our product designers include handoff documents, exported assets and specs. "
+
+                    },
+                    {
+                        "title": "04.  Can your designers work directly with our product and engineering teams? ",
+                        "body": "Yes, our designers work directly with product and engineering teams and regularly join sprint ceremonies, product reviews and engineering discussions. We use tools like Jira, Notion, Slack and Linear to mirror your existing workflow and deliver updates where your team already works."
+                    },
+                    {
+                        "title": "05. Will I be able to review the design at every stage or only receive the final output?",
+                        "body": "You’ll have complete visibility for each milestone, wireframes, clickable prototypes and final UI. We’ll share WIP files, hold regular review sessions and act on your feedback before moving on. We guarantee the final product matches your vision. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers Offshore Product Designer Specialists In India",
+      "body": "Businesses want design partners who deliver user-validated, on-brand products that drive real business outcomes. With Citadel Coworkers, you gain access to India’s top product design professionals who deliver studio-quality design work without the in-house overhead. ",
+      "centerImageUrl": "/images/productdesigner.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Designers matched to your exact product type & industry  " },
+    { "imageUrl": "", "body": "Research-led and outcome-focused design process " },
+    { "imageUrl": "", "body": "Parallel design and testing cycles for faster delivery " },
+    { "imageUrl": "", "body": "Scale output without managing or onboarding full-time staff" },
+    { "imageUrl": "", "body": "Focused on conversion, retention and user satisfaction metrics" },
+    { "imageUrl": "", "body": "Embedded execution that removes dependency on expensive agencies" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Product Designer "
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Product Designers & Build Products Your Users Love  ",
+			   "buttontext":"Hire Product Designer Now"
+            }
+        ]
+		
+        },
+		{
+            "categoryUrl": "hire-game-designers",
+            "categoryName": "Game Designers",
+            "pageMetaTitle": "Hire A Game Designers In India ",
+            "pageMetaContent": "Hire A Game Designers In India  experts in India starting at $8/hour.",
+           "useDynamicSections": true,
+           "sectionsOrder": [
+    "hero",
+    "number",
+	"UnderstandingProductDesigner",
+    "Services",
+    "TeamSection",
+    "GameDesignerCapabilities",
+	
+	  "certifications",
+  
+	   "ServiceBulkContentUpper",
+	     "ToolsSection",
+            
+         "Comparison",
+           "Testimonial",
+		   "portfolioItems",
+      "pricing",
+	 "serviceSection",
+  "ServiceBulkContent",
+	"GameDesignerIPProtection",
+    "faq",
+   "Blogs",
+    "FeaturedInMarquee",
+ 
+   
+       "ContactForm",
+  
+    "Icondesign",
+     "ConcludingSec"
+  ],
+        "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire A Game Designer In India  ",
+                        "body": "Turn your game into an experience with immersive gameplay and seamless UX that drives retention  - starts at $8/hour",
+                        "buttonText": " Get Your Game Designer "
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Game Design Services For Every Stage Of Development ",
+                        "body": "Our professional game designers create engaging mechanics and interfaces showcasing captivating visuals that make your game stand out. Our team integrates seamlessly into your workflow ensuring smoother collaboration. "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers Reflecting Our Game Design Edge",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Game Designers ",
+                        "body": "10+",
+                        "flipcontent":"Certified Experts in Game Design & Development "
+                    },
+					  {
+                        "imageUrl": "/images/Projects.png",
+                        "title": " Projects Delivered ",
+                        "body": "120+",
+                        "flipcontent":"Across Mobile & Entertainment Platforms"
+                    },
+                    {
+                        "imageUrl": "/images/satisfaction.webp",
+                        "title": "Concept-Aligned",
+                        "body": "100%",
+                        "flipcontent":" precise execution of your unique gameplay vision"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": "Client Satisfaction",   
+                        "body": "97%",
+                        "flipcontent":"Strong & long-term client relationships"
+                    }
+                ],
+                "UnderstandingProductDesigner":{
+ "title": "Understanding The Role Of A Game Designer ",
+ "des": "Game designers are the architects of player experience. Our professional game designer operates with a thorough understanding of behavioural psychology, interactive systems thinking, visual communication and technical production. Their work helps determine not just how a game looks, but how it feels, how long players stay and whether those players return. "
+                },
+				
+	"Comparison":	{
+  "title": "In-House vs Offshore Game Designers: The Smarter Choice?",
+  "body": "Staffing a game design team is one of the most consequential decisions a studio makes. The choice between building in-house and outsourcing game design specialists directly affects production timelines, design quality, cost per milestone and your ability to respond to live-ops data after launch. Here is how the two models compare across the dimensions that actually determine project outcomes. ",
+    "tableData": [
+
+
+	
+  {
+    "factor": "Cost",
+    "inHouseDesigner": "Full salary + benefits + tools + onboarding",
+    "citadelCoworkers": "Pay only for work done starting at $8"
+  },
+  {
+    "factor": "Hiring Time",
+    "inHouseDesigner": "30-90 days average for a senior game designer role",
+    "citadelCoworkers": "24-48 hours to match you with pre-vetted game designers"
+  },
+  {
+    "factor": "Genre & Platform Expertise",
+    "inHouseDesigner": "Limited to the background of whoever you hire, a mobile UX specialist may lack PC or console design experience",
+    "citadelCoworkers": "Access a bench of specialists across hyper-casual, mid-core, RPG, strategy and console genres without separate hires"
+  },
+  {
+    "factor": "GDD & Documentation Quality",
+    "inHouseDesigner": "Highly variable, dependent on the individual designer’s documentation standard & experience",
+    "citadelCoworkers": "Structured GDD delivery with defined templates, revision protocols and engineering-ready specifications"
+  },
+  {
+    "factor": "Retention-Focused UX",
+    "inHouseDesigner": "In-house UX designers rarely have direct access to live retention analytics in early–stage studios",
+    "citadelCoworkers": "Our game UX designers interpret DAU curves, funnel data and session logs to make design decisions"
+  },
+  {
+    "factor": "IP & NDA Protection",
+    "inHouseDesigner": "Covered by an employment contract but post-employment IP clauses vary significantly by jurisdiction and individual agreement",
+    "citadelCoworkers": "Full IP assignment and mutual NDA signed before first brief, all GDAs, art assets and design files transferred fully to you on delivery"
+  },
+  {
+    "factor": "Time Zone Coverage",
+    "inHouseDesigner": "Standard business hours only, no design output during off-hours",
+    "citadelCoworkers": "Extended overlap windows covering the US and UK time zones"
+  }
+  ]
+},
+
+
+            "faq":[
+                    {
+                        "title": "01.  What is the difference between a game designer and a game developer?",
+                        "body": "A game designer defines how a game works the systems, mechanics, player experience, economy, UI and level structure. A game developer builds those systems in an engine. When you <a href=\"/\">hire game designer talent from Citadel Coworkers</a>, you are engaging with a specialist in design documentation, player experience and game UI design. We also have professional game developers available if you need full production support. "
+                    },
+                    {
+                        "title": "02.  Can your team handle UI UX game design for both mobile and PC?",
+                        "body": "Yes, our UI UX design specialists work across mobile (iOS and Android), PC and console interface conventions. Mobile and PC require fundamentally different interaction models. Our designers are trained across both and document platform-specific UI specifications separately in all deliverables. "
+                    },
+                    {
+                        "title": "03.   Do you work with indie studios or only with larger publishers?",
+                        "body": "We work with both. <a href=\"/\">Hire game designer talent from CCW </a>is structured to serve indie teams that need a professional game designer on a limited budget and larger publishers that need to scale design capacity without adding permanent headcount. Our flexible hiring models cover project-based, part-time and full-time engagements. "
+
+                    },
+                    {
+                        "title": "04.  Can I hire game artist and game designers together from your team?",
+                        "body": "Yes, you can <a href=\"/\">hire both game artists and game designers</a> on the same project. We can assemble a paired team, a game designer for systems and documentation alongside a video game artist for concept art and visual assets. The two roles are managed under a single account manager to ensure design and visual direction remain aligned. "
+                    },
+                    {
+                        "title": "05. What if I want to outsource game design for a specific sprint or phase only?",
+                        "body": "Our project-based engagement is built for this. You can outsource game designer capacity for a single design phase, UI redesign, economy rebalancing or onboarding flow audit, without having to commit to an ongoing retainer. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Studios Trust Citadel Coworkers To Hire Game Designer Talent In India",
+      "body": "Game studios want design that moves production forward, not documentation that creates more questions. <a href=\"/\">CCW provides access to India’s top game design talent.</a> Our professionals have created real titles, designed systems that hold retention and delivered UI that players have praised in reviews. ",
+      "centerImageUrl": "/images/we.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Access to India’s top game design and game art talent " },
+    { "imageUrl": "", "body": "Cost-effective scaling without compromising design quality" },
+    { "imageUrl": "", "body": "24/7 workflow advantage for global game productions" },
+    { "imageUrl": "", "body": "Deep genre specialisation across casual, mid-core, hyper casual and strategy" },
+    { "imageUrl": "", "body": "Pre-vetted game designers and game artists with verified shipped titles " },
+    { "imageUrl": "", "body": "Full IP assignment and NDA protection on every engagement " }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Game Designer Today "
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Build Addictive, Player-Focused Games with Dedicated Game Designers in India ",
+			   "buttontext":"Hire Game Designer Now"
+            }
+        ]
+		
+        }
+,
+		{
+            "categoryUrl": "hire-animated-logo-designer",
+            "categoryName": "Logo Animation",
+            "pageMetaTitle": "Hire An Animated Logo Designer In India ",
+            "pageMetaContent": "Hire A Game Designers In India  experts in India starting at $8/hour.",
+           "useDynamicSections": true,
+           "sectionsOrder": [
+    "hero",
+    "number",
+	"UnderstandingProductDesigner",
+    "Services",
+    "TeamSection",
+    "LogoMotionDesignerCompetencies",
+	
+	  "certifications",
+  
+	   "ServiceBulkContentUpper",
+	     "ToolsSection",
+            
+         "Comparison",
+           "Testimonial",
+		
+      "pricing",
+	 "serviceSection",
+  "ServiceBulkContent",
+	"LogoanimationIPProtection",
+    "faq",
+   "Blogs",
+    "FeaturedInMarquee",
+ 
+   
+       "ContactForm",
+  
+    "Icondesign",
+     "ConcludingSec"
+  ],
+        "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire An Animated Logo Designer In India ",
+                        "body": "Transform your brand with animated logo designs that grab attention and build instant recognition across all platforms  - starts at $7/hour",
+                        "buttonText": "Get Your Animated Logo Designer"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Full-Spectrum Logo Animation Services For Every Stage Of Your Brand ",
+                        "body": "Our professional animated logo designers create motion identities and logo animations that make your brand stand out across every platform. Our team integrates seamlessly into your workflow, ensuring consistent quality and smoother collaboration from concept to final delivery.  "
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers Reflecting Our Animated Logo Design Edge",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Logo Motion Designers",
+                        "body": "10+",
+                        "flipcontent":"Certified Experts in Animated Logo Design"
+                    },
+					  {
+                        "imageUrl": "/images/Projects.png",
+                        "title": "Projects Delivered ",
+                        "body": "160+",
+                        "flipcontent":"Across Brand Identity and Broadcast Platforms"
+                    },
+                    {
+                        "imageUrl": "/images/satisfaction.webp",
+                        "title": "Clients Satisfaction",
+                        "body": "97%",
+                        "flipcontent":"Delivering Consistent Quality for Global Brands"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": "Brand-Aligned",   
+                        "body": "100%",
+                        "flipcontent":"Precise Execution of Unique Visual Identity in Motion"
+                    }
+                ],
+                "UnderstandingProductDesigner":{
+ "title": "Understanding The Role Of An Animated Logo Designer ",
+ "des": "An animated logo designer is more than a motion graphics artist. Our professional logo motion designers operate with a deep understanding of brand identity, visual storytelling, timing principles and technical delivery formats. Their work determines not just how your logo looks, but also how it moves, how your audience feels when they see it and whether it sticks in memory long after the screen goes dark. From a simple animated business logo for social media to a full 3D logo animation for broadcast, every frame is intentional. "
+                },
+				
+	"Comparison":	{
+  "title": "In-House Vs Offshore Logo Animation: Which Is The Smarter Choice ",
+  "body": "Choosing how to staff your logo animation needs is a decision that directly affects your brand timelines, creative quality, cost-per deliverable and ability to scale. Here is how the two models compare across the dimensions that actually determine outcomes. ",
+    "tableData": [
+
+
+	
+  {
+    "factor": "Cost",
+    "inHouseDesigner": "Responsible for paying the full salary along with benefits, software licences and onboarding costs",
+    "citadelCoworkers": "Pay only for the animation work delivered as $9/hour without worrying about other overhead"
+  },
+  {
+    "factor": "Hiring Time",
+    "inHouseDesigner": "50 days is the average time required to hire a senior logo motion designer",
+    "citadelCoworkers": "24-48 hours to match you with a pre-vetted animated logo designer"
+  },
+  {
+    "factor": "Style Range",
+    "inHouseDesigner": "Limited to the background of whoever you hire (a 2D specialist may lack 3D logo animation experience)",
+    "citadelCoworkers": "Access a bench of specialists across 2D, 3D logo animation, logo motion graphics and brand identity motion "
+  },
+  {
+    "factor": "Brand Documentation",
+    "inHouseDesigner": "Highly variable, depending on the individual designer’s documentation standards.",
+    "citadelCoworkers": "Structured motion design documentation with defined specs, revision protocols and platform-ready files"
+  },
+  {
+    "factor": "IP & NDA Protection ",
+    "inHouseDesigner": "Covered by an employment contract, but post-employment IP clauses vary by jurisdiction",
+    "citadelCoworkers": "Full IP assignment and mutual NDA signed before the first brief; all animation files are transferred fully to you on delivery"
+  }
+  ]
+},
+
+
+
+            "faq":[
+                    {
+                        "title": "01.  Do you animate the static logo we have or redesign it?",
+                        "body": "We animate what you have. Our motion designers work from your existing brand files - AI, EPS or SVG and build animations that respect the mark as designed. If your logo has structural issues that make it difficult to animate cleanly. We make sure to flag that in the brief review before work begins."
+                    },
+                    {
+                        "title": "02. What is the difference between an animated logo designer and a motion graphics artist? ",
+                        "body": "An animated logo designer specialises in brand identity motion, bringing a specific logo mark to life across digital, broadcast and social platforms in a way that reinforces brand values. A general motion graphics artist works across a broader range of content, including explainer videos, typography and infographics. "
+                    },
+                    {
+                        "title": "03. Can your team deliver both 2D animated logos and 3D logo animations? ",
+                        "body": "Yes, our team includes dedicated 2D logo motion designers and 3D logo animation maker specialists. We can deliver either discipline separately or combine them, for example, a 2D animated business logo for social media alongside a 3D logo intro maker sequence for video and broadcast. All formats and output specs are handled under a single brief. "
+
+                    },
+                    {
+                        "title": "04. How do you ensure the animation actually matches our brand guidelines?",
+                        "body": "Every project starts with a motion brief. We map your existing brand guidelines to motion principles like easing, timing and pace before a single frame is built. If you don’t have a motion guidelines document, we help you create one as part of the engagement so that all future animation stays consistent regardless of who produces it. "
+                    },
+                    {
+                        "title": "05.  Who owns the animation files and source project after delivery?",
+                        "body": "Full IP transfer is included at the end of every engagement. You receive all final deliverables, the After Effects or relevant source project files and any custom assets created during production. There are no licensing fees, usage restrictions or dependencies on our team for future benefits. "
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers To Hire Animated Logo Design Talent In India",
+      "body": "Brand teams want logo motion that moves production forward and strengthens brand equity and not animation that needs to be redone after client review. CCW provides access to India’s top logo motion designers and animated logo specialists.",
+      "centerImageUrl": "/images/dd (10).webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Access to India’s top animated logo designers & 3D logo animation specialists" },
+    { "imageUrl": "", "body": "Cost-effective logo animation services without compromising on motion quality" },
+    { "imageUrl": "", "body": "24/7 workflow advantage for global brand productions" },
+    { "imageUrl": "", "body": "Deep specialisation across brand motion systems" },
+    { "imageUrl": "", "body": "Pre-vetted logo motion designers with verified brand portfolios " },
+    { "imageUrl": "", "body": "Full IP assignment and NDA protection on every engagement" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire an Animation Logo Designer Today ",
+               "heading":"Animation Logo Designers"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Pre-Vetted Logo Animation Specialists From India And Get High-Quality Motion Design Support ",
+			   "buttontext":"Hire An Animated Logo Designer"
+            }
+        ]
+		
+        }		
     ]
 }

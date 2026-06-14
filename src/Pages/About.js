@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import VideoTestimonial  from "../Component/VideoTestimonial";
 const About = () => {
  let settings = {
         dots: false,
@@ -297,7 +298,7 @@ const About = () => {
   </div>
 </section>
 
-
+<VideoTestimonial></VideoTestimonial>
 
 
     <section className="industriesServed about-us">
@@ -380,6 +381,7 @@ const About = () => {
   </div>
         
 </section>
+
 
     </div>
   );

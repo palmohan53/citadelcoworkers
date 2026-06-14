@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef, Suspense} from "react";
 import { useLocation } from "react-router-dom";
-
+ 
 import { Link } from 'react-router-dom';
  import CountUp from 'react-countup';
 import axios from "axios";
@@ -32,6 +32,14 @@ import VideoEditorSkillsSection from "../Component/VideoEditorSkillsSection";
 import IndustriesSection from "../Component/3DIndustriesSection";
 import WorkflowSplit from "../Component/process3DAnimation";
 import BrandAssets from "../Component/Brand AssetsPrinkpackingpage";
+import UnderstandingProductDesigner  from "../Component/ProductDesignerRole";
+import ProductDesignerComparison from "../Component/ProductcomparisonData";
+import ProductDesignerIndustrySection from "../Component/ProductDesignerIndustrySection";
+import WorkflowSection from '../Component/ProductDesignerpageWorkflow';
+import GameDesignerCapabilities from '../Component/GameDesignerCapabilities'
+import GameDesignerIPProtection from '../Component/GameDesignerIPProtection';
+import LogoMotionDesignerCompetencies from '../Component/CompetenciesLOGOMOTIONDESIGNE';
+import LogoanimationIPProtection   from "../Component/LogoanimationIPProtection";
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
@@ -78,6 +86,7 @@ const [casestudyData , setCasestudyData] = useState({
   listing: []
 });
 const concluding = serviceContent?.[0]?.Concludingtext?.[0] || {};
+
 const concludingText = (concluding?.text || "").trim();
 const concludingBtnText = (concluding?.buttontext || "").trim();
 const shouldShowServiceBulkContent =
@@ -827,12 +836,7 @@ CasestudyData: () => {
 
 
   portfolioItems:  <section className="bg_light_1">
-      <div className="sectionHeading text-center">
-        <h2>Work We’re Proud Of</h2>
-        <p>
-          Showcasing Impactful Designs Created to Help Brands Grow and Stand Out
-        </p>
-      </div>
+   
 
       <ProjectsPortfolio
         subService={subService}
@@ -879,6 +883,83 @@ SkillsSection: () => {
 },
 
   faq:      <Faq faqData={faqData}/>,
+  GameDesignerCapabilities: <GameDesignerCapabilities />,
+  LogoMotionDesignerCompetencies:<LogoMotionDesignerCompetencies />,
+  LogoanimationIPProtection: <LogoanimationIPProtection />,
+UnderstandingProductDesigner: (
+
+      <section className="Product-design-new-section">
+
+        <div className="container">
+      <div className="">
+        
+      <div className="sectionHeading text-center "><h2> {serviceContent?.[0]?.UnderstandingProductDesigner?.title}
+</h2></div>
+
+       
+
+    
+        <p className="text-lg leading-[2] text-[#555] max-w-4xl mx-auto">
+        {serviceContent?.[0]?.UnderstandingProductDesigner?.des}
+        </p>
+      </div>
+      </div>
+    </section>
+
+
+),
+  Comparison:(
+  <section className="comparison-section">
+
+      <div className="container">
+<div class="sectionHeading text-center mb-5"><h2>{serviceContent?.[0]?.Comparison?.title}</h2><p>When evaluating how to scale product design, businesses typically choose between building an in-house team or partnering with an offshore product design specialist. 
+</p></div>
+     <div class="comparison-table">
+
+
+      <div class="table-row table-head">
+        <div class="table-cell factor">Factor</div>
+        <div class="table-cell">In-House Designer</div>
+        <div class="table-cell active">Citadel Coworkers</div>
+      </div>
+
+        
+
+  {serviceContent?.[0]?.Comparison?.tableData?.map((item, index) => (
+  <div className="table-row" key={index}>
+    
+    <div className="table-cell factor-title">
+      <span>{item.factor}</span>
+    </div>
+
+    <div className="table-cell">
+      {item.inHouseDesigner}
+    </div>
+
+    <div className="table-cell active-text">
+      {item.citadelCoworkers}
+    </div>
+
+  </div>
+))}
+      
+
+  
+
+
+   
+
+    </div>
+
+       
+
+      </div>
+
+    </section>
+  ),
+  GameDesignerIPProtection:<GameDesignerIPProtection></GameDesignerIPProtection>,
+  ProductDesignerIndustrySection:<ProductDesignerIndustrySection></ProductDesignerIndustrySection>,
+  WorkflowSection:<WorkflowSection />,
 
   ContactForm: ( <section ref={contactref} id="contactFormSection">
               <ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
@@ -949,7 +1030,13 @@ ServiceBulkContent:
           {iconHeadingArr.map((data, index) => (
             <div className="sectionHeading text-center mb-4" key={index}>
               {data?.title?.trim() && <h2>{data.title}</h2>}
-              {data?.body?.trim() && <p>{data.body}</p>}
+         {data?.body?.trim() && (
+  <p
+    dangerouslySetInnerHTML={{
+      __html: data.body,
+    }}
+  />
+)}
             </div>
           ))}
 
@@ -1184,11 +1271,7 @@ ConcludingSec:(  <section className="bottomCon">
 )}
 {portfolioItems?.length > 0 && (
   <section className="bg_light_1">
-    <div className="sectionHeading text-center">
-         <h2>Work We’re Proud Of</h2>
-      <p>Showcasing Impactful Designs Created to Help Brands Grow and Stand Out</p>
-   
-    </div>
+
 
     <ProjectsPortfolio 
       subService={subService} 
@@ -1293,7 +1376,13 @@ ConcludingSec:(  <section className="bottomCon">
         {iconHeadingArr.map((data, index) => (
           <div className="sectionHeading text-center mb-4" key={index}>
             {data?.title?.trim() && <h2>{data.title}</h2>}
-            {data?.body?.trim() && <p>{data.body}</p>}
+  {data?.body?.trim() && (
+  <p
+    dangerouslySetInnerHTML={{
+      __html: data.body,
+    }}
+  />
+)}
           </div>
         ))}
 
@@ -1352,6 +1441,7 @@ ConcludingSec:(  <section className="bottomCon">
     </div>
   </div>
 </section>
+
  </>
 )}
 {isDynamic && (
