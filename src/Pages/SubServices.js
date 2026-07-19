@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef, Suspense} from "react";
 import { useLocation } from "react-router-dom";
- 
+ import ContactFormSingle from "../Component/singlecontactform";
 import { Link } from 'react-router-dom';
  import CountUp from 'react-countup';
 import axios from "axios";
@@ -37,9 +37,11 @@ import ProductDesignerComparison from "../Component/ProductcomparisonData";
 import ProductDesignerIndustrySection from "../Component/ProductDesignerIndustrySection";
 import WorkflowSection from '../Component/ProductDesignerpageWorkflow';
 import GameDesignerCapabilities from '../Component/GameDesignerCapabilities'
+import CharacteranimationIndesurty from '../Component/CartooncharacterIndustries'
 import GameDesignerIPProtection from '../Component/GameDesignerIPProtection';
 import LogoMotionDesignerCompetencies from '../Component/CompetenciesLOGOMOTIONDESIGNE';
 import LogoanimationIPProtection   from "../Component/LogoanimationIPProtection";
+import ExtraSection from "../Component/Extrasection"
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
@@ -255,6 +257,8 @@ useEffect(() => {
     setPortfolioLoading(false);
   }
 };
+const [extraSection, setExtraSection] = useState(null);
+
 
    const getProfileList = async () => {
     let apiUrl = `${API_HOST}${API_ENDPOINTS.serviceProfile}${subService}`;
@@ -554,7 +558,8 @@ console.log("Service Section Data:", subService, '---------', serviceDetails, se
             getCertificationSection();
               getPortfolio();
 			  getCaseStudy();
-        getSkillset()
+        getSkillset();
+        
         }
         //eslint-disable-next-line
     }, [subService, serviceDetails])
@@ -884,6 +889,7 @@ SkillsSection: () => {
 
   faq:      <Faq faqData={faqData}/>,
   GameDesignerCapabilities: <GameDesignerCapabilities />,
+  CharacteranimationIndesurty: <CharacteranimationIndesurty />,
   LogoMotionDesignerCompetencies:<LogoMotionDesignerCompetencies />,
   LogoanimationIPProtection: <LogoanimationIPProtection />,
 UnderstandingProductDesigner: (
@@ -961,9 +967,81 @@ UnderstandingProductDesigner: (
   ProductDesignerIndustrySection:<ProductDesignerIndustrySection></ProductDesignerIndustrySection>,
   WorkflowSection:<WorkflowSection />,
 
-  ContactForm: ( <section ref={contactref} id="contactFormSection">
-              <ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
-            </section>),
+  ContactForm: ( 
+   <section className="Form-section-new">
+  <div className="container">
+<div className="form-flex-d">
+    <div className="hero-left">
+      <span className="hero-tag"> 1 WEEK FREE TRIAL</span>
+
+      <h1>
+        Build Your Team With 
+        <span class="hero-heading">
+          <span>
+             {serviceContent[0]?.Contacttext?.[0]?.heading}
+          </span>
+        </span>
+      </h1>
+
+      <p>
+Every professional screened, tested, and matched to fit your team's exact needs
+      </p>
+<div className="pointers-form">
+    <ul>
+        <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 120+ Industry Domains Served
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Free Replacement Guarantee
+        </li>
+
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 24/7 Real-Time Monitoring
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Time-Zone Aligned Coworkers
+        </li>
+    </ul>
+</div>
+   <div class="benefits-box"><div class="benefit-item">
+    <span class="check-icon">
+      <img src="/images/nda1.webp"></img>
+            </span><div><h4>  <b>NDA-Signed</b><br></br>
+    <span>From Day One</span> </h4></div></div>
+	
+	<div class="benefit-item">
+			<span class="check-icon"><img src="/images/badge.webp" alt="sss"></img></span><div><h4><b>ISO 27001</b><br></br>
+    <span>Certified</span></h4></div></div>
+			
+			
+			<div class="benefit-item"><span class="check-icon"><img src="/images/star.webp"></img></span><div><h4><b>Trustpilot 4.8/5</b><br></br> <span> 100+ Businesses</span></h4></div></div>
+
+			
+			
+			</div>
+    </div>
+
+    <div class="hero-right">
+      <div class="form-cardn">
+     <ContactFormSingle buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
+
+      </div>
+    </div>
+
+  </div>  </div>
+</section>
+),
             Blogs:<RecentBlog />,
  pricing:   <Pricing handleScrollClick={handleScrollClick}/>,
 ServiceBulkContent:
@@ -1316,9 +1394,85 @@ ConcludingSec:(  <section className="bottomCon">
 )}
              
             <Faq faqData={faqData}/>
-            <section ref={contactref} id="contactFormSection">
-              <ContactForm buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
-            </section>
+
+
+
+   <section className="Form-section-new">
+  <div className="container">
+<div className="form-flex-d">
+    <div className="hero-left">
+      <span className="hero-tag"> 1 WEEK FREE TRIAL</span>
+
+      <h1>
+        Build Your Team With 
+        <span class="hero-heading">
+          <span>
+             {serviceContent[0]?.Contacttext?.[0]?.heading}
+          </span>
+        </span>
+      </h1>
+
+      <p>
+Every professional screened, tested, and matched to fit your team's exact needs
+      </p>
+<div className="pointers-form">
+    <ul>
+        <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 120+ Industry Domains Served
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Free Replacement Guarantee
+        </li>
+
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 24/7 Real-Time Monitoring
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Time-Zone Aligned Coworkers
+        </li>
+    </ul>
+</div>
+   <div class="benefits-box"><div class="benefit-item">
+    <span class="check-icon">
+      <img src="/images/nda1.webp"></img>
+            </span><div><h4>  <b>NDA-Signed</b><br></br>
+    <span>From Day One</span> </h4></div></div>
+	
+	<div class="benefit-item">
+			<span class="check-icon"><img src="/images/badge.webp" alt="sss"></img></span><div><h4><b>ISO 27001</b><br></br>
+    <span>Certified</span></h4></div></div>
+			
+			
+			<div class="benefit-item"><span class="check-icon"><img src="/images/star.webp"></img></span><div><h4><b>Trustpilot 4.8/5</b><br></br> <span> 100+ Businesses</span></h4></div></div>
+
+			
+			
+			</div>
+    </div>
+
+    <div class="hero-right">
+      <div class="form-cardn">
+     <ContactFormSingle buttonText={serviceContent[0]?.Contacttext?.[0]?.text} />
+
+      </div>
+    </div>
+
+  </div>  </div>
+</section>
+
+          
+
            
             <RecentBlog />
          {shouldShowBottomServices && (

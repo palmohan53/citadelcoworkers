@@ -605,18 +605,19 @@ h2{
 
               <article className="team-card card-hover">
                 <div className="image-wrap">
-                  <img src="/images/Akansha.png" alt="Akansha Sharma" />
+                  <img src="/images/aks.webp" alt="Akansha Sharma" />
                   <a href="#" className="linkedin">in</a>
                 </div>
                 <div className="team-info">
                   <h3>Akansha Sharma</h3>
-                  <p>Senior Manager Digital Marketing</p>
+                  <p>Senior Manager, Digital Marketing
+</p>
                 </div>
               </article>
 
               <article className="team-card card-hover">
                 <div className="image-wrap">
-                  <img src="/images/Meenu-Singh.png" alt="Ashmeet Kaur" />
+                  <img src="/images/meenu-team.webp" alt="Ashmeet Kaur" />
                   <a href="#" className="linkedin">in</a>
                 </div>
                 <div className="team-info">
@@ -638,7 +639,7 @@ h2{
 
               <article className="team-card card-hover">
                 <div className="image-wrap">
-                  <img src="/images/Akshat-new.png" alt="Akshat Varshney" />
+                  <img src="/images/ak.webp" alt="Akshat Varshney" />
                   <a href="#" className="linkedin">in</a>
                 </div>
                 <div className="team-info">
@@ -649,7 +650,7 @@ h2{
 
               <article className="team-card card-hover">
                 <div className="image-wrap">
-                  <img src="/images/mansij-new.png" alt="Mansij Kureel" />
+                  <img src="/images/mansij.webp" alt="Mansij Kureel" />
                   <a href="#" className="linkedin">in</a>
                 </div>
                 <div className="team-info">
@@ -660,7 +661,7 @@ h2{
 
               <article className="team-card card-hover">
                 <div className="image-wrap">
-                  <img src="/images/PoonamHR.png" alt="Poonam Sharma" />
+                  <img src="/images/poo.webp" alt="Poonam Sharma" />
                   <a href="#" className="linkedin">in</a>
                 </div>
                 <div className="team-info">
@@ -687,12 +688,10 @@ h2{
 
         <section className="section voices center">
           <div className="container">
-            <div className="eyebrow">Voices From The Team</div>
-            <h2>Hear It From Our Team</h2>
-            <p className="lead">
-              Glimpse from candid conversations about craft, coworking and what
-              drives us every day.
-            </p>
+    
+            <h2>Message Straight From Our HR Head
+</h2>
+           
           </div>
         </section>
 

@@ -29,15 +29,21 @@ const Header = () => {
     }
     const { data:serviceMenu } = useQuery("serviceMenu", getServiceList);
 
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY < 50) {
-                setscrolltopdata('');
-            } else {
-                setscrolltopdata('scrolled');
-            }
-        });
-    }, [])
+ useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY < 50) {
+      setscrolltopdata("");
+    } else {
+      setscrolltopdata("scrolled");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
 
     
     return(
@@ -73,6 +79,13 @@ const Header = () => {
     <NavLink className="nav-link" to="/our-mission">
       Our Mission
     </NavLink>
+  <NavLink className="nav-link" to="/interview-with-co-founder">
+Interview with Co-Founder
+    </NavLink>
+   
+      <NavLink className="nav-link" to="/why-ccw">
+    Why Citadel Coworkers
+    </NavLink>
   </li>
   
      <li onClick={openToggle}>
@@ -84,6 +97,11 @@ const Header = () => {
      <li onClick={openToggle}>
     <NavLink className="nav-link" to="/how-does-citadel-works">
       How Does Citadel Works
+	  </NavLink>
+  </li>
+       <li onClick={openToggle}>
+    <NavLink className="nav-link" to="/pricing">
+      Pricing
 	  </NavLink>
   </li>
                                     </ul>

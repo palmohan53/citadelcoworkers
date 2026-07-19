@@ -68,7 +68,7 @@
   background: #1749d5;
   color: #fff;
 }
-section#Form-scroll .getInTouch {
+.Form-scroll .getInTouch {
     background: nona !important;
 }
 .call-btn {
@@ -352,7 +352,7 @@ section.wave-bg {
 }
 
 @media (max-width: 768px) {
-  section#Form-scroll .getInTouch .col-lg-12.col-12 {
+.Form-scroll .getInTouch   .col-lg-12.col-12 {
     padding: 0px;
 }
   .finance-stats-bar {
@@ -428,7 +428,7 @@ section.wave-bg {
   }
 }
 
-section#Form-scroll .getInTouch {
+.Form-scroll .getInTouch {
     background: none !important;
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
@@ -9,11 +9,11 @@ import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
-import Testimonial from "../Component/Testimonial";
+import ContactFormSingle from "../Component/singlecontactform";
 import BannerContent from '../Component/BannerContent';
-import FeaturedInMarquee  from '../Component/Brandsslider';
-import VideoTestimonial from "../Component/VideoTestimonial";
-import Videosection  from "../Component/Videosechome"
+
+
+
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -34,7 +34,10 @@ const getProfileList = async () => {
     const data = await response;
     return data;
 }
-
+const FeaturedInMarquee = lazy(() => import("../Component/Brandsslider"));
+const Testimonial = lazy(() => import("../Component/Testimonial"));
+const VideoTestimonial = lazy(() => import("../Component/VideoTestimonial"));
+const Videosection = lazy(() => import("../Component/Videosechome"));
 const Home = () => {
     const { data, status } = useQuery("blog", getBlogList);
     const { data:services } = useQuery("service", getServiceList);
@@ -82,7 +85,8 @@ const Home = () => {
         infinite: true,
         fade: true,
         autoplay: true,
-        speed: 1500,
+        speed: 400,
+         autoplaySpeed: 4000,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
@@ -90,9 +94,7 @@ const Home = () => {
         // getBlogList()
         window.scrollTo(0, 0)
       }, [])
-      if (status === 'loading') {
-        return <div className="loaderWrp"><span className="loader"></span></div>
-      }
+  
     return(
         <React.Fragment>
             <HelmetProvider>
@@ -111,7 +113,7 @@ const Home = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta" />
+                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/> Full Stack Developer</h6>
@@ -126,7 +128,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="Isha Verma" />
+                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="Isha Verma" loading="lazy"
+decoding="async"/>
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
@@ -142,7 +145,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="Rohit Nair" />
+                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="Rohit Nair" loading="lazy"
+decoding="async" />
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
@@ -158,7 +162,8 @@ const Home = () => {
                                     </div>
 
                                     <div className="bannerProfile">
-                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="Kavita Sharma" />
+                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="Kavita Sharma" loading="lazy"
+decoding="async" />
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Accountant</h6>
@@ -173,7 +178,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="Arjun Kapoor" />
+                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="Arjun Kapoor"  loading="lazy"
+decoding="async" />
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
@@ -187,7 +193,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="Neha Joshi" />
+                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="Neha Joshi"  loading="lazy"
+decoding="async"/>
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Content Writer</h6>
@@ -211,7 +218,9 @@ const Home = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
-               <section className="serviceb bg-dark" id="FREA"><div className="container"><FeaturedInMarquee /></div></section>
+               <section className="serviceb bg-dark" id="FREA"><div className="container"><Suspense fallback={null}>
+   <FeaturedInMarquee />
+</Suspense></div></section>
  
                 <section className="service home-page" id="servicesSec">
                     <div className="container">
@@ -531,7 +540,7 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
                     </div>
                 </section>
 
-      
+      <Suspense fallback={null}>
 
           <VideoTestimonial></VideoTestimonial>
 
@@ -540,6 +549,95 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
 			
 		
                 <Testimonial serviceTestimonial={serviceTestimonial} />
+                </Suspense>
+
+                               <section className="Form-section-new">
+  <div className="container">
+<div className="form-flex-d">
+    <div className="hero-left">
+      <span className="hero-tag"> 1 WEEK FREE TRIAL</span>
+
+      <h1>
+        Build Your Team With
+        <span class="word-slider">
+          <span>
+              <b>Virtual Assistants</b>
+            <b>Consultants</b>
+            <b>Designers</b>
+            <b>Developers</b>
+            <b>Marketers</b>
+            <b>Sales Experts</b>
+
+
+              <b>Virtual Assistants</b>
+            <b>Consultants</b>
+            <b>Designers</b>
+            <b>Developers</b>
+            <b>Marketers</b>
+            <b>Sales Experts</b>
+          </span>
+        </span>
+      </h1>
+
+      <p>
+Every professional screened, tested, and matched to fit your team's exact needs
+      </p>
+<div className="pointers-form">
+    <ul>
+        <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 120+ Industry Domains Served
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Free Replacement Guarantee
+        </li>
+
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 24/7 Real-Time Monitoring
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Time-Zone Aligned Coworkers
+        </li>
+    </ul>
+</div>
+   <div class="benefits-box"><div class="benefit-item">
+    <span class="check-icon">
+      <img src="./images/nda1.webp"></img>
+            </span><div><h4>  <b>NDA-Signed</b><br></br>
+    <span>From Day One</span> </h4></div></div>
+	
+	<div class="benefit-item">
+			<span class="check-icon"><img src="./images/badge.webp"></img></span><div><h4><b>ISO 27001</b><br></br>
+    <span>Certified</span></h4></div></div>
+			
+			
+			<div class="benefit-item"><span class="check-icon"><img src="./images/star.webp"></img></span><div><h4><b>Trustpilot 4.8/5</b><br></br> <span> 100+ Businesses</span></h4></div></div>
+
+			
+			
+			</div>
+    </div>
+
+    <div class="hero-right">
+      <div class="form-cardn">
+     <ContactFormSingle />
+
+      </div>
+    </div>
+
+  </div>  </div>
+</section>
+               
                 <section className="blog">
                     <div className="container">
                         <div className="row mb-3">
@@ -631,9 +729,9 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
                             </div>
                     </div>
                 </section>
-                <div ref={contactref}>
-                    <ContactForm />
-                </div>
+
+                
+ 
             
             </HelmetProvider>
         </React.Fragment>

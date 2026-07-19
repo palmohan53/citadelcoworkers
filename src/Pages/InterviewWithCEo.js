@@ -190,7 +190,20 @@ What’s the future of remote staffing services and global teams?
 
         <div class="interview-intro-right">
 
-        <div class="hero-interview-card"><div class="hero-interview-quote">❝</div><div class="hero-interview-content"><span>IN CONVERSATION</span><h3>Suresh Sharma</h3><p>Co-founder, Citadel Coworkers</p></div><div class="hero-interview-dots"></div><img src="https://virtualassistant24x7.com/wp-content/uploads/2026/05/suresh-1.webp" alt="" class="hero-interview-image"/></div>
+        <div class="hero-interview-card">
+          <div class="hero-interview-quote">❝</div>
+          <div class="hero-interview-content"><span>IN CONVERSATION</span><h3>Suresh Sharma</h3>
+          <p>Co-founder, Citadel Coworkers</p><a href="https://www.linkedin.com/in/suresh-sharma-082769266/?isSelfProfile=false" className="link-su"><img src="./images/linkedin-sur.webp"></img></a></div><div class="hero-interview-dots"></div>
+          
+          <img src="https://virtualassistant24x7.com/wp-content/uploads/2026/05/suresh-1.webp" alt="" class="hero-interview-image"   loading="eager"
+  fetchpriority="high"
+  decoding="async"
+  width="400"
+  height="450"
+  alt="Suresh Sharma"/>
+          
+          
+          </div>
 
         </div>
 
@@ -419,16 +432,18 @@ What’s the future of remote staffing services and global teams?
 
             <div class="issue-line"></div>
 
-          <p> CCW’s process is designed to make remote hiring simple and effective.  </p>
+          <p> Our process is designed to make remote hiring simple, fast and effective and AI plays a big part in that speed.
+ </p>
 <ul>
-<li>
-Firstly, we understand the client's role requirement and expectation, which happens over several initial meetings. </li>
-<li>Once the requirements are jotted down clearly, we start shortlisting candidates based on their skills and previous experience in a similar industry.</li> <li>
-After shortlisting the candidates, they are assessed based on communication and practical skillsets.</li>
-<li>We only present the qualified candidates to the clients. </li>
-<li>After the client has approved the candidate, we provide full support with onboarding and integration. </li>
+<li>Understand the client’s role requirement and expectations</li>
+<li>Use AI-powered sourcing tools to instantly filter and shortlist candidates from a much larger talent pool than manual screening would allow</li>
+<li>Run AI-assisted skill assessments and communication evaluations to test candidates objectively, not just on paper credentials</li>
+<li>Use automated scheduling and workflow tools to cut down coordination time between shortlisting, interviews and offer rollout</li>
+<li>Present only qualified candidates to the client, backed by data from these assessments</li>
+<li>Support onboarding and integration using structured checklists and tools that get the new hire productive from day one</li>
+
 </ul>
-Our clients don’t have to take time reviewing hundreds of profiles. They get access to a filtered pool of candidates ready to get started. 
+Clients do not have to go through hundreds of profiles. AI handles the heavy lifting of filtering and evaluation, so clients get access to a filtered pool of candidates ready to work much faster than a traditional hiring cycle.
 
 
 
@@ -499,13 +514,19 @@ Our clients don’t have to take time reviewing hundreds of profiles. They get a
 
             <div class="issue-line"></div>
 
-          <p> Most of the businesses treat remote hiring as if they were hiring a freelancer, which leads to inconsistent results. Building a successful remote team, business needs:
+          <p> Many businesses treat remote hiring like freelance hiring, which leads to inconsistent results. They place someone, expect instant output, and skip the things that actually make a remote hire successful over time.
+<br></br>
+To build a successful remote team, businesses need:
 
-<div class="role-mod"><li>Clear role definitions </li>
+<div class="role-mod"><li>Clear role definitions</li>
 <li>Structured communication</li>
-<li>Long-term planning </li>
+<li>Real team model
+ </li><li>Long-term planning </li><li>Continuous learning
+ </li><li>Trust and ownership
+</li>
 </div>
-When hiring is done correctly, the remote staffing services can be more effective than traditional hiring. 
+When done correctly, remote staffing services can be more effective than traditional hiring.
+
 
   </p>
 
@@ -545,14 +566,17 @@ When hiring is done correctly, the remote staffing services can be more effectiv
 
             <div class="issue-line"></div>
 
-          <p> Freelancers are suitable for short-term tasks, but lack in consistency and long-term commitment. Citadel Coworkers provides dedicated remote employees who: 
+          <p> Freelancers are suitable for short-term tasks, but lack in 
+            consistency and long-term commitment. Citadel Coworkers provides dedicated remote employees who: 
+
 
 
 <div class="role-mod"><li>Work exclusively with the client</li>
 <li>Follow structured processes </li>
 <li>Contribute to long-term business growth</li>
 </div>
-This helps make it easier for businesses to build stable and scalable teams.  
+This helps make it easier for businesses to build stable and scalable teams. 
+
 
   </p>
 
@@ -629,7 +653,8 @@ When hiring is done correctly, the remote staffing services can be more effectiv
         <div class="issue-content-side">
 
             <h3>
-What Is the One Hard Truth About Hiring That Everyone Should Know About?
+What is one hard truth about hiring?
+
 
 
 
@@ -638,7 +663,10 @@ What Is the One Hard Truth About Hiring That Everyone Should Know About?
 
             <div class="issue-line"></div>
 
-          <p>Hiring the wrong person is much more expensive than not hiring at all. Businesses often tend to underestimate the cost of making a poor hiring decision which also includes lost time, reduced productivity and rehiring expenses. 
+          <p>Hiring the wrong person is more expensive than not hiring at all. Businesses often underestimate the cost of poor hiring decisions, including lost time, reduced productivity, and rehiring expenses.<br></br>
+Here is a hard truth that is becoming more relevant every year: AI and agentic AI are not a substitute for hiring well; they raise the bar for it. Agentic AI tools can now execute multi-step tasks on their own, but someone still has to direct them, set guardrails, check their output and make judgment calls the AI cannot make. <br></br>
+Hire the wrong person to sit in that seat and mistakes do not just happen slower like before; they get automated and scaled before anyone notices. The businesses getting the most value from AI right now are not the ones with the most tools. They are the ones who hired the right people to run them.
+
 
 
   </p>
@@ -681,6 +709,7 @@ What Is the One Hard Truth About Hiring That Everyone Should Know About?
           <p> Our aim is to become a leading virtual staffing company that enables businesses to build global teams without limitation. Our focus is on simplifying hiring, improving quality and enabling scalable growth. 
 
 
+
   </p>
 
 
@@ -697,9 +726,20 @@ What Is the One Hard Truth About Hiring That Everyone Should Know About?
 
 <section class="cs-cta-interview">
   <div class="container">
-    <h2 class="cs-cta-title">Hiring Does Not Have to Be Complicated
-</h2><p class="cs-cta-sub">If you are looking to <a href="https://www.citadelcoworkers.com/services/virtual-assistant">hire virtual employees</a>, build a dedicated remote team and scale your business efficiently, Citadel Coworkers provides a structured and reliable solution. 
-</p></div></section>
+<h2 class="cs-cta-title">Hiring Does not Have to Be Complicated
+</h2><p class="cs-cta-sub">If you are looking to hire virtual employees, build a dedicated remote team, and scale your business efficiently, Citadel Coworkers provides a structured and <br></br>reliable solution. The best way to know if this fits your business is to talk it through directly. 
+
+</p>  <a href="/contact-us" class="final-cta-btn">
+      <span class="calendar-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="4" width="18" height="17" rx="3" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 2v4M16 2v4M3 9h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M9.5 14.5l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Schedule a free consultation with our Co-founder
+      <span class="arrow">→</span>
+    </a></div></section>
 </div>
   );
 }

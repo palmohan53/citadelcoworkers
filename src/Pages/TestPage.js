@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API_HOST from "../config/APIHost";
@@ -9,12 +9,11 @@ import Slider from "react-slick";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
-import Testimonial from "../Component/Testimonial";
-import BannerContent from '../Component/BannerContent';
-import FeaturedInMarquee  from '../Component/Brandsslider';
-import VideoTestimonial from "../Component/VideoTestimonial";
-import Videosection  from "../Component/Videosechome"
 import ContactFormSingle from "../Component/singlecontactform";
+import BannerContent from '../Component/BannerContent';
+import VerticalTeamSlider from '../Component/Teamsliderhome'
+import PortfolioStack from '../Component/PortfolioStackHome'
+
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -35,7 +34,10 @@ const getProfileList = async () => {
     const data = await response;
     return data;
 }
-
+const FeaturedInMarquee = lazy(() => import("../Component/Brandsslider"));
+const Testimonial = lazy(() => import("../Component/Testimonial"));
+const VideoTestimonial = lazy(() => import("../Component/VideoTestimonial"));
+const Videosection = lazy(() => import("../Component/Videosechome"));
 const TestHome = () => {
     const { data, status } = useQuery("blog", getBlogList);
     const { data:services } = useQuery("service", getServiceList);
@@ -83,7 +85,8 @@ const TestHome = () => {
         infinite: true,
         fade: true,
         autoplay: true,
-        speed: 1500,
+        speed: 400,
+         autoplaySpeed: 4000,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
@@ -91,9 +94,7 @@ const TestHome = () => {
         // getBlogList()
         window.scrollTo(0, 0)
       }, [])
-      if (status === 'loading') {
-        return <div className="loaderWrp"><span className="loader"></span></div>
-      }
+  
     return(
         <React.Fragment>
             <HelmetProvider>
@@ -112,7 +113,7 @@ const TestHome = () => {
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
                                     <div className="bannerProfile">
-                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta" />
+                                        <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
                                         <div className="bannerProfileDetails">
                                             <h3>Aarav Mehta</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/> Full Stack Developer</h6>
@@ -127,7 +128,8 @@ const TestHome = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="Isha Verma" />
+                                        <img src="/images/Harshita_Dagral_Pic.webp" width="400" height="420"  alt="Isha Verma" loading="lazy"
+decoding="async"/>
                                         <div className="bannerProfileDetails">
                                             <h3>Isha Verma</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Graphic Designer</h6>
@@ -143,7 +145,8 @@ const TestHome = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="Rohit Nair" />
+                                        <img src="/images/Garvdeep_Singh_Pic.webp" width="400" height="420" alt="Rohit Nair" loading="lazy"
+decoding="async" />
                                         <div className="bannerProfileDetails">
                                             <h3>Rohit Nair</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Virtual Assistant</h6>
@@ -159,7 +162,8 @@ const TestHome = () => {
                                     </div>
 
                                     <div className="bannerProfile">
-                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="Kavita Sharma" />
+                                        <img src="/images/Josephine_Vincent_Pic.webp" width="400" height="420"  alt="Kavita Sharma" loading="lazy"
+decoding="async" />
                                         <div className="bannerProfileDetails">
                                             <h3>Kavita Sharma</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Accountant</h6>
@@ -174,7 +178,8 @@ const TestHome = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="Arjun Kapoor" />
+                                        <img src="/images/Rohit_Kumar_Pic.webp" width="400" height="420" alt="Arjun Kapoor"  loading="lazy"
+decoding="async" />
                                         <div className="bannerProfileDetails">
                                             <h3>Arjun Kapoor</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Legal Assistant</h6>
@@ -188,7 +193,8 @@ const TestHome = () => {
                                         </div>
                                     </div>
                                     <div className="bannerProfile">
-                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="Neha Joshi" />
+                                        <img src="/images/Roma_Roy_Pic.webp" width="400" height="420" alt="Neha Joshi"  loading="lazy"
+decoding="async"/>
                                         <div className="bannerProfileDetails">
                                             <h3>Neha Joshi</h3>
                                             <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="18" height="15"/> Content Writer</h6>
@@ -212,7 +218,9 @@ const TestHome = () => {
                 </div>
                 <div className="videoOverlay"></div> */}
             </section>
-               <section className="serviceb bg-dark" id="FREA"><div className="container"><FeaturedInMarquee /></div></section>
+               <section className="serviceb bg-dark" id="FREA"><div className="container"><Suspense fallback={null}>
+   <FeaturedInMarquee />
+</Suspense></div></section>
  
                 <section className="service home-page" id="servicesSec">
                     <div className="container">
@@ -308,7 +316,8 @@ const TestHome = () => {
                         </div>
                     </div>
                 </section>
-                <section className="process pb-100">
+                
+                <section className="process pb-">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-7 col-12">
@@ -352,43 +361,8 @@ const TestHome = () => {
                                 </div>
                             </div>
                             <div className="col-md-5 col-12">
-                                <div className="profileBxBx">
-                                    {/* <Profile handleScrollClick={handleScrollClick} /> */}
-                                    {
-                                        profile?.data?.listing?.map((data, index)=>{
-                                            let skillSet = data.Expertise.split(',');
-                                            return(
-                                                <React.Fragment key={index}>
-                                                { index < 3 &&
-                                                    
-                                                        <div className="bannerProfile">
-                                                            <div className="profileImg">
-                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="261" height="261" />
-                                                                <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
-                                                            </div>
-                                                            <div className="bannerProfileDetails">
-                                                                <h3>{data.post_title}</h3>
-                                                                <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
-                                             
-                                                                <h6><img src="/images/code (1).webp" alt="code icon" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
-                                                                                   <p>Skill Set</p>
-                                                                {/* <span className="Expertise">{data.post_content}</span> */}
-                                                              <ul className="listInline tags mb-2 f">
-  {skillSet.map((skillString, index) =>
-    skillString.split("·").map((skill, i) => (
-      <li key={`${index}-${i}`}>{skill.trim()}</li>
-    ))
-  )}
-</ul>
-
-                                                            </div>
-                                                        </div>
-                                                    }
-                                                </React.Fragment>
-                                            )
-                                        })
-                                    }
-                                </div>
+                                <VerticalTeamSlider></VerticalTeamSlider>
+                              
                             </div>
                         </div>
                     </div>
@@ -532,112 +506,21 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
                     </div>
                 </section>
 
-      
+      <Suspense fallback={null}>
 
           <VideoTestimonial></VideoTestimonial>
 
 
 <Videosection></Videosection>
-			
-		
+			<PortfolioStack></PortfolioStack>
                 <Testimonial serviceTestimonial={serviceTestimonial} />
-                <section className="blog">
-                    <div className="container">
-                        <div className="row mb-3">
-                            <div className="col-md-12 col-12">
-                                <div className="sectionHeading text-center">
-                                    <h2>Where Ideas Flourish</h2>
-                                    <p>Ensure outsourcing success from the start with key insider tips and trends for over 150 industries, right at your fingertips.</p>
-                                </div>
-                            </div>
-                        </div>
-                            <div className="row mt-5">
-                                <div className="col-md-5 col-12">
-                                    <Link to={`/blog/${data?.data?.listing[0]?.post_name}`} className="d-block">
-                                        <div className="blogBx blogBig">
-                                            <div className="blogImg">
-                                                <img src={data?.data?.listing[0]?.banner} alt={data?.data?.listing[0]?.post_title}/>
-                                               <div className="blogAuthImg ff">
-  {
-    data?.data?.listing[0]?.display_name === "Pinka Sharma"
-      ? <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70" />
-      : data?.data?.listing[0]?.display_name === "Kumari Santosh"
-      ?     <img src="/images/Santosh.webp" alt="Kumari Santosh" />
-      : data?.data?.listing[0]?.display_name === "Suresh Sharma"
-      ? <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70" />
-      : <img src="/images/suresh.webp" alt="Default Author" width="70" height="70" />
-  }
-</div>
-                                            </div>
-                                            <div className="blogContent">
-                                                <h3>{data?.data?.listing[0]?.post_title}</h3>
-                                                <h5>By <b>{data?.data?.listing[0]?.display_name}</b></h5>
-                                                <p>{data?.data?.listing[0]?.post_content}</p>
-                                                <div className="d-flex justify-content-between">
-                                                    <h6>7 min read</h6>
-                                                    <button className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                                <div className="col-md-7 col-12">
-                                    <div className="row g-4">
-                                        {
-                                            data?.data.listing?.map((blog, index)=>{
-                                                return(
-                                                    index !== 0 && index < 5 ? 
-                                                        <div className=" blog-home col-md-6 col-12" key={index}>
-                                                            <Link to={`/blog/${blog?.post_name}`}  className="d-block">
-                                                                <div className="blogBx blogSmall ggg">
-                                                                    <div className="blogImg">
-                                                                        <img src={blog.banner} alt={blog.post_title}/>
-                                                                        <div className="blogAuthImg ggggg">
-                                                                       {
-  blog?.display_name === "Pinka Sharma" ? (
-    <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
-  ) : blog?.display_name === "Kumari Santosh" ? (
-   <img src="/images/Santosh.webp" alt="Kumari Santosh"  width="70" height="70"/>
-  ) : (
-    <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
-  )
-}
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="blogContent">
-                                                                        <h3>{blog.post_title}</h3>
-                                                                        <h5>By <b>{blog.display_name}</b></h5>
-                                                                        <p dangerouslySetInnerHTML={{ __html: blog.post_content }}></p>
-                                                                        
-                                                                        <div className="d-flex justify-content-between">
-                                                                            <h6>7 min read</h6>
-                                                                            <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </Link>
-                                                        </div>
-                                                    : null
-                                                )
-                                            })
-                                        }
-                                    
-                                    </div>
-                                </div>
-                                <div className="col-12 mt-4">
-                                    <div className="text-center">
-                                        <Link to="/blog" className=" colorBtn wideBtn">Read More</Link>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </section>
+                </Suspense>
 
-                <section className="Form-section-new">
+                               <section className="Form-section-new">
   <div className="container">
 <div className="form-flex-d">
     <div className="hero-left">
-      <span className="hero-tag">Hire Remote Talent</span>
+      <span className="hero-tag"> 1 WEEK FREE TRIAL</span>
 
       <h1>
         Build Your Team With
@@ -662,10 +545,52 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
       </h1>
 
       <p>
-Hire experienced remote professionals for your business — without full-time hiring costs.
+Every professional screened, tested, and matched to fit your team's exact needs
       </p>
+<div className="pointers-form">
+    <ul>
+        <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 120+ Industry Domains Served
+        </li>
 
-   <div class="benefits-box"><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>No long-term contracts</h4><p>Month-to-month, scale up or down any time</p></div></div><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>Transparent pricing from US $7/hr</h4><p>All-inclusive — no hidden fees</p></div></div><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>Dedicated resource model</h4><p>Your resource, your time zone, your tools</p></div></div><div class="benefit-item"><span class="check-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><div><h4>Free 1-week trial</h4><p>Try before you commit — zero risk</p></div></div></div>
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Free Replacement Guarantee
+        </li>
+
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 24/7 Real-Time Monitoring
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Time-Zone Aligned Coworkers
+        </li>
+    </ul>
+</div>
+   <div class="benefits-box"><div class="benefit-item">
+    <span class="check-icon">
+      <img src="./images/nda1.webp"></img>
+            </span><div><h4>  <b>NDA-Signed</b><br></br>
+    <span>From Day One</span> </h4></div></div>
+	
+	<div class="benefit-item">
+			<span class="check-icon"><img src="./images/badge.webp"></img></span><div><h4><b>ISO 27001</b><br></br>
+    <span>Certified</span></h4></div></div>
+			
+			
+			<div class="benefit-item"><span class="check-icon"><img src="./images/star.webp"></img></span><div><h4><b>Trustpilot 4.8/5</b><br></br> <span> 100+ Businesses</span></h4></div></div>
+
+			
+			
+			</div>
     </div>
 
     <div class="hero-right">
@@ -677,7 +602,11 @@ Hire experienced remote professionals for your business — without full-time hi
 
   </div>  </div>
 </section>
-          
+               
+           
+
+                
+ 
             
             </HelmetProvider>
         </React.Fragment>

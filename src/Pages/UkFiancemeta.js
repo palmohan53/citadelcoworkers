@@ -7,7 +7,7 @@ import React, {
 
 } from "react";
 
-import HeroSectionuK from "../Component/UKhero"
+import CitadelHero from "../Component/UKhero"
 import "../finacemeta.css"
 import  "../Component/css/finance-accounting.css";
 
@@ -18,8 +18,8 @@ import {
   tools
 } from "../Data/financeData";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-const TestimonialsFinance = lazy(() =>
-  import("../Component/TestimonialsFinance")
+const TestimonialsFinanceuk = lazy(() =>
+  import("../Component/UkFinacetestimonial")
 );
 const Slider = lazy(() => import("react-slick"));
 const TeamSection = lazy(() =>
@@ -43,7 +43,13 @@ const scrollToForm = () => {
     });
   }
 };
+useEffect(() => {
+  document.body.classList.add("hide-header");
 
+  return () => {
+    document.body.classList.remove("hide-header");
+  };
+}, []);
   const [visibleIndustries, setVisibleIndustries] = useState(6);
 const [showTopBtn, setShowTopBtn] = useState(false);
 
@@ -153,29 +159,29 @@ useEffect(() => {
     <div className="financeAccounting finance-accounting team">
 <div className="financeAccounting ">
           
-<HeroSectionuK></HeroSectionuK>
+<CitadelHero></CitadelHero>
   <section className="wave-bg">
 <div className="container">
 
   
   <div className="finance-stats-bar">
   <div className="finance-stat">
-    <h3>500+</h3>
-    <p>Finance Professionals Available</p>
+    <h3>50+</h3>
+    <p>Specializations Covered</p>
   </div>
 
   <div className="finance-stat">
-    <h3>48 Hours</h3>
-    <p>Average Onboarding Time</p>
+    <h3>300+</h3>
+    <p> Global Clients Served</p>
   </div>
 
   <div className="finance-stat">
-    <h3>100+</h3>
-    <p>Global Businesses Supported</p>
+    <h3>20+</h3>
+    <p>Finance Tool Certifications</p>
   </div>
   <div className="finance-stat">
-    <h3>4.8/5</h3>
-    <p>Average Client Rating</p>
+    <h3>15+</h3>
+    <p>Countries Served</p>
   </div>
 </div>
 </div>
@@ -358,7 +364,7 @@ useEffect(() => {
 
 <div id="lazy-trigger" style={{ height: "1px" }}></div>
 
-<section className="Form-scroll" id="Form-scroll">
+<section className="Form-scroll" >
 <div className="container">
 <div className="form-wrapper-top">
 <div className="Formwrapper-left">
@@ -419,7 +425,7 @@ useEffect(() => {
   </div>
 </div>
 </div>
-<div className="Formwrapper-right">
+<div className="Formwrapper-right " id="Form-scroll">
   <div className="bottom-contact-from">
              <Suspense fallback={<div />}>
    <ContactFiance />
@@ -536,7 +542,7 @@ useEffect(() => {
 </Suspense>
 
           <Suspense fallback={<div />}>
-  <TestimonialsFinance />
+  <TestimonialsFinanceuk />
 </Suspense>
   
  </>

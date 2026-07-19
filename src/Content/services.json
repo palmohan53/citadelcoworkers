@@ -12,6 +12,12 @@
                         "body": "Accelerate Your Business Growth with Specialized Virtual Assistants – Starts at USD 5/Hour."
                     }
                 ],
+				 "Contacttext":[
+            {
+             
+               "heading" : " Virtual Assistant"
+            }
+        ],
             "serviceHeading":[
                     {
                         "title": "Efficient Business Support Solutions",
@@ -121,6 +127,12 @@
                         "body": "Crafting Next-Generation Mobile App Experiences – Starts at USD 8/Hour."
                     }
                 ],
+				  "Contacttext":[
+            {
+              
+               "heading":" Mobile App Developers"
+            }
+			],
             "serviceHeading":[
                     {
                         "title": "Our 360° Mobile App Development Services",
@@ -224,6 +236,12 @@
                         "body": "From Concept to Creation, Let Your Brand Shine Online with Our Tailored Design Solutions"
                     }
                 ],
+				  "Contacttext":[
+            {
+              
+               "heading":" Graphic & Web Designers"
+            }
+			],
             "serviceHeading":[
                     {
                         "title": "Our 360° Creative Graphics Design Services",
@@ -327,6 +345,12 @@
                         "body": "Streamline Your Financial Operations with Skilled & Certified Professionals – Starts at USD 5/Hour."
                     }
                 ],
+				  "Contacttext":[
+            {
+              
+               "heading":" Finance & Accounting Experts"
+            }
+			],
             "serviceHeading":[
                     {
                         "title": "360° Finance and Accounting Solutions",
@@ -435,6 +459,12 @@
                         "body": "Accelerate Your Business Growth with Our Expert Digital Marketing Solutions– Starts at USD 7/Hour."
                     }
                 ],
+				  "Contacttext":[
+            {
+              
+               "heading":" Digital Marketing Experts"
+            }
+			],
             "serviceHeading":[
                     {
                         "title": "Efficient Business Support with Digital Marketing Solutions",
@@ -548,6 +578,12 @@
                     {
                         "title": "Streamline Your Legal Services & Achieve Greater Efficiency for Exceptional Support"                    }
                 ],
+				  "Contacttext":[
+            {
+              
+               "heading":" Legal Process Experts"
+            }
+			],
             "clientsNumber":[
                    
                     {
@@ -642,6 +678,12 @@
                         "body": "Elevate your business efficiency with our Development and IT Solutions. Focus on scaling your business while we maximize your productivity with expert support"
                     }
                 ],
+				 "Contacttext":[
+            {
+              
+               "heading":" Developers"
+            }
+			],
             "clientsNumberHeading":[
                     {
                         "title": "Our Impact By The Numbers - Demonstrating Offshore Development Excellence"                    }
@@ -737,6 +779,12 @@
                         "body": "Unlock Flexible, Cost-Effective Talent Solutions to Scale Your Business"
                     }
                 ],
+				  "Contacttext":[
+            {
+              
+               "heading":" Skilled Professionals"
+            }
+			],
             "serviceHeading":[
                     {
                         "title": "360° Staff Augmentation Services",
@@ -850,6 +898,12 @@
                         "body": "Transform Your Content Strategy with Engaging, Optimized Writing Solutions - Starts at USD 7/Hour."
                     }
                 ],
+				 "Contacttext":[
+            {
+              
+               "heading":" Content Writers"
+            }
+			],
             "serviceHeading":[
                     {
                         "title": "Comprehensive Content Writing Services",
@@ -1269,7 +1323,7 @@
 		  "Contacttext":[
             {
                "text": "Hire Data Entry Experts",
-               "heading": "Data Entry Experts"
+               "heading": " Data Entry Experts"
             }
         ],
 		 "Concludingtext":[
@@ -1384,7 +1438,7 @@
               "Contacttext":[
             {
                "text": "Hire Research Analyst",
-                "heading": "Research Analysts"
+                "heading": " Research Analysts"
             }
         ],
          "Concludingtext":[
@@ -1498,7 +1552,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Bookeeper"
+               "text": "Hire Bookeeper",
+			    "heading" : " Bookeeper"
             }
         ]
         },
@@ -1607,7 +1662,8 @@
             ],
              "Contacttext":[
             {
-               "text": "Hire Personal Assistants"
+               "text": "Hire Personal Assistants",
+			    "heading" : " Personal Assistants"
             }
         ],
          "Concludingtext":[
@@ -1725,7 +1781,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Accountants"
+               "text": "Hire Accountants",
+			    "heading" : " Accountants"
             }
         ],
          "Concludingtext":[
@@ -1840,7 +1897,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire QuickBooks Expert"
+               "text": "Hire QuickBooks Expert",
+			   "heading" : " QuickBooks Experts"
             }
         ], "Concludingtext":[
             {
@@ -1961,7 +2019,9 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Payroll Expert"
+               "text": "Hire Payroll Expert",
+			      "heading" : " Payroll Expert"
+			   
             }
         ],
          "Concludingtext":[
@@ -2076,7 +2136,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Tax Expert"
+               "text": "Hire Tax Expert",
+			      "heading" : " Tax Experts"
             }
         ],
          "Concludingtext":[
@@ -2099,6 +2160,12 @@
                         "body": " Unlock Expert Design & Construction Solutions to Optimize Your Projects – Starts at USD 8/Hour."
                     }
                 ],
+				  "Contacttext":[
+            {
+              
+               "heading":" Engineering & Architecture Experts"
+            }
+			],
             "serviceHeading":[
                     {
                         "title": "360° Engineering & Architectural Design Services",
@@ -2302,7 +2369,9 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire AR Specialist"
+               "text": "Hire AR Specialist",
+			  "heading":" Accounts Receivable"
+			   
             }
         ],
          "Concludingtext":[
@@ -2419,7 +2488,8 @@
             ],
             "Contacttext":[
             {
-               "text": "Hire Administrative Assistants"
+               "text": "Hire Administrative Assistants",
+			   "heading":" Administrative Assistants"
             }
         ],
          "Concludingtext":[
@@ -2535,7 +2605,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Financial Analysts"
+               "text": "Hire Financial Analysts",
+			    "heading":" Financial Analysts"
             }
         ]
 			
@@ -2652,7 +2723,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Chat Support Experts"
+               "text": "Hire Chat Support Experts",
+			   "heading":" Chat Support Experts"
             }
         ], "Concludingtext":[
             {
@@ -2769,7 +2841,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire AP Specialist"
+               "text": "Hire AP Specialist",
+			    "heading":" Accounts Payable Specialists"
             }
         ]
 			
@@ -2877,7 +2950,8 @@
             ],
             		  "Contacttext":[
             {
-               "text": "Hire Microsoft Excel Experts"
+               "text": "Hire Microsoft Excel Experts",
+			    "heading":" Microsoft Excel Experts"
             }
         ],
          "Concludingtext":[
@@ -2991,7 +3065,8 @@
             ],
             		  "Contacttext":[
             {
-               "text": "Hire Sales Assistant"
+               "text": "Hire Sales Assistant",
+			   "heading":" Sales Assistant"
             }
                       ],
                        "Concludingtext":[
@@ -3111,7 +3186,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Financial Controller"
+               "text": "Hire Financial Controller",
+			    "heading":" Financial Controller"
             }
         ],
          "Concludingtext":[
@@ -3226,7 +3302,8 @@
             ],
 		  "Contacttext":[
             {
-               "text": "Hire Finance Manager"
+               "text": "Hire Finance Manager",
+			     "heading":" Finance Manager"
             }
             ]
         }
@@ -3339,7 +3416,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Legal Assistant"
+               "text": "Hire Legal Assistant",
+			   "heading":" Legal Assistant"
             }
         ],
          "Concludingtext":[
@@ -3458,7 +3536,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Financial Paraplanner"
+               "text": "Hire Financial Paraplanner",
+			    "heading":" Financial Paraplanner"
             }
         ],
          "Concludingtext":[
@@ -3576,7 +3655,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Web Designer"
+               "text": "Hire Web Designer",
+			   "heading":" Web Designers"
             }
         ],
          "Concludingtext":[
@@ -3698,7 +3778,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire MS Office Experts"
+               "text": "Hire MS Office Experts",
+			   	   "heading":" MS Office Experts"
             }
         ], "Concludingtext":[
             {
@@ -3818,7 +3899,8 @@
 
 		  "Contacttext":[
             {
-               "text": "Hire Graphic Designer"
+               "text": "Hire Graphic Designer",
+			    "heading":" Graphic Designers"
             }
         ],
          "Concludingtext":[
@@ -3938,7 +4020,8 @@
             
 		  "Contacttext":[
             {
-               "text": "Hire SEO Experts"
+               "text": "Hire SEO Experts",
+			    "heading":" SEO Experts"
             }
         ]
 		,
@@ -4071,7 +4154,8 @@
             
 		  "Contacttext":[
             {
-               "text": "Hire Photoshop Expert"
+               "text": "Hire Photoshop Expert",
+			    "heading":" Photoshop Experts"
             }
         ],
 		 "Concludingtext":[
@@ -4214,7 +4298,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire PPC Expert "
+               "text": "Hire PPC Expert ",
+			       "heading":" PPC Experts"
             }
         ],
 		 "Concludingtext":[
@@ -4349,7 +4434,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": " Hire an SMM Expert "
+               "text": " Hire an SMM Expert ",
+			     "heading":" SMM Experts"
             }
         ],
 		 "Concludingtext":[
@@ -4485,7 +4571,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": " Hire an SMM Expert "
+               "text": " Hire an Illustrator   ",
+			    "heading":" Illustrator"
             }
         ],
 		 "Concludingtext":[
@@ -4620,7 +4707,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire a Video Editor Now"
+               "text": "Hire a Video Editor Now",
+			   "heading":" Video Editor"
             }
         ],
 		 "Concludingtext":[
@@ -4759,7 +4847,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire a CRO Expert"
+               "text": "Hire a CRO Expert",
+			   "heading":" CRO Experts"
             }
         ],
 		 "Concludingtext":[
@@ -4899,7 +4988,9 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Influencer Marketer"
+               "text": "Hire Influencer Marketer",
+			      "heading":" Influencer Marketer Experts"
+			   
             }
         ],
 		 "Concludingtext":[
@@ -5034,7 +5125,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire an Email Marketing Expert"
+               "text": "Hire an Email Marketing Expert",
+			     "heading":" Email Marketing Experts"
             }
         ],
 		 "Concludingtext":[
@@ -5169,7 +5261,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Your Dedicated Content Marketer"
+               "text": "Hire Your Dedicated Content Marketer",
+			    "heading":"Content Marketer Experts"
             }
         ],
 		 "Concludingtext":[
@@ -5304,7 +5397,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Dedicated Video Marketing Experts"
+               "text": "Hire Dedicated Video Marketing Experts",
+			    "heading":" Video Marketing Experts"
             }
         ],
 		 "Concludingtext":[
@@ -5443,7 +5537,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Your Lead Generation Expert"
+               "text": "Hire Your Lead Generation Expert",
+			       "heading":" Lead Generation Expert"
             }
         ],
 		 "Concludingtext":[
@@ -5608,7 +5703,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Your 3D Animator Exper"
+               "text": "Hire Your 3D Animator Expert",
+			    "heading":" 3D Animator Experts"
             }
         ],
 		 "Concludingtext":[
@@ -5772,7 +5868,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Print & Packaging Designer"
+               "text": "Hire Print & Packaging Designer",
+			   			    "heading":" Print & Packaging Designers"
             }
         ],
 		 "Concludingtext":[
@@ -5992,7 +6089,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Product Designer "
+               "text": "Hire Product Designer ",
+			   "heading":" Product Designers"
             }
         ],
 		 "Concludingtext":[
@@ -6213,7 +6311,8 @@
   ],
 		  "Contacttext":[
             {
-               "text": "Hire Game Designer Today "
+               "text": "Hire Game Designer Today ",
+			   "heading":" Game Designers"
             }
         ],
 		 "Concludingtext":[
@@ -6228,8 +6327,8 @@
 		{
             "categoryUrl": "hire-animated-logo-designer",
             "categoryName": "Logo Animation",
-            "pageMetaTitle": "Hire An Animated Logo Designer In India ",
-            "pageMetaContent": "Hire A Game Designers In India  experts in India starting at $8/hour.",
+            "pageMetaTitle": "Hire Dedicated Animated Logo Designer from India – Starts at $8/Hour ",
+            "pageMetaContent": "Hire animated logo designers from India to create custom 2D, 3D, and motion logo animations for websites, videos, social media, and branding. Starts at $8/hour.",
            "useDynamicSections": true,
            "sectionsOrder": [
     "hero",
@@ -6412,7 +6511,7 @@
              "icontextdesignheading": [
     {
       "title": "Why Leading Brands Trust Citadel Coworkers To Hire Animated Logo Design Talent In India",
-      "body": "Brand teams want logo motion that moves production forward and strengthens brand equity and not animation that needs to be redone after client review. CCW provides access to India’s top logo motion designers and animated logo specialists.",
+      "body": "Brand teams want logo motion that moves production forward and strengthens brand equity and not animation that needs to be redone after client review.  <a href=\"/\">CCW provides access to India’s top 3% </a>logo motion designers and animated logo specialists. ",
       "centerImageUrl": "/images/dd (10).webp"
     }
   ],
@@ -6427,7 +6526,7 @@
 		  "Contacttext":[
             {
                "text": "Hire an Animation Logo Designer Today ",
-               "heading":"Animation Logo Designers"
+               "heading":" Animation Logo Designers"
             }
         ],
 		 "Concludingtext":[
@@ -6437,6 +6536,229 @@
             }
         ]
 		
-        }		
+        }	,
+			{
+            "categoryUrl": "hire-cartoon-character-designer",
+            "categoryName": "Cartoon Character Design",
+            "pageMetaTitle": "Hire A Cartoon Character Designer In India  – Starts at $8/Hour ",
+            "pageMetaContent": "Hire Cartoon Character Designer from India to create custom 2D, 3D, and motion Cartoon Character for websites, videos, social media, and branding. Starts at $8/hour.",
+           "useDynamicSections": true,
+           "sectionsOrder": [
+    "hero",
+    "number",
+	"UnderstandingProductDesigner",
+    "Services",
+    "TeamSection",
+    "CharacteranimationIndesurty",
+	
+	  "certifications",
+  
+	   "ServiceBulkContentUpper",
+	     "ToolsSection",
+            
+         "Comparison",
+           "Testimonial",
+		
+      "pricing",
+	 "serviceSection",
+  "ServiceBulkContent",
+	"LogoanimationIPProtection",
+    "faq",
+   "Blogs",
+    "FeaturedInMarquee",
+ 
+   
+       "ContactForm",
+  
+    "Icondesign",
+     "ConcludingSec"
+  ],
+        "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire A Cartoon Character Designer In India  ",
+                        "body": "Bring your characters to life with expert 2D and 3D character animation built for brands - starts at $8/hour",
+                        "buttonText": "Get Your Cartoon Character Designer Today"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Comprehensive Character Animation Services For Your Creative Needs ",
+                        "body": "Our cartoon character designers bring deep expertise across concept art, 2D character animation, 3D character design, rigging and motion production. Whether you are launching a brand mascot, building a game or producing an animated series, we turn your vision into characters that audiences remember."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Our Character Animation Edge In Numbers ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Dedicated Designers",
+                        "body": "15+",
+                        "flipcontent":"Covering 2D and 3D styles for every use case "
+                    },
+					  {
+                        "imageUrl": "/images/Projects.png",
+                        "title": "Characters Brought to Life ",
+                        "body": "500+",
+                        "flipcontent":"Across gaming, advertising, e-learning & entertainment"
+                    },
+                    {
+                        "imageUrl": "/images/satisfaction.webp",
+                        "title": "Faster Animation Turnaround",
+                        "body": "3X",
+                        "flipcontent":"Faster Delivery Without Cutting Corners on Quality"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": "Client Retention Rate",   
+                        "body": "97%",
+                        "flipcontent":"Long-term partnerships built on creative precision"
+                    }
+                ],
+                "UnderstandingProductDesigner":{
+ "title": "Understanding The Role Of A Cartoon Character Designer",
+ "des": "Cartoon character designers bring memorable characters to life that resonate with audiences across platforms from 2D cartoon character design to full 3D character animation. They take briefs, brand personalities and creative ambitions and bring them to life. A good character designer is a mix of art, story and technological execution. They work across industries, from entertainment to edtech, gaming, advertising and brand identification, making the profession one of the most adaptable in the creative industry."
+                },
+				
+	"Comparison":	{
+  "title": "In-House Vs Offshore Character Animators: The Smarter Choice?",
+  "body": "When scaling your character animation capacity, businesses typically choose between hiring an in-house animator or partnering with an offshore character animation expert. Here is how the two options compare. ",
+    "tableData": [
+
+
+	
+  {
+    "factor": "Cost",
+    "inHouseDesigner": "High salary, benefits, and software licensing",
+    "citadelCoworkers": "Pay only for work done, starting at $8/hour"
+  },
+  {
+    "factor": "Hiring Time",
+    "inHouseDesigner": "Typically 30 to 60 days to fill a role",
+    "citadelCoworkers": "Matched with a vetted animator in 24 to 48 hours"
+  },
+  {
+    "factor": "Flexibility ",
+    "inHouseDesigner": "Fixed hours and fixed scope",
+    "citadelCoworkers": "Scale up or down based on your project pipeline "
+  },
+  {
+    "factor": "2D & 3D Capability ",
+    "inHouseDesigner": "Dependent on the individual hire's skill set",
+    "citadelCoworkers": "Full-spectrum 2D and 3D character animation team"
+  },
+  {
+    "factor": "Style Range",
+    "inHouseDesigner": "Limited to one animator's portfolio range",
+    "citadelCoworkers": "Flat design, cel animation, 3D modelling and more"
+  },{
+    "factor": "Software Expertise",
+    "inHouseDesigner": "Varies by hire",
+    "citadelCoworkers": "Adobe Animate, Blender, Maya, After Effects, Spine and more"
+  },{
+    "factor": "Scalability ",
+    "inHouseDesigner": "Requires rehiring for every growth phase",
+    "citadelCoworkers": "On-demand team expansion with no overhead"
+  }
+  
+  ]
+},
+
+
+
+            "faq":[
+                    {
+                        "title": "01. What is the difference between 2D and 3D character animation, and which do I need?",
+                        "body": "2D character animation works on a flat plane and is ideal for explainer videos, brand mascots, social media content and stylised projects that benefit from expressive, graphic aesthetics. 3D character animation creates depth, volume and realism, making it the right choice for games, cinematic content, product visualisation, and immersive platforms. Many projects benefit from a combination of both. Our team will recommend the right approach based on your intended use, audience and production budget."
+                    },
+                    {
+                        "title": "02. How do I know the character designs will match my brand identity or creative vision?",
+                        "body": "Every engagement begins with a structured creative discovery session where we align on your brand guidelines, visual references, tone and character objectives. Our designers produce initial concept sketches for review before any final production work begins. All designs go through iterative approval rounds so your characters are confirmed on-model before we move into animation. You will never receive a completed animation for a character that has not been explicitly approved at the design stage."
+                    },
+                    {
+                        "title": "03.  Can your team handle both character design and animation or do I need separate suppliers?",
+                        "body": "Our character animation services cover the complete pipeline concept art, character design, turnarounds, rigging, and animation under one roof. This eliminates the handoff delays, file format inconsistencies and quality gaps that arise when managing character design and animation with separate vendors. From initial sketch to final animated deliverable, your project stays with one coordinated team."
+
+                    },
+                    {
+                        "title": "04. What file formats will I receive for my character animation deliverables?",
+                        "body": "Deliverable formats depend on your platform and use case. We typically provide MP4, MOV and GIF for video and web delivery; FBX, OBJ, and GLTF for 3D game and interactive assets; PNG sequences and Spine JSON for 2D game animation; and layered PSD or AI files for illustration-based deliverables. If your pipeline has specific requirements for example, Unity-ready FBX rigs or UE5-compatible assets we confirm these during onboarding and ensure all deliverables are formatted accordingly."
+                    },
+                    {
+                        "title": "05. How long does a character animation project typically take?",
+                        "body": "Timeline depends on the scope and complexity of the project. A single brand mascot design with expression sheets typically takes 5 to 10 business days. A full 2D character animation short of 60 to 90 seconds generally requires 3 to 5 weeks from approved character design. A 3D character design and animation package for a game character typically runs 4 to 8 weeks depending on poly count, rig complexity, and the number of animation states required. We provide a project-specific timeline estimate after reviewing your brief."
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Leading Brands Trust Citadel Coworkers For Offshore Character Animation In India",
+      "body": "Businesses need character animation partners who understand creative standards, production pipelines, and commercial outcomes. With Citadel Coworkers, you gain access to India's top cartoon character designers and character animation experts who deliver studio-quality work without the overhead of an in-house team or the inflexibility of a traditional agency retainer.",
+      "centerImageUrl": "/images/dd (10).webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Character designers matched to your exact style, platform, and industry" },
+    { "imageUrl": "", "body": "Full 2D and 3D character animation capability under one production team" },
+    { "imageUrl": "", "body": "Transparent production milestones with structured client review at every stage" },
+    { "imageUrl": "", "body": "Scale animation output without hiring, managing, or onboarding full-time staff" },
+    { "imageUrl": "", "body": "Delivery formats optimised for your specific distribution platforms and engines" },
+    { "imageUrl": "", "body": "Competitive offshore pricing without compromise to creative or technical quality" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Your Character Designer  Today ",
+               "heading":" Character Designer "
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated Cartoon Character Designer & Build Characters Your Audience Loves",
+			   "buttontext":"Hire Your Character Designer Now"
+            }
+        ]
+		
+        }	
+		
     ]
 }

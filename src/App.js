@@ -1,42 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,Suspense } from 'react';
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Footer from './Component/Footer';
-import Header from './Component/Header';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import Home from './Pages/Home';
-import Services from './Pages/Services';
-import BlogDetails from './Pages/BlogDetails';
-import Blog from './Pages/Blog';
-import SubServices from './Pages/SubServices';
-import RefundPolicy from './Pages/RefundPolicy';
-import PrivacyPolicy from './Pages/PrivacyPolicy';
-import CookiePolicy from './Pages/CookiePolicy';
-import UserAgreement from './Pages/UserAgreement';
-import Offshore from './Pages/Offshore';
-import FaqPage from './Pages/FaqPage';
-import AboutCitadelAdvantage from './Pages/AboutCitadelAdvantage';
-import DataSecurity from './Pages/DataSecurity';
-import HowDoesCitadelWorks from './Pages/HowDoesCitadelWorks';
-import NotFound from './Pages/NotFound';
-import ThankYou from "./Component/ThankYou";
-import CaseStudySingle from './Component/CaseStudySingle';
-import Newabout from './Pages/NewAboutus';
-import OurMission from './Pages/OurMission';
-import SystemlandingPage from './Pages/Dummypage.js';
-import FinanceAccounting from './Pages/FinanceAccounting';
-import CookieBanner from './Component/CookieBanner';
-import TestHome from './Pages/TestPage.js'
-import FinaceAccountingmetaads2 from './Pages/FinaceAccountingmetaads2.js'
+import Footer from "./Component/Footer"; import Header from "./Component/Header"; import CookieBanner from "./Component/CookieBanner";
 import './Framework.css';
 import './App.css';
 import './Media.css';
-import FounderInterviewPage from './Pages/InterviewWithCEo.js';
-import WorkingRemotely from './Pages/WorkingRemotely.js';
-import MeetOurTeam from './Pages/OurTeam.js';
-import UkFiancemeta from './Pages/UkFiancemeta.js';
+const Home = React.lazy(() => import("./Pages/Home"));
+const About = React.lazy(() => import("./Pages/About"));
+const Contact = React.lazy(() => import("./Pages/Contact"));
+const Services = React.lazy(() => import("./Pages/Services"));
+const BlogDetails = React.lazy(() => import("./Pages/BlogDetails"));
+const Blog = React.lazy(() => import("./Pages/Blog"));
+const SubServices = React.lazy(() => import("./Pages/SubServices"));
+const RefundPolicy = React.lazy(() => import("./Pages/RefundPolicy"));
+const PrivacyPolicy = React.lazy(() => import("./Pages/PrivacyPolicy"));
+const CookiePolicy = React.lazy(() => import("./Pages/CookiePolicy"));
+const UserAgreement = React.lazy(() => import("./Pages/UserAgreement"));
+const Offshore = React.lazy(() => import("./Pages/Offshore"));
+const FaqPage = React.lazy(() => import("./Pages/FaqPage"));
+const AboutCitadelAdvantage = React.lazy(() => import("./Pages/AboutCitadelAdvantage"));
+const DataSecurity = React.lazy(() => import("./Pages/DataSecurity"));
+const HowDoesCitadelWorks = React.lazy(() => import("./Pages/HowDoesCitadelWorks"));
+const NotFound = React.lazy(() => import("./Pages/NotFound"));
+const ThankYou = React.lazy(() => import("./Component/ThankYou"));
+const CaseStudySingle = React.lazy(() => import("./Component/CaseStudySingle"));
+const Newabout = React.lazy(() => import("./Pages/NewAboutus"));
+const OurMission = React.lazy(() => import("./Pages/OurMission"));
+const SystemlandingPage = React.lazy(() => import("./Pages/Dummypage.js"));
+const FinanceAccounting = React.lazy(() => import("./Pages/FinanceAccounting"));
+const TestHome = React.lazy(() => import("./Pages/TestPage.js"));
+const FinaceAccountingmetaads2 = React.lazy(() => import("./Pages/FinaceAccountingmetaads2.js"));
+const FounderInterviewPage = React.lazy(() => import("./Pages/InterviewWithCEo.js"));
+const WorkingRemotely = React.lazy(() => import("./Pages/WorkingRemotely.js"));
+const MeetOurTeam = React.lazy(() => import("./Pages/OurTeam.js"));
+const UkFiancemeta = React.lazy(() => import("./Pages/UkFiancemeta.js"));
+const WHYCitadelCoworkers = React.lazy(() => import("./Pages/WhyCCW.js"));
+const PricingPage = React.lazy(() => import("./Pages/PricingPlan.js"));
+const UkFiancemetat = React.lazy(() => import("./Pages/TestUK.js"));
+const Testimonials = React.lazy(() => import("./Pages/Testimonail.js"));
+const DMlanding = React.lazy(() => import("./Pages/DM.js"));
 function App() {
   const location = useLocation();
 useEffect(() => {
@@ -77,15 +80,23 @@ useEffect(() => {
 useEffect(() => {
   const timer = setTimeout(() => {
     if (!window.gtmLoaded) {
+      window.dataLayer = window.dataLayer || [];
+
+      window.dataLayer.push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+
       const script = document.createElement("script");
       script.async = true;
       script.src =
         "https://www.googletagmanager.com/gtm.js?id=GTM-PPG89VBT";
+
       document.head.appendChild(script);
 
       window.gtmLoaded = true;
     }
-  }, 3000);
+  }, 1000);
 
   return () => clearTimeout(timer);
 }, []);
@@ -108,7 +119,20 @@ useEffect(() => {
 
     return "";
   };
+const [showFooter, setShowFooter] = React.useState(false);
 
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 800) {
+      setShowFooter(true);
+      window.removeEventListener("scroll", handleScroll);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   return (
     <div className={`App ${getPageClass()}`}>
 
@@ -122,9 +146,9 @@ useEffect(() => {
           title="gtm"
         ></iframe>
       </noscript>
- <CookieBanner />
-      <Header />
 
+      <Header />
+<Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
@@ -152,7 +176,7 @@ useEffect(() => {
         <Route path="/about-new" element={<Newabout />} />
           <Route path="/services/finance-accounting" element={<FinanceAccounting />} />
         <Route path="/our-mission" element={<OurMission />} />
-            <Route path="/interview-with-the-ceo" element={<FounderInterviewPage />} />
+            <Route path="/interview-with-co-founder" element={<FounderInterviewPage />} />
         <Route path="/virtual-assistant" element={<Navigate to="/services/virtual-assistant" replace />} />
 		 <Route path="/offshore" element={<Navigate to="/your-offshore-office-in-india" replace />} />
      	 <Route path="/services/SystemlandingPage" element={<SystemlandingPage />} />
@@ -161,10 +185,16 @@ useEffect(() => {
          <Route path="/working-remotely" element={<WorkingRemotely />} />
          <Route path="/formhome" element={<TestHome></TestHome>} />
          <Route path="/meet-our-team" element={<MeetOurTeam />} />
-   
+     <Route path="/why-ccw" element={<WHYCitadelCoworkers />} />
+            <Route path="/pricing" element={<PricingPage />} />
+             <Route path="/uk" element={<UkFiancemetat />} />
+             <Route path="/testimonials" element={<Testimonials />} />
+               <Route path="/services/dm-landing" element={<DMlanding />} />
+    <Route path="*" element={<NotFound />} />
       </Routes>
-
-      <Footer />
+</Suspense>
+{showFooter && <Footer />}
+       <CookieBanner />
     </div>
   );
 }

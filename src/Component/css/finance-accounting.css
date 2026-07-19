@@ -263,7 +263,7 @@ background-color: #1749d5;
     object-fit: cover;
     border: 2px solid #3b82f6;
 }
-section#Form-scroll {
+.Form-scroll {
     background: linear-gradient(120deg, #f5f8ff, #bac9ea);
         position: relative;
 }

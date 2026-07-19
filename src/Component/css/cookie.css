@@ -7,12 +7,14 @@
 .cookie-banner {
   position: fixed;
   bottom: 0;
-  width: 100%;
+
+      width: 100% !important;
+    max-width: 100% !important;
   background: #f9fafb;
   padding: 20px;
   box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
   z-index: 9999;
-  font-family: sans-serif;
+
 }
 
 .cookie-inner {

@@ -14,6 +14,8 @@ const Footer = () => {
             }
         });
     }, [])
+
+    
     return (
         <React.Fragment>
             <footer className={`footer `}>
@@ -47,6 +49,7 @@ const Footer = () => {
                                     <li><Link to="/your-offshore-office-in-india">Your Offshore Office in India</Link></li>
                                     <li><Link to="/data-security">Data Security at Citadel</Link></li>
                                      <li><Link to="/working-remotely">Working Remotely</Link></li>
+                                        <li><Link to="/why-ccw">Why Citadel Coworkers</Link></li>
                                 </ul>
                             </div>
                         </div>

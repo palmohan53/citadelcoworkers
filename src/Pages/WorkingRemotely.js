@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 
 export default function WorkingRemotely() {
@@ -25,7 +25,9 @@ export default function WorkingRemotely() {
     },
   ];
 
-
+  useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
   return (
     <div className="work-remotly">
     <section class="hero-work-remotely" id="work-remotely">

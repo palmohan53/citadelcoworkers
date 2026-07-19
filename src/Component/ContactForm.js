@@ -65,11 +65,86 @@ const ContactForm = ({ buttonText = "Start Your Project" }) => {
       }, [])
     return(
         <React.Fragment>
-            <div className="getInTouch">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-7 col-12">
-                            <div className="contactForm">
+<section className="Form-section-new">
+  <div className="container">
+<div className="form-flex-d">
+    <div className="hero-left">
+      <span className="hero-tag"> 1 WEEK FREE TRIAL</span>
+
+      <h1>
+        Build Your Team With
+        <span class="word-slider">
+          <span>
+              <b>Virtual Assistants</b>
+            <b>Consultants</b>
+            <b>Designers</b>
+            <b>Developers</b>
+            <b>Marketers</b>
+            <b>Sales Experts</b>
+
+
+              <b>Virtual Assistants</b>
+            <b>Consultants</b>
+            <b>Designers</b>
+            <b>Developers</b>
+            <b>Marketers</b>
+            <b>Sales Experts</b>
+          </span>
+        </span>
+      </h1>
+
+      <p>
+Every professional screened, tested, and matched to fit your team's exact needs
+      </p>
+<div className="pointers-form">
+    <ul>
+        <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 120+ Industry Domains Served
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Free Replacement Guarantee
+        </li>
+
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> 24/7 Real-Time Monitoring
+        </li>
+
+         <li>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/>
+</svg></span> Time-Zone Aligned Coworkers
+        </li>
+    </ul>
+</div>
+   <div class="benefits-box"><div class="benefit-item">
+    <span class="check-icon">
+      <img src="./images/nda1.webp"></img>
+            </span><div><h4>  <b>NDA-Signed</b><br></br>
+    <span>From Day One</span> </h4></div></div>
+	
+	<div class="benefit-item">
+			<span class="check-icon"><img src="./images/badge.webp"></img></span><div><h4><b>ISO 27001</b><br></br>
+    <span>Certified</span></h4></div></div>
+			
+			
+			<div class="benefit-item"><span class="check-icon"><img src="./images/star.webp"></img></span><div><h4><b>Trustpilot 4.8/5</b><br></br> <span> 100+ Businesses</span></h4></div></div>
+
+			
+			
+			</div>
+    </div>
+
+    <div class="hero-right">
+      <div class="form-cardn">
+             <div className="contactForm">
                                 <h2>Share Your Requirement — We’ll Take it From Here</h2>
                                 <p>Send us the details and our team will get back with the best strategy to move forward.
 </p>
@@ -176,22 +251,14 @@ const ContactForm = ({ buttonText = "Start Your Project" }) => {
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-lg-5 col-12 ps-5">
-                            <div className="contentContent">
-                                <div className="sectionHeading text-center mb-4">
-                                    <h2>Trusted by Clients Worldwide</h2>
-                                </div>
-                              
-                     
-                                <div className="videoThumb">
-                                    <img src="/images/Thubnail (3).png" alt="Trusted by Clients Worldwide" onClick={handleVideoPopup} width="447" height=""/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+      </div>
+    </div>
+
+  </div>  </div>
+</section>
+
+
 
 
             {videoPopup && <div className="popup">

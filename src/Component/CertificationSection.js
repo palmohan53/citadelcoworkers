@@ -88,6 +88,8 @@ const CertificateSection = ({ certificationData }) => {
                 src={certificates[activeIndex]?.img}
                 alt={certificates[activeIndex]?.alt}
                 loading="lazy"
+                 width="504"
+  height="358"
               />
             </div>
           </div>

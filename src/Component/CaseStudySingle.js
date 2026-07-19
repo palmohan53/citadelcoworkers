@@ -37,29 +37,29 @@ useEffect(() => {
   /* =====================
      FETCH DATA (NEW API)
   ===================== */
-const getCaseStudy = async () => {
-  try {
-    const url = `${API_HOST}/api/getSinglecasestudy.php?slug=${slug}`;
-    console.log("API URL:", url);
-
-    const res = await axios.get(url);
-
-    console.log("RESPONSE:", res.data);
-
-    if (res.data.status === "success") {
-      setCaseItem(res.data.data);
-    } else {
-      setCaseItem(null);
-    }
-  } catch (err) {
-    console.log("ERROR:", err);
-    setCaseItem(null);
-  } finally {
-    setLoading(false);
-  }
-};
-
   useEffect(() => {
+    const getCaseStudy = async () => {
+      try {
+        const url = `${API_HOST}/api/getSinglecasestudy.php?slug=${slug}`;
+        console.log("API URL:", url);
+
+        const res = await axios.get(url);
+
+        console.log("RESPONSE:", res.data);
+
+        if (res.data.status === "success") {
+          setCaseItem(res.data.data);
+        } else {
+          setCaseItem(null);
+        }
+      } catch (err) {
+        console.log("ERROR:", err);
+        setCaseItem(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     if (slug) getCaseStudy();
   }, [slug]);
 
@@ -70,6 +70,7 @@ const getCaseStudy = async () => {
     if (!caseItem) return;
 
     const sliders = document.querySelectorAll(".cc-arrow-slider");
+    const handlers = [];
 
     sliders.forEach((slider) => {
       const slides = slider.querySelector(".slides");
@@ -86,16 +87,28 @@ const getCaseStudy = async () => {
         slides.style.transform = `translateX(-${index * 100}%)`;
       };
 
-      next.onclick = () => {
+      const handleNextClick = () => {
         index = (index + 1) % total;
         update();
       };
 
-      prev.onclick = () => {
+      const handlePrevClick = () => {
         index = (index - 1 + total) % total;
         update();
       };
+
+      next.addEventListener('click', handleNextClick);
+      prev.addEventListener('click', handlePrevClick);
+
+      handlers.push({ next, prev, handleNextClick, handlePrevClick });
     });
+
+    return () => {
+      handlers.forEach(({ next, prev, handleNextClick, handlePrevClick }) => {
+        next.removeEventListener('click', handleNextClick);
+        prev.removeEventListener('click', handlePrevClick);
+      });
+    };
   }, [caseItem]);
 
   /* =====================
@@ -105,17 +118,27 @@ const getCaseStudy = async () => {
     if (!caseItem) return;
 
     const items = document.querySelectorAll(".cc-item");
+    const handlers = new Map();
 
     items.forEach((item) => {
       const header = item.querySelector(".cc-header");
 
       if (!header) return;
 
-      header.onclick = () => {
+      const handleClick = () => {
         items.forEach((i) => i.classList.remove("active"));
         item.classList.add("active");
       };
+
+      header.addEventListener('click', handleClick);
+      handlers.set(header, handleClick);
     });
+
+    return () => {
+      handlers.forEach((handleClick, header) => {
+        header.removeEventListener('click', handleClick);
+      });
+    };
   }, [caseItem]);
 useEffect(() => {
   if (!caseItem) return;
@@ -227,11 +250,36 @@ useEffect(() => {
   }, [caseItem]);
 
   /* =====================
+     NAVIGATION SYNC
+  ===================== */
+  useEffect(() => {
+    if (!caseItem) return;
+
+    const links = document.querySelectorAll('.nav-list a');
+    const sections = document.querySelectorAll('.section[id]');
+
+    if (links.length === 0 || sections.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`.nav-list a[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(s => observer.observe(s));
+
+    return () => observer.disconnect();
+  }, [caseItem]);
+
+  /* =====================
      LOADING
   ===================== */
   if (loading) return <h2>Loading...</h2>;
   if (!caseItem) return <h2>No Case Study Found</h2>;
-
   /* =====================
      UI
   ===================== */

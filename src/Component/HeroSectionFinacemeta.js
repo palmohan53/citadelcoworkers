@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 const talents = [
   {
-    img: "https://virtualassistant24x7.com/wp-content/uploads/2026/06/Priya-Malhotra-1.webp",
+    img: "https://virtualassistant24x7.com/wp-content/uploads/2026/06/team.webp",
     name: "Priya Malhotra",
     role: "QuickBooks Certified ProAdvisor",
     exp: "US $1,120/Month",

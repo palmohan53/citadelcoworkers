@@ -753,7 +753,9 @@ font-size: 32px;
 
 export default function DataSecurity() {
   const [openFaq, setOpenFaq] = useState(null);
-
+  useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
   return (
   <HelmetProvider>
                 <Helmet>

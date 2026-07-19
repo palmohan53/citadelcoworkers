@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faChalkboardUser, faMapLocationDot, faUsersViewfinder } from '@fortawesome/free-solid-svg-icons';
-
+import  "../Component/css/offshore.css";
 const Offshore = () => {
    
     useEffect(() => {
