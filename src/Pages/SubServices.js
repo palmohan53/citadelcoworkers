@@ -41,7 +41,8 @@ import CharacteranimationIndesurty from '../Component/CartooncharacterIndustries
 import GameDesignerIPProtection from '../Component/GameDesignerIPProtection';
 import LogoMotionDesignerCompetencies from '../Component/CompetenciesLOGOMOTIONDESIGNE';
 import LogoanimationIPProtection   from "../Component/LogoanimationIPProtection";
-import ExtraSection from "../Component/Extrasection"
+import ExtraSection from "../Component/Extrasection";
+import DMportfolio from "../Component/DMportfolio";
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
@@ -98,16 +99,13 @@ const shouldShowServiceBulkContent =
   (serviceBulkContent.listing[0]?.post_content || "").trim() !== "";
 const shouldShowConcluding = concludingText !== "" || concludingBtnText !== "";
     const contactref = useRef(null);
- const handleScrollClick = () => {
-  const element = contactref.current;
-  const offset = 100; // 👈 navbar height (adjust karo 80–120)
+const handleScrollClick = () => {
+  if (!contactref.current) return;
 
-  const y =
-    element.getBoundingClientRect().top +
-    window.pageYOffset -
-    offset;
-
-  window.scrollTo({ top: y, behavior: "smooth" });
+  contactref.current.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
 };
 /* =====================================================
    GET SERVICE LIST + PARENT CTA
@@ -892,6 +890,7 @@ SkillsSection: () => {
   CharacteranimationIndesurty: <CharacteranimationIndesurty />,
   LogoMotionDesignerCompetencies:<LogoMotionDesignerCompetencies />,
   LogoanimationIPProtection: <LogoanimationIPProtection />,
+  DMportfolio: <DMportfolio></DMportfolio>,
 UnderstandingProductDesigner: (
 
       <section className="Product-design-new-section">
@@ -968,7 +967,7 @@ UnderstandingProductDesigner: (
   WorkflowSection:<WorkflowSection />,
 
   ContactForm: ( 
-   <section className="Form-section-new">
+   <section className="Form-section-new" ref={contactref}>
   <div className="container">
 <div className="form-flex-d">
     <div className="hero-left">
@@ -1092,7 +1091,7 @@ ServiceBulkContent:
             )}
             {item?.body?.trim() && (
               <div className="text-box">
-                <h3 dangerouslySetInnerHTML={{ __html: item.body }}></h3>
+                <p dangerouslySetInnerHTML={{ __html: item.body }}></p>
               </div>
             )}
           </div>
@@ -1397,7 +1396,7 @@ ConcludingSec:(  <section className="bottomCon">
 
 
 
-   <section className="Form-section-new">
+   <section className="Form-section-new" ref={contactref}>
   <div className="container">
 <div className="form-flex-d">
     <div className="hero-left">
@@ -1516,7 +1515,7 @@ Every professional screened, tested, and matched to fit your team's exact needs
           )}
           {item?.body?.trim() && (
             <div className="text-box">
-           <h3 dangerouslySetInnerHTML={{ __html: item.body }}></h3>
+           <p dangerouslySetInnerHTML={{ __html: item.body }}></p>
             </div>
           )}
         </div>

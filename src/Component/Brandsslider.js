@@ -24,70 +24,21 @@ export default function FeaturedInMarqueeFixedLabel() {
       alt: "Open PR",
       Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Open-PR-scaled.webp"
     },
-
-    
-     {
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Am-news.webp",
-      alt: "Morning News",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Am-news-1-scaled.webp"
-    },
-
-     {
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/fin-1.webp",
-      alt: "Financial content ",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Financial-content-1-scaled.webp"
-    },
-	
-	
- 
-	
-	{
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/getnews.webp",
-      alt: "Get news",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Get-scaled.webp"
-    },
-	
-	{
+    {
       src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/xpr.webp",
       alt: "XPR media",
       Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/xpr-2-scaled.webp"
     },
-	{
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/business-insurance-logo.webp",
-      alt: "Business Insurance",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/bus-scaled.webp"
-    },
-	
-	
-	
-	
-	{
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/news.atlantanews-online.com_.webp",
-      alt: "Altana news",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/lta-scaled.webp"
-    },
-    	{
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/evaluation-tech-1-e1595253356825.webp",
-      alt: "evaluation tech",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/ti-scaled.webp"
-    },
 
-    	{
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/Aologo.webp",
-      alt: "Ai",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/Tech-scaled.webp"
-    },
-    {
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/tech-vts.webp",
-      alt: "Ai",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/tecf-scaled.webp"
-    },
-    
-    {
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/Tech-Gadget-X.webp",
-      alt: "tech",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/tech-1-scaled.webp"
-    },
+	
+	
+	
+	
+	
+
+    	
+ 
+  
   ];
 
   return (
@@ -115,9 +66,9 @@ export default function FeaturedInMarqueeFixedLabel() {
 
         .fi-track {
           display: flex;
-          width: max-content;
+      
           align-items: center;
-          animation: scroll 30s linear infinite;
+        
         }
 
         .fi-item {
@@ -185,7 +136,7 @@ export default function FeaturedInMarqueeFixedLabel() {
 
           <div className="fi-marquee">
             <div className="fi-track">
-              {[...logos, ...logos].map((logo, idx) => (
+              {[...logos].map((logo, idx) => (
                 <div
                   className="fi-item"
                   key={idx}

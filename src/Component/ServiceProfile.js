@@ -52,7 +52,7 @@ const ServiceProfile = ({serviceProfile, handleScrollClick}) => {
                                     <div className="profileImg service-image">
                                         <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className=""   width="250"
   height="250"/>
-                                        <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
+                                        <button className="colorBtn" onClick={handleScrollClick} >Hire Me</button>
                                     </div>
                                     <div className="bannerProfileDetails">
                                         <h3>{data.post_title}</h3>

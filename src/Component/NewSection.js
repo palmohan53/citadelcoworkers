@@ -135,7 +135,7 @@ const NewSection = ({ data }) => {
                     <img src={item.imageUrl} alt={item.body || `icon-${idx + 1}`} />
                   </div>
                   <div className="text-box">
-                    <h3>{item.body}</h3>
+                    <p>{item.body}</p>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const NewSection = ({ data }) => {
                       <img src={item.imageUrl} alt={item.body || `icon-${ribbonNumber}`} />
                     </div>
                     <div className="text-box">
-                      <h3>{item.body}</h3>
+                      <p>{item.body}</p>
                     </div>
                   </div>
                 </div>

@@ -40,6 +40,7 @@ const PricingPage = React.lazy(() => import("./Pages/PricingPlan.js"));
 const UkFiancemetat = React.lazy(() => import("./Pages/TestUK.js"));
 const Testimonials = React.lazy(() => import("./Pages/Testimonail.js"));
 const DMlanding = React.lazy(() => import("./Pages/DM.js"));
+const CaseStudiesPage = React.lazy(() => import("./Pages/Casestudy.js"));
 function App() {
   const location = useLocation();
 useEffect(() => {
@@ -190,11 +191,12 @@ useEffect(() => {
              <Route path="/uk" element={<UkFiancemetat />} />
              <Route path="/testimonials" element={<Testimonials />} />
                <Route path="/services/dm-landing" element={<DMlanding />} />
+                   <Route path="/case-study" element={<CaseStudiesPage />} />
     <Route path="*" element={<NotFound />} />
       </Routes>
 </Suspense>
 {showFooter && <Footer />}
-       <CookieBanner />
+    
     </div>
   );
 }

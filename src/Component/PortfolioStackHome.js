@@ -5,29 +5,32 @@ const PortfolioStack = () => {
     {
       id: 1,
       number: "01",
-      title: "Invisible to In-Demand Building a Digital Presence for a B2B Manufacturer from the Ground Up",
+      title: "Invisible to In-Demand Building a Digital Presence for a B2B Manufacturer",
 description:
-        "ddddd",
+        "A complete digital overhaul that turned a hidden manufacturer into a searchable industry name.",
       image:
         "https://virtualassistant24x7.com/wp-content/uploads/2026/02/ad-1.webp",
+        url:"https://www.citadelcoworkers.com/case-study/adinathenterprises"
     },
     {
       id: 2,
       number: "02",
-      title: "Brand Identity",
+      title: "Building an Undetectable Offshore Sales Team for a US Insurance Brokerage",
       description:
-        "Creative branding solution with consistent visual identity for businesses.",
+        "From a single outbound hire to a fully owned sales cycle in just three months with zero red flags raised.",
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
+        "https://virtualassistant24x7.com/wp-content/uploads/2026/07/dobe-21.png",
+        url:"https://www.citadelcoworkers.com/case-study/burnt-orange-benefits"
     },
     {
       id: 3,
       number: "03",
-      title: "Digital Marketing",
+      title: "Rebuilding a Specialty Practice's Entire Insurance Workflow",
       description:
-        "Performance-driven campaigns that generate leads and improve online presence.",
+        "From a front desk stretched thin to a fully managed insurance function, front-to-back handled entirely by one embedded specialist.",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+        "https://virtualassistant24x7.com/wp-content/uploads/2026/07/ng-4.webp",
+        url:"https://www.citadelcoworkers.com/case-study/ng-vascular"
     },
   ];
 
@@ -39,6 +42,18 @@ description:
           padding:0;
           box-sizing:border-box;
         }
+          a.stretched-link {
+    text-transform: capitalize;
+    color: #1565ff;
+    font-size: 16px;
+}
+.stackWrapper button a {
+    color: #fff;
+}
+
+a.stretched-link svg {
+    width: 34px;
+}
 .stackItem{
     position:sticky;
   
@@ -77,14 +92,32 @@ description:
     height: 50px;
     background: #172c67;
     border-radius: 100px;
+}.cardText {
+    margin-bottom: 0;
+    color: #6b7280;
+    line-height: 28px;
+
+    border-top: 1px solid #efefef;
+    width: 100%;
+    border-bottom: 1px solid #efefef;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
         .smallTitle{
-          color:#4F46E5;
-          font-size:14px;
-          font-weight:600;
-          letter-spacing:2px;
-          text-transform:uppercase;
-          margin-bottom:20px;
+             display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgb(29 143 122 / 26%);
+    border: 1px solid rgb(29 143 122 / 26%);
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    width: fit-content;
         }
 
         .mainTitle{
@@ -174,7 +207,7 @@ margin-bottom:40px;    display:flex;
             margin-bottom: 0;
           color:#6b7280;
           line-height:28px;
-          font-size:17px;
+       
         }
 
         @media(max-width:991px){
@@ -219,16 +252,17 @@ margin-bottom:40px;    display:flex;
             </p>
 
             <h2 className="mainTitle">
-              We Build Digital Experiences That Grow Brands
+              Measurable Outcomes Delivered Across Every Industry We Work With
+
             </h2>
 
             <p className="description">
-              From branding to websites and marketing, we help companies create
-              premium digital experiences that convert visitors into customers.
+            No two challenges are the same, but the results speak for themselves. Take a look at how we've delivered for businesses like yours.
+
             </p>
 
             <button className="btn">
-              View Portfolio
+          <a href="/case-study">View Portfolio →</a>
             </button>
 
           </div>
@@ -267,8 +301,27 @@ style={{
             <p className="cardText">
                 {card.description}
             </p>
-<a href="/work/mg-milk-grounds" class="stretched-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M0 0h24v24H0z"></path><g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M17 7 7 17"></path><path d="M8 7h9v9"></path></g></g></svg> </a>
-     </div>   </div>
+
+     </div>
+     <div class="btn-next">
+      <a href={card.url} class="stretched-link">read Full Case study <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="28" cy="28" r="28" fill="#1565FF"/>
+  <path
+    d="M20 28H36"
+    stroke="white"
+    stroke-width="2.8"
+    stroke-linecap="round"/>
+  <path
+    d="M30 22L36 28L30 34"
+    stroke="white"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+</svg> </a>
+      </div>
+     
+     
+     </div>
 
     </div>
 

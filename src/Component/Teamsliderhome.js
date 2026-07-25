@@ -6,66 +6,77 @@ const team = [
     name: "Ronak Singh",
     role: "Rendering & VFX Specialist",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/team-1.webp",
+     price: "$8/hr",
   },
   {
     id: 2,
     name: "Aditi Gupta",
     role: "Lead Outreach Specialist  ",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/aDITI.webp",
+     price: "$8/hr",
   },
   {
     id: 3,
     name: "Amit Raghavan",
     role: "Performance Marketing Expert",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Team2-2.webp",
+     price: "$5/hr",
   },
   {
     id: 4,
     name: "Rahul Singh",
     role: "Influencer Outreach Specialist",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/02/TEAM2.webp",
+     price: "$7/hr",
   },
   {
     id: 5,
     name: "Keshav Kumar",
     role: "Remarketing & Audience Strategist",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Keshav-Kumar-1.webp",
+     price: "$8/hr",
   },
   {
     id: 6,
     name: "Aditi Sinha",
     role: "Ad Copy & Creative Expert",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Aditi-Sinha-1.webp",
+     price: "$7/hr",
   },
   {
     id: 7,
     name: "Amit Patel",
     role: "Google Ads Campaign Specialist",
     image: "	https://virtualassistant24x7.com/wp-content/uploads/2026/01/TEam-image-1024-51.webp",
+     price: "$8/hr",
   },
   {
     id: 8,
     name: "Kritika Nair",
     role: "Content Strategy & SEO Specialist",
     image: "	https://virtualassistant24x7.com/wp-content/uploads/2026/03/Team1.webp",
+     price: "$7/hr",
   },
     {
     id: 9,
     name: "Rishi Pathak",
     role: "Social Media & Email Content Expert",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/team6-1.webp",
+     price: "$8/hr",
   },
    {
     id: 10,
     name: "Aarav Mehta",
     role: "Senior Game Designer ",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/05/Arav.webp",
+     price: "$8/hr",
   },
     {
     id: 11,
     name: "Nisha Gupta",
     role: "Virtual Financial Controller ",
-    image: "https://virtualassistant24x7.com/wp-content/uploads/2025/11/TEam-image-1024-16.webp",
+    image: "https://virtualassistant24x7.com/wp-content/uploads/2026/07/d-18.webp",
+     price: "$8/hr",
   },
 ];
 
@@ -83,7 +94,28 @@ export default function VerticalTeamSlider({ profiles = [] }) {
   padding:0;
   box-sizing:border-box;
 }
+.price-badge{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: linear-gradient(135deg,#1565ff,#4f8cff);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(21,101,255,.35);
+    letter-spacing: .3px;
+    transition: .3s ease;
+  
+}
 
+.team-card:hover .price-badge{
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 16px 35px rgba(21,101,255,.45);
+}
 .team-wrapper{
   position:relative;
   width:100%;
@@ -285,7 +317,10 @@ font-size:13px;
     max-width:260px;
     flex-shrink:0;
 }
-
+.track.down .price-badge {
+    right: 16px !important;
+    left: auto;
+}
 .team-card img{
     width:100%;
     height:240px;
@@ -318,7 +353,9 @@ font-size:13px;
 
               {leftColumn.map((item, index) => (
                 <div className="team-card" key={index}>
- 
+ <div className="price-badge">
+  {item.price}
+</div>
                   <img src={item.image} alt={item.name} />
 
                   <h3>{item.name}</h3>
@@ -339,7 +376,9 @@ font-size:13px;
 
               {rightCards.map((item, index) => (
                 <div className="team-card" key={index}>
-
+<div className="price-badge">
+  {item.price}
+</div>
                   <img src={item.image} alt={item.name} />
 
                   <h3>{item.name}</h3>

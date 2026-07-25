@@ -112,6 +112,10 @@ const Home = () => {
                         <div className="col-md-6 col-12">
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
+
+                               
+
+
                                     <div className="bannerProfile">
                                         <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
                                         <div className="bannerProfileDetails">
