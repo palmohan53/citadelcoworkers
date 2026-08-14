@@ -43,6 +43,7 @@ import LogoMotionDesignerCompetencies from '../Component/CompetenciesLOGOMOTIOND
 import LogoanimationIPProtection   from "../Component/LogoanimationIPProtection";
 import ExtraSection from "../Component/Extrasection";
 import DMportfolio from "../Component/DMportfolio";
+import PricingTabs from "../Component/DMHiringTabs";
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
@@ -875,15 +876,9 @@ Serviceconent:(    <Suspense fallback={<div className="h-[400px] w-full" />}>
       <Steps serviceSection={serviceSection} />
     </Suspense>
   ),
-SkillsSection: () => {
-  if (!skillsetData) return null;
-
-  return (
-    <section className="serviceBulkContent no-padding">
+SkillsSection:  <section className="serviceBulkContent no-padding">
       <VideoEditorSkillsSection skillsetData={skillsetData} />
-    </section>
-  );
-},
+    </section>,
 
   faq:      <Faq faqData={faqData}/>,
   GameDesignerCapabilities: <GameDesignerCapabilities />,
@@ -891,6 +886,12 @@ SkillsSection: () => {
   LogoMotionDesignerCompetencies:<LogoMotionDesignerCompetencies />,
   LogoanimationIPProtection: <LogoanimationIPProtection />,
   DMportfolio: <DMportfolio></DMportfolio>,
+PricingTabs: (
+  <PricingTabs
+    handleScrollClick={handleScrollClick}
+    service={currentService}
+  />
+),
 UnderstandingProductDesigner: (
 
       <section className="Product-design-new-section">

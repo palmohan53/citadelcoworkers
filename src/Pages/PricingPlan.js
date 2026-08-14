@@ -845,7 +845,7 @@ button.faq-toggle {
           <li>Dedicated resource</li>
         </ul>
 
-        <a href="/contact-us" class="plan-btn">Get Started <span>→</span></a>
+        <a href="/contact-us" class="plan-btn" >Get Started <span>→</span></a>
       </div>
 
    

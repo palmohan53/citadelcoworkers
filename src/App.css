@@ -4536,6 +4536,19 @@ section.full-control .right-side-content .card:hover {
     flex-direction: column;
     align-items: flex-start;
   }
+  .DM-service-page .tab
+  {
+        font-size: 12px !important;
+  }
+  .pricing-tabs {
+    margin-bottom: 0;
+}.pricing-tabs {
+    margin-bottom: 0;
+}
+.feature
+{
+  font-size: 10px;
+}
 section.testimonial-section-page-sp .testimonial-grid {
     grid-template-columns: repeat(2, 1fr) !important
     ;
@@ -10377,8 +10390,8 @@ TESTIMONIAL
     top:50%;
     transform:translate(-50%,-50%);
 
-    width:80px;
-    height:80px;
+    width: 50px;
+    height:50px;
 
     border-radius:50%;
 

@@ -4,11 +4,7 @@ export default function FeaturedInMarqueeFixedLabel() {
   const [activePopup, setActivePopup] = useState(null);
 
   const logos = [
-       {
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/apnew-logo-1.png",
-      alt: "Associated Press",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/New-ap-1-scaled.webp"
-    },
+     
     {
       src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/The-Chronicle-Journal.webp",
       alt: "The Chronicle Journal",
@@ -19,11 +15,12 @@ export default function FeaturedInMarqueeFixedLabel() {
       alt: "Barchart",
       Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/bar-scaled.webp"
     },
-     {
-      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/openpr-logo-slogan.webp",
-      alt: "Open PR",
-      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Open-PR-scaled.webp"
+      {
+      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/apnew-logo-1.png",
+      alt: "Associated Press",
+      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/New-ap-1-scaled.webp"
     },
+     
     {
       src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/xpr.webp",
       alt: "XPR media",
@@ -31,7 +28,11 @@ export default function FeaturedInMarqueeFixedLabel() {
     },
 
 	
-	
+	{
+      src: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/openpr-logo-slogan.webp",
+      alt: "Open PR",
+      Image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Open-PR-scaled.webp"
+    },
 	
 	
 	

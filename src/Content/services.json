@@ -452,6 +452,29 @@
             "categoryName": "Digital Marketer",
             "pageMetaTitle": "Hire Digital Marketer in India - Outsource Digital Marketing Services",
             "pageMetaContent": "Boost your business growth with Citadel Coworkers’ digital marketing outsourcing services. Hire Expert digital marketer in India starting at USD 7/hour",
+			           "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+    "TeamSection",
+	"certifications",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       "DMportfolio",
+	   "Testimonial",
+       "serviceSection",
+       "pricing",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
@@ -3918,6 +3941,30 @@
             "categoryName": "SEO",
             "pageMetaTitle": "Remote SEO Expert in India ",
             "pageMetaContent": "Hire trained remote SEO Expert in India  just $8/hour.",
+             "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+       "PricingTabs",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
@@ -3927,6 +3974,61 @@
                         
                     }
                 ],
+                "pricing": {
+  "plans": [
+    {
+      "id": 1,
+      "package": "Starter Package",
+      "title": "Foundation",
+      "price": "$599",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+     "SEO audit & opportunity analysis",
+"Keyword research & search-intent mapping",
+"On-page SEO optimization",
+"Content + graphic design support",
+"Monthly performance report"
+
+      ]
+    },
+    {
+      "id": 2,
+      "package": "Growth Package",
+      "title": "MOMENTUM",
+      "price": "$1,100",
+      "duration": "/ month",
+      "popular": true,
+      "features": [
+      "Everything in Foundation",
+      "Technical SEO optimization",
+      "Off-page & backlink strategy",
+      "SEO-focused webpage optimization",
+   
+      "Dedicated SEO strategist"
+
+      ]
+    },
+    {
+      "id": 3,
+      "package": "Enterprise Package",
+      "title": "Scale",
+      "price": "$1,500",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+      "Everything in Momentum",
+     
+      "Local, e-commerce & international SEO",
+      "Ongoing graphics, video & webpage design",
+      "Competitor & SERP monitoring",
+      "Weekly reporting & strategy reviews",
+"Priority support"
+
+      ]
+    }
+  ]
+},
             "serviceHeading":[
                     {
                         "title": "Advanced SEO Services for Sustainable Organic Growth",
@@ -4171,6 +4273,30 @@
             "categoryName": "PPC Advertising",
             "pageMetaTitle": "Hire Offshore PPC Experts from India ",
             "pageMetaContent": "Hire trained remote PPC Experts in India  just $8/hour.",
+            "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+       "PricingTabs",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
@@ -4180,6 +4306,69 @@
                         
                     }
                 ],
+
+                 "pricing": {
+  "plans": [
+    {
+      "id": 1,
+      "package": "Starter Package",
+      "title": "Foundation",
+      "price": "$799",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+  "PPC account & campaign audit",
+"Keyword & audience research",
+"Campaign setup & optimization",
+"Ad copywriting",
+"Landing page design support",
+"Monthly performance report"
+
+
+      ]
+    },
+    {
+      "id": 2,
+      "package": "Growth Package",
+      "title": "MOMENTUM",
+      "price": "$1,400",
+      "duration": "/ month",
+      "popular": true,
+      "features": [
+    "Everything in Foundation",
+    "Multi-campaign management",
+    "Remarketing & retargeting campaigns",
+    "A/B testing for ads & creatives",
+    "Landing page optimization",
+    "Conversion tracking & analysis"
+
+
+
+      ]
+    },
+    {
+      "id": 3,
+      "package": "Enterprise Package",
+      "title": "Scale",
+      "price": "$2,000",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+    "Everything in Momentum",
+    "Multi-platform PPC management",
+    "Advanced audience segmentation",
+    "Landing page & CRO support",
+    "Advanced conversion analysis",
+    "Weekly reporting & strategy reviews",
+    "Priority campaign support"
+
+
+      ]
+    }
+  ]
+},
+    
+
             "serviceHeading":[
                     {
                         "title": "Advanced PPC Services for Maximizing ROI and Conversions ",
@@ -4315,7 +4504,30 @@
             "categoryName": "Social Media Marketing",
             "pageMetaTitle": "Hire Social Media Marketing Expert | Outsource Social Media  to India  ",
             "pageMetaContent": "Hire top social media marketing experts from India to boost engagement, brand visibility & ROI. Scalable remote talent for Facebook, Instagram, LinkedIn & more.",
-            "banner":[
+             "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+       "PricingTabs",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],"banner":[
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire a Social Media Marketing Expert",
@@ -4324,6 +4536,71 @@
                         
                     }
                 ],
+
+
+                  "pricing": {
+  "plans": [
+    {
+      "id": 1,
+      "package": "Starter Package",
+      "title": "Foundation",
+      "price": "$699",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+ "Social media strategy",
+"Content calendar & scheduling",
+"Copywriting & creative design",
+"Graphics + short-form video",
+"Community management",
+"Monthly performance report"
+
+
+      ]
+    },
+    {
+      "id": 2,
+      "package": "Growth Package",
+      "title": "MOMENTUM",
+      "price": "$1000",
+      "duration": "/ month",
+      "popular": true,
+      "features": [
+    "Everything in Foundation",
+"Meta & LinkedIn management",
+"Reels & short-form video content",
+"Platform-specific content strategy",
+"Paid social campaign management",
+"Audience & competitor research"
+
+
+
+      ]
+    },
+    {
+      "id": 3,
+      "package": "Enterprise Package",
+      "title": "Scale",
+      "price": "$1,400",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+    "Everything in Momentum",
+"Multi-platform social management",
+"Advanced Meta & LinkedIn campaigns",
+"Continuous creative & audience testing",
+"Advanced community management",
+"Graphics, video & webpage design",
+"Weekly reporting & strategy reviews"
+
+
+
+      ]
+    }
+  ]
+},
+
+
             "serviceHeading":[
                     {
                         "title": "360° Social Media Marketing Services for Sustainable Growth",
@@ -4724,6 +5001,32 @@
             "categoryName": "Conversion Rate Optimization (CRO)",
             "pageMetaTitle": "Hire an Offshore Conversion Rate Optimization (CRO) from India",
             "pageMetaContent": "Hire trained remote Conversion Rate Optimization (CRO) in India  just $8/hour.",
+            "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+	   
+       "pricing",
+
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
@@ -4865,7 +5168,32 @@
             "categoryName": "Influencer Marketing",
             "pageMetaTitle": "Influencer Marketing Services in India",
             "pageMetaContent": "Hire certified influencer marketing experts in India starting at $9/hour. Drive 5X ROI with authentic creators, real engagement & performance-driven campaigns.",
-            "banner":[
+             "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+	   
+       "pricing",
+	   "SkillsSection",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],"banner":[
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire an Influencer Marketer in India",
@@ -5006,7 +5334,32 @@
             "categoryName": "Email Marketing",
             "pageMetaTitle": "Email Marketing Services in India",
             "pageMetaContent": "Hire certified Email Marketing experts in India starting at $9/hour. Drive 5X ROI with authentic creators, real engagement & performance-driven campaigns.",
-            "banner":[
+             "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+	   
+       "PricingTabs",
+	   "SkillsSection",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ], "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire an Email Marketing Expert in India ",
@@ -5015,6 +5368,72 @@
                         
                     }
                 ],
+
+                
+   "pricing": {
+  "plans": [
+    {
+      "id": 1,
+      "package": "Starter Package",
+      "title": "Foundation",
+      "price": "$599",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+   "Email marketing strategy",
+   "Audience & list segmentation",
+   "Email copywriting & design",
+   "Basic automation setup",
+   "Graphics & creative support",
+   "Monthly performance report"
+
+
+      ]
+    },
+    {
+      "id": 2,
+      "package": "Growth Package",
+      "title": "MOMENTUM",
+      "price": "$1,000",
+      "duration": "/ month",
+      "popular": true,
+      "features": [
+     "Everything in Foundation",
+     "Advanced segmentation",
+     "Automated lead-nurture flows",
+     "A/B testing for subject lines & content",
+     "CRM & email platform integration",
+     "Bi-weekly performance reporting",
+     "Dedicated email strategist"
+
+
+      ]
+    },
+    {
+      "id": 3,
+      "package": "Enterprise Package",
+      "title": "Scale",
+      "price": "$1,400",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+      "Everything in Momentum",
+      "Advanced lifecycle automation",
+      "Behavioral & predictive segmentation",
+      "Multi-step customer journeys",
+      "Email + SMS campaign support",
+      "Advanced deliverability optimization",
+      "Graphics, video & webpage design",
+      "Weekly reporting & strategy reviews",
+      "Priority support"
+
+
+      ]
+    }
+  ]
+},
+    
+
             "serviceHeading":[
                     {
                         "title": "Full-Spectrum Professional Email Marketing Services ",
@@ -5142,6 +5561,32 @@
             "categoryName": "Content Marketing",
             "pageMetaTitle": "Content Marketing Services in India",
             "pageMetaContent": "Hire certified Content Marketing experts in India starting at $8/hour. Drive 5X ROI with authentic creators, real engagement & performance-driven campaigns.",
+            "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+	   
+       "pricing",
+	   "SkillsSection",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
@@ -5278,7 +5723,32 @@
             "categoryName": "Video Marketing",
             "pageMetaTitle": "Video Marketing Services in India",
             "pageMetaContent": "Hire certified Video Marketing experts in India starting at $7/hour.",
-            "banner":[
+          "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+	   
+       "pricing",
+	   "SkillsSection",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],  "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
                         "title": "Hire a Dedicated Video Marketing Expert ",
@@ -5415,7 +5885,33 @@
             "categoryName": "Lead Generation",
             "pageMetaTitle": "Lead Generation Services in India",
             "pageMetaContent": "Hire certified Lead Generation experts in India starting at $7/hour.",
-             
+              "useDynamicSections": true,
+					   "sectionsOrder": [
+  "hero",
+    "number",
+	
+    "Services",
+     "TeamSection",
+	"certifications",
+	"DMportfolio",
+	  "ToolsSection",
+       "ServiceBulkContentUpper",
+       
+	   "Testimonial",
+       "serviceSection",
+	   
+       "pricing",
+	   "SkillsSection",
+	    "ServiceBulkContent",
+        "faq",
+		  "ContactForm",
+		  
+   "Blogs",
+    "BottomServices",
+    "FeaturedInMarquee",
+  "ConcludingSec"
+  ],
+  
             "banner":[
                     {
                         "imageUrl": "images/aggregate.png",
@@ -6762,8 +7258,8 @@
 		{
             "categoryUrl": "generative-engine-optimization-services-geo",
             "categoryName": "Generative Engine Optimization Services (GEO)",
-            "pageMetaTitle": "Hire A Cartoon Character Designer In India  – Starts at $8/Hour ",
-            "pageMetaContent": "Hire Cartoon Character Designer from India to create custom 2D, 3D, and motion Cartoon Character for websites, videos, social media, and branding. Starts at $8/hour.",
+            "pageMetaTitle": "Generative Engine Optimization Services ",
+            "pageMetaContent": "Generative Engine Optimization Services",
            "useDynamicSections": true,
            "sectionsOrder": [
     "hero",
@@ -6777,19 +7273,9 @@
          "ServiceBulkContent",
            "DMportfolio",
             "ToolsSection",
-	
-
-	
-	  
-            
-    
-           "Testimonial",
-		
-      "pricing",
-	 "serviceSection",
-  
-
-    "faq",
+	         "Testimonial",
+		"PricingTabs",
+        "faq",
    "Blogs",
     "FeaturedInMarquee",
  
@@ -6837,7 +7323,7 @@
                     {
                         "imageUrl": "/images/Industires.png",
                         "title": "Industries Served",
-                        "body": "12+",
+                        "body": "15+",
                         "flipcontent":"From SaaS and ecommerce to healthcare and financial services"
                     },
                     {
@@ -6960,7 +7446,7 @@
     {
       "title": "Why Growing Brands Trust Citadel Coworkers For GEO",
       "body": "Brands want AI visibility built on evidence and measured honestly, not a rebadged SEO retainer with AI in the invoice. Citadel Coworkers gives growing brands dedicated generative engine optimization talent from India, with the structure and accountability real optimization programs need.",
-      "centerImageUrl": "/images/ge.png"
+      "centerImageUrl": "/images/GEO-NEW.webp"
     }
   ],
   "icontextdesign": [
@@ -6979,7 +7465,7 @@
         ],
 		 "Concludingtext":[
             {
-               "text": "Make Your Brand The Answer AI Gives",
+               "text": "Helping Businesses Scale Globally and Get Discovered by AI.",
 			   "buttontext":"Hire A GEO Specialist"
             }
         ]

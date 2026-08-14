@@ -60,7 +60,7 @@ useEffect(() => {
   });
 
   // 🔹 Step 2: Country check FIRST
-  fetch("https://ipapi.co/json/")
+  fetch("https://ipwho.co/json/")
     .then((res) => res.json())
     .then((data) => {
       // 👉 Sirf NON-India ke liye load karo

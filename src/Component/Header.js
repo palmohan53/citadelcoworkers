@@ -82,7 +82,9 @@ const Header = () => {
   <NavLink className="nav-link" to="/interview-with-co-founder">
 Interview with Co-Founder
     </NavLink>
-   
+    <NavLink className="nav-link" to="/meet-our-team">
+Meet the Team
+    </NavLink>
       <NavLink className="nav-link" to="/why-ccw">
     Why Citadel Coworkers
     </NavLink>
@@ -135,6 +137,53 @@ Interview with Co-Founder
                                     }
                                 </ul>
                             </li>
+                            <li className="nav-item dropDown">
+                                <NavLink className="nav-link" to="/case-study" onClick={openToggle}>Case Studies</NavLink>
+                                <FontAwesomeIcon icon={faAngleDown}  className="mobile" onClick={subMenuToggle}/>
+                                <FontAwesomeIcon icon={faAngleDown}  className="desktop"/>
+								 <ul className={subMenuClass ? "active" : ""}>
+								   <li onClick={openToggle}>
+    <NavLink className="nav-link" to="/case-study/trigen-logistics">
+      Trigen Logistics
+	  </NavLink>
+
+  </li>
+   <li onClick={openToggle}>
+  <NavLink className="nav-link" to="/case-study/burnt-orange-benefits">
+     Burnt Orange Benefits
+	  </NavLink>
+</li>
+  <li onClick={openToggle}>
+  <NavLink className="nav-link" to="/case-study/ng-vascular">
+     NG Vascular
+	  </NavLink>
+</li>
+
+<li onClick={openToggle}>
+  <NavLink className="nav-link" to="/case-study/flashiring">
+   Flash Hiring
+	  </NavLink>
+</li>
+
+<li onClick={openToggle}>
+  <NavLink className="nav-link" to="/case-study/rhythm-superfoods">
+ Rhythm Superfoods
+	  </NavLink>
+</li>
+
+<li onClick={openToggle}>
+  <NavLink className="nav-link" to="/case-study/adinathenterprises">
+Adinath Enterprises
+	  </NavLink>
+</li> 
+
+<li onClick={openToggle}>
+  <NavLink className="nav-link" to="/case-study/virtualassistantseo">
+Virtual Assistant SEO
+	  </NavLink>
+</li> 
+  </ul>
+						     </li>
                             <li className="nav-item" onClick={openToggle}>
                                 <NavLink className="nav-link" to="/blog">Blog</NavLink>
                             </li>

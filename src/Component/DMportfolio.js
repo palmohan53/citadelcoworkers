@@ -12,12 +12,68 @@ const DMportfolio = () => {
     slidesToScroll: 1,
 
   };
-
-     const data = [
+  const data = [
 
     {
     title: "Social Media Posts",
+   icon: (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="5" y="5" width="14" height="14" rx="2"/>
+    <path d="M9 9h6"/>
+    <path d="M9 13h6"/>
+    <path d="M9 17h3"/>
+  </svg>
+),
     portfolio: [
+       {
+        image: "/images/Portfolio/SocialPost/Cosmo clay dishes.webp",
+        title: "Virtual",
+        category: "Appetizing food photography for recipes",
+        desc: "Shot recipe photography for a BBQ sauce brand",
+         color:"#c2ffe2",
+      },
+        {
+        image: "/images/Portfolio/SocialPost/Melanie Wenzel (1).webp",
+        title: "Citadel",
+        category: "Social Media",
+        desc: "Captured calming lifestyle shots for a wellness retreat's promotion",
+         color:"#9f1fd1",
+      }
+
+      ,
+        {
+        image: "/images/Portfolio/SocialPost/spacevogues Furniture 2 (2).webp",
+        title: "Citadel",
+        category: "Social Media",
+        desc: "Captured luxury interior photography for an interior design firm",
+         color:"#1f99d1",
+      }
+       ,
+         {
+        image: "/images/Portfolio/SocialPost/kosmos clay OPffer.webp",
+        title: "Citadel",
+        category: "Social Media",
+        desc: "Ran seasonal discount promotions for a BBQ sauce brand",
+         color:"#c976a6",
+      },
+        {
+        image: "/images/Portfolio/SocialPost/CCW Festive.webp",
+        title: "Festive greetings across major global holidays",
+        category: "CCW Festive",
+        desc: "Created festive greeting posts for a workforce solutions brand",
+          color:" #d6a1c9",
+      },
+      ,
       {
         image: "/images/Portfolio/SocialPost/adinath (4) (1).webp",
         title: "adinath",
@@ -25,13 +81,7 @@ const DMportfolio = () => {
         desc: "Mixed technical tips with light memes for a busbar manufacturer",
         color:"#dce2ff",
       },
-      {
-        image: "/images/Portfolio/SocialPost/CCW Festive.webp",
-        title: "Festive greetings across major global holidays",
-        category: "CCW Festive",
-        desc: "Created festive greeting posts for a workforce solutions brand",
-          color:" #d6a1c9",
-      },
+    
       {
         image: "/images/Portfolio/SocialPost/CCW1 (1).webp",
         title: "CCW1 (1)",
@@ -39,13 +89,7 @@ const DMportfolio = () => {
         desc: "Designed LinkedIn carousels to build credibility for a staffing agency",
          color:"#ceb2b2",
       },
-      {
-        image: "/images/Portfolio/SocialPost/Cosmo clay dishes.webp",
-        title: "Virtual",
-        category: "Appetizing food photography for recipes",
-        desc: "Shot recipe photography for a BBQ sauce brand",
-         color:"#c2ffe2",
-      },
+     
 
         {
         image: "/images/Portfolio/SocialPost/Dummy den.webp",
@@ -76,14 +120,7 @@ const DMportfolio = () => {
         desc: "Styled product photography for a jewelry brand's lifestyle campaign",
          color:"#449cbe",
       }
-      ,
-         {
-        image: "/images/Portfolio/SocialPost/kosmos clay OPffer.webp",
-        title: "Citadel",
-        category: "Social Media",
-        desc: "Ran seasonal discount promotions for a BBQ sauce brand",
-         color:"#c976a6",
-      }
+     
       ,
          {
         image: "/images/Portfolio/SocialPost/kosmos clay.webp",
@@ -92,14 +129,7 @@ const DMportfolio = () => {
         desc: "Developed recipe posts featuring products for a BBQ sauce brand",
          color:"#1f40d1",
       },
-         {
-        image: "/images/Portfolio/SocialPost/Melanie Wenzel (1).webp",
-        title: "Citadel",
-        category: "Social Media",
-        desc: "Captured calming lifestyle shots for a wellness retreat's promotion",
-         color:"#9f1fd1",
-      }
-      ,
+       
          {
         image: "/images/Portfolio/SocialPost/NG-.webp",
         title: "Citadel",
@@ -107,22 +137,9 @@ const DMportfolio = () => {
         desc: "Delivered patient awareness posts for a vascular health clinic",
          color:"#1fd1d1",
       }
-      ,
-         {
-        image: "/images/Portfolio/SocialPost/residally (2).webp",
-        title: "Citadel",
-        category: "Social Media",
-        desc: "Produced educational carousels explaining benefits for a home-sharing platforms",
-         color:"#1fd128",
-      }
-       ,
-         {
-        image: "/images/Portfolio/SocialPost/residally.webp",
-        title: "Citadel",
-        category: "Social Media",
-        desc: "Designed lifestyle visuals for a home-sharing platform promoting experience ",
-         color:"#d11f1f",
-      }
+      
+      
+    
        ,
          {
         image: "/images/Portfolio/SocialPost/spacevogues Furniture (1).webp",
@@ -132,14 +149,7 @@ const DMportfolio = () => {
          color:"#1fd196",
       }
       ,
-         {
-        image: "/images/Portfolio/SocialPost/spacevogues Furniture 2 (2).webp",
-        title: "Citadel",
-        category: "Social Media",
-        desc: "Captured luxury interior photography for an interior design firm",
-         color:"#1f99d1",
-      }
-      ,
+       
          {
         image: "/images/Portfolio/SocialPost/VASEo (1).webp",
         title: "Citadel",
@@ -151,16 +161,48 @@ const DMportfolio = () => {
   },
   {
     title: "Reels & Videos",
+icon: (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="2" y="5" width="20" height="14" rx="3"/>
+    <polygon points="10 9 16 12 10 15 10 9"/>
+  </svg>
+),
     portfolio: [
-                  {
+                {
   type: "video",
-  video: "/images/Portfolio/Videomarkting/dobe.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/dobe.webp",
+  video: "/images/Portfolio/Videomarkting/dobe (3).mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/laptop.webp",
+  title: "Waliza",
+  desc: "Filmed a talking-head video explaining services for a workforce solutions brand",
+  color: "#4f8df5"
+},
+                  {
+
+  type: "video",
+  video: "/images/Portfolio/Videomarkting/dobe-new.mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/dobe-new.webp",
   title: "Kosmovideo1",
   desc: "Produced a software tutorial video for a creative tools platform",
   color: "#4f8df5"
 },
-                          {
+       {
+  type: "video",
+  video: "/images/Portfolio/Videomarkting/50hour.mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/50hour.webp",
+  title: "Videomarkting",
+  desc: "Made a relatable reel on admin struggles for an SEO service provider",
+  color: "#4f8df5"
+},                       {
   type: "video",
   video: "/images/Portfolio/Videomarkting/coral.mp4",
   thumbnail: "/images/Portfolio/Videomarkting/corel.webp",
@@ -168,15 +210,29 @@ const DMportfolio = () => {
   desc: "Created a tech walkthrough video for a productivity tools brand",
   color: "#4f8df5"
 },
-                   {
+      {
+  type: "video",
+  video: "/images/Portfolio/Videomarkting/poonamvideo.mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/poonam.webp",
+  title: "Videomarkting",
+  desc: "Produced an explainer video for a workforce solutions brand's offerings",
+  color: "#4f8df5"
+},               {
   type: "video",
   video: "/images/Portfolio/Videomarkting/Kosmovideo1.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/kosmo2 (1).webp",
+  thumbnail: "/images/Portfolio/Videomarkting/Kosmovideo1.webp",
   title: "Kosmovideo1",
   desc: "Filmed a fun recipe video for a BBQ sauce brand",
   color: "#4f8df5"
 },
-
+       {
+  type: "video",
+  video: "/images/Portfolio/Videomarkting/tab.mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/tab.webp",
+  title: "ccw",
+  desc: "Created a calming retreat video for a wellness retreat",
+  color: "#4f8df5"
+},
                   {
   type: "video",
   video: "/images/Portfolio/Videomarkting/spacevoug.mp4",
@@ -188,35 +244,20 @@ const DMportfolio = () => {
    
            {
   type: "video",
-  video: "/images/Portfolio/Videomarkting/kosmovideo.mp4",
+  video: "/images/Portfolio/Videomarkting/kosmovideobrown.mp4",
   thumbnail: "/images/Portfolio/Videomarkting/kosmo1.webp",
   title: "kosmovideo",
   desc: "Put together a behind-the-scenes reel for a BBQ sauce brand",
   color: "#4f8df5"
 },
 
-           {
+
+   {
   type: "video",
-  video: "/images/Portfolio/Videomarkting/dobe (1).mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/laptop.webp",
-  title: "Waliza",
-  desc: "Filmed a talking-head video explaining services for a workforce solutions brand",
-  color: "#4f8df5"
-},
-           {
-  type: "video",
-  video: "/images/Portfolio/Videomarkting/tab.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/tab.webp",
-  title: "ccw",
-  desc: "Created a calming retreat video for a wellness retreat",
-  color: "#4f8df5"
-},
-           {
-  type: "video",
-  video: "/images/Portfolio/Videomarkting/adinath .mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/adinath .webp",
-  title: "Email Marketing Campaign",
-  desc: "Produced a Republic Day tribute video for a busbar manufacturer",
+  video: "/images/Portfolio/Videomarkting/kosmooffer.mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/kosmooffer.webp",
+  title: "Videomarkting",
+  desc: "Filmed a discount promo video for a BBQ sauce brand's retail partner",
   color: "#4f8df5"
 },
           {
@@ -227,17 +268,10 @@ const DMportfolio = () => {
   desc: "Captured an interior walkthrough video for a hospitality business",
   color: "#4f8df5"
 },
-  {
-  type: "video",
-  video: "/images/Portfolio/Videomarkting/poonamvideo.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/poonam.png",
-  title: "Videomarkting",
-  desc: "Produced an explainer video for a workforce solutions brand's offerings",
-  color: "#4f8df5"
-},
+
      {
   type: "video",
- video: "/images/Portfolio/Videomarkting/youtube-.mp4",
+ video: "/images/Portfolio/Videomarkting/youtube-c (2).mp4",
   thumbnail: "/images/Portfolio/Videomarkting/youtube-.webp",
   title: "Email Marketing Campaign",
   desc: "Captured a fun fitness reel for a yoga studio",
@@ -245,51 +279,37 @@ const DMportfolio = () => {
 },
   {
   type: "video",
-  video: "/images/Portfolio/Videomarkting/virtual.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/virtual.webp",
+  video: "/images/Portfolio/Videomarkting/virtual (2).mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/virtual (1).webp",
   title: "Videomarkting",
   desc: "Made a short video questioning manual SEO for an SEO service provider",
   color: "#4f8df5"
 },
   
 
-   {
-  type: "video",
-  video: "/images/Portfolio/Videomarkting/kosmooffer.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/kosmooffer.webp",
-  title: "Videomarkting",
-  desc: "Filmed a discount promo video for a BBQ sauce brand's retail partner",
-  color: "#4f8df5"
-},
+
   
    {
   type: "video",
-  video: "/images/Portfolio/Videomarkting/ccw.mp4",
+  video: "/images/Portfolio/Videomarkting/ccw (2).mp4",
   thumbnail: "/images/Portfolio/Videomarkting/ccw.webp",
   title: "Videomarkting",
   desc: "Created a quick-tip reel on social tools for a marketing agency",
   color: "#4f8df5"
 },
+ 
      {
   type: "video",
-  video: "/images/Portfolio/Videomarkting/50hour.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/50hour.webp",
-  title: "Videomarkting",
-  desc: "Made a relatable reel on admin struggles for an SEO service provider",
-  color: "#4f8df5"
-},
-     {
-  type: "video",
-  video: "/images/Portfolio/Videomarkting/youtube-c.mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/youtube-c.webp",
+  video: "/images/Portfolio/Videomarkting/yogaapp.mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/yogaapp.webp",
   title: "Videomarkting",
   desc: "Filmed a guided yoga video for a yoga app",
   color: "#4f8df5"
 },   
      {
   type: "video",
-  video: "/images/Portfolio/Videomarkting/residally .mp4",
-  thumbnail: "/images/Portfolio/Videomarkting/residally .png",
+  video: "/images/Portfolio/Videomarkting/residally (2).mp4",
+  thumbnail: "/images/Portfolio/Videomarkting/residally.webp",
   title: "Videomarkting",
   desc: "Produced a relatable video on homesharing for a home-sharing platform",
   color: "#018d30"
@@ -299,7 +319,24 @@ const DMportfolio = () => {
   {
 
     
-    title: "Content & Marketing",
+    title: "Content & Marketing",icon: (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M3 11v2"/>
+    <path d="M6 10v4"/>
+    <path d="M9 8l10-3v14l-10-3z"/>
+    <path d="M6 14l2 5"/>
+  </svg>
+),
     portfolio: [
          {
          image: "/images/Portfolio/ContentMarketing/Ng servies.webp",
@@ -502,7 +539,22 @@ const DMportfolio = () => {
 
   
     {
-    title: "Email Marketing",
+    title: "Email Marketing",icon: (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M22 2L11 13"/>
+    <path d="M22 2L15 22l-4-9-9-4 20-7z"/>
+  </svg>
+),
    portfolio: [
    
    
@@ -621,7 +673,42 @@ const DMportfolio = () => {
 
   {
     title: "Impact",
+    icon: (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="9"/>
+    <circle cx="12" cy="12" r="5"/>
+    <circle cx="12" cy="12" r="1"/>
+  </svg>
+),
     portfolio: [
+       {
+      image: "/images/Portfolio/Imapct/Impact 11 (1).webp",
+        title: "Case Study Design",
+        category: "Content Marketing",
+        desc: "Reported YouTube channel growth for a vascular health clinic"
+      },
+      {
+      image: "/images/Portfolio/Imapct/Impact (10 ).webp",
+        title: "Case Study Design",
+        category: "Content Marketing",
+        desc: "Tracked search impression growth for an SEO service provider "
+      },  
+       {
+      image: "/images/Portfolio/Imapct/Impact 5.webp",
+        title: "Case Study Design",
+        category: "Content Marketing",
+        desc: "Tracked AI and organic search traffic "
+      },
 {
       image: "/images/Portfolio/Imapct/Impact1.webp",
         title: "Case Study Design",
@@ -694,18 +781,8 @@ const DMportfolio = () => {
         category: "Content Marketing",
         desc: "Measured video engagement metrics for a BBQ sauce brand"
       },   
-         {
-      image: "/images/Portfolio/Imapct/Impact (10 ).webp",
-        title: "Case Study Design",
-        category: "Content Marketing",
-        desc: "Tracked search impression growth for an SEO service provider "
-      },  
-         {
-      image: "/images/Portfolio/Imapct/Impact 11 (1).webp",
-        title: "Case Study Design",
-        category: "Content Marketing",
-        desc: "Reported YouTube channel growth for a vascular health clinic"
-      },  
+         
+          
          {
       image: "/images/Portfolio/Imapct/Impact 11 (2).webp",
         title: "Case Study Design",
@@ -762,12 +839,7 @@ const DMportfolio = () => {
         category: "Content Marketing",
         desc: "Mapped lead generation traffic by channel "
       },
-           {
-      image: "/images/Portfolio/Imapct/Impact 5.webp",
-        title: "Case Study Design",
-        category: "Content Marketing",
-        desc: "Tracked AI and organic search traffic "
-      },
+          
          {
       image: "/images/Portfolio/Imapct/SEO Performance Overview (1).webp",
         title: "Case Study Design",
@@ -846,7 +918,7 @@ section.work-por .tab.active {
 }
    .DM-service-page  {
     background: #e7ecfb;
-    padding-bottom:100p;x
+    padding-bottom:100px
 }
     .portfolio-popup{
 position:fixed;
@@ -1044,6 +1116,11 @@ opacity:1;
     width: 100%;
     min-width: 0;
 }
+    section.work-por.DM-service-page .services {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
     @media (max-width: 767px) {
     .mobile-slider {
         display: block;
@@ -1073,9 +1150,9 @@ opacity:1;
 `}</style>
  
 <section class="work-por DM-service-page ">
-    <div class="container">
+    <div class="container1">
         <div class="title-bar">
-            <div class="title-bar__text">
+            <div class="title-bar__text sectionHeading text-center mb-3">
                 <h2 class="not-above-fold">OUR <strong>WORK</strong></h2>
             </div>
 

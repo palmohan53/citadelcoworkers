@@ -11,9 +11,10 @@ import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
 import ContactFormSingle from "../Component/singlecontactform";
 import BannerContent from '../Component/BannerContent';
-import VerticalTeamSlider from '../Component/Teamsliderhome'
-import PortfolioStack from '../Component/PortfolioStackHome'
-import ConclusionSection  from '../Component/Lastsechomepage'
+import VerticalTeamSlider from '../Component/Teamsliderhome';
+import PortfolioStack from '../Component/PortfolioStackHome';
+import ConclusionSection  from '../Component/Lastsechomepage';
+import TestimonialsTabs from '../Component/Testimonialstabs'
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -116,13 +117,13 @@ const TestHome = () => {
                                         <img src="/images/ishita.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
                                         <div className="bannerProfileDetails">
                                             <h3>Ishita Singh</h3>
-                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/>Digital Advertising Manager</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/>PPC  Manager</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                             <p>Skill Set</p>
                                             <ul className="listInline tags mt-3">
                                                 <li>Google Ads</li>
-                                                <li> Facebook Ads</li>
-                                                <li> Mailchimp</li>
+                                                <li> Meta Ads</li>
+                                                    <li> Linkdin Ads</li>
                                           
                                             </ul>
                                         </div>
@@ -132,13 +133,13 @@ const TestHome = () => {
                                         <img src="/images/sa.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
                                         <div className="bannerProfileDetails">
                                             <h3>Yashveer Singh</h3>
-                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/>Technical SEO Specialist</h6>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/>SEO Specialist</h6>
                                             <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
                                             <p>Skill Set</p>
                                             <ul className="listInline tags mt-3">
-                                                <li>Site Audits</li>
-                                                <li> Speed Optimization</li>
-                                                <li>  Schema Implementation</li>
+                                                <li>Local SEO</li>    <li>Technical SEO</li>
+                                                <li>Ecommerce SEO</li>
+                                            
                                        
                                             </ul>
                                         </div>
@@ -538,13 +539,12 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
                 </section>
 
       <Suspense fallback={null}>
-
-          <VideoTestimonial></VideoTestimonial>
-
+<TestimonialsTabs></TestimonialsTabs>
+       
 
 <Videosection></Videosection>
 			<PortfolioStack></PortfolioStack>
-                <Testimonial serviceTestimonial={serviceTestimonial} />
+                
                 </Suspense>
 
                                <section className="Form-section-new">

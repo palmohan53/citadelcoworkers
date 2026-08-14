@@ -3,80 +3,100 @@ import React from "react";
 const team = [
   {
     id: 1,
+    name: "Ishita Rao",
+    role: "Senior GEO Strategist",
+    image: "https://virtualassistant24x7.com/wp-content/uploads/2026/07/TEAM-11.webp",
+     price: "$12/hr",
+  },
+    {
+    id: 2,
     name: "Ronak Singh",
     role: "Rendering & VFX Specialist",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/04/team-1.webp",
      price: "$8/hr",
   },
+    {
+    id: 3,
+    name: "Kabir Malhotra",
+    role: "Digital PR & AI Citations Specialist",
+    image: "	https://virtualassistant24x7.com/wp-content/uploads/2026/07/Kabir-Malhotra.webp",
+     price: "$10/hr",
+  },
   {
-    id: 2,
+    id: 4,
     name: "Aditi Gupta",
     role: "Lead Outreach Specialist  ",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/aDITI.webp",
      price: "$8/hr",
   },
   {
-    id: 3,
+    id: 5,
     name: "Amit Raghavan",
     role: "Performance Marketing Expert",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/Team2-2.webp",
      price: "$5/hr",
   },
   {
-    id: 4,
+    id: 6,
     name: "Rahul Singh",
     role: "Influencer Outreach Specialist",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/02/TEAM2.webp",
      price: "$7/hr",
   },
   {
-    id: 5,
+    id: 7,
     name: "Keshav Kumar",
     role: "Remarketing & Audience Strategist",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Keshav-Kumar-1.webp",
      price: "$8/hr",
   },
   {
-    id: 6,
+    id: 8,
     name: "Aditi Sinha",
     role: "Ad Copy & Creative Expert",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/01/Aditi-Sinha-1.webp",
      price: "$7/hr",
   },
   {
-    id: 7,
+    id: 9,
     name: "Amit Patel",
     role: "Google Ads Campaign Specialist",
     image: "	https://virtualassistant24x7.com/wp-content/uploads/2026/01/TEam-image-1024-51.webp",
      price: "$8/hr",
   },
   {
-    id: 8,
+    id: 10,
     name: "Kritika Nair",
     role: "Content Strategy & SEO Specialist",
     image: "	https://virtualassistant24x7.com/wp-content/uploads/2026/03/Team1.webp",
      price: "$7/hr",
   },
     {
-    id: 9,
+    id: 11,
     name: "Rishi Pathak",
     role: "Social Media & Email Content Expert",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/03/team6-1.webp",
      price: "$8/hr",
   },
    {
-    id: 10,
+    id: 12,
     name: "Aarav Mehta",
     role: "Senior Game Designer ",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/05/Arav.webp",
      price: "$8/hr",
   },
     {
-    id: 11,
+    id: 13,
     name: "Nisha Gupta",
     role: "Virtual Financial Controller ",
     image: "https://virtualassistant24x7.com/wp-content/uploads/2026/07/d-18.webp",
      price: "$8/hr",
+  },{
+    id: 14,
+    name: "Rohan Deshmukh",
+    role: "GEO Content & Schema Specialist ",
+    image: "	https://virtualassistant24x7.com/wp-content/uploads/2026/07/Rohan-Deshmukh.webp",
+     price: "$9/hr",
   },
 ];
 
@@ -202,7 +222,7 @@ export default function VerticalTeamSlider({ profiles = [] }) {
 
 .team-card p {
     color: #0036ca;
-    font-size: 12px;
+    font-size: 13px;
     margin-top:5px
 }
 

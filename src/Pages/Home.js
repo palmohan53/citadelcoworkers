@@ -11,9 +11,10 @@ import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import ContactForm from "../Component/ContactForm";
 import ContactFormSingle from "../Component/singlecontactform";
 import BannerContent from '../Component/BannerContent';
-
-
-
+import VerticalTeamSlider from '../Component/Teamsliderhome';
+import PortfolioStack from '../Component/PortfolioStackHome';
+import ConclusionSection  from '../Component/Lastsechomepage';
+import TestimonialsTabs from '../Component/Testimonialstabs'
 const getBlogList = async () => {
     const response = await axios.get(`${API_HOST}${API_ENDPOINTS.blogListing}`)
     const data = await response;
@@ -112,10 +113,37 @@ const Home = () => {
                         <div className="col-md-6 col-12">
                             <div className="sliderWrp">
                                 <Slider {...bannerSettings}>
+                                           <div className="bannerProfile">
+                                        <img src="/images/ishita.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Ishita Singh</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/>PPC  Manager</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                            <p>Skill Set</p>
+                                            <ul className="listInline tags mt-3">
+                                                <li>Google Ads</li>
+                                                <li> Meta Ads</li>
+                                                    <li> Linkdin Ads</li>
+                                          
+                                            </ul>
+                                        </div>
+                                    </div>
 
-                               
-
-
+                                          <div className="bannerProfile">
+                                        <img src="/images/sa.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
+                                        <div className="bannerProfileDetails">
+                                            <h3>Yashveer Singh</h3>
+                                            <h6><img src="/images/code.webp" alt="code icon" className='codeIco' width="14" height="14"/>SEO Specialist</h6>
+                                            <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
+                                            <p>Skill Set</p>
+                                            <ul className="listInline tags mt-3">
+                                                <li>Local SEO</li>    <li>Technical SEO</li>
+                                                <li>Ecommerce SEO</li>
+                                            
+                                       
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <div className="bannerProfile">
                                         <img src="/images/Gagandeep_Singh_Pic.webp" width="400" height="420" alt="Aarav Mehta"   fetchPriority="high" loading="eager" />
                                         <div className="bannerProfileDetails">
@@ -320,7 +348,8 @@ decoding="async"/>
                         </div>
                     </div>
                 </section>
-                <section className="process pb-100">
+                
+                <section className="process pb-">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-7 col-12">
@@ -364,43 +393,8 @@ decoding="async"/>
                                 </div>
                             </div>
                             <div className="col-md-5 col-12">
-                                <div className="profileBxBx">
-                                    {/* <Profile handleScrollClick={handleScrollClick} /> */}
-                                    {
-                                        profile?.data?.listing?.map((data, index)=>{
-                                            let skillSet = data.Expertise.split(',');
-                                            return(
-                                                <React.Fragment key={index}>
-                                                { index < 3 &&
-                                                    
-                                                        <div className="bannerProfile">
-                                                            <div className="profileImg">
-                                                                <img src={data.banner !== 'NA' ? data.banner  :'/images/profile-dummy.png'} alt={data.post_title} className="" width="261" height="261" />
-                                                                <button className="colorBtn" onClick={handleScrollClick}>Hire Me</button>
-                                                            </div>
-                                                            <div className="bannerProfileDetails">
-                                                                <h3>{data.post_title}</h3>
-                                                                <div className="verified"><img src="/images/verified.webp" width="12" height="12" alt="" /> Verified Expert</div>
-                                             
-                                                                <h6><img src="/images/code (1).webp" alt="code icon" className='codeIco' width="18" height="15"/>{data.Designation}</h6>
-                                                                                   <p>Skill Set</p>
-                                                                {/* <span className="Expertise">{data.post_content}</span> */}
-                                                              <ul className="listInline tags mb-2 f">
-  {skillSet.map((skillString, index) =>
-    skillString.split("·").map((skill, i) => (
-      <li key={`${index}-${i}`}>{skill.trim()}</li>
-    ))
-  )}
-</ul>
-
-                                                            </div>
-                                                        </div>
-                                                    }
-                                                </React.Fragment>
-                                            )
-                                        })
-                                    }
-                                </div>
+                                <VerticalTeamSlider></VerticalTeamSlider>
+                              
                             </div>
                         </div>
                     </div>
@@ -545,14 +539,12 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
                 </section>
 
       <Suspense fallback={null}>
-
-          <VideoTestimonial></VideoTestimonial>
-
+<TestimonialsTabs></TestimonialsTabs>
+       
 
 <Videosection></Videosection>
-			
-		
-                <Testimonial serviceTestimonial={serviceTestimonial} />
+			<PortfolioStack></PortfolioStack>
+                
                 </Suspense>
 
                                <section className="Form-section-new">
@@ -642,97 +634,7 @@ Every professional screened, tested, and matched to fit your team's exact needs
   </div>  </div>
 </section>
                
-                <section className="blog">
-                    <div className="container">
-                        <div className="row mb-3">
-                            <div className="col-md-12 col-12">
-                                <div className="sectionHeading text-center">
-                                    <h2>Where Ideas Flourish</h2>
-                                    <p>Ensure outsourcing success from the start with key insider tips and trends for over 150 industries, right at your fingertips.</p>
-                                </div>
-                            </div>
-                        </div>
-                            <div className="row mt-5">
-                                <div className="col-md-5 col-12">
-                                    <Link to={`/blog/${data?.data?.listing[0]?.post_name}`} className="d-block">
-                                        <div className="blogBx blogBig">
-                                            <div className="blogImg">
-                                                <img src={data?.data?.listing[0]?.banner} alt={data?.data?.listing[0]?.post_title}/>
-                                               <div className="blogAuthImg ff">
-  {
-    data?.data?.listing[0]?.display_name === "Pinka Sharma"
-      ? <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70" />
-      : data?.data?.listing[0]?.display_name === "Kumari Santosh"
-      ?     <img src="/images/Santosh.webp" alt="Kumari Santosh" />
-      : data?.data?.listing[0]?.display_name === "Suresh Sharma"
-      ? <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70" />
-      : <img src="/images/suresh.webp" alt="Default Author" width="70" height="70" />
-  }
-</div>
-                                            </div>
-                                            <div className="blogContent">
-                                                <h3>{data?.data?.listing[0]?.post_title}</h3>
-                                                <h5>By <b>{data?.data?.listing[0]?.display_name}</b></h5>
-                                                <p>{data?.data?.listing[0]?.post_content}</p>
-                                                <div className="d-flex justify-content-between">
-                                                    <h6>7 min read</h6>
-                                                    <button className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
-                                <div className="col-md-7 col-12">
-                                    <div className="row g-4">
-                                        {
-                                            data?.data.listing?.map((blog, index)=>{
-                                                return(
-                                                    index !== 0 && index < 5 ? 
-                                                        <div className=" blog-home col-md-6 col-12" key={index}>
-                                                            <Link to={`/blog/${blog?.post_name}`}  className="d-block">
-                                                                <div className="blogBx blogSmall ggg">
-                                                                    <div className="blogImg">
-                                                                        <img src={blog.banner} alt={blog.post_title}/>
-                                                                        <div className="blogAuthImg ggggg">
-                                                                       {
-  blog?.display_name === "Pinka Sharma" ? (
-    <img src="/images/pinka.webp" alt="Pinka Sharma" width="70" height="70"/>
-  ) : blog?.display_name === "Kumari Santosh" ? (
-   <img src="/images/Santosh.webp" alt="Kumari Santosh"  width="70" height="70"/>
-  ) : (
-    <img src="/images/suresh.webp" alt="Suresh Sharma" width="70" height="70"/>
-  )
-}
-                                                                        </div>
-                                                                    </div>
-                                                                    <div className="blogContent">
-                                                                        <h3>{blog.post_title}</h3>
-                                                                        <h5>By <b>{blog.display_name}</b></h5>
-                                                                        <p dangerouslySetInnerHTML={{ __html: blog.post_content }}></p>
-                                                                        
-                                                                        <div className="d-flex justify-content-between">
-                                                                            <h6>7 min read</h6>
-                                                                            <button href={`/blog/${blog?.post_name}`} className="simpleBtn">Read More <FontAwesomeIcon icon={faArrowRight}/></button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </Link>
-                                                        </div>
-                                                    : null
-                                                )
-                                            })
-                                        }
-                                    
-                                    </div>
-                                </div>
-                                <div className="col-12 mt-4">
-                                    <div className="text-center">
-                                        <Link to="/blog" className=" colorBtn wideBtn">Read More</Link>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </section>
+           <ConclusionSection></ConclusionSection>
 
                 
  
