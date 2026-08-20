@@ -922,13 +922,14 @@ UnderstandingProductDesigner: (
 </p></div>
      <div class="comparison-table">
 
-
+{serviceContent?.[0]?.Comparison?.tableheading?.map((item, index) => (
       <div class="table-row table-head">
-        <div class="table-cell factor">Factor</div>
-        <div class="table-cell">In-House Designer</div>
-        <div class="table-cell active">Citadel Coworkers</div>
-      </div>
 
+        <div class="table-cell factor">Factor</div>
+        <div class="table-cell">{item.heading1}</div>
+        <div class="table-cell active">{item.heading12}</div>
+      </div>
+))}
         
 
   {serviceContent?.[0]?.Comparison?.tableData?.map((item, index) => (

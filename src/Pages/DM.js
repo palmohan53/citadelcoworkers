@@ -47,7 +47,7 @@ export default function Home() {
   const mobileSlider = {
   dots: true,
   arrows: false, 
-  lazyLoad: "ondemand",
+ 
   infinite: true,
   speed: 500,
   slidesToShow: 1,
@@ -2103,6 +2103,7 @@ const activePortfolio = data[active]?.portfolio || [];
 .search-reality-card .search-reality-points li {
     gap: 15px;
     padding: 16px 0;
+    text-align:left;
     color: #ececec;
     font-size: 15px;
 }
@@ -3296,8 +3297,8 @@ b,strong {
   top: 50%;
   transform: translateY(-50%);
   z-index: 100000;
-  width: 52px;
-  height: 52px;
+  width: 38px;
+  height: 38px;
   border: none;
   border-radius: 50%;
   background: #d8ff36;
@@ -6330,7 +6331,7 @@ font-size:16px;
 
       {/* Mobile Slider */}
       {active === index && (
-        <div className="mobile-slider">
+        <div className="mobile-slider g">
           <Slider
             key={index}
             dots={true}
@@ -6355,7 +6356,7 @@ font-size:16px;
                       
                  <div className="portfolio-media">
   <img
-    src={item.thumbnail}
+    src={portfolioItem.thumbnail}
     alt={item.title}
     className={`hover-image ${hoveredIndex === index ? "hide" : ""}`}
     loading="lazy"
@@ -6363,7 +6364,7 @@ font-size:16px;
   />
 
   <video
-    src={item.video}
+    src={portfolioItem.video}
     autoPlay
     muted
     loop
@@ -6514,38 +6515,7 @@ onClick={() => setPreviewIndex(index)}
 </section>
 {/* end work section */}
 {/* stats section */}
-<div className="stats-section">
 
-  {stats.map((item, index) => (
-
-    <div className="stat-card" key={index}>
-
-      <div className="stat-icon">
-<img src={item.icon} alt={item.title} />
-      </div>
-
-      <div>
-
-        <h2>
-         {typeof item.end === "number" ? (
-  <Counter
-    end={item.end}
-    suffix={item.suffix}
-  />
-) : (
-  <span className="stat-end">{item.end}</span>
-)}
-        </h2>
-
-        <p>{item.title}</p>
-
-      </div>
-
-    </div>
-
-  ))}
-
-</div>
 {previewIndex !== null && activePortfolio[previewIndex] && (
   <div
     className="image-popup"
@@ -6964,7 +6934,7 @@ onClick={() => setPreviewIndex(index)}
 <p>One team runs every channel, so nothing works in isolation. Every service ships with the video, content and graphics it takes to run it plus print-ready marketing collateral. 
   Nothing here is an upsell.</p></div>
 
-<div className="services-grid desktop-Grid">
+<div className="services-grid ">
   {capabilities.map((item) => (
     <div key={item.id} className="slide-item">
       <div
@@ -6987,34 +6957,7 @@ onClick={() => setPreviewIndex(index)}
     </div>
   ))}
 </div>
-    <div className="mobile-port pp-slider">
-        <Slider {...mobileSlider} className="ppslider">
-
-
-  {capabilities.map((item) => (
-    <div key={item.id} className="slide-item">
-      <div
-        className="capability-card"
-        style={{ background: item.color }}
-      >
-        <span className="card-number">{item.id}</span>
-
-        <img
-          src={item.image}
-          alt={item.title}
-          className="card-image"
-          loading="lazy"
-          decoding="async"
-        />
-
-        <h3>{item.title}</h3>
-        <p>{item.des}</p>
-      </div>
-    </div>
-  ))}
-
-</Slider>
-    </div>
+  
    </div>
 </section>
 <section className="test-Dmpage">

@@ -6468,6 +6468,11 @@
 				"Comparison":	{
   "title": "In-House Vs Offshore Product Designers: The Smarter Choice?",
   "body": "When evaluating how to scale product design, businesses typically choose between building an in-house team or partnering with an offshore product design specialist. ",
+  "tableheading":[
+    {  "heading1":"In-House Designer",
+  "heading12":"Citadel Coworkers "}
+
+  ],
     "tableData": [
 
 
@@ -6689,7 +6694,13 @@
 	"Comparison":	{
   "title": "In-House vs Offshore Game Designers: The Smarter Choice?",
   "body": "Staffing a game design team is one of the most consequential decisions a studio makes. The choice between building in-house and outsourcing game design specialists directly affects production timelines, design quality, cost per milestone and your ability to respond to live-ops data after launch. Here is how the two models compare across the dimensions that actually determine project outcomes. ",
-    "tableData": [
+  "tableheading":[
+    {  "heading1":"In-House Designer",
+  "heading12":"Citadel Coworkers "}
+
+  ],  
+  
+  "tableData": [
 
 
 	
@@ -6912,7 +6923,11 @@
 	"Comparison":	{
   "title": "In-House Vs Offshore Logo Animation: Which Is The Smarter Choice ",
   "body": "Choosing how to staff your logo animation needs is a decision that directly affects your brand timelines, creative quality, cost-per deliverable and ability to scale. Here is how the two models compare across the dimensions that actually determine outcomes. ",
-    "tableData": [
+    "tableheading":[
+    {  "heading1":"In-House Logo Animator",
+  "heading12":"Citadel Coworkers"}
+
+  ],"tableData": [
 
 
 	
@@ -7125,7 +7140,12 @@
 	"Comparison":	{
   "title": "In-House Vs Offshore Character Animators: The Smarter Choice?",
   "body": "When scaling your character animation capacity, businesses typically choose between hiring an in-house animator or partnering with an offshore character animation expert. Here is how the two options compare. ",
-    "tableData": [
+   "tableheading":[
+    {  "heading1":"In-House Character Animator",
+  "heading12":"Citadel Coworkers "}
+
+  ],
+  "tableData": [
 
 
 	
@@ -7341,7 +7361,11 @@
 	"Comparison":	{
   "title": "GEO Vs Traditional SEO: What Actually Changes",
   "body": "GEO doesn't replace SEO; it extends it. Most Google AI Overview citations come from pages already ranking near the top, while assistants like ChatGPT also cite many pages Google barely surfaces. Winning both requires running the two disciplines together.",
-    "tableData": [
+    "tableheading":[
+    {  "heading1":"Traditional SEO",
+  "heading12":"Generative Engine Optimization"}
+
+  ], "tableData": [
 
 
 	
@@ -7470,7 +7494,289 @@
             }
         ]
 		
-        }	
+        },
+{
+            "categoryUrl": "hire-outbound-marketing-specialist-india",
+            "categoryName": "Outbound Marketing",
+            "pageMetaTitle": "Hire An Outbound Marketing Specialist In India",
+            "pageMetaContent": "Reach your ideal buyers before your competitors do with dedicated outbound marketing specialists from just $9/hour.",
+           "useDynamicSections": true,
+           "sectionsOrder": [
+    "hero",
+    "number",
+	"UnderstandingProductDesigner",
+    "Services",
+    "TeamSection",
+       "ServiceBulkContentUpper",
+
+	     "Comparison",
+         "ServiceBulkContent",
+           "DMportfolio",
+            "ToolsSection",
+	         "Testimonial",
+		"PricingTabs",
+        "faq",
+   "Blogs",
+    "FeaturedInMarquee",
+ 
+   
+       "ContactForm",
+  
+    "Icondesign",
+     "ConcludingSec"
+  ],
+        "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire An Outbound Marketing Specialist In India",
+                        "body": "Reach your ideal buyers before your competitors do with dedicated outbound marketing specialists  - starts at $9/hour",
+                        "buttonText": "Hire Outbound Marketing Specialist Now"
+                        
+                    }
+                ],
+            "serviceHeading":[
+                    {
+                        "title": "Full-Stack Outbound Marketing Services Tailored to Your Business",
+                        "body": "Every channel, list and cadence a modern sales pipeline runs on, delivered by dedicated specialists who plug into your existing CRM and sales stack."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Numbers Behind Our GEO Services ",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Outbound Marketing Specialists",
+                        "body": "15+ ",
+                        "flipcontent":"Trained across email, calling, LinkedIn & appointment setting"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "Outbound Campaigns",
+                        "body": "50+",
+                        "flipcontent":"Managed across SaaS, services, manufacturing & ecommerce"
+                    },
+                    {
+                        "imageUrl": "/images/Industires.png",
+                        "title": "Industries Served",
+                        "body": "12+",
+                        "flipcontent":"From technology to logistics & financial services"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": "Years in Digital Marketing",   
+                        "body": "18+",
+                        "flipcontent":" The foundation our outbound practice is built on"
+                    }
+                ],
+                  "pricing": {
+  "plans": [
+    {
+      "id": 1,
+      "package": "Starter Package",
+      "title": "Foundation",
+      "price": "$699",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+ " Outbound strategy & ICP definition",
+ "Prospect research & lead list building",
+ "Contact verification & data enrichment",
+"Cold email campaign setup",
+"Personalized outreach copy",
+"CRM & campaign setup",
+"Monthly performance report"
+
+      ]
+    },
+    {
+      "id": 2,
+      "package": "Growth Package",
+      "title": "MOMENTUM",
+      "price": "$1,200",
+      "duration": "/ month",
+      "popular": true,
+      "features": [
+"Everything in Foundation",
+"Multi-channel outreach",
+"LinkedIn prospecting & outreach",
+"Advanced lead segmentation",
+"A/B testing for messaging",
+ "Lead follow-up & nurturing",
+ "Bi-weekly performance reporting",
+"Dedicated outbound strategist"
+
+      ]
+    },
+    {
+      "id": 3,
+      "package": "Enterprise Package",
+      "title": "Scale",
+      "price": "$1,600",
+      "duration": "/ month",
+      "popular": false,
+      "features": [
+      "Everything in Momentum",
+"High-volume prospecting",
+"Multi-channel email + LinkedIn campaigns",
+"Advanced ICP & account targeting",
+"Account-based outreach",
+"Continuous messaging & campaign testing",
+"Lead qualification & handoff",
+"CRM pipeline management",
+"Weekly reporting & strategy reviews"
+
+      ]
+    }
+  ]
+},
+                "UnderstandingProductDesigner":{
+ "title": "What Is Outbound Marketing?",
+ "des": "Outbound marketing means proactively reaching out to your ideal-fit accounts instead of waiting for them to find you, pushing your message directly to a defined list of target buyers and putting qualified conversations on your calendar, on your timeline. That speed and control is why so many growing companies outsource outbound marketing rather than build a prospecting function from scratch, and why it has become the default move for B2B teams racing to hit pipeline targets."
+                },
+				
+	"Comparison":	{
+  "title": "Outbound Vs. Inbound: What Actually Changes",
+  "body": "Outbound marketing doesn't replace inbound; it runs alongside it. Inbound compounds over months through content and search, while outbound puts qualified conversations on the calendar in weeks. Most growing B2B teams need both running at once to hit aggressive pipeline targets.",
+  "tableheading":[
+  {
+  "heading1":"Inbound Marketing",
+  "heading12":"Outbound Marketing "}
+  ],
+
+    "tableData": [
+
+
+	
+  {
+    "factor": "Primary Goal",
+    "inHouseDesigner": "Attract prospects who come looking for you",
+    "citadelCoworkers": "Proactively reach and start conversations with target accounts"
+  },
+  {
+    "factor": "Where You Win",
+    "inHouseDesigner": "Prospects discover you through organic search, content and referrals",
+    "citadelCoworkers": "You reach prospects directly through their inbox, phone, LinkedIn and mailbox"
+  },
+  {
+    "factor": "Core Signals ",
+    "inHouseDesigner": "Content quality, SEO strength and backlinks drive visibility over time",
+    "citadelCoworkers": "List accuracy, personalization, cadence and timing drive replies "
+  },
+  {
+    "factor": "Message Style",
+    "inHouseDesigner": "Educational content prospects explore at their own pace",
+    "citadelCoworkers": "Direct, offer-led messages designed to start a conversation now"
+  },
+  {
+    "factor": "Time To Results",
+    "inHouseDesigner": "Weeks to months, but results compound the longer it runs",
+    "citadelCoworkers": "Days to weeks, with most impact front-loaded early on"
+  },{
+    "factor": "Success Metrics",
+    "inHouseDesigner": "Tracked by organic traffic, conversion rate and search rankings",
+    "citadelCoworkers": "Tracked by reply rate, connect rate, meetings booked and pipeline generated"
+  }
+  
+  ]
+},
+
+
+
+            "faq":[
+                    {
+                        "title": "01. How long does it take to see results from outbound marketing?",
+                        "body": "Most clients see first replies and booked meetings within 2 to 4 weeks of a campaign going live, with pipeline building steadily over 2 to 3 months as sequences and lists are optimized. Timelines depend on list quality, offer strength and how contested your market is."
+                    },
+                    {
+                        "title": "02. What is the difference between outsourcing outbound marketing versus an in-house SDR?",
+                        "body": "Hiring an in-house SDR can take weeks to recruit, onboard and ramp, not to mention compensation, benefits and tooling expense. When you outsource your outbound marketing, you receive a trained professional working inside your stack within days, at a fraction of the cost of a full time wage, and with someone on standby if they are on leave."
+                    },
+                    {
+                        "title": "03. How do you measure outbound marketing success?",
+                        "body": "Four layers: reply and connect rates by channel, meetings booked and held, pipeline generated from those meetings, and ultimately closed revenue, tracked against the KPIs we agree on at kickoff."
+
+                    },
+                    {
+                        "title": "04.  Is outbound marketing outsourcing, compliance with calling and email rules?",
+                        "body": "Yes.  We comply with CAN-SPAM email regulations, TCPA regulations for calling and SMS, and relevant regional standards such as GDPR, with opt-out management and consent tracking throughout."
+                    },
+                    {
+                        "title": "05. Do your outbound marketing specialists work with our existing CRM and tools?",
+                        "body": "Yes. Specialists work inside whatever CRM and sales engagement platform you already run Salesforce, HubSpot, Apollo, Outreach or otherwise rather than asking you to switch tools."
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Growing Brands Trust Citadel Coworkers For Outbound Marketing",
+      "body": "Brands want a pipeline built on real conversations and measured honestly, not a rebadged lead list with outbound in the invoice. Citadel Coworkers gives growing brands dedicated outbound marketing talent from India, with the structure and accountability a real prospecting program needs.",
+      "centerImageUrl": "/images/Outbond.webp"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "Research-backed methods built on current outbound and sales-engagement benchmarks, not guesswork" },
+    { "imageUrl": "", "body": "Cost-effective, dedicated outbound marketing specialists, without agency retainers or call-center-style rotation" },
+    { "imageUrl": "", "body": "Every specialist signs a mutual NDA before any CRM or list access is shared" },
+    { "imageUrl": "", "body": "A trained standby remote outbound marketing specialist steps in if your primary hire is on leave, so momentum never stalls" },
+    { "imageUrl": "", "body": "One dedicated account manager owns your engagement end to end, escalating concerns immediately" },
+    { "imageUrl": "", "body": "Reported monthly against agreed KPIs, with raw, auditable activity data you can review yourself" }
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Outbound Marketing Specialist",
+               "heading":" Outbound Marketing Specialist"
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Helping Businesses Build Pipeline and Book More Meetings Globally.",
+			   "buttontext":"Hire Outbound Marketing Specialist"
+            }
+        ]
+		
+        }			
 		
     ]
 }
+
+		
+		
