@@ -563,14 +563,17 @@ We manage your content calendars, post scheduling and campaign coordination. Thi
             <b>Developers</b>
             <b>Marketers</b>
             <b>Sales Experts</b>
-
+            <b>SEO Experts</b>
+ <b>GEO Experts</b>
 
               <b>Virtual Assistants</b>
             <b>Consultants</b>
             <b>Designers</b>
             <b>Developers</b>
             <b>Marketers</b>
-            <b>Sales Experts</b>
+<b>Sales Experts</b>
+<b>SEO Experts</b>
+ <b>GEO Experts</b>
           </span>
         </span>
       </h1>

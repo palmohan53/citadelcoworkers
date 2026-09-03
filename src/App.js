@@ -44,38 +44,27 @@ const CaseStudiesPage = React.lazy(() => import("./Pages/Casestudy.js"));
 function App() {
   const location = useLocation();
 useEffect(() => {
-  // 🔹 Step 1: Purana Tidio data clean (optional but ok)
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith("tidio")) {
-      localStorage.removeItem(key);
-    }
-  });
-
-  document.cookie.split(";").forEach((c) => {
-    if (c.includes("tidio")) {
-      document.cookie =
-        c.trim().split("=")[0] +
-        "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
-    }
-  });
-
-  // 🔹 Step 2: Country check FIRST
-  fetch("https://ipwho.co/json/")
+  fetch("https://ipwho.is/")
     .then((res) => res.json())
     .then((data) => {
-      // 👉 Sirf NON-India ke liye load karo
-      if (data?.country_code !== "IN") {
-        const script = document.createElement("script");
-        script.src = "https://code.tidio.co/c3t8trmg8jhatth3b5w8akf4gj4sxtad.js";
-        script.async = true;
-        document.body.appendChild(script);
-      } else {
-        console.log("Tidio blocked for India 🚫");
+      console.log("Country:", data.country_code);
+
+      // 🇮🇳 India → Tidio hide
+      if (data.country_code === "IN") {
+        console.log("Tidio hidden in India");
+        return;
       }
+
+      // 🌍 Other countries → Tidio show
+      const script = document.createElement("script");
+      script.src =
+        "https://code.tidio.co/c3t8trmg8jhatth3b5w8akf4gj4sxtad.js";
+      script.async = true;
+
+      document.body.appendChild(script);
     })
-    .catch(() => {
-      // 🔹 Fallback: safe side → India assume karo → load mat karo
-      console.log("Geo fetch failed → blocking Tidio");
+    .catch((error) => {
+      console.error("Country detection error:", error);
     });
 }, []);
 useEffect(() => {
@@ -190,6 +179,7 @@ useEffect(() => {
             <Route path="/pricing" element={<PricingPage />} />
              <Route path="/uk" element={<UkFiancemetat />} />
              <Route path="/testimonials" element={<Testimonials />} />
+             <Route path="/testimonial" element={<Testimonials />} />
                <Route path="/services/dm-landing" element={<DMlanding />} />
                    <Route path="/case-study" element={<CaseStudiesPage />} />
     <Route path="*" element={<NotFound />} />

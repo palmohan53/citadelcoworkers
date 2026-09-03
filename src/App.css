@@ -704,7 +704,7 @@ color: #1749d5;
  section.profile.hire-web-designer img,.profileBxBx .bannerProfile .profileImg img{
     filter: none !important;
 }
-section.profile.hire-microsoft-office-experts img,section.profile.hire-graphic-designer img,section.profile.hire-seo-expert img,section.profile.hire-photoshop-expert img,section.profile.hire-ppc-expert img,section.profile.hire-social-media-marketing-expert img,section.profile.hire-illustrator img,section.profile.hire-video-editor img,section.profile.hire-cro-experts img,.hire-influencer-marketing-expert img,section.profile.hire-email-marketing-expert img, .profile.hire-content-marketing-experts img, section.profile.hire-video-marketing-expert img,section.profile.hire-lead-generation-expert img,section.profile.hire-3d-animators img,section.profile.hire-print-packaging-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-product-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-game-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-architects .bannerProfile.serviceProfile .profileImg img,section.profile.hire-interior-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-civil-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-structural-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-electrical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-mechanical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-animated-logo-designer img,section.profile.generative-engine-optimization-services-geo img
+section.profile.hire-microsoft-office-experts img,section.profile.hire-graphic-designer img,section.profile.hire-seo-expert img,section.profile.hire-photoshop-expert img,section.profile.hire-ppc-expert img,section.profile.hire-social-media-marketing-expert img,section.profile.hire-illustrator img,section.profile.hire-video-editor img,section.profile.hire-cro-experts img,.hire-influencer-marketing-expert img,section.profile.hire-email-marketing-expert img, .profile.hire-content-marketing-experts img, section.profile.hire-video-marketing-expert img,section.profile.hire-lead-generation-expert img,section.profile.hire-3d-animators img,section.profile.hire-print-packaging-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-product-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-game-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-architects .bannerProfile.serviceProfile .profileImg img,section.profile.hire-interior-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-civil-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-structural-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-electrical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-mechanical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-animated-logo-designer img,section.profile.generative-engine-optimization-services-geo img,section.profile.hire-outbound-marketing-specialist-india img,section.profile.hire-online-reputation-management-expert img,section.profile.hire-cartoon-character-designer img
 {
    filter: none !important;
 }
@@ -10382,7 +10382,9 @@ TESTIMONIAL
         rgba(0,0,0,.15));
 
 }
-
+.App.hire-online-reputation-management-expert section#servicesSec,.App.hire-outbound-marketing-specialist-india section#servicesSec,.App.hire-cartoon-character-designer section#servicesSec {
+    padding-top: 60px;
+}
 .play-btn{
 
     position:absolute;
@@ -10812,6 +10814,42 @@ section.testimonial-section-page-sp .quote-icon {
     font-size: 55px;
     border-radius: 100px;
     color: #00cc83;
+}.website-reviews__slider .slick-track {
+  display: flex;
+}
+.website-review-card__stars {
+    color: #00b77b;
+    font-size: 28px;
+}
+.website-review-card__person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 0;
+}
+
+.website-review-card__person img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.website-reviews__slider .slick-slide {
+  height: auto;
+  display: flex;
+}
+
+.website-reviews__slider .slick-slide > div {
+  display: flex;
+  width: 100%;
+}
+
+.website-review-card {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 section.testimonial-section-page-sp .testimonial-user {
     display: flex;

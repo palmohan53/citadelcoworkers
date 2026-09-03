@@ -2,6 +2,9 @@ import React, { useState, useRef ,useEffect,lazy, Suspense} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram, faLinkedinIn, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 
 const TestimonialsTabs = lazy(() =>
@@ -1660,14 +1663,14 @@ icon: (
 const capabilities = [
   {
     id: "01",
-    title: "GEO",
+    title: "Generative Engine Optimization",
     image: "/images/GEO (5).webp",
 	des:"Get named in ChatGPT, Gemini and AI Overviews not just Google.",
     color: "#ffc2c2",
   },
   {
     id: "02",
-    title: "SEO",
+    title: "Search Engine Optimization",
     image: "/images/SEO ser.webp",
 	des:"Rank where your customers are still searching the old-fashioned way.",
   color: "#dce3fe",
@@ -1731,12 +1734,28 @@ des:"Build a following that becomes one of your best sales channels.",
 ];
 const [openIndex, setOpenIndex] = useState(0);
 const formRef = useRef(null);
+const auditSectionRef = useRef(null);
+const [isAuditVisible, setIsAuditVisible] = useState(false);
 const handleScrollClick = () => {
   formRef.current?.scrollIntoView({
     behavior: "smooth",
     block: "start",
   });
 };
+useEffect(() => {
+  const auditSection = auditSectionRef.current;
+  if (!auditSection) return undefined;
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      setIsAuditVisible(true);
+      observer.disconnect();
+    }
+  }, { threshold: 0.08 });
+
+  observer.observe(auditSection);
+  return () => observer.disconnect();
+}, []);
 const handleAccordion = (index) => {
   setOpenIndex(openIndex === index ? null : index);
 };
@@ -1890,6 +1909,106 @@ const activePortfolio = data[active]?.portfolio || [];
     
       <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.dm-top-contact-bar {
+  min-height: 39px;
+  background: #1c1c1c;
+  border-bottom: 1px solid #b5c600;
+  color: #fff;
+  font: 500 14px/1 "Poppins", sans-serif;
+}
+.dm-top-contact-inner { min-height: 37px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.dm-top-contact-details, .dm-top-social, .dm-top-contact-item { display: flex; align-items: center; }
+.dm-top-contact-details { gap: 22px; min-width: 0; }
+.dm-top-contact-item { gap: 9px; color: #fff; white-space: nowrap; }
+.dm-top-contact-item:hover, .dm-top-social a:hover { color: #d8ff36; }
+.dm-top-country-flag {
+  position: relative;
+  width: 22px;
+  height: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 1px;
+  flex: 0 0 22px;
+  font-size: 0;
+  box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+.dm-top-india .dm-top-country-flag { background: linear-gradient(to bottom, #ff9933 0 33.33%, #fff 33.33% 66.66%, #138808 66.66%); }
+.dm-top-india .dm-top-country-flag:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #1a4b9b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.dm-top-usa .dm-top-country-flag { background: repeating-linear-gradient(to bottom, #b22234 0 1.08px, #fff 1.08px 2.16px); }
+.dm-top-usa .dm-top-country-flag:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 7.6px;
+  background: #3c3b6e;
+}
+.dm-top-email-icon { color: #d8ff36; font-size: 17px; }
+.dm-top-divider { width: 1px; height: 20px; background: #b9b9b9; flex: 0 0 1px; }
+.dm-top-social { gap: 18px; flex: 0 0 auto; }
+.dm-top-social a { display: inline-flex; color: #fff; font-size: 14px; }
+@media (max-width: 767px) {
+.pp-slider .slick-dots
+      {    bottom: -50px !important;}
+.slick-slider.case-study-slider.pp-slider.slick-initialized .slick-slide {
+    display: block !important;
+}
+  .dm-top-contact-bar { min-height: 0; padding: 8px 0; font-size: 12px; }
+  .dm-top-contact-inner {
+    min-height: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+  .dm-top-contact-details {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px 12px;
+  }
+  .dm-top-contact-item { gap: 6px; }
+  .dm-top-divider { display: none; }
+  .dm-top-social { display: flex; gap: 18px; }
+  .dm-top-social a { font-size: 16px; padding: 3px; }
+}
+@media (max-width: 420px) {
+  .dm-top-contact-details { flex-direction: column; align-items: center; gap: 6px; }
+}
+.dm-policy-bar {
+  min-height: 68px;
+  padding: 12px 20px 10px;
+  border-top: 1px solid #b5c600;
+  background: #1c1c1c;
+  color: #d9d9d9;
+  font: 400 13px/1.35 "Poppins", sans-serif;
+  text-align: center;
+}
+.dm-policy-bar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 8px;
+}
+.dm-policy-bar a { color: #f2f2f2; }
+.dm-policy-bar a:hover { color: #d8ff36; }
+.dm-policy-bar-divider { width: 1px; height: 16px; background: #8d8d8d; }
+.dm-policy-bar-copy { margin: 0; }
+@media (max-width: 575px) {
+  .dm-policy-bar { min-height: auto; padding: 16px 12px; }
+  .dm-policy-bar-links { gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+  .dm-policy-bar-divider { display: none; }
+}
 .work-marquee{
      padding: 80px 0;
     background: #1c1c1c;
@@ -2135,12 +2254,140 @@ const activePortfolio = data[active]?.portfolio || [];
     color: #171717;
     font: 700 22px/1 "Phudu", sans-serif;
 }
+.ai-audit-section {
+    padding: 48px 0 92px;
+    background: #1c1c1c;
+    color: #fff;
+}
+.ai-audit-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, .85fr);
+    align-items: center;
+    gap: 62px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 62px 64px;
+    border: 1px solid rgba(216,255,54,.4);
+    border-radius: 28px;
+    background: radial-gradient(circle at 92% 8%, rgba(216,255,54,.12), transparent 27%), #151515;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.07);
+}
+.ai-audit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 9px 14px;
+    border: 1px solid rgba(216,255,54,.75);
+    border-radius: 999px;
+    color: #d8ff36;
+    font: 600 12px/1 "Poppins", sans-serif;
+}
+.ai-audit-badge svg { width: 16px; height: 16px; }
+.ai-audit-copy h2 {
+    max-width: 540px;
+    margin: 0 0 18px;
+    color: #fff;
+    font: 700 clamp(34px, 4vw, 57px)/1.03 "Phudu", sans-serif;
+    letter-spacing: -.035em;
+    text-transform: uppercase;
+}
+.ai-audit-copy p {
+    max-width: 520px;
+    margin: 0 0 30px;
+    color: #d4d4d4;
+    font: 400 16px/1.7 "Poppins", sans-serif;
+}
+.ai-audit-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    border: 0;
+    padding: 17px 22px;
+    background: #d8ff36;
+    color: #171717;
+    cursor: pointer;
+    font: 700 14px/1 "Poppins", sans-serif;
+    transition: transform .2s ease, background .2s ease;
+}
+.ai-audit-cta:hover { transform: translateY(-3px); background: #ebff83; }
+.ai-audit-cta span { font-size: 21px; line-height: .7; }
+.ai-audit-visual {
+    min-height: 350px;
+    padding: 22px;
+    border: 1px solid rgba(255,255,255,.18);
+    background: #202020;
+    opacity: 0;
+    transform: translateY(28px) scale(.55);
+}
+.ai-audit-visual.is-audit-visible { animation: aiAuditCardZoomIn 2.2s cubic-bezier(.16, 1, .3, 1) forwards !important; }
+@keyframes aiAuditCardZoomIn {
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.ai-audit-window-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 17px;
+    border-bottom: 1px solid rgba(255,255,255,.18);
+    color: #fff;
+    font: 500 14px/1 "Poppins", sans-serif;
+}
+.ai-audit-window-title { display: flex; align-items: center; gap: 10px; }
+.ai-audit-window-icon { display: grid; place-items: center; width: 28px; height: 28px; background: rgba(216,255,54,.15); color: #d8ff36; }
+.ai-audit-dots { color: #d8ff36; letter-spacing: 3px; }
+.ai-audit-gauge {
+    position: relative;
+    width: 210px;
+    height: 110px;
+    margin: 54px auto 21px;
+    overflow: hidden;
+}
+.ai-audit-gauge:before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    width: 210px;
+    height: 210px;
+    border: 18px solid #555;
+    border-bottom-color: transparent;
+    border-left-color: #3e3e3e;
+    border-radius: 50%;
+    transform: rotate(45deg);
+}
+.ai-audit-gauge:after {
+    content: "";
+    position: absolute;
+    top: 68px;
+    left: 100px;
+    width: 61px;
+    height: 3px;
+    transform-origin: left center;
+    transform: rotate(42deg);
+    background: #fff;
+}
+.ai-audit-visual.is-audit-visible .ai-audit-gauge:after { animation: aiAuditMeterSweep 3s cubic-bezier(.2, .8, .2, 1) 1.35s 1 forwards !important; }
+@keyframes aiAuditMeterSweep {
+    0% { transform: rotate(42deg); }
+    82% { transform: rotate(-51deg); }
+    100% { transform: rotate(-46deg); }
+}
+.ai-audit-gauge-center { position: absolute; z-index: 1; top: 62px; left: 94px; width: 17px; height: 17px; border: 4px solid #fff; border-radius: 50%; background: #d8ff36; }
+.ai-audit-score { text-align: center; color: #fff; font: 700 56px/.9 "Phudu", sans-serif; }
+.ai-audit-score small { color: #bcbcbc; font: 500 22px/1 "Poppins", sans-serif; }
+.ai-audit-status { margin: 10px 0 23px; color: #d8ff36; text-align: center; font: 600 15px/1 "Poppins", sans-serif; }
+.ai-audit-platforms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px 9px; color: #d6d6d6; font: 400 11px/1.2 "Poppins", sans-serif; }
+.ai-audit-platforms span:before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 6px; border-radius: 50%; background: #d8ff36; }
 @media (max-width: 650px) {
     .search-reality-comparison { grid-template-columns: 1fr; gap: 18px; }
     .search-reality-card:first-child, .search-reality-card:last-child { margin: 0; }
     .search-reality-card__body { padding: 5px 24px 15px; }
     .search-reality-vs { position: relative; top: auto; left: auto; justify-self: center; order: 1; transform: none; margin: -9px 0; }
     .search-reality-card:last-child { order: 2; }
+    .ai-audit-section { padding: 24px 0 62px; }
+    .ai-audit-panel { grid-template-columns: 1fr; gap: 38px; padding: 34px 25px; border-radius: 20px; }
+    .ai-audit-copy h2 { font-size: 38px; }
+    .ai-audit-visual { min-height: 330px; padding: 17px; }
 }
 span.fill-text__display {
     font-family: "Phudu", sans-serif;
@@ -2173,7 +2420,7 @@ min-width:200px;
 
     border-radius:22px;
 
-  gap:20px;
+  gap:10px;
 display:flex;
 font-weight:bold;
     transition:.35s;
@@ -2918,8 +3165,14 @@ html {
 
 .trust-strip{
     flex-direction:column;
+}.guarantee-card {
+        display: block;
+    }
+.hero p {
+    text-align: left;
+    font-family: "poppins", sans-serif;
+    width: 100% !important;
 }
-
 .trust-divider{
     width:100%;
     height:1px;
@@ -4081,7 +4334,7 @@ margin: 0;
   width: 100%;
   padding: 80px 20px;
   background: #171717;
-  font-family: Arial, Helvetica, sans-serif;
+padding-bottom:50px;
   color: #fff;
 }
 
@@ -4874,7 +5127,7 @@ section.test-Dmpage section.ts-wrap {
 }
 .Botom-form-pointer ul li {
     display: flex;
-    align-items: center;
+    align-items: center;    font-family: 'Poppins';
 }
 .card--news .card__body {
     display: flex;
@@ -4955,10 +5208,18 @@ section.text-marquee {
 }
 
 @media screen and (max-width: 991px) {
+.pp-slider .slick-dots
+{
+    bottom: -103px;
+}
     .hero {
         align-items:end;
         display: flex
-    }
+    }.mobile-port.pp-slider {
+    display: block !important;
+}.guarantee-grid.desktop-Grid {
+    display: none;
+}
 }
 
 .hero:before {
@@ -5050,7 +5311,7 @@ section.text-marquee {
         --fill-text-captured-length: initial;
         container-type: inline-size;
         display: flex;
-        font-size: 80px;
+        font-size: 63px;
         width: 90%;
         text-align:left;
         margin-bottom:20px;
@@ -6035,13 +6296,16 @@ font-size:16px;
 }
 
 }
-
+span.small-size-heaidng {
+    font-size: 40px;
+}
 @media (max-width:767px){
 
 .process-left h2{
     font-size:36px;
     line-height:1;
 }
+
 
 .process-accordion-card{
     padding:25px;
@@ -6055,7 +6319,9 @@ font-size:16px;
 .process-title{
     gap:12px;
 }
-
+body {
+    padding-top: 0;
+}
 .process-title h3{
     font-size:22px;
 }
@@ -6078,19 +6344,39 @@ font-size:16px;
       `}</style>
 
       
+<div className="dm-top-contact-bar">
+  <div className="container dm-top-contact-inner">
+    <div className="dm-top-contact-details">
+      <a href="tel:+919711991245" className="dm-top-contact-item dm-top-india"><span className="dm-top-country-flag"></span><span> +919711991245</span></a>
+      <span className="dm-top-divider"></span>
+      <a href="tel:+19294707990" className="dm-top-contact-item dm-top-usa"><span className="dm-top-country-flag"></span><span>+19294707990
+</span></a>
+      <span className="dm-top-divider"></span>
+      <a href="mailto:sales@citadelcoworkers.com" className="dm-top-contact-item"><FontAwesomeIcon className="dm-top-email-icon" icon={faEnvelope} /><span>sales@citadelcoworkers.com</span></a>
+    </div>
+    <div className="dm-top-social">
+      <a href="https://www.instagram.com/citadelcoworkers/" target="_blank" rel="noreferrer" aria-label="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+      <a href="https://www.facebook.com/citadelcoworkers" target="_blank" rel="noreferrer" aria-label="Facebook"><FontAwesomeIcon icon={faFacebookF} /></a>
+      <a href="https://www.linkedin.com/company/96461265/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+      <a href="https://www.youtube.com/@CitadelCoworkers" target="_blank" rel="noreferrer" aria-label="YouTube"><FontAwesomeIcon icon={faYoutube} /></a>
+    </div>
+  </div>
+</div>
 <section class="hero">
     <div class="container">
         <h1 class="heaidng-hero-dm">
             <span class="fill-text__container">
-            You Rank #1 On <span className="google-wordmark" aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span><br/>But Where  <u> Are the Leads?<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.161 17.886" preserveAspectRatio="none">
+            You Rank #1 On <span className="google-wordmark" aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span><br/>
+            But Are You Showing Up in <u> AI Search? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.161 17.886" preserveAspectRatio="none">
                             <path class="underline" fill="none" fill-rule="evenodd" stroke="#d8ff36" stroke-linecap="round" stroke-width="12" d="M6.002 11.884c6.986-2.542 14.678-3.972 30.5-4.721 40.861-1.935 104.946-1.064 157.66 0"></path>
-                        </svg></u></span>
+                        </svg></u><br></br>
+
+</span>
           
            
         </h1>
         <div class="post-rel">
-            <p>We close the gap between ranking #1 and actually getting found — across
-               ChatGPT, Gemini, Claude and everywhere else your buyers look.
+            <p>Your competitors are being recommended by AI. Are you? We close the gap between ranking #1 and actually getting found — across ChatGPT, Gemini, Claude and everywhere else your buyers look.
 
 </p>
             {/* <div class="circle1">
@@ -6239,8 +6525,8 @@ font-size:16px;
         <div className="search-reality-comparison">
             <article className="search-reality-card">
                 <div className="search-reality-card__head">
-                    <img className="search-reality-brand-icon" src="/images/GoogleDm.webp" alt="Google"  loading="lazy"
-  decoding="async" />
+                    <img className="search-reality-brand-icon" src="/images/GoogleDm.webp" alt="Google"  
+  />
                     <h3 className="d" aria-label="Google">Google Search</h3>
                 </div>
                 <div className="search-reality-card__body">
@@ -6269,8 +6555,8 @@ font-size:16px;
 
             <article className="search-reality-card">
                 <div className="search-reality-card__head">
-                    <img className="search-reality-brand-icon" src="/images/Ai logo.webp" alt="OpenAI"  loading="lazy"
-  decoding="async" />
+                    <img className="search-reality-brand-icon" src="/images/Ai logo.webp" alt="OpenAI" 
+ />
                     <h3>AI Search</h3>
                 </div>
                 <div className="search-reality-card__body">
@@ -6302,6 +6588,33 @@ font-size:16px;
   {showMorePoints ? "See Less ↑" : "See More ↓"}
 </button>
     </div>
+</section>
+<section className="ai-audit-section" ref={auditSectionRef}>
+  <div className="container">
+    <div className="ai-audit-panel">
+      <div className="ai-audit-copy">
+        <span className="ai-audit-badge">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3zM19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7L19 16z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>
+          Free AI Visibility Audit
+        </span>
+        <h2>How Visible Is Your Brand in AI Search?</h2>
+        <p>ChatGPT, Gemini, and Google AI Overviews are becoming the new front page of search. Find out how visible you are to AI now.</p>
+        <button type="button" className="ai-audit-cta" onClick={handleScrollClick}>
+          Get Your Free AI Audit Report <span aria-hidden="true">→</span>
+        </button>
+      </div>
+      <div className={`ai-audit-visual ${isAuditVisible ? "is-audit-visible" : ""}`} aria-label="Sample AI visibility audit score">
+        <div className="ai-audit-window-bar">
+          <span className="ai-audit-window-title"><span className="ai-audit-window-icon">⌘</span> AI Visibility Check</span>
+          <span className="ai-audit-dots">•••</span>
+        </div>
+        <div className="ai-audit-gauge"><span className="ai-audit-gauge-center"></span></div>
+        <div className="ai-audit-score">73<small>/100</small></div>
+        <div className="ai-audit-status">Good Visibility</div>
+        <div className="ai-audit-platforms"><span>ChatGPT</span><span>Perplexity</span><span>Gemini</span><span>Google AI Overviews</span><span>Bing Copilot</span><span>Claude</span></div>
+      </div>
+    </div>
+  </div>
 </section>
 {/* Work Section */}
 <section class="work-por">
@@ -6426,13 +6739,13 @@ className="pp-slider"
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 1,
       },
     },
     {
       breakpoint: 992,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
       },
     },
     {
@@ -6840,7 +7153,7 @@ onClick={() => setPreviewIndex(index)}
 <Slider {...caseStudySlider} className="case-study-slider pp-slider">
 
   {portfolioResults.map((item) => (
-    <div className="case-slide" key={item.id} className="case-slider-Dm">
+    <div className="case-slide" key={item.id}>
 
       <div className="result-card">
 
@@ -6979,7 +7292,7 @@ onClick={() => setPreviewIndex(index)}
 <div class="search-reality-intro"><span class="search-reality-eyebrow"> How It Works
 </span><h2> One Process For 
 <strong> Every Channel</strong> </h2>
-<p>Hear directly from clients who partnered with Citadel Coworkers.</p></div>
+<p>From audit to AI visibility, one process that actually works together.</p></div>
         <div className="process-content">
 
           {/* LEFT */}
@@ -7115,14 +7428,19 @@ That Actually <strong>Works For You</strong> </h2>
 <div class="pointers-form"><ul>
   <li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
     <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> 100% Money-Back Guarantee*
+</li><li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> One Week Free Trial* 
+
 </li>
 <li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
   <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> Cancel Anytime, Zero Lock-In*
+</li><li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> Starting from USD 7/hour 
+
 </li>
 <li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
   <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> 
-  Google, Meta & GEO  Certified</li><li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
-  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> Time-Zone Aligned Coworkers</li></ul>
+  Google, Meta & GEO  Certified</li></ul>
   </div>
 </div></div><div className="content-right-grid">
 <Suspense fallback={<div>Loading...</div>}>
@@ -7252,6 +7570,19 @@ That Actually <strong>Works For You</strong> </h2>
 </section>
 
 {/* end contact */}
+
+<div className="dm-policy-bar">
+  <div className="dm-policy-bar-links">
+    <a href="/refund-policy">Refund Policy</a>
+    <span className="dm-policy-bar-divider" aria-hidden="true"></span>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <span className="dm-policy-bar-divider" aria-hidden="true"></span>
+    <a href="/cookie-policy">Cookie Policy</a>
+    <span className="dm-policy-bar-divider" aria-hidden="true"></span>
+    <a href="/citadel-coworkers-user-agreement">User Agreement</a>
+  </div>
+  <p className="dm-policy-bar-copy">© 2026 Citadel Coworkers. All Rights Reserved.</p>
+</div>
 
 
 
