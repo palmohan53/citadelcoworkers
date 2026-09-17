@@ -906,7 +906,11 @@ UnderstandingProductDesigner: (
 
     
         <p className="text-lg leading-[2] text-[#555] max-w-4xl mx-auto">
-        {serviceContent?.[0]?.UnderstandingProductDesigner?.des}
+       <div
+  dangerouslySetInnerHTML={{
+    __html: serviceContent?.[0]?.UnderstandingProductDesigner?.des || ""
+  }}
+/>
         </p>
       </div>
       </div>

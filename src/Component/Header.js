@@ -137,6 +137,9 @@ Meet the Team
                                     }
                                 </ul>
                             </li>
+                                <li className="nav-item" onClick={openToggle}>
+                                <NavLink className="nav-link" to="/testimonials">Testimonials</NavLink>
+                            </li>
                             <li className="nav-item dropDown">
                                 <NavLink className="nav-link" to="/case-study" onClick={openToggle}>Case Studies</NavLink>
                                 <FontAwesomeIcon icon={faAngleDown}  className="mobile" onClick={subMenuToggle}/>

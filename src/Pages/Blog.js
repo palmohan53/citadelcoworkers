@@ -142,7 +142,7 @@ const Blog = ({ isRecentBlog = false }) => {
       key={index}
     >
       <Link to={`/blog/${blog?.post_name}`} className="d-block">
-        <div className="blogBx blogSmall">
+        <div className="blogBx blogSmall ghh">
           <div className="blogImg">
             <img src={blog.banner} alt={blog.post_title} />
 
@@ -162,13 +162,11 @@ const Blog = ({ isRecentBlog = false }) => {
             <h5>
               By <b>{blog.display_name}</b>
             </h5>
-
-            <p>
-              {blog.post_content
-                ?.replace(/<[^>]+>/g, "")
-                .slice(0, 120)}
-              ...
-            </p>
+<p className=" top-html-blog"
+  dangerouslySetInnerHTML={{
+    __html: blog.post_content?.slice(0, 120) + "..."
+  }}
+/>
 
             <div className="d-flex justify-content-between">
               <h6>7 min read</h6>

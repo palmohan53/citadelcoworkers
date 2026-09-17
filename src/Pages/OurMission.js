@@ -1223,7 +1223,7 @@ team members who stay through crises, adapt seamlessly and become an indispensab
 
     <div className="approach-left">
       <h2>
-        Our Long-Serving<span class="S"> Employees</span>
+        Our Long-Serving<span class="S">Employees</span>
       </h2>
     </div>
 

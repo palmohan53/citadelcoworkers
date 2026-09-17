@@ -6809,6 +6809,12 @@ section.industriesServed.about-us .slick-prev:before, section.industriesServed.a
 .industry-card {
     text-align: center;
 }
+p.top-html-blog h3 {
+    font-size: 15px;
+    font-weight: bold;
+    min-height: auto !important;
+    margin-bottom: 8px !important;
+}
 .reveal-left {
     transform: translateX(-80px);
 }

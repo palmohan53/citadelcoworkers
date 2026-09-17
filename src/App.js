@@ -41,6 +41,9 @@ const UkFiancemetat = React.lazy(() => import("./Pages/TestUK.js"));
 const Testimonials = React.lazy(() => import("./Pages/Testimonail.js"));
 const DMlanding = React.lazy(() => import("./Pages/DM.js"));
 const CaseStudiesPage = React.lazy(() => import("./Pages/Casestudy.js"));
+const DMUK = React.lazy(() => import("./Pages/DMUK.js"));
+const DMmetaTeam = React.lazy(() => import("./Pages/DMTeamMeta.js"));
+
 function App() {
   const location = useLocation();
 useEffect(() => {
@@ -181,6 +184,8 @@ useEffect(() => {
              <Route path="/testimonials" element={<Testimonials />} />
              <Route path="/testimonial" element={<Testimonials />} />
                <Route path="/services/dm-landing" element={<DMlanding />} />
+                <Route path="/services/dm-landing-uk" element={<DMUK />} />
+                     <Route path="/services/DMmetaTeam" element={<DMmetaTeam />} />
                    <Route path="/case-study" element={<CaseStudiesPage />} />
     <Route path="*" element={<NotFound />} />
       </Routes>

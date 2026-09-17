@@ -280,73 +280,72 @@ const globalLocations = [
     id: "canada",
     name: "Canada",
     city: "Toronto",
-    x: 25,
-    y: 34,
+    x: 24,
+    y: 26,
     testimonial:
       "The UI/UX designer we hired brought a fresh perspective to our app. Their designs enhanced usability and engagement, making a noticeable difference in user satisfaction. A great experience working with such a talented professional!",
     person: "Adriana Franco",
     role: "D2C Skincare Brand",
   },
-{
-  id: "new-location",
-  name: "Germany",
-  city: "Berlin",
-  x: 55,
-  y: 32,
-  testimonial:
-    "We were sending generic blasts with low engagement. Citadel Coworkers’ offshore email marketing expert rebuilt our flows with segmentation and personalized recommendations. Within 4 months, our email campaigns attributed revenue growth of 5X.",
-  person: "Sarah Patterson",
-  role: "E-commerce / D2C Brand",
-},
-{
-  id: "new-location",
-  name: "United Kingdom ",
 
-  x: 60,
-  y: 40,
-  testimonial:
-    "We hired a Microsoft Office specialist from Citadel Coworkers to clean up years of Excel chaos and automate reporting. Within weeks, our manual work dropped by more than half. Their level of accuracy, speed and understanding of business workflows honestly felt like working with an in-house analyst. country",
-  person: "David Collins",
-  role: "Business Consulting",
-},
-{
-  id: "new-location",
-  name: "New Zealand",
-
-  x: 70,
-  y: 45,
-  testimonial:
-    " Our social presence was silent and we couldn’t find out why. When Citadel Coworkers’ specialist stepped in and transformed our LinkedIn and newsletter content. They consistently shared value-driven posts that connected with the audience and turned our followers into advocates.",
-  person: "Ethan Caldwell",
-  role: "D2C / E-commerce Brand",
-},
   {
     id: "usa",
     name: "United States",
     city: "New York",
-    x: 54,
-    y: 54,
+    x: 30,
+    y: 38,
     testimonial:
       "Quality content is key to digital success, and the writer we onboarded from Citadel Coworkers exceeded expectations. Their research skills and engaging writing style significantly improved our blog and website traffic.",
     person: "Boris Kapustan",
     role: "Multi-Location Restaurant Group",
   },
 
+  {
+    id: "uk",
+    name: "United Kingdom",
+    city: "London",
+    x: 40,
+    y: 29,
+    testimonial:
+      "We hired a Microsoft Office specialist from Citadel Coworkers to clean up years of Excel chaos and automate reporting. Within weeks, our manual work dropped by more than half. Their level of accuracy, speed and understanding of business workflows honestly felt like working with an in-house analyst.",
+    person: "David Collins",
+    role: "Business Consulting",
+  },
 
-
-
-
+  {
+    id: "germany",
+    name: "Germany",
+    city: "Berlin",
+    x: 55,
+    y: 29,
+    testimonial:
+      "We were sending generic blasts with low engagement. Citadel Coworkers’ offshore email marketing expert rebuilt our flows with segmentation and personalized recommendations. Within 4 months, our email campaigns attributed revenue growth of 5X.",
+    person: "Sarah Patterson",
+    role: "E-commerce / D2C Brand",
+  },
 
   {
     id: "australia",
     name: "Australia",
     city: "Sydney",
-    x: 84,
-    y: 54,
+    x: 60,
+    y: 56,
     testimonial:
       "Our in-house attempts at cold email tanked our domain reputation. Citadel rebuilt our sending infrastructure and sequences from scratch; reply rates on qualified sends turned positive again within weeks.",
     person: "Jacob Carter",
     role: "Manufacturing",
+  },
+
+  {
+    id: "new-zealand",
+    name: "New Zealand",
+    city: "Auckland",
+    x: 70,
+    y: 55,
+    testimonial:
+      "Our social presence was silent and we couldn’t find out why. When Citadel Coworkers’ specialist stepped in and transformed our LinkedIn and newsletter content. They consistently shared value-driven posts that connected with the audience and turned our followers into advocates.",
+    person: "Ethan Caldwell",
+    role: "D2C / E-commerce Brand",
   },
 ];
 const clients = [
@@ -410,7 +409,17 @@ const clients = [
         video: "/images/kaytes.mp4",
     poster: "/images/Kelsey Yates.webp",
   },
-   
+   {
+    id: 5,
+    name: "Tracy  and Keira Hao",
+    role: "",
+    tag: "",
+    sub: "",
+    quote:"When Tracy and Keira from Midastar Properties needed reliable support to manage daily operations, client communications, and case follow-ups, they turned to Citadel Coworkers. Watch how their Virtual Assistant stepped in as a fast learner—taking minimal training time, completing daily tasks with high proficiency, and becoming a long-term asset to their business.",
+    title: "Tracy & Keira’s Story: Scaling Real Estate Operations with a Dedicated VA | Citadel Coworkers",
+        video: "/images/Tracy  and Keira Hao.mp4",
+    poster: "/images/Tracy  and Keira Hao.webp",
+  },
 ];
 
 const styles = {
@@ -826,7 +835,7 @@ const reviews = [
     avatar: "https://virtualassistant24x7.com/wp-content/uploads/2026/09/clinet-1.webp",
     imgreview: "/images/star5.webp",
     title: "It’s helpful alot.",
-
+link:"https://www.trustpilot.com/users/67d9a8dc5c7a61943906e7d8",
     experienceDate: "March 17, 2025",
     review:
       "The Software Developer from Citadel Coworkers played a crucial role in optimizing our internal systems. Their problem-solving skills and attention to detail ensured a smooth workflow. Would definitely hire again.",
@@ -838,6 +847,7 @@ const reviews = [
     avatarColor: "#cbc3ec",
     role: "Canada",
     avatar: " ",
+    link:"https://www.trustpilot.com/users/67d97ea95c7a619a09069895",
     imgreview: "/images/star5.webp",
     title: "Heading- UI/UX Designer ",
  smalltext:"D2C Skincare Brand ",
@@ -849,6 +859,7 @@ const reviews = [
 
     name: "Boris Kapustan",
     role: "USA",
+      link:"https://www.trustpilot.com/users/67d97e2a7062e87eb6d79738",
     avatarColor:"#4caf50",
     imgreview: "/images/star5.webp",
     title: "Quality content is key to digital…",
@@ -862,7 +873,8 @@ const reviews = [
 
     name: "Matthew O'Neil",
     role: "USA",
-     avatarColor:"#01579b",
+     link:"https://www.trustpilot.com/users/65e8cd337dcdce001246fa59",
+    avatarColor:"#01579b",
     imgreview: "/images/star5.webp",
     title: "Best Accounting Services",
  smalltext:"B2B SaaS Platform ",
@@ -874,6 +886,7 @@ const reviews = [
 
     name: "Karla Turcott",
     role: "Canada",
+     link:"https://www.trustpilot.com/users/67d961abc8884308eb062ffd",
     avatarColor:"#5c6bc0",
     imgreview: "/images/star5.webp",
     title: "Mobile App Developer",
@@ -887,6 +900,7 @@ const reviews = [
     name: "Tracy Wilson",
     role: "USA",
     avatarColor:"#a4b5bc",
+     link:"https://www.trustpilot.com/users/65dbef8be418c6001122102b",
     imgreview: "/images/star5.webp",
     title: "Exceptional Real Estate Assistance – A Game Changer!",
  smalltext:"Fintech Startup  ",
@@ -899,7 +913,7 @@ const reviews = [
     name: "Stephen Barral",
     role: "US",
     avatarColor:"#ef6c00",
-    
+     link:"https://www.trustpilot.com/users/661048adc6281900128b6136",
     imgreview: "/images/star5.webp",
     title: "Dedicated Full Stack Developer",
  smalltext:"Indie Game Studio ",
@@ -911,6 +925,7 @@ const reviews = [
 
     name: "Luisa Campbell",
     role: "Canada",
+     link:"https://www.trustpilot.com/users/67d42ab47070b88f5e12375f",
     avatarColor:"#689f38",
     imgreview: "/images/star5.webp",
     title: "Finally, Customer Support I Don’t Have to Worry About!",
@@ -922,6 +937,7 @@ const reviews = [
 
     name: "Kevin Smith",
     role: "USA",
+     link:"https://www.trustpilot.com/users/67d80d1359be04b969945f71",
     avatarColor:"#ff9800",
     imgreview: "/images/star5.webp",
     title: "Exceptional Real Estate Assistance – A Game Changer!",
@@ -931,42 +947,22 @@ const reviews = [
   },
  {
 
-    name: "Ethan Walker",
-    role: "USA",
-    avatar: "https://virtualassistant24x7.com/wp-content/uploads/2026/08/New-Project-15.webp",
+    name: "Natalie Campbell",
+    role: "UK",
+     link:"https://www.trustpilot.com/users/691cf61708dabd6e3bcf98e9",
+avatarColor:"#94856f",
     imgreview: "/images/star5.webp",
-    title: "We had great inbound leads but an empty top of funnel",
+    title: "Excellent Virtual Assistant Service — Highly Recommended!",
  smalltext:"B2B SaaS ",
     experienceDate: "March 17, 2025",
     review:
-      "Our sales team was living off inbound demo requests alone and the pipeline was inconsistent quarter to quarter. Citadel's outbound specialist built a targeted ICP list and launched a multi-channel cadence within a quarter; outbound was generating a majority of our new qualified meetings.",
-  },{
-
-    name: "Olivia Brooks",
-    role: "USA",
-    avatar: "https://virtualassistant24x7.com/wp-content/uploads/2026/08/Olivia-Brooks.webp",
-    imgreview: "/images/star5.webp",
-    title: "Our SDRs were spending more time on data than dialing",
- smalltext:"Professional Services  ",
-    experienceDate: "March 17, 2025",
-    review:"List building and CRM cleanup were eating most of our reps' week. Citadel's team took over prospecting and list enrichment entirely, and our SDRs went from a handful of calls a day to a full call block.",
-  },{
-
-    name: "Jacob Carter",
-    role: "Australia",
-    avatar: "	https://virtualassistant24x7.com/wp-content/uploads/2026/08/New-Project-16.webp",
-    imgreview: "/images/star5.webp",
-    title: "Cold email was landing in spam before it reached anyone",
- smalltext:"Manufacturing ",
-    experienceDate: "March 17, 2025",
-    review:
-      "Our in-house attempts at cold email tanked our domain reputation. Citadel rebuilt our sending infrastructure and sequences from scratch; reply rates on qualified sends turned positive again within weeks. ",
+      "I’ve been using the Virtual Assistant service from Citadel Coworkers and I’m genuinely pleased with the experience. The team is professional, well-organised, and very easy to work with. One thing I really appreciate is the flexibility, I’ve been able to increase or reduce the support depending on my business needs, and the process has always been smooth.Communication has been clear and timely, and the tasks are handled with a high level of care and accuracy. It’s reassuring to have reliable support without the usual overheads.I would definitely recommend Citadel Coworkers to anyone in the UK looking for trustworthy and adaptable virtual assistance.",
   },
 ];
 
   // These are existing testimonials from the review section below. Keeping the
   // location in the source data avoids inventing client locations for the map.
-  const globeTestimonials = [reviews[3], reviews[1], reviews[11]].map((review) => ({
+  const globeTestimonials = [reviews[3], reviews[1], reviews[9]].map((review) => ({
     ...review,
     avatar: review.avatar?.trim() || "",
   }));
@@ -1110,60 +1106,58 @@ const reviews = [
         <div style={styles.clientsWrap}>
           <div style={styles.clientsHeader}>
             <h4 style={styles.clientsTitle}>Our Clients</h4>
-            <div style={styles.arrowsRow}>
-              <button
-                onClick={() => sliderRef.current?.slickPrev()}
-                aria-label="Previous client"
-                style={styles.arrowBtn}
-              >
-                <ChevronLeft size={16} />
-              </button>
-              <button
-                onClick={() => sliderRef.current?.slickNext()}
-                aria-label="Next client"
-                style={styles.arrowBtnStrong}
-              >
-                <ChevronRight size={16} />
-              </button>
-            </div>
+       
           </div>
+<div className="clients-grid">
+  {clients.map((c, i) => (
+    <div key={c.id} className="client-grid-item">
 
-          <Slider ref={sliderRef} {...settings}>
-            {clients.map((c, i) => (
-              <div key={c.id} style={styles.slidePad}>
-                <button
-  onClick={() => {
-    setActive(i);
-    sliderRef.current?.slickGoTo(i);
-  }}
-  style={{
-    ...styles.clientCardBase,
-    boxShadow:
-      i === active
-        ? "0 0 0 2px #204ecf"
-        : "0 0 0 1px transparent",
-  }}
->
+      <button
+       onClick={() => {
+  setActive(i);
 
-  <img
-    src={c.poster}
-    alt={c.name}
-    style={{
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      display: "block",
-    }}
-  />
+  if (window.innerWidth <= 767) {
+    setTimeout(() => {
+      const videoSection = document.querySelector(".wol-main-grid");
 
+      if (videoSection) {
+        const y =
+          videoSection.getBoundingClientRect().top +
+          window.pageYOffset -
+          20;
 
+        window.scrollTo({
+          top: y,
+          behavior: "smooth",
+        });
+      }
+    }, 100);
+  }
+}}
+        style={{
+          ...styles.clientCardBase,
+          boxShadow:
+            i === active
+              ? "0 0 0 2px #204ecf"
+              : "0 0 0 1px transparent",
+        }}
+      >
+        <img
+          src={c.poster}
+          alt={c.name}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+          }}
+        />
+      </button>
 
-
-
-</button>
-              </div>
-            ))}
-          </Slider>
+    </div>
+  ))}
+</div>
+        
         </div>
       </div>
       </section>
@@ -1188,11 +1182,12 @@ const reviews = [
           </p>
 
         </div>
+        <div className="trsutscorer">
         <aside className="client-trust-score" aria-label="Client trust score">
           <div className="client-trust-main">
-            <strong>4.9</strong>
+            <strong>4.4</strong>
             <span>Excellent</span>
-            <div aria-label="4.9 out of 5 stars" className="client-trust-stars"><div class="stars"><img src="/images/star5.webp" alt=""/></div></div>
+            <div aria-label="4.4 out of 5 stars" className="client-trust-stars"><div class="stars"><img src="/images/star5.webp" alt=""/></div></div>
             <small>Average client rating</small>
           </div>
           <div className="client-trust-breakdown" aria-label="Rating distribution visual">
@@ -1200,64 +1195,55 @@ const reviews = [
               <div key={label}><span>{label}</span><i><b style={{ width: index === 0 ? "100%" : index === 1 ? "18%" : "4%" }}></b></i></div>
             ))}
           </div>
+        
         </aside>
+          <div class="review-pio"><a href="https://www.trustpilot.com/review/citadelcoworkers.com">Read Reviews on Trustpilot</a></div>
+        </div>
         </div>
 <div className="gird-re">
 
+  {reviews.map((r, i) => (
 
-{reviews.slice(0, visible).map((r, i) => (
     <div key={i} className="card-ne">
+
       <div className="review-card">
+<a href={r.link} target="_blank" rel="noopener noreferrer">
+        <div className="review-top">
 
-     <div className="review-top">
-  <div className="review-user">
-    <ClientAvatar name={r.name} image={r.avatar?.trim()} color={r.avatarColor} className="review-avatar" />
+          <div className="review-user">
 
-    <div>
-      <h4>{r.name}</h4>
-      <span>{r.role}</span>
-    </div>
-  </div>
+            <ClientAvatar
+              name={r.name}
+              image={r.avatar?.trim()}
+              color={r.avatarColor}
+              className="review-avatar"
+            />
 
+            <div>
+              <h4>{r.name}</h4>
+              <span>{r.role}</span>
+            </div>
 
-</div>
+          </div>
 
-<div className="stars">
-  <img src={r.imgreview} alt="" />
-</div>
+        </div>
 
-<h3>{r.title}</h3>
+        <div className="stars">
+          <img src={r.imgreview} alt="" />
+        </div>
 
-<p>{r.review}</p>
+        <h3>{r.title}</h3>
 
-
-
-    
-
+        <p>{r.review}</p>
+</a>
       </div>
+
     </div>
+
   ))}
 
-       
 </div>
-<div class="grid-load">
-{reviews.length > 6 && (
-  <div className="load-more-wrap">
-    <button
-      className="load-more-btn"
-      onClick={() => {
-        if (visible >= reviews.length) {
-          setVisible(6);
-        } else {
-          setVisible((prev) => Math.min(prev + 3, reviews.length));
-        }
-      }}
-    >
-      {visible >= reviews.length ? "Load Less" : "Load More"}
-      <span>→</span>
-    </button>
-  </div>
-)}</div>
+
       </div>
 
     </section>
@@ -1782,6 +1768,12 @@ p.case-bottm-content {
     border: 1px solid rgba(255, 255, 255, .05);
     border-radius: 14px;
     padding: 16px;
+}.clients-grid {
+    display: grid;
+    grid-template-columns: 3 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
     .result-stats {
     display: grid;
@@ -1998,7 +1990,28 @@ section.text-cases .result-image {
 .map-pin { position:absolute; z-index:2; display:grid; place-items:center; padding:0; border:0; background:transparent; color:#dbe9ff; font:700 10px/1 Arial,sans-serif; letter-spacing:.08em; pointer-events:auto; cursor:pointer; transform:translate(-50%,-50%); }.map-pin i { width:11px; height:11px; border-radius:50%; background:#51dcaf; border:2px solid #d7ffef; box-shadow:0 0 0 7px rgba(81,220,175,.15),0 0 23px #51dcaf; animation:map-pulse 2.5s ease-out infinite; }.map-pin span { margin-top:9px; padding:5px 7px; border:1px solid rgba(153,194,255,.24); border-radius:20px; background:rgba(7,25,67,.72); opacity:.85; }.pin-usa { left:28.2%; top:41.5%; }.pin-uk { left:49.5%; top:29.5%; }.pin-australia { left:80.6%; top:69%; }
 .map-testimonial-card { position:absolute; z-index:5; top:50%; left:clamp(31%,39vw,610px); width:min(385px,31vw); padding:23px; border:1px solid rgba(173,208,255,.28); border-radius:18px; background:linear-gradient(135deg,rgba(15,44,105,.91),rgba(5,22,62,.88)); box-shadow:0 22px 65px rgba(0,4,19,.4),inset 0 1px rgba(255,255,255,.12); backdrop-filter:blur(15px); opacity:0; transform:translate3d(30px,-42%,0); transition:opacity 700ms ease 600ms,transform 800ms cubic-bezier(.22,1,.36,1) 600ms; }.map-testimonial-card.is-visible { opacity:1; transform:translate3d(0,-42%,0); }.map-card-topline { display:flex; align-items:center; gap:9px; color:#a9c7ff; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }.map-card-pulse { width:6px; height:6px; box-shadow:0 0 0 4px rgba(56,214,165,.14); }.map-card-person { display:flex; align-items:center; gap:12px; margin:18px 0 15px; }.map-card-person img { width:45px; height:45px; border:2px solid rgba(183,217,255,.75); border-radius:50%; object-fit:cover; }.map-card-person strong,.map-card-person span { display:block; }.map-card-person strong { color:#fff; font-size:15px; }.map-card-person span { margin-top:3px; color:#b9cef5; font-size:11px; }.map-testimonial-card blockquote { display:-webkit-box; margin:0; overflow:hidden; color:#fff; font-size:14px; line-height:1.65; -webkit-box-orient:vertical; -webkit-line-clamp:4; }.map-video-link { display:inline-flex; align-items:center; gap:7px; margin-top:17px; color:#71e6bd; font-size:12px; font-weight:700; text-decoration:none; }.map-card-progress { height:2px; margin-top:20px; overflow:hidden; border-radius:2px; background:rgba(255,255,255,.18); }.map-card-progress span { display:block; width:100%; height:100%; transform-origin:left; background:#54dcae; animation:card-progress 6.8s linear; }.map-hero-status { position:absolute; z-index:5; right:max(5vw,24px); bottom:38px; color:#a7c3f7; font-size:12px; }.map-hero-status strong { color:#fff; }.map-hero-status span { margin:0 8px; color:#53dbae; }
 .hero-trust-score { position:absolute; z-index:6; left:max(5vw,24px); bottom:36px; display:grid; grid-template-columns:106px 1fr; gap:14px 18px; width:330px; padding:17px 19px 14px; border:1px solid rgba(188,216,255,.3); border-radius:15px; background:rgba(7,25,67,.78); box-shadow:0 14px 45px rgba(0,5,22,.28); backdrop-filter:blur(12px); }.hero-trust-main strong { display:block; color:#fff; font-size:42px; letter-spacing:-.07em; line-height:.85; }.hero-trust-main span { display:block; margin-top:7px; color:#e4eeff; font-size:12px; font-weight:700; }.hero-trust-stars { margin-top:5px; color:#38d6a5; font-size:16px; letter-spacing:1px; }.hero-trust-main small { display:block; margin-top:5px; color:#aec5ef; font-size:9px; }.hero-trust-breakdown { display:grid; gap:7px; padding-top:2px; }.hero-trust-breakdown div { display:grid; grid-template-columns:35px 1fr; align-items:center; gap:7px; }.hero-trust-breakdown span { color:#d5e3ff; font-size:9px; }.hero-trust-breakdown i { display:block; height:7px; overflow:hidden; border-radius:7px; background:rgba(255,255,255,.18); }.hero-trust-breakdown b { display:block; height:100%; border-radius:inherit; background:#38d6a5; }.hero-trust-score a { grid-column:1/-1; margin:0 -19px -14px; padding:11px 19px; border-top:1px solid rgba(188,216,255,.22); color:#d8e5ff; font-size:11px; text-align:center; text-decoration:underline; text-underline-offset:3px; }
-.client-trust-score { display:grid; grid-template-columns:112px 1fr; gap:16px 22px; width:min(370px,100%); margin:30px auto 42px; padding:20px 22px; border:1px solid #d9dce4; border-radius:16px; background:#fff; box-shadow:0 10px 30px rgba(19,35,67,.08); text-align:left; }.client-trust-main strong { display:block; color:#1d2941; font-size:48px; letter-spacing:-.08em; line-height:.84; }.client-trust-main span { display:block; margin-top:8px; color:#26334d; font-size:13px; font-weight:700; }.client-trust-stars { margin-top:7px; color:#00b67a; font-size:17px; letter-spacing:1px; }.client-trust-main small { display:block; margin-top:7px; color:#65718a; font-size:10px; }.client-trust-breakdown { display:grid; gap:8px; padding-top:3px; }.client-trust-breakdown div { display:grid; grid-template-columns:37px 1fr; align-items:center; gap:8px; }.client-trust-breakdown span { color:#34415a; font-size:10px; }.client-trust-breakdown i { display:block; height:8px; overflow:hidden; border-radius:8px; background:#dfe2e8; }.client-trust-breakdown b { display:block; height:100%; border-radius:inherit; background:#00b67a; }
+.trsutscorer
+{ background:#fff; box-shadow:0 10px 30px rgba(19,35,67,.08); text-align:left; 
+ padding: 20px 22px; */
+     border: 1px solid #d9dce4; 
+    border-radius: 16px;
+      }
+.review-pio {
+    border-top: 1px solid #efefef;
+    margin-top: 26px;
+    padding-top: 12px;
+    text-align: center;
+}
+
+.review-pio a {
+    color: #00b67b;
+    text-decoration: underline;
+}
+.client-trust-score 
+{ display:grid; grid-template-columns:112px 1fr; 
+ gap:16px 22px; width:min(370px,100%); margin:30px auto 42px; 
+
+}.client-trust-main strong { display:block; color:#1d2941; font-size:48px; letter-spacing:-.08em; line-height:.84; }.client-trust-main span { display:block; margin-top:8px; color:#26334d; font-size:13px; font-weight:700; }.client-trust-stars { margin-top:7px; color:#00b67a; font-size:17px; letter-spacing:1px; }.client-trust-main small { display:block; margin-top:7px; color:#65718a; font-size:10px; }.client-trust-breakdown { display:grid; gap:8px; padding-top:3px; }.client-trust-breakdown div { display:grid; grid-template-columns:37px 1fr; align-items:center; gap:8px; }.client-trust-breakdown span { color:#34415a; font-size:10px; }.client-trust-breakdown i { display:block; height:8px; overflow:hidden; border-radius:8px; background:#dfe2e8; }.client-trust-breakdown b { display:block; height:100%; border-radius:inherit; background:#00b67a; }
 @keyframes map-pulse { 70%,100% { box-shadow:0 0 0 14px rgba(81,220,175,0),0 0 23px #51dcaf; } } @keyframes card-progress { from { transform:scaleX(0); } to { transform:scaleX(1); } }
 .testimonial-stories-head { display:flex; align-items:center; justify-content:space-between; gap:42px; margin:0 auto 45px; }
 .testimonial-stories-head .section-title { flex:1; margin:0; text-align:left; }.testimonial-stories-head .section-title h2 { margin-top:10px; }
@@ -2031,7 +2044,9 @@ section.text-cases .result-image {
 .global-map-wrapper { position:relative; width:min(1450px,100%); height:520px; margin:0 auto; transform-origin:50% 50%; transition:transform 2.4s cubic-bezier(.22,1,.36,1),opacity 1.4s ease; }.global-map-wrapper.is-zooming { opacity:.84; transform:translateY(8px) scale(1.09); }.global-world-map { position:absolute; width:100%; height:100%; object-fit:contain; object-position:center; user-select:none; pointer-events:none; animation:global-map-drift 10s ease-in-out infinite alternate; }.map-route { position:absolute; left:25%; top:43%; width:255px; height:135px; border-top:1px dashed rgba(18,97,255,.45); border-radius:50%; transform:rotate(-18deg); pointer-events:none; }.map-location { position:absolute; z-index:10; width:24px; height:24px; padding:0; border:0; background:transparent; cursor:pointer; transform:translate(-50%,-50%); }.pin-dot { position:absolute; top:50%; left:50%; width:22px; height:22px; border-radius:50% 50% 50% 0; background:#34ad81; box-shadow:0 8px 22px rgba(18,97,255,.35); transform:translate(-50%,-50%) rotate(-45deg); }.pin-dot span { position:absolute; top:50%; left:50%; width:7px; height:7px; border-radius:50%; background:#fff; transform:translate(-50%,-50%); }.pin-ripple { position:absolute; top:50%; left:50%; width:35px; height:35px; border:1px solid rgba(18,97,255,.4); border-radius:50%; opacity:0; transform:translate(-50%,-50%); }.map-location.active .pin-ripple { animation:global-pin-pulse 3s infinite; }.map-location.active .pin-dot { animation:global-pin-bounce 3s ease-in-out infinite; }.location-label { position:absolute; top:-8px; left:20px; padding:9px 13px; border:1px solid rgba(18,97,255,.1); border-radius:9px; background:rgba(255,255,255,.95); box-shadow:0 10px 30px rgba(24,53,100,.1); color:#17233d; font-size:13px; font-weight:600; white-space:nowrap; opacity:0; transform:translateX(-8px); transition:.55s ease; }.map-location.active .location-label { opacity:1; transform:none; }
 .global-testimonial-card { position:absolute; z-index:999; width:370px; max-width:calc(100vw - 40px); padding:25px; border:1px solid rgba(18,97,255,.1); border-radius:20px; background:rgba(255,255,255,.97); box-shadow:0 25px 70px rgba(35,70,120,.16); box-sizing:border-box; opacity:0; visibility:hidden; transform:translate(-50%,20px) scale(.94); transition:opacity .6s ease,transform .7s cubic-bezier(.22,1,.36,1),visibility .6s; }.global-testimonial-card.visible { opacity:1; visibility:visible; transform:translate(-50%,0) scale(1); }.testimonial-quote-mark { color:#1261ff; font-size:55px; font-weight:800; line-height:.7; }.global-testimonial-card .testimonial-text {     margin-top: 0;margin:14px 0 20px; color:#253453; font-size:13px; line-height:1.65; }.testimonial-divider { height:1px; margin-bottom:18px; background:#e5eaf3; }.testimonial-person { display:flex; align-items:center; gap:13px; }.person-avatar { display:flex; flex:0 0 46px; align-items:center; justify-content:center; width:46px; height:46px; border-radius:50%; background:#eaf2ff; color:#1261ff; font-size:16px; font-weight:700; }.testimonial-person strong { display:block; color:#15223b; font-size:14px; }.testimonial-person span { display:block; margin-top:3px; color:#1261ff; font-size:12px; }.testimonial-person small { display:block; margin-top:4px; color:#77839a; font-size:11px; }.testimonial-indicators { position:relative; z-index:30; display:flex; justify-content:center; gap:8px; margin-top:5px; }.testimonial-indicators button { width:8px; height:8px; padding:0; border:0; border-radius:50%; background:#d4ddea; cursor:pointer; transition:.3s ease; }.testimonial-indicators button.active { width:25px; border-radius:10px; background:#1261ff; } @keyframes global-pin-pulse { 0% { transform:translate(-50%,-50%) scale(.7); opacity:.8; } 70% { transform:translate(-50%,-50%) scale(2.3); opacity:0; } 100% { opacity:0; } } @keyframes global-pin-bounce { 0%,100% { transform:translate(-50%,-50%) rotate(-45deg); } 50% { transform:translate(-50%,-57%) rotate(-45deg); } }
 @keyframes global-map-drift { from { transform:translate3d(-4px,2px,0); } to { transform:translate3d(4px,-2px,0); } }
-@media (max-width:768px) { section#client-stories {
+@media (max-width:768px) { section#client-stories {.client-grid-item button {
+    margin-top: 0px !important;
+}
     padding-top: 0;
 }.global-testimonial-hero { min-height:auto; padding:50px 18px 35px; }.global-map-wrapper {display:none}
 .global-testimonial-heading h1 { font-size:40px; letter-spacing:-1px; }.global-testimonial-heading p { font-size:14px; }.global-map-wrapper { height:470px; }.global-map-wrapper.is-zooming { transform:translateY(5px) scale(1.065); }.global-testimonial-card { width:300px; padding:20px; }.global-testimonial-card .testimonial-text { font-size:13px; }.location-label { padding:7px 9px; font-size:11px; } }
