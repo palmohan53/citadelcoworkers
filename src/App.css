@@ -10881,3 +10881,151 @@ section.testimonial-section-page-sp .testimonial-user img {
 section.testimonial-section-page-sp {
     padding-bottom: 100px;
 }
+.tldr-section {
+    padding: 45px 0;
+    background: #fff;
+}
+svg.ms-2 path {
+    fill: #204ECF;
+}
+.tldr-box {
+       padding: 28px 35px;
+    background: #1749d51a;
+    border: 1px dashed #1749d5;
+    border-radius: 12px;
+        text-align: center;
+            width: 900px;
+    margin: 0 auto;
+    max-width: 100% !important;
+}
+
+.tldr-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 11px;
+}
+
+.tldr-info-wrap {
+    position: relative;
+    display: inline-flex;
+}
+
+/* Info icon always visible */
+.tldr-info-icon {
+    display: block;
+    cursor: pointer;
+    line-height: 0;
+}
+.tldr-title h2 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+.tldr-box p {
+    margin-bottom: 0;
+}
+/* UL initially hidden */
+.tldr-pointers {
+      display: none;
+text-align: left;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-53%);
+
+    width: 100vw;
+      max-width: max-content;
+
+    margin: 0;
+    padding: 25px 35px;
+
+    background: #f7f8fa;
+    border: 1px solid #e6e8eb;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    list-style: none;
+    z-index: 999;
+}
+
+/* Hover icon/wrapper → show UL */
+.tldr-info-wrap:hover .tldr-pointers {
+    display: block;
+}
+
+/* Pointer items */
+.tldr-pointers li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 9px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.tldr-pointers li:last-child {
+    margin-bottom: 0;
+}
+
+.tldr-pointers li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #204ECF;
+    font-size: 18px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+    .tldr-section {
+        padding: 30px 15px;
+    }
+.tldr-pointers
+{
+  width: 80vw !important;
+        left: -24px;
+          padding: 10px !important;
+}
+.tldr-pointers li {
+    font-size: 11px !important;
+}
+section.tldr-section {
+    overflow: visible;
+}
+    .tldr-box {
+        padding: 22px 20px;
+        border-radius: 10px;
+    }
+
+    .tldr-title {
+        margin-bottom: 10px;
+    }
+
+    .tldr-title h2 {
+        font-size: 20px;
+    }
+
+    .tldr-title svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .tldr-box > p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+  
+
+    .tldr-box ul li {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+}

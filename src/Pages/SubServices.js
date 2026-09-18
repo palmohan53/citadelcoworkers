@@ -881,6 +881,40 @@ SkillsSection:  <section className="serviceBulkContent no-padding">
     </section>,
 
   faq:      <Faq faqData={faqData}/>,
+TLDR: (
+  <section className="tldr-section">
+    <div className="container">
+      <div className="tldr-box">
+
+       <div className="tldr-title">
+    <h2>{serviceContent[0]?.TLDR?.title}</h2>
+
+
+    <div className="tldr-info-wrap">
+
+        {/* Info Icon - Initially Visible */}
+        <span
+            className="tldr-info-icon"
+            dangerouslySetInnerHTML={{
+                __html: serviceContent[0]?.TLDR?.icon || ""
+            }}
+        />
+
+        {/* UL - Initially Hidden */}
+        <ul className="tldr-pointers">
+            {serviceContent[0]?.TLDR?.points?.map((point, index) => (
+                <li key={index}>{point}</li>
+            ))}
+        </ul>
+
+    </div>
+    
+</div>
+ <p>{serviceContent[0]?.TLDR?.description}</p>
+      </div>
+    </div>
+  </section>
+),
   GameDesignerCapabilities: <GameDesignerCapabilities />,
   CharacteranimationIndesurty: <CharacteranimationIndesurty />,
   LogoMotionDesignerCompetencies:<LogoMotionDesignerCompetencies />,

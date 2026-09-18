@@ -725,7 +725,7 @@ const teamMembers = [
    {
     name: "Diksha Sharma",
     role: "Web Designer",
-    image: "/images/DIksha.png",
+    image: "/images/diksha (1).webp",
   },
   {
     name: "Ishita Rao",
@@ -8773,7 +8773,7 @@ That Actually <strong>Works For You</strong> </h2>
 <li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
   <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> Cancel Anytime, Zero Lock-In*
 </li><li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">
-  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> Starting from USD 7/hour 
+  <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"></path></svg></span> Starting from £7/hour 
 
 </li>
 <li><span><svg width="23" height="23" viewBox="0 0 24 24" fill="none">

@@ -7283,9 +7283,11 @@
            "useDynamicSections": true,
            "sectionsOrder": [
     "hero",
+        "TLDR",
     "number",
 	"UnderstandingProductDesigner",
     "Services",
+
     "TeamSection",
        "ServiceBulkContentUpper",
 
@@ -7314,6 +7316,16 @@
                         
                     }
                 ],
+                "TLDR": {
+  "title": "TL;DR",
+  "icon": "<svg class=\"ms-2\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"#204ECF\"><path d=\"M10 18.3334C5.39765 18.3334 1.66669 14.6024 1.66669 10C1.66669 5.39765 5.39765 1.66669 10 1.66669C14.6024 1.66669 18.3334 5.39765 18.3334 10C18.3334 14.6024 14.6024 18.3334 10 18.3334ZM10 16.6667C13.6819 16.6667 16.6667 13.6819 16.6667 10C16.6667 6.31812 13.6819 3.33335 10 3.33335C6.31812 3.33335 3.33335 6.31812 3.33335 10C3.33335 13.6819 6.31812 16.6667 10 16.6667ZM9.16669 5.83335H10.8334V7.50002H9.16669V5.83335ZM9.16669 9.16669H10.8334V14.1667H9.16669V9.16669Z\" fill=\"#1A2027\"></path></svg>",
+  "description": "Hire generative engine optimization specialists to make your content easier for AI tools to understand and cite so your brand shows up directly in AI answers. ",
+  "points": [
+    "Get your brand recommended by ChatGPT, Gemini and Perplexity with dedicated GEO specialists.",
+    "Build AI visibility through answer-first content, verified citations, structured data and entity consistency across the web.",
+    "Track progress with monthly AI citation monitoring across AI systems with raw data included. "
+  ]
+},
             "serviceHeading":[
                     {
                         "title": "360° Generative Engine Optimization Services",
@@ -7503,6 +7515,7 @@
            "useDynamicSections": true,
            "sectionsOrder": [
     "hero",
+    "TLDR",
     "number",
 	"UnderstandingProductDesigner",
     "Services",
@@ -7534,6 +7547,18 @@
                         
                     }
                 ],
+"TLDR": {
+  "title": "TL;DR",
+  "icon": "<svg class=\"ms-2\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"#204ECF\"><path d=\"M10 18.3334C5.39765 18.3334 1.66669 14.6024 1.66669 10C1.66669 5.39765 5.39765 1.66669 10 1.66669C14.6024 1.66669 18.3334 5.39765 18.3334 10C18.3334 14.6024 14.6024 18.3334 10 18.3334ZM10 16.6667C13.6819 16.6667 16.6667 13.6819 16.6667 10C16.6667 6.31812 13.6819 3.33335 10 3.33335C6.31812 3.33335 3.33335 6.31812 3.33335 10C3.33335 13.6819 6.31812 16.6667 10 16.6667ZM9.16669 5.83335H10.8334V7.50002H9.16669V5.83335ZM9.16669 9.16669H10.8334V14.1667H9.16669V9.16669Z\" fill=\"#1A2027\"></path></svg>",
+  "description": "Hire dedicated outbound marketing specialists to reach your ideal buyers directly through email, calling and LinkedIn. ",
+  "points": [
+    "Run multi-channel outreach across cold email, cold calling, LinkedIn and direct mail with specialists who plug into your existing CRM.",
+    "Build verified, ICP-matched prospect lists and structured cadences designed to book qualified meetings, not just start conversations. ",
+    "Track reply rates, meetings booked and pipeline generated monthly, with raw activity data reported on a schedule you set. "
+  ]
+},
+ 
+
             "serviceHeading":[
                     {
                         "title": "Full-Stack Outbound Marketing Services Tailored to Your Business",
@@ -7783,9 +7808,11 @@
             "name": "Virtual Assistant",
            "sectionsOrder": [
     "hero",
+        "TLDR",
     "number",
 	"UnderstandingProductDesigner",
     "Services",
+
     "TeamSection",
        "ServiceBulkContentUpper",
 
@@ -7814,6 +7841,16 @@
                         
                     }
                 ],
+                "TLDR": {
+  "title": "TL;DR",
+  "icon": "<svg class=\"ms-2\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"#204ECF\"><path d=\"M10 18.3334C5.39765 18.3334 1.66669 14.6024 1.66669 10C1.66669 5.39765 5.39765 1.66669 10 1.66669C14.6024 1.66669 18.3334 5.39765 18.3334 10C18.3334 14.6024 14.6024 18.3334 10 18.3334ZM10 16.6667C13.6819 16.6667 16.6667 13.6819 16.6667 10C16.6667 6.31812 13.6819 3.33335 10 3.33335C6.31812 3.33335 3.33335 6.31812 3.33335 10C3.33335 13.6819 6.31812 16.6667 10 16.6667ZM9.16669 5.83335H10.8334V7.50002H9.16669V5.83335ZM9.16669 9.16669H10.8334V14.1667H9.16669V9.16669Z\" fill=\"#1A2027\"></path></svg>",
+  "description": "Hire an online reputation management specialist to monitor reviews, clean up search results and manage your brand’s reputation across platforms like Google, Trustpilot and G2. ",
+  "points": [
+    "Repair and protect your brand's search results through digital PR, content suppression and crisis response when reputation issues hit. ",
+    "Track sentiment, ratings and AI answer engine descriptions of your brand monthly, with raw data included for full visibility. "
+
+  ]
+},
             "serviceHeading":[
                     {
                         "title": "360° Online Reputation Management Services",
@@ -8055,7 +8092,236 @@
             }
         ]
 		
-        }					
+        },
+		{
+            "categoryUrl": "hire-e-commerce-assistant",
+            "categoryName": "E-commerce Assistant",
+            "pageMetaTitle": "Hire An E-commerce Assistant In India",
+            "pageMetaContent": "Our AI-powered ecommerce assistants process listings faster, resolve support tickets smarter and manage your store operation",
+           "useDynamicSections": true,
+            "name": "Virtual Assistant",
+           "sectionsOrder": [
+    "hero",
+     
+    "number",
+	"UnderstandingProductDesigner",
+    "Services",
+
+    "TeamSection",
+    "certifications",
+       "ServiceBulkContentUpper",
+       "ToolsSection",
+	     "Comparison",
+         "ServiceBulkContent",
+       
+     
+	         "Testimonial",
+	
+        "faq",
+
+    "FeaturedInMarquee",
+ 
+   
+       "ContactForm",
+  
+    "Icondesign",
+     "ConcludingSec"
+  ],
+        "banner":[
+                    {
+                        "imageUrl": "images/aggregate.png",
+                        "title": "Hire An E-commerce Assistant In India",
+                        "body": "Our AI-powered ecommerce assistants process listings faster, resolve support tickets smarter and manage your store operations  -starting at $8/hour",
+                        "buttonText": "Get Your E-Commerce Assistant Today"
+                        
+                    }
+                ],
+             "serviceHeading":[
+                    {
+                        "title": "Comprehensive E-commerce Services For Your Every Need",
+                        "body": "Our e-commerce virtual assistants bring deep expertise whether you are launching a new store, scaling an existing brand or streamlining fulfilment. Our e-commerce outsourcing services deliver the operational capability you need without the overhead of a full-time hire."
+                    }
+                ],
+            "clientsNumberHeading":[
+                    {
+                        "title":"Our E-Commerce Support Edge In Numbers",
+                        "body": ""
+                    }
+                ],
+            "clientsNumber":[
+                   
+                    {
+                        "imageUrl": "/images/expert (2).png",
+                        "title": "Dedicated Assistants",
+                        "body": "50+ ",
+                        "flipcontent":"Covering listing support, admin and operations across all major platforms"
+                    },
+					  {
+                        "imageUrl": "/images/campaign (2).png",
+                        "title": "E-Commerce Projects Delivered",
+                        "body": "1200+",
+                        "flipcontent":"Across Shopify, Amazon, WooCommerce, eBay, Etsy and Walmart Marketplace"
+                    },
+                    {
+                        "imageUrl": "/images/Industires.png",
+                        "title": "Faster Task Turnaround",
+                        "body": "3X",
+                        "flipcontent":"Quicker execution without compromising accuracy or process quality"
+                    },
+                    {
+                        "imageUrl": "/images/Experience.png",
+                    "title": "Client Retention Rate",   
+                        "body": "96%",
+                        "flipcontent":"Long-term e-commerce partnerships built on consistent delivery and operational trust"
+                    }
+                ],
+                 
+  
+                "UnderstandingProductDesigner":{
+ "title": "Understanding The Role Of An E-Commerce Assistant",
+ "des": "An e-commerce assistant is the working backbone of a growing web store. You concentrate on growth, from monitoring product listings and processing orders to answering consumer queries and liaising with suppliers. The good e-commerce support executive is a mix of platform expertise, procedural discipline and communication skills. e-commerce chat support, admin support or full e-commerce management services, the appropriate VA makes your company faster, leaner and more responsive to customers."
+                },
+				
+	"Comparison":	{
+  "title": "In-House E-Commerce Staff Vs Offshore E-Commerce Assistant: The Smarter Choice?",
+  "body": "When scaling your e-commerce operations capacity, businesses typically choose between hiring full-time in-house staff or partnering with an offshore e-commerce virtual assistant. Here is how the two options compare.",
+  "tableheading":[
+  {
+  "heading1":"In-House E-commerce Staff",
+  "heading12":"Citadel Coworkers"}
+  ],
+
+    "tableData": [
+
+
+	
+  {
+    "factor": "Cost",
+    "inHouseDesigner": "Full salary, benefits and infrastructure overhead",
+    "citadelCoworkers": "Pay only for work done, starting at $8/hour"
+  },
+  {
+    "factor": "Hiring Time ",
+    "inHouseDesigner": "Typically, 30 to 45 days to fill a role",
+    "citadelCoworkers": "Matched with a vetted e-commerce VA in 24 to 48 hours"
+  },
+  {
+    "factor": "Flexibility",
+    "inHouseDesigner": "Fixed hours and fixed scope",
+    "citadelCoworkers": "Scale up or down as your store demands"
+  },
+  {
+    "factor": "Platform Coverage",
+    "inHouseDesigner": "Limited to an individual hire’s experience",
+    "citadelCoworkers": "Amazon, Shopify, WooCommerce, eBay, Etsy and more"
+  },
+  {
+    "factor": "Skillset",
+    "inHouseDesigner": "Dependent on the individual hire",
+    "citadelCoworkers": "Listing specialists, support executives, coordinators and ops assistants"
+  },{
+    "factor": "Scalability",
+    "inHouseDesigner": "Requires rehiring at every growth stage phase",
+    "citadelCoworkers": "On-demand team expansion with zero overhead"
+  },{
+    "factor": "Timezone Support",
+    "inHouseDesigner": "Business hours only",
+    "citadelCoworkers": "Extended coverage across the US, UK, AU and global time zones"
+  }
+  
+  ]
+},
+
+
+
+            "faq":[
+                    {
+                        "title": "01. How do I make sure my e-commerce VA stays on top of things during high-order periods without me stepping back in?",
+                        "body": "High-volume periods are where structure matters most. Before any spike, a sale, product launch or peak season, your ecommerce operations assistant works to a pre-agreed priority task list so nothing gets triaged on the fly. Order processing, customer response times and inventory flags each have a defined SLA that tightens, not loosens, when volume increases. If capacity needs to flex up, we adjust resource allocation ahead of the surge, not after orders start piling up. "
+                    },
+                    {
+                        "title": "02. How do I stay in the loop without having to micromanage someone in a different time zone?",
+                        "body": "We design the communication structure around your availability, not the other way around. Your e-commerce coordinator sends a daily task summary at a time that suits your schedule. You review it when you are ready, not in real time. Urgent issues are flagged via your preferred channel immediately. Weekly check-ins keep you across performance without requiring daily involvement. Most clients find they spend less than 20 minutes a day staying on top of their VA's work once the first two weeks are behind them. The goal is visibility without overhead."
+                    },
+                    {
+                        "title": "03. What stops a VA from making a costly mistake on a live listing or a customer account?",
+                        "body": "Every task your e-commerce assistant handles sits within a documented SOP that defines exactly what action to take, what to flag for approval and what never to do without sign-off. High-risk actions like price changes above a threshold, bulk listing edits, refunds above a set value are built into an approval workflow so nothing goes live without your awareness. Access permissions are scoped to the minimum needed for the role. And every VA goes through platform-specific testing before being placed, so they are not learning your live store from scratch."
+
+                    },
+                    {
+                        "title": "04. How do you ensure quality and consistency from offshore e-commerce assistants?",
+                        "body": "Every e-commerce support executive in our team goes through a structured vetting process covering platform knowledge assessments, written communication evaluation and task-specific testing. Ongoing quality is maintained through regular performance reviews, SLA tracking and direct client feedback loops. Our e-commerce VA outsourcing model is built around measurable outputs, not just hours worked."
+                    },
+                    {
+                        "title": "05. Can I hire an e-commerce assistant for a specific project rather than ongoing support?",
+                        "body": "Yes. Our e-commerce outsourcing services include project-based engagements, catalogue migrations, marketplace expansion launches, peak season support uplift and store audits are common project scopes. We provide a dedicated e-commerce project coordinator and the supporting specialist resource for the project duration, with no obligation to continue beyond completion."
+                    }
+					
+					
+					
+                   
+                ],
+                
+        "bottomServicesHeading":[
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+        "bottomServices":[
+                
+				 {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                },
+                {
+                    "title": "",
+                    "body": ""
+                }
+				,
+                {
+                    "title": "",
+                    "body": ""
+                }
+            ],
+             "icontextdesignheading": [
+    {
+      "title": "Why Growing Brands Trust Citadel Coworkers For Offshore E-Commerce Support",
+      "body": "e-commerce businesses need operational partners who understand platform mechanics, customer expectations and the pace at which online retail moves. With Citadel Coworkers, you gain access to India's top e-commerce virtual assistants delivering accurate, accountable, scalable support without the overhead of full-time hiring or the rigidity of traditional outsourcing contracts.",
+      "centerImageUrl": "/images/ORM.png"
+    }
+  ],
+  "icontextdesign": [
+    { "imageUrl": "", "body": "E-commerce co-packing designed around your specific platform, volume and operational needs" },
+    { "imageUrl": "", "body": "End-to-end coverage from e-commerce listing management and customer service to back-office activities" },
+    { "imageUrl": "", "body": "Formal performance reviews at each level of the interaction with clear KPIs" },
+    { "imageUrl": "", "body": "Expand your e-commerce business without adding manpower, infrastructure or management overhead" },
+    { "imageUrl": "", "body": "Delivery formats and communication channels that fit with your current team workflow" },
+    { "imageUrl": "", "body": "Competitive offshore e-commerce employment rates without compromising accuracy, reliability or response quality." }
+	
+  ],
+		  "Contacttext":[
+            {
+               "text": "Hire Your E-commerce Assistant ",
+               "heading":" E-commerce Assistant "
+            }
+        ],
+		 "Concludingtext":[
+            {
+               "text": "Hire Your Dedicated E-Commerce Virtual Assistant & Build The Operations Your Store Deserves",
+			   "buttontext":"Hire Your E-commerce Assistant Now"
+            }
+        ]
+		
+        }
 		
     ]
 }

@@ -725,7 +725,7 @@ const teamMembers = [
    {
     name: "Diksha Sharma",
     role: "Web Designer",
-    image: "/images/DIksha.png",
+    image: "/images/diksha (1).webp",
   },
   {
     name: "Ishita Rao",
