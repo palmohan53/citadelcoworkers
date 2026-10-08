@@ -769,8 +769,7 @@ bottom:auto;
 } `}</style>
  <section className="cta-section">
 
-      <div className="cta-shape shape1"></div>
-      <div className="cta-shape shape2"></div>
+ 
 
       <div className="container">
    <div className="contete">

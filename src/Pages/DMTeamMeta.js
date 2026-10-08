@@ -10,6 +10,7 @@ import { faFacebookF, faInstagram, faLinkedinIn, faYoutube } from "@fortawesome/
 const TestimonialsTabs = lazy(() =>
   import("../Component/Testimonialstabs")
 );
+
 const teamSettings = {
   dots: true,
   infinite: true,
@@ -79,7 +80,7 @@ const ContactFormDM = lazy(() =>
 
 export default function DMmetaTeam() {
 
-
+const [phoneOpen, setPhoneOpen] = useState(false);
 
 
 
@@ -703,45 +704,53 @@ image:"/images/THE PROBLEM.mp4",
 const teamMembers = [
   {
     name: "Aditi Sinha",
-    role: "Ad Copy & Creative Expert",
+ role: "Senior Meta Ads Specialist",
     image: "/images/Aditi Sinha (1).webp",
+      price: "$7/Hr"
   },
   {
     name: "Priya Singh",
-    role: "Content SEO Expert",
+    role: "Senior SEO Expert",
     image: "/images/Priya.webp",
+    price: "$7/Hr"
   },
 
   {
-    name: "Aditya Sharma",
-    role: "Cold Email & Sequence Specialist",
-    image: "/images/Aditya Sharma (1).webp",
+    name: "Aditi Gupta",
+  role: "Senior Affiliate Marketer",
+    image: "/images/gupta.webp",
+      price:"$8/Hr"
   },
     {
     name: "Kumari Santosh",
-    role: "Content Writer",
+      role: "Senior Copywriter",
     image: "/images/Santoshlong.webp",
+      price:"$7/Hr"
   },
    {
     name: "Diksha Sharma",
-    role: "Web Designer",
+    role: "Senior Web Designer",
     image: "/images/diksha (1).webp",
+      price:"$8/Hr"
   },
   {
     name: "Ishita Rao",
     role: "Senior GEO Strategist",
     image: "/images/Ishita Rao.webp",
+      price:"$8/Hr"
   },
   {
     name: "Vansh Sharma",
     role: "Social Media Strategist",
     image: "/images/Vansh.webp",
+      price:"$7/Hr"
   },
 
   {
     name: "Keshav Kumar",
-    role: "Remarketing & Audience Strategist",
+       role: "Remarketing & Search Ad Specialist",
     image: "/images/Keshav-k.webp",
+    price:"$8/Hr"
   },
   
 
@@ -1761,7 +1770,7 @@ des:"Build a following that becomes one of your best sales channels.",
     id: "08",
     title: "Email Marketing",
     image: "/images/Email (3).webp",
-    color: "#c2ddff",
+    color: "#dce3fe",
 	des:"Nurture sequences that turn cold leads into booked calls.",
   },
    {
@@ -1777,6 +1786,41 @@ des:"Build a following that becomes one of your best sales channels.",
     image: "/images/infk.webp",
     color: "#e9d0f6",
 	des:"Partnerships that put your brand in front of ready-to-buy audiences.",
+  },
+   {
+    id: "11",
+    title: "Web Development",
+    image: "/images/dev.webp",
+    color: "#CFF8EF",
+	des:"Fast, reliable builds made to scale with you, not just launch and get forgotten.",
+  },
+  {
+    id: "12",
+    title: "Web Design",
+    image: "/images/web-deisgn.webp",
+    color: "#dce3fe",
+	des:"Websites designed to convert visitors, not just win design awards.",
+  },
+  {
+    id: "13",
+    title: "Graphic Design",
+    image: "/images/graphic.webp",
+    color: "#fee6c1",
+	des:"Visuals built to make your brand memorable, not just pretty.",
+  },
+  {
+    id: "14",
+    title: "Online Reputation Management",
+    image: "/images/online.webp",
+    color: "#e9d0f6",
+	des:"Reviews and mentions managed to build trust before a bad one costs you the sale.",
+  },
+  {
+    id: "15",
+    title: "Outbound Marketing",
+    image: "/images/outbond-1.webp",
+    color: "#ffc2c2",
+	des:"Personalized outreach that books calls, not just fills someone's spam folder.",
   },
 ];
 const [openIndex, setOpenIndex] = useState(0);
@@ -2049,7 +2093,8 @@ const activePortfolio = data[active]?.portfolio || [];
     
       <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.dm-top-contact-bar {
+.mobile-phn-numver
+  {display:none;}.dm-top-contact-bar {
      min-height: 39px;
     /* background: #1c1c1c; */
     border-bottom: 1px solid #b5c600;
@@ -2115,7 +2160,7 @@ const activePortfolio = data[active]?.portfolio || [];
   .dm-top-contact-bar { min-height: 0; padding: 8px 0; font-size: 12px; }
   .dm-top-contact-inner {
     min-height: 0;
-    flex-direction: column;
+
     justify-content: center;
     gap: 8px;
   }
@@ -2129,6 +2174,59 @@ const activePortfolio = data[active]?.portfolio || [];
   .dm-top-social { display: flex; gap: 18px; }
   .dm-top-social a { font-size: 16px; padding: 3px; }
 }
+
+  @media (max-width: 540px) {
+  .phonei-icon img {
+    width: 22px;
+    curpointer:pointer
+}
+    .mobile-phn-numver a:hover {
+    color: #204ecf;
+}
+    .mobile-phn-numver.phone-open:before {
+    content: "";
+    background: #fff;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    top: 0;
+    transform: translateX(-50%) rotate(45deg);
+}
+    .mobile-phn-numver.phone-open {
+    display: block !important;
+}
+    .mobile-phn-numver {
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    position: absolute;
+    top: 93%;
+}
+
+.mobile-phn-numver a {
+    color: #000;
+}
+
+.mobile-phn-numver dm-top-india {
+    margin-bottom: 10px;
+}
+
+.mobile-phn-numver a.dm-top-contact-item.dm-top-india {
+    margin-bottom: 10px;
+}
+        .dm-top-contact-inner {
+     
+        justify-content: space-between !important;
+       
+    }
+    .no-ph-mobile-hide {
+    display: none;
+}
+   .phonei-icon {
+    display: block !important;
+} 
+      }
 @media (max-width: 420px) {
   .dm-top-contact-details { flex-direction: column; align-items: center; gap: 6px; }
 }
@@ -2156,6 +2254,9 @@ const activePortfolio = data[active]?.portfolio || [];
   .dm-policy-bar { min-height: auto; padding: 16px 12px; }
   .dm-policy-bar-links { gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
   .dm-policy-bar-divider { display: none; }
+}
+  .phonei-icon {
+    display: none;
 }
 .work-marquee{
      padding: 80px 0;
@@ -3116,7 +3217,9 @@ html {
   gap: 28px;
   margin-top: 70px;
 }
-
+section.test-Dmpage section {
+    overflow: visible;
+}
 .guarantee-card {
   position: relative;
   background: #101010;
@@ -4720,7 +4823,8 @@ padding-bottom:50px;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap:20px;
+    justify-content: center;
   text-decoration: none;
   color: #111;
   background: #c8ff00;
@@ -5740,7 +5844,9 @@ section.FEATURED .card.card--work {
 /* ========== Mobile ========== */
 
 @media(max-width:768px){
-
+.dm-top-social {
+    display: none;
+}
 .guarantee-card {
     display: block;
 }
@@ -6122,7 +6228,7 @@ font-size: 22px;
     transform:translateY(-8px);
 }
 .process-card1 {
-    background: #f2f2f2;
+  
     border-radius: 22px;
     padding: 35px;
 }
@@ -6426,9 +6532,17 @@ font-size:16px;
     border-radius: 26px;
     padding: 50px;
 }
-
+.process-contentd p {
+    font-family: 'Poppins';
+    color: #fff;
+}
 .process-item {
     border-bottom: 1px solid #e7e7e7;
+
+    border-radius: 20px;
+    background: #222;
+    padding: 13px;
+    margin-bottom: 10px;
 }
 
 .process-item:last-child {
@@ -6436,6 +6550,7 @@ font-size:16px;
 }
 .process-contentd p {
     font-family: 'Poppins';
+    color#fff;
 }
 .process-header {
     width: 100%;
@@ -6457,7 +6572,7 @@ font-size:16px;
 .process-number {
     font-size: 34px;
     font-weight: 700;
-    color: #222;
+    color: #fff;
 }
 
 .process-title h3 {
@@ -6465,7 +6580,7 @@ font-size:16px;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #222;text-align: left;
+    color: #fff;text-align: left;
 }
 
 .process-arrow {
@@ -7703,7 +7818,24 @@ body {
 .team-card-modern { overflow: hidden; border: 1px solid rgba(32, 78, 207, 0.14); border-radius: 24px; background: #fff; transition: transform .3s ease, box-shadow .3s ease; }
 .team-image-wrap { position: relative;overflow: hidden; background: #eef2ff; }
 .team-image-wrap img { display: block; transition: transform .4s ease; }
-.team-index { position: absolute; top: 14px; left: 14px; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #d8ff36; color: #081225; font-size: 12px; font-weight: 700; }
+.team-index {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    display: grid;
+    place-items: center;
+    width: max-content;
+    height: 38px;
+    border-radius: 10px;
+    background: #d8ff36;
+    color: #081225;
+    font-size: 19px;
+    font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-family: 'Phudu';
+}
 .team-card-content { padding: 20px 22px 24px; }
 .team-card-content h3 { margin: 0 0 6px; font-size: 21px; line-height: 1.2; color: #081225; }
 .team-card-content p { margin: 0; color: #5e6678; font-size: 14px; }
@@ -7728,10 +7860,22 @@ body {
       
 <div className="dm-top-contact-bar">
   <div className="container dm-top-contact-inner">
-    <div className="dm-top-contact-details">
-      <a href="tel:+919711991245" className="dm-top-contact-item dm-top-india"><span className="dm-top-country-flag"></span><span> +919711991245</span></a>
+    <div class="phonei-icon">
+<img src="/images/phone-call.webp"  onClick={() => setPhoneOpen(!phoneOpen)}></img>
+    </div>
+    <div  className={`mobile-phn-numver ${
+      phoneOpen ? "phone-open" : ""
+    }`}>
+  <a href="tel:+919711991245" className="dm-top-contact-item dm-top-india "><span className="dm-top-country-flag "></span><span> +919711991245</span></a>
       <span className="dm-top-divider"></span>
-      <a href="tel:+19294707990" className="dm-top-contact-item dm-top-usa"><span className="dm-top-country-flag"></span><span>+19294707990
+      <a href="tel:+19294707990" className="dm-top-contact-item dm-top-usa "><span className="dm-top-country-flag"></span><span>+19294707990
+</span></a>
+
+    </div>
+    <div className="dm-top-contact-details">
+      <a href="tel:+919711991245" className="dm-top-contact-item dm-top-india no-ph-mobile-hide"><span className="dm-top-country-flag "></span><span> +919711991245</span></a>
+      <span className="dm-top-divider"></span>
+      <a href="tel:+19294707990" className="dm-top-contact-item dm-top-usa no-ph-mobile-hide"><span className="dm-top-country-flag"></span><span>+19294707990
 </span></a>
       <span className="dm-top-divider"></span>
       <a href="mailto:sales@citadelcoworkers.com" className="dm-top-contact-item"><FontAwesomeIcon className="dm-top-email-icon" icon={faEnvelope} /><span>sales@citadelcoworkers.com</span></a>
@@ -7758,13 +7902,14 @@ body {
       </div>
 
       <h1>
-        Hire Specialists Your Team Needs 
-     Trained for   <strong> AI-Era Marketing</strong>
+        Build the Marketing 
+Team You Need for 
+
+  <strong> The AI Era</strong>
       </h1>
 
       <p class="meta-description">
-        Get dedicated Meta Ads specialists who create, manage and optimize
-        Facebook & Instagram campaigns to drive real business growth.
+        Get vetted specialists across every marketing channel — screened, trained for AI-era search, and ready to start immediately.
       </p>
 
       <div class="meta-buttons">
@@ -8162,7 +8307,7 @@ onClick={() => setPreviewIndex(index)}
                 />
 
                 <span className="team-index">
-                  {String(index + 1).padStart(2, "0")}
+                  {member.price}
                 </span>
               </div>
 
@@ -8414,14 +8559,14 @@ onClick={() => setPreviewIndex(index)}
 
     </div>
 
-    <div>
+     <div>
 
       <h4>
-        We stand behind our work
+        We Stand Behind Our Work
       </h4>
 
       <p>
-        with <span>real guarantees.</span>
+        With <span>Real Guarantees.</span>
       </p>
 
     </div>
@@ -8474,7 +8619,7 @@ onClick={() => setPreviewIndex(index)}
   <div className="trust-brand">
 
     <img
-      src="/images/hub (1).webp"
+      src="/images/samrush.webp"
       alt="Semrush"
       loading="lazy"
       decoding="async"
@@ -8482,9 +8627,9 @@ onClick={() => setPreviewIndex(index)}
 
     <div>
 
-      <h5>HubSpot</h5>
+      <h5>Semrush</h5>
 
-      <span>Agency Partner</span>
+      <span> Partner</span>
 
     </div>
 
@@ -8756,9 +8901,10 @@ onClick={() =>
   <div className="container">
 <div className="Form-dm-gridf">
 <div class="content-left-grid">
-<div class="search-reality-intro left-sided"><span class="search-reality-eyebrow">Small heading</span>
-  <h2> Let's Build The Marketing .
-That Actually <strong>Works For You</strong> </h2>
+<div class="search-reality-intro left-sided"><span class="search-reality-eyebrow">HIRE RISK-FREE </span>
+  <h2>  If It's Not The Right Fit
+
+ <strong> You Don't Pay</strong> </h2>
   <p>Every professional screened, tested, and matched to fit your team's exact needs</p></div>
 <div class="animated -arrow"><img src="/images/Paper-Plane-1.webp"  loading="lazy"
   decoding="async"></img></div>
@@ -8815,12 +8961,12 @@ That Actually <strong>Works For You</strong> </h2>
   
     <div class="conclusion-heading">
       <h2>
-      RANKING #1 MEANS NOTHING 
-        <span>IF IT DOESN'T MEAN MORE LEADS</span>
+      A Vetted Specialist Means Nothing 
+        <span>If They're Not On Your Team Yet	</span>
       </h2>
 
       <p>
-        Get a free, no-pressure look at why your rankings aren't converting — and a plan to close the gap.
+        See who's available across domains and get them started this week, backed by a 100% money-back guarantee.	
       </p>
     </div>
 
@@ -8863,7 +9009,7 @@ That Actually <strong>Works For You</strong> </h2>
         block: "start",
       })
     }>
-        <span>GET ON A CALL WITH OUR TEAM</span>
+        <span> SEE WHO'S AVAILABLE NOW</span>
 
         <span class="growth-arrow">
           <svg viewBox="0 0 24 24">

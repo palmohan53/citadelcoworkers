@@ -25,18 +25,7 @@ const reviews = [
       "Google's AI Overviews covered our category's biggest questions while citing publishers, not brands. After schema implementation and question-led restructuring of our education hub, our pages began earning Overview citations on our highest-intent queries.",
   },
 
-  {
-    name: "Brendan Thomas",
-    role: "UK",
-    avatar:
-      "https://virtualassistant24x7.com/wp-content/uploads/2026/05/TEST-2.webp",
-    imgreview: "/images/star5.webp",
-    title: "Strong Acquisition With Weak Conversion",
-    smalltext: "F2P RPG Publisher",
-    experienceDate: "March 17, 2025",
-    review:
-      "Misaligned soft/hard currency split and a poorly timed IAP store were killing conversion but the publisher had no F2P economy designer to see it. CCW restructured the currency architecture, redesigned the store UI and built a battle pass aligned to their player segments. Revenue per user improved within the first live-ops cycle.",
-  },
+
 
   {
     name: "Michael Torres",

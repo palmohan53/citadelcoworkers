@@ -58,18 +58,8 @@ const reviews = [
     review:
       "Vendor-comparison prompts named three rivals and never us, even though we outranked them on Google. CCW's GEO specialist rebuilt our comparison pages answer-first, fixed our entity data and grew our review footprint and within a quarter we were appearing in the majority of our tracked shortlist prompts.",
   },
-   {
-
-    name: "Brendan  Thomas",
-    role: "UK",
-    avatar: "	https://virtualassistant24x7.com/wp-content/uploads/2026/05/TEST-2.webp",
-    imgreview: "/images/star5.webp",
-    title: "Strong Acquisition With Weak Conversion",
- smalltext:"F2P RPG Publisher  ",
-    experienceDate: "March 17, 2025",
-    review:
-      "Misaligned soft/hard currency split and a poorly timed IAP store were killing conversion but the publisher had no F2P economy designer to see it. CCW restructured the currency architecture, redesigned the store UI and built a battle pass aligned to their player segments. Revenue per user improved within the first live-ops cycle.",
-  },
+   
+ 
    {
 
     name: "Michael Torres",

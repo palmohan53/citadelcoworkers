@@ -1,17 +1,12 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClipboardList,
-  faPeopleArrows,
-  faSitemap,
-  faHouseLaptop,
-} from "@fortawesome/free-solid-svg-icons";
 
 const Steps = ({ serviceSection }) => {
   return (
-    <section className="service-section-two bg_light_1">
+    <section className="service-section-two bg_light_1 inner-services">
       <div className="container pd_zero">
-        <div className="row mb-5">
+
+        {/* Heading */}
+          <div className="row mb-5">
           <div className="col-lg-12">
             <div className="title_all_box style_one text-center dark_color">
               <div className="sectionHeading">
@@ -22,25 +17,27 @@ const Steps = ({ serviceSection }) => {
           </div>
         </div>
 
-        <div className="row gutter_15px">
+        {/* Steps */}
+        <div className="row mt-5">
+
           {serviceSection?.listing?.map((item, index) => {
             const steps = [
               {
-                icon: "/images/clipboard.png",
+                number: "1",
                 title: item.step_1_title,
                 description: item.step_1_description,
               },
               {
-               icon: "/images/star.png",
+                number: "2",
                 title: item.step_2_title,
                 description: item.step_2_description,
               },
               {
-                      icon: "/images/sitemap.png",
+                number: "3",
                 title: item.step_3_title,
                 description: item.step_3_description,
               },
-              {
+			 { number: "4",
                 icon: "/images/work-from-home.png",
                 title: item.step_4_title,
                 description: item.step_4_description,
@@ -49,26 +46,85 @@ const Steps = ({ serviceSection }) => {
 
             return steps.map((step, stepIndex) => (
               <div
-                className="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12 my-4"
+                className="col-md-3 col-12"
                 key={`${index}-${stepIndex}`}
               >
-                <div className="service_box style_three dark_color">
-                  <div className="service_content">
-                    <div className="content_inner">
-                      <span className="icon-dollar">
-                        
-                      <img src={step.icon} alt="icon"  />
-                      </span>
-                      <small className="nom">{`0${stepIndex + 1}`}</small>
-                      <h4 className="semiHeading">{step.title}</h4>
-                      {step.description}
-                    </div>
-                  </div>
+                <div
+                  className={`contentBx ${
+                    stepIndex === 4 ? "noArrow" : ""
+                  }`}
+                >
+
+               <div className="numWrp">
+
+  {/* Left Arrow - only first */}
+  {stepIndex === 0 && (
+    <div className="arrow-light">
+      <svg
+        viewBox="0 0 15 29"
+        height="15"
+        width="29"
+        className="_3K4Dh5HC"
+      >
+        <path
+          d="m.707.707 13.678 13.678-13.678 13.677"
+          fill="none"
+          stroke="currentColor"
+        />
+      </svg>
+    </div>
+  )}
+
+  <div className="hiringNum">
+    {step.number}
+  </div>
+
+  {/* Arrow between Step 1 → 2 → 3 → 4 */}
+  {stepIndex < 3 && (
+    <div className="arrow-for">
+      <svg
+        viewBox="0 0 15 29"
+        height="15"
+        width="29"
+        className="_3K4Dh5HC"
+      >
+        <path
+          d="m.707.707 13.678 13.678-13.678 13.677"
+          fill="none"
+          stroke="currentColor"
+        />
+      </svg>
+    </div>
+  )}
+
+  {/* Light arrow after Step 4 */}
+  {stepIndex === 3 && (
+    <div className="arrow-light last-div">
+      <svg
+        viewBox="0 0 15 29"
+        height="15"
+        width="29"
+        className="_3K4Dh5HC"
+      >
+        <path
+          d="m.707.707 13.678 13.678-13.678 13.677"
+          fill="none"
+          stroke="currentColor"
+        />
+      </svg>
+    </div>
+  )}
+
+</div>
+
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+
                 </div>
-                <div className="mr_bottom_30"></div>
               </div>
             ));
           })}
+
         </div>
       </div>
     </section>

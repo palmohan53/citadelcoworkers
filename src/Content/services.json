@@ -8102,21 +8102,19 @@
             "name": "Virtual Assistant",
            "sectionsOrder": [
     "hero",
-     
-    "number",
+     "number",
 	"UnderstandingProductDesigner",
     "Services",
-
-    "TeamSection",
+   "TeamSection",
     "certifications",
        "ServiceBulkContentUpper",
        "ToolsSection",
 	     "Comparison",
          "ServiceBulkContent",
-       
-     
-	         "Testimonial",
-	
+       	"WorkflowSplitecommarce",
+         "Testimonial",
+ "pricing",
+ 	 "serviceSection",
         "faq",
 
     "FeaturedInMarquee",
@@ -8179,7 +8177,7 @@
   
                 "UnderstandingProductDesigner":{
  "title": "Understanding The Role Of An E-Commerce Assistant",
- "des": "An e-commerce assistant is the working backbone of a growing web store. You concentrate on growth, from monitoring product listings and processing orders to answering consumer queries and liaising with suppliers. The good e-commerce support executive is a mix of platform expertise, procedural discipline and communication skills. e-commerce chat support, admin support or full e-commerce management services, the appropriate VA makes your company faster, leaner and more responsive to customers."
+ "des": "An e-commerce assistant is the working backbone of a growing web store. You concentrate on growth, from monitoring product listings and processing orders to answering consumer queries and liaising with suppliers. A good e-commerce support executive is a mix of platform expertise, procedural discipline and communication skills. E-commerce chat support, admin support or full e-commerce management services, the appropriate VA makes your company faster, leaner and more responsive to customers"
                 },
 				
 	"Comparison":	{
@@ -8295,7 +8293,7 @@
              "icontextdesignheading": [
     {
       "title": "Why Growing Brands Trust Citadel Coworkers For Offshore E-Commerce Support",
-      "body": "e-commerce businesses need operational partners who understand platform mechanics, customer expectations and the pace at which online retail moves. With Citadel Coworkers, you gain access to India's top e-commerce virtual assistants delivering accurate, accountable, scalable support without the overhead of full-time hiring or the rigidity of traditional outsourcing contracts.",
+      "body": "E-commerce businesses need operational partners who understand platform mechanics, customer expectations and the pace at which online retail moves. With Citadel Coworkers, you gain access to India's top e-commerce virtual assistants delivering accurate, accountable, scalable support without the overhead of full-time hiring or the rigidity of traditional outsourcing contracts.",
       "centerImageUrl": "/images/ORM.png"
     }
   ],

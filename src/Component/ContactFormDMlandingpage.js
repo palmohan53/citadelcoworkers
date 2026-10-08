@@ -156,7 +156,7 @@ const ContactFormDM = ({ buttonText = "Start Your Project" }) => {
                                                         name="description" 
                                                         className="form-control" 
                                                         rows={5} 
-                                                        placeholder="Website URL"
+                                                        placeholder="Share your Requirements"
                                                         value={formData.description}
                                                         onChange={handleChange}
                                                         required
@@ -170,7 +170,7 @@ const ContactFormDM = ({ buttonText = "Start Your Project" }) => {
                                                     className="colorBtn wideBtn"
                                                     disabled={loading}
                                                 >
-                                                      {loading ? "Submitting..." : "Get My Free Audit"}
+                                                      {loading ? "Submitting..." : "Start Your Free Trial Now "}
                                                 </button>
                                             </div>
                                         </div>

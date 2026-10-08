@@ -695,16 +695,30 @@ color: #1749d5;
 .sideBorder:hover .servicesIcon .serviceHoverIco {
   display: block;
 }
+.inner-services .arrow-for {
+    width: 88%;
+    position: absolute;
+    left: 65%;
+}
+section.service-section-two.bg_light_1.inner-services .contentBx {
+    text-align: center;
+}
 /* .sideBorder:hover img {
   border: solid 1px #ffffff3d;
 } */
+ .App.hire-e-commerce-assistant section.cer {
+    background: #efefef;
+}
+.App.hire-e-commerce-assistant div#certification {
+    background: #efefef;
+}
  section.profile.hire-financial-paraplanner img,.profileBxBx .bannerProfile .profileImg img{
     filter: none !important;
 }
  section.profile.hire-web-designer img,.profileBxBx .bannerProfile .profileImg img{
     filter: none !important;
 }
-section.profile.hire-microsoft-office-experts img,section.profile.hire-graphic-designer img,section.profile.hire-seo-expert img,section.profile.hire-photoshop-expert img,section.profile.hire-ppc-expert img,section.profile.hire-social-media-marketing-expert img,section.profile.hire-illustrator img,section.profile.hire-video-editor img,section.profile.hire-cro-experts img,.hire-influencer-marketing-expert img,section.profile.hire-email-marketing-expert img, .profile.hire-content-marketing-experts img, section.profile.hire-video-marketing-expert img,section.profile.hire-lead-generation-expert img,section.profile.hire-3d-animators img,section.profile.hire-print-packaging-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-product-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-game-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-architects .bannerProfile.serviceProfile .profileImg img,section.profile.hire-interior-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-civil-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-structural-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-electrical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-mechanical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-animated-logo-designer img,section.profile.generative-engine-optimization-services-geo img,section.profile.hire-outbound-marketing-specialist-india img,section.profile.hire-online-reputation-management-expert img,section.profile.hire-cartoon-character-designer img
+section.profile.hire-microsoft-office-experts img,section.profile.hire-graphic-designer img,section.profile.hire-seo-expert img,section.profile.hire-photoshop-expert img,section.profile.hire-ppc-expert img,section.profile.hire-social-media-marketing-expert img,section.profile.hire-illustrator img,section.profile.hire-video-editor img,section.profile.hire-cro-experts img,.hire-influencer-marketing-expert img,section.profile.hire-email-marketing-expert img, .profile.hire-content-marketing-experts img, section.profile.hire-video-marketing-expert img,section.profile.hire-lead-generation-expert img,section.profile.hire-3d-animators img,section.profile.hire-print-packaging-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-product-designer .bannerProfile.serviceProfile .profileImg img,section.profile.hire-game-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-architects .bannerProfile.serviceProfile .profileImg img,section.profile.hire-interior-designers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-civil-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-structural-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-electrical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-mechanical-engineers .bannerProfile.serviceProfile .profileImg img,section.profile.hire-animated-logo-designer img,section.profile.generative-engine-optimization-services-geo img,section.profile.hire-outbound-marketing-specialist-india img,section.profile.hire-online-reputation-management-expert img,section.profile.hire-cartoon-character-designer img,section.profile.hire-e-commerce-assistant img
 {
    filter: none !important;
 }
@@ -8013,8 +8027,13 @@ section.Product-design-new-section {
   .comparison-heading h2 {
     font-size: 36px;
   }
-
-  
+nav#mainNav .nav-item {
+    padding: 0 8px !important;
+}
+ nav#mainNav .nav-item>a
+ {
+      font-size: 11px;
+ } 
 }
 
 
@@ -8213,7 +8232,9 @@ section.Workflowdesigner {
     margin-bottom: 15px;
     line-height: 1.2;
   }
-
+.blogDetailsBx b, .blogDetailsBx strong {
+    font-weight: bold;
+}
   .comparison-header p {
     color: #6b7280;
     font-size: 18px;
@@ -9023,16 +9044,28 @@ right:-20px;
 bottom:0;
 height:100%;
 object-fit:contain;
-}
+}     
 
 /* RESPONSIVE */
-
+@media(max-width:1240px){
+  h1.banner-title {
+    font-size: 30px !important;
+}
+section.banner h4, .banner-subtitle {
+    font-size: 15px;
+}
+    .banner .bannerProfile >img {
+        height: 300px;
+    }
+}
 @media(max-width:1100px){
 
 .hero-interview-grid{
 grid-template-columns:1fr;
 }
-
+nav#mainNav .nav-item > a {
+        font-size: 13px;
+    }
 .hero-interview-content h1{
 font-size:58px;
 }
@@ -10917,6 +10950,9 @@ svg.ms-2 path {
     cursor: pointer;
     line-height: 0;
 }
+.App.hire-e-commerce-assistant section#servicesSec {
+    padding-top: 60px;
+}
 .tldr-title h2 {
     margin-bottom: 0;
     font-weight: bold;
@@ -11029,3 +11065,9 @@ section.tldr-section {
         font-size: 14px;
     }
 }
+section.banner .slick-track {
+    display: block !important;
+}
+.sliderWrp {
+        overflow: hidden;
+    }

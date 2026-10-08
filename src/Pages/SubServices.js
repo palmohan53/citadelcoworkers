@@ -44,6 +44,7 @@ import LogoanimationIPProtection   from "../Component/LogoanimationIPProtection"
 import ExtraSection from "../Component/Extrasection";
 import DMportfolio from "../Component/DMportfolio";
 import PricingTabs from "../Component/DMHiringTabs";
+import WorkflowSplitecommarce from "../Component/WorkflowSplitecommarce";
 const Steps = React.lazy(() => import('../Component/Steps'));
 const Testimonial = React.lazy(() => import('../Component/Testimonial'));
 const ServiceProfile = React.lazy(() => import('../Component/ServiceProfile'));
@@ -624,6 +625,7 @@ const sectionsOrder = currentService?.sectionsOrder || [
 "CasestudyData",
 "portfolioItems",
 "WorkflowSplit",
+"WorkflowSplitecommarce",
 "IndustriesSection",
 "BrandAssets",
 "SkillsSection",
@@ -815,7 +817,7 @@ const sectionMap = {
             </Suspense>
   ),
 
-certifications: ( <section className=" reveal">
+certifications: ( <section className="cer">
       <CertificateSection certificationData={certificationData} />
     </section>),
 
@@ -868,6 +870,7 @@ serviceSection:(  <Suspense fallback={<div className="h-[400px] w-full" />}>
   BrandAssets: <BrandAssets />,
   industries3DImpact: <IndustriesSection />,
   WorkflowSplit: <WorkflowSplit />,
+  WorkflowSplitecommarce:<WorkflowSplitecommarce/>,
 Serviceconent:(    <Suspense fallback={<div className="h-[400px] w-full" />}>
                 <Steps serviceSection={serviceSection} />
             </Suspense>),
@@ -1371,7 +1374,7 @@ ConcludingSec:(  <section className="bottomCon">
             </Suspense>
 
 {certificationData?.certifications?.length > 0 && (
-  <section className="pt-0 reveal">
+  <section className="pt-0 reveal cer">
     <CertificateSection certificationData={certificationData} />
   </section>
 )}            {casestudyData?.listing?.length > 0 && (
